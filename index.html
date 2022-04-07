@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Chastant Shontz">
+    <meta name="description" content="A video game that simulates being the conductor of the Clarkson University pep band">
+    <title>Conductor Simulator</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme|Anton|Archivo+Black|Boogaloo|Bungee|Chau+Philomene+One|Dosis|Libre+Barcode+128|Luckiest+Guy|Merienda|Merriweather|Mulish|Oswald|Palette+Mosaic|Patrick+Hand|Press+Start+2P|Rubik+Mono+One|Russo+One|Titillium+Web|Varela+Round">
+  </head>
+  <body onload="joeDesenaEntrance()">
+    <header>
+    </header>
+    <article>
+      <div class="drunk" id="joeDesenaCont">
+        <div id="joeDesena" onclick="mmm()">
+        </div>
+        <div id="joeDesenaTalkCont">
+          <p id="joeDesenaName">Joe DeSena</p>
+          <div id="spacer">
+          </div>
+          <button type="button" id="ok">OK</button>
+          <p id="joeDesenaTalk"></p>
+        </div>
+      </div>
+      <div id="discordLogo">
+        <p id="discordNotification">1</p>
+      </div>
+      <div id="discord">
+        <div id="discordHeading">
+          <p id="discordMenu">&#9776;</p>
+          <p id="discordAnnouncements"># announcements</p>
+        </div>
+        <div id="discordMessageContCont">
+          <div id="discordProfile">
+          </div>
+          <div id="discordMessageCont">
+            <p id="discordUsername">Ryan McCarthy <span id="discordDate">Today at 4:20 PM</span></p>
+            <p id="discordMessage"><span id="discordUsers">@everyone</span> Hey band!  Remember we've got a mens' game against SLU today at 3pm and a womens' game at 7pm.  Please arrive an hour beforehand for the pregame.  And bring your spatulas to mock those SLUsers!  After the games, there's also going to be some milk and cookies at King's.</p>
+          </div>
+        </div>
+        <div id="discordToolbar">
+          <p id="discordPlus">+</p>
+          <p id="discordBubble">Message #announcements</p>
+        </div>
+      </div>
+      <div id="menCont" onclick="selectMen()">
+        <div id="men">
+        </div>
+        <p id="menLabel">Men</p>
+      </div>
+      <div id="womenCont" onclick="selectWomen()">
+        <div id="women">
+        </div>
+        <p id="womenLabel">Women</p>
+      </div>
+      <div id="map">
+        <img src="img/clarkson.png" alt="Clarkson University on a map" id="clarkson">
+        <img src="img/slu.png" alt="Saint Lawrence University on a map" id="slu">
+      </div>
+      <img src="img/knightMobile.png" alt="The KnightMobile driving to SLU" id="knightMobile">
+      <div id="crappleton">
+      </div>
+      <div id="lives">
+        <div id="carolineMoreauLifeContCont">
+          <div id="carolineMoreauLifeCont">
+            <div id="carolineMoreauLife">
+            </div>
+            <p id="carolineMoreauDie">&times;</p>
+          </div>
+        </div>
+        <div id="liamDurkinLifeContCont">
+          <div id="liamDurkinLifeCont">
+            <div id="liamDurkinLife">
+            </div>
+            <p id="liamDurkinDie">&times;</p>
+          </div>
+        </div>
+        <div id="kamiMillerLifeContCont">
+          <div id="kamiMillerLifeCont">
+            <div id="kamiMillerLife">
+            </div>
+            <p id="kamiMillerDie">&times;</p>
+          </div>
+        </div>
+        <div id="garrettWillardLifeContCont">
+          <div id="garrettWillardLifeCont">
+            <div id="garrettWillardLife">
+            </div>
+            <p id="garrettWillardDie">&times;</p>
+          </div>
+        </div>
+        <div id="ryanMccarthyLifeContCont">
+          <div id="ryanMccarthyLifeCont">
+            <div id="ryanMccarthyLife">
+            </div>
+            <p id="ryanMccarthyDie">&times;</p>
+          </div>
+        </div>
+        <div id="nickCorsnerLifeContCont">
+          <div id="nickCorsnerLifeCont">
+            <div id="nickCorsnerLife">
+            </div>
+            <p id="nickCorsnerDie">&times;</p>
+          </div>
+        </div>
+      </div>
+      <div id="cheersContCont">
+        <p id="cheerHeading">Cheer Score:  <span id="cheerScore"></span></p>
+        <div id="cheersCont">
+          <div class="cheer incorrectCheer" id="cheer1">
+            <p class="cheerText" id="cheerText1">Allin, you're ugly!  Boom roasted!</p>
+            <div class="cheerCover" id="cheerCover1" onclick="cheer2(1)">
+            </div>
+          </div>
+          <div class="cheer incorrectCheer" id="cheer2">
+            <p class="cheerText" id="cheerText2">Bend over!</p>
+            <div class="cheerCover" id="cheerCover2" onclick="cheer2(2)">
+            </div>
+          </div>
+          <div class="cheer correctCheer" id="cheer3">
+            <p class="cheerText" id="cheerText3">Flip our burgers!</p>
+            <div class="cheerCover" id="cheerCover3" onclick="cheer1(3)">
+            </div>
+          </div>
+          <div class="cheer incorrectCheer" id="cheer4">
+            <p class="cheerText" id="cheerText4">Give me a "beer"!</p>
+            <div class="cheerCover" id="cheerCover4" onclick="cheer3(4)">
+            </div>
+          </div>
+          <div class="cheer correctCheer" id="cheer5">
+            <p class="cheerText" id="cheerText5">Here we go, Clarkson, here we go!</p>
+            <div class="cheerCover" id="cheerCover5" onclick="cheer1(5)">
+            </div>
+          </div>
+          <div class="cheer incorrectCheer" id="cheer6">
+            <p class="cheerText" id="cheerText6">Hit them in the knee!</p>
+            <div class="cheerCover" id="cheerCover6" onclick="cheer3(6)">
+            </div>
+          </div>
+          <div class="cheer incorrectCheer" id="cheer7">
+            <p class="cheerText" id="cheerText7">Hope needs soap!  Boom roasted!</p>
+            <div class="cheerCover" id="cheerCover7" onclick="cheer2(7)">
+            </div>
+          </div>
+          <div class="cheer incorrectCheer" id="cheer8">
+            <p class="cheerText" id="cheerText8">I'm blind, I'm deaf, I wanna be a ref!</p>
+            <div class="cheerCover" id="cheerCover8" onclick="cheer3(8)">
+            </div>
+          </div>
+          <div class="cheer incorrectCheer" id="cheer9">
+            <p class="cheerText" id="cheerText9">It's all your fault, sieve!</p>
+            <div class="cheerCover" id="cheerCover9" onclick="cheer3(9)">
+            </div>
+          </div>
+          <div class="cheer correctCheer" id="cheer10">
+            <p class="cheerText" id="cheerText10">Let's go...Clarkson!  Let's go...techers!</p>
+            <div class="cheerCover" id="cheerCover10" onclick="cheer1(10)">
+            </div>
+          </div>
+          <div class="cheer correctCheer" id="cheer11">
+            <p class="cheerText" id="cheerText11">Let's go tech!</p>
+            <div class="cheerCover" id="cheerCover11" onclick="cheer1(11)">
+            </div>
+          </div>
+          <div class="cheer incorrectCheer" id="cheer12">
+            <p class="cheerText" id="cheerText12">My <span class="goalie"></span> lies over the ocean!  My <span class="goalie"></span> lies over the sea!</p>
+            <div class="cheerCover" id="cheerCover12" onclick="cheer2(12)">
+            </div>
+          </div>
+          <div class="cheer incorrectCheer" id="cheer13">
+            <p class="cheerText" id="cheerText13">Number one is number one!</p>
+            <div class="cheerCover" id="cheerCover13" onclick="cheer2(13)">
+            </div>
+          </div>
+          <div class="cheer incorrectCheer" id="cheer14">
+            <p class="cheerText" id="cheerText14">Okay...and SLU still sucks!</p>
+            <div class="cheerCover" id="cheerCover14" onclick="cheer3(14)">
+            </div>
+          </div>
+          <div class="cheer incorrectCheer" id="cheer15">
+            <p class="cheerText" id="cheerText15">Sexy goalie!</p>
+            <div class="cheerCover" id="cheerCover15" onclick="cheer2(15)">
+            </div>
+          </div>
+          <div class="cheer incorrectCheer" id="cheer16">
+            <p class="cheerText" id="cheerText16">Skate, shoot, score, tech!</p>
+            <div class="cheerCover" id="cheerCover16" onclick="cheer3(16)">
+            </div>
+          </div>
+          <div class="cheer incorrectCheer" id="cheer17">
+            <p class="cheerText" id="cheerText17">Sloppy sieve!</p>
+            <div class="cheerCover" id="cheerCover17" onclick="cheer3(17)">
+            </div>
+          </div>
+          <div class="cheer correctCheer" id="cheer18">
+            <p class="cheerText" id="cheerText18">Ugly jerseys!</p>
+            <div class="cheerCover" id="cheerCover18" onclick="cheer1(18)">
+            </div>
+          </div>
+          <div class="cheer incorrectCheer" id="cheer19">
+            <p class="cheerText" id="cheerText19">Warm up the bus!</p>
+            <div class="cheerCover" id="cheerCover19" onclick="cheer3(19)">
+            </div>
+          </div>
+          <div class="cheer incorrectCheer" id="cheer20">
+            <p class="cheerText" id="cheerText20">You can't do that!</p>
+            <div class="cheerCover" id="cheerCover20" onclick="cheer3(20)">
+            </div>
+          </div>
+          <div class="cheer incorrectCheer" id="cheer21">
+            <p class="cheerText" id="cheerText21">You did nothing, <span class="goalie"></span>!</p>
+            <div class="cheerCover" id="cheerCover21" onclick="cheer3(21)">
+            </div>
+          </div>
+          <div class="cheer incorrectCheer" id="cheer22">
+            <p class="cheerText" id="cheerText22">You're a big wuss!</p>
+            <div class="cheerCover" id="cheerCover22" onclick="cheer3(22)">
+            </div>
+          </div>
+          <div class="cheer incorrectCheer" id="cheer23">
+            <p class="cheerText" id="cheerText23">You're bad, you're bad, you're bad, you're bad, you're baaad, you're baaad...</p>
+            <div class="cheerCover" id="cheerCover23" onclick="cheer3(23)">
+            </div>
+          </div>
+          <div class="cheer incorrectCheer" id="cheer24">
+            <p class="cheerText" id="cheerText24">You're not a sieve, you're a vacuum!  You're not a vacuum, you're a black hole!  You're not a black hole, you just suck!</p>
+            <div class="cheerCover" id="cheerCover24" onclick="cheer2(24)">
+            </div>
+          </div>
+          <div class="cheer correctCheer" id="cheer25">
+            <p class="cheerText" id="cheerText25">Your degrees are worthless!</p>
+            <div class="cheerCover" id="cheerCover25" onclick="cheer1(25)">
+            </div>
+          </div>
+          <div class="cheer incorrectCheer" id="cheer26">
+            <p class="cheerText" id="cheerText26">Zebras!</p>
+            <div class="cheerCover" id="cheerCover26" onclick="cheer3(26)">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="scoreboard">
+        <p id="scoreboardHeading">Period:  <span id="scoreboardPeriod"></span></p>
+        <div id="scoreboardScores">
+          <div id="scoreboardClarkson">
+            <img src="img/clarkson.png" alt="The Clarkson logo" id="scoreboardClarksonLogo">
+            <p id="scoreboardClarksonScore"></p>
+          </div>
+          <div id="scoreboardSlu">
+            <img src="img/slu.png" alt="The SLU logo" id="scoreboardSluLogo">
+            <p id="scoreboardSluScore"></p>
+          </div>
+        </div>
+      </div>
+      <div id="rink">
+        <div id="rinkSection1">
+          <div id="rinkSection1Goal">
+            <img src="img/ethanHaider.png" alt="Ethan Haider in the goal" id="ethanHaider">
+            <img src="img/alexaMadrid.png" alt="Alexa Madrid in the goal" id="alexaMadrid">
+          </div>
+        </div>
+        <div id="rinkSection2">
+          <div id="rinkSection2Circle1">
+            <div id="rinkSection2Circle1Center">
+            </div>
+          </div>
+          <div id="rinkSection2SemiCircle">
+          </div>
+          <div id="rinkSection2Circle2">
+            <div id="rinkSection2Circle2Center">
+            </div>
+          </div>
+        </div>
+        <div id="rinkSection3">
+          <div id="rinkSection3Circle1">
+            <div id="rinkSection3Circle1Center">
+            </div>
+          </div>
+          <div id="rinkSection3Circle2">
+            <div id="rinkSection3Circle2Center">
+            </div>
+          </div>
+          <img src="img/alexCampbell.png" alt="Alex Campbell" id="alexCampbell">
+          <img src="img/dustynMcfaul.png" alt="Dustyn McFaul" id="dustynMcfaul">
+          <img src="img/jackJacome.png" alt="Jack Jacome" id="jackJacome">
+          <img src="img/lukeSanterno.png" alt="Luke Santerno" id="lukeSanterno">
+          <img src="img/zachTsekos.png" alt="Zach Tsekos" id="zachTsekos">
+          <img src="img/brookeMcquigge.png" alt="Brooke McQuigge" id="brookeMcquigge">
+          <img src="img/caitrinLongeran.png" alt="Caitrin Longeran" id="caitrinLongeran">
+          <img src="img/jennaGoodwin.png" alt="Jenna Goodwin" id="jennaGoodwin">
+          <img src="img/mirandaGaudet.png" alt="Miranda Gaudet" id="mirandaGaudet">
+          <img src="img/nicoleGosling.png" alt="Nicole Gosling" id="nicoleGosling">
+          <img src="img/cage.png" alt="Alex Campbell's/Brooke McQuigge's cage" id="cage1">
+          <img src="img/cage.png" alt="Dustyn McFaul's/Caitrin Longeran's cage" id="cage2">
+          <img src="img/cage.png" alt="Jack Jacome's/Jenna Goodwin's cage" id="cage3">
+          <img src="img/cage.png" alt="Luke Santerno's/Miranda Gaudet's cage" id="cage4">
+          <img src="img/cage.png" alt="Zach Tsekos's/Nicole Gosling's cage" id="cage5">
+        </div>
+        <div id="rinkSection4">
+          <div id="rinkSection4Circle1">
+            <div id="rinkSection4Circle1Center">
+            </div>
+          </div>
+          <div id="rinkSection4Circle2">
+            <div id="rinkSection4Circle2Center">
+            </div>
+          </div>
+          <img src="img/ashtonFry.png" alt="Ashton Fry" id="ashtonFry">
+          <img src="img/cameronBuhl.png" alt="Cameron Buhl" id="cameronBuhl">
+          <img src="img/davidJankowski.png" alt="David Jankowski" id="davidJankowski">
+          <img src="img/nicholasTrela.png" alt="Nicholas Trela" id="nicholasTrela">
+          <img src="img/tuckerMcintosh.png" alt="Tucker McIntosh" id="tuckerMcintosh">
+          <img src="img/alyMcleod.png" alt="Aly McLeod" id="alyMcleod">
+          <img src="img/brittneyGout.png" alt="Brittney Gout" id="brittneyGout">
+          <img src="img/gabiJones.png" alt="Gabi Jones" id="gabiJones">
+          <img src="img/lilyWildman.png" alt="Lily Wildman" id="lilyWildman">
+          <img src="img/stephanieVoge.png" alt="Stephanie Voge" id="stephanieVoge">
+          <img src="img/cage.png" alt="Ashton Fry's/Aly McLeod's cage" id="cage6">
+          <img src="img/cage.png" alt="Cameron Buhl's/Brittney Gout's cage" id="cage7">
+          <img src="img/cage.png" alt="David Jankowski's/Gabi Jones's cage" id="cage8">
+          <img src="img/cage.png" alt="Nicholas Trela's/Lily Wildman's cage" id="cage9">
+          <img src="img/cage.png" alt="Tucker McIntosh's/Stephanie Voge's cage" id="cage10">
+        </div>
+        <div id="rinkSection5">
+          <div id="rinkSection5Circle1">
+            <div id="rinkSection5Circle1Center">
+            </div>
+          </div>
+          <div id="rinkSection5SemiCircle">
+          </div>
+          <div id="rinkSection5Circle2">
+            <div id="rinkSection5Circle2Center">
+            </div>
+          </div>
+        </div>
+        <div id="rinkSection6">
+          <div id="rinkSection6Goal">
+            <img src="img/danielAllin.png" alt="Daniel Allin in the goal" id="danielAllin">
+            <img src="img/hopeCrisafi.png" alt="Hope Crisafi in the goal" id="hopeCrisafi">
+          </div>
+        </div>
+        <div id="rinkLogoContCont">
+          <div id="rinkLogoCont">
+            <img src="img/slu.png" alt="The SLU logo" id="rinkLogo">
+          </div>
+        </div>
+        <img src="img/zebra.png" alt="A referee who looks like a zebra" id="ref1">
+        <img src="img/zebra.png" alt="A referee who looks like a zebra" id="ref2">
+        <img src="img/goldenKnight.png" alt="Clarkson's Golden Knight mascot" id="goldenKnight">
+        <img src="img/flag.png" alt="The American flag presented by the ROTC Color Guard" id="flag">
+        <img src="img/tonyCollins.png" alt="Clarkson's president Tony Collins" id="tonyCollins">
+        <div id="handCont">
+          <img src="img/hand.png" alt="A hand waving goodbye to the SLU players" id="hand">
+        </div>
+        <div id="puck">
+        </div>
+        <div id="goalMessages">
+          <p id="sluGoalMessage">sAiNtS<br>gOaL</p>
+          <p id="clarksonGoalMessage"><span id="goldenKnightScale">Golden Knight</span><br>Goal!</p>
+        </div>
+        <div id="victoryMessages">
+          <div id="sluVictoryMessageCont">
+            <p id="sluVictoryMessage"><span id="saints">sAiNtS</span><br><span id="victorySlu">vIcToRy</span></p>
+          </div>
+          <div id="clarksonVictoryMessageCont">
+            <p id="clarksonVictoryMessage"><span id="golden">Golden</span><br><span id="knight">Knight</span><br><span id="victoryClarkson">Victory!</span></p>
+          </div>
+        </div>
+        <div id="youWon">
+          <div id="bandiesCont">
+            <div id="bandiesRow1">
+              <img src="img/nateBeaupre.png" alt="We like to drink with Nate, 'cause Nate is our hero, and when we drink with Nate, he finishes in zero" class="bandie" id="nateBeaupre">
+              <img src="img/ariaStephan.png" alt="Aria the old lady" class="bandie" id="ariaStephan">
+              <img src="img/colinPatricelli.png" alt="The person whose cum I cleaned off the floor" class="bandie" id="colinPatricelli">
+              <img src="img/nickSchalago.png" alt="Nick is from New Jersey!" class="bandie" id="nickSchalago">
+              <img src="img/king.png" alt="Totally not Kiley Stradley" class="bandie" id="king">
+              <img src="img/jam.png" alt="What I spread on my dick at the gangbang" class="bandie" id="jam">
+              <img src="img/kronk.png" alt="Oh yeah, it's all coming together" class="bandie" id="kronk">
+              <img src="img/ericBrom.png" alt="A gorilla mixed with a tank that had an affair with an aircraft carrier" class="bandie" id="ericBrom">
+              <img src="img/garrettWillard.png" alt="A big, beautiful hunk of a man" class="bandie" id="garrettWillard">
+              <img src="img/liamDurkin.png" alt="Garrett's little bitch" class="bandie" id="liamDurkin">
+              <img src="img/kamiMiller.png" alt="Garrett's little bitch's side chick" class="bandie" id="kamiMiller">
+              <img src="img/carolineMoreau.png" alt="(Sweet) Caroline" class="bandie" id="carolineMoreau">
+              <img src="img/kellyBoutin.png" alt="Routin' toutin' Kelly Boutin" class="bandie" id="kellyBoutin">
+              <img src="img/ethanLaferriere.png" alt="Hey!  Where's Ethan?" class="bandie" id="ethanLaferriere">
+              <img src="img/jeffClark.png" alt="Kool-Aid Man" class="bandie" id="jeffClark">
+              <img src="img/owenMears.png" alt="Guy I mistook for Jeff" class="bandie" id="owenMears">
+              <img src="img/aliceWilser.png" alt="The only thing she hits harder than the bottle is her bass drum" class="bandie" id="aliceWilser">
+            </div>
+            <div id="bandiesRow2">
+              <img src="img/gabeAguilar.png" alt="Tried to put a $10 bill in a card reader" class="bandie" id="gabeAguilar">
+              <img src="img/nickMerola.png" alt="Luckiest roommate ever" class="bandie" id="nickMerola">
+              <img src="img/carloDesena.png" alt="Not Carlos, you racist!" class="bandie" id="carloDesena">
+              <img src="img/bellaDesena.png" alt="Second prettiest DeSena" class="bandie" id="bellaDesena">
+              <img src="img/knightguard.png" alt="Chast & Chaz KnightGuard Security" class="bandie" id="knightguard">
+              <img src="img/benVincens.png" alt="Ben Solo" class="bandie" id="benVincens">
+              <img src="img/brandonWinter.png" alt="Brandon Winter is cuming" class="bandie" id="brandonWinter">
+              <img src="img/coleBennett.png" alt="Coal Bennett" class="bandie" id="coleBennett">
+              <img src="img/fordSmith.png" alt="F^rd Smith" class="bandie" id="fordSmith">
+              <img src="img/michaelAkers.png" alt="Saved my life for $12.50" class="bandie" id="michaelAkers">
+            </div>
+            <div id="bandiesRow3">
+              <img src="img/tomRobinson.png" alt="Token redhead" class="bandie" id="tomRobinson">
+              <img src="img/lindseyPenet.png" alt="Lindsey but spelled weird" class="bandie" id="lindseyPenet">
+              <img src="img/ryanMccarthy.png" alt="Dope as fuck because she published a paper about energy and fatigue" class="bandie" id="ryanMccarthy">
+              <img src="img/davidVanill.png" alt="David Vanilla Ice" class="bandie" id="davidVanill">
+              <img src="img/ericLaferriere.png" alt="Ethan 2.0" class="bandie" id="ericLaferriere">
+              <img src="img/alexBrenton.png" alt="Not Charlie's future wife Alex" class="bandie" id="alexBrenton">
+              <img src="img/ariaGarceau.png" alt="Owner of Will's dick" class="bandie" id="ariaGarceau">
+              <img src="img/willDumont.png" alt="The Will whose dick Aria drives" class="bandie" id="willDumont">
+              <img src="img/tomUhl.png" alt="The Tom who's not a redhead" class="bandie" id="tomUhl">
+              <img src="img/kyleMatthews.png" alt="Kyle, you're not the sexy leader!  BOOM ROASTED" class="bandie" id="kyleMatthews">
+              <img src="img/nickCorsner.png" alt="My floozy" class="bandie" id="nickCorsner">
+              <img src="img/lyleTrimble.png" alt="Human NPC" class="bandie" id="lyleTrimble">
+              <img src="img/isabelleBrown.png" alt="Girl whose name I used to catfish Other Ian" class="bandie" id="isabelleBrown">
+              <img src="img/aileenHarvey.png" alt="Hey, Aileen" class="bandie" id="aileenHarvey">
+              <img src="img/cassieMarshall.png" alt="Sleeping in the bathtub" class="bandie" id="cassieMarshall">
+            </div>
+          </div>
+          <p id="youWonMessage">You Won!</p>
+        </div>
+      </div>
+      <img src="img/plane.png" alt="A plane flying to celebrate tijuana" id="plane1">
+      <img src="img/plane.png" alt="A plane flying to celebrate tijuana" id="plane2">
+      <img src="img/plane.png" alt="A plane flying to celebrate tijuana" id="plane3">
+      <img src="img/plane.png" alt="A plane flying to celebrate tijuana" id="plane4">
+      <div id="planePrimeCont">
+        <p id="tijuanaBanner">Tijuana!</p>
+        <img src="img/plane.png" alt="A plane flying with a banner to celebrate tijuana" id="planePrime">
+      </div>
+      <div id="partyCont">
+        <div class="drunk" id="dafCounterCont">
+          <p id="dafCounterHeading">DAF:  <span id="dafCounterNumber"></span></p>
+          <div id="dafCounter">
+            <button type="button" id="dafCounterButton" onclick="daf()">DAF!</button>
+            <p id="dafCounterError">ERROR</p>
+          </div>
+        </div>
+        <div class="drunk" id="speakerCont">
+          <img src="img/speaker.png" alt="A speaker to play music with" id="speaker">
+          <select id="speakerSongs" onchange="speakerPlay()">
+            <option value="default" class="speakerSong" id="speakerSongDefault">Play a song!</option>
+            <option value="25Or6To4" class="speakerSong" id="speakerSong1">25 or 6 to 4</option>
+            <option value="7NationArmy" class="speakerSong" id="speakerSong2">7 Nation Army</option>
+            <option value="anyWayYouWantIt" class="speakerSong" id="speakerSong3">Any Way You Want It</option>
+            <option value="apache" class="speakerSong" id="speakerSong4">Apache</option>
+            <option value="bluesBrothersIntroSong" class="speakerSong" id="speakerSong5">Blues Brothers Intro Song</option>
+            <option value="caravan" class="speakerSong" id="speakerSong6">Caravan</option>
+            <option value="centerfold" class="speakerSong" id="speakerSong7">Centerfold</option>
+            <option value="centuries" class="speakerSong" id="speakerSong8">Centuries</option>
+            <option value="clarksonUniversityAlmaMater" class="speakerSong" id="speakerSong9">Clarkson University Alma Mater</option>
+            <option value="comeWithMeNow" class="speakerSong" id="speakerSong10">Come With Me Now</option>
+            <option value="conga" class="speakerSong" id="speakerSong11">Conga</option>
+            <option value="crazyTrain" class="speakerSong" id="speakerSong12">Crazy Train</option>
+            <option value="cupidShuffle" class="speakerSong" id="speakerSong13">Cupid Shuffle</option>
+            <option value="electricBoogaloo" class="speakerSong" id="speakerSong14">Electric Boogaloo</option>
+            <option value="everybodyNeedsSomebody" class="speakerSong" id="speakerSong15">Everybody Needs Somebody</option>
+            <option value="everytimeWeTouch" class="speakerSong" id="speakerSong16">Everytime We Touch</option>
+            <option value="eyeOfTheTiger" class="speakerSong" id="speakerSong17">Eye of the Tiger</option>
+            <option value="gameOfThronesTheme" class="speakerSong" id="speakerSong18">Game of Thrones Theme</option>
+            <option value="gangbangSong" class="speakerSong" id="speakerSong19">Gangbang Song</option>
+            <option value="giveUpTheFunk" class="speakerSong" id="speakerSong20">Give Up the Funk</option>
+            <option value="gospelJohn" class="speakerSong" id="speakerSong21">Gospel John</option>
+            <option value="heyPachuco" class="speakerSong" id="speakerSong22">Hey Pachuco!</option>
+            <option value="holiday" class="speakerSong" id="speakerSong23">Holiday</option>
+            <option value="hookedOnAFeeling" class="speakerSong" id="speakerSong24">Hooked On a Feeling</option>
+            <option value="hotCrossBuns" class="speakerSong" id="speakerSong25">Hot Cross Buns</option>
+            <option value="illMakeAManOutOfYou" class="speakerSong" id="speakerSong26">I'll Make a Man Out of You</option>
+            <option value="imShippingUpToBoston" class="speakerSong" id="speakerSong27">I'm Shipping Up to Boston</option>
+            <option value="indianaJonesTheme" class="speakerSong" id="speakerSong28">Indiana Jones Theme</option>
+            <option value="jailhouseRock" class="speakerSong" id="speakerSong29">Jailhouse Rock</option>
+            <option value="jamesBondTheme" class="speakerSong" id="speakerSong30">James Bond Theme</option>
+            <option value="jawsTheme" class="speakerSong" id="speakerSong31">Jaws Theme</option>
+            <option value="joyToTheWorld" class="speakerSong" id="speakerSong32">Joy to the World</option>
+            <option value="killingInTheNameOf" class="speakerSong" id="speakerSong33">Killing in the Name Of</option>
+            <option value="kissHimGoodbye" class="speakerSong" id="speakerSong34">Kiss Him Goodbye</option>
+            <option value="letsGoBand" class="speakerSong" id="speakerSong35">Let's Go Band</option>
+            <option value="louieLouie" class="speakerSong" id="speakerSong36">Louie, Louie</option>
+            <option value="mortalKombatTheme" class="speakerSong" id="speakerSong37">Mortal Kombat Theme</option>
+            <option value="mosEisleyCantinaSong" class="speakerSong" id="speakerSong38">Mos Eisley Cantina Song</option>
+            <option value="mrBlueSky" class="speakerSong" id="speakerSong39">Mr. Blue Sky</option>
+            <option value="mrBrightside" class="speakerSong" id="speakerSong40">Mr. Brightside</option>
+            <option value="newYorkNewYork" class="speakerSong" id="speakerSong41">New York, New York</option>
+            <option value="oCanada" class="speakerSong" id="speakerSong42">O Canada</option>
+            <option value="oompaLoompaSong" class="speakerSong" id="speakerSong43">Oompa Loompa Song</option>
+            <option value="peterGunnTheme" class="speakerSong" id="speakerSong44">Peter Gunn Theme</option>
+            <option value="pfftYouWereGone" class="speakerSong" id="speakerSong45">Pfft!  You Were Gone</option>
+            <option value="piratesOfTheCaribbeanTheme" class="speakerSong" id="speakerSong46">Pirates of the Caribbean Theme</option>
+            <option value="poison" class="speakerSong" id="speakerSong47">Poison</option>
+            <option value="proudMary" class="speakerSong" id="speakerSong48">Proud Mary</option>
+            <option value="radar" class="speakerSong" id="speakerSong49">Radar</option>
+            <option value="rockyTheme" class="speakerSong" id="speakerSong50">Rocky Theme</option>
+            <option value="russianSailorsDance" class="speakerSong" id="speakerSong51">Russian Sailor's Dance</option>
+            <option value="september" class="speakerSong" id="speakerSong52">September</option>
+            <option value="soulBossaNova" class="speakerSong" id="speakerSong53">Soul Bossa Nova</option>
+            <option value="soulMan" class="speakerSong" id="speakerSong54">Soul Man</option>
+            <option value="supermanTheme" class="speakerSong" id="speakerSong55">Superman Theme</option>
+            <option value="sweetDreams" class="speakerSong" id="speakerSong56">Sweet Caroline</option>
+            <option value="sweetCaroline" class="speakerSong" id="speakerSong57">Sweet Dreams</option>
+            <option value="takeOnMe" class="speakerSong" id="speakerSong58">Take On Me</option>
+            <option value="tequila" class="speakerSong" id="speakerSong59">Tequila</option>
+            <option value="tetrisTheme" class="speakerSong" id="speakerSong60">Tetris Theme</option>
+            <option value="theBareNecessities" class="speakerSong" id="speakerSong61">The Bare Necessities</option>
+            <option value="theFinalCountdown" class="speakerSong" id="speakerSong62">The Final Countdown</option>
+            <option value="theHeySong" class="speakerSong" id="speakerSong63">The Hey Song</option>
+            <option value="theImpressionThatIGet" class="speakerSong" id="speakerSong64">The Impression That I Get</option>
+            <option value="theMuppetsTheme" class="speakerSong" id="speakerSong65">The Muppets Theme</option>
+            <option value="theRace" class="speakerSong" id="speakerSong66">The Race</option>
+            <option value="theSMMan" class="speakerSong" id="speakerSong67">The S&M Man</option>
+            <option value="theStarSpangledBanner" class="speakerSong" id="speakerSong68">The Star-Spangled Banner</option>
+            <option value="theStripper" class="speakerSong" id="speakerSong69">The Stripper</option>
+            <option value="touchMe" class="speakerSong" id="speakerSong70">Touch Me</option>
+            <option value="uptownGirl" class="speakerSong" id="speakerSong71">Uptown Girl</option>
+            <option value="weAreNumberOne" class="speakerSong" id="speakerSong72">We Are Number One</option>
+            <option value="weWillRockYou" class="speakerSong" id="speakerSong73">We Will Rock You</option>
+            <option value="whenTheSaintsGoMarchingIn" class="speakerSong" id="speakerSong74">When the Saints Go Marching In</option>
+            <option value="YMCA" class="speakerSong" id="speakerSong75">Y.M.C.A.</option>
+            <option value="zootSuitRiot" class="speakerSong" id="speakerSong76">Zoot Suit Riot</option>
+          </select>
+          <div id="speakerControls">
+            <button type="button" id="speakerPlay" onclick="speakerPlay()"></button>
+            <button type="button" id="speakerPause" onclick="speakerPause()"></button>
+          </div>
+        </div>
+        <img src="img/busch.png" alt="A can of Busch to drink from" class="drunk" id="busch" onclick="drinkBusch()">
+      </div>
+      <div class="drunk" id="gangbangContCont">
+        <p id="gangbangHeading">Sing the Gangbang Song!</p>
+        <div id="gangbangCont">
+          <img src="img/troyLassial.png" alt="Troy Lassial creeping up on you" id="troyLassialFade">
+          <button type="button" id="gangbangButton" onclick="knockKnock()">&#9835; &#9835;</button>
+          <p id="gangbang"><span class="gangbangWord" id="gangbangWord1">...gangbang, </span><span class="gangbangWord" id="gangbangWord2">who's </span><span class="gangbangWord" id="gangbangWord3">there?  </span><span class="gangbangWord" id="gangbangWord4">It's </span><span class="gangbangWord" id="gangbangWord5">been </span><span class="gangbangWord" id="gangbangWord6">a </span><span class="gangbangWord" id="gangbangWord7">long </span><span class="gangbangWord" id="gangbangWord8">time </span><span class="gangbangWord" id="gangbangWord9">since </span><span class="gangbangWord" id="gangbangWord10">she's </span><span class="gangbangWord" id="gangbangWord11">been </span><span class="gangbangWord" id="gangbangWord12">screwed.  </span><span class="gangbangWord" id="gangbangWord13">When </span><span class="gangbangWord" id="gangbangWord14">she </span><span class="gangbangWord" id="gangbangWord15">was </span><span class="gangbangWord" id="gangbangWord16">younger, </span><span class="gangbangWord" id="gangbangWord17">and </span><span class="gangbangWord" id="gangbangWord18">in </span><span class="gangbangWord" id="gangbangWord19">her </span><span class="gangbangWord" id="gangbangWord20">prime, </span><span class="gangbangWord" id="gangbangWord21">she </span><span class="gangbangWord" id="gangbangWord22">used </span><span class="gangbangWord" id="gangbangWord23">to </span><span class="gangbangWord" id="gangbangWord24">gangbang </span><span class="gangbangWord" id="gangbangWord25">all </span><span class="gangbangWord" id="gangbangWord26">the </span><span class="gangbangWord" id="gangbangWord27">time...  </span><span class="gangbangWord" id="gangbangWord28">Now </span><span class="gangbangWord" id="gangbangWord29">that </span><span class="gangbangWord" id="gangbangWord30">she's </span><span class="gangbangWord" id="gangbangWord31">older, </span><span class="gangbangWord" id="gangbangWord32">and </span><span class="gangbangWord" id="gangbangWord33">turning </span><span class="gangbangWord" id="gangbangWord34">gray, </span><span class="gangbangWord" id="gangbangWord35">she </span><span class="gangbangWord" id="gangbangWord36">only </span><span class="gangbangWord" id="gangbangWord37">gangbangs </span><span class="gangbangWord" id="gangbangWord38">once </span><span class="gangbangWord" id="gangbangWord39">a </span><span class="gangbangWord" id="gangbangWord40">day...</span></p>
+          <div id="gangbangVersesContCont">
+            <p id="gangbangLyrics"></p>
+            <div id="gangbangVersesCont">
+              <select id="gangbangVerses" onchange="knockKnockSetup()">
+                <option value="default" class="gangbangVerse" id="gangbangVerseDefault">Who's there?</option>
+                <option value="allin" class="gangbangVerse" id="gangbangVerse1">Allin</option>
+                <option value="arthur" class="gangbangVerse" id="gangbangVerse2">Arthur</option>
+                <option value="athena" class="gangbangVerse" id="gangbangVerse3">Athena</option>
+                <option value="benHur" class="gangbangVerse" id="gangbangVerse4">Ben Hur</option>
+                <option value="betty" class="gangbangVerse" id="gangbangVerse5">Betty</option>
+                <option value="charliePride" class="gangbangVerse" id="gangbangVerse6">Charlie Pride</option>
+                <option value="chestnut" class="gangbangVerse" id="gangbangVerse7">Chestnut</option>
+                <option value="clara" class="gangbangVerse" id="gangbangVerse8">Clara</option>
+                <option value="dwayne" class="gangbangVerse" id="gangbangVerse9">Dwayne</option>
+                <option value="eisenhower" class="gangbangVerse" id="gangbangVerse10">Eisenhower</option>
+                <option value="emerson" class="gangbangVerse" id="gangbangVerse11">Emerson</option>
+                <option value="erma" class="gangbangVerse" id="gangbangVerse12">Erma</option>
+                <option value="herb" class="gangbangVerse" id="gangbangVerse13">Herb</option>
+                <option value="hope" class="gangbangVerse" id="gangbangVerse14">Hope</option>
+                <option value="ida" class="gangbangVerse" id="gangbangVerse15">Ida</option>
+                <option value="janetJackson" class="gangbangVerse" id="gangbangVerse16">Janet Jackson</option>
+                <option value="jessicaHahn" class="gangbangVerse" id="gangbangVerse17">Jessica Hahn</option>
+                <option value="luke" class="gangbangVerse" id="gangbangVerse18">Luke</option>
+                <option value="michaelJackson" class="gangbangVerse" id="gangbangVerse19">Michael Jackson</option>
+                <option value="mona" class="gangbangVerse" id="gangbangVerse20">Mona</option>
+                <option value="nixon" class="gangbangVerse" id="gangbangVerse21">Nixon</option>
+                <option value="orange" class="gangbangVerse" id="gangbangVerse22">Orange</option>
+                <option value="oswald" class="gangbangVerse" id="gangbangVerse23">Oswald</option>
+                <option value="shaniaTwain" class="gangbangVerse" id="gangbangVerse24">Shania Twain</option>
+                <option value="sheila" class="gangbangVerse" id="gangbangVerse25">Sheila</option>
+                <option value="theSMMan" class="gangbangVerse" id="gangbangVerse26">The S&M Man</option>
+                <option value="tijuana" class="gangbangVerse" id="gangbangVerse27">Tijuana</option>
+                <option value="troyLassial" class="gangbangVerse" id="gangbangVerse28">Troy Lassial</option>
+                <option value="ukanJack" class="gangbangVerse" id="gangbangVerse29">Ukan Jack</option>
+                <option value="uma" class="gangbangVerse" id="gangbangVerse30">Uma</option>
+                <option value="uripities" class="gangbangVerse" id="gangbangVerse31">Uripities</option>
+                <option value="washington" class="gangbangVerse" id="gangbangVerse32">Washington</option>
+                <option value="wilma" class="gangbangVerse" id="gangbangVerse33">Wilma</option>
+              </select>
+              <select id="gangbangResponses" onchange="knockKnockPunchline()">
+                <option value="default" class="gangbangResponse" id="gangbangResponseDefault"></option>
+                <option value="allinWasToUglyToComeToThe" class="gangbangResponse" id="gangbangResponse1" disabled>Allin was too ugly to come to the...</option>
+                <option value="areThereAnyPeopleHereWhoWanna" class="gangbangResponse" id="gangbangResponse2" disabled>Are there any people here who wanna...</option>
+                <option value="iSeenACoupleFaggotsAtThe" class="gangbangResponse" id="gangbangResponse3" disabled>I seen a couple faggots at the...</option>
+                <option value="bendHerOverTheChairAndSlapHerTitsAndWellHaveA" class="gangbangResponse" id="gangbangResponse4" disabled>Bend her over the chair and slap her tits and we'll have a...</option>
+                <option value="betHeDidntKnowItWasHisGirlAtTheBottomOfThePileAtThe" class="gangbangResponse" id="gangbangResponse5" disabled>Bet he didn't know it was his girl at the bottom of the pile at the...</option>
+                <option value="charliePriedHerLegsApartAtThe" class="gangbangResponse" id="gangbangResponse6" disabled>Charlie pried her legs apart at the...</option>
+                <option value="chestnutRoastingOverMyOpenFireAtThe" class="gangbangResponse" id="gangbangResponse7" disabled>Chestnut roasting over my open fire at the...</option>
+                <option value="clearAPlaceOffTheTableForThe" class="gangbangResponse" id="gangbangResponse8" disabled>Clear a place off the table for the...</option>
+                <option value="drainMyScrotumDryAtThe" class="gangbangResponse" id="gangbangResponse9" disabled>Drain my scrotum dry at the...</option>
+                <option value="isAnHourLateForThe" class="gangbangResponse" id="gangbangResponse10" disabled>I's an hour late for the...</option>
+                <option value="emAreSomeNiceTitsBitchDoYouWanna" class="gangbangResponse" id="gangbangResponse11" disabled>'Em are some nice tits bitch do you wanna...</option>
+                <option value="herMotherLovesTo" class="gangbangResponse" id="gangbangResponse12" disabled>Her mother loves to...</option>
+                <option value="herBrotherLovesTo" class="gangbangResponse" id="gangbangResponse13" disabled>Her brother loves to...</option>
+                <option value="hopeNeedsSomeSoapBeforeSheCanComeToThe" class="gangbangResponse" id="gangbangResponse14" disabled>Hope needs some soap before she can come to the...</option>
+                <option value="idALoveA" class="gangbangResponse" id="gangbangResponse15" disabled>I'd a love a...</option>
+                <option value="janetJacksonJacksonJacksonJacksonCantGetMichaelOffAtThe" class="gangbangResponse" id="gangbangResponse16" disabled>Janet Jackson, Jackson, Jackson, Jackson, can't get Michael off at the...</option>
+                <option value="jessicaHandledMyCockAtThe" class="gangbangResponse" id="gangbangResponse17" disabled>Jessica handled my cock at the...</option>
+                <option value="lukeUnderLeiasDressAtThe" class="gangbangResponse" id="gangbangResponse18" disabled>Luke under Leia's dress at the...</option>
+                <option value="michaelJacksonJacksonJacksonJacksonCantGetItUpAtThe" class="gangbangResponse" id="gangbangResponse19" disabled>Michael Jackson, Jackson, Jackson, Jackson, can't get it up at the...</option>
+                <option value="moanALittleLouderAndWellAllJoinThe" class="gangbangResponse" id="gangbangResponse20" disabled>Moan a little louder and we'll all join the...</option>
+                <option value="nexInLineForThe" class="gangbangResponse" id="gangbangResponse21" disabled>Nex' in line for the...</option>
+                <option value="arentYouGladYoureAtThe" class="gangbangResponse" id="gangbangResponse22" disabled>Aren't you glad you're at the...</option>
+                <option value="iSwallowedAClumpOfHairAtTheLast" class="gangbangResponse" id="gangbangResponse23" disabled>I swallowed a clump of hair at the last...</option>
+                <option value="shaniaTrimmedHerTwatToGetReadyForThe" class="gangbangResponse" id="gangbangResponse24" disabled>Shania trimmed her twat to get ready for the...</option>
+                <option value="sheLovesTo" class="gangbangResponse" id="gangbangResponse25" disabled>She loves to...</option>
+                <option value="theSMManMixesItWithLoveAndMakesTheHurtFeelGoodAtThe" class="gangbangResponse" id="gangbangResponse26" disabled>The S&M Man mixes it with love and makes the hurt feel good at the...</option>
+                <option value="doYouWannaGoToThe" class="gangbangResponse" id="gangbangResponse27" disabled>Do you wanna go to the...</option>
+                <option value="troysNotGettingLassiaLaidAtThe" class="gangbangResponse" id="gangbangResponse28" disabled>Troy's not getting Lassia-laid at the...</option>
+                <option value="youCanJackOffIfYouWannaButImGoingToThe" class="gangbangResponse" id="gangbangResponse29" disabled>You can jack off if you wanna but I'm going to the...</option>
+                <option value="oohMyBallsFeelSoGoodWhenYourSisterLicksThemAtThe" class="gangbangResponse" id="gangbangResponse30" disabled>Ooh my balls feel so good when your sister licks them at the...</option>
+                <option value="youRippingHerPantsOffForThe" class="gangbangResponse" id="gangbangResponse31" disabled>You ripping her pants off for the...</option>
+                <option value="washingATonOfSheetsAfterThe" class="gangbangResponse" id="gangbangResponse32" disabled>Washing a ton of sheets after the...</option>
+                <option value="willMyFingerKeepMeSatisfiedTilTheNext" class="gangbangResponse" id="gangbangResponse33" disabled>Will my fingers keep me satisfied 'til the next...</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="drunk" id="houseCont">
+        <div id="house">
+          <img src="img/mahogany.png" alt="Mahogany welcoming you into his house" id="mahogany">
+          <img src="img/king.png" alt="King welcoming you into his house" id="kingHome">
+        </div>
+      </div>
+      <p id="advertisement">To learn more:  <a href="https://clarksonpepband.org/" id="advertisementLink">Clarkson University pep band</a></p>
+      <div id="cover">
+        <div class="drunk" id="iceContCont">
+          <div id="iceCont">
+            <img src="img/ice.png" alt="An ice that you are now forced to drink or you'll be a bitch" id="ice">
+            <div id="iceCover">
+            </div>
+            <div id="iceDrinkCont">
+              <button type="button" id="iceDrink" onclick="drinkIce()">Drink!</button>
+            </div>
+          </div>
+          <div id="iceSongCont">
+            <p id="iceSong"><span class="iceWord" id="iceWord1">Weee...</span><span class="iceWord" id="iceWord2">like </span><span class="iceWord" id="iceWord3">to </span><span class="iceWord" id="iceWord4">drink </span><span class="iceWord" id="iceWord5">with </span><span class="iceWord" id="iceWord6">this </span><span class="iceWord" id="iceWord7">guy, </span><span class="iceWord" id="iceWord8">'cause </span><span class="iceWord" id="iceWord9">this </span><span class="iceWord" id="iceWord10">guy </span><span class="iceWord" id="iceWord11">is </span><span class="iceWord" id="iceWord12">our </span><span class="iceWord" id="iceWord13">mate, </span><span class="iceWord" id="iceWord14">and </span><span class="iceWord" id="iceWord15">when </span><span class="iceWord" id="iceWord16">we </span><span class="iceWord" id="iceWord17">drink </span><span class="iceWord" id="iceWord18">with </span><span class="iceWord" id="iceWord19">this </span><span class="iceWord" id="iceWord20">guy, </span><span class="iceWord" id="iceWord21">they </span><span class="iceWord" id="iceWord22">finish </span><span class="iceWord" id="iceWord23">it </span><span class="iceWord" id="iceWord24">in...</span></p>
+            <p id="iceCounter"></p>
+          </div>
+        </div>
+        <div id="songsCont">
+          <div id="songs">
+            <p id="danceInstructions"></p>
+            <p id="fuckSluMessage">Fuck SLU!</p>
+          </div>
+          <div id="youtubeToolbar">
+            <div id="youtubeControls">
+              <button type="button" id="youtubePlayPause"></button>
+              <p id="youtubeTimer"><span id="minutes2"></span><span id="minutes1"></span>:<span id="seconds2"></span><span id="seconds1"></span> / <span id="fullTime"></span></p>
+            </div>
+            <div id="fuckSluButtonCont">
+              <button type="button" id="fuckSluButton" onclick="fuckSlu()">Fuck SLU</button>
+            </div>
+            <button type="button" id="youtubeSkip" onclick="closeSong()">Skip &raquo;</button>
+          </div>
+        </div>
+        <div id="troyLassialCont">
+          <img src="img/troyLassial.png" alt="Troy Lassial in his natural habitat of Hell" id="troyLassial">
+          <div id="troyLassialTalkContCont">
+            <div id="troyLassialTalkCont">
+              <p id="troyLassialName">Troy Lassial</p>
+              <p id="troyLassialTalk"></p>
+            </div>
+            <button type="button" id="troyLassialButton" onclick="troyLassialExit()">Fuck you,<br>Troy</button>
+          </div>
+        </div>
+        <div id="choicesCont">
+          <div id="choices">
+            <button type="button" id="choice1" onclick="select1()"></button>
+            <button type="button" id="choice2" onclick="select2()"></button>
+            <button type="button" id="choice3" onclick="select3()"></button>
+            <button type="button" id="choice4" onclick="select4()"></button>
+          </div>
+          <div id="chooseCont">
+            <button type="submit" id="choose" onclick="choose()">Choose</button>
+          </div>
+          <div id="answerCont">
+            <p id="answer"></p>
+            <p id="answerCorrection">The correct answer is:<br><br><span id="correctAnswer"></span></p>
+          </div>
+        </div>
+        <div id="gameOver">
+          <p id="gameOverMessage">Game Over!</p>
+          <p id="gameOverScore">Your Score:  <span id="gameOverScoreNumber"></span></p>
+          <p id="quote"></p>
+          <button type="reset" id="playAgain" onclick="playAgain()">Play Again?</button>
+        </div>
+      </div>
+    </article>
+    <footer>
+    </footer>
+    <div id="songLibrary">
+      <audio src="audio/25Or6To4.mp3" id="25Or6To4"></audio>
+      <audio src="audio/7NationArmy.mp3" id="7NationArmy"></audio>
+      <audio src="audio/anyWayYouWantIt.mp3" id="anyWayYouWantIt"></audio>
+      <audio src="audio/apache.mp3" id="apache"></audio>
+      <audio src="audio/bluesBrothersIntroSong.mp3" id="bluesBrothersIntroSong"></audio>
+      <audio src="audio/caravan.mp3" id="caravan"></audio>
+      <audio src="audio/centerfold.mp3" id="centerfold"></audio>
+      <audio src="audio/centuries.mp3" id="centuries"></audio>
+      <audio src="audio/clarksonUniversityAlmaMater.mp3" id="clarksonUniversityAlmaMater"></audio>
+      <audio src="audio/comeWithMeNow.mp3" id="comeWithMeNow"></audio>
+      <audio src="audio/conga.mp3" id="conga"></audio>
+      <audio src="audio/crazyTrain.mp3" id="crazyTrain"></audio>
+      <audio src="audio/cupidShuffle.mp3" id="cupidShuffle"></audio>
+      <audio src="audio/electricBoogaloo.mp3" id="electricBoogaloo"></audio>
+      <audio src="audio/everybodyNeedsSomebody.mp3" id="everybodyNeedsSomebody"></audio>
+      <audio src="audio/everytimeWeTouch.mp3" id="everytimeWeTouch"></audio>
+      <audio src="audio/eyeOfTheTiger.mp3" id="eyeOfTheTiger"></audio>
+      <audio src="audio/gameOfThronesTheme.mp3" id="gameOfThronesTheme"></audio>
+      <audio src="audio/gangbangSong.mp3" id="gangbangSong"></audio>
+      <audio src="audio/giveUpTheFunk.mp3" id="giveUpTheFunk"></audio>
+      <audio src="audio/gospelJohn.mp3" id="gospelJohn"></audio>
+      <audio src="audio/heyPachuco.mp3" id="heyPachuco"></audio>
+      <audio src="audio/holiday.mp3" id="holiday"></audio>
+      <audio src="audio/hookedOnAFeeling.mp3" id="hookedOnAFeeling"></audio>
+      <audio src="audio/hotCrossBuns.mp3" id="hotCrossBuns"></audio>
+      <audio src="audio/illMakeAManOutOfYou.mp3" id="illMakeAManOutOfYou"></audio>
+      <audio src="audio/imShippingUpToBoston.mp3" id="imShippingUpToBoston"></audio>
+      <audio src="audio/indianaJonesTheme.mp3" id="indianaJonesTheme"></audio>
+      <audio src="audio/jailhouseRock.mp3" id="jailhouseRock"></audio>
+      <audio src="audio/jamesBondTheme.mp3" id="jamesBondTheme"></audio>
+      <audio src="audio/jawsTheme.mp3" id="jawsTheme"></audio>
+      <audio src="audio/joyToTheWorld.mp3" id="joyToTheWorld"></audio>
+      <audio src="audio/killingInTheNameOf.mp3" id="killingInTheNameOf"></audio>
+      <audio src="audio/kissHimGoodbye.mp3" id="kissHimGoodbye"></audio>
+      <audio src="audio/letsGoBand.mp3" id="letsGoBand"></audio>
+      <audio src="audio/louieLouie.mp3" id="louieLouie"></audio>
+      <audio src="audio/mortalKombatTheme.mp3" id="mortalKombatTheme"></audio>
+      <audio src="audio/mosEisleyCantinaSong.mp3" id="mosEisleyCantinaSong"></audio>
+      <audio src="audio/mrBlueSky.mp3" id="mrBlueSky"></audio>
+      <audio src="audio/mrBrightside.mp3" id="mrBrightside"></audio>
+      <audio src="audio/newYorkNewYork.mp3" id="newYorkNewYork"></audio>
+      <audio src="audio/oCanada.mp3" id="oCanada"></audio>
+      <audio src="audio/oompaLoompaSong.mp3" id="oompaLoompaSong"></audio>
+      <audio src="audio/peterGunnTheme.mp3" id="peterGunnTheme"></audio>
+      <audio src="audio/pfftYouWereGone.mp3" id="pfftYouWereGone"></audio>
+      <audio src="audio/piratesOfTheCaribbeanTheme.mp3" id="piratesOfTheCaribbeanTheme"></audio>
+      <audio src="audio/poison.mp3" id="poison"></audio>
+      <audio src="audio/proudMary.mp3" id="proudMary"></audio>
+      <audio src="audio/radar.mp3" id="radar"></audio>
+      <audio src="audio/rockyTheme.mp3" id="rockyTheme"></audio>
+      <audio src="audio/russianSailorsDance.mp3" id="russianSailorsDance"></audio>
+      <audio src="audio/september.mp3" id="september"></audio>
+      <audio src="audio/soulBossaNova.mp3" id="soulBossaNova"></audio>
+      <audio src="audio/soulMan.mp3" id="soulMan"></audio>
+      <audio src="audio/supermanTheme.mp3" id="supermanTheme"></audio>
+      <audio src="audio/sweetCaroline.mp3" id="sweetCaroline"></audio>
+      <audio src="audio/sweetDreams.mp3" id="sweetDreams"></audio>
+      <audio src="audio/takeOnMe.mp3" id="takeOnMe"></audio>
+      <audio src="audio/tequila.mp3" id="tequila"></audio>
+      <audio src="audio/tetrisTheme.mp3" id="tetrisTheme"></audio>
+      <audio src="audio/theBareNecessities.mp3" id="theBareNecessities"></audio>
+      <audio src="audio/theFinalCountdown.mp3" id="theFinalCountdown"></audio>
+      <audio src="audio/theHeySong.mp3" id="theHeySong"></audio>
+      <audio src="audio/theImpressionThatIGet.mp3" id="theImpressionThatIGet"></audio>
+      <audio src="audio/theMuppetsTheme.mp3" id="theMuppetsTheme"></audio>
+      <audio src="audio/theRace.mp3" id="theRace"></audio>
+      <audio src="audio/theSMMan.mp3" id="theSMMan"></audio>
+      <audio src="audio/theStarSpangledBanner.mp3" id="theStarSpangledBanner"></audio>
+      <audio src="audio/theStripper.mp3" id="theStripper"></audio>
+      <audio src="audio/touchMe.mp3" id="touchMe"></audio>
+      <audio src="audio/uptownGirl.mp3" id="uptownGirl"></audio>
+      <audio src="audio/weAreNumberOne.mp3" id="weAreNumberOne"></audio>
+      <audio src="audio/weWillRockYou.mp3" id="weWillRockYou"></audio>
+      <audio src="audio/whenTheSaintsGoMarchingIn.mp3" id="whenTheSaintsGoMarchingIn"></audio>
+      <audio src="audio/YMCA.mp3" id="YMCA"></audio>
+      <audio src="audio/zootSuitRiot.mp3" id="zootSuitRiot"></audio>
+    </div>
+    <script type="text/javascript" src="page.js"></script>
+  </body>
+</html>

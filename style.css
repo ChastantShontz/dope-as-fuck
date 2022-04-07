@@ -1,0 +1,3134 @@
+/* Element Classes and IDs */
+
+body {
+  background-image: url(img/pepBand.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#joeDesenaCont {
+  z-index: 9;
+  display: grid;
+  grid-template-columns: 33% 67%;
+  grid-column-gap: .2em;
+  grid-template-rows: 100%;
+  position: fixed;
+  left: -30em;
+  bottom: 2em;
+  border-radius: .5em;
+  background-color: var(--white);
+  height: 10em;
+  width: 30em;
+  border: .2em solid var(--clarksonGreen);
+}
+
+#joeDesena {
+  border-top-left-radius: .3em;
+  border-bottom-left-radius: .3em;
+  background-image: url(img/joeDesenaBG.png);
+  background-size: cover;
+  background-position: center;
+  border-right: .2em solid var(--clarksonGreen);
+}
+
+#joeDesenaTalkCont {
+  border-left: .2em solid var(--clarksonGreen);
+}
+
+#joeDesenaName {
+  padding-left: 1em;
+  font-family: "Russo One", sans-serif;
+  color: var(--clarksonGreen);
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+#spacer {
+  float: right;
+  height: 5.57em;
+}
+
+#ok {
+  float: right;
+  clear: right;
+  border-radius: .2em;
+  background-color: var(--green);
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  margin-left: .27em;
+  margin-right: .27em;
+  font-family: "Archivo Black", sans-serif;
+  color: var(--white);
+  font-size: 1.5em;
+  font-weight: bold;
+  transition: transform .1s ease 0s;
+}
+
+#ok:active, #dafCounterButton:active, #iceDrink:active, #gangbangButton:active, #fuckSluButton:active, #youtubeSkip:active, #troyLassialButton:active, #choose:active, #playAgain:active {
+  transform: scale(.95) !important;
+}
+
+#joeDesenaTalk {
+  padding: .5em;
+  border-top: .2em solid var(--clarksonGreen);
+  font-family: "Merriweather", serif;
+  font-size: .85em;
+}
+
+#discordLogo {
+  position: fixed;
+  left: 47.5%;
+  right: 47.5%;
+  bottom: -11%;
+  border-radius: .5em;
+  background-image: url(img/discord.png);
+  background-size: cover;
+  background-position: center;
+  height: 10%;
+  cursor: pointer;
+}
+
+#discordNotification {
+  position: absolute;
+  right: -.5em;
+  top: -.5em;
+  border-radius: 1em;
+  background-color: var(--red);
+  height: 1.5em;
+  width: 1.5em;
+  font-family: "Oswald", sans-serif;
+  color: var(--white);
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+}
+
+#discord {
+  position: fixed;
+  left: 40%;
+  right: 40%;
+  bottom: -9%;
+  border-radius: .5em;
+  background-color: var(--discordGray);
+  transform: scale(0);
+}
+
+#discordHeading {
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+  background-color: var(--discordDarkGray);
+  padding: .25em;
+  border-bottom: .1em solid var(--black);
+  color: var(--discordLightGray);
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#discordMenu {
+  display: inline-block;
+  margin-left: .25em;
+  user-select: none;
+}
+
+#discordAnnouncements {
+  display: inline-block;
+  margin-left: 1em;
+  font-family: "Dosis", sans-serif;
+}
+
+#discordMessageContCont {
+  display: flex;
+  justify-content: space-around;
+  padding: .25em;
+}
+
+#discordProfile {
+  position: relative;
+  top: .25em;
+  border-radius: 1em;
+  background-image: url(img/ryanMccarthyBG.png);
+  background-size: cover;
+  background-position: center;
+  height: 2em;
+  width: 2em;
+}
+
+#discordMessageCont {
+  width: 85%;
+}
+
+#discordUsername {
+  font-family: "Dosis", sans-serif;
+  color: var(--yellow);
+  font-weight: bold;
+}
+
+#discordDate {
+  color: var(--discordLightGray);
+  font-size: .75em;
+  font-weight: normal;
+}
+
+#discordMessage {
+  font-family: "Dosis", sans-serif;
+  color: var(--white);
+}
+
+#discordUsers {
+  border-radius: .1em;
+  background-color: rgba(114, 137, 218, 50%);
+  font-weight: bold;
+}
+
+#discordToolbar {
+  display: flex;
+  justify-content: space-around;
+  border-bottom-left-radius: .5em;
+  border-bottom-right-radius: .5em;
+  padding: .25em;
+  border-top: .1em solid var(--black);
+  align-items: center;
+}
+
+#discordPlus {
+  display: inline-block;
+  border-radius: 1em;
+  background-color: var(--discordDarkGray);
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  color: var(--discordLightGray);
+  font-size: 1.25em;
+  font-weight: bold;
+  user-select: none;
+}
+
+#discordBubble {
+  display: inline-block;
+  border-radius: 1em;
+  background-color: var(--discordDarkGray);
+  width: 85%;
+  padding: .5em;
+  font-family: "Dosis", sans-serif;
+  color: var(--discordLightGray);
+}
+
+#menCont {
+  position: fixed;
+  left: -15em;
+  top: 20%;
+  cursor: pointer;
+}
+
+#men {
+  border-radius: .5em;
+  background-image: url(img/danielAllinBG.png);
+  background-size: cover;
+  background-position: top;
+  height: 15em;
+  width: 15em;
+}
+
+#menLabel {
+  border-radius: .5em;
+  background-color: var(--white);
+  margin-top: .25em;
+  font-family: "Varela Round", sans-serif;
+  color: var(--allinBlue);
+  font-size: 1.25em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#womenCont {
+  position: fixed;
+  right: -15em;
+  top: 20%;
+  cursor: pointer;
+}
+
+#women {
+  border-radius: .5em;
+  background-image: url(img/hopeCrisafiBG.png);
+  background-size: cover;
+  background-position: top;
+  height: 15em;
+  width: 15em;
+}
+
+#womenLabel {
+  border-radius: .5em;
+  background-color: var(--white);
+  margin-top: .25em;
+  font-family: "Varela Round", sans-serif;
+  color: var(--hopeRed);
+  font-size: 1.25em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#map {
+  visibility: hidden;
+  position: fixed;
+  left: 5%;
+  right: 5%;
+  top: 5%;
+  bottom: 30%;
+  border-radius: 1em;
+  background-image: url(img/map.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+}
+
+#clarkson {
+  position: absolute;
+  left: 1em;
+  bottom: 2em;
+  border-radius: .5em;
+  width: 5em;
+}
+
+#slu {
+  position: absolute;
+  right: 1em;
+  top: 4em;
+  border-radius: .5em;
+  width: 5em;
+}
+
+#knightMobile {
+  position: fixed;
+  left: -25em;
+  bottom: 37%;
+  width: 5em;
+  transform: scale(5);
+  transform-origin: left;
+}
+
+#crappleton {
+  position: fixed;
+  left: 25%;
+  right: 25%;
+  bottom: 30%;
+  border-radius: 1em;
+  background-image: url(img/crappleton.png);
+  background-size: cover;
+  background-position: center;
+  height: 65%;
+  border: .5em solid var(--sluRed);
+  transform: scale(0);
+}
+
+#lives {
+  display: grid;
+  grid-template-columns: 16% 17% 17% 17% 17% 16%;
+  grid-template-rows: 100%;
+  visibility: hidden;
+  position: fixed;
+  left: 40%;
+  right: 0;
+  bottom: -8em;
+  opacity: 0;
+  height: 19em;
+}
+
+#carolineMoreauLifeContCont, #liamDurkinLifeContCont, #kamiMillerLifeContCont, #garrettWillardLifeContCont, #ryanMccarthyLifeContCont, #nickCorsnerLifeContCont {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+#carolineMoreauLifeCont, #liamDurkinLifeCont, #kamiMillerLifeCont, #garrettWillardLifeCont, #ryanMccarthyLifeCont, #nickCorsnerLifeCont {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 11em;
+  border-radius: 5em;
+  background-color: var(--white);
+  height: 8em;
+  width: 8em;
+  align-items: center;
+}
+
+#carolineMoreauLife {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 5em;
+  background-image: url(img/carolineMoreauBG.png);
+  background-size: cover;
+  background-position: center;
+  border: .2em solid var(--clarksonGreen);
+}
+
+#carolineMoreauDie, #liamDurkinDie, #kamiMillerDie, #garrettWillardDie, #ryanMccarthyDie, #nickCorsnerDie {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  color: var(--sluRed);
+  font-size: 20em;
+  user-select: none;
+}
+
+#liamDurkinLife {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 5em;
+  background-image: url(img/liamDurkinBG.png);
+  background-size: cover;
+  background-position: center;
+  border: .2em solid var(--clarksonGreen);
+}
+
+#kamiMillerLife {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 5em;
+  background-image: url(img/kamiMillerBG.png);
+  background-size: cover;
+  background-position: center;
+  border: .2em solid var(--clarksonGreen);
+}
+
+#garrettWillardLife {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 5em;
+  background-image: url(img/garrettWillardBG.png);
+  background-size: cover;
+  background-position: center;
+  border: .2em solid var(--clarksonGreen);
+}
+
+#ryanMccarthyLife {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 5em;
+  background-image: url(img/ryanMccarthyBG.png);
+  background-size: cover;
+  background-position: center;
+  border: .2em solid var(--clarksonGreen);
+}
+
+#nickCorsnerLife {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 5em;
+  background-image: url(img/nickCorsnerBG.png);
+  background-size: cover;
+  background-position: center;
+  border: .2em solid var(--clarksonGreen);
+}
+
+#cheersContCont {
+  position: fixed;
+  left: 42.5%;
+  right: 42.5%;
+  bottom: 30%;
+  border-radius: .1em;
+  background-color: var(--white);
+  border: .2em solid var(--blue);
+  transform: scale(0);
+}
+
+#cheerHeading {
+  padding-left: 1em;
+  font-family: "Russo One", sans-serif;
+  color: var(--blue);
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+#cheersCont {
+  border-top: .2em solid var(--blue);
+  height: 16.5em;
+  overflow-y: auto;
+}
+
+.cheer {
+  position: relative;
+  padding: .25em;
+  border-bottom: .05em solid var(--blue);
+  cursor: pointer;
+}
+
+.cheer:hover {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.incorrectCheer:active {
+  background-color: var(--sluRed);
+  border-bottom: .05em solid var(--sluRed);
+}
+
+.correctCheer:active {
+  background-color: var(--clarksonGreen);
+  border-bottom: .05em solid var(--clarksonGreen);
+}
+
+#cheer1, #cheer7 {
+  display: none;
+}
+
+#cheer26 {
+  border-bottom: none;
+}
+
+.cheerText {
+  width: fit-content;
+  font-family: "Merriweather", serif;
+  font-size: .85em;
+  transform-origin: left;
+}
+
+.cheerCover {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#cheerCover3, #cheerCover5, #cheerCover10, #cheerCover11, #cheerCover18, #cheerCover25 {
+  visibility: visible;
+}
+
+#scoreboard {
+  position: fixed;
+  left: 42.5%;
+  right: 42.5%;
+  top: 5%;
+  border-radius: 1em;
+  background-color: var(--white);
+  border: .2em solid var(--blue);
+  transform: scale(0);
+}
+
+#scoreboardHeading {
+  font-family: "Russo One", sans-serif;
+  color: var(--blue);
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#scoreboardPeriod, #cheerScore, #dafCounterNumber, #gameOverScoreNumber {
+  font-family: "Oswald", sans-serif;
+  color: var(--orange);
+}
+
+#scoreboardScores {
+  display: flex;
+  justify-content: space-around;
+  padding: .25em;
+  border-top: .2em solid var(--blue);
+}
+
+#scoreboardClarksonLogo, #scoreboardSluLogo {
+  height: 3em;
+}
+
+#scoreboardClarksonScore {
+  font-family: "Oswald", sans-serif;
+  color: var(--clarksonGreen);
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#scoreboardSluScore {
+  font-family: "Oswald", sans-serif;
+  color: var(--sluRed);
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#rink {
+  display: grid;
+  grid-template-columns: 10% 20% 20% 20% 20% 10%;
+  grid-template-rows: 100%;
+  position: fixed;
+  left: 15%;
+  right: 15%;
+  bottom: 30%;
+  border-radius: 5em;
+  background-color: var(--white);
+  height: 65%;
+  border: .2em solid var(--blue);
+  transform: scale(0);
+}
+
+#rinkSection1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  border-right: .2em solid var(--red);
+  align-items: flex-end;
+}
+
+#rinkSection1Goal {
+  display: flex;
+  position: relative;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  height: 6em;
+  width: 3em;
+  border: .2em solid var(--red);
+  border-right: none;
+  align-items: flex-end;
+}
+
+#ethanHaider, #alexaMadrid {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  border-bottom-left-radius: .8em;
+  width: 2.8em;
+}
+
+#rinkSection2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  border-right: .2em solid var(--blue);
+  align-items: center;
+}
+
+#rinkSection2Circle1, #rinkSection2Circle2, #rinkSection5Circle1, #rinkSection5Circle2 {
+  display: flex;
+  justify-content: center;
+  border-radius: 5em;
+  height: 8em;
+  width: 8em;
+  border: .2em solid var(--red);
+  align-items: center;
+}
+
+#rinkSection2Circle1Center, #rinkSection2Circle2Center, #rinkSection5Circle1Center, #rinkSection5Circle2Center {
+  border-radius: .5em;
+  background-color: var(--red);
+  height: 1em;
+  width: 1em;
+}
+
+#rinkSection2SemiCircle {
+  position: absolute;
+  left: 0;
+  border-top-right-radius: 5em;
+  border-bottom-right-radius: 5em;
+  background-color: var(--blue);
+  height: 8em;
+  width: 4em;
+  border: .2em solid var(--red);
+  border-left: none;
+}
+
+#rinkSection3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  border-right: .1em solid var(--red);
+}
+
+#rinkSection3Circle1, #rinkSection3Circle2, #rinkSection4Circle1, #rinkSection4Circle2 {
+  display: flex;
+  justify-content: center;
+  border-radius: 5em;
+  height: 8em;
+  width: 8em;
+  align-items: center;
+}
+
+#rinkSection3Circle1Center, #rinkSection3Circle2Center, #rinkSection4Circle1Center, #rinkSection4Circle2Center {
+  border-radius: .5em;
+  background-color: var(--red);
+  height: 1em;
+  width: 1em;
+}
+
+#alexCampbell, #brookeMcquigge {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom-left-radius: .8em;
+  border-bottom-right-radius: .8em;
+  opacity: 0;
+  width: 2.8em;
+}
+
+#dustynMcfaul, #caitrinLongeran {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  left: 20%;
+  bottom: 0;
+  border-bottom-left-radius: .8em;
+  border-bottom-right-radius: .8em;
+  opacity: 0;
+  width: 2.8em;
+}
+
+#jackJacome, #jennaGoodwin {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  left: 40%;
+  bottom: 0;
+  border-bottom-left-radius: .8em;
+  border-bottom-right-radius: .8em;
+  opacity: 0;
+  width: 2.8em;
+}
+
+#lukeSanterno, #mirandaGaudet {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  left: 60%;
+  bottom: 0;
+  border-bottom-left-radius: .8em;
+  border-bottom-right-radius: .8em;
+  opacity: 0;
+  width: 2.8em;
+}
+
+#zachTsekos, #nicoleGosling {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  left: 80%;
+  bottom: 0;
+  border-bottom-left-radius: .8em;
+  border-bottom-right-radius: .8em;
+  opacity: 0;
+  width: 2.8em;
+}
+
+#cage1 {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  left: -20%;
+  bottom: 65%;
+  opacity: 0;
+  width: 5.6em;
+}
+
+#cage2 {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  left: -20%;
+  bottom: 15%;
+  opacity: 0;
+  width: 5.6em;
+}
+
+#cage3 {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  left: 65%;
+  bottom: 2%;
+  opacity: 0;
+  width: 5.6em;
+}
+
+#cage4 {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  left: 65%;
+  bottom: 40%;
+  opacity: 0;
+  width: 5.6em;
+}
+
+#cage5 {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  left: 65%;
+  bottom: 77%;
+  opacity: 0;
+  width: 5.6em;
+}
+
+#rinkSection4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  border-left: .1em solid var(--red);
+  align-items: flex-end;
+}
+
+#ashtonFry, #alyMcleod {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-bottom-left-radius: .8em;
+  border-bottom-right-radius: .8em;
+  opacity: 0;
+  width: 2.8em;
+}
+
+#cameronBuhl, #brittneyGout {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  right: 20%;
+  bottom: 0;
+  border-bottom-left-radius: .8em;
+  border-bottom-right-radius: .8em;
+  opacity: 0;
+  width: 2.8em;
+}
+
+#davidJankowski, #gabiJones {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  right: 40%;
+  bottom: 0;
+  border-bottom-left-radius: .8em;
+  border-bottom-right-radius: .8em;
+  opacity: 0;
+  width: 2.8em;
+}
+
+#nicholasTrela, #lilyWildman {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  right: 60%;
+  bottom: 0;
+  border-bottom-left-radius: .8em;
+  border-bottom-right-radius: .8em;
+  opacity: 0;
+  width: 2.8em;
+}
+
+#tuckerMcintosh, #stephanieVoge {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  right: 80%;
+  bottom: 0;
+  border-bottom-left-radius: .8em;
+  border-bottom-right-radius: .8em;
+  opacity: 0;
+  width: 2.8em;
+}
+
+#cage6 {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  right: -20%;
+  bottom: 65%;
+  opacity: 0;
+  width: 5.6em;
+}
+
+#cage7 {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  right: -20%;
+  bottom: 15%;
+  opacity: 0;
+  width: 5.6em;
+}
+
+#cage8 {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  right: 65%;
+  bottom: 2%;
+  opacity: 0;
+  width: 5.6em;
+}
+
+#cage9 {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  right: 65%;
+  bottom: 40%;
+  opacity: 0;
+  width: 5.6em;
+}
+
+#cage10 {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  right: 65%;
+  bottom: 77%;
+  opacity: 0;
+  width: 5.6em;
+}
+
+#rinkSection5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  border-left: .2em solid var(--blue);
+  align-items: center;
+}
+
+#rinkSection5SemiCircle {
+  position: absolute;
+  right: 0;
+  border-top-left-radius: 5em;
+  border-bottom-left-radius: 5em;
+  background-color: var(--blue);
+  height: 8em;
+  width: 4em;
+  border: .2em solid var(--red);
+  border-right: none;
+}
+
+#rinkSection6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  border-left: .2em solid var(--red);
+}
+
+#rinkSection6Goal {
+  display: flex;
+  position: relative;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  height: 6em;
+  width: 3em;
+  border: .2em solid var(--red);
+  border-left: none;
+  align-items: flex-end;
+}
+
+#danielAllin, #hopeCrisafi {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  border-bottom-right-radius: .8em;
+  width: 2.8em;
+}
+
+#rinkLogoContCont {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  align-items: center;
+}
+
+#rinkLogoCont {
+  display: flex;
+  justify-content: center;
+  border-radius: 5em;
+  height: 8em;
+  width: 8em;
+  border: .2em solid var(--blue);
+  align-items: center;
+}
+
+#rinkLogo {
+  position: relative;
+  top: .2em;
+  width: 7em;
+}
+
+#ref1 {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  left: 40%;
+  bottom: 0;
+  opacity: 0;
+  width: 5em;
+}
+
+#ref2 {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  right: 40%;
+  bottom: 0;
+  opacity: 0;
+  width: 5em;
+  transform: scaleX(-1);
+}
+
+#goldenKnight {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  left: 40%;
+  bottom: 0;
+  opacity: 0;
+  width: 5em;
+}
+
+#flag {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  top: 5%;
+  bottom: 5%;
+  height: 90%;
+  opacity: 0;
+  width: 60%;
+}
+
+#tonyCollins {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  left: 2%;
+  top: 5%;
+  border-bottom-left-radius: .8em;
+  border-bottom-right-radius: .8em;
+  opacity: 0;
+  width: 2.8em;
+}
+
+#handCont {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  align-items: center;
+}
+
+#hand {
+  height: 75%;
+}
+
+#puck {
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  left: 49.25%;
+  top: 0;
+  border-radius: .5em;
+  background-color: var(--black);
+  opacity: 0;
+  height: 1em;
+  width: 1em;
+}
+
+#goalMessages {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  align-items: center;
+}
+
+#sluGoalMessage {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  font-family: "Palette Mosaic", sans-serif;
+  color: var(--sluRed);
+  font-size: 3em;
+  text-align: center;
+}
+
+#clarksonGoalMessage {
+  visibility: hidden;
+  position: relative;
+  bottom: .2em;
+  opacity: 0;
+  font-family: "Luckiest Guy", sans-serif;
+  color: var(--clarksonGreen);
+  font-size: 10em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#goldenKnightScale {
+  font-size: .3em;
+}
+
+#victoryMessages {
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+#sluVictoryMessageCont, #clarksonVictoryMessageCont {
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  align-items: center;
+}
+
+#sluVictoryMessage {
+  font-family: "Palette Mosaic", sans-serif;
+  color: var(--sluRed);
+  font-size: 3em;
+  text-align: center;
+}
+
+#saints {
+  display: inline-block;
+  transform-origin: top left;
+}
+
+#victorySlu {
+  display: inline-block;
+  transform-origin: top left;
+}
+
+#clarksonVictoryMessage {
+  font-family: "Luckiest Guy", sans-serif;
+  color: var(--clarksonGreen);
+  font-size: 5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#golden, #knight, #victoryClarkson {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#youWon {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  align-items: center;
+}
+
+#bandiesCont {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 34% 33% 33%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#bandiesRow1 {
+  position: relative;
+}
+
+#bandiesRow2 {
+  position: relative;
+  bottom: 5%;
+}
+
+#bandiesRow3 {
+  position: relative;
+  bottom: 10%;
+}
+
+.bandie {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+}
+
+#nateBeaupre {
+  left: 2%;
+}
+
+#ariaStephan {
+  left: 5%;
+}
+
+#colinPatricelli {
+  left: 11%;
+}
+
+#nickSchalago {
+  left: 20%;
+}
+
+#king {
+  left: 21%;
+}
+
+#jam {
+  left: 29%;
+}
+
+#kronk {
+  left: 34%;
+}
+
+#ericBrom {
+  left: 44%;
+}
+
+#garrettWillard {
+  left: 48%;
+  top: 9%;
+}
+
+#liamDurkin {
+  left: 54%;
+}
+
+#kamiMiller {
+  left: 60%;
+}
+
+#carolineMoreau {
+  left: 65%;
+}
+
+#kellyBoutin {
+  left: 73%;
+  top: 24%;
+}
+
+#ethanLaferriere {
+  left: 74%;
+}
+
+#jeffClark {
+  left: 82%;
+}
+
+#owenMears {
+  left: 86%;
+}
+
+#aliceWilser {
+  left: 88%;
+}
+
+#gabeAguilar {
+  left: 2%;
+}
+
+#nickMerola {
+  left: 5%;
+  top: 4%;
+}
+
+#carloDesena {
+  left: 11%;
+  top: 25%;
+}
+
+#bellaDesena {
+  left: 15%;
+}
+
+#knightguard {
+  left: 22%;
+}
+
+#benVincens {
+  left: 27%;
+}
+
+#brandonWinter {
+  left: 70%;
+}
+
+#coleBennett {
+  left: 72%;
+}
+
+#fordSmith {
+  left: 81%;
+}
+
+#michaelAkers {
+  left: 90%;
+}
+
+#tomRobinson {
+  left: 2%;
+}
+
+#lindseyPenet {
+  left: 5%;
+}
+
+#ryanMccarthy {
+  left: 12%;
+}
+
+#davidVanill {
+  left: 20%;
+  top: -8%;
+}
+
+#ericLaferriere {
+  left: 28%;
+}
+
+#alexBrenton {
+  left: 34%;
+}
+
+#ariaGarceau {
+  left: 39%;
+}
+
+#willDumont {
+  left: 45%;
+}
+
+#tomUhl {
+  left: 48%;
+}
+
+#kyleMatthews {
+  left: 55%;
+}
+
+#nickCorsner {
+  left: 60%;
+}
+
+#lyleTrimble {
+  left: 69%;
+}
+
+#isabelleBrown {
+  left: 76%;
+}
+
+#aileenHarvey {
+  left: 82%;
+}
+
+#cassieMarshall {
+  left: 87%;
+}
+
+#youWonMessage {
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  font-family: "Luckiest Guy", sans-serif;
+  color: var(--clarksonGreen);
+  font-size: 5em;
+  font-weight: bold;
+}
+
+#plane1 {
+  position: fixed;
+  left: -10em;
+  top: 15%;
+  width: 10em;
+}
+
+#plane2 {
+  position: fixed;
+  left: -10em;
+  top: 25%;
+  width: 10em;
+}
+
+#plane3 {
+  position: fixed;
+  left: -10em;
+  top: 35%;
+  width: 10em;
+}
+
+#plane4 {
+  position: fixed;
+  left: -10em;
+  top: 45%;
+  width: 10em;
+}
+
+#planePrimeCont {
+  display: flex;
+  position: fixed;
+  left: -52em;
+  top: 20%;
+  align-items: center;
+}
+
+#planePrime {
+  display: inline-block;
+  width: 25em;
+}
+
+#tijuanaBanner {
+  display: inline-block;
+  position: relative;
+  left: .25em;
+  background-color: var(--white);
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  border: .05em solid var(--clarksonGreen);
+  font-family: "Luckiest Guy", sans-serif;
+  color: var(--clarksonGreen);
+  font-size: 5em;
+  font-weight: bold;
+}
+
+#partyCont {
+  display: flex;
+  justify-content: space-between;
+  visibility: hidden;
+  position: fixed;
+  left: 3%;
+  right: 67%;
+  bottom: 30%;
+  opacity: 0;
+  align-items: center;
+}
+
+#dafCounterCont {
+  visibility: hidden;
+  border-radius: 1em;
+  background-color: var(--white);
+  opacity: 0;
+  width: 33%;
+  border: .2em solid var(--clarksonGreen);
+}
+
+#dafCounterHeading {
+  font-family: "Russo One", sans-serif;
+  color: var(--blue);
+  font-size: 1.25em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#dafCounter {
+  display: flex;
+  justify-content: center;
+  height: 5em;
+  border-top: .2em solid var(--clarksonGreen);
+  align-items: center;
+}
+
+#dafCounterButton {
+  border-radius: .2em;
+  background-image: url(img/chestnuts.png);
+  background-size: cover;
+  background-position: center;
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  font-family: "Archivo Black", sans-serif;
+  color: var(--white);
+  font-size: 1.5em;
+  font-weight: bold;
+  transition: transform .1s ease 0s;
+}
+
+#dafCounterError {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  font-family: "Rubik Mono One", sans-serif;
+  color: var(--red);
+  font-size: 1.3em;
+  font-weight: bold;
+  transform: rotate(45deg);
+}
+
+#speakerCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  width: 10em;
+  align-items: center;
+  box-shadow: none !important;
+}
+
+#speaker {
+  width: 10em;
+}
+
+#speakerSongs {
+  border-radius: .5em;
+  background-color: var(--white);
+  width: 100%;
+  border: .1em solid var(--clarksonGreen);
+  cursor: pointer;
+}
+
+#speakerSongDefault, #gangbangVerseDefault, #gangbangResponseDefault {
+  font-weight: bold;
+}
+
+#speakerControls {
+  display: flex;
+  justify-content: center;
+  border-radius: 1em;
+  background-color: var(--white);
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  border: .05em solid var(--clarksonGreen);
+  margin-top: .5em;
+  align-items: center;
+}
+
+#speakerPlay {
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+  background-color: var(--youtubeGray);
+  opacity: 50%;
+  height: 1.25em;
+  width: 1.25em;
+  margin-right: .5em;
+  pointer-events: none;
+}
+
+#speakerPause {
+  background-color: transparent;
+  opacity: 50%;
+  height: 1.25em;
+  width: 1.25em;
+  border-left: .5em solid var(--youtubeGray);
+  border-right: .5em solid var(--youtubeGray);
+  margin-left: .5em;
+  pointer-events: none;
+}
+
+#busch {
+  visibility: hidden;
+  opacity: 0;
+  height: 10em;
+  box-shadow: none !important;
+  transition: transform .25s ease 0s;
+  cursor: pointer;
+}
+
+#busch:active {
+  transform: scale(1.1) !important;
+}
+
+#gangbangContCont {
+  position: fixed;
+  right: 100%;
+  top: 10%;
+  border-radius: 1em;
+  background-color: var(--white);
+  width: 30%;
+  border: .2em solid var(--clarksonGreen);
+}
+
+#gangbangHeading {
+  font-family: "Russo One", sans-serif;
+  color: var(--clarksonGreen);
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#gangbangCont {
+  display: flex;
+  justify-content: center;
+  height: 13em;
+  border-top: .2em solid var(--clarksonGreen);
+  align-items: center;
+}
+
+#troyLassialFade {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  height: 90%;
+}
+
+#gangbangButton {
+  position: absolute;
+  border-radius: .2em;
+  background-color: var(--green);
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  color: var(--white);
+  font-size: 1.5em;
+  font-weight: bold;
+  transition: transform .1s ease 0s;
+}
+
+#gangbang {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  width: 80%;
+  font-family: "Merienda", sans-serif;
+  font-size: .9em;
+  font-style: italic;
+  text-align: center;
+}
+
+.gangbangWord {
+  visibility: hidden;
+}
+
+#gangbangWord1::before, #iceWord1::before {
+  content: "\01D160\00A0";
+  display: inline-block;
+  transform: scale(2);
+  transform-origin: bottom;
+}
+
+#gangbangWord40::after, #iceWord24::after {
+  content: "\00A0\01D161\01D161";
+  display: inline-block;
+  position: absolute;
+  transform: scale(1.5);
+  transform-origin: top;
+}
+
+#gangbangVersesContCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  height: 50%;
+  width: 100%;
+  align-items: center;
+}
+
+#gangbangLyrics {
+  width: 90%;
+  font-family: "Acme", sans-serif;
+  color: var(--clarksonGreen);
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#gangbangVersesCont {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 1.5em;
+  width: 40%;
+  align-items: center;
+}
+
+#gangbangVerses, #gangbangResponses {
+  visibility: hidden;
+  position: absolute;
+  border-radius: .5em;
+  background-color: var(--white);
+  opacity: 0;
+  width: 100%;
+  border: .1em solid var(--clarksonGreen);
+  cursor: pointer;
+}
+
+#gangbangVerse1, #gangbangVerse14, #gangbangResponse1, #gangbangResponse14 {
+  display: none;
+}
+
+#houseCont {
+  position: fixed;
+  left: 40%;
+  right: 5%;
+  top: 100%;
+  border-radius: .5em;
+  height: 80%;
+  border: 1em solid var(--clarksonGreen);
+}
+
+#house {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url(img/house.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#kingHome {
+  position: absolute;
+  left: 15%;
+  bottom: 0;
+  height: 50%;
+}
+
+#mahogany {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 50%;
+}
+
+#advertisement {
+  position: fixed;
+  left: -22em;
+  top: 1em;
+  border-radius: .5em;
+  background-color: var(--white);
+  width: 22em;
+  padding: .25em;
+  border: .05em solid var(--clarksonGreen);
+  font-family: "Mulish", sans-serif;
+  font-size: 1.25em;
+}
+
+#advertisementLink {
+  font-weight: bold;
+}
+
+#advertisementLink:hover {
+  text-decoration: underline;
+}
+
+#advertisementLink:active {
+  color: var(--purple);
+}
+
+#cover {
+  z-index: 10;
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(153, 153, 153, 75%);
+  opacity: 0;
+}
+
+#iceContCont {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  visibility: hidden;
+  position: fixed;
+  left: 16%;
+  right: 54%;
+  top: 30%;
+  bottom: 10%;
+  border-radius: 1em;
+  opacity: 0;
+  box-shadow: none !important;
+  transform: scale(0);
+}
+
+#iceCont {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+
+#ice {
+  height: 100%;
+}
+
+#iceCover {
+  position: absolute;
+  left: 10%;
+  right: 0;
+  top: 0;
+  bottom: 100%;
+  background-color: var(--white);
+}
+
+#iceDrinkCont {
+  visibility: hidden;
+  position: absolute;
+  bottom: .5em;
+  border-radius: .3em;
+  opacity: 0;
+}
+
+#iceDrink {
+  border-radius: .2em;
+  background-color: var(--green);
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  font-family: "Archivo Black", sans-serif;
+  color: var(--white);
+  font-size: 1.5em;
+  font-weight: bold;
+  transition: transform .1s ease 0s;
+}
+
+#iceSongCont {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  right: 20%;
+  align-items: center;
+}
+
+#iceSong {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  font-family: "Merienda", sans-serif;
+  font-size: .9em;
+  font-style: italic;
+  text-align: center;
+}
+
+.iceWord {
+  visibility: hidden;
+}
+
+#iceCounter {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  font-family: "Acme", sans-serif;
+  font-weight: bold;
+}
+
+#songsCont {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 90% 10%;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+  border-radius: 1em;
+  background-color: var(--white);
+  padding: 1%;
+  border: .05em solid var(--youtubeGray);
+  transform: scale(0);
+}
+
+#songs {
+  display: flex;
+  justify-content: center;
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+  background-size: cover;
+  background-position: center;
+  border: .1em solid var(--youtubeGray);
+  align-items: center;
+  cursor: pointer;
+}
+
+#fuckSluMessage {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  font-family: "Rubik Mono One", sans-serif;
+  color: var(--sluRed);
+  font-size: 3.5em;
+  font-weight: bold;
+}
+
+#danceInstructions {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  font-family: "Acme", sans-serif;
+  color: var(--white);
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: -.01em .01em .01em var(--white),
+               -.01em .015em .01em var(--white),
+               -.015em .02em .01em var(--white),
+               -.015em .025em .01em var(--white),
+               -.02em .03em .01em var(--white),
+               -.02em .035em .01em var(--white),
+               -.025em .04em .01em var(--white),
+               -.025em .045em .01em var(--white),
+               -.03em .05em .01em var(--white),
+               -.03em .055em .01em var(--black),
+               -.035em .06em .01em var(--black),
+               -.035em .065em .01em var(--black),
+               -.04em .07em .01em var(--black),
+               -.04em .075em .01em var(--black),
+               -.045em .08em .01em var(--black),
+               -.045em .085em .01em var(--black),
+               -.05em .09em .01em var(--black),
+               -.05em .095em .01em var(--black);
+}
+
+#youtubeToolbar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border-bottom-left-radius: .5em;
+  border-bottom-right-radius: .5em;
+  border: .1em solid var(--youtubeGray);
+  border-top: none;
+  align-items: center;
+}
+
+#youtubeControls {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+#youtubePlayPause {
+  display: inline-block;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+  background-color: var(--youtubeGray);
+  height: 1.5em;
+  width: 1.5em;
+  margin-left: .5em;
+  margin-right: .5em;
+}
+
+#youtubeTimer {
+  display: inline-block;
+  font-family: "Oswald", sans-serif;
+  color: var(--youtubeGray);
+}
+
+#fuckSluButtonCont {
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  align-items: center;
+}
+
+#fuckSluButton {
+  border-radius: .5em;
+  background-color: var(--sluRed);
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  font-family: "Rubik Mono One", sans-serif;
+  color: var(--white);
+  font-weight: bold;
+  transition: transform .1s ease 0s;
+}
+
+#youtubeSkip {
+  z-index: 1;
+  border-radius: .1em;
+  background-color: var(--youtubeGray);
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  margin-right: .5em;
+  font-family: "Archivo Black", sans-serif;
+  color: var(--white);
+  font-weight: bold;
+  transition: transform .1s ease 0s;
+}
+
+#troyLassialCont {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+  border-radius: 1em;
+  background-image: url(img/hell.png);
+  background-size: cover;
+  background-position: bottom;
+  transform: scale(0);
+}
+
+#troyLassial {
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+  height: 75%;
+}
+
+#troyLassialTalkContCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  left: 64.5%;
+  right: 2.5%;
+  top: 5%;
+  bottom: 5%;
+  align-items: flex-end;
+}
+
+#troyLassialTalkCont {
+  border-radius: .5em;
+  background-color: var(--white);
+  width: 100%;
+  border: .2em solid var(--clarksonGreen);
+}
+
+#troyLassialName {
+  padding-left: 1em;
+  font-family: "Russo One", sans-serif;
+  color: var(--clarksonGreen);
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+#troyLassialTalk {
+  padding: .5em;
+  border-top: .2em solid var(--clarksonGreen);
+  font-family: "Merriweather", serif;
+  font-size: .85em;
+}
+
+#troyLassialButton {
+  border-radius: .5em;
+  background-color: var(--clarksonGreen);
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  font-family: "Archivo Black", sans-serif;
+  color: var(--white);
+  font-size: 1.25em;
+  font-weight: bold;
+  transition: transform .1s ease 0s;
+}
+
+#choicesCont {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 75% 25%;
+  visibility: hidden;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+  border-radius: 1em;
+  background-color: var(--white);
+  opacity: 0;
+  border: .05em solid var(--clarksonGreen);
+}
+
+#choices {
+  display: grid;
+  grid-template-columns: 47.5% 47.5%;
+  grid-template-rows: 45% 45%;
+  grid-column-gap: 5%;
+  grid-row-gap: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+}
+
+#choice1, #choice2, #choice3, #choice4 {
+  border-radius: .5em;
+  background-color: var(--white);
+  padding-left: .5em;
+  padding-right: .5em;
+  border: .1em solid var(--clarksonGreen);
+  font-family: "Boogaloo", sans-serif;
+  color: var(--clarksonGreen);
+  font-size: 2em;
+  font-weight: bold;
+  box-shadow: .25em .25em 1em 0 var(--gray);
+}
+
+#chooseCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#choose {
+  border-radius: .5em;
+  background-color: var(--green);
+  opacity: 50%;
+  width: 25%;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  font-family: "Archivo Black", sans-serif;
+  color: var(--white);
+  font-size: 2em;
+  font-weight: bold;
+  transition: transform .1s ease 0s;
+  pointer-events: none;
+}
+
+#answerCont {
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  align-items: center;
+}
+
+#answer {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  font-family: "Bungee", sans-serif;
+  font-size: 6em;
+  font-weight: bold;
+}
+
+#answerCorrection {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: "Chau Philomene One", sans-serif;
+  color: var(--clarksonGreen);
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#correctAnswer {
+  font-family: "Anton", sans-serif;
+  color: var(--blue);
+  font-size: 1.17em;
+}
+
+#gameOver {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  visibility: hidden;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+  border-radius: 1em;
+  background-color: var(--white);
+  opacity: 0;
+  border: .05em solid var(--clarksonGreen);
+  align-items: center;
+}
+
+#gameOverMessage {
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#gameOverScore {
+  font-family: "Titillium Web", sans-serif;
+  color: var(--blue);
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#quote {
+  width: 50%;
+  font-family: "Patrick Hand", sans-serif;
+  color: var(--red);
+}
+
+#barcode {
+  font-family: "Libre Barcode 128", sans-serif;
+}
+
+#playAgain {
+  border-radius: .5em;
+  background-color: var(--green);
+  width: 33%;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  font-family: "Archivo Black", sans-serif;
+  color: var(--white);
+  font-size: 2em;
+  font-weight: bold;
+  transition: transform .1s ease 0s;
+}
+
+#songLibrary {
+  display: none;
+}
+
+/* Animation Effects */
+
+@keyframes buttonFadeOut {
+  0% {
+    visibility: visible;
+    opacity: 100%;
+  }
+  25%, 75% {
+    visibility: visible;
+    opacity: 50%;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes cheerEmphasize {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes cheerHighlight {
+  0% {
+    box-shadow: none;
+    transform: scale(1);
+  }
+  17% {
+    box-shadow: 0 0 .5em .5em var(--clarksonYellow);
+  }
+  33%, 67% {
+    box-shadow: 0 0 .5em .5em var(--clarksonYellow);
+    transform: scale(1.1);
+  }
+  83% {
+    box-shadow: 0 0 .5em .5em var(--clarksonYellow);
+  }
+  100% {
+    box-shadow: none;
+    transform: scale(1);
+  }
+}
+
+@keyframes clarksonGoalMessage {
+  0% {
+    visibility: hidden;
+    bottom: .2em;
+    opacity: 0;
+    transform: scale(1);
+  }
+  10% {
+    visibility: visible;
+    bottom: .2em;
+    opacity: 100%;
+    transform: scale(1);
+  }
+  50% {
+    visibility: visible;
+    bottom: .4em;
+    opacity: 100%;
+    transform: scale(1.5);
+  }
+  90% {
+    visibility: visible;
+    bottom: .2em;
+    opacity: 100%;
+    transform: scale(1);
+  }
+  100% {
+    visibility: hidden;
+    bottom: .2em;
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@keyframes sluGoalMessage {
+  0% {
+    visibility: hidden;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    opacity: 0;
+    transform: rotate(0)
+               scale(1);
+  }
+  8%, 17% {
+    visibility: visible;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    opacity: 100%;
+    transform: rotate(0)
+               scale(1);
+  }
+  33% {
+    visibility: visible;
+    left: 50%;
+    right: auto;
+    top: 5%;
+    bottom: auto;
+    opacity: 100%;
+    transform: rotate(69deg)
+               scale(1);
+  }
+  50% {
+    visibility: visible;
+    left: auto;
+    right: 40%;
+    top: auto;
+    bottom: 10%;
+    opacity: 100%;
+    transform: rotate(69deg)
+               scale(-1);
+  }
+  67% {
+    visibility: visible;
+    left: auto;
+    right: 15%;
+    top: 30%;
+    bottom: auto;
+    opacity: 100%;
+    transform: rotate(420deg)
+               scale(-1);
+  }
+  83%, 92% {
+    visibility: visible;
+    left: 20%;
+    right: auto;
+    top: auto;
+    bottom: 20%;
+    opacity: 100%;
+    transform: rotate(420deg)
+               scale(1);
+  }
+  100% {
+    visibility: hidden;
+    left: 20%;
+    right: auto;
+    top: auto;
+    bottom: 20%;
+    opacity: 0;
+    transform: rotate(420deg)
+               scale(1);
+  }
+}
+
+@keyframes planeFly {
+  0% {
+    left: -50em;
+  }
+  40% {
+    left: 20%;
+  }
+  60% {
+    left: 30%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes saintsHang {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes victoryHang {
+  0% {
+    transform: rotate(0);
+  }
+  14%, 29% {
+    transform: rotate(10deg);
+  }
+  86% {
+    transform: rotate(110deg);
+  }
+  100% {
+    transform: rotate(80deg);
+  }
+}
+
+@keyframes victoryFlicker {
+  0%, 8%, 10%, 11%, 13%, 17%, 19%, 44%, 46%, 62%, 64%, 81%, 83%, 92%, 94%, 100% {
+    opacity: 100%;
+  }
+  9%, 12%, 18%, 45%, 63%, 82%, 93% {
+    opacity: 0;
+  }
+}
+
+@keyframes driveUp {
+  0% {
+    bottom: 37%;
+    transform: rotate(0);
+  }
+  10% {
+    bottom: 37%;
+    transform: rotate(-90deg);
+  }
+  90% {
+    bottom: 80%;
+    transform: rotate(-90deg);
+  }
+  100% {
+    bottom: 80%;
+    transform: rotate(0);
+  }
+}
+
+@keyframes rinkAppear {
+  0% {
+    left: 15%;
+    right: 15%;
+    transform: scaleX(0)
+               scaleY(0);
+  }
+  25% {
+    left: 15%;
+    right: 15%;
+    transform: scaleX(1)
+               scaleY(.01);
+  }
+  50% {
+    left: 15%;
+    right: 15%;
+    transform: scaleX(1)
+               scaleY(1);
+  }
+  100% {
+    left: 25%;
+    right: 5%;
+    transform: scaleX(1)
+               scaleY(1);
+  }
+}
+
+@keyframes ref1Lap {
+  0% {
+    left: 40%;
+    bottom: 0;
+    transform: rotate(0)
+               scaleX(1);
+  }
+  15% {
+    left: 2%;
+    bottom: 2%;
+    transform: rotate(0)
+               scaleX(1);
+  }
+  19% {
+    left: 2%;
+    bottom: 2%;
+    transform: rotate(90deg)
+               scaleX(1);
+  }
+  31% {
+    left: 2%;
+    bottom: 80%;
+    transform: rotate(90deg)
+               scaleX(1);
+  }
+  35% {
+    left: 2%;
+    bottom: 80%;
+    transform: rotate(0)
+               scaleX(-1);
+  }
+  65% {
+    left: 90%;
+    bottom: 80%;
+    transform: rotate(0)
+               scaleX(-1);
+  }
+  69% {
+    left: 90%;
+    bottom: 80%;
+    transform: rotate(90deg)
+               scaleX(-1);
+  }
+  81% {
+    left: 90%;
+    bottom: 2%;
+    transform: rotate(90deg)
+               scaleX(-1);
+  }
+  85% {
+    left: 90%;
+    bottom: 2%;
+    transform: rotate(0)
+               scaleX(1);
+  }
+  100% {
+    left: 52%;
+    bottom: 0;
+    transform: rotate(0)
+               scaleX(1);
+  }
+}
+
+@keyframes ref2Lap {
+  0% {
+    right: 40%;
+    bottom: 0;
+    transform: rotate(0)
+               scaleX(-1);
+  }
+  15% {
+    right: 2%;
+    bottom: 2%;
+    transform: rotate(0)
+               scaleX(-1);
+  }
+  19% {
+    right: 2%;
+    bottom: 2%;
+    transform: rotate(-90deg)
+               scaleX(-1);
+  }
+  31% {
+    right: 2%;
+    bottom: 80%;
+    transform: rotate(-90deg)
+               scaleX(-1);
+  }
+  35% {
+    right: 2%;
+    bottom: 80%;
+    transform: rotate(0)
+               scaleX(1);
+  }
+  65% {
+    right: 90%;
+    bottom: 80%;
+    transform: rotate(0)
+               scaleX(1);
+  }
+  69% {
+    right: 90%;
+    bottom: 80%;
+    transform: rotate(-90deg)
+               scaleX(1);
+  }
+  81% {
+    right: 90%;
+    bottom: 2%;
+    transform: rotate(-90deg)
+               scaleX(1);
+  }
+  85% {
+    right: 90%;
+    bottom: 2%;
+    transform: rotate(0)
+               scaleX(-1);
+  }
+  100% {
+    right: 52%;
+    bottom: 0;
+    transform: rotate(0)
+               scaleX(-1);
+  }
+}
+
+@keyframes goldenKnightLap {
+  0% {
+    left: 40%;
+    bottom: 0;
+    transform: scaleX(1);
+  }
+  15% {
+    left: 2%;
+    bottom: 2%;
+    transform: scaleX(1);
+  }
+  19% {
+    left: 2%;
+    bottom: 2%;
+    transform: scaleX(1);
+  }
+  31% {
+    left: 2%;
+    bottom: 75%;
+    transform: scaleX(1);
+  }
+  35% {
+    left: 2%;
+    bottom: 75%;
+    transform: scaleX(-1);
+  }
+  65% {
+    left: 90%;
+    bottom: 75%;
+    transform: scaleX(-1);
+  }
+  69% {
+    left: 90%;
+    bottom: 75%;
+    transform: scaleX(-1);
+  }
+  81% {
+    left: 90%;
+    bottom: 2%;
+    transform: scaleX(-1);
+  }
+  85% {
+    left: 90%;
+    bottom: 2%;
+    transform: scaleX(1);
+  }
+  100% {
+    left: 52%;
+    bottom: 0;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fuckSlu {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1);
+  }
+  1% {
+    visibility: visible;
+    opacity: 100%;
+    transform: scale(1);
+  }
+  50% {
+    visibility: visible;
+    opacity: 100%;
+    transform: scale(1.5);
+  }
+  99% {
+    visibility: visible;
+    opacity: 100%;
+    transform: scale(1);
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@keyframes handWave {
+  0%, 10% {
+    transform: rotate(30deg);
+  }
+  50%, 60% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes clarksonPlayer1Exit {
+  0% {
+    left: 0;
+    bottom: 0;
+  }
+  3%, 5% {
+    left: -2em;
+    bottom: 0;
+  }
+  11%, 13% {
+    left: -2em;
+    bottom: 11em;
+  }
+  43%, 45% {
+    left: 58em;
+    bottom: 11em;
+  }
+  59%, 61% {
+    left: 58em;
+    bottom: -9em;
+  }
+  91%, 93% {
+    left: -2em;
+    bottom: -9em;
+  }
+  100% {
+    left: -2em;
+    bottom: 0;
+  }
+}
+
+@keyframes clarksonPlayer2Exit {
+  0% {
+    left: -10%;
+    bottom: 68%;
+  }
+  7%, 9% {
+    left: -18em;
+    bottom: 12em;
+  }
+  14%, 16% {
+    left: -18em;
+    bottom: 23em;
+  }
+  45%, 47% {
+    left: 41em;
+    bottom: 23em;
+  }
+  61%, 63% {
+    left: 41em;
+    bottom: 2em;
+  }
+  91%, 93% {
+    left: -18em;
+    bottom: 2em;
+  }
+  100% {
+    left: -18em;
+    bottom: 12em;
+  }
+}
+
+@keyframes clarksonPlayer3Exit {
+  0% {
+    left: -10%;
+    bottom: 18%;
+  }
+  7%, 9% {
+    left: -18em;
+    bottom: 12em;
+  }
+  14%, 16% {
+    left: -18em;
+    bottom: 23em;
+  }
+  45%, 47% {
+    left: 41em;
+    bottom: 23em;
+  }
+  61%, 63% {
+    left: 41em;
+    bottom: 2em;
+  }
+  91%, 93% {
+    left: -18em;
+    bottom: 2em;
+  }
+  100% {
+    left: -18em;
+    bottom: 12em;
+  }
+}
+
+@keyframes clarksonPlayer4Exit {
+  0% {
+    left: 75%;
+    bottom: 5%;
+  }
+  7%, 9% {
+    left: -18em;
+    bottom: 12em;
+  }
+  14%, 16% {
+    left: -18em;
+    bottom: 23em;
+  }
+  45%, 47% {
+    left: 41em;
+    bottom: 23em;
+  }
+  61%, 63% {
+    left: 41em;
+    bottom: 2em;
+  }
+  91%, 93% {
+    left: -18em;
+    bottom: 2em;
+  }
+  100% {
+    left: -18em;
+    bottom: 12em;
+  }
+}
+
+@keyframes clarksonPlayer5Exit {
+  0% {
+    left: 75%;
+    bottom: 43%;
+  }
+  7%, 9% {
+    left: -18em;
+    bottom: 12em;
+  }
+  14%, 16% {
+    left: -18em;
+    bottom: 23em;
+  }
+  45%, 47% {
+    left: 41em;
+    bottom: 23em;
+  }
+  61%, 63% {
+    left: 41em;
+    bottom: 2em;
+  }
+  91%, 93% {
+    left: -18em;
+    bottom: 2em;
+  }
+  100% {
+    left: -18em;
+    bottom: 12em;
+  }
+}
+
+@keyframes clarksonPlayer6Exit {
+  0% {
+    left: 75%;
+    bottom: 80%;
+  }
+  7%, 9% {
+    left: -18em;
+    bottom: 12em;
+  }
+  14%, 16% {
+    left: -18em;
+    bottom: 23em;
+  }
+  45%, 47% {
+    left: 41em;
+    bottom: 23em;
+  }
+  61%, 63% {
+    left: 41em;
+    bottom: 2em;
+  }
+  91%, 93% {
+    left: -18em;
+    bottom: 2em;
+  }
+  100% {
+    left: -18em;
+    bottom: 12em;
+  }
+}
+
+@keyframes sluPlayer1Exit {
+  0% {
+    right: 0;
+    bottom: 0;
+  }
+  3%, 5% {
+    right: -2em;
+    bottom: 0;
+  }
+  11%, 13% {
+    right: -2em;
+    bottom: -9em;
+  }
+  43%, 45% {
+    right: 58em;
+    bottom: -9em;
+  }
+  59%, 61% {
+    right: 58em;
+    bottom: 11em;
+  }
+  91%, 93% {
+    right: -2em;
+    bottom: 11em;
+  }
+  100% {
+    right: -2em;
+    bottom: 0;
+  }
+}
+
+@keyframes sluPlayer2Exit {
+  0% {
+    right: -10%;
+    bottom: 68%;
+  }
+  7%, 9% {
+    right: -18em;
+    bottom: 12em;
+  }
+  14%, 16% {
+    right: -18em;
+    bottom: 2em;
+  }
+  45%, 47% {
+    right: 41em;
+    bottom: 2em;
+  }
+  61%, 63% {
+    right: 41em;
+    bottom: 23em;
+  }
+  91%, 93% {
+    right: -18em;
+    bottom: 23em;
+  }
+  100% {
+    right: -18em;
+    bottom: 12em;
+  }
+}
+
+@keyframes sluPlayer3Exit {
+  0% {
+    right: -10%;
+    bottom: 18%;
+  }
+  7%, 9% {
+    right: -18em;
+    bottom: 12em;
+  }
+  14%, 16% {
+    right: -18em;
+    bottom: 2em;
+  }
+  45%, 47% {
+    right: 41em;
+    bottom: 2em;
+  }
+  61%, 63% {
+    right: 41em;
+    bottom: 23em;
+  }
+  91%, 93% {
+    right: -18em;
+    bottom: 23em;
+  }
+  100% {
+    right: -18em;
+    bottom: 12em;
+  }
+}
+
+@keyframes sluPlayer4Exit {
+  0% {
+    right: 75%;
+    bottom: 5%;
+  }
+  7%, 9% {
+    right: -18em;
+    bottom: 12em;
+  }
+  14%, 16% {
+    right: -18em;
+    bottom: 2em;
+  }
+  45%, 47% {
+    right: 41em;
+    bottom: 2em;
+  }
+  61%, 63% {
+    right: 41em;
+    bottom: 23em;
+  }
+  91%, 93% {
+    right: -18em;
+    bottom: 23em;
+  }
+  100% {
+    right: -18em;
+    bottom: 12em;
+  }
+}
+
+@keyframes sluPlayer5Exit {
+  0% {
+    right: 75%;
+    bottom: 43%;
+  }
+  7%, 9% {
+    right: -18em;
+    bottom: 12em;
+  }
+  14%, 16% {
+    right: -18em;
+    bottom: 2em;
+  }
+  45%, 47% {
+    right: 41em;
+    bottom: 2em;
+  }
+  61%, 63% {
+    right: 41em;
+    bottom: 23em;
+  }
+  91%, 93% {
+    right: -18em;
+    bottom: 23em;
+  }
+  100% {
+    right: -18em;
+    bottom: 12em;
+  }
+}
+
+@keyframes sluPlayer6Exit {
+  0% {
+    right: 75%;
+    bottom: 80%;
+  }
+  7%, 9% {
+    right: -18em;
+    bottom: 12em;
+  }
+  14%, 16% {
+    right: -18em;
+    bottom: 2em;
+  }
+  45%, 47% {
+    right: 41em;
+    bottom: 2em;
+  }
+  61%, 63% {
+    right: 41em;
+    bottom: 23em;
+  }
+  91%, 93% {
+    right: -18em;
+    bottom: 23em;
+  }
+  100% {
+    right: -18em;
+    bottom: 12em;
+  }
+}
+
+@keyframes advertisementLoop {
+  0% {
+    left: -22em;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes speakerVibrate {
+  0%, 8%, 10%, 11%, 13%, 17%, 19%, 44%, 46%, 62%, 64%, 81%, 83%, 92%, 94%, 100% {
+    transform: scale(1);
+  }
+  9%, 12%, 18%, 45%, 63%, 82%, 93% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes buschHighlight {
+  0% {
+    transform: scale(1);
+  }
+  33%, 67% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bitchEmphasize {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Color Variables */
+
+:root {
+  --hopeRed: #8a2231;
+  --sluRed: #aa182c;
+  --clarksonYellow: #ffce00;
+  --clarksonGreen: #004f42;
+  --allinBlue: #1f4c8f;
+  --discordBlue: #7289da;
+  --youtubeGray: #181818;
+  --discordDarkGray: #25272b;
+  --discordGray: #36393f;
+  --discordLightGray: #abacae;
+}

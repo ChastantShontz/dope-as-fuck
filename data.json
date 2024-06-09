@@ -1,0 +1,422 @@
+{
+  "men": {
+    "clarkson": [
+      {
+        "name": "Ethan Haider",
+        "number": 47,
+        "goals": {
+          "season": null,
+          "game": null
+        },
+        "position": "goalie",
+        "hometown": "Maple Grove, MN",
+        "year": "sophomore",
+        "major": "innovation & entrepreneurship",
+        "height": {
+          "feet": 6,
+          "inches": 3
+        },
+        "weight": 209
+      },
+      {
+        "name": "Alex Campbell",
+        "number": 11,
+        "goals": {
+          "season": 8,
+          "game": 0
+        },
+        "position": "forward",
+        "hometown": "Chateauguay, QUE",
+        "year": "sophomore",
+        "major": "civil engineering",
+        "height": {
+          "feet": 5,
+          "inches": 11
+        },
+        "weight": 174
+      },
+      {
+        "name": "Chris Klack",
+        "number": 8,
+        "goals": {
+          "season": 2,
+          "game": 0
+        },
+        "position": "forward",
+        "hometown": "Georgetown, ONT",
+        "year": "senior",
+        "major": "innovation & entrepreneurship",
+        "height": {
+          "feet": 5,
+          "inches": 9
+        },
+        "weight": 174
+      },
+      {
+        "name": "Dustyn McFaul",
+        "number": 27,
+        "goals": {
+          "season": 1,
+          "game": 0
+        },
+        "position": "defense",
+        "hometown": "Waterdown, ONT",
+        "year": "junior",
+        "major": "global supply chain management",
+        "height": {
+          "feet": 6,
+          "inches": 2
+        },
+        "weight": 191
+      },
+      {
+        "name": "Jack Jacome",
+        "number": 6,
+        "goals": {
+          "season": 1,
+          "game": 0
+        },
+        "position": "forward",
+        "hometown": "Caledon, ONT",
+        "year": "graduate student",
+        "major": "innovation & entrepreneurship",
+        "height": {
+          "feet": 5,
+          "inches": 7
+        },
+        "weight": 170
+      },
+      {
+        "name": "Zach Tsekos",
+        "number": 17,
+        "goals": {
+          "season": 8,
+          "game": 0
+        },
+        "position": "forward",
+        "hometown": "Montreal, QUE",
+        "year": "graduate student",
+        "major": "masters of business administration",
+        "height": {
+          "feet": 5,
+          "inches": 10
+        },
+        "weight": 185
+      }
+    ],
+    "slu": [
+      {
+        "name": "Daniel Allin",
+        "number": 1,
+        "goals": {
+          "season": null,
+          "game": null
+        },
+        "position": "sieve",
+        "hometown": "Edmonton, ALB",
+        "year": "freshman",
+        "major": "ugly",
+        "height": {
+          "feet": 6,
+          "inches": 2
+        },
+        "weight": 185
+      },
+      {
+        "name": "Ashton Fry",
+        "number": 23,
+        "goals": {
+          "season": 1,
+          "game": 0
+        },
+        "position": "forward",
+        "hometown": "Highlands Ranch, CO",
+        "year": "junior",
+        "major": "fry cooking",
+        "height": {
+          "feet": 5,
+          "inches": 11
+        },
+        "weight": 185
+      },
+      {
+        "name": "Cameron Buhl",
+        "number": 21,
+        "goals": {
+          "season": 2,
+          "game": 0
+        },
+        "position": "forward",
+        "hometown": "South St. Paul, MN",
+        "year": "junior",
+        "major": "burger flipping",
+        "height": {
+          "feet": 5,
+          "inches": 10
+        },
+        "weight": 170
+      },
+      {
+        "name": "David Jankowski",
+        "number": 10,
+        "goals": {
+          "season": 2,
+          "game": 0
+        },
+        "position": "forward",
+        "hometown": "Waterdown, ONT",
+        "year": "senior",
+        "major": "grill skills",
+        "height": {
+          "feet": 6,
+          "inches": 1
+        },
+        "weight": 175
+      },
+      {
+        "name": "Nicholas Trela",
+        "number": 20,
+        "goals": {
+          "season": 1,
+          "game": 0
+        },
+        "position": "forward",
+        "hometown": "Trenton, MI",
+        "year": "sophomore",
+        "major": "food science",
+        "height": {
+          "feet": 6,
+          "inches": 2
+        },
+        "weight": 185
+      },
+      {
+        "name": "Tucker McIntosh",
+        "number": 24,
+        "goals": {
+          "season": 1,
+          "game": 0
+        },
+        "position": "defense",
+        "hometown": "Toronto, ONT",
+        "year": "sophomore",
+        "major": "farm labor",
+        "height": {
+          "feet": 6,
+          "inches": 1
+        },
+        "weight": 185
+      }
+    ]
+  },
+  "women": {
+    "clarkson": [
+      {
+        "name": "Michelle Pasiechnyk",
+        "number": 1,
+        "goals": {
+          "season": null,
+          "game": null
+        },
+        "position": "goalie",
+        "hometown": "Ottawa, ONT",
+        "year": "sophomore",
+        "major": "business studies",
+        "height": {
+          "feet": 5,
+          "inches": 9
+        },
+        "weight": null
+      },
+      {
+        "name": "Anne Cherkowski",
+        "number": 24,
+        "goals": {
+          "season": 2,
+          "game": 0
+        },
+        "position": "forward",
+        "hometown": "Coldstream, BC",
+        "year": "sophomore",
+        "major": "civil engineering",
+        "height": {
+          "feet": 5,
+          "inches": 6
+        },
+        "weight": null
+      },
+      {
+        "name": "Brooke McQuigge",
+        "number": 26,
+        "goals": {
+          "season": 8,
+          "game": 0
+        },
+        "position": "forward",
+        "hometown": "Bowmanville, ONT",
+        "year": "junior",
+        "major": "business intelligence & data analytics",
+        "height": {
+          "feet": 5,
+          "inches": 8
+        },
+        "weight": null
+      },
+      {
+        "name": "Gabrielle David",
+        "number": 8,
+        "goals": {
+          "season": 9,
+          "game": 0
+        },
+        "position": "forward",
+        "hometown": "Drummondville, QUE",
+        "year": "junior",
+        "major": "biology",
+        "height": {
+          "feet": 5,
+          "inches": 4
+        },
+        "weight": null
+      },
+      {
+        "name": "Haley Winn",
+        "number": 4,
+        "goals": {
+          "season": 4,
+          "game": 0
+        },
+        "position": "defense",
+        "hometown": "Rochester, NY",
+        "year": "freshman",
+        "major": "psychology",
+        "height": {
+          "feet": 5,
+          "inches": 5
+        },
+        "weight": null
+      },
+      {
+        "name": "Jenna Goodwin",
+        "number": 12,
+        "goals": {
+          "season": 4,
+          "game": 0
+        },
+        "position": "forward",
+        "hometown": "Sherwood Park, ALB",
+        "year": "freshman",
+        "major": "biology",
+        "height": {
+          "feet": 5,
+          "inches": 5
+        },
+        "weight": null
+      }
+    ],
+    "slu": [
+      {
+        "name": "Hope Crisafi",
+        "number": 30,
+        "goals": {
+          "season": null,
+          "game": null
+        },
+        "position": "sieve",
+        "hometown": "Bay Village, OH",
+        "year": "sophomore",
+        "major": "slut",
+        "height": {
+          "feet": 5,
+          "inches": 7
+        },
+        "weight": null
+      },
+      {
+        "name": "Aly McLeod",
+        "number": 24,
+        "goals": {
+          "season": 5,
+          "game": 0
+        },
+        "position": "forward",
+        "hometown": "Stratford, ONT",
+        "year": "sophomore",
+        "major": "waitressing services",
+        "height": {
+          "feet": 5,
+          "inches": 3
+        },
+        "weight": null
+      },
+      {
+        "name": "Brittney Gout",
+        "number": 9,
+        "goals": {
+          "season": 5,
+          "game": 0
+        },
+        "position": "forward",
+        "hometown": "Caledon, ONT",
+        "year": "graduate student",
+        "major": "pastry assemblage",
+        "height": {
+          "feet": 5,
+          "inches": 3
+        },
+        "weight": null
+      },
+      {
+        "name": "Gabi Jones",
+        "number": 20,
+        "goals": {
+          "season": 1,
+          "game": 0
+        },
+        "position": "forward",
+        "hometown": "Potsdam, NY",
+        "year": "sophomore",
+        "major": "ethnic cuisine",
+        "height": {
+          "feet": 5,
+          "inches": 8
+        },
+        "weight": null
+      },
+      {
+        "name": "Hillary Sterling",
+        "number": 6,
+        "goals": {
+          "season": 2,
+          "game": 0
+        },
+        "position": "forward",
+        "hometown": "Richmond, ONT",
+        "year": "freshman",
+        "major": "kitchen management",
+        "height": {
+          "feet": 5,
+          "inches": 4
+        },
+        "weight": null
+      },
+      {
+        "name": "Kristina Bahl",
+        "number": 91,
+        "goals": {
+          "season": 1,
+          "game": 0
+        },
+        "position": "defense",
+        "hometown": "Mississauga, ONT",
+        "year": "sophomore",
+        "major": "meat washing",
+        "height": {
+          "feet": 5,
+          "inches": 8
+        },
+        "weight": null
+      }
+    ]
+  }
+}

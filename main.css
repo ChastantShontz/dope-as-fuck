@@ -2866,62 +2866,6 @@ main {
   cursor: default;
 }
 
-#confirm {
-  position: fixed;
-  left: 40%;
-  right: 40%;
-  top: 20%;
-  border-radius: .5em;
-  border: .2em solid var(--clarksonGreen);
-}
-
-#confirmMessages {
-  width: 100%;
-  margin-bottom: 1em;
-}
-
-.confirmMessage {
-  font-family: "Merriweather", serif;
-  font-size: .85em;
-}
-
-#acceptInline {
-  font-family: "Archivo Black", sans-serif;
-  color: var(--clarksonGreen);
-  font-weight: bold;
-}
-
-#confirmButtons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-  align-items: center;
-}
-
-.confirmButton {
-  border-radius: .25em;
-  font-family: "Archivo Black", sans-serif;
-  color: var(--white);
-  font-size: 1.1em;
-  font-weight: bold;
-}
-
-#accept {
-  background: var(--clarksonGreen);
-  padding-left: .25em;
-  padding-right: .25em;
-  padding-top: .1em;
-  padding-bottom: .1em;
-}
-
-#decline {
-  background: rgba(180, 30, 47, .5);
-  padding-left: .15em;
-  padding-right: .15em;
-  border: .1em solid var(--sluRed);
-}
-
 #raffle {
   z-index: 97;
   display: none;
@@ -4093,6 +4037,62 @@ main {
   box-shadow: .25em .25em .5em 0 var(--darkGray);
   user-select: none;
   pointer-events: none;
+}
+
+#confirm {
+  position: fixed;
+  left: 40%;
+  right: 40%;
+  top: 20%;
+  border-radius: .5em;
+  border: .2em solid var(--clarksonGreen);
+}
+
+#confirmMessages {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.confirmMessage {
+  font-family: "Merriweather", serif;
+  font-size: .85em;
+}
+
+#acceptInline {
+  font-family: "Archivo Black", sans-serif;
+  color: var(--clarksonGreen);
+  font-weight: bold;
+}
+
+#confirmButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}
+
+.confirmButton {
+  border-radius: .25em;
+  font-family: "Archivo Black", sans-serif;
+  color: var(--white);
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#accept {
+  background: var(--clarksonGreen);
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+}
+
+#decline {
+  background: rgba(180, 30, 47, .5);
+  padding-left: .15em;
+  padding-right: .15em;
+  border: .1em solid var(--sluRed);
 }
 
 #assets {

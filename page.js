@@ -693,7 +693,7 @@ let quotes = [
     author: "<b>Chestnut</b>"
   },
   {
-    line: "Fuck Marc Christensen.",
+    line: "Fuck Marc Christensen!",
     author: "all of Clarkson"
   },
   {
@@ -1185,7 +1185,7 @@ let quotes = [
     author: "<b>John</b>"
   },
   {
-    line: "My cousin's name is Fingers.",
+    line: "My cousin's name is \"Fingers.\"",
     author: "<b>Liam</b>"
   },
   {

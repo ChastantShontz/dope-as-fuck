@@ -218,7 +218,7 @@ main {
 #conductorTalk {
   width: 100%;
   padding: .5em;
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", "Times New Roman", serif;
   font-size: .85em;
 }
 
@@ -373,7 +373,7 @@ main {
   position: fixed;
   left: 0;
   top: 0;
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamond", "Merriweather", "Times New Roman", serif;
   font-size: .67em;
   user-select: none;
   pointer-events: none;
@@ -384,7 +384,7 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamond", "Merriweather", "Times New Roman", serif;
   font-size: .67em;
   text-align: center;
   user-select: none;
@@ -1747,7 +1747,7 @@ main {
 
 .playerVisiting {
   margin: .25em;
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamond", "Merriweather", "Times New Roman", serif;
   font-size: .75em;
 }
 
@@ -2743,7 +2743,7 @@ main {
 }
 
 #websiteLink {
-  font-family: "Zilla Slab", serif;
+  font-family: "Zilla Slab", "Merriweather", "Times New Roman", serif;
   font-size: 1.25rem;
 }
 
@@ -2829,7 +2829,7 @@ main {
 }
 
 #cuntEmpireHeading {
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamond", "Merriweather", "Times New Roman", serif;
   color: var(--cuntEmpireGreen);
   font-size: 1.1em;
   font-weight: bold;
@@ -2840,7 +2840,7 @@ main {
 }
 
 #cuntEmpireAdvertisement {
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamond", "Merriweather", "Times New Roman", serif;
   color: var(--black);
 }
 
@@ -3497,7 +3497,7 @@ main {
 #troyLassialTalk {
   width: 100%;
   padding: .5em;
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", "Times New Roman", serif;
   font-size: .85em;
 }
 
@@ -3923,7 +3923,7 @@ main {
   left: 0;
   bottom: 0;
   accent-color: var(--errorRed);
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamond", "Merriweather", "Times New Roman", serif;
   color: var(--errorRed);
   font-size: .75em;
 }
@@ -4054,7 +4054,7 @@ main {
 }
 
 .confirmMessage {
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", "Times New Roman", serif;
   font-size: .85em;
 }
 
@@ -4350,7 +4350,7 @@ footer {
 }
 
 .mobileMessage {
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", "Times New Roman", serif;
   font-size: .85em;
 }
 
@@ -4476,7 +4476,7 @@ footer {
 #mobileBio {
   display: none;
   width: 100%;
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", "Times New Roman", serif;
   font-size: .85em;
 }
 

@@ -9506,7 +9506,7 @@ function bitchIce(event) {
     if ((sessionStorage.backup != undefined) && (sessionStorage.backup != "")) {
       sessionStorage.backup = "";
     }
-    document.getElementById("conductorTalk").style.fontFamily = "\"Merriweather\", serif";
+    document.getElementById("conductorTalk").style.fontFamily = "\"Merriweather\", \"Times New Roman\", serif";
     document.getElementById("iceCounter").style.animation = "none";
     document.getElementById("iceButtonCont").style.background = "var(--white)";
     document.getElementById("iceButtonCont").style.transition = "background 0s ease 0s";

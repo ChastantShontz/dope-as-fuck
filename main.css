@@ -3672,7 +3672,7 @@ main {
 }
 
 .barcode {
-  font-family: "Libre Barcode 128", cursive;
+  font-family: "Libre Barcode 128";
 }
 
 #quoteLineLine {

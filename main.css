@@ -197,7 +197,7 @@ main {
   padding-top: .1em;
   padding-bottom: .1em;
   margin: .2rem;
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
   color: var(--white);
   font-size: 1.5em;
   font-weight: bold;
@@ -319,7 +319,7 @@ main {
   padding-right: .25em;
   padding-top: .1em;
   padding-bottom: .1em;
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
   color: var(--white);
   font-size: 1.1em;
   font-weight: bold;
@@ -573,7 +573,7 @@ main {
   border-radius: .5em;
   background: var(--white);
   width: 100%;
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Titillium Web", "Roboto", "Arial", sans-serif;
   font-size: 1.25em;
   font-weight: bold;
   text-align: center;
@@ -933,7 +933,7 @@ main {
 
 .cheerMessage {
   width: fit-content;
-  font-family: "Kanit", fantasy;
+  font-family: "Kanit", "Roboto", "Arial", sans-serif;
   transform-origin: left;
 }
 
@@ -1736,12 +1736,12 @@ main {
 }
 
 .clarksonCell {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: .9em;
 }
 
 .sluCell {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: .9em;
 }
 
@@ -2329,7 +2329,7 @@ main {
   position: relative;
   bottom: .05em;
   border: .1em solid var(--clarksonGreen);
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   color: var(--clarksonGreen);
   font-size: 1.1rem;
   font-weight: bold;
@@ -2487,7 +2487,7 @@ main {
   opacity: 0;
   width: 100%;
   border: .1em solid var(--clarksonGreen);
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
 }
 
 .agedLine,
@@ -2557,7 +2557,7 @@ main {
   padding-right: .25em;
   padding-top: .1em;
   padding-bottom: .1em;
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
   color: var(--white);
   font-size: 1.5em;
   font-weight: bold;
@@ -2594,7 +2594,7 @@ main {
   width: 100%;
   border: .1em solid var(--clarksonGreen);
   margin-bottom: .5em;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: .9em;
 }
 
@@ -2737,7 +2737,7 @@ main {
   width: max-content;
   padding: .25em;
   border: .2rem solid var(--clarksonGreen);
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Roboto", "Arial", sans-serif;
   font-size: 1.1em;
   font-weight: bold;
 }
@@ -3053,7 +3053,7 @@ main {
   position: absolute;
   left: 2rem;
   top: 2rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   color: var(--white);
   font-size: 1.25em;
   font-weight: bold;
@@ -3149,7 +3149,7 @@ main {
   position: absolute;
   left: 1rem;
   top: 1rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   color: var(--white);
   font-size: 1.25em;
   font-weight: bold;
@@ -3305,7 +3305,7 @@ main {
   padding-right: .25em;
   padding-top: .1em;
   padding-bottom: .1em;
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
   color: var(--white);
   font-weight: bold;
 }
@@ -3414,7 +3414,7 @@ main {
   padding-right: .25em;
   padding-top: .1em;
   padding-bottom: .1em;
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
   color: var(--white);
   font-weight: bold;
 }
@@ -3508,7 +3508,7 @@ main {
   padding-right: .5em;
   padding-top: .25em;
   padding-bottom: .25em;
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
   color: var(--white);
   font-size: 1.25em;
   font-weight: bold;
@@ -3562,7 +3562,7 @@ main {
   background: var(--buttonGreen);
   min-width: 25%;
   padding: .25em;
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
   color: var(--white);
   font-size: 2em;
   font-weight: bold;
@@ -3707,7 +3707,7 @@ main {
   background: var(--buttonGreen);
   min-width: 33%;
   padding: .25em;
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
   color: var(--white);
   font-size: 2em;
   font-weight: bold;
@@ -3908,7 +3908,7 @@ main {
   background: var(--lightGray);
   border: .1em solid var(--darkGray) !important;
   margin-bottom: .1em;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   color: var(--darkGray);
   font-size: .9em !important;
 }
@@ -4059,7 +4059,7 @@ main {
 }
 
 #acceptInline {
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
   color: var(--clarksonGreen);
   font-weight: bold;
 }
@@ -4074,7 +4074,7 @@ main {
 
 .confirmButton {
   border-radius: .25em;
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
   color: var(--white);
   font-size: 1.1em;
   font-weight: bold;
@@ -4131,7 +4131,7 @@ main {
 
 #passwordInput {
   border: .1em solid var(--lightGray);
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   color: var(--darkGray);
   font-size: 1.1em;
 }
@@ -4144,7 +4144,7 @@ main {
   padding-top: .1em;
   padding-bottom: .1em;
   margin-left: .25em;
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
   color: var(--white);
   font-size: 1.25em;
   font-weight: bold;
@@ -4404,7 +4404,7 @@ footer {
   padding-top: .1em;
   padding-bottom: .1em;
   border: .05em solid var(--lightGray);
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   color: var(--lightGray);
   font-weight: bold;
   user-select: none;
@@ -4434,7 +4434,7 @@ footer {
   padding-right: .25em;
   padding-top: .1em;
   padding-bottom: .1em;
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
   color: var(--white);
   font-size: 1.25em;
   font-weight: bold;
@@ -4470,7 +4470,7 @@ footer {
   width: 100%;
   padding-left: .25em;
   padding-right: .25em;
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Titillium Web", "Roboto", "Arial", sans-serif;
 }
 
 #mobileBio {

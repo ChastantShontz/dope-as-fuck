@@ -9496,7 +9496,7 @@ function bitchIce(event) {
     document.getElementById("conductorCont").style.transform = "skew(0)";
     document.getElementById("conductorCont").style.transition = "all 0s ease 0s";
     document.getElementById("conductorName").style.fontFamily = "\"Russo One\", fantasy";
-    document.getElementById("ok").style.fontFamily = "\"Archivo Black\", sans-serif";
+    document.getElementById("ok").style.fontFamily = "\"Archivo Black\", \"Roboto\", \"Arial\", sans-serif";
     document.getElementById("conductorTalk").innerHTML = "Woah, it looks like you've had a little too much to drink toknight. I think it's time to call it a knight and sleep off the alcohol. You'll wake up tomorrow with one nasty hangover!";
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
       if (document.getElementById("conductorTalkCont").scrollTop > 0) {
@@ -11205,7 +11205,7 @@ function mobile() {
     document.getElementById("mobileImg").style.transition = "all 0s ease 0s";
     document.getElementById("mobileImg").style.pointerEvents = "none";
     document.getElementById("mobileImgCaption").innerHTML = "Go on, try me out...";
-    document.getElementById("mobileImgCaption").style.fontFamily = "\"Titillium Web\", sans-serif";
+    document.getElementById("mobileImgCaption").style.fontFamily = "\"Titillium Web\", \"Roboto\", \"Arial\", sans-serif";
     document.getElementById("mobileImgCaption").style.color = "var(--black)";
     document.getElementById("mobileImgCaption").style.transition = "color 0s ease 0s";
     document.getElementById("mobileBio").innerHTML = "";
@@ -11352,7 +11352,7 @@ function slideshow() {
     document.getElementById("mobileImgCaption").style.color = "var(--sithRed)";
   }
   else if (characters[sessionStorage.newSlide].affiliation == null) {
-    document.getElementById("mobileImgCaption").style.fontFamily = "\"Titillium Web\", sans-serif";
+    document.getElementById("mobileImgCaption").style.fontFamily = "\"Titillium Web\", \"Roboto\", \"Arial\", sans-serif";
     document.getElementById("mobileImgCaption").style.color = "var(--black)";
     console.log("THRAWN!!! Sorry, just a big fan");
   }

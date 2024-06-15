@@ -11344,7 +11344,7 @@ function slideshow() {
   document.getElementById("mobileImg").style.background = "url(\"" + characters[sessionStorage.newSlide].image.url + "\") " + characters[sessionStorage.newSlide].image.position + " / cover";
   document.getElementById("mobileImgCaption").innerHTML = characters[sessionStorage.newSlide].name;
   if (characters[sessionStorage.newSlide].affiliation == "Jedi") {
-    document.getElementById("mobileImgCaption").style.fontFamily = "\"Kalam\", cursive";
+    document.getElementById("mobileImgCaption").style.fontFamily = "\"Kalam\", \"Satisfy\", \"Brush Script MT\", cursive";
     document.getElementById("mobileImgCaption").style.color = "var(--jediBlue)";
   }
   else if (characters[sessionStorage.newSlide].affiliation == "Sith") {

@@ -2198,7 +2198,7 @@ main {
 }
 
 #dedication {
-  font-family: "Patrick Hand", cursive;
+  font-family: "Patrick Hand", "Satisfy", "Brush Script MT", cursive;
 }
 
 #knightguardBusinessCard {
@@ -2407,7 +2407,7 @@ main {
   background: rgba(255, 255, 255, .5);
   opacity: 0;
   padding: 1em;
-  font-family: "Merienda", cursive;
+  font-family: "Merienda", "Satisfy", "Brush Script MT", cursive;
   font-style: italic;
   text-align: center;
 }
@@ -2999,7 +2999,7 @@ main {
 }
 
 .poemLine {
-  font-family: "Shadows Into Light", fantasy;
+  font-family: "Shadows Into Light", "Satisfy", "Brush Script MT", cursive;
   font-weight: bold;
   font-style: italic;
 }
@@ -3007,7 +3007,7 @@ main {
 #poemAuthors {
   display: block;
   margin-left: 24px;
-  font-family: "Shadows Into Light", fantasy;
+  font-family: "Shadows Into Light", "Satisfy", "Brush Script MT", cursive;
   font-weight: bold;
   font-size: 1.1em;
 }
@@ -3434,7 +3434,7 @@ main {
   left: 0;
   right: 0;
   opacity: 0;
-  font-family: "Merienda", cursive;
+  font-family: "Merienda", "Satisfy", "Brush Script MT", cursive;
   font-style: italic;
   text-align: center;
 }
@@ -3655,7 +3655,7 @@ main {
 
 #quoteLine {
   display: block;
-  font-family: "Patrick Hand", cursive;
+  font-family: "Patrick Hand", "Satisfy", "Brush Script MT", cursive;
   color: var(--red);
 }
 
@@ -3693,7 +3693,7 @@ main {
 #quoteAuthor {
   display: block;
   margin-left: 24px;
-  font-family: "Patrick Hand", cursive;
+  font-family: "Patrick Hand", "Satisfy", "Brush Script MT", cursive;
   color: var(--red);
 }
 
@@ -4205,7 +4205,7 @@ main {
 #secretHeading {
   margin-left: 1em;
   margin-bottom: .5em;
-  font-family: "Satisfy", cursive;
+  font-family: "Satisfy", "Brush Script MT", cursive;
   color: var(--secretPurple);
   font-size: 2em;
   font-weight: bold;
@@ -4263,7 +4263,7 @@ main {
 }
 
 .secretMessageParagraph {
-  font-family: "Satisfy", cursive;
+  font-family: "Satisfy", "Brush Script MT", cursive;
   font-size: 1.1em;
   font-style: italic;
 }
@@ -4271,7 +4271,7 @@ main {
 #secretAuthor {
   display: block;
   margin-left: 48px;
-  font-family: "Satisfy", cursive;
+  font-family: "Satisfy", "Brush Script MT", cursive;
   font-size: 1.1em;
   font-weight: bold;
   font-style: italic;
@@ -4486,7 +4486,7 @@ footer {
 }
 
 .jediCharacter {
-  font-family: "Kalam", cursive;
+  font-family: "Kalam", "Satisfy", "Brush Script MT", cursive;
   color: var(--jediBlue);
 }
 

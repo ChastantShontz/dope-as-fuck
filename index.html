@@ -2816,837 +2816,851 @@
                 <form accept-charset="utf-8" id="infoCont">
                   <fieldset form="infoCont" id="info">
                     <legend id="infoLegend">Personal Info</legend>
-                    <div class="infoField" id="infoName">
-                      <div class="infoInputContContCont" id="nameInputContContCont">
-                        <div class="infoInputContCont" id="nameInputContCont">
-                          <div class="infoLabelCont" id="nameLabelCont">
-                            <label form="infoCont" for="nameInput" class="infoLabel" id="nameLabel">Name:</label>
-                            <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearName" tabindex="-1" aria-label="Clear the info on your name" onclick="accountRemove(1, event)">Clear</button>
+                    <div id="infoFields">
+                      <div class="infoFieldCont" id="infoNameCont">
+                        <div class="infoField" id="infoName">
+                          <div class="infoInputContContCont" id="nameInputContContCont">
+                            <div class="infoInputContCont" id="nameInputContCont">
+                              <div class="infoLabelCont" id="nameLabelCont">
+                                <label form="infoCont" for="nameInput" class="infoLabel" id="nameLabel">Name:</label>
+                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearName" tabindex="-1" aria-label="Clear the info on your name" onclick="accountRemove(1, event)">Clear</button>
+                              </div>
+                              <div class="infoInputCont" id="nameInputCont">
+                                <input form="infoCont" list="namesList" type="text" name="name" placeholder="Name..." size="25" minlength="1" maxlength="50" title="Enter your name here" class="infoInput undefinedInfoInput validInfoInput" id="nameInput" tabindex="-1" aria-label="Enter your name here" onkeydown="accountProcess(1, event)" onkeyup="accountTyping(1)" onchange="accountTyping(1)" onfocus="arriveInput(1)" onblur="leaveInput(1)" autocomplete="name" autofocus>
+                                <button type="submit" name="name" class="infoButton enterInfoButton defaultButton disabled" id="enterName" tabindex="-1" aria-label="Enter your name" onclick="accountProcess(1, event)" disabled>&#9166;</button>
+                              </div>
+                            </div>
+                            <p class="invalidInfoMessage" id="invalidName">*Invalid entry</p>
                           </div>
-                          <div class="infoInputCont" id="nameInputCont">
-                            <input form="infoCont" list="namesList" type="text" name="name" placeholder="Name..." size="25" minlength="1" maxlength="50" title="Enter your name here" class="infoInput undefinedInfoInput validInfoInput" id="nameInput" tabindex="-1" aria-label="Enter your name here" onkeydown="accountProcess(1, event)" onkeyup="accountTyping(1)" onchange="accountTyping(1)" onfocus="arriveInput(1)" onblur="leaveInput(1)" autocomplete="name" autofocus>
-                            <button type="submit" name="name" class="infoButton enterInfoButton defaultButton disabled" id="enterName" tabindex="-1" aria-label="Enter your name" onclick="accountProcess(1, event)" disabled>&#9166;</button>
-                          </div>
+                          <datalist class="infoList" id="namesList">
+                            <option value="Aaron">
+                            <option value="Abbey">
+                            <option value="Adam">
+                            <option value="Aileen">
+                            <option value="Alaina">
+                            <option value="Alex">
+                            <option value="Alice">
+                            <option value="Alivia">
+                            <option value="Andrew">
+                            <option value="Anna">
+                            <option value="Anne">
+                            <option value="Aria">
+                            <option value="Ashley">
+                            <option value="Audrey">
+                            <option value="Avery">
+                            <option value="B">
+                            <option value="Bella">
+                            <option value="Ben">
+                            <option value="Bill">
+                            <option value="Bohl">
+                            <option value="Brandon">
+                            <option value="Brenna">
+                            <option value="Brian">
+                            <option value="Brom">
+                            <option value="Brooke">
+                            <option value="Cam">
+                            <option value="Campbell">
+                            <option value="Campo">
+                            <option value="Carlie">
+                            <option value="Carlo">
+                            <option value="Caroline">
+                            <option value="Casey">
+                            <option value="Cassie">
+                            <option value="Cat">
+                            <option value="Charlie">
+                            <option value="Chawgo">
+                            <option value="Cherkowski">
+                            <option value="Chestnut">
+                            <option value="Chris">
+                            <option value="Cole">
+                            <option value="Colin">
+                            <option value="Colleen">
+                            <option value="Compeau">
+                            <option value="Connor">
+                            <option value="Corey">
+                            <option value="Corsner">
+                            <option value="Cujo">
+                            <option value="Cynthia">
+                            <option value="Dale">
+                            <option value="Dan">
+                            <option value="David">
+                            <option value="Declan">
+                            <option value="Devin">
+                            <option value="Diego">
+                            <option value="Dolen">
+                            <option value="Dominic">
+                            <option value="Double L">
+                            <option value="Doug">
+                            <option value="Dunckel">
+                            <option value="Dustyn">
+                            <option value="Dylan">
+                            <option value="Emily">
+                            <option value="Emma">
+                            <option value="Eric">
+                            <option value="Ethan">
+                            <option value="Evelyn">
+                            <option value="Ford">
+                            <option value="Gabe">
+                            <option value="Gabrielle">
+                            <option value="Garrett">
+                            <option value="Goodwin">
+                            <option value="Gracie">
+                            <option value="Greasy">
+                            <option value="Haider">
+                            <option value="Haleigh">
+                            <option value="Haley">
+                            <option value="Harry">
+                            <option value="Isaac">
+                            <option value="Isabelle">
+                            <option value="Jack">
+                            <option value="Jacome">
+                            <option value="Jake">
+                            <option value="Jam">
+                            <option value="Jason">
+                            <option value="Jasper">
+                            <option value="Jeff">
+                            <option value="Jenna">
+                            <option value="Jesse">
+                            <option value="JFK">
+                            <option value="Joe">
+                            <option value="John">
+                            <option value="Jonas">
+                            <option value="Joseph">
+                            <option value="Josh">
+                            <option value="Jules">
+                            <option value="Kami">
+                            <option value="Kelly">
+                            <option value="Kevin">
+                            <option value="King">
+                            <option value="Klack">
+                            <option value="Knick">
+                            <option value="Knight of the Night">
+                            <option value="Kronk">
+                            <option value="Kyle">
+                            <option value="Leah">
+                            <option value="Leo">
+                            <option value="Leutwiler">
+                            <option value="Liam">
+                            <option value="Lindsey">
+                            <option value="Lucas">
+                            <option value="Lyle">
+                            <option value="MacKenzie">
+                            <option value="Madison">
+                            <option value="Maggie">
+                            <option value="Mahogany">
+                            <option value="Marc">
+                            <option value="Marissa">
+                            <option value="Maura">
+                            <option value="Max">
+                            <option value="Maylbox">
+                            <option value="McFaul">
+                            <option value="McQuigge">
+                            <option value="Megan">
+                            <option value="Michael">
+                            <option value="Michelle">
+                            <option value="Mikaela">
+                            <option value="Miriam">
+                            <option value="Mrs. Tansey">
+                            <option value="Nao">
+                            <option value="Natalie">
+                            <option value="Nate">
+                            <option value="Nathan">
+                            <option value="Nick">
+                            <option value="Noah">
+                            <option value="Obama">
+                            <option value="Oliver">
+                            <option value="Owen">
+                            <option value="Pasiechnyk">
+                            <option value="Pat">
+                            <option value="Quinton">
+                            <option value="Rachel">
+                            <option value="Reagan">
+                            <option value="Reid">
+                            <option value="Rumble">
+                            <option value="Russell">
+                            <option value="Ryan">
+                            <option value="Salwa">
+                            <option value="Sam">
+                            <option value="Savannah">
+                            <option value="Schalago">
+                            <option value="Seamus">
+                            <option value="Shane">
+                            <option value="Snowflake">
+                            <option value="Sparrow">
+                            <option value="Spoons">
+                            <option value="Steve">
+                            <option value="Tanner">
+                            <option value="Ted">
+                            <option value="Todd">
+                            <option value="Tom">
+                            <option value="Tommy">
+                            <option value="Tony">
+                            <option value="Tsekos">
+                            <option value="Tyler">
+                            <option value="Weston">
+                            <option value="Will">
+                            <option value="Winn">
+                            <option value="York">
+                            <option value="Zac">
+                            <option value="Zach">
+                          </datalist>
                         </div>
-                        <p class="invalidInfoMessage" id="invalidName">*Invalid entry</p>
                       </div>
-                      <datalist class="infoList" id="namesList">
-                        <option value="Aaron">
-                        <option value="Abbey">
-                        <option value="Adam">
-                        <option value="Aileen">
-                        <option value="Alaina">
-                        <option value="Alex">
-                        <option value="Alice">
-                        <option value="Alivia">
-                        <option value="Andrew">
-                        <option value="Anna">
-                        <option value="Anne">
-                        <option value="Aria">
-                        <option value="Ashley">
-                        <option value="Audrey">
-                        <option value="Avery">
-                        <option value="B">
-                        <option value="Bella">
-                        <option value="Ben">
-                        <option value="Bill">
-                        <option value="Bohl">
-                        <option value="Brandon">
-                        <option value="Brenna">
-                        <option value="Brian">
-                        <option value="Brom">
-                        <option value="Brooke">
-                        <option value="Cam">
-                        <option value="Campbell">
-                        <option value="Campo">
-                        <option value="Carlie">
-                        <option value="Carlo">
-                        <option value="Caroline">
-                        <option value="Casey">
-                        <option value="Cassie">
-                        <option value="Cat">
-                        <option value="Charlie">
-                        <option value="Chawgo">
-                        <option value="Cherkowski">
-                        <option value="Chestnut">
-                        <option value="Chris">
-                        <option value="Cole">
-                        <option value="Colin">
-                        <option value="Colleen">
-                        <option value="Compeau">
-                        <option value="Connor">
-                        <option value="Corey">
-                        <option value="Corsner">
-                        <option value="Cujo">
-                        <option value="Cynthia">
-                        <option value="Dale">
-                        <option value="Dan">
-                        <option value="David">
-                        <option value="Declan">
-                        <option value="Devin">
-                        <option value="Diego">
-                        <option value="Dolen">
-                        <option value="Dominic">
-                        <option value="Double L">
-                        <option value="Doug">
-                        <option value="Dunckel">
-                        <option value="Dustyn">
-                        <option value="Dylan">
-                        <option value="Emily">
-                        <option value="Emma">
-                        <option value="Eric">
-                        <option value="Ethan">
-                        <option value="Evelyn">
-                        <option value="Ford">
-                        <option value="Gabe">
-                        <option value="Gabrielle">
-                        <option value="Garrett">
-                        <option value="Goodwin">
-                        <option value="Gracie">
-                        <option value="Greasy">
-                        <option value="Haider">
-                        <option value="Haleigh">
-                        <option value="Haley">
-                        <option value="Harry">
-                        <option value="Isaac">
-                        <option value="Isabelle">
-                        <option value="Jack">
-                        <option value="Jacome">
-                        <option value="Jake">
-                        <option value="Jam">
-                        <option value="Jason">
-                        <option value="Jasper">
-                        <option value="Jeff">
-                        <option value="Jenna">
-                        <option value="Jesse">
-                        <option value="JFK">
-                        <option value="Joe">
-                        <option value="John">
-                        <option value="Jonas">
-                        <option value="Joseph">
-                        <option value="Josh">
-                        <option value="Jules">
-                        <option value="Kami">
-                        <option value="Kelly">
-                        <option value="Kevin">
-                        <option value="King">
-                        <option value="Klack">
-                        <option value="Knick">
-                        <option value="Knight of the Night">
-                        <option value="Kronk">
-                        <option value="Kyle">
-                        <option value="Leah">
-                        <option value="Leo">
-                        <option value="Leutwiler">
-                        <option value="Liam">
-                        <option value="Lindsey">
-                        <option value="Lucas">
-                        <option value="Lyle">
-                        <option value="MacKenzie">
-                        <option value="Madison">
-                        <option value="Maggie">
-                        <option value="Mahogany">
-                        <option value="Marc">
-                        <option value="Marissa">
-                        <option value="Maura">
-                        <option value="Max">
-                        <option value="Maylbox">
-                        <option value="McFaul">
-                        <option value="McQuigge">
-                        <option value="Megan">
-                        <option value="Michael">
-                        <option value="Michelle">
-                        <option value="Mikaela">
-                        <option value="Miriam">
-                        <option value="Mrs. Tansey">
-                        <option value="Nao">
-                        <option value="Natalie">
-                        <option value="Nate">
-                        <option value="Nathan">
-                        <option value="Nick">
-                        <option value="Noah">
-                        <option value="Obama">
-                        <option value="Oliver">
-                        <option value="Owen">
-                        <option value="Pasiechnyk">
-                        <option value="Pat">
-                        <option value="Quinton">
-                        <option value="Rachel">
-                        <option value="Reagan">
-                        <option value="Reid">
-                        <option value="Rumble">
-                        <option value="Russell">
-                        <option value="Ryan">
-                        <option value="Salwa">
-                        <option value="Sam">
-                        <option value="Savannah">
-                        <option value="Schalago">
-                        <option value="Seamus">
-                        <option value="Shane">
-                        <option value="Snowflake">
-                        <option value="Sparrow">
-                        <option value="Spoons">
-                        <option value="Steve">
-                        <option value="Tanner">
-                        <option value="Ted">
-                        <option value="Todd">
-                        <option value="Tom">
-                        <option value="Tommy">
-                        <option value="Tony">
-                        <option value="Tsekos">
-                        <option value="Tyler">
-                        <option value="Weston">
-                        <option value="Will">
-                        <option value="Winn">
-                        <option value="York">
-                        <option value="Zac">
-                        <option value="Zach">
-                      </datalist>
-                    </div>
-                    <div class="infoField" id="infoYear">
-                      <div class="infoInputContContCont" id="yearInputContContCont">
-                        <div class="infoInputContCont" id="yearInputContCont">
-                          <div class="infoLabelCont" id="yearLabelCont">
-                            <label form="infoCont" for="yearInput" class="infoLabel" id="yearLabel">Year:</label>
-                            <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearYear" tabindex="-1" aria-label="Clear the info on your year" onclick="accountRemove(2, event)">Clear</button>
+                      <div class="infoFieldCont" id="infoYearCont">
+                        <div class="infoField" id="infoYear">
+                          <div class="infoInputContContCont" id="yearInputContContCont">
+                            <div class="infoInputContCont" id="yearInputContCont">
+                              <div class="infoLabelCont" id="yearLabelCont">
+                                <label form="infoCont" for="yearInput" class="infoLabel" id="yearLabel">Year:</label>
+                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearYear" tabindex="-1" aria-label="Clear the info on your year" onclick="accountRemove(2, event)">Clear</button>
+                              </div>
+                              <div class="infoInputCont" id="yearInputCont">
+                                <input form="infoCont" list="yearsList" type="text" name="year" placeholder="Year..." size="25" minlength="1" maxlength="50" title="Enter your year here" class="infoInput undefinedInfoInput validInfoInput" id="yearInput" tabindex="-1" aria-label="Enter your year here" onkeydown="accountProcess(2, event)" onkeyup="accountTyping(2)" onchange="accountTyping(2)" onfocus="arriveInput(2)" onblur="leaveInput(2)" autocomplete="year">
+                                <button type="submit" name="year" class="infoButton enterInfoButton defaultButton disabled" id="enterYear" tabindex="-1" aria-label="Enter your year" onclick="accountProcess(2, event)" disabled>&#9166;</button>
+                              </div>
+                            </div>
+                            <p class="invalidInfoMessage" id="invalidYear">*Invalid entry</p>
                           </div>
-                          <div class="infoInputCont" id="yearInputCont">
-                            <input form="infoCont" list="yearsList" type="text" name="year" placeholder="Year..." size="25" minlength="1" maxlength="50" title="Enter your year here" class="infoInput undefinedInfoInput validInfoInput" id="yearInput" tabindex="-1" aria-label="Enter your year here" onkeydown="accountProcess(2, event)" onkeyup="accountTyping(2)" onchange="accountTyping(2)" onfocus="arriveInput(2)" onblur="leaveInput(2)" autocomplete="year">
-                            <button type="submit" name="year" class="infoButton enterInfoButton defaultButton disabled" id="enterYear" tabindex="-1" aria-label="Enter your year" onclick="accountProcess(2, event)" disabled>&#9166;</button>
-                          </div>
+                          <datalist class="infoList" id="yearsList">
+                            <option value="Alum">
+                            <option value="Freshman">
+                            <option value="Graduate student">
+                            <option value="Junior">
+                            <option value="Schoolie">
+                            <option value="Senior">
+                            <option value="Sophomore">
+                          </datalist>
                         </div>
-                        <p class="invalidInfoMessage" id="invalidYear">*Invalid entry</p>
                       </div>
-                      <datalist class="infoList" id="yearsList">
-                        <option value="Alum">
-                        <option value="Freshman">
-                        <option value="Graduate student">
-                        <option value="Junior">
-                        <option value="Schoolie">
-                        <option value="Senior">
-                        <option value="Sophomore">
-                      </datalist>
-                    </div>
-                    <div class="infoField" id="infoMajor">
-                      <div class="infoInputContContCont" id="majorInputContContCont">
-                        <div class="infoInputContCont" id="majorInputContCont">
-                          <div class="infoLabelCont" id="majorLabelCont">
-                            <label form="infoCont" for="majorInput" class="infoLabel" id="majorLabel">Major:</label>
-                            <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearMajor" tabindex="-1" aria-label="Clear the info on your major" onclick="accountRemove(3, event)">Clear</button>
+                      <div class="infoFieldCont" id="infoMajorCont">
+                        <div class="infoField" id="infoMajor">
+                          <div class="infoInputContContCont" id="majorInputContContCont">
+                            <div class="infoInputContCont" id="majorInputContCont">
+                              <div class="infoLabelCont" id="majorLabelCont">
+                                <label form="infoCont" for="majorInput" class="infoLabel" id="majorLabel">Major:</label>
+                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearMajor" tabindex="-1" aria-label="Clear the info on your major" onclick="accountRemove(3, event)">Clear</button>
+                              </div>
+                              <div class="infoInputCont" id="majorInputCont">
+                                <input form="infoCont" list="majorsList" type="text" name="major" placeholder="Major..." size="25" minlength="1" maxlength="50" title="Enter your major here" class="infoInput undefinedInfoInput validInfoInput" id="majorInput" tabindex="-1" aria-label="Enter your major here" onkeydown="accountProcess(3, event)" onkeyup="accountTyping(3)" onchange="accountTyping(3)" onfocus="arriveInput(3)" onblur="leaveInput(3)" autocomplete="major">
+                                <button type="submit" name="major" class="infoButton enterInfoButton defaultButton disabled" id="enterMajor" tabindex="-1" aria-label="Enter your major" onclick="accountProcess(3, event)" disabled>&#9166;</button>
+                              </div>
+                            </div>
+                            <p class="invalidInfoMessage" id="invalidMajor">*Invalid entry</p>
                           </div>
-                          <div class="infoInputCont" id="majorInputCont">
-                            <input form="infoCont" list="majorsList" type="text" name="major" placeholder="Major..." size="25" minlength="1" maxlength="50" title="Enter your major here" class="infoInput undefinedInfoInput validInfoInput" id="majorInput" tabindex="-1" aria-label="Enter your major here" onkeydown="accountProcess(3, event)" onkeyup="accountTyping(3)" onchange="accountTyping(3)" onfocus="arriveInput(3)" onblur="leaveInput(3)" autocomplete="major">
-                            <button type="submit" name="major" class="infoButton enterInfoButton defaultButton disabled" id="enterMajor" tabindex="-1" aria-label="Enter your major" onclick="accountProcess(3, event)" disabled>&#9166;</button>
-                          </div>
+                          <datalist class="infoList" id="majorsList">
+                            <option value="Accounting">
+                            <option value="Administration">
+                            <option value="Adolescence education">
+                            <option value="Advertising">
+                            <option value="Aeronautical engineering">
+                            <option value="Aerospace engineering">
+                            <option value="American studies">
+                            <option value="Animal science">
+                            <option value="Anthropology">
+                            <option value="Applied data science">
+                            <option value="Applied mathematics">
+                            <option value="Applied mathematics & statistics">
+                            <option value="Art education">
+                            <option value="Astronomy">
+                            <option value="Banking">
+                            <option value="Basic science">
+                            <option value="Biochemical engineering">
+                            <option value="Bioethics">
+                            <option value="Biological sciences">
+                            <option value="Biology">
+                            <option value="Biology discipline">
+                            <option value="Biomedical & rehabilitation engineering">
+                            <option value="Biomedical engineering">
+                            <option value="Biomolecular science">
+                            <option value="Biophysics">
+                            <option value="Botany">
+                            <option value="Building conservation">
+                            <option value="Business">
+                            <option value="Business & marketing education">
+                            <option value="Business & technology management">
+                            <option value="Business administration">
+                            <option value="Business fundamentals">
+                            <option value="Business intelligence & data analytics">
+                            <option value="Business logistics">
+                            <option value="Business management">
+                            <option value="Business of energy">
+                            <option value="Business studies">
+                            <option value="Chemical engineering">
+                            <option value="Chemistry">
+                            <option value="Chemistry discipline">
+                            <option value="Chinese discipline">
+                            <option value="Civil & environmental engineering">
+                            <option value="Civil engineering">
+                            <option value="Clinical ethics">
+                            <option value="Clinical ethics discipline">
+                            <option value="Clinical leadership in health management">
+                            <option value="Clinical leadership in healthcare management">
+                            <option value="College student development & counseling">
+                            <option value="Communications">
+                            <option value="Communication, media, & design">
+                            <option value="Computer-based management systems">
+                            <option value="Computer engineering">
+                            <option value="Computer science">
+                            <option value="Construction engineering management">
+                            <option value="Culinary arts">
+                            <option value="Data analytics">
+                            <option value="Data science">
+                            <option value="Design & environmental analysis">
+                            <option value="Digital arts & sciences">
+                            <option value="Direct entry healthcare">
+                            <option value="E-business">
+                            <option value="Earth science">
+                            <option value="Economics">
+                            <option value="Education">
+                            <option value="Educational administration">
+                            <option value="Electrical & computer engineering">
+                            <option value="Electrical engineering">
+                            <option value="Elementary education">
+                            <option value="Energy systems">
+                            <option value="Engineering">
+                            <option value="Engineering & computer science">
+                            <option value="Engineering & global operations management">
+                            <option value="Engineering & management">
+                            <option value="Engineering & management systems">
+                            <option value="Engineering & manufacturing management">
+                            <option value="Engineering physics">
+                            <option value="Engineering science">
+                            <option value="Engineering studies">
+                            <option value="English">
+                            <option value="Entrepreneurship">
+                            <option value="Environmental engineering">
+                            <option value="Environmental health">
+                            <option value="Environmental health sciences">
+                            <option value="Envuronmental management">
+                            <option value="Environmental policy">
+                            <option value="Environmental politics & governance">
+                            <option value="Environmental science">
+                            <option value="Environmental science & engineering">
+                            <option value="Environmental science & policy">
+                            <option value="Finance">
+                            <option value="Financial information & analysis">
+                            <option value="Financial management">
+                            <option value="Financial services">
+                            <option value="Food science">
+                            <option value="Forestry">
+                            <option value="French">
+                            <option value="Genetics">
+                            <option value="Geography">
+                            <option value="Geotechnical engineering">
+                            <option value="German">
+                            <option value="Global management">
+                            <option value="Global supply chain management">
+                            <option value="Government">
+                            <option value="Health">
+                            <option value="Health administration">
+                            <option value="Health management">
+                            <option value="Health, policy, & law">
+                            <option value="Health sciences">
+                            <option value="Health systems administration">
+                            <option value="Health systems management">
+                            <option value="Healthcare">
+                            <option value="Healthcare data analytics">
+                            <option value="Healthcare management">
+                            <option value="Healthcare pharma">
+                            <option value="History">
+                            <option value="History & psychology">
+                            <option value="Honors">
+                            <option value="Hotel administration">
+                            <option value="Human relations">
+                            <option value="Human resources">
+                            <option value="Human resources management">
+                            <option value="Humanities">
+                            <option value="Individually designed">
+                            <option value="Industrial & labor relations">
+                            <option value="Industrial administration">
+                            <option value="Industrial distribution">
+                            <option value="Industrial engineering">
+                            <option value="Industrial hygiene & environmental technology">
+                            <option value="Industrial management">
+                            <option value="Information management & resource technology">
+                            <option value="Information resource management">
+                            <option value="Information science">
+                            <option value="Information systems">
+                            <option value="Information systems & business processes">
+                            <option value="Information systems management">
+                            <option value="Information technology">
+                            <option value="Innovation & entrepreneurship">
+                            <option value="Innovation & new ventures management">
+                            <option value="Interdisciplinary bioscience & biotechnology">
+                            <option value="Interdisciplinary engineering & management">
+                            <option value="Interdisciplinary liberal studies">
+                            <option value="Interdisciplinary social studies">
+                            <option value="Interface design">
+                            <option value="International business management">
+                            <option value="International management">
+                            <option value="Journalism">
+                            <option value="Landscape architecture">
+                            <option value="Languages">
+                            <option value="Languages & math">
+                            <option value="Latin">
+                            <option value="Leadership in medicine">
+                            <option value="Liberal arts">
+                            <option value="Liberal arts & business studies">
+                            <option value="Liberal studies">
+                            <option value="Library science">
+                            <option value="Life sciences">
+                            <option value="Linguistics">
+                            <option value="Literature">
+                            <option value="Management">
+                            <option value="Management & leadership">
+                            <option value="Management information systems">
+                            <option value="Management science">
+                            <option value="Management systems">
+                            <option value="Manufacturing engineering">
+                            <option value="Manufacturing management">
+                            <option value="Manufacturing systems">
+                            <option value="Marketing">
+                            <option value="Marriage & family therapy">
+                            <option value="Masters of business administration">
+                            <option value="Materials science">
+                            <option value="Materials science & engineering">
+                            <option value="Math & computer science">
+                            <option value="Math & technology">
+                            <option value="Mathematical economics">
+                            <option value="Mathematics">
+                            <option value="Mechanical engineering">
+                            <option value="Medicinal chemistry">
+                            <option value="Medicine">
+                            <option value="Metallurgy">
+                            <option value="Meteorology">
+                            <option value="Middle childhood education">
+                            <option value="Ministry">
+                            <option value="Music">
+                            <option value="Naval architecture">
+                            <option value="Nuclear engineering">
+                            <option value="Nursing">
+                            <option value="Occupational therapy">
+                            <option value="Operations research">
+                            <option value="Optics">
+                            <option value="Osteopathy">
+                            <option value="Pharma Research">
+                            <option value="Pharmacy">
+                            <option value="Philosophy">
+                            <option value="Phsyical education">
+                            <option value="Physical sciences">
+                            <option value="Physical therapy">
+                            <option value="Physician assistant studies">
+                            <option value="Physics">
+                            <option value="Physiology">
+                            <option value="Political science">
+                            <option value="Power systems engineering">
+                            <option value="Pre-health">
+                            <option value="Pre-law">
+                            <option value="Pre-med">
+                            <option value="Pre-vet">
+                            <option value="Professional management">
+                            <option value="Professional studies">
+                            <option value="Project management">
+                            <option value="Psychology">
+                            <option value="Public administration">
+                            <option value="Public health">
+                            <option value="Public studies">
+                            <option value="Religious studies">
+                            <option value="Research ethics">
+                            <option value="Research ethics discipline">
+                            <option value="Science">
+                            <option value="Science studies">
+                            <option value="Sex & drugs">
+                            <option value="Social documentation">
+                            <option value="Social sciences">
+                            <option value="Social studies">
+                            <option value="Sociology">
+                            <option value="Software engineering">
+                            <option value="Spanish">
+                            <option value="Statistics">
+                            <option value="Structural engineering">
+                            <option value="Supply chain management">
+                            <option value="Systems engineering">
+                            <option value="Systems management">
+                            <option value="Taxation">
+                            <option value="Teacher leadership & mentoring">
+                            <option value="Teacher leadership & national board">
+                            <option value="Teacher leadership & service learning">
+                            <option value="Teaching of English to speakers of other languages">
+                            <option value="Technical communications">
+                            <option value="Technical education">
+                            <option value="Technology education">
+                            <option value="Technology management">
+                            <option value="Telecommunications">
+                            <option value="The Clarkson School">
+                            <option value="Theology">
+                            <option value="Transportation engineering">
+                            <option value="Undecided">
+                            <option value="Undergraduate research">
+                            <option value="University studies">
+                            <option value="Veterinary medicine">
+                          </datalist>
                         </div>
-                        <p class="invalidInfoMessage" id="invalidMajor">*Invalid entry</p>
                       </div>
-                      <datalist class="infoList" id="majorsList">
-                        <option value="Accounting">
-                        <option value="Administration">
-                        <option value="Adolescence education">
-                        <option value="Advertising">
-                        <option value="Aeronautical engineering">
-                        <option value="Aerospace engineering">
-                        <option value="American studies">
-                        <option value="Animal science">
-                        <option value="Anthropology">
-                        <option value="Applied data science">
-                        <option value="Applied mathematics">
-                        <option value="Applied mathematics & statistics">
-                        <option value="Art education">
-                        <option value="Astronomy">
-                        <option value="Banking">
-                        <option value="Basic science">
-                        <option value="Biochemical engineering">
-                        <option value="Bioethics">
-                        <option value="Biological sciences">
-                        <option value="Biology">
-                        <option value="Biology discipline">
-                        <option value="Biomedical & rehabilitation engineering">
-                        <option value="Biomedical engineering">
-                        <option value="Biomolecular science">
-                        <option value="Biophysics">
-                        <option value="Botany">
-                        <option value="Building conservation">
-                        <option value="Business">
-                        <option value="Business & marketing education">
-                        <option value="Business & technology management">
-                        <option value="Business administration">
-                        <option value="Business fundamentals">
-                        <option value="Business intelligence & data analytics">
-                        <option value="Business logistics">
-                        <option value="Business management">
-                        <option value="Business of energy">
-                        <option value="Business studies">
-                        <option value="Chemical engineering">
-                        <option value="Chemistry">
-                        <option value="Chemistry discipline">
-                        <option value="Chinese discipline">
-                        <option value="Civil & environmental engineering">
-                        <option value="Civil engineering">
-                        <option value="Clinical ethics">
-                        <option value="Clinical ethics discipline">
-                        <option value="Clinical leadership in health management">
-                        <option value="Clinical leadership in healthcare management">
-                        <option value="College student development & counseling">
-                        <option value="Communications">
-                        <option value="Communication, media, & design">
-                        <option value="Computer-based management systems">
-                        <option value="Computer engineering">
-                        <option value="Computer science">
-                        <option value="Construction engineering management">
-                        <option value="Culinary arts">
-                        <option value="Data analytics">
-                        <option value="Data science">
-                        <option value="Design & environmental analysis">
-                        <option value="Digital arts & sciences">
-                        <option value="Direct entry healthcare">
-                        <option value="E-business">
-                        <option value="Earth science">
-                        <option value="Economics">
-                        <option value="Education">
-                        <option value="Educational administration">
-                        <option value="Electrical & computer engineering">
-                        <option value="Electrical engineering">
-                        <option value="Elementary education">
-                        <option value="Energy systems">
-                        <option value="Engineering">
-                        <option value="Engineering & computer science">
-                        <option value="Engineering & global operations management">
-                        <option value="Engineering & management">
-                        <option value="Engineering & management systems">
-                        <option value="Engineering & manufacturing management">
-                        <option value="Engineering physics">
-                        <option value="Engineering science">
-                        <option value="Engineering studies">
-                        <option value="English">
-                        <option value="Entrepreneurship">
-                        <option value="Environmental engineering">
-                        <option value="Environmental health">
-                        <option value="Environmental health sciences">
-                        <option value="Envuronmental management">
-                        <option value="Environmental policy">
-                        <option value="Environmental politics & governance">
-                        <option value="Environmental science">
-                        <option value="Environmental science & engineering">
-                        <option value="Environmental science & policy">
-                        <option value="Finance">
-                        <option value="Financial information & analysis">
-                        <option value="Financial management">
-                        <option value="Financial services">
-                        <option value="Food science">
-                        <option value="Forestry">
-                        <option value="French">
-                        <option value="Genetics">
-                        <option value="Geography">
-                        <option value="Geotechnical engineering">
-                        <option value="German">
-                        <option value="Global management">
-                        <option value="Global supply chain management">
-                        <option value="Government">
-                        <option value="Health">
-                        <option value="Health administration">
-                        <option value="Health management">
-                        <option value="Health, policy, & law">
-                        <option value="Health sciences">
-                        <option value="Health systems administration">
-                        <option value="Health systems management">
-                        <option value="Healthcare">
-                        <option value="Healthcare data analytics">
-                        <option value="Healthcare management">
-                        <option value="Healthcare pharma">
-                        <option value="History">
-                        <option value="History & psychology">
-                        <option value="Honors">
-                        <option value="Hotel administration">
-                        <option value="Human relations">
-                        <option value="Human resources">
-                        <option value="Human resources management">
-                        <option value="Humanities">
-                        <option value="Individually designed">
-                        <option value="Industrial & labor relations">
-                        <option value="Industrial administration">
-                        <option value="Industrial distribution">
-                        <option value="Industrial engineering">
-                        <option value="Industrial hygiene & environmental technology">
-                        <option value="Industrial management">
-                        <option value="Information management & resource technology">
-                        <option value="Information resource management">
-                        <option value="Information science">
-                        <option value="Information systems">
-                        <option value="Information systems & business processes">
-                        <option value="Information systems management">
-                        <option value="Information technology">
-                        <option value="Innovation & entrepreneurship">
-                        <option value="Innovation & new ventures management">
-                        <option value="Interdisciplinary bioscience & biotechnology">
-                        <option value="Interdisciplinary engineering & management">
-                        <option value="Interdisciplinary liberal studies">
-                        <option value="Interdisciplinary social studies">
-                        <option value="Interface design">
-                        <option value="International business management">
-                        <option value="International management">
-                        <option value="Journalism">
-                        <option value="Landscape architecture">
-                        <option value="Languages">
-                        <option value="Languages & math">
-                        <option value="Latin">
-                        <option value="Leadership in medicine">
-                        <option value="Liberal arts">
-                        <option value="Liberal arts & business studies">
-                        <option value="Liberal studies">
-                        <option value="Library science">
-                        <option value="Life sciences">
-                        <option value="Linguistics">
-                        <option value="Literature">
-                        <option value="Management">
-                        <option value="Management & leadership">
-                        <option value="Management information systems">
-                        <option value="Management science">
-                        <option value="Management systems">
-                        <option value="Manufacturing engineering">
-                        <option value="Manufacturing management">
-                        <option value="Manufacturing systems">
-                        <option value="Marketing">
-                        <option value="Marriage & family therapy">
-                        <option value="Masters of business administration">
-                        <option value="Materials science">
-                        <option value="Materials science & engineering">
-                        <option value="Math & computer science">
-                        <option value="Math & technology">
-                        <option value="Mathematical economics">
-                        <option value="Mathematics">
-                        <option value="Mechanical engineering">
-                        <option value="Medicinal chemistry">
-                        <option value="Medicine">
-                        <option value="Metallurgy">
-                        <option value="Meteorology">
-                        <option value="Middle childhood education">
-                        <option value="Ministry">
-                        <option value="Music">
-                        <option value="Naval architecture">
-                        <option value="Nuclear engineering">
-                        <option value="Nursing">
-                        <option value="Occupational therapy">
-                        <option value="Operations research">
-                        <option value="Optics">
-                        <option value="Osteopathy">
-                        <option value="Pharma Research">
-                        <option value="Pharmacy">
-                        <option value="Philosophy">
-                        <option value="Phsyical education">
-                        <option value="Physical sciences">
-                        <option value="Physical therapy">
-                        <option value="Physician assistant studies">
-                        <option value="Physics">
-                        <option value="Physiology">
-                        <option value="Political science">
-                        <option value="Power systems engineering">
-                        <option value="Pre-health">
-                        <option value="Pre-law">
-                        <option value="Pre-med">
-                        <option value="Pre-vet">
-                        <option value="Professional management">
-                        <option value="Professional studies">
-                        <option value="Project management">
-                        <option value="Psychology">
-                        <option value="Public administration">
-                        <option value="Public health">
-                        <option value="Public studies">
-                        <option value="Religious studies">
-                        <option value="Research ethics">
-                        <option value="Research ethics discipline">
-                        <option value="Science">
-                        <option value="Science studies">
-                        <option value="Sex & drugs">
-                        <option value="Social documentation">
-                        <option value="Social sciences">
-                        <option value="Social studies">
-                        <option value="Sociology">
-                        <option value="Software engineering">
-                        <option value="Spanish">
-                        <option value="Statistics">
-                        <option value="Structural engineering">
-                        <option value="Supply chain management">
-                        <option value="Systems engineering">
-                        <option value="Systems management">
-                        <option value="Taxation">
-                        <option value="Teacher leadership & mentoring">
-                        <option value="Teacher leadership & national board">
-                        <option value="Teacher leadership & service learning">
-                        <option value="Teaching of English to speakers of other languages">
-                        <option value="Technical communications">
-                        <option value="Technical education">
-                        <option value="Technology education">
-                        <option value="Technology management">
-                        <option value="Telecommunications">
-                        <option value="The Clarkson School">
-                        <option value="Theology">
-                        <option value="Transportation engineering">
-                        <option value="Undecided">
-                        <option value="Undergraduate research">
-                        <option value="University studies">
-                        <option value="Veterinary medicine">
-                      </datalist>
-                    </div>
-                    <div class="infoField" id="infoHometown">
-                      <div class="infoInputContContCont" id="hometownInputContContCont">
-                        <div class="infoInputContCont" id="hometownInputContCont">
-                          <div class="infoLabelCont" id="hometownLabelCont">
-                            <label form="infoCont" for="hometownInput" class="infoLabel" id="hometownLabel">Hometown:</label>
-                            <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearHometown" tabindex="-1" aria-label="Clear the info on your hometown" onclick="accountRemove(4, event)">Clear</button>
+                      <div class="infoFieldCont" id="infoHometownCont">
+                        <div class="infoField" id="infoHometown">
+                          <div class="infoInputContContCont" id="hometownInputContContCont">
+                            <div class="infoInputContCont" id="hometownInputContCont">
+                              <div class="infoLabelCont" id="hometownLabelCont">
+                                <label form="infoCont" for="hometownInput" class="infoLabel" id="hometownLabel">Hometown:</label>
+                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearHometown" tabindex="-1" aria-label="Clear the info on your hometown" onclick="accountRemove(4, event)">Clear</button>
+                              </div>
+                              <div class="infoInputCont" id="hometownInputCont">
+                                <input form="infoCont" list="hometownsList" type="text" name="hometown" placeholder="Hometown..." size="25" minlength="1" maxlength="50" title="Enter your hometown here" class="infoInput undefinedInfoInput validInfoInput" id="hometownInput" tabindex="-1" aria-label="Enter your hometown here" onkeydown="accountProcess(4, event)" onkeyup="accountTyping(4)" onchange="accountTyping(4)" onfocus="arriveInput(4)" onblur="leaveInput(4)" autocomplete="hometown">
+                                <button type="submit" name="hometown" class="infoButton enterInfoButton defaultButton disabled" id="enterHometown" tabindex="-1" aria-label="Enter your hometown" onclick="accountProcess(4, event)" disabled>&#9166;</button>
+                              </div>
+                            </div>
+                            <p class="invalidInfoMessage" id="invalidHometown">*Invalid entry</p>
                           </div>
-                          <div class="infoInputCont" id="hometownInputCont">
-                            <input form="infoCont" list="hometownsList" type="text" name="hometown" placeholder="Hometown..." size="25" minlength="1" maxlength="50" title="Enter your hometown here" class="infoInput undefinedInfoInput validInfoInput" id="hometownInput" tabindex="-1" aria-label="Enter your hometown here" onkeydown="accountProcess(4, event)" onkeyup="accountTyping(4)" onchange="accountTyping(4)" onfocus="arriveInput(4)" onblur="leaveInput(4)" autocomplete="hometown">
-                            <button type="submit" name="hometown" class="infoButton enterInfoButton defaultButton disabled" id="enterHometown" tabindex="-1" aria-label="Enter your hometown" onclick="accountProcess(4, event)" disabled>&#9166;</button>
-                          </div>
+                          <datalist class="infoList" id="hometownsList">
+                            <option value="Abu Dhabi">
+                            <option value="Akron">
+                            <option value="Albany">
+                            <option value="Albuquerque">
+                            <option value="Alexandria">
+                            <option value="Amsterdam">
+                            <option value="Anchorage">
+                            <option value="Ann Arbor">
+                            <option value="Annapolis">
+                            <option value="Arlington">
+                            <option value="Atlanta">
+                            <option value="Atlantic City">
+                            <option value="Atlantis">
+                            <option value="Auburn">
+                            <option value="Augusta">
+                            <option value="Austin">
+                            <option value="Baghdad">
+                            <option value="Ballston Spa">
+                            <option value="Baltimore">
+                            <option value="Bangkok">
+                            <option value="Bangor">
+                            <option value="Baton Rouge">
+                            <option value="Beijing">
+                            <option value="Berlin">
+                            <option value="Birmingham">
+                            <option value="Bismarck">
+                            <option value="Bloomingdale">
+                            <option value="Bogota">
+                            <option value="Boise">
+                            <option value="Boston">
+                            <option value="Boulder">
+                            <option value="Bridgeport">
+                            <option value="Buenos Aires">
+                            <option value="Buffalo">
+                            <option value="Burlington">
+                            <option value="Burnsville">
+                            <option value="Cairo">
+                            <option value="Canton">
+                            <option value="Cape Town">
+                            <option value="Carson City">
+                            <option value="Casablanca">
+                            <option value="Charleston (South Caroline)">
+                            <option value="Charleston (West Virginia)">
+                            <option value="Charlotte">
+                            <option value="Chattanooga">
+                            <option value="Cheyenne">
+                            <option value="Chicago">
+                            <option value="Chongqing">
+                            <option value="Cincinnati">
+                            <option value="Cleveland">
+                            <option value="Clifton Park">
+                            <option value="Cohoes">
+                            <option value="Colorado Springs">
+                            <option value="Columbia">
+                            <option value="Columbus">
+                            <option value="Concord">
+                            <option value="Cortland">
+                            <option value="Dallas">
+                            <option value="Danbury">
+                            <option value="Davenport">
+                            <option value="Dayton">
+                            <option value="Dearborn">
+                            <option value="Delhi">
+                            <option value="Denver">
+                            <option value="Des Moines">
+                            <option value="Detroit">
+                            <option value="Dhaka">
+                            <option value="Dover">
+                            <option value="Durham">
+                            <option value="Everett">
+                            <option value="Fargo">
+                            <option value="Flagstaff">
+                            <option value="Florence">
+                            <option value="Fort Lauderdale">
+                            <option value="Fort Wayne">
+                            <option value="Frankfort">
+                            <option value="Fremont">
+                            <option value="Fresno">
+                            <option value="Glens Falls">
+                            <option value="Grand Rapids">
+                            <option value="Green Bay">
+                            <option value="Greensboro">
+                            <option value="Guangzhou">
+                            <option value="Harrisburg">
+                            <option value="Hartford">
+                            <option value="Helena">
+                            <option value="Ho Chi Minh City">
+                            <option value="Hong Kong">
+                            <option value="Honolulu">
+                            <option value="Houston">
+                            <option value="Huntsville">
+                            <option value="Indianapolis">
+                            <option value="Istanbul">
+                            <option value="Ithaca">
+                            <option value="Jackson">
+                            <option value="Jacksonville">
+                            <option value="Jakarta">
+                            <option value="Jefferson City">
+                            <option value="Jersey City">
+                            <option value="Jerusalem">
+                            <option value="Johannesburg">
+                            <option value="Juneau">
+                            <option value="Kansas City (Kansas)">
+                            <option value="Kansas City (Missouri)">
+                            <option value="Karachi">
+                            <option value="Kenosha">
+                            <option value="Kingston">
+                            <option value="Kinshasa">
+                            <option value="Knoxville">
+                            <option value="Lafayette">
+                            <option value="Lagos">
+                            <option value="Lansing">
+                            <option value="Las Vegas">
+                            <option value="Lexington">
+                            <option value="Lima">
+                            <option value="Lincoln">
+                            <option value="Little Rock">
+                            <option value="London">
+                            <option value="Los Angeles">
+                            <option value="Louisville">
+                            <option value="Luanda">
+                            <option value="Madison">
+                            <option value="Madrid">
+                            <option value="Malta">
+                            <option value="Manila">
+                            <option value="Massena">
+                            <option value="Memphis">
+                            <option value="Meridian">
+                            <option value="Mesquite">
+                            <option value="Mexico City">
+                            <option value="Miami">
+                            <option value="Milford">
+                            <option value="Milwaukee">
+                            <option value="Minneapolis">
+                            <option value="Montgomery">
+                            <option value="Montpelier">
+                            <option value="Montreal">
+                            <option value="Moscow">
+                            <option value="Mumbai">
+                            <option value="Myrtle Beach">
+                            <option value="Nairobi">
+                            <option value="Nampa">
+                            <option value="Nashua">
+                            <option value="Nashville">
+                            <option value="New Haven">
+                            <option value="New Orleans">
+                            <option value="New York City">
+                            <option value="Newark">
+                            <option value="Newport">
+                            <option value="Niagara Falls">
+                            <option value="Norfolk">
+                            <option value="Norwalk">
+                            <option value="Oakland">
+                            <option value="Ogdensburg">
+                            <option value="Oklahoma City">
+                            <option value="Olympia">
+                            <option value="Oneonta">
+                            <option value="Orlando">
+                            <option value="Oswego">
+                            <option value="Ottawa">
+                            <option value="Paris">
+                            <option value="Philadelphia">
+                            <option value="Phoenix">
+                            <option value="Pierre">
+                            <option value="Pittsburgh">
+                            <option value="Plattsburgh">
+                            <option value="Pocatello">
+                            <option value="Portland (Maine)">
+                            <option value="Portland (Oregon)">
+                            <option value="Portsmouth">
+                            <option value="Potsdam">
+                            <option value="Poughkeepsie">
+                            <option value="Providence">
+                            <option value="Pyongyang">
+                            <option value="Quebec City">
+                            <option value="Queensbury">
+                            <option value="Raleigh">
+                            <option value="Rensselaer">
+                            <option value="Richland">
+                            <option value="Richmond">
+                            <option value="Rio de Janeiro">
+                            <option value="Roanoke">
+                            <option value="Rochester">
+                            <option value="Rome">
+                            <option value="Sacramento">
+                            <option value="Salem (Massachusetts)">
+                            <option value="Salem (Oregon)">
+                            <option value="Salt Lake City">
+                            <option value="San Antonia">
+                            <option value="San Diego">
+                            <option value="San Francisco">
+                            <option value="San Jose">
+                            <option value="Sandusky">
+                            <option value="Santa Barbara">
+                            <option value="Santa Fe">
+                            <option value="Santiago">
+                            <option value="Sao Paulo">
+                            <option value="Sarasota">
+                            <option value="Saratoga Springs">
+                            <option value="Savannah">
+                            <option value="Schenectady">
+                            <option value="Scottsdale">
+                            <option value="Scranton">
+                            <option value="Seattle">
+                            <option value="Seoul">
+                            <option value="Shanghai">
+                            <option value="Shelton">
+                            <option value="Singapore">
+                            <option value="Sioux Falls">
+                            <option value="Springfield (Illinois)">
+                            <option value="Springfield (Massachusetts)">
+                            <option value="Springfield (Oregon)">
+                            <option value="St. Louis">
+                            <option value="St. Paul">
+                            <option value="St. Petersburg">
+                            <option value="Stamford">
+                            <option value="Star City">
+                            <option value="Sydney">
+                            <option value="Tacoma">
+                            <option value="Tallahassee">
+                            <option value="Tampa">
+                            <option value="Tehran">
+                            <option value="Tianjin">
+                            <option value="Tokyo">
+                            <option value="Toledo">
+                            <option value="Topeka">
+                            <option value="Toronto">
+                            <option value="Trenton">
+                            <option value="Troy">
+                            <option value="Tucson">
+                            <option value="Tulsa">
+                            <option value="Utica">
+                            <option value="Vancouver">
+                            <option value="Venice">
+                            <option value="Warwick">
+                            <option value="Washington DC">
+                            <option value="Waterbury">
+                            <option value="Watertown">
+                            <option value="Wilmington">
+                            <option value="Wilton">
+                            <option value="Worcester">
+                            <option value="Wuhan">
+                            <option value="Yokohama">
+                          </datalist>
                         </div>
-                        <p class="invalidInfoMessage" id="invalidHometown">*Invalid entry</p>
                       </div>
-                      <datalist class="infoList" id="hometownsList">
-                        <option value="Abu Dhabi">
-                        <option value="Akron">
-                        <option value="Albany">
-                        <option value="Albuquerque">
-                        <option value="Alexandria">
-                        <option value="Amsterdam">
-                        <option value="Anchorage">
-                        <option value="Ann Arbor">
-                        <option value="Annapolis">
-                        <option value="Arlington">
-                        <option value="Atlanta">
-                        <option value="Atlantic City">
-                        <option value="Atlantis">
-                        <option value="Auburn">
-                        <option value="Augusta">
-                        <option value="Austin">
-                        <option value="Baghdad">
-                        <option value="Ballston Spa">
-                        <option value="Baltimore">
-                        <option value="Bangkok">
-                        <option value="Bangor">
-                        <option value="Baton Rouge">
-                        <option value="Beijing">
-                        <option value="Berlin">
-                        <option value="Birmingham">
-                        <option value="Bismarck">
-                        <option value="Bloomingdale">
-                        <option value="Bogota">
-                        <option value="Boise">
-                        <option value="Boston">
-                        <option value="Boulder">
-                        <option value="Bridgeport">
-                        <option value="Buenos Aires">
-                        <option value="Buffalo">
-                        <option value="Burlington">
-                        <option value="Burnsville">
-                        <option value="Cairo">
-                        <option value="Canton">
-                        <option value="Cape Town">
-                        <option value="Carson City">
-                        <option value="Casablanca">
-                        <option value="Charleston (South Caroline)">
-                        <option value="Charleston (West Virginia)">
-                        <option value="Charlotte">
-                        <option value="Chattanooga">
-                        <option value="Cheyenne">
-                        <option value="Chicago">
-                        <option value="Chongqing">
-                        <option value="Cincinnati">
-                        <option value="Cleveland">
-                        <option value="Clifton Park">
-                        <option value="Cohoes">
-                        <option value="Colorado Springs">
-                        <option value="Columbia">
-                        <option value="Columbus">
-                        <option value="Concord">
-                        <option value="Cortland">
-                        <option value="Dallas">
-                        <option value="Danbury">
-                        <option value="Davenport">
-                        <option value="Dayton">
-                        <option value="Dearborn">
-                        <option value="Delhi">
-                        <option value="Denver">
-                        <option value="Des Moines">
-                        <option value="Detroit">
-                        <option value="Dhaka">
-                        <option value="Dover">
-                        <option value="Durham">
-                        <option value="Everett">
-                        <option value="Fargo">
-                        <option value="Flagstaff">
-                        <option value="Florence">
-                        <option value="Fort Lauderdale">
-                        <option value="Fort Wayne">
-                        <option value="Frankfort">
-                        <option value="Fremont">
-                        <option value="Fresno">
-                        <option value="Glens Falls">
-                        <option value="Grand Rapids">
-                        <option value="Green Bay">
-                        <option value="Greensboro">
-                        <option value="Guangzhou">
-                        <option value="Harrisburg">
-                        <option value="Hartford">
-                        <option value="Helena">
-                        <option value="Ho Chi Minh City">
-                        <option value="Hong Kong">
-                        <option value="Honolulu">
-                        <option value="Houston">
-                        <option value="Huntsville">
-                        <option value="Indianapolis">
-                        <option value="Istanbul">
-                        <option value="Ithaca">
-                        <option value="Jackson">
-                        <option value="Jacksonville">
-                        <option value="Jakarta">
-                        <option value="Jefferson City">
-                        <option value="Jersey City">
-                        <option value="Jerusalem">
-                        <option value="Johannesburg">
-                        <option value="Juneau">
-                        <option value="Kansas City (Kansas)">
-                        <option value="Kansas City (Missouri)">
-                        <option value="Karachi">
-                        <option value="Kenosha">
-                        <option value="Kingston">
-                        <option value="Kinshasa">
-                        <option value="Knoxville">
-                        <option value="Lafayette">
-                        <option value="Lagos">
-                        <option value="Lansing">
-                        <option value="Las Vegas">
-                        <option value="Lexington">
-                        <option value="Lima">
-                        <option value="Lincoln">
-                        <option value="Little Rock">
-                        <option value="London">
-                        <option value="Los Angeles">
-                        <option value="Louisville">
-                        <option value="Luanda">
-                        <option value="Madison">
-                        <option value="Madrid">
-                        <option value="Malta">
-                        <option value="Manila">
-                        <option value="Massena">
-                        <option value="Memphis">
-                        <option value="Meridian">
-                        <option value="Mesquite">
-                        <option value="Mexico City">
-                        <option value="Miami">
-                        <option value="Milford">
-                        <option value="Milwaukee">
-                        <option value="Minneapolis">
-                        <option value="Montgomery">
-                        <option value="Montpelier">
-                        <option value="Montreal">
-                        <option value="Moscow">
-                        <option value="Mumbai">
-                        <option value="Myrtle Beach">
-                        <option value="Nairobi">
-                        <option value="Nampa">
-                        <option value="Nashua">
-                        <option value="Nashville">
-                        <option value="New Haven">
-                        <option value="New Orleans">
-                        <option value="New York City">
-                        <option value="Newark">
-                        <option value="Newport">
-                        <option value="Niagara Falls">
-                        <option value="Norfolk">
-                        <option value="Norwalk">
-                        <option value="Oakland">
-                        <option value="Ogdensburg">
-                        <option value="Oklahoma City">
-                        <option value="Olympia">
-                        <option value="Oneonta">
-                        <option value="Orlando">
-                        <option value="Oswego">
-                        <option value="Ottawa">
-                        <option value="Paris">
-                        <option value="Philadelphia">
-                        <option value="Phoenix">
-                        <option value="Pierre">
-                        <option value="Pittsburgh">
-                        <option value="Plattsburgh">
-                        <option value="Pocatello">
-                        <option value="Portland (Maine)">
-                        <option value="Portland (Oregon)">
-                        <option value="Portsmouth">
-                        <option value="Potsdam">
-                        <option value="Poughkeepsie">
-                        <option value="Providence">
-                        <option value="Pyongyang">
-                        <option value="Quebec City">
-                        <option value="Queensbury">
-                        <option value="Raleigh">
-                        <option value="Rensselaer">
-                        <option value="Richland">
-                        <option value="Richmond">
-                        <option value="Rio de Janeiro">
-                        <option value="Roanoke">
-                        <option value="Rochester">
-                        <option value="Rome">
-                        <option value="Sacramento">
-                        <option value="Salem (Massachusetts)">
-                        <option value="Salem (Oregon)">
-                        <option value="Salt Lake City">
-                        <option value="San Antonia">
-                        <option value="San Diego">
-                        <option value="San Francisco">
-                        <option value="San Jose">
-                        <option value="Sandusky">
-                        <option value="Santa Barbara">
-                        <option value="Santa Fe">
-                        <option value="Santiago">
-                        <option value="Sao Paulo">
-                        <option value="Sarasota">
-                        <option value="Saratoga Springs">
-                        <option value="Savannah">
-                        <option value="Schenectady">
-                        <option value="Scottsdale">
-                        <option value="Scranton">
-                        <option value="Seattle">
-                        <option value="Seoul">
-                        <option value="Shanghai">
-                        <option value="Shelton">
-                        <option value="Singapore">
-                        <option value="Sioux Falls">
-                        <option value="Springfield (Illinois)">
-                        <option value="Springfield (Massachusetts)">
-                        <option value="Springfield (Oregon)">
-                        <option value="St. Louis">
-                        <option value="St. Paul">
-                        <option value="St. Petersburg">
-                        <option value="Stamford">
-                        <option value="Star City">
-                        <option value="Sydney">
-                        <option value="Tacoma">
-                        <option value="Tallahassee">
-                        <option value="Tampa">
-                        <option value="Tehran">
-                        <option value="Tianjin">
-                        <option value="Tokyo">
-                        <option value="Toledo">
-                        <option value="Topeka">
-                        <option value="Toronto">
-                        <option value="Trenton">
-                        <option value="Troy">
-                        <option value="Tucson">
-                        <option value="Tulsa">
-                        <option value="Utica">
-                        <option value="Vancouver">
-                        <option value="Venice">
-                        <option value="Warwick">
-                        <option value="Washington DC">
-                        <option value="Waterbury">
-                        <option value="Watertown">
-                        <option value="Wilmington">
-                        <option value="Wilton">
-                        <option value="Worcester">
-                        <option value="Wuhan">
-                        <option value="Yokohama">
-                      </datalist>
-                    </div>
-                    <div class="infoField" id="infoInstrument">
-                      <div class="infoInputContContCont" id="instrumentInputContContCont">
-                        <div class="infoInputContCont" id="instrumentInputContCont">
-                          <div class="infoLabelCont" id="instrumentLabelCont">
-                            <label form="infoCont" for="instrumentInput" class="infoLabel" id="instrumentLabel">Instrument:</label>
-                            <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearInstrument" tabindex="-1" aria-label="Clear the info on your instrument" onclick="accountRemove(4, event)">Clear</button>
+                      <div class="infoFieldCont" id="infoInstrumentCont">
+                        <div class="infoField" id="infoInstrument">
+                          <div class="infoInputContContCont" id="instrumentInputContContCont">
+                            <div class="infoInputContCont" id="instrumentInputContCont">
+                              <div class="infoLabelCont" id="instrumentLabelCont">
+                                <label form="infoCont" for="instrumentInput" class="infoLabel" id="instrumentLabel">Instrument:</label>
+                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearInstrument" tabindex="-1" aria-label="Clear the info on your instrument" onclick="accountRemove(4, event)">Clear</button>
+                              </div>
+                              <div class="infoInputCont" id="instrumentInputCont">
+                                <input form="infoCont" list="instrumentsList" type="text" name="instrument" placeholder="Instrument..." size="25" minlength="1" maxlength="50" title="Enter your instrument here" class="infoInput undefinedInfoInput validInfoInput" id="instrumentInput" tabindex="-1" aria-label="Enter your instrument here" onkeydown="accountProcess(4, event)" onkeyup="accountTyping(4)" onchange="accountTyping(4)" onfocus="arriveInput(4)" onblur="leaveInput(4)" autocomplete="instrument">
+                                <button type="submit" name="instrument" class="infoButton enterInfoButton defaultButton disabled" id="enterInstrument" tabindex="-1" aria-label="Enter your instrument" onclick="accountProcess(4, event)" disabled>&#9166;</button>
+                              </div>
+                            </div>
+                            <p class="invalidInfoMessage" id="invalidInstrument">*Invalid entry</p>
                           </div>
-                          <div class="infoInputCont" id="instrumentInputCont">
-                            <input form="infoCont" list="instrumentsList" type="text" name="instrument" placeholder="Instrument..." size="25" minlength="1" maxlength="50" title="Enter your instrument here" class="infoInput undefinedInfoInput validInfoInput" id="instrumentInput" tabindex="-1" aria-label="Enter your instrument here" onkeydown="accountProcess(4, event)" onkeyup="accountTyping(4)" onchange="accountTyping(4)" onfocus="arriveInput(4)" onblur="leaveInput(4)" autocomplete="instrument">
-                            <button type="submit" name="instrument" class="infoButton enterInfoButton defaultButton disabled" id="enterInstrument" tabindex="-1" aria-label="Enter your instrument" onclick="accountProcess(4, event)" disabled>&#9166;</button>
-                          </div>
+                          <datalist class="infoList" id="instrumentsList">
+                            <option value="Accordian">
+                            <option value="Acoustic guitar">
+                            <option value="Bagpipes">
+                            <option value="Banjo">
+                            <option value="Bass drum">
+                            <option value="Bass guitar">
+                            <option value="Bassett horn">
+                            <option value="Bassoon">
+                            <option value="Bongos">
+                            <option value="Bugle">
+                            <option value="Cello">
+                            <option value="Clapping">
+                            <option value="Clarinet">
+                            <option value="Clavichord">
+                            <option value="Cornet">
+                            <option value="Cowbell">
+                            <option value="Cymbals">
+                            <option value="Didgeridoo">
+                            <option value="Double bass">
+                            <option value="Electric guitar">
+                            <option value="English horn">
+                            <option value="Euphonium">
+                            <option value="Flugelhorn">
+                            <option value="Flute">
+                            <option value="French horn">
+                            <option value="Frying pan">
+                            <option value="Glockenspiel">
+                            <option value="Gong">
+                            <option value="Harmonica">
+                            <option value="Harmonium">
+                            <option value="Harp">
+                            <option value="Harpsichord">
+                            <option value="Kazoo">
+                            <option value="Keyboard">
+                            <option value="Lute">
+                            <option value="Lyre">
+                            <option value="Mandolin">
+                            <option value="Maracas">
+                            <option value="Mellophone">
+                            <option value="Melodica">
+                            <option value="Mouth harp">
+                            <option value="Oboe">
+                            <option value="Organ">
+                            <option value="Pan flute">
+                            <option value="Piano">
+                            <option value="Piccolo">
+                            <option value="Recorder">
+                            <option value="Saxophone">
+                            <option value="Snare drum">
+                            <option value="Sousaphone">
+                            <option value="Stylophone">
+                            <option value="Synthesizer">
+                            <option value="Tambourine">
+                            <option value="Timpani">
+                            <option value="Tin whistle">
+                            <option value="Tom-toms">
+                            <option value="Triangle bell">
+                            <option value="Trombone">
+                            <option value="Trumpet">
+                            <option value="Tuba">
+                            <option value="Ukulele">
+                            <option value="Vibraphone">
+                            <option value="Viola">
+                            <option value="Violin">
+                            <option value="Vocal cords">
+                            <option value="Wood block">
+                            <option value="Xylophone">
+                          </datalist>
                         </div>
-                        <p class="invalidInfoMessage" id="invalidInstrument">*Invalid entry</p>
                       </div>
-                      <datalist class="infoList" id="instrumentsList">
-                        <option value="Accordian">
-                        <option value="Acoustic guitar">
-                        <option value="Bagpipes">
-                        <option value="Banjo">
-                        <option value="Bass drum">
-                        <option value="Bass guitar">
-                        <option value="Bassett horn">
-                        <option value="Bassoon">
-                        <option value="Bongos">
-                        <option value="Bugle">
-                        <option value="Cello">
-                        <option value="Clapping">
-                        <option value="Clarinet">
-                        <option value="Clavichord">
-                        <option value="Cornet">
-                        <option value="Cowbell">
-                        <option value="Cymbals">
-                        <option value="Didgeridoo">
-                        <option value="Double bass">
-                        <option value="Electric guitar">
-                        <option value="English horn">
-                        <option value="Euphonium">
-                        <option value="Flugelhorn">
-                        <option value="Flute">
-                        <option value="French horn">
-                        <option value="Frying pan">
-                        <option value="Glockenspiel">
-                        <option value="Gong">
-                        <option value="Harmonica">
-                        <option value="Harmonium">
-                        <option value="Harp">
-                        <option value="Harpsichord">
-                        <option value="Kazoo">
-                        <option value="Keyboard">
-                        <option value="Lute">
-                        <option value="Lyre">
-                        <option value="Mandolin">
-                        <option value="Maracas">
-                        <option value="Mellophone">
-                        <option value="Melodica">
-                        <option value="Mouth harp">
-                        <option value="Oboe">
-                        <option value="Organ">
-                        <option value="Pan flute">
-                        <option value="Piano">
-                        <option value="Piccolo">
-                        <option value="Recorder">
-                        <option value="Saxophone">
-                        <option value="Snare drum">
-                        <option value="Sousaphone">
-                        <option value="Stylophone">
-                        <option value="Synthesizer">
-                        <option value="Tambourine">
-                        <option value="Timpani">
-                        <option value="Tin whistle">
-                        <option value="Tom-toms">
-                        <option value="Triangle bell">
-                        <option value="Trombone">
-                        <option value="Trumpet">
-                        <option value="Tuba">
-                        <option value="Ukulele">
-                        <option value="Vibraphone">
-                        <option value="Viola">
-                        <option value="Violin">
-                        <option value="Vocal cords">
-                        <option value="Wood block">
-                        <option value="Xylophone">
-                      </datalist>
-                    </div>
-                    <div class="infoField" id="infoSocialSecurityNumber">
-                      <div class="infoInputContContCont" id="socialSecurityNumberInputContContCont">
-                        <div class="infoInputContCont" id="socialSecurityNumberInputContCont">
-                          <div class="infoLabelCont" id="socialSecurityNumberLabelCont">
-                            <label form="infoCont" for="socialSecurityNumberInput" class="infoLabel" id="socialSecurityNumberLabel">Social Security<br>Number:</label>
-                            <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearSocialSecurityNumber" tabindex="-1" aria-label="Clear the info on your Social Security number" onclick="accountRemove(5, event)">Clear</button>
-                          </div>
-                          <div class="infoInputCont" id="socialSecurityNumberInputCont">
-                            <input form="infoCont" type="number" name="socialSecurityNumber" placeholder="No spaces (ex. 123456789)" min="100000000" max="999999999" step="1" title="Enter your Social Security number here" class="infoInput undefinedInfoInput validInfoInput" id="socialSecurityNumberInput" tabindex="-1" aria-label="Enter your Social Security number here" onkeydown="accountProcess(5, event)" onkeyup="accountTyping(5)" onchange="accountTyping(5)" onfocus="arriveInput(5)" onblur="leaveInput(5)" autocomplete="off">
-                            <button type="submit" name="socialSecurityNumber" class="infoButton enterInfoButton defaultButton disabled" id="enterSocialSecurityNumber" tabindex="-1" aria-label="Enter your Social Security number" onclick="accountProcess(5, event)" disabled>&#9166;</button>
+                      <div class="infoFieldCont" id="infoSocialSecurityNumberCont">
+                        <div class="infoField" id="infoSocialSecurityNumber">
+                          <div class="infoInputContContCont" id="socialSecurityNumberInputContContCont">
+                            <div class="infoInputContCont" id="socialSecurityNumberInputContCont">
+                              <div class="infoLabelCont" id="socialSecurityNumberLabelCont">
+                                <label form="infoCont" for="socialSecurityNumberInput" class="infoLabel" id="socialSecurityNumberLabel">Social Security<br>Number:</label>
+                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearSocialSecurityNumber" tabindex="-1" aria-label="Clear the info on your Social Security number" onclick="accountRemove(5, event)">Clear</button>
+                              </div>
+                              <div class="infoInputCont" id="socialSecurityNumberInputCont">
+                                <input form="infoCont" type="number" name="socialSecurityNumber" placeholder="No spaces (ex. 123456789)" min="100000000" max="999999999" step="1" title="Enter your Social Security number here" class="infoInput undefinedInfoInput validInfoInput" id="socialSecurityNumberInput" tabindex="-1" aria-label="Enter your Social Security number here" onkeydown="accountProcess(5, event)" onkeyup="accountTyping(5)" onchange="accountTyping(5)" onfocus="arriveInput(5)" onblur="leaveInput(5)" autocomplete="off">
+                                <button type="submit" name="socialSecurityNumber" class="infoButton enterInfoButton defaultButton disabled" id="enterSocialSecurityNumber" tabindex="-1" aria-label="Enter your Social Security number" onclick="accountProcess(5, event)" disabled>&#9166;</button>
+                              </div>
+                            </div>
+                            <p class="invalidInfoMessage" id="invalidSocialSecurityNumber">*Invalid entry</p>
                           </div>
                         </div>
-                        <p class="invalidInfoMessage" id="invalidSocialSecurityNumber">*Invalid entry</p>
                       </div>
                     </div>
                   </fieldset>

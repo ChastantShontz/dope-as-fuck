@@ -10296,7 +10296,10 @@ function accountStore(field) {
       else if ((localStorage.hometown).match(/rochester/ism)) {
         console.log("Say \"hi\" to Charlie for me!");
       }
-      else if ((localStorage.hometown).match(/bismarck/ism)) {
+      else if ((localStorage.hometown).match(/\bdover\b/ism)) {
+        console.log("Ben-" + localStorage.hometown);
+      }
+      else if ((localStorage.hometown).match(/bismarck|fargo/ism)) {
         console.log("So North Dakota really does exist?");
       }
       else if ((localStorage.hometown).match(/atlantis/ism)) {

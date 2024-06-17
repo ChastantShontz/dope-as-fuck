@@ -3565,11 +3565,11 @@
                             <div class="infoInputContCont" id="instrumentInputContCont">
                               <div class="infoLabelCont" id="instrumentLabelCont">
                                 <label form="infoCont" for="instrumentInput" class="infoLabel" id="instrumentLabel">Instrument:</label>
-                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearInstrument" tabindex="-1" aria-label="Clear the info on your instrument" onclick="accountRemove(4, event)">Clear</button>
+                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearInstrument" tabindex="-1" aria-label="Clear the info on your instrument" onclick="accountRemove(5, event)">Clear</button>
                               </div>
                               <div class="infoInputCont" id="instrumentInputCont">
-                                <input form="infoCont" list="instrumentsList" type="text" name="instrument" placeholder="Instrument..." size="25" minlength="1" maxlength="50" title="Enter your instrument here" class="infoInput undefinedInfoInput validInfoInput" id="instrumentInput" tabindex="-1" aria-label="Enter your instrument here" onkeydown="accountProcess(4, event)" onkeyup="accountTyping(4)" onchange="accountTyping(4)" onfocus="arriveInput(4)" onblur="leaveInput(4)" autocomplete="instrument">
-                                <button type="submit" name="instrument" class="infoButton enterInfoButton defaultButton disabled" id="enterInstrument" tabindex="-1" aria-label="Enter your instrument" onclick="accountProcess(4, event)" disabled>&#9166;</button>
+                                <input form="infoCont" list="instrumentsList" type="text" name="instrument" placeholder="Instrument..." size="25" minlength="1" maxlength="50" title="Enter your instrument here" class="infoInput undefinedInfoInput validInfoInput" id="instrumentInput" tabindex="-1" aria-label="Enter your instrument here" onkeydown="accountProcess(5, event)" onkeyup="accountTyping(5)" onchange="accountTyping(5)" onfocus="arriveInput(5)" onblur="leaveInput(5)" autocomplete="instrument">
+                                <button type="submit" name="instrument" class="infoButton enterInfoButton defaultButton disabled" id="enterInstrument" tabindex="-1" aria-label="Enter your instrument" onclick="accountProcess(5, event)" disabled>&#9166;</button>
                               </div>
                             </div>
                             <p class="invalidInfoMessage" id="invalidInstrument">*Invalid entry</p>
@@ -3651,11 +3651,11 @@
                             <div class="infoInputContCont" id="socialSecurityNumberInputContCont">
                               <div class="infoLabelCont" id="socialSecurityNumberLabelCont">
                                 <label form="infoCont" for="socialSecurityNumberInput" class="infoLabel" id="socialSecurityNumberLabel">Social Security<br>Number:</label>
-                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearSocialSecurityNumber" tabindex="-1" aria-label="Clear the info on your Social Security number" onclick="accountRemove(5, event)">Clear</button>
+                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearSocialSecurityNumber" tabindex="-1" aria-label="Clear the info on your Social Security number" onclick="accountRemove(6, event)">Clear</button>
                               </div>
                               <div class="infoInputCont" id="socialSecurityNumberInputCont">
-                                <input form="infoCont" type="number" name="socialSecurityNumber" placeholder="No spaces (ex. 123456789)" min="100000000" max="999999999" step="1" title="Enter your Social Security number here" class="infoInput undefinedInfoInput validInfoInput" id="socialSecurityNumberInput" tabindex="-1" aria-label="Enter your Social Security number here" onkeydown="accountProcess(5, event)" onkeyup="accountTyping(5)" onchange="accountTyping(5)" onfocus="arriveInput(5)" onblur="leaveInput(5)" autocomplete="off">
-                                <button type="submit" name="socialSecurityNumber" class="infoButton enterInfoButton defaultButton disabled" id="enterSocialSecurityNumber" tabindex="-1" aria-label="Enter your Social Security number" onclick="accountProcess(5, event)" disabled>&#9166;</button>
+                                <input form="infoCont" type="number" name="socialSecurityNumber" placeholder="No spaces (ex. 123456789)" min="100000000" max="999999999" step="1" title="Enter your Social Security number here" class="infoInput undefinedInfoInput validInfoInput" id="socialSecurityNumberInput" tabindex="-1" aria-label="Enter your Social Security number here" onkeydown="accountProcess(6, event)" onkeyup="accountTyping(6)" onchange="accountTyping(6)" onfocus="arriveInput(6)" onblur="leaveInput(6)" autocomplete="off">
+                                <button type="submit" name="socialSecurityNumber" class="infoButton enterInfoButton defaultButton disabled" id="enterSocialSecurityNumber" tabindex="-1" aria-label="Enter your Social Security number" onclick="accountProcess(6, event)" disabled>&#9166;</button>
                               </div>
                             </div>
                             <p class="invalidInfoMessage" id="invalidSocialSecurityNumber">*Invalid entry</p>
@@ -3684,10 +3684,13 @@
                       <th scope="row" class="dataCell dataBodyCell dataHeaderCell dataBodyHeaderCell majorCell majorHeaderCell" id="dataMajorHeaderCell">Major:</th>
                       <td headers="dataMajorHeaderCell" class="dataCell dataBodyCell dataDataCell dataBodyDataCell majorCell majorDataCell" id="dataMajorData" itemprop="major"></td>
                     </tr>
+                    <tr class="dataRow dataBodyRow" id="dataHometown">
+                      <th scope="row" class="dataCell dataBodyCell dataHeaderCell dataBodyHeaderCell" id="dataHometownHeader">Hometown:</th>
+                      <td headers="dataHometownHeader" class="dataCell dataBodyCell dataDataCell dataBodyDataCell" id="dataHometownData" itemprop="hometown"></td>
+                    </tr>
                     <tr class="dataRow dataBodyRow" id="dataInstrument">
                       <th scope="row" class="dataCell dataBodyCell dataHeaderCell dataBodyHeaderCell" id="dataInstrumentHeader">Instrument:</th>
-                      <td headers="dataInstrumentHeader" class="dataCell dataBodyCell dataDataCell dataBodyDataCell" id="dataInstrumentData" itemprop="instrument">
-                      </td>
+                      <td headers="dataInstrumentHeader" class="dataCell dataBodyCell dataDataCell dataBodyDataCell" id="dataInstrumentData" itemprop="instrument"></td>
                     </tr>
                     <tr class="dataRow dataBodyRow" id="dataSocialSecurityNumber">
                       <th scope="row" class="dataCell dataBodyCell dataHeaderCell dataBodyHeaderCell" id="dataSocialSecurityNumberHeader">Social Security Number:</th>

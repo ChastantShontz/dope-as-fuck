@@ -10148,7 +10148,7 @@ function leaveInput(field) {
 function accountTyping(field) {
   sessionStorage.field = field;
   document.getElementsByClassName("enterInfoButton")[sessionStorage.field - 1].value = document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value;
-  if (((sessionStorage.field == 5) && (((document.getElementById("socialSecurityNumberInput").value).length == 9) && ((!((document.getElementById("socialSecurityNumberInput").value).match(/0/gsm))) || (((document.getElementById("socialSecurityNumberInput").value).match(/0/gsm)).length < 9)) && (!((document.getElementById("socialSecurityNumberInput").value).match(/[a-zA-Z]|\.|\,|\'|\"|\`|\~|\-|\_|\+|\*|\^|\%|\=|\>|\<|\&|\#|\$|\@|\;|\:|\?|\!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+|\n+|\r+|\t+|\v+|\f+/gsm))))) || ((sessionStorage.field != 5) && ((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value != "") && ((!((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value).match(/\s/gsm))) || (((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value).match(/\s/gsm)).length < (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value).length))))) {
+  if (((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "socialSecurityNumber") && (((document.getElementById("socialSecurityNumberInput").value).length == 9) && ((!((document.getElementById("socialSecurityNumberInput").value).match(/0/gsm))) || (((document.getElementById("socialSecurityNumberInput").value).match(/0/gsm)).length < 9)) && (!((document.getElementById("socialSecurityNumberInput").value).match(/[a-zA-Z]|\.|\,|\'|\"|\`|\~|\-|\_|\+|\*|\^|\%|\=|\>|\<|\&|\#|\$|\@|\;|\:|\?|\!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+|\n+|\r+|\t+|\v+|\f+/gsm))))) || ((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name != "socialSecurityNumber") && ((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value != "") && ((!((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value).match(/\s/gsm))) || (((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value).match(/\s/gsm)).length < (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value).length))))) {
     document.getElementsByClassName("enterInfoButton")[sessionStorage.field - 1].style.background = "var(--darkGray)";
     document.getElementsByClassName("enterInfoButton")[sessionStorage.field - 1].style.color = "var(--lightGray)";
     document.getElementsByClassName("enterInfoButton")[sessionStorage.field - 1].style.transition = "all 0s ease 0s";
@@ -10163,7 +10163,7 @@ function accountTyping(field) {
     document.getElementsByClassName("enterInfoButton")[sessionStorage.field - 1].disabled = true;
     document.getElementsByClassName("enterInfoButton")[sessionStorage.field - 1].blur();
   }
-  if (((sessionStorage.field == 5) && (((document.getElementById("socialSecurityNumberInput").value == "") || ((document.getElementById("socialSecurityNumberInput").value).length == 9)) && ((!((document.getElementById("socialSecurityNumberInput").value).match(/0/gsm))) || (((document.getElementById("socialSecurityNumberInput").value).match(/0/gsm)).length < 9)) && (!((document.getElementById("socialSecurityNumberInput").value).match(/[a-zA-Z]|\.|\,|\'|\"|\`|\~|\-|\_|\+|\*|\^|\%|\=|\>|\<|\&|\#|\$|\@|\;|\:|\?|\!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+|\n+|\r+|\t+|\v+|\f+/gsm))))) || (sessionStorage.field != 5)) {
+  if (((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "socialSecurityNumber") && (((document.getElementById("socialSecurityNumberInput").value == "") || ((document.getElementById("socialSecurityNumberInput").value).length == 9)) && ((!((document.getElementById("socialSecurityNumberInput").value).match(/0/gsm))) || (((document.getElementById("socialSecurityNumberInput").value).match(/0/gsm)).length < 9)) && (!((document.getElementById("socialSecurityNumberInput").value).match(/[a-zA-Z]|\.|\,|\'|\"|\`|\~|\-|\_|\+|\*|\^|\%|\=|\>|\<|\&|\#|\$|\@|\;|\:|\?|\!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+|\n+|\r+|\t+|\v+|\f+/gsm))))) || (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name != "socialSecurityNumber")) {
     if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].classList.contains("invalidInfoInput")) {
       document.getElementsByClassName("infoInput")[sessionStorage.field - 1].classList.replace("invalidInfoInput", "validInfoInput");
       document.getElementsByClassName("infoInput")[sessionStorage.field - 1].style.accentColor = "var(--clarksonGreen)";
@@ -10193,8 +10193,8 @@ function accountStore(field) {
     document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value = (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value).trim();
     document.getElementsByClassName("enterInfoButton")[sessionStorage.field - 1].value = document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value;
   }
-  if (((sessionStorage.field == 5) && (((document.getElementById("socialSecurityNumberInput").value).length == 9) && ((!((document.getElementById("socialSecurityNumberInput").value).match(/0/gsm))) || (((document.getElementById("socialSecurityNumberInput").value).match(/0/gsm)).length < 9)) && (!((document.getElementById("socialSecurityNumberInput").value).match(/[a-zA-Z]|\.|\,|\'|\"|\`|\~|\-|\_|\+|\*|\^|\%|\=|\>|\<|\&|\#|\$|\@|\;|\:|\?|\!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+|\n+|\r+|\t+|\v+|\f+/gsm))))) || ((sessionStorage.field != 5) && (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value != ""))) {
-    if (sessionStorage.field == 5) {
+  if (((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "socialSecurityNumber") && (((document.getElementById("socialSecurityNumberInput").value).length == 9) && ((!((document.getElementById("socialSecurityNumberInput").value).match(/0/gsm))) || (((document.getElementById("socialSecurityNumberInput").value).match(/0/gsm)).length < 9)) && (!((document.getElementById("socialSecurityNumberInput").value).match(/[a-zA-Z]|\.|\,|\'|\"|\`|\~|\-|\_|\+|\*|\^|\%|\=|\>|\<|\&|\#|\$|\@|\;|\:|\?|\!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+|\n+|\r+|\t+|\v+|\f+/gsm))))) || ((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name != "socialSecurityNumber") && (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value != ""))) {
+    if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "socialSecurityNumber") {
       localStorage.socialSecurityNumber = (document.getElementById("socialSecurityNumberInput").value).substring(0, 3) + "-" + (document.getElementById("socialSecurityNumberInput").value).substring(3, 5) + "-" + (document.getElementById("socialSecurityNumberInput").value).substring(5);
     }
     else {
@@ -10217,7 +10217,7 @@ function accountStore(field) {
     document.getElementsByClassName("enterInfoButton")[sessionStorage.field - 1].disabled = true;
     document.getElementsByClassName("enterInfoButton")[sessionStorage.field - 1].blur();
     accountUpdate(sessionStorage.field, "store");
-    if (sessionStorage.field == 1) {
+    if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "name") {
       if ((localStorage.name).match(/chestnut/ism)) {
         console.log("Oh, I'm here?");
       }
@@ -10246,7 +10246,7 @@ function accountStore(field) {
         console.log(localStorage.name + ", that's a nice name!");
       }
     }
-    else if (sessionStorage.field == 2) {
+    else if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "year") {
       if ((localStorage.year).match(/school/ism)) {
         console.log("Eww, children, gross...");
       }
@@ -10254,7 +10254,7 @@ function accountStore(field) {
         console.log("Damn, you're old!");
       }
     }
-    else if (sessionStorage.field == 3) {
+    else if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "major") {
       if ((localStorage.major).match(/(\bcomm|\bc\,?\s*m\,?\s*(and|\&)?\s*d\b)|(digital arts|\bd\s*a(\s*(and|\&)?\s*s)?\b)|humanities|(\blit\b|literature)|history|social|(politic|poly.?sci)|anthropology|liberal/ism)) {
         console.log("Hahaha no you're not");
       }
@@ -10274,7 +10274,7 @@ function accountStore(field) {
         console.log("Wannabe bird");
       }
     }
-    else if (sessionStorage.field == 4) {
+    else if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "instrument") {
       if ((localStorage.instrument).match(/bell/ism)) {
         console.log("I've got a fever, and the only prescription is more " + localStorage.instrument + "!");
       }
@@ -10288,10 +10288,10 @@ function accountStore(field) {
         console.log("The real hero right here");
       }
     }
-    else if (sessionStorage.field == 5) {
+    else if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "socialSecurityNumber") {
       console.log("Be right back, just gonna open a line of credit with the Social Security number " + localStorage.socialSecurityNumber + ", MUAHAHA...");
     }
-    if (sessionStorage.field == 5) {
+    if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "socialSecurityNumber") {
       document.getElementById("socialSecurityNumberInput").blur();
       sessionStorage.field = 1;
     }
@@ -10338,7 +10338,7 @@ function accountRemove(field, event) {
       localStorage.removeItem(document.getElementsByClassName("infoInput")[i].name);
       document.getElementsByClassName("infoInput")[i].value = "";
       document.getElementsByClassName("enterInfoButton")[i].value = document.getElementsByClassName("infoInput")[i].value;
-      if (i == 4) {
+      if (document.getElementsByClassName("infoInput")[i].name == "socialSecurityNumber") {
         document.getElementById("socialSecurityNumberInput").placeholder = "No spaces (ex. 123456789)";
       }
       else {
@@ -10359,7 +10359,7 @@ function accountRemove(field, event) {
     localStorage.removeItem(document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name);
     document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value = "";
     document.getElementsByClassName("enterInfoButton")[sessionStorage.field - 1].value = document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value;
-    if (sessionStorage.field == 5) {
+    if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "socialSecurityNumber") {
       document.getElementById("socialSecurityNumberInput").placeholder = "No spaces (ex. 123456789)";
     }
     else {
@@ -10373,7 +10373,7 @@ function accountRemove(field, event) {
     document.getElementsByClassName("enterInfoButton")[sessionStorage.field - 1].blur();
   }
   accountUpdate(sessionStorage.field, "remove");
-  if ((sessionStorage.field == 0) || (sessionStorage.field == 1)) {
+  if ((sessionStorage.field == 0) || (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "name")) {
     console.log("I guess I'll just have to call you [player] now!");
   }
 }
@@ -10383,8 +10383,8 @@ function accountUpdate(field, method) {
   if (sessionStorage.field == 0) {
     for (var i = 0; i < document.getElementsByClassName("infoInput").length; i++) {
       if (eval("localStorage." + document.getElementsByClassName("infoInput")[i].name) == undefined) {
-        if (((i == 4) && ((String(you.socialSecurityNumber)).replace(/\-/gsm, "") > 0)) || ((i != 4) && (eval("you." + document.getElementsByClassName("infoInput")[i].name) != ""))) {
-          if (i == 4) {
+        if (((document.getElementsByClassName("infoInput")[i].name == "socialSecurityNumber") && ((String(you.socialSecurityNumber)).replace(/\-/gsm, "") > 0)) || ((document.getElementsByClassName("infoInput")[i].name != "socialSecurityNumber") && (eval("you." + document.getElementsByClassName("infoInput")[i].name) != ""))) {
+          if (document.getElementsByClassName("infoInput")[i].name == "socialSecurityNumber") {
             you.socialSecurityNumber = 0;
           }
           else {
@@ -10393,7 +10393,7 @@ function accountUpdate(field, method) {
           document.getElementsByClassName("clearInfoButton")[i + 1].style.display = "none";
           document.getElementsByClassName("clearInfoButton")[i + 1].tabIndex = "-1";
           document.getElementsByClassName("clearInfoButton")[i + 1].blur();
-          if (i == 4) {
+          if (document.getElementsByClassName("infoInput")[i].name == "socialSecurityNumber") {
             document.getElementById("socialSecurityNumberInput").placeholder = "No spaces (ex. 123456789)";
           }
           else {
@@ -10402,7 +10402,7 @@ function accountUpdate(field, method) {
           document.getElementsByClassName("infoInput")[i].classList.replace("definedInfoInput", "undefinedInfoInput");
           document.getElementsByClassName("dataDataCell")[i].innerHTML = "";
           document.getElementsByClassName("dataRow")[i + 1].style.display = "none";
-          if (i == 0) {
+          if (document.getElementsByClassName("infoInput")[i].name == "name") {
             for (var j = 0; j < document.getElementsByClassName("username").length; j++) {
               if (document.getElementsByClassName("username")[j].classList.contains("usernamePlayer")) {
                 if (document.getElementsByClassName("username")[j].classList.contains("usernameLower")) {
@@ -10422,7 +10422,7 @@ function accountUpdate(field, method) {
               }
             }
           }
-          else if (i == 1) {
+          else if (document.getElementsByClassName("infoInput")[i].name == "year") {
             for (var j = 0; j < document.getElementsByClassName("agedLine").length; j++) {
               document.getElementsByClassName("agedLine")[j].style.display = "none";
             }
@@ -10440,12 +10440,12 @@ function accountUpdate(field, method) {
           document.getElementsByClassName("infoInput")[i].classList.replace("undefinedInfoInput", "definedInfoInput");
           document.getElementsByClassName("dataDataCell")[i].innerHTML = eval("localStorage." + document.getElementsByClassName("infoInput")[i].name);
           document.getElementsByClassName("dataRow")[i + 1].style.display = "table-row";
-          if (i == 0) {
+          if (document.getElementsByClassName("infoInput")[i].name == "name") {
             for (var j = 0; j < document.getElementsByClassName("username").length; j++) {
               document.getElementsByClassName("username")[j].innerHTML = localStorage.name;
             }
           }
-          else if (i == 1) {
+          else if (document.getElementsByClassName("infoInput")[i].name == "year") {
             for (var j = 0; j < document.getElementsByClassName("agedLine").length; j++) {
               if (((localStorage.year).match(/school|(fresh|first.?year)/ism)) || ((localStorage.year).match(/senior|grad|alum/ism))) {
                 if ((localStorage.year).match(/school|(fresh|first.?year)/ism)) {
@@ -10513,12 +10513,12 @@ function accountUpdate(field, method) {
         document.getElementsByClassName("infoInput")[sessionStorage.field - 1].classList.replace("undefinedInfoInput", "definedInfoInput");
         document.getElementsByClassName("dataDataCell")[sessionStorage.field - 1].innerHTML = eval("localStorage." + document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name);
         document.getElementsByClassName("dataRow")[sessionStorage.field].style.display = "table-row";
-        if (sessionStorage.field == 1) {
+        if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "name") {
           for (var i = 0; i < document.getElementsByClassName("username").length; i++) {
             document.getElementsByClassName("username")[i].innerHTML = localStorage.name;
           }
         }
-        else if (sessionStorage.field == 2) {
+        else if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "year") {
           for (var i = 0; i < document.getElementsByClassName("agedLine").length; i++) {
             if (((localStorage.year).match(/school|(fresh|first.?year)/ism)) || ((localStorage.year).match(/senior|grad|alum/ism))) {
               if ((localStorage.year).match(/school|(fresh|first.?year)/ism)) {
@@ -10559,8 +10559,8 @@ function accountUpdate(field, method) {
       }
     }
     else if (method == "remove") {
-      if (((sessionStorage.field == 5) && ((String(you.socialSecurityNumber)).replace(/\-/gsm, "") > 0)) || ((sessionStorage.field != 5) && (eval("you." + document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name) != ""))) {
-        if (sessionStorage.field == 5) {
+      if (((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "socialSecurityNumber") && ((String(you.socialSecurityNumber)).replace(/\-/gsm, "") > 0)) || ((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name != "socialSecurityNumber") && (eval("you." + document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name) != ""))) {
+        if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "socialSecurityNumber") {
           you.socialSecurityNumber = 0;
         }
         else {
@@ -10569,7 +10569,7 @@ function accountUpdate(field, method) {
         document.getElementsByClassName("clearInfoButton")[sessionStorage.field].style.display = "none";
         document.getElementsByClassName("clearInfoButton")[sessionStorage.field].tabIndex = "-1";
         document.getElementsByClassName("clearInfoButton")[sessionStorage.field].blur();
-        if (sessionStorage.field == 5) {
+        if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "socialSecurityNumber") {
           document.getElementById("socialSecurityNumberInput").placeholder = "No spaces (ex. 123456789)";
         }
         else {
@@ -10578,7 +10578,7 @@ function accountUpdate(field, method) {
         document.getElementsByClassName("infoInput")[sessionStorage.field - 1].classList.replace("definedInfoInput", "undefinedInfoInput");
         document.getElementsByClassName("dataDataCell")[sessionStorage.field - 1].innerHTML = "";
         document.getElementsByClassName("dataRow")[sessionStorage.field].style.display = "none";
-        if (sessionStorage.field == 1) {
+        if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "name") {
           for (var i = 0; i < document.getElementsByClassName("username").length; i++) {
             if (document.getElementsByClassName("username")[i].classList.contains("usernamePlayer")) {
               if (document.getElementsByClassName("username")[i].classList.contains("usernameLower")) {
@@ -10598,7 +10598,7 @@ function accountUpdate(field, method) {
             }
           }
         }
-        else if (sessionStorage.field == 2) {
+        else if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "year") {
           for (var i = 0; i < document.getElementsByClassName("agedLine").length; i++) {
             document.getElementsByClassName("agedLine")[i].style.display = "none";
           }

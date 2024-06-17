@@ -10347,13 +10347,13 @@ function accountStore(field) {
     else if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "socialSecurityNumber") {
       console.log("Be right back, just gonna open a line of credit with the Social Security number " + localStorage.socialSecurityNumber + ", MUAHAHA...");
     }
-    if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "socialSecurityNumber") {
-      document.getElementById("socialSecurityNumberInput").blur();
-      sessionStorage.field = 1;
-    }
-    else {
+    if (sessionStorage.field < document.getElementsByClassName("infoInput").length) {
       sessionStorage.field++;
       document.getElementsByClassName("infoInput")[sessionStorage.field - 1].focus();
+    }
+    else if (sessionStorage.field == document.getElementsByClassName("infoInput").length) {
+      document.getElementsByClassName("infoInput")[sessionStorage.field - 1].blur();
+      sessionStorage.field = 1;
     }
   }
   else {

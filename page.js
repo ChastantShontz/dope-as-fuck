@@ -10256,7 +10256,7 @@ function accountStore(field) {
     }
     else if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "major") {
       if ((localStorage.major).match(/(\bcomm|\bc\,?\s*m\,?\s*(and|\&)?\s*d\b)|(digital arts|\bd\s*a(\s*(and|\&)?\s*s)?\b)|humanities|(\blit\b|literature)|history|social|(politic|poly.?sci)|anthropology|liberal/ism)) {
-        console.log("Hahaha no you're not");
+        console.log("Hahaha, no you're not");
       }
       else if ((localStorage.major).match(/business|(engineering\s*(and|\&)?\s*management|\be\s*(and|\&)?\s*m\b)|(innovation\s*(and|\&)?\s*entrepreneurship|\bi\s*(and|\&)?\s*e\b)|supply chain|econ|financ|bank|account/ism)) {
         console.log("Well then you're totally useless");
@@ -10272,6 +10272,9 @@ function accountStore(field) {
       }
       else if ((localStorage.major).match(/aero/ism)) {
         console.log("Wannabe bird");
+      }
+      else if ((localStorage.major).match(/sex|drugs/ism)) {
+        console.log("You're more than welcome to...study with me");
       }
     }
     else if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "hometown") {
@@ -10290,11 +10293,14 @@ function accountStore(field) {
       else if ((localStorage.hometown).match(/new haven/ism)) {
         console.log("Eww, that's why you smell");
       }
+      else if ((localStorage.hometown).match(/los angeles|\bla\b/ism)) {
+        console.log("Lucky...");
+      }
       else if ((localStorage.hometown).match(/toronto/ism)) {
         console.log("Toronto, eh?");
       }
-      else if ((localStorage.hometown).match(/rochester/ism)) {
-        console.log("Say \"hi\" to Charlie for me!");
+      else if ((localStorage.hometown).match(/rochester|buffalo/ism)) {
+        console.log("Josh Allen is honestly overrated");
       }
       else if ((localStorage.hometown).match(/\bdover\b/ism)) {
         console.log("Ben-" + localStorage.hometown);
@@ -10314,11 +10320,14 @@ function accountStore(field) {
       else if ((localStorage.hometown).match(/bismarck|fargo/ism)) {
         console.log("So North Dakota really does exist?");
       }
+      else if ((localStorage.hometown).match(/juneau|anchorage|honolulu|(mexico|ho chi minh) city|bogota|lima|rio de janeiro|sao paulo|santiago|buenos aires|casablanca|cairo|alexandria|lagos|kinshasa|nairobi|luanda|johannesburg|cape town|dublin|london|madrid|paris|berlin|amsterdam|venice|florence|rome|vatican|petersburg|moscow|istanbul|jerusalem|baghdad|abu dhabi|tehran|karachi|beijing|tianjin|shanghai|wuhan|chongqing|guangzhou|hong kong|pyongyang|seoul|tokyo|yokohama|delhi|mumbai|dhaka|bangkok|singapore|jakarta|manila|sydney/ism)) {
+        console.log("Wow, you're a long way from home");
+      }
       else if ((localStorage.hometown).match(/atlantis/ism)) {
-        console.log("I guess the legends were true");
+        console.log("Hi, Aquaman");
       }
       else if ((localStorage.hometown).match(/star(ling)? city/ism)) {
-        console.log("Let me guess: I've failed " + localStorage.hometown + "?");
+        console.log("Let me guess, I've failed " + localStorage.hometown + "?");
       }
     }
     else if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "instrument") {

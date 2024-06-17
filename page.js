@@ -2174,6 +2174,7 @@ class User {
     this.name = "";
     this.year = "";
     this.major = "";
+    this.hometown = "";
     this.instrument = "";
     this.socialSecurityNumber = 0;
   }

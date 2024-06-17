@@ -10281,6 +10281,9 @@ function accountStore(field) {
       else if ((localStorage.instrument).match(/kazoo/ism)) {
         console.log("You're evil, I love it");
       }
+      else if ((localStorage.instrument).match(/violin/ism)) {
+        console.log("Just like me back in high school");
+      }
       else if ((localStorage.instrument).match(/clap/ism)) {
         console.log("The real hero right here");
       }

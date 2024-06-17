@@ -10274,6 +10274,26 @@ function accountStore(field) {
         console.log("Wannabe bird");
       }
     }
+    else if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "hometown") {
+      if ((localStorage.hometown).match(/potsdam/ism)) {
+        console.log("Fucking hey, I like it there!");
+      }
+      else if ((localStorage.hometown).match(/canton/ism)) {
+        console.log("Sounds like a SLUzer to me");
+      }
+      else if ((localStorage.hometown).match(/saratoga|greenwich/ism)) {
+        console.log("I'm from " + localStorage.hometown + " too, small world");
+      }
+      else if ((localStorage.hometown).match(/toronto/ism)) {
+        console.log("Toronto, eh?");
+      }
+      else if ((localStorage.hometown).match(/atlantis/ism)) {
+        console.log("I guess the legends were true");
+      }
+      else if ((localStorage.hometown).match(/star(ling)? city/ism)) {
+        console.log("Let me guess: I've failed " + localStorage.hometown + "?");
+      }
+    }
     else if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "instrument") {
       if ((localStorage.instrument).match(/bell/ism)) {
         console.log("I've got a fever, and the only prescription is more " + localStorage.instrument + "!");

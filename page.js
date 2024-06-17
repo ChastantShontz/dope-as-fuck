@@ -10276,7 +10276,7 @@ function accountStore(field) {
     }
     else if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "hometown") {
       if ((localStorage.hometown).match(/potsdam/ism)) {
-        console.log("Fucking hey, I like it there!");
+        console.log("Fucking HEY, I like it there!");
       }
       else if ((localStorage.hometown).match(/canton/ism)) {
         console.log("Sounds like a SLUzer to me");

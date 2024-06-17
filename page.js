@@ -10284,6 +10284,12 @@ function accountStore(field) {
       else if ((localStorage.hometown).match(/saratoga|greenwich/ism)) {
         console.log("I'm from " + localStorage.hometown + " too, small world");
       }
+      else if ((localStorage.hometown).match(/ithaca/ism)) {
+        console.log("Jump for joy!");
+      }
+      else if ((localStorage.hometown).match(/new haven/ism)) {
+        console.log("Eww, that's why you smell");
+      }
       else if ((localStorage.hometown).match(/toronto/ism)) {
         console.log("Toronto, eh?");
       }

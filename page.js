@@ -10299,6 +10299,18 @@ function accountStore(field) {
       else if ((localStorage.hometown).match(/\bdover\b/ism)) {
         console.log("Ben-" + localStorage.hometown);
       }
+      else if ((localStorage.hometown).match(/(atlantic|jersey) city|newark|trenton/ism)) {
+        console.log("Pump our gas!");
+      }
+      else if ((localStorage.hometown).match(/boston|cambridge|peabody|(salem|springfield).+(\bmass|\bma\b)|worcester/ism)) {
+        console.log("Mass-hole!");
+      }
+      else if ((localStorage.hometown).match(/fort lauderdale|jacksonville|miami|orlando|sarasota|tallahassee|tampa/ism)) {
+        console.log("Don't you have some women to assault with a cheeseburger or something?");
+      }
+      else if ((localStorage.hometown).match(/auburn|birmingham|montgomery/ism)) {
+        console.log("Sweeeet homeee Alabama...");
+      }
       else if ((localStorage.hometown).match(/bismarck|fargo/ism)) {
         console.log("So North Dakota really does exist?");
       }

@@ -10240,7 +10240,7 @@ function accountStore(field) {
         console.log("No, who told you, " + localStorage.name + "?");
       }
       else if ((localStorage.name).match(/co(l)*in/ism)) {
-        console.log("If " + localStorage.name + " is code for Colin Whitesell, we all miss you, bro");
+        console.log("If " + localStorage.name + " is code for Colin Whitesell, we all miss you, bro!");
       }
       else {
         console.log(localStorage.name + ", that's a nice name!");
@@ -10292,6 +10292,12 @@ function accountStore(field) {
       }
       else if ((localStorage.hometown).match(/toronto/ism)) {
         console.log("Toronto, eh?");
+      }
+      else if ((localStorage.hometown).match(/rochester/ism)) {
+        console.log("Say \"hi\" to Charlie for me!");
+      }
+      else if ((localStorage.hometown).match(/bismarck/ism)) {
+        console.log("So North Dakota really does exist?");
       }
       else if ((localStorage.hometown).match(/atlantis/ism)) {
         console.log("I guess the legends were true");

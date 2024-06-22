@@ -3865,6 +3865,7 @@ main {
   grid-auto-rows: 1fr;
   height: 100%;
   width: 100%;
+  align-items: end;
 }
 
 .infoFieldCont {

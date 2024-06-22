@@ -182,6 +182,7 @@ let bandies = [
   "Tom Robinson",
   "Tom Uhl",
   "Tommy",
+  "Tony Brancato",
   "Tony Collins",
   "Tyler",
   "Weston",
@@ -883,6 +884,10 @@ let quotes = [
   {
     line: "I'm a fucking furry!",
     author: "<b>Chestnut</b>"
+  },
+  {
+    line: "I'm a screamer.",
+    author: "<b>Tony Brancato</b>"
   },
   {
     line: "I'm a slut for mango.",
@@ -10316,7 +10321,7 @@ function accountStore(field) {
         console.log("Jump for joy!");
       }
       else if ((localStorage.hometown).match(/new haven/ism)) {
-        console.log("Eww, that's why you smell");
+        console.log("Eww, so that's why you smell");
       }
       else if ((localStorage.hometown).match(/los angeles|\bla\b/ism)) {
         console.log("Lucky...");
@@ -10357,13 +10362,19 @@ function accountStore(field) {
     }
     else if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "instrument") {
       if ((localStorage.instrument).match(/bell/ism)) {
-        console.log("I've got a fever, and the only prescription is more " + localStorage.instrument + "!");
+        console.log("I've got a fever, and the only prescription is more " + (localStorage.instrument).toLowerCase() + "!");
       }
       else if ((localStorage.instrument).match(/kazoo/ism)) {
         console.log("You're evil, I love it");
       }
       else if ((localStorage.instrument).match(/violin/ism)) {
         console.log("Just like me back in high school");
+      }
+      else if ((localStorage.instrument).match(/clarinet/ism)) {
+        console.log("You should fill out the form to get a new Reid");
+      }
+      else if ((localStorage.instrument).match(/trombone/ism)) {
+        console.log("Is that a tromboner in your pants, or are you just happy to see me?");
       }
       else if ((localStorage.instrument).match(/clap/ism)) {
         console.log("The real hero right here");
@@ -11384,6 +11395,36 @@ function mobile() {
         document.getElementById("house").style.removeProperty("filter");
         document.getElementById("house").style.removeProperty("transition");
         document.getElementById("house").style.animation = "sunset " + (900 - Math.floor((globalThis.knightEnd - globalThis.knightStart) / 1000)) + "s linear 0s 1 forwards";
+      }
+    }
+    if (document.getElementById("account").style.visibility == "visible") {
+      if (sessionStorage.field == 0) {
+        var fields = [];
+        for (var i = 0; i < document.getElementsByClassName("infoInput").length; i++) {
+          if (eval("localStorage." + document.getElementsByClassName("infoInput")[i].name) == undefined) {
+            fields.push(document.getElementsByClassName("infoInput")[i].name);
+          }
+        }
+        if (fields.length == 0) {
+          setTimeout(() => (
+            document.getElementById("nameInput").focus()
+          ), 250);
+        }
+        else if (fields.length > 0) {
+          for (var i = 0; i < document.getElementsByClassName("infoInput").length; i++) {
+            if (fields.includes(document.getElementsByClassName("infoInput")[i].name)) {
+              setTimeout(() => (
+                document.getElementsByClassName("infoInput")[i].focus()
+              ), 250);
+              break;
+            }
+          }
+        }
+      }
+      else if (sessionStorage.field > 0) {
+        setTimeout(() => (
+          document.getElementsByClassName("infoInput")[sessionStorage.field - 1].focus()
+        ), 250);
       }
     }
   }

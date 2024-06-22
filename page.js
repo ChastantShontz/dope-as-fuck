@@ -3032,6 +3032,11 @@ function gotIt4() {
   setTimeout(() => (
     document.onkeydown = startDrive
   ), 1000);
+  Object.keys(keyboard).forEach((key) => {
+    if (keyboard[key] == true) {
+      keyboard[key] = false;
+    }
+  });
   console.log("This car can fit 6 people plus a tree, don't ask how we know");
 }
 
@@ -3126,6 +3131,11 @@ function driveUp() {
 function endDrive() {
   document.getElementById("knightmobile").style.animation = "none";
   document.onkeydown = collapse;
+  Object.keys(keyboard).forEach((key) => {
+    if (keyboard[key] == true) {
+      keyboard[key] = false;
+    }
+  });
   enableButton();
   document.getElementById("ok").onclick = gotIt5;
 }
@@ -7338,6 +7348,11 @@ function closeYoutubeSong(event) {
   document.onkeydown = collapse;
   document.onkeyup = null;
   sessionStorage.removeItem("shortcut");
+  Object.keys(keyboard).forEach((key) => {
+    if (keyboard[key] == true) {
+      keyboard[key] = false;
+    }
+  });
   setTimeout(() => (
     document.getElementById("viewAccountToggle").style.pointerEvents = "auto"
   ), 500);
@@ -8350,6 +8365,11 @@ function closePoem(event) {
     document.onkeydown = collapse;
     document.onkeyup = null;
     sessionStorage.removeItem("shortcut");
+    Object.keys(keyboard).forEach((key) => {
+      if (keyboard[key] == true) {
+        keyboard[key] = false;
+      }
+    });
     setTimeout(() => (
       document.getElementById("viewAccountToggle").style.pointerEvents = "auto"
     ), 250);
@@ -9897,6 +9917,11 @@ function closePromo(event) {
       document.onkeydown = collapse;
       document.onkeyup = null;
       sessionStorage.removeItem("shortcut");
+      Object.keys(keyboard).forEach((key) => {
+        if (keyboard[key] == true) {
+          keyboard[key] = false;
+        }
+      });
       setTimeout(() => (
         document.getElementById("viewAccountToggle").style.pointerEvents = "auto"
       ), 500);
@@ -10796,6 +10821,11 @@ function closeAccount() {
   }
   document.onkeyup = null;
   sessionStorage.removeItem("shortcut");
+  Object.keys(keyboard).forEach((key) => {
+    if (keyboard[key] == true) {
+      keyboard[key] = false;
+    }
+  });
   setTimeout(() => (
     document.getElementById("viewAccountToggle").style.pointerEvents = "auto"
   ), 250);
@@ -11003,6 +11033,11 @@ function showPassword(event) {
       document.onkeydown = collapse;
     }
     document.onkeyup = null;
+    Object.keys(keyboard).forEach((key) => {
+      if (keyboard[key] == true) {
+        keyboard[key] = false;
+      }
+    });
   }
 }
 
@@ -11042,6 +11077,11 @@ function passwordStore() {
   if ((document.getElementById("passwordInput").value).match(/(?<=^)alisko1(?=$)/sm)) {
     document.onclick = null;
     document.onkeydown = null;
+    Object.keys(keyboard).forEach((key) => {
+      if (keyboard[key] == true) {
+        keyboard[key] = false;
+      }
+    });
     document.getElementById("passwordInput").placeholder = "";
     document.getElementById("passwordInput").tabIndex = "-1";
     document.getElementById("passwordInput").disabled = true;
@@ -11117,6 +11157,11 @@ function hidePassword() {
     }
   }
   document.onkeyup = null;
+  Object.keys(keyboard).forEach((key) => {
+    if (keyboard[key] == true) {
+      keyboard[key] = false;
+    }
+  });
   if (document.getElementById("secret") == undefined) {
     document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
     document.getElementById("viewAccountToggle").tabIndex = "0";
@@ -11163,6 +11208,11 @@ function showSecret() {
   }
   document.onkeydown = hideSecret;
   document.onkeyup = null;
+  Object.keys(keyboard).forEach((key) => {
+    if (keyboard[key] == true) {
+      keyboard[key] = false;
+    }
+  });
   console.group("Alison Isko, you're freaking gorgeous! You're the prettiest girl from Bard College");
   console.log("Thanks, I try");
   console.log("God, we get it! You're smart, and fun, and hella pretty. C'mon, what about you isn't perfect?");
@@ -11210,6 +11260,11 @@ function hideSecret(event) {
       document.onkeydown = collapse;
     }
     document.onkeyup = null;
+    Object.keys(keyboard).forEach((key) => {
+      if (keyboard[key] == true) {
+        keyboard[key] = false;
+      }
+    });
     setTimeout(() => (
       document.getElementById("viewAccountToggle").style.pointerEvents = "auto"
     ), 250);
@@ -11246,6 +11301,11 @@ function mobile() {
     document.onclick = unselectUrl;
     document.onkeydown = null;
     document.onkeyup = null;
+    Object.keys(keyboard).forEach((key) => {
+      if (keyboard[key] == true) {
+        keyboard[key] = false;
+      }
+    });
   }
   else if ((window.innerHeight > 600) && (window.innerWidth > 1200)) {
     if (document.getElementById("mobile").scrollHeight > document.getElementById("mobile").offsetHeight) {

@@ -29,44 +29,46 @@ using namespace std;
 namespace user {
   class User {
     public:
-      User(string n, string y, string m, string i, int ssn) : name(n),
-                                                              year(y),
-                                                              major(m),
-                                                              instrument(i),
-                                                              socialSecurityNumber(ssn) {}
+      User(string n, string y, string m, string h, string i, int ssn) : name(n),
+                                                                        year(y),
+                                                                        major(m),
+                                                                        hometown(h),
+                                                                        instrument(i),
+                                                                        socialSecurityNumber(ssn) {}
 
-      User() : User("undefined", "undefined", "undefined", "undefined", 0) {}
+      User() : User("undefined", "undefined", "undefined", "undefined", "undefined", 0) {}
 
-      User(string n) : User(n, "undefined", "undefined", "undefined", 0) {}
+      User(string n) : User(n, "undefined", "undefined", "undefined", "undefined", 0) {}
 
-      User(int ssn) : User("undefined", "undefined", "undefined", "undefined", ssn) {}
+      User(int ssn) : User("undefined", "undefined", "undefined", "undefined", "undefined", ssn) {}
 
-      User(string n, int ssn) : User(n, "undefined", "undefined", "undefined", ssn) {}
+      User(string n, int ssn) : User(n, "undefined", "undefined", "undefined", "undefined", ssn) {}
 
-      User(string n, string y, string m, string i) : User(n, y, m, i, 0) {}
+      User(string n, string y, string m, string h, string i) : User(n, y, m, h, i, 0) {}
 
-      User(string n, string y, string m, string i, string ssn) : User(n, y, m, i, stoi(ssn)) {}
+      User(string n, string y, string m, string h, string i, string ssn) : User(n, y, m, h, i, stoi(ssn)) {}
 
-      User(string a[]) : User(a[0], a[1], a[2], a[3], stoi(a[4])) {}
+      User(string a[]) : User(a[0], a[1], a[2], a[3], a[4], stoi(a[5])) {}
 
-      User(vector<string> v) : User(v[0], v[1], v[2], v[3], stoi(v[4])) {}
+      User(vector<string> v) : User(v[0], v[1], v[2], v[3], v[4], stoi(v[5])) {}
 
-      User(std::list<string> l) : User(*(l.begin()), *(++l.begin()), *(++(++l.begin())), *(++(++(++l.begin()))), stoi(*(++(++(++(++l.begin())))))) {}
+      User(std::list<string> l) : User(*(l.begin()), *(++l.begin()), *(++(++l.begin())), *(++(++(++l.begin()))), *(++(++(++(++l.begin())))), stoi(*(++(++(++(++(++l.begin()))))))) {}
 
-      User(initializer_list<string> il) : User(*(il.begin()), *(il.begin() + 1), *(il.begin() + 2), *(il.begin() + 3), stoi(*(il.begin() + 4))) {}
+      User(initializer_list<string> il) : User(*(il.begin()), *(il.begin() + 1), *(il.begin() + 2), *(il.begin() + 3), *(il.begin() + 4), stoi(*(il.begin() + 5))) {}
 
-      User(map<string, string> m) : User(m["name"], m["year"], m["major"], m["instrument"], stoi(m["socialSecurityNumber"])) {}
+      User(map<string, string> m) : User(m["name"], m["year"], m["major"], m["hometown"], m["instrument"], stoi(m["socialSecurityNumber"])) {}
 
-      User(unordered_map<string, string> um) : User(um["name"], um["year"], um["major"], um["instrument"], stoi(um["socialSecurityNumber"])) {}
+      User(unordered_map<string, string> um) : User(um["name"], um["year"], um["major"], um["hometown"], um["instrument"], stoi(um["socialSecurityNumber"])) {}
 
-      User(unordered_set<string> us) : User(*(us.begin()), *(++us.begin()), *(++(++us.begin())), *(++(++(++us.begin()))), stoi(*(++(++(++(++us.begin())))))) {}
+      User(unordered_set<string> us) : User(*(us.begin()), *(++us.begin()), *(++(++us.begin())), *(++(++(++us.begin()))), *(++(++(++(++us.begin())))), stoi(*(++(++(++(++(++us.begin()))))))) {}
 
-      User(unordered_multiset<string> um) : User(*(um.begin()), *(++um.begin()), *(++(++um.begin())), *(++(++(++um.begin()))), stoi(*(++(++(++(++um.begin())))))) {}
+      User(unordered_multiset<string> um) : User(*(um.begin()), *(++um.begin()), *(++(++um.begin())), *(++(++(++um.begin()))), *(++(++(++(++um.begin())))), stoi(*(++(++(++(++(++um.begin()))))))) {}
 
       ~User() {
         name = "";
         year = "";
         major = "";
+        hometown = "";
         instrument = "";
         socialSecurityNumber = 0;
       }
@@ -83,6 +85,10 @@ namespace user {
         major = m;
       }
 
+      void setHometown(string h = "undefined") {
+        hometown = h;
+      }
+
       void setInstrument(string i = "undefined") {
         instrument = i;
       }
@@ -91,10 +97,11 @@ namespace user {
         socialSecurityNumber = ssn;
       }
 
-      void setAll(string n = "undefined", string y = "undefined", string m = "undefined", string i = "undefined", int ssn = 0) {
+      void setAll(string n = "undefined", string y = "undefined", string m = "undefined", string h = "undefined", string i = "undefined", int ssn = 0) {
         setName(n);
         setYear(y);
         setMajor(m);
+        setHometown(h);
         setInstrument(i);
         setSocialSecurityNumber(ssn);
       }
@@ -111,6 +118,10 @@ namespace user {
         return major;
       }
 
+      string getHometown() const {
+        return hometown;
+      }
+
       string getInstrument() const {
         return instrument;
       }
@@ -121,7 +132,7 @@ namespace user {
 
       template <typename T = char>
       string getAll(const T& joiner = ' ') const {
-        string all = getName() + joiner + getYear() + joiner + getMajor() + joiner + getInstrument() + joiner + to_string(getSocialSecurityNumber());
+        string all = getName() + joiner + getYear() + joiner + getMajor() + joiner + getHometown() + joiner + getInstrument() + joiner + to_string(getSocialSecurityNumber());
         return all;
       }
 
@@ -150,6 +161,17 @@ namespace user {
       bool matchMajor(const string& m) const {
         bool match;
         if (m == getMajor()) {
+          match = true;
+        }
+        else {
+          match = false;
+        }
+        return match;
+      }
+
+      bool matchHometown(const string& h) const {
+        bool match;
+        if (h == getHometown()) {
           match = true;
         }
         else {
@@ -198,6 +220,12 @@ namespace user {
         }
       }
 
+      void replaceHometown(const string& r, const string& h) {
+        if (matchHometown(r)) {
+          setHometown(h);
+        }
+      }
+
       void replaceInstrument(const string& r, const string& i) {
         if (matchInstrument(r)) {
           setInstrument(i);
@@ -222,6 +250,10 @@ namespace user {
         setMajor("undefined");
       }
 
+      void clearHometown() {
+        setHometown("undefined");
+      }
+
       void clearInstrument() {
         setInstrument("undefined");
       }
@@ -234,6 +266,7 @@ namespace user {
         clearName();
         clearYear();
         clearMajor();
+        clearHometown();
         clearInstrument();
         clearSocialSecurityNumber();
       }
@@ -245,7 +278,7 @@ namespace user {
 
       bool toBool() const {
         bool b;
-        if ((getName() == "undefined") && (getYear() == "undefined") && (getMajor() == "undefined") && (getInstrument() == "undefined") && (getSocialSecurityNumber() == 0)) {
+        if ((getName() == "undefined") && (getYear() == "undefined") && (getMajor() == "undefined") && (getHometown() == "undefined") && (getInstrument() == "undefined") && (getSocialSecurityNumber() == 0)) {
           b = false;
         }
         else {
@@ -259,8 +292,9 @@ namespace user {
         a[0] = getName();
         a[1] = getYear();
         a[2] = getMajor();
-        a[3] = getInstrument();
-        a[4] = to_string(getSocialSecurityNumber());
+        a[3] = getHometown();
+        a[4] = getInstrument();
+        a[5] = to_string(getSocialSecurityNumber());
         return a;
       }
 
@@ -269,6 +303,7 @@ namespace user {
         v.push_back(getName());
         v.push_back(getYear());
         v.push_back(getMajor());
+        v.push_back(getHometown());
         v.push_back(getInstrument());
         v.push_back(to_string(getSocialSecurityNumber()));
         return v;
@@ -279,6 +314,7 @@ namespace user {
         l.push_back(getName());
         l.push_back(getYear());
         l.push_back(getMajor());
+        l.push_back(getHometown());
         l.push_back(getInstrument());
         l.push_back(to_string(getSocialSecurityNumber()));
         return l;
@@ -289,6 +325,7 @@ namespace user {
           getName(),
           getYear(),
           getMajor(),
+          getHometown(),
           getInstrument(),
           to_string(getSocialSecurityNumber())
         };
@@ -300,6 +337,7 @@ namespace user {
         m["name"] = getName();
         m["year"] = getYear();
         m["major"] = getMajor();
+        m["hometown"] = getHometown();
         m["instrument"] = getInstrument();
         m["socialSecurityNumber"] = to_string(getSocialSecurityNumber());
         return m;
@@ -310,6 +348,7 @@ namespace user {
         um["name"] = getName();
         um["year"] = getYear();
         um["major"] = getMajor();
+        um["hometown"] = getHometown();
         um["instrument"] = getInstrument();
         um["socialSecurityNumber"] = to_string(getSocialSecurityNumber());
         return um;
@@ -320,6 +359,7 @@ namespace user {
         s.insert(getName());
         s.insert(getYear());
         s.insert(getMajor());
+        s.insert(getHometown());
         s.insert(getInstrument());
         s.insert(to_string(getSocialSecurityNumber()));
         return s;
@@ -330,6 +370,7 @@ namespace user {
         as.insert(getName());
         as.insert(getYear());
         as.insert(getMajor());
+        as.insert(getHometown());
         as.insert(getInstrument());
         as.insert(to_string(getSocialSecurityNumber()));
         return as;
@@ -340,6 +381,7 @@ namespace user {
         us.insert(getName());
         us.insert(getYear());
         us.insert(getMajor());
+        us.insert(getHometown());
         us.insert(getInstrument());
         us.insert(to_string(getSocialSecurityNumber()));
         return us;
@@ -350,6 +392,7 @@ namespace user {
         m.insert(getName());
         m.insert(getYear());
         m.insert(getMajor());
+        m.insert(getHometown());
         m.insert(getInstrument());
         m.insert(to_string(getSocialSecurityNumber()));
         return m;
@@ -360,6 +403,7 @@ namespace user {
         am.insert(getName());
         am.insert(getYear());
         am.insert(getMajor());
+        am.insert(getHometown());
         am.insert(getInstrument());
         am.insert(to_string(getSocialSecurityNumber()));
         return am;
@@ -370,13 +414,14 @@ namespace user {
         um.insert(getName());
         um.insert(getYear());
         um.insert(getMajor());
+        um.insert(getHometown());
         um.insert(getInstrument());
         um.insert(to_string(getSocialSecurityNumber()));
         return um;
       }
 
       pair<User, User> toPair() const {
-        User user1(getName(), getYear(), getMajor(), getInstrument(), getSocialSecurityNumber());
+        User user1(getName(), getYear(), getMajor(), getHometown(), getInstrument(), getSocialSecurityNumber());
         User user2 = user1;
         pair<User, User> p;
         p.first = user1;
@@ -406,9 +451,9 @@ namespace user {
               cin.ignore(numeric_limits<streamsize>::max(), '\n');
             }
             setCommand = tolower(setCommand);
-            if ((setCommand == 'n') || (setCommand == 'y') || (setCommand == 'm') || (setCommand == 'i') || (setCommand == 's') || (setCommand == 'a') || (setCommand == 'c')) {
+            if ((setCommand == 'n') || (setCommand == 'y') || (setCommand == 'm') || (setCommand == 'h') || (setCommand == 'i') || (setCommand == 's') || (setCommand == 'a') || (setCommand == 'c')) {
               setSuccess = true;
-              if ((setCommand == 'n') || (setCommand == 'y') || (setCommand == 'm') || (setCommand == 'i') || (setCommand == 's') || (setCommand == 'a')) {
+              if ((setCommand == 'n') || (setCommand == 'y') || (setCommand == 'm') || (setCommand == 'h') || (setCommand == 'i') || (setCommand == 's') || (setCommand == 'a')) {
                 if ((setCommand == 'n') || setCommand == 'a') {
                   bool testName = false;
                   cout << endl << "  Name: ";
@@ -454,6 +499,22 @@ namespace user {
                     }
                     else {
                       testMajor = true;
+                    }
+                  }
+                }
+                if ((setCommand == 'h') || setCommand == 'a') {
+                  bool testHometown = false;
+                  cout << endl << "  Hometown: ";
+                  while (testHometown == false) {
+                    getline(cin, hometown);
+                    if (getHometown() == "undefined") {
+                      cout << "  Null value, try again: ";
+                    }
+                    else if ((getHometown() == " ") || (getHometown() == "")) {
+                      cout << "  Empty string, try again: ";
+                    }
+                    else {
+                      testHometown = true;
                     }
                   }
                 }
@@ -539,10 +600,10 @@ namespace user {
               cin.ignore(numeric_limits<streamsize>::max(), '\n');
             }
             printCommand = tolower(printCommand);
-            if ((printCommand == 'n') || (printCommand == 'y') || (printCommand == 'm') || (printCommand == 'i') || (printCommand == 's') || (printCommand == 'a') || (printCommand == 'c')) {
+            if ((printCommand == 'n') || (printCommand == 'y') || (printCommand == 'm') || (printCommand == 'h') || (printCommand == 'i') || (printCommand == 's') || (printCommand == 'a') || (printCommand == 'c')) {
               printSuccess = true;
               displayPrint(count, printSuccess);
-              if ((printCommand == 'n') || (printCommand == 'y') || (printCommand == 'm') || (printCommand == 'i') || (printCommand == 's') || (printCommand == 'a')) {
+              if ((printCommand == 'n') || (printCommand == 'y') || (printCommand == 'm') || (printCommand == 'h') || (printCommand == 'i') || (printCommand == 's') || (printCommand == 'a')) {
                 if ((printCommand == 'n') || printCommand == 'a') {
                   cout << "  Name: " << getName() << endl;
                 }
@@ -551,6 +612,9 @@ namespace user {
                 }
                 if ((printCommand == 'm') || printCommand == 'a') {
                   cout << "  Major: " << getMajor() << endl;
+                }
+                if ((printCommand == 'h') || printCommand == 'a') {
+                  cout << "  Hometown: " << getHometown() << endl;
                 }
                 if ((printCommand == 'i') || printCommand == 'a') {
                   cout << "  Instrument: " << getInstrument() << endl;
@@ -599,9 +663,9 @@ namespace user {
               cin.ignore(numeric_limits<streamsize>::max(), '\n');
             }
             clearCommand = tolower(clearCommand);
-            if ((clearCommand == 'n') || (clearCommand == 'y') || (clearCommand == 'm') || (clearCommand == 'i') || (clearCommand == 's') || (clearCommand == 'a') || (clearCommand == 'c')) {
+            if ((clearCommand == 'n') || (clearCommand == 'y') || (clearCommand == 'm') || (clearCommand == 'h') || (clearCommand == 'i') || (clearCommand == 's') || (clearCommand == 'a') || (clearCommand == 'c')) {
               clearSuccess = true;
-              if ((clearCommand == 'n') || (clearCommand == 'y') || (clearCommand == 'm') || (clearCommand == 'i') || (clearCommand == 's') || (clearCommand == 'a')) {
+              if ((clearCommand == 'n') || (clearCommand == 'y') || (clearCommand == 'm') || (clearCommand == 'h') || (clearCommand == 'i') || (clearCommand == 's') || (clearCommand == 'a')) {
                 if ((clearCommand == 'n') || clearCommand == 'a') {
                   clearName();
                 }
@@ -610,6 +674,9 @@ namespace user {
                 }
                 if ((clearCommand == 'm') || clearCommand == 'a') {
                   clearMajor();
+                }
+                if ((clearCommand == 'h') || clearCommand == 'a') {
+                  clearHometown();
                 }
                 if ((clearCommand == 'i') || clearCommand == 'a') {
                   clearInstrument();
@@ -636,7 +703,7 @@ namespace user {
       }
 
       User copy() const {
-        User copy(getName(), getYear(), getMajor(), getInstrument(), getSocialSecurityNumber());
+        User copy(getName(), getYear(), getMajor(), getHometown(), getInstrument(), getSocialSecurityNumber());
         return copy;
       }
 
@@ -653,7 +720,7 @@ namespace user {
 
       bool filled() const {
         bool filled;
-        if ((getName() == "undefined") || (getYear() == "undefined") || (getMajor() == "undefined") || (getInstrument() == "undefined") || (getSocialSecurityNumber() == 0)) {
+        if ((getName() == "undefined") || (getYear() == "undefined") || (getMajor() == "undefined") || (getHometown() == "undefined") || (getInstrument() == "undefined") || (getSocialSecurityNumber() == 0)) {
           filled = false;
         }
         else {
@@ -671,6 +738,9 @@ namespace user {
         }
         else if (key == "major") {
           return getMajor();
+        }
+        else if (key == "hometown") {
+          return getHometown();
         }
         else if (key == "instrument") {
           return getInstrument();
@@ -690,6 +760,9 @@ namespace user {
         else if (key == "major") {
           return getMajor();
         }
+        else if (key == "hometown") {
+          return getHometown();
+        }
         else if (key == "instrument") {
           return getInstrument();
         }
@@ -699,7 +772,7 @@ namespace user {
       }
 
       void operator = (const User& source) {
-        setAll(source.getName(), source.getYear(), source.getMajor(), source.getInstrument(), source.getSocialSecurityNumber());
+        setAll(source.getName(), source.getYear(), source.getMajor(), source.getHometown(), source.getInstrument(), source.getSocialSecurityNumber());
       }
 
       void operator += (const User& addend) {
@@ -715,7 +788,7 @@ namespace user {
       }
 
       friend void swap(User& user1, User& user2) {
-        User temp(user1.getName(), user1.getYear(), user1.getMajor(), user1.getInstrument(), user1.getSocialSecurityNumber());
+        User temp(user1.getName(), user1.getYear(), user1.getMajor(), user1.getHometown(), user1.getInstrument(), user1.getSocialSecurityNumber());
         user1 = user2;
         user2 = temp;
       }
@@ -789,6 +862,18 @@ namespace user {
             }
             else if (random == 2) {
               average.setMajor(user2.getMajor());
+            }
+          }
+          if ((user1.getHometown() == user2.getHometown())) {
+            average.setHometown(user1.getHometown());
+          }
+          else {
+            int random = ((rand() % ((2 - 1) + 1)) + 1);
+            if (random == 1) {
+              average.setHometown(user1.getHometown());
+            }
+            else if (random == 2) {
+              average.setHometown(user2.getHometown());
             }
           }
           if ((user1.getInstrument() == user2.getInstrument())) {
@@ -866,6 +951,19 @@ namespace user {
             testMajor = true;
           }
         }
+        bool testHometown = false;
+        while (testHometown == false) {
+          getline(in, user.hometown);
+          if (user.getHometown() == "undefined") {
+            cout << "  Null value, try again: ";
+          }
+          else if ((user.getHometown() == " ") || (user.getHometown() == "")) {
+            cout << "  Empty string, try again: ";
+          }
+          else {
+            testHometown = true;
+          }
+        }
         bool testInstrument = false;
         while (testInstrument == false) {
           getline(in, user.instrument);
@@ -907,7 +1005,7 @@ namespace user {
 
       friend bool operator == (const User& user1, const User& user2) {
         bool equals;
-        if ((user1.getName() == user2.getName()) && (user1.getYear() == user2.getYear()) && (user1.getMajor() == user2.getMajor()) && (user1.getInstrument() == user2.getInstrument()) && (user1.getSocialSecurityNumber() == user2.getSocialSecurityNumber())) {
+        if ((user1.getName() == user2.getName()) && (user1.getYear() == user2.getYear()) && (user1.getMajor() == user2.getMajor()) && (user1.getHometown() == user2.getHometown()) && (user1.getInstrument() == user2.getInstrument()) && (user1.getSocialSecurityNumber() == user2.getSocialSecurityNumber())) {
           equals = true;
         }
         else {
@@ -918,7 +1016,7 @@ namespace user {
 
       friend bool operator != (const User& user1, const User& user2) {
         bool notEquals;
-        if ((user1.getName() == user2.getName()) && (user1.getYear() == user2.getYear()) && (user1.getMajor() == user2.getMajor()) && (user1.getInstrument() == user2.getInstrument()) && (user1.getSocialSecurityNumber() == user2.getSocialSecurityNumber())) {
+        if ((user1.getName() == user2.getName()) && (user1.getYear() == user2.getYear()) && (user1.getMajor() == user2.getMajor()) && (user1.getHometown() == user2.getHometown()) && (user1.getInstrument() == user2.getInstrument()) && (user1.getSocialSecurityNumber() == user2.getSocialSecurityNumber())) {
           notEquals = false;
         }
         else {
@@ -941,6 +1039,9 @@ namespace user {
           if (user1.getMajor() != "undefined") {
             fields1++;
           }
+          if (user1.getHometown() != "undefined") {
+            fields1++;
+          }
           if (user1.getInstrument() != "undefined") {
             fields1++;
           }
@@ -951,6 +1052,9 @@ namespace user {
             fields2++;
           }
           if (user2.getMajor() != "undefined") {
+            fields2++;
+          }
+          if (user2.getHometown() != "undefined") {
             fields2++;
           }
           if (user2.getInstrument() != "undefined") {
@@ -986,6 +1090,9 @@ namespace user {
           if (user1.getMajor() != "undefined") {
             fields1++;
           }
+          if (user1.getHometown() != "undefined") {
+            fields1++;
+          }
           if (user1.getInstrument() != "undefined") {
             fields1++;
           }
@@ -996,6 +1103,9 @@ namespace user {
             fields2++;
           }
           if (user2.getMajor() != "undefined") {
+            fields2++;
+          }
+          if (user2.getHometown() != "undefined") {
             fields2++;
           }
           if (user2.getInstrument() != "undefined") {
@@ -1031,6 +1141,9 @@ namespace user {
           if (user1.getMajor() != "undefined") {
             fields1++;
           }
+          if (user1.getHometown() != "undefined") {
+            fields1++;
+          }
           if (user1.getInstrument() != "undefined") {
             fields1++;
           }
@@ -1041,6 +1154,9 @@ namespace user {
             fields2++;
           }
           if (user2.getMajor() != "undefined") {
+            fields2++;
+          }
+          if (user2.getHometown() != "undefined") {
             fields2++;
           }
           if (user2.getInstrument() != "undefined") {
@@ -1076,6 +1192,9 @@ namespace user {
           if (user1.getMajor() != "undefined") {
             fields1++;
           }
+          if (user1.getHometown() != "undefined") {
+            fields1++;
+          }
           if (user1.getInstrument() != "undefined") {
             fields1++;
           }
@@ -1086,6 +1205,9 @@ namespace user {
             fields2++;
           }
           if (user2.getMajor() != "undefined") {
+            fields2++;
+          }
+          if (user2.getHometown() != "undefined") {
             fields2++;
           }
           if (user2.getInstrument() != "undefined") {
@@ -1118,6 +1240,9 @@ namespace user {
         if ((sum.getMajor() == "undefined") && (user2.getMajor() != "undefined")) {
           sum.setMajor(user2.getMajor());
         }
+        if ((sum.getHometown() == "undefined") && (user2.getHometown() != "undefined")) {
+          sum.setHometown(user2.getHometown());
+        }
         if ((sum.getInstrument() == "undefined") && (user2.getInstrument() != "undefined")) {
           sum.setInstrument(user2.getInstrument());
         }
@@ -1138,6 +1263,9 @@ namespace user {
         if ((difference.getMajor() != "undefined") && (user2.getMajor() == "undefined")) {
           difference.clearMajor();
         }
+        if ((difference.getHometown() != "undefined") && (user2.getHometown() == "undefined")) {
+          difference.clearHometown();
+        }
         if ((difference.getInstrument() != "undefined") && (user2.getInstrument() == "undefined")) {
           difference.clearInstrument();
         }
@@ -1150,6 +1278,7 @@ namespace user {
       string name;
       string year;
       string major;
+      string hometown;
       string instrument;
       int socialSecurityNumber;
   };

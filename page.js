@@ -10350,7 +10350,7 @@ function accountStore(field) {
       else if ((localStorage.hometown).match(/bismarck|fargo/ism)) {
         console.log("So North Dakota really does exist?");
       }
-      else if ((localStorage.hometown).match(/juneau|anchorage|honolulu|(mexico|ho chi minh) city|bogota|lima|rio de janeiro|sao paulo|santiago|buenos aires|casablanca|cairo|alexandria|lagos|kinshasa|nairobi|luanda|johannesburg|cape town|dublin|london|madrid|paris|berlin|munich|amsterdam|venice|florence|rome|vatican|petersburg|moscow|istanbul|jerusalem|baghdad|abu dhabi|tehran|karachi|beijing|tianjin|shanghai|wuhan|chongqing|guangzhou|hong kong|pyongyang|seoul|tokyo|yokohama|delhi|mumbai|dhaka|bangkok|singapore|jakarta|manila|sydney/ism)) {
+      else if ((localStorage.hometown).match(/juneau|anchorage|honolulu|(mexico|ho chi minh) city|bogota|lima|rio de janeiro|sao paulo|santiago|buenos aires|casablanca|cairo|alexandria|lagos|kinshasa|nairobi|luanda|johannesburg|cape town|dublin|london|madrid|paris|hamburg|berlin|munich|amsterdam|venice|florence|rome|naples|vatican|petersburg|moscow|istanbul|jerusalem|baghdad|abu dhabi|tehran|karachi|beijing|tianjin|shanghai|wuhan|chongqing|guangzhou|hong kong|pyongyang|seoul|tokyo|yokohama|delhi|mumbai|dhaka|bangkok|singapore|jakarta|manila|sydney/ism)) {
         console.log("Wow, you're a long way from home");
       }
       else if ((localStorage.hometown).match(/atlantis/ism)) {

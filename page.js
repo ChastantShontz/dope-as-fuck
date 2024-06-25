@@ -10070,10 +10070,10 @@ function openAccount(event) {
 function accountControls(event) {
   if (keyboard.enter == true) {
     if (keyboard.shift == true) {
-      if (keyboard.control == true) {
+      if ((((navigator.userAgent == undefined) || ((navigator.userAgent).match(/Windows/sm))) && (keyboard.control == true)) || (((navigator.userAgent).match(/Macintosh/sm)) && (keyboard.meta == true))) {
         accountRemove(0, event);
       }
-      else if (keyboard.control == false) {
+      else if ((((navigator.userAgent == undefined) || ((navigator.userAgent).match(/Windows/sm))) && (keyboard.control == false)) || (((navigator.userAgent).match(/Macintosh/sm)) && (keyboard.meta == false))) {
         if (sessionStorage.scope == "input") {
           accountRemove(sessionStorage.field, event);
         }

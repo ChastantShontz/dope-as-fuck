@@ -4001,7 +4001,7 @@
         }
 
         message() {
-          const message = "<!-- \"" + this.title + "\" successfully compiled; " + this.time + "s; " + this.day + "; " + this.browser + ((this.network == undefined) ? (""): ("; " + this.network)) + ((this.position == undefined) ? ("") : ("; " + this.position)) + "; " + this.language + "; " + this.copyright + "; " + this.size + "; initialized " + this.objects + " objects {folders: [\"" + ((this.directory).folders).join("\", \"") + "\"], files: [\"" + ((this.directory).files).join("\", \"") + "\"]}; SSH key: \"" + this.key + "\" -->";
+          const message = "<!-- \"" + this.title + "\" successfully compiled; " + this.time + "s; " + this.day + "; " + ((this.browser == undefined) ? ("") : ("; " + this.browser)) + ((this.network == undefined) ? ("") : ("; " + this.network)) + ((this.position == undefined) ? ("") : ("; " + this.position)) + "; " + this.language + "; " + this.copyright + "; " + this.size + "; initialized " + this.objects + " objects {folders: [\"" + ((this.directory).folders).join("\", \"") + "\"], files: [\"" + ((this.directory).files).join("\", \"") + "\"]}; SSH key: \"" + this.key + "\" -->";
           return message;
         }
       };

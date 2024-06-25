@@ -10436,7 +10436,6 @@ function accountRemove(field, event) {
       else {
         document.getElementsByClassName("infoInput")[i].placeholder = ((document.getElementsByClassName("infoInput")[i].name).charAt(0)).toUpperCase() + (document.getElementsByClassName("infoInput")[i].name).substring(1) + "...";
       }
-      document.getElementsByClassName("infoInput")[i].blur();
     }
     for (var i = 0; i < document.getElementsByClassName("enterInfoButton").length; i++) {
       document.getElementsByClassName("enterInfoButton")[i].style.background = "var(--lightGray)";
@@ -10467,6 +10466,11 @@ function accountRemove(field, event) {
   accountUpdate(sessionStorage.field, "remove");
   if ((sessionStorage.field == 0) || (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "name")) {
     console.log("I guess I'll just have to call you [player] now!");
+  }
+  if (sessionStorage.field == 0) {
+    for (var i = 0; i < document.getElementsByClassName("infoInput").length; i++) {
+      document.getElementsByClassName("infoInput")[i].blur();
+    }
   }
 }
 

@@ -3997,11 +3997,11 @@
           this.size = size("672MB");
           this.objects = objects(491);
           this.directory = directory(["fonts", "img", "video", "audio", ".vscode", ".git"], ["index.html", "main.css", "normalize.css", "page.js", "data.json", "README.md", "command.sh", "songs.pdf", "header.cpp", "code.m", ".gitattributes"]);
-          this.encryption = encryption();
+          this.key = key();
         }
 
         message() {
-          const message = "<!-- \"" + this.title + "\" successfully compiled; " + this.time + "s; " + this.day + "; " + this.browser + ((this.network == undefined) ? (""): ("; " + this.network)) + ((this.position == undefined) ? ("") : ("; " + this.position)) + "; " + this.language + "; " + this.copyright + "; " + this.size + "; initialized " + this.objects + " objects {folders: [\"" + ((this.directory).folders).join("\", \"") + "\"], files: [\"" + ((this.directory).files).join("\", \"") + "\"]}; SSH key: \"" + this.encryption + "\" -->";
+          const message = "<!-- \"" + this.title + "\" successfully compiled; " + this.time + "s; " + this.day + "; " + this.browser + ((this.network == undefined) ? (""): ("; " + this.network)) + ((this.position == undefined) ? ("") : ("; " + this.position)) + "; " + this.language + "; " + this.copyright + "; " + this.size + "; initialized " + this.objects + " objects {folders: [\"" + ((this.directory).folders).join("\", \"") + "\"], files: [\"" + ((this.directory).files).join("\", \"") + "\"]}; SSH key: \"" + this.key + "\" -->";
           return message;
         }
       };
@@ -4079,16 +4079,16 @@
         return directory;
       }
 
-      function encryption() {
+      function key() {
         var token = "onauvjdeXneosoNsivtaDeseTvaujsivtUzipfzTfzumMputzmmEvfsejdajdTemmiColtsuloTzipfzTivpemeHeseTaeiwiFitomIzjvseddNpezSultOputomEmejvpituSeppeiSpuzuFiowemGissoahEbvisCesfpeyimEpoqejDennI";
-        var encryption = "";
+        var key = "";
         var limit = (Math.ceil(Math.random() * 26) + 24);
         for (var i = 0; i < limit; i++) {
           var char = Math.floor(Math.random() * token.length);
-          encryption = encryption + token.charAt(char);
+          key = key + token.charAt(char);
           token.replace(token.charAt(char), "");
         }
-        return encryption;
+        return key;
       }
 
       document.write(conductorSimulatorConductTheClarksonUniversityPepBand.message());

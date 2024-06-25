@@ -3997,11 +3997,11 @@
           this.size = size("672MB");
           this.objects = objects(491);
           this.directory = directory(["fonts", "img", "video", "audio", ".vscode", ".git"], ["index.html", "main.css", "normalize.css", "page.js", "data.json", "README.md", "command.sh", "songs.pdf", "header.cpp", "code.m", ".gitattributes"]);
-          this.token = token();
+          this.encryption = encryption();
         }
 
         message() {
-          const message = "<!-- \"" + this.title + "\" successfully compiled; " + this.time + "s; " + this.day + "; " + this.browser + ((this.network == undefined) ? (""): ("; " + this.network)) + ((this.position == undefined) ? ("") : ("; " + this.position)) + "; " + this.language + "; " + this.copyright + "; " + this.size + "; initialized " + this.objects + " objects {folders: [\"" + ((this.directory).folders).join("\", \"") + "\"], files: [\"" + ((this.directory).files).join("\", \"") + "\"]}; SSH token: \"" + this.token + "\" -->";
+          const message = "<!-- \"" + this.title + "\" successfully compiled; " + this.time + "s; " + this.day + "; " + this.browser + ((this.network == undefined) ? (""): ("; " + this.network)) + ((this.position == undefined) ? ("") : ("; " + this.position)) + "; " + this.language + "; " + this.copyright + "; " + this.size + "; initialized " + this.objects + " objects {folders: [\"" + ((this.directory).folders).join("\", \"") + "\"], files: [\"" + ((this.directory).files).join("\", \"") + "\"]}; SSH key: \"" + this.encryption + "\" -->";
           return message;
         }
       };
@@ -4079,16 +4079,16 @@
         return directory;
       }
 
-      function token() {
-        var ssh = "onauvjdeXneosoNsivtaDeseTvaujsivtUzipfzTfzumMputzmmEvfsejdajdTemmiColtsuloTzipfzTivpemeHeseTaeiwiFitomIzjvseddNpezSultOputomEmejvpituSeppeiSpuzuFiowemGissoahEbvisCesfpeyimEpoqejDennI";
-        var token = "";
+      function encryption() {
+        var token = "onauvjdeXneosoNsivtaDeseTvaujsivtUzipfzTfzumMputzmmEvfsejdajdTemmiColtsuloTzipfzTivpemeHeseTaeiwiFitomIzjvseddNpezSultOputomEmejvpituSeppeiSpuzuFiowemGissoahEbvisCesfpeyimEpoqejDennI";
+        var encryption = "";
         var limit = (Math.ceil(Math.random() * 26) + 24);
         for (var i = 0; i < limit; i++) {
-          var char = Math.floor(Math.random() * ssh.length);
-          token = token + ssh.charAt(char);
-          ssh.replace(ssh.charAt(char), "");
+          var char = Math.floor(Math.random() * token.length);
+          encryption = encryption + token.charAt(char);
+          token.replace(token.charAt(char), "");
         }
-        return token;
+        return encryption;
       }
 
       document.write(conductorSimulatorConductTheClarksonUniversityPepBand.message());

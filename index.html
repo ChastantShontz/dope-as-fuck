@@ -4053,7 +4053,7 @@
       }
 
       function language() {
-        var language = (navigator.language).toLowerCase() + " " + (document.charset).toLowerCase();
+        var language = (document.documentElement.lang).toLowerCase() + " " + (document.charset).toLowerCase();
         return language;
       }
 

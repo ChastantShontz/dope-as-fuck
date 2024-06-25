@@ -4058,7 +4058,7 @@
       }
 
       function copyright() {
-        var copyright = (((document.getElementById("copyright").innerHTML).charAt((document.getElementById("copyright").innerHTML).length == ".")) ? ((document.getElementById("copyright").innerHTML).substring(0, ((document.getElementById("copyright").innerHTML).length - 1))) : (document.getElementById("copyright").innerHTML));
+        var copyright = (((document.getElementById("copyright").innerHTML).charAt((document.getElementById("copyright").innerHTML).length - 1) == ".") ? ((document.getElementById("copyright").innerHTML).substring(0, ((document.getElementById("copyright").innerHTML).length - 1))) : (document.getElementById("copyright").innerHTML));
         return copyright;
       }
 

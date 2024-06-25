@@ -4037,19 +4037,21 @@
           navigator.geolocation.getCurrentPosition((response) => {
             if (response == undefined) {
               var position = undefined;
+              conductorSimulatorConductTheClarksonUniversityPepBand.position = position;
             }
             else {
               var position = {};
               position.latitude = (Math.round(response.coords.latitude * 10000) / 10000);
               position.longitude = (Math.round(response.coords.longitude * 10000) / 10000);
+              conductorSimulatorConductTheClarksonUniversityPepBand.position = position;
               document.getElementsByTagName("script")[3].nextSibling.textContent = (document.getElementsByTagName("script")[3].nextSibling.textContent).substring(0, ((document.getElementsByTagName("script")[3].nextSibling.textContent).search((conductorSimulatorConductTheClarksonUniversityPepBand.language).toLowerCase()) - 2)) + "; LAT: " + (position).latitude + "deg, LONG: " + (position).longitude + "deg" + (document.getElementsByTagName("script")[3].nextSibling.textContent).substring((document.getElementsByTagName("script")[3].nextSibling.textContent).search((conductorSimulatorConductTheClarksonUniversityPepBand.language).toLowerCase()) - 2);
             }
           });
         }
         else {
           var position = undefined;
+          conductorSimulatorConductTheClarksonUniversityPepBand.position = position;
         }
-        return position;
       }
 
       function language() {
@@ -4081,10 +4083,8 @@
 
       function directory(folders, files) {
         var directory = {};
-        folders = folders.sort();
-        directory.folders = folders;
-        files = files.sort();
-        directory.files = files;
+        directory.folders = folders.sort();
+        directory.files = files.sort();
         return directory;
       }
 

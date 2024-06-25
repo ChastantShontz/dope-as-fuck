@@ -4044,7 +4044,7 @@
               position.latitude = (Math.round(response.coords.latitude * 10000) / 10000);
               position.longitude = (Math.round(response.coords.longitude * 10000) / 10000);
               conductorSimulatorConductTheClarksonUniversityPepBand.position = position;
-              document.getElementsByTagName("script")[3].nextSibling.textContent = (document.getElementsByTagName("script")[3].nextSibling.textContent).substring(0, ((document.getElementsByTagName("script")[3].nextSibling.textContent).search((conductorSimulatorConductTheClarksonUniversityPepBand.language).toLowerCase()) - 2)) + "; LAT: " + (position).latitude + "deg, LONG: " + (position).longitude + "deg" + (document.getElementsByTagName("script")[3].nextSibling.textContent).substring((document.getElementsByTagName("script")[3].nextSibling.textContent).search((conductorSimulatorConductTheClarksonUniversityPepBand.language).toLowerCase()) - 2);
+              document.getElementsByTagName("script")[3].nextSibling.textContent = (document.getElementsByTagName("script")[3].nextSibling.textContent).substring(0, ((document.getElementsByTagName("script")[3].nextSibling.textContent).search(conductorSimulatorConductTheClarksonUniversityPepBand.language) - 2)) + "; LAT: " + (conductorSimulatorConductTheClarksonUniversityPepBand.position).latitude + "deg, LONG: " + (conductorSimulatorConductTheClarksonUniversityPepBand.position).longitude + "deg" + (document.getElementsByTagName("script")[3].nextSibling.textContent).substring((document.getElementsByTagName("script")[3].nextSibling.textContent).search(conductorSimulatorConductTheClarksonUniversityPepBand.language) - 2);
             }
           });
         }

@@ -4003,7 +4003,7 @@
         }
 
         message() {
-          const message = "<!-- \"" + this.title + "\" successfully served at \"" + this.url + "\"; " + this.time + "s; " + this.day + "; " + ((this.browser == undefined) ? ("") : ("; " + this.browser)) + ((this.network == undefined) ? ("") : ("; " + this.network)) + ((this.position == undefined) ? ("") : ("; " + this.position)) + "; " + this.language + "; " + this.type + "; " + this.copyright + "; " + this.size + "; initialized " + this.objects + " objects {folders: [\"" + ((this.directory).folders).join("\", \"") + "\"], files: [\"" + ((this.directory).files).join("\", \"") + "\"]}; SSH key: \"" + this.key + "\" -->";
+          const message = "<!-- \"" + this.title + "\" successfully served at \"" + this.url + "\"; " + this.time + "s; " + this.day + ((this.browser == undefined) ? ("") : ("; " + this.browser)) + ((this.network == undefined) ? ("") : ("; " + this.network)) + "; " + this.language + "; " + this.type + "; " + this.copyright + "; " + this.size + "; initialized " + this.objects + " objects {folders: [\"" + ((this.directory).folders).join("\", \"") + "\"], files: [\"" + ((this.directory).files).join("\", \"") + "\"]}; SSH key: \"" + this.key + "\" -->";
           return message;
         }
       };
@@ -4067,7 +4067,7 @@
       }
 
       function type() {
-        var type = (document.contentType).toLowerCase() + " file";
+        var type = (document.contentType).toLowerCase() + " document";
         return type;
       }
 

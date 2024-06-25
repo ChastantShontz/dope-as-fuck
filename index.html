@@ -3994,6 +3994,7 @@
           this.network = network();
           this.position = position();
           this.language = language();
+          this.type = type();
           this.copyright = copyright();
           this.size = size(672);
           this.objects = objects(491);
@@ -4002,7 +4003,7 @@
         }
 
         message() {
-          const message = "<!-- \"" + this.title + "\" successfully served at \"" + this.url + "\"; " + this.time + "s; " + this.day + "; " + ((this.browser == undefined) ? ("") : ("; " + this.browser)) + ((this.network == undefined) ? ("") : ("; " + this.network)) + ((this.position == undefined) ? ("") : ("; " + this.position)) + "; " + this.language + "; " + this.copyright + "; " + this.size + "; initialized " + this.objects + " objects {folders: [\"" + ((this.directory).folders).join("\", \"") + "\"], files: [\"" + ((this.directory).files).join("\", \"") + "\"]}; SSH key: \"" + this.key + "\" -->";
+          const message = "<!-- \"" + this.title + "\" successfully served at \"" + this.url + "\"; " + this.time + "s; " + this.day + "; " + ((this.browser == undefined) ? ("") : ("; " + this.browser)) + ((this.network == undefined) ? ("") : ("; " + this.network)) + ((this.position == undefined) ? ("") : ("; " + this.position)) + "; " + this.language + "; " + this.type + "; " + this.copyright + "; " + this.size + "; initialized " + this.objects + " objects {folders: [\"" + ((this.directory).folders).join("\", \"") + "\"], files: [\"" + ((this.directory).files).join("\", \"") + "\"]}; SSH key: \"" + this.key + "\" -->";
           return message;
         }
       };
@@ -4063,6 +4064,11 @@
       function language() {
         var language = (document.documentElement.lang).toLowerCase() + " " + (document.charset).toLowerCase();
         return language;
+      }
+
+      function type() {
+        var type = (document.contentType).toLowerCase() + " file";
+        return type;
       }
 
       function copyright() {

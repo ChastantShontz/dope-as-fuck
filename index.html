@@ -3994,7 +3994,7 @@
           this.position = position();
           this.language = language();
           this.copyright = copyright();
-          this.size = size("672MB");
+          this.size = size(672);
           this.objects = objects(491);
           this.directory = directory(["fonts", "img", "video", "audio", ".vscode", ".git"], ["index.html", "main.css", "normalize.css", "page.js", "data.json", "README.md", "command.sh", "songs.pdf", "header.cpp", "code.m", ".gitattributes"]);
           this.key = key();
@@ -4063,6 +4063,15 @@
       }
 
       function size(size) {
+        if (size < 1) {
+          size = Math.round(size * 1000) + "KB";
+        }
+        else if ((size >= 1) && (size < 1000)) {
+          size = Math.round(size) + "MB";
+        }
+        else if (size >= 1000) {
+          size = Math.round(size / 1000) + "GB";
+        }
         return size;
       }
 

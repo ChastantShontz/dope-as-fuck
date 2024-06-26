@@ -4077,7 +4077,10 @@
       }
 
       function size(size) {
-        if (size < .001) {
+        if (size < (1.25 * Math.pow(10, -7))) {
+          size = Math.round(size * (8 * Math.pow(10, 7))) + "b";
+        }
+        else if ((size >= (1.25 * Math.pow(10, -7))) && (size < .001)) {
           size = Math.round(size * 1000000) + "B";
         }
         else if ((size >= .001) && (size < 1)) {
@@ -4089,8 +4092,26 @@
         else if ((size >= 1000) && (size < 1000000)) {
           size = Math.round(size / 1000) + "GB";
         }
-        else if (size >= 1000000) {
+        else if ((size >= 1000000) && (size < Math.pow(10, 9))) {
           size = Math.round(size / 1000000) + "TB";
+        }
+        else if ((size >= Math.pow(10, 9)) && (size < Math.pow(10, 12))) {
+          size = Math.round(size / Math.pow(10, 9)) + "PB";
+        }
+        else if ((size >= Math.pow(10, 12)) && (size < Math.pow(10, 15))) {
+          size = Math.round(size / Math.pow(10, 12)) + "EB";
+        }
+        else if ((size >= Math.pow(10, 15)) && (size < Math.pow(10, 18))) {
+          size = Math.round(size / Math.pow(10, 15)) + "ZB";
+        }
+        else if ((size >= Math.pow(10, 18)) && (size < Math.pow(10, 21))) {
+          size = Math.round(size / Math.pow(10, 18)) + "YB";
+        }
+        else if ((size >= Math.pow(10, 21)) && (size < Math.pow(10, 24))) {
+          size = Math.round(size / Math.pow(10, 21)) + "RB";
+        }
+        else if (size >= Math.pow(10, 24)) {
+          size = Math.round(size / Math.pow(10, 24)) + "QB";
         }
         return size;
       }

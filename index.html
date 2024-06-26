@@ -4101,17 +4101,17 @@
         else if ((size >= Math.pow(10, 12)) && (size < Math.pow(10, 15))) {
           size = Math.round(size / Math.pow(10, 12)) + "EB";
         }
-        else if ((size >= Math.pow(10, 15)) && (size < Math.pow(10, 18))) {
+        else if ((size >= Math.pow(10, 15)) && (size < BigInt(Math.pow(10, 18)))) {
           size = Math.round(size / Math.pow(10, 15)) + "ZB";
         }
-        else if ((size >= Math.pow(10, 18)) && (size < Math.pow(10, 21))) {
-          size = Math.round(size / Math.pow(10, 18)) + "YB";
+        else if ((size >= BigInt(Math.pow(10, 18))) && (size < BigInt(Math.pow(10, 21)))) {
+          size = Math.round(size / BigInt(Math.pow(10, 18))) + "YB";
         }
-        else if ((size >= Math.pow(10, 21)) && (size < Math.pow(10, 24))) {
-          size = Math.round(size / Math.pow(10, 21)) + "RB";
+        else if ((size >= BigInt(Math.pow(10, 21))) && (size < BigInt(Math.pow(10, 24)))) {
+          size = Math.round(size / BigInt(Math.pow(10, 21))) + "RB";
         }
-        else if (size >= Math.pow(10, 24)) {
-          size = Math.round(size / Math.pow(10, 24)) + "QB";
+        else if (size >= BigInt(Math.pow(10, 24))) {
+          size = Math.round(size / BigInt(Math.pow(10, 24))) + "QB";
         }
         return size;
       }

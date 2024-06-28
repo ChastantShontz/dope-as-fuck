@@ -2341,10 +2341,10 @@ function loadIncrement() {
 }
 
 function gameBegins(event) {
-  if (localStorage.firstGame == "true") {
+  if (localStorage.firstGame == String(true)) {
     localStorage.allAnswers = JSON.stringify(answers);
   }
-  else if (localStorage.firstGame == "false") {
+  else if (localStorage.firstGame == String(false)) {
     localStorage.gamesStarted++;
     if (!((localStorage.gamesFinished).match(/in progress/sm))) {
       localStorage.gamesFinished = localStorage.gamesFinished + " (" + (+localStorage.gamesFinished + 1) + " in progress)";
@@ -2465,10 +2465,10 @@ function gameBegins(event) {
   }
   document.ondblclick = showPassword;
   console.clear();
-  if (localStorage.firstGame == "true") {
+  if (localStorage.firstGame == String(true)) {
     console.log("Hey, you seem dope as fuck! :)");
   }
-  else if (localStorage.firstGame == "false") {
+  else if (localStorage.firstGame == String(false)) {
     console.log("Welcome back" + ((localStorage.name == undefined) ? ("") : (", " + localStorage.name)) + "!");
   }
 }
@@ -7044,7 +7044,7 @@ function youtubeDuration() {
 }
 
 function pressMouse(event) {
-  sessionStorage.mousePressed = "true";
+  sessionStorage.mousePressed = true;
   youtubeJump(event);
   document.getElementById("youtubeSeek").style.zIndex = "0";
   document.getElementById("youtubeSeek").style.background = "var(--youtubeLightGray)";
@@ -7053,7 +7053,7 @@ function pressMouse(event) {
 }
 
 function liftMouse(event) {
-  sessionStorage.mousePressed = "false";
+  sessionStorage.mousePressed = false;
   if (sessionStorage.youtubePlayTimeout != undefined) {
     clearTimeout(sessionStorage.youtubePlayTimeout);
     sessionStorage.removeItem("youtubePlayTimeout");
@@ -7073,12 +7073,12 @@ function youtubeUnseek() {
 
 function youtubeJump(event) {
   if (sessionStorage.mousePressed == undefined) {
-    sessionStorage.mousePressed = "false";
+    sessionStorage.mousePressed = false;
   }
   sessionStorage.progressSeek = (100 - (((event.clientX - event.target.getBoundingClientRect().left) / (event.target.getBoundingClientRect().right - event.target.getBoundingClientRect().left)) * 100));
   document.getElementById("youtubeSeek").style.right = sessionStorage.progressSeek + "%";
   if ((sessionStorage.progress < sessionStorage.progressSeek) && (sessionStorage.progress != 100)) {
-    if (sessionStorage.mousePressed == "false") {
+    if (sessionStorage.mousePressed == String(false)) {
       document.getElementById("youtubeSeek").style.zIndex = "1";
       document.getElementById("youtubeSeek").style.background = "var(--youtubeDarkRed)";
       document.getElementById("youtubeDuration").style.zIndex = "0";
@@ -7092,7 +7092,7 @@ function youtubeJump(event) {
   document.getElementById("youtubeSeek").style.transition = "all 0s ease 0s";
   if ((event.type == "mousedown") || (event.type == "mousemove")) {
     sessionStorage.seekTime = String(Math.floor((((event.clientX - event.target.getBoundingClientRect().left) / (event.target.getBoundingClientRect().right - event.target.getBoundingClientRect().left)) * sessionStorage.duration) / 60)).padStart(2, "0") + ":" + String(Math.floor((((event.clientX - event.target.getBoundingClientRect().left) / (event.target.getBoundingClientRect().right - event.target.getBoundingClientRect().left)) * sessionStorage.duration) % 60)).padStart(2, "0");
-    if (sessionStorage.mousePressed == "true") {
+    if (sessionStorage.mousePressed == String(true)) {
       sessionStorage.progress = (100 - (((event.clientX - event.target.getBoundingClientRect().left) / (event.target.getBoundingClientRect().right - event.target.getBoundingClientRect().left)) * 100));
     }
   }
@@ -7167,7 +7167,7 @@ function youtubeJump(event) {
       }
     }
   }
-  if ((event.type != "mousemove") || ((event.type == "mousemove") && (sessionStorage.mousePressed == "true"))) {
+  if ((event.type != "mousemove") || ((event.type == "mousemove") && (sessionStorage.mousePressed == String(true)))) {
     if (sessionStorage.progress <= 0) {
       if (sessionStorage.progress < 0) {
         sessionStorage.progress = 0;
@@ -7782,7 +7782,7 @@ function win() {
   document.getElementById("victoryClarkson").style.visibility = "visible";
   document.getElementById("victoryClarkson").style.opacity = "1";
   document.getElementById("victoryClarkson").style.transition = "all .25s ease 2.5s";
-  sessionStorage.won = "true";
+  sessionStorage.won = true;
   setTimeout(enableButton, 2750);
   document.getElementById("ok").onclick = gotIt22;
 }
@@ -7926,7 +7926,7 @@ function lose() {
   setTimeout(() => (
     document.getElementById("victorySlu").style.animation = "victoryFlicker 10s ease 0s infinite forwards"
   ), 4000);
-  sessionStorage.won = "false";
+  sessionStorage.won = false;
   setTimeout(enableButton, 4000);
   document.getElementById("ok").onclick = gotIt23;
 }
@@ -10719,7 +10719,7 @@ function accountUpdate(field, method) {
 }
 
 function remember(event) {
-  if ((localStorage.firstGame == "true") && (event.type == "load")) {
+  if ((localStorage.firstGame == String(true)) && (event.type == "load")) {
     for (var i = 0; i < document.getElementsByClassName("memoryBodyDataCell").length; i++) {
       eval("localStorage." + (((document.getElementsByClassName("memoryBodyDataCell")[i].id).replace(/memory|Data/gsm, "")).charAt(0)).toLowerCase() + ((document.getElementsByClassName("memoryBodyDataCell")[i].id).replace(/memory|Data/gsm, "")).substring(1) + " = here." + (((document.getElementsByClassName("memoryBodyDataCell")[i].id).replace(/memory|Data/gsm, "")).charAt(0)).toLowerCase() + ((document.getElementsByClassName("memoryBodyDataCell")[i].id).replace(/memory|Data/gsm, "")).substring(1));
     }
@@ -10751,10 +10751,10 @@ function rememberGameTime() {
   localStorage.gameTime = Math.floor(performance.now() / 1000);
   here.gameTime = localStorage.gameTime;
   document.getElementById("memoryGameTimeData").innerHTML = ((localStorage.gameTime < 3600) ? ("") : (Math.floor(localStorage.gameTime / 3600) + ":" + (((localStorage.gameTime % 3600) < 600) ? ("0") : ("")))) + ((localStorage.gameTime < 60) ? ("") : (Math.floor((localStorage.gameTime % 3600) / 60) + ":" + ((((localStorage.gameTime % 3600) % 60) < 10) ? ("0") : ("")))) + ((localStorage.gameTime % 3600) % 60);
-  if (localStorage.firstGame == "true") {
+  if (localStorage.firstGame == String(true)) {
     localStorage.totalGameTime = localStorage.gameTime;
   }
-  else if (localStorage.firstGame == "false") {
+  else if (localStorage.firstGame == String(false)) {
     localStorage.totalGameTime++;
   }
   here.totalGameTime = localStorage.totalGameTime;
@@ -11004,8 +11004,8 @@ function warning(element) {
 }
 
 function gameComplete() {
-  if (localStorage.firstGame == "true") {
-    localStorage.firstGame = "false";
+  if (localStorage.firstGame == String(true)) {
+    localStorage.firstGame = false;
   }
 }
 
@@ -11429,17 +11429,17 @@ function selectUrl() {
   url.selectNodeContents(document.getElementById("urlText"));
   document.getSelection().removeAllRanges();
   document.getSelection().addRange(url);
-  sessionStorage.urlSelected = "true";
+  sessionStorage.urlSelected = true;
 }
 
 function unselectUrl(event) {
   if (!(document.elementsFromPoint(event.clientX, event.clientY).includes(document.getElementById("url")))) {
-    sessionStorage.urlSelected = "false";
+    sessionStorage.urlSelected = false;
   }
 }
 
 function copyUrl(event) {
-  if (sessionStorage.urlSelected == "true") {
+  if (sessionStorage.urlSelected == String(true)) {
     selectUrl();
   }
   navigator.clipboard.writeText((document.getElementById("urlText").innerHTML).replace(/\<wbr\>/gism, ""));

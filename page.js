@@ -2313,12 +2313,13 @@ function load(event) {
         }
       }
       sessionStorage.oldLoad = sessionStorage.newLoad;
-      sessionStorage.loadIncrementInterval = setInterval(loadIncrement, 100);
+      sessionStorage.loadIncrementInterval = setInterval(loadIncrement.bind(null, sessionStorage.newLoad), 100);
     }
   }
 }
 
-function loadIncrement() {
+function loadIncrement(newLoad) {
+  sessionStorage.newLoad = newLoad;
   if (sessionStorage.newLoad <= 99.86) {
     if (sessionStorage.newLoad <= 98.81) {
       sessionStorage.newLoad = (+sessionStorage.newLoad + (Math.ceil(Math.random() * 69) / 100));

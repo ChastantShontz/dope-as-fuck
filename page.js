@@ -10749,12 +10749,7 @@ function remember(event) {
 
 function rememberGameTime() {
   localStorage.gameTime = Math.floor(performance.now() / 1000);
-  if (localStorage.gameTime < Math.pow(2, 53)) {
-    here.gameTime = localStorage.gameTime;
-  }
-  else if (localStorage.gameTime >= Math.pow(2, 53)) {
-    here.gameTime = BigInt(Number(localStorage.gameTime));
-  }
+  here.gameTime = localStorage.gameTime;
   document.getElementById("memoryGameTimeData").innerHTML = ((localStorage.gameTime < 3600) ? ("") : (Math.floor(localStorage.gameTime / 3600) + ":" + (((localStorage.gameTime % 3600) < 600) ? ("0") : ("")))) + ((localStorage.gameTime < 60) ? ("") : (Math.floor((localStorage.gameTime % 3600) / 60) + ":" + ((((localStorage.gameTime % 3600) % 60) < 10) ? ("0") : ("")))) + ((localStorage.gameTime % 3600) % 60);
   if (localStorage.firstGame == "true") {
     localStorage.totalGameTime = localStorage.gameTime;
@@ -10762,12 +10757,7 @@ function rememberGameTime() {
   else if (localStorage.firstGame == "false") {
     localStorage.totalGameTime++;
   }
-  if (localStorage.totalGameTime < Math.pow(2, 53)) {
-    here.totalGameTime = localStorage.totalGameTime;
-  }
-  else if (localStorage.totalGameTime >= Math.pow(2, 53)) {
-    here.totalGameTime = BigInt(Number(localStorage.totalGameTime));
-  }
+  here.totalGameTime = localStorage.totalGameTime;
   document.getElementById("memoryTotalGameTimeData").innerHTML = ((localStorage.totalGameTime < 3600) ? ("") : (Math.floor(localStorage.totalGameTime / 3600) + ":" + (((localStorage.totalGameTime % 3600) < 600) ? ("0") : ("")))) + ((localStorage.totalGameTime < 60) ? ("") : (Math.floor((localStorage.totalGameTime % 3600) / 60) + ":" + ((((localStorage.totalGameTime % 3600) % 60) < 10) ? ("0") : ("")))) + ((localStorage.totalGameTime % 3600) % 60);
 }
 

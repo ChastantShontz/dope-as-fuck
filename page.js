@@ -4866,10 +4866,6 @@ function gotIt11() {
     "j == 39"
   ];
   disableCheers(disableClassLists, disableStyles);
-  document.getElementById("rink").style.border = ".2em solid rgba(47, 114, 149, .5)";
-  document.getElementById("rink").style.transition = "border .25s ease 0s";
-  document.getElementById("rinkSections").style.opacity = ".5";
-  document.getElementById("rinkSections").style.transition = "opacity .25s ease 0s";
   document.getElementById("flagCont").style.visibility = "visible";
   document.getElementById("flagCont").style.opacity = "1";
   document.getElementById("flagCont").style.transition = "all .25s ease 0s";
@@ -4921,10 +4917,6 @@ function gotIt12() {
   document.getElementById("flagCont").style.visibility = "hidden";
   document.getElementById("flagCont").style.opacity = "0";
   document.getElementById("flagCont").style.transition = "all .25s ease 0s";
-  document.getElementById("rink").style.border = ".2em solid var(--hockeyDarkBlue)";
-  document.getElementById("rink").style.transition = "border .25s ease 0s";
-  document.getElementById("rinkSections").style.opacity = "1";
-  document.getElementById("rinkSections").style.transition = "opacity .25s ease 0s";
   document.getElementById("puck").style.visibility = "visible";
   document.getElementById("puck").style.top = "50%";
   document.getElementById("puck").style.opacity = "1";

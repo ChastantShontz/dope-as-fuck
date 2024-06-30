@@ -6029,7 +6029,7 @@ footer {
 
 /* Media Queries */
 
-@media screen and (max-height: 600px),
+/* @media screen and (max-height: 600px),
 screen and (max-width: 1200px) {
   body {
     background: var(--white);
@@ -6065,6 +6065,6 @@ screen and (max-width: 1200px) {
       text-align: center;
     }
   }
-}
+} */
 
 /* End of stylesheet */

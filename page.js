@@ -4870,9 +4870,9 @@ function gotIt11() {
   document.getElementById("rink").style.transition = "border .25s ease 0s";
   document.getElementById("rinkSections").style.opacity = ".5";
   document.getElementById("rinkSections").style.transition = "opacity .25s ease 0s";
-  document.getElementById("flag").style.visibility = "visible";
-  document.getElementById("flag").style.opacity = "1";
-  document.getElementById("flag").style.transition = "all .25s ease 0s";
+  document.getElementById("flagCont").style.visibility = "visible";
+  document.getElementById("flagCont").style.opacity = "1";
+  document.getElementById("flagCont").style.transition = "all .25s ease 0s";
   sessionStorage.songPrime = 67;
   document.getElementById("ok").onclick = openSelection;
   sessionStorage.function = 12;
@@ -4918,9 +4918,9 @@ function gotIt12() {
       document.getElementById("cheersCont").style.animation = "none"
     ), 1500);
   }
-  document.getElementById("flag").style.visibility = "hidden";
-  document.getElementById("flag").style.opacity = "0";
-  document.getElementById("flag").style.transition = "all .25s ease 0s";
+  document.getElementById("flagCont").style.visibility = "hidden";
+  document.getElementById("flagCont").style.opacity = "0";
+  document.getElementById("flagCont").style.transition = "all .25s ease 0s";
   document.getElementById("rink").style.border = ".2em solid var(--hockeyDarkBlue)";
   document.getElementById("rink").style.transition = "border .25s ease 0s";
   document.getElementById("rinkSections").style.opacity = "1";

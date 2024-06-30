@@ -1804,16 +1804,23 @@ main {
   width: 1em;
 }
 
-#flag {
+#flagCont {
   z-index: 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   visibility: hidden;
   position: absolute;
-  left: 20%;
-  right: 20%;
-  top: 5%;
-  bottom: 5%;
-  height: 90%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   opacity: 0;
+  align-items: center;
+}
+
+#flag {
+  max-height: 95%;
   width: 60%;
 }
 
@@ -6027,7 +6034,7 @@ footer {
 
 /* Media Queries */
 
-/* @media screen and (max-height: 600px),
+@media screen and (max-height: 600px),
 screen and (max-width: 1200px) {
   body {
     background: var(--white);
@@ -6063,6 +6070,6 @@ screen and (max-width: 1200px) {
       text-align: center;
     }
   }
-} */
+}
 
 /* End of stylesheet */

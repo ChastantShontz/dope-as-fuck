@@ -2947,7 +2947,7 @@ main {
   bottom: 25%;
   border-radius: 1em;
   background: var(--white);
-  padding: 2%;
+  padding: 2em;
   border: .05em solid var(--youtubeDarkGray);
   transform: scale(0);
   align-items: center;
@@ -2976,6 +2976,7 @@ main {
   bottom: 25%;
   border-radius: 1em;
   background: url("img/hell.png") bottom / cover;
+  padding: 2em;
   transform: scale(0);
 }
 
@@ -3491,10 +3492,10 @@ main {
   flex-direction: column;
   justify-content: space-between;
   position: absolute;
-  left: 64.5%;
-  right: 2.5%;
-  top: 5%;
-  bottom: 5%;
+  left: calc(2em + 67%);
+  right: 2em;
+  top: 2em;
+  bottom: 2em;
   align-items: flex-end;
 }
 
@@ -3658,7 +3659,7 @@ main {
 
 #gameOverScoreSubheadings {
   display: none;
-  margin-left: 5%;
+  margin-left: 1em;
 }
 
 .gameOverScoreSubheading {

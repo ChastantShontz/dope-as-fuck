@@ -3399,6 +3399,11 @@ function openSelection() {
         }
         options.push(eval("sessionStorage.song" + (i + 1)));
         document.getElementsByClassName("choice")[i].innerHTML = songs[eval("sessionStorage.song" + (i + 1))].title;
+        if (document.getElementsByClassName("choice")[i].scrollHeight > document.getElementsByClassName("choice")[i].offsetHeight) {
+          if (document.getElementsByClassName("choice")[i].scrollTop > 0) {
+            document.getElementsByClassName("choice")[i].scrollTop = 0;
+          }
+        }
       }
     }
     sessionStorage.attempts = 0;

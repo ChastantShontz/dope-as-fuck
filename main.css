@@ -2970,6 +2970,9 @@ main {
 }
 
 #troyLassialContCont {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
   left: 25%;
   right: 25%;
   top: 25%;
@@ -3472,10 +3475,15 @@ main {
   user-select: none;
 }
 
+#troyLassialCont {
+  position: relative;
+}
+
 .troyLassial {
   position: absolute;
   left: 0;
-  bottom: 0;
+  right: 0;
+  bottom: -2em;
 }
 
 #troyLassialSanta {
@@ -3491,11 +3499,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: absolute;
-  left: calc(2em + 67%);
-  right: 2em;
-  top: 2em;
-  bottom: 2em;
   align-items: flex-end;
 }
 

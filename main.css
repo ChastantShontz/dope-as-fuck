@@ -860,8 +860,7 @@ main {
   color: var(--sluRed);
 }
 
-#cheersCont {
-  position: relative;
+#cheersContContCont {
   border-radius: .1em;
   background: var(--white);
   width: 100%;
@@ -885,9 +884,21 @@ main {
   color: var(--orange);
 }
 
+#cheersContCont {
+  position: relative;
+  height: 12em;
+  width: 100%;
+}
+
+#cheersCont {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
 #cheers {
   list-style: none;
-  height: 12em;
+  height: 100%;
   width: 100%;
   padding-left: 0;
   overflow-y: auto;
@@ -968,21 +979,9 @@ main {
   display: none;
 }
 
-#cheersCover {
-  z-index: 1;
-  visibility: hidden;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 2.05em;
-  bottom: 0;
-  background: var(--gray);
-  opacity: 0;
-}
-
 #backToTop {
   display: none;
-  visibility: 0;
+  visibility: hidden;
   position: absolute;
   right: 1.25em;
   bottom: .75em;
@@ -1004,6 +1003,17 @@ main {
   background: var(--white);
   height: 1em;
   width: 1em;
+}
+
+#cheersCover {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--gray);
+  opacity: 0;
 }
 
 #rink {

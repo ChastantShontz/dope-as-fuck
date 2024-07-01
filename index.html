@@ -358,323 +358,327 @@
               </div>
             </div>
           </div>
-          <div id="cheersCont">
+          <div id="cheersContContCont">
             <p id="cheerHeading">Cheer Score: <span id="cheerScore"></span></p>
-            <ul id="cheers" tabindex="-1" aria-label="Click on some of these cheers to inject them into the game" onscroll="awayFromTop()">
-              <li class="cheer midCheer incorrectCheer unusedCheer firstCheer" id="cheer1">
-                <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage1"><span id="goals"></span> more goals!</p>
-                <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover1" onclick="cheer(1, 2, event)">
-                </div>
-              </li>
-              <li class="cheer midCheer incorrectCheer unusedCheer genderedCheer maleCheer" id="cheer2">
-                <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage2">Allin, you're ugly! BOOM ROASTED!</p>
-                <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover2" onclick="cheer(2, 2, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer3">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage3">Assisted by the refs!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover3" onclick="cheer(3, 3, event)">
-                </div>
-              </li>
-              <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer4">
-                <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage4">Bend over!</p>
-                <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover4" onclick="cheer(4, 2, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer5" onmouseenter="changeCheer(5)" onmouseleave="changeCheerBack(5)">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage5">Boat...ship!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover5" onclick="cheer(5, 3, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer6">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage6">Check the tapes!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover6" onclick="cheer(6, 3, event)">
-                </div>
-              </li>
-              <li class="cheer lowCheer correctCheer unusedCheer" id="cheer7">
-                <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage7">Clarkson rejects!</p>
-                <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover7" onclick="cheer(7, 1, event)">
-                </div>
-              </li>
-              <li class="cheer lowCheer correctCheer unusedCheer" id="cheer8">
-                <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage8">Daddy <span id="roast"></span>!</p>
-                <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover8" onclick="cheer(8, 1, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer9">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage9">Feed the sieve!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover9" onclick="cheer(9, 3, event)">
-                </div>
-              </li>
-              <li class="cheer lowCheer correctCheer unusedCheer" id="cheer10">
-                <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage10">Flip our burgers!</p>
-                <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover10" onclick="cheer(10, 1, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer11">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage11">Free <span id="offenderName">our Golden Knights</span>!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover11" onclick="cheer(11, 3, event)">
-                </div>
-              </li>
-              <li class="cheer lowCheer correctCheer unusedCheer" id="cheer12">
-                <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage12">Gary Dake hates you!</p>
-                <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover12" onclick="cheer(12, 1, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer13">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage13">Get your eyes checked!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover13" onclick="cheer(13, 3, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer14">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage14">Give me a "beer"!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover14" onclick="cheer(14, 3, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer15">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage15">Give <span class="pronoun pronounThem pronounLower">them</span> five!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover15" onclick="cheer(15, 3, event)">
-                </div>
-              </li>
-              <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer16">
-                <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage16">Halftime!</p>
-                <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover16" onclick="cheer(16, 2, event)">
-                </div>
-              </li>
-              <li class="cheer lowCheer correctCheer unusedCheer" id="cheer17">
-                <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage17">Here we go, Clarkson, here we go! Let's go tech!</p>
-                <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover17" onclick="cheer(17, 1, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer18">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage18">Hey...you suck!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover18" onclick="cheer(18, 3, event)">
-                </div>
-              </li>
-              <li class="cheer midCheer incorrectCheer unusedCheer genderedCheer femaleCheer" id="cheer19">
-                <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage19">Hope needs soap! BOOM ROASTED!</p>
-                <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover19" onclick="cheer(19, 2, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer20">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage20">I disagree!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover20" onclick="cheer(20, 3, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer21" onmouseenter="changeCheer(21)" onmouseleave="changeCheerBack(21)">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage21">I'm blind, I'm deaf, I wanna be a ref!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover21" onclick="cheer(21, 3, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer22">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage22">It's all your fault, sieve!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover22" onclick="cheer(22, 3, event)">
-                </div>
-              </li>
-              <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer23">
-                <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage23">It's <span id="day"></span> knight and you can't score!</p>
-                <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover23" onclick="cheer(23, 2, event)">
-                </div>
-              </li>
-              <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer24">
-                <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage24">Kick <span class="pronoun pronounThem pronounLower">them</span> out!</p>
-                <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover24" onclick="cheer(24, 3, event)">
-                </div>
-              </li>
-              <li class="cheer lowCheer correctCheer unusedCheer" id="cheer25">
-                <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage25">Let's go...Clarkson! Let's go...techers!</p>
-                <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover25" onclick="cheer(25, 1, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer26">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage26">Nice shot...NOT!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover26" onclick="cheer(26, 3, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer27">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage27">Now it's even!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover27" onclick="cheer(27, 3, event)">
-                </div>
-              </li>
-              <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer28">
-                <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage28">Number one is number one!</p>
-                <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover28" onclick="cheer(28, 2, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer29">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage29">Okay...and SLU still sucks!<span id="swallow"> (And they swallow, too!)</span></p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover29" onclick="cheer(29, 3, event)">
-                </div>
-              </li>
-              <li class="cheer lowCheer correctCheer unusedCheer" id="cheer30">
-                <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage30">P-O-O-P, that spells "SLU"!</p>
-                <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover30" onclick="cheer(30, 1, event)">
-                </div>
-              </li>
-              <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer31">
-                <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage31">Put the biscuit in the basket! Put the triscuit in the trash can!</p>
-                <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover31" onclick="cheer(31, 2, event)">
-                </div>
-              </li>
-              <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer32" onmouseenter="changeCheer(32)" onmouseleave="changeCheerBack(32)">
-                <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage32">Ra ra ree! Hit <span class="pronoun pronounThem pronounLower">them</span> in the knee! Ra ra rass! Hit <span class="pronoun pronounThem pronounLower">them</span> in the other knee!</p>
-                <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover32" onclick="cheer(32, 2, event)">
-                </div>
-              </li>
-              <li class="cheer lowCheer correctCheer unusedCheer" id="cheer33">
-                <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage33">Safety school!</p>
-                <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover33" onclick="cheer(33, 1, event)">
-                </div>
-              </li>
-              <li class="cheer lowCheer incorrectCheer unusedCheer" id="cheer34">
-                <p class="cheerMessage lowCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage34">Santa isn't real!</p>
-                <div class="cheerCover lowCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover34" onclick="cheer(34, 1, event)">
-                </div>
-              </li>
-              <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer35">
-                <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage35">Sexy goalie!</p>
-                <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover35" onclick="cheer(35, 2, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer36">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage36">Skate, shoot, score, tech!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover36" onclick="cheer(36, 3, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer37">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage37">Sloppy sieve!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover37" onclick="cheer(37, 3, event)">
-                </div>
-              </li>
-              <li class="cheer lowCheer correctCheer unusedCheer" id="cheer38">
-                <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage38">SLU is from New Jersey!</p>
-                <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover38" onclick="cheer(38, 1, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer39">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage39">SLU school of acting!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover39" onclick="cheer(39, 3, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer40">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage40">SLUzer...you're a big <del class="pussWuss" id="puss">puss</del> <ins class="pussWuss" id="wuss">wuss</ins>!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover40" onclick="cheer(40, 3, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer41">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage41">Start the bus!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover41" onclick="cheer(41, 3, event)">
-                </div>
-              </li>
-              <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer42">
-                <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage42">Stop beating your stick, you'll go blind!</p>
-                <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover42" onclick="cheer(42, 2, event)">
-                </div>
-              </li>
-              <li class="cheer lowCheer incorrectCheer unusedCheer" id="cheer43" onmouseenter="changeCheer(43)" onmouseleave="changeCheerBack(43)">
-                <p class="cheerMessage lowCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage43">Suck flu!</p>
-                <div class="cheerCover lowCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover43" onclick="cheer(43, 1, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer44">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage44">Thank you, Tony!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover44" onclick="cheer(44, 3, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer45">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage45">That's a shot!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover45" onclick="cheer(45, 3, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer46">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage46">The refs need to get some gl<strong>asses</strong>!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover46" onclick="cheer(46, 3, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer47">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage47">The refs went to SLU!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover47" onclick="cheer(47, 3, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer48">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage48">The refs were <span id="verb"></span> off!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover48" onclick="cheer(48, 3, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer49">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage49">They were framed!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover49" onclick="cheer(49, 3, event)">
-                </div>
-              </li>
-              <li class="cheer lowCheer correctCheer unusedCheer" id="cheer50">
-                <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage50">Ugly jerseys!</p>
-                <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover50" onclick="cheer(50, 1, event)">
-                </div>
-              </li>
-              <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer51">
-                <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage51">Use your hockey! Use all your hockey!</p>
-                <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover51" onclick="cheer(51, 2, event)">
-                </div>
-              </li>
-              <li class="cheer lowCheer correctCheer unusedCheer" id="cheer52">
-                <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage52">We are CU!</p>
-                <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover52" onclick="cheer(52, 1, event)">
-                </div>
-              </li>
-              <li class="cheer lowCheer correctCheer unusedCheer" id="cheer53">
-                <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage53">We hate SLU, we hate SLU, we hate SLU, and so do you!</p>
-                <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover53" onclick="cheer(53, 1, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer54">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage54">We miss you, <span class="goalieName">goalie</span>! But not enough to call!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover54" onclick="cheer(54, 3, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer55">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage55">You can't do that!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover55" onclick="cheer(55, 3, event)">
-                </div>
-              </li>
-              <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer56">
-                <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage56">You can't skate!</p>
-                <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover56" onclick="cheer(56, 2, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer57">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage57">You did nothing, <span class="goalieName">goalie</span>!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover57" onclick="cheer(57, 3, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer58">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage58">You're a hooker!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover58" onclick="cheer(58, 3, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer59">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage59">You're bad, you're bad, you're bad, you're bad, you're baaad, you're baaaaaad...</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover59" onclick="cheer(59, 3, event)">
-                </div>
-              </li>
-              <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer60">
-                <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage60">You're not a sieve, you're a vacuum! You're not a vacuum, you're a black hole! You're not a black hole, you just suck!</p>
-                <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover60" onclick="cheer(60, 2, event)">
-                </div>
-              </li>
-              <li class="cheer lowCheer correctCheer unusedCheer" id="cheer61">
-                <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage61">Your degrees are worthless!</p>
-                <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover61" onclick="cheer(61, 1, event)">
-                </div>
-              </li>
-              <li class="cheer highCheer incorrectCheer unusedCheer lastCheer" id="cheer62">
-                <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage62">Zebras!</p>
-                <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover62" onclick="cheer(62, 3, event)">
-                </div>
-              </li>
-              <li id="cheersCover">
-              </li>
-            </ul>
-            <button type="reset" class="defaultButton" id="backToTop" tabindex="-1" aria-label="Jump back to the top of the cheers list" onclick="backToTop(event)"><span id="backToTopShape"></span></button>
+            <div id="cheersContCont">
+              <div id="cheersCont">
+                <ul id="cheers" tabindex="-1" aria-label="Click on some of these cheers to inject them into the game" onscroll="awayFromTop()">
+                  <li class="cheer midCheer incorrectCheer unusedCheer firstCheer" id="cheer1">
+                    <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage1"><span id="goals"></span> more goals!</p>
+                    <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover1" onclick="cheer(1, 2, event)">
+                    </div>
+                  </li>
+                  <li class="cheer midCheer incorrectCheer unusedCheer genderedCheer maleCheer" id="cheer2">
+                    <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage2">Allin, you're ugly! BOOM ROASTED!</p>
+                    <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover2" onclick="cheer(2, 2, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer3">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage3">Assisted by the refs!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover3" onclick="cheer(3, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer4">
+                    <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage4">Bend over!</p>
+                    <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover4" onclick="cheer(4, 2, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer5" onmouseenter="changeCheer(5)" onmouseleave="changeCheerBack(5)">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage5">Boat...ship!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover5" onclick="cheer(5, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer6">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage6">Check the tapes!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover6" onclick="cheer(6, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer7">
+                    <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage7">Clarkson rejects!</p>
+                    <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover7" onclick="cheer(7, 1, event)">
+                    </div>
+                  </li>
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer8">
+                    <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage8">Daddy <span id="roast"></span>!</p>
+                    <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover8" onclick="cheer(8, 1, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer9">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage9">Feed the sieve!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover9" onclick="cheer(9, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer10">
+                    <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage10">Flip our burgers!</p>
+                    <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover10" onclick="cheer(10, 1, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer11">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage11">Free <span id="offenderName">our Golden Knights</span>!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover11" onclick="cheer(11, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer12">
+                    <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage12">Gary Dake hates you!</p>
+                    <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover12" onclick="cheer(12, 1, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer13">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage13">Get your eyes checked!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover13" onclick="cheer(13, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer14">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage14">Give me a "beer"!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover14" onclick="cheer(14, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer15">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage15">Give <span class="pronoun pronounThem pronounLower">them</span> five!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover15" onclick="cheer(15, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer16">
+                    <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage16">Halftime!</p>
+                    <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover16" onclick="cheer(16, 2, event)">
+                    </div>
+                  </li>
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer17">
+                    <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage17">Here we go, Clarkson, here we go! Let's go tech!</p>
+                    <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover17" onclick="cheer(17, 1, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer18">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage18">Hey...you suck!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover18" onclick="cheer(18, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer midCheer incorrectCheer unusedCheer genderedCheer femaleCheer" id="cheer19">
+                    <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage19">Hope needs soap! BOOM ROASTED!</p>
+                    <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover19" onclick="cheer(19, 2, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer20">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage20">I disagree!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover20" onclick="cheer(20, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer21" onmouseenter="changeCheer(21)" onmouseleave="changeCheerBack(21)">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage21">I'm blind, I'm deaf, I wanna be a ref!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover21" onclick="cheer(21, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer22">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage22">It's all your fault, sieve!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover22" onclick="cheer(22, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer23">
+                    <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage23">It's <span id="day"></span> knight and you can't score!</p>
+                    <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover23" onclick="cheer(23, 2, event)">
+                    </div>
+                  </li>
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer24">
+                    <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage24">Kick <span class="pronoun pronounThem pronounLower">them</span> out!</p>
+                    <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover24" onclick="cheer(24, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer25">
+                    <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage25">Let's go...Clarkson! Let's go...techers!</p>
+                    <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover25" onclick="cheer(25, 1, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer26">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage26">Nice shot...NOT!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover26" onclick="cheer(26, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer27">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage27">Now it's even!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover27" onclick="cheer(27, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer28">
+                    <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage28">Number one is number one!</p>
+                    <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover28" onclick="cheer(28, 2, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer29">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage29">Okay...and SLU still sucks!<span id="swallow"> (And they swallow, too!)</span></p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover29" onclick="cheer(29, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer30">
+                    <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage30">P-O-O-P, that spells "SLU"!</p>
+                    <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover30" onclick="cheer(30, 1, event)">
+                    </div>
+                  </li>
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer31">
+                    <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage31">Put the biscuit in the basket! Put the triscuit in the trash can!</p>
+                    <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover31" onclick="cheer(31, 2, event)">
+                    </div>
+                  </li>
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer32" onmouseenter="changeCheer(32)" onmouseleave="changeCheerBack(32)">
+                    <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage32">Ra ra ree! Hit <span class="pronoun pronounThem pronounLower">them</span> in the knee! Ra ra rass! Hit <span class="pronoun pronounThem pronounLower">them</span> in the other knee!</p>
+                    <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover32" onclick="cheer(32, 2, event)">
+                    </div>
+                  </li>
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer33">
+                    <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage33">Safety school!</p>
+                    <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover33" onclick="cheer(33, 1, event)">
+                    </div>
+                  </li>
+                  <li class="cheer lowCheer incorrectCheer unusedCheer" id="cheer34">
+                    <p class="cheerMessage lowCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage34">Santa isn't real!</p>
+                    <div class="cheerCover lowCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover34" onclick="cheer(34, 1, event)">
+                    </div>
+                  </li>
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer35">
+                    <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage35">Sexy goalie!</p>
+                    <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover35" onclick="cheer(35, 2, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer36">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage36">Skate, shoot, score, tech!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover36" onclick="cheer(36, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer37">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage37">Sloppy sieve!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover37" onclick="cheer(37, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer38">
+                    <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage38">SLU is from New Jersey!</p>
+                    <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover38" onclick="cheer(38, 1, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer39">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage39">SLU school of acting!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover39" onclick="cheer(39, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer40">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage40">SLUzer...you're a big <del class="pussWuss" id="puss">puss</del> <ins class="pussWuss" id="wuss">wuss</ins>!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover40" onclick="cheer(40, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer41">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage41">Start the bus!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover41" onclick="cheer(41, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer42">
+                    <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage42">Stop beating your stick, you'll go blind!</p>
+                    <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover42" onclick="cheer(42, 2, event)">
+                    </div>
+                  </li>
+                  <li class="cheer lowCheer incorrectCheer unusedCheer" id="cheer43" onmouseenter="changeCheer(43)" onmouseleave="changeCheerBack(43)">
+                    <p class="cheerMessage lowCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage43">Suck flu!</p>
+                    <div class="cheerCover lowCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover43" onclick="cheer(43, 1, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer44">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage44">Thank you, Tony!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover44" onclick="cheer(44, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer45">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage45">That's a shot!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover45" onclick="cheer(45, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer46">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage46">The refs need to get some gl<strong>asses</strong>!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover46" onclick="cheer(46, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer47">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage47">The refs went to SLU!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover47" onclick="cheer(47, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer48">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage48">The refs were <span id="verb"></span> off!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover48" onclick="cheer(48, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer49">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage49">They were framed!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover49" onclick="cheer(49, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer50">
+                    <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage50">Ugly jerseys!</p>
+                    <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover50" onclick="cheer(50, 1, event)">
+                    </div>
+                  </li>
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer51">
+                    <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage51">Use your hockey! Use all your hockey!</p>
+                    <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover51" onclick="cheer(51, 2, event)">
+                    </div>
+                  </li>
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer52">
+                    <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage52">We are CU!</p>
+                    <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover52" onclick="cheer(52, 1, event)">
+                    </div>
+                  </li>
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer53">
+                    <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage53">We hate SLU, we hate SLU, we hate SLU, and so do you!</p>
+                    <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover53" onclick="cheer(53, 1, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer54">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage54">We miss you, <span class="goalieName">goalie</span>! But not enough to call!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover54" onclick="cheer(54, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer55">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage55">You can't do that!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover55" onclick="cheer(55, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer56">
+                    <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage56">You can't skate!</p>
+                    <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover56" onclick="cheer(56, 2, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer57">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage57">You did nothing, <span class="goalieName">goalie</span>!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover57" onclick="cheer(57, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer58">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage58">You're a hooker!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover58" onclick="cheer(58, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer59">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage59">You're bad, you're bad, you're bad, you're bad, you're baaad, you're baaaaaad...</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover59" onclick="cheer(59, 3, event)">
+                    </div>
+                  </li>
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer60">
+                    <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage60">You're not a sieve, you're a vacuum! You're not a vacuum, you're a black hole! You're not a black hole, you just suck!</p>
+                    <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover60" onclick="cheer(60, 2, event)">
+                    </div>
+                  </li>
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer61">
+                    <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage61">Your degrees are worthless!</p>
+                    <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover61" onclick="cheer(61, 1, event)">
+                    </div>
+                  </li>
+                  <li class="cheer highCheer incorrectCheer unusedCheer lastCheer" id="cheer62">
+                    <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage62">Zebras!</p>
+                    <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover62" onclick="cheer(62, 3, event)">
+                    </div>
+                  </li>
+                </ul>
+                <button type="reset" class="defaultButton" id="backToTop" tabindex="-1" aria-label="Jump back to the top of the cheers list" onclick="backToTop(event)"><span id="backToTopShape"></span></button>
+              </div>
+              <div id="cheersCover">
+              </div>
+            </div>
           </div>
         </section>
         <div class="flip" id="rink" aria-label="Click on the players to bring up their stats">

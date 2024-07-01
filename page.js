@@ -3265,10 +3265,10 @@ function gotIt6(event) {
       document.getElementById("cheers").scrollTop = 0;
     }
   }
-  document.getElementById("cheersCont").style.transform = "scale(1)";
-  document.getElementById("cheersCont").style.transition = "transform 0s ease 2s";
+  document.getElementById("cheersContContCont").style.transform = "scale(1)";
+  document.getElementById("cheersContContCont").style.transition = "transform 0s ease 2s";
   setTimeout(() => (
-    document.getElementById("cheersCont").tabIndex = "0"
+    document.getElementById("cheersContContCont").tabIndex = "0"
   ), 2000);
   document.getElementById("sidebar").style.visibility = "visible";
   document.getElementById("sidebar").style.left = "5%";
@@ -4909,9 +4909,9 @@ function gotIt12() {
   ];
   enableCheers(enableClassLists, enableStyles);
   if (sessionStorage.points == 0) {
-    document.getElementById("cheersCont").style.animation = "emphasizeCheer 1.5s ease 0s 1 forwards";
+    document.getElementById("cheersContContCont").style.animation = "emphasizeCheer 1.5s ease 0s 1 forwards";
     setTimeout(() => (
-      document.getElementById("cheersCont").style.animation = "none"
+      document.getElementById("cheersContContCont").style.animation = "none"
     ), 1500);
   }
   document.getElementById("flagCont").style.visibility = "hidden";
@@ -6274,9 +6274,9 @@ function gotIt14() {
   ];
   enableCheers(enableClassLists, enableStyles);
   if (sessionStorage.points == 0) {
-    document.getElementById("cheersCont").style.animation = "emphasizeCheer 1.5s ease 0s 1 forwards";
+    document.getElementById("cheersContContCont").style.animation = "emphasizeCheer 1.5s ease 0s 1 forwards";
     setTimeout(() => (
-      document.getElementById("cheersCont").style.animation = "none"
+      document.getElementById("cheersContContCont").style.animation = "none"
     ), 1500);
   }
   document.getElementById("puck").style.visibility = "hidden";
@@ -6403,9 +6403,9 @@ function gotIt16() {
   sessionStorage.bend = Math.floor(Math.random() * 5);
   sessionStorage.yell = 0;
   if (sessionStorage.points == 0) {
-    document.getElementById("cheersCont").style.animation = "emphasizeCheer 1.5s ease 0s 1 forwards";
+    document.getElementById("cheersContContCont").style.animation = "emphasizeCheer 1.5s ease 0s 1 forwards";
     setTimeout(() => (
-      document.getElementById("cheersCont").style.animation = "none"
+      document.getElementById("cheersContContCont").style.animation = "none"
     ), 1500);
   }
   document.getElementById("tonyCollins").style.visibility = "hidden";
@@ -6496,9 +6496,9 @@ function gotIt17() {
   ];
   enableCheers(enableClassLists, enableStyles);
   if (sessionStorage.points == 0) {
-    document.getElementById("cheersCont").style.animation = "emphasizeCheer 1.5s ease 0s 1 forwards";
+    document.getElementById("cheersContContCont").style.animation = "emphasizeCheer 1.5s ease 0s 1 forwards";
     setTimeout(() => (
-      document.getElementById("cheersCont").style.animation = "none"
+      document.getElementById("cheersContContCont").style.animation = "none"
     ), 1500);
   }
   document.getElementById("puck").style.visibility = "hidden";
@@ -8212,8 +8212,8 @@ function gotIt24() {
   }
   document.getElementById("scoreboard").tabIndex = "-1";
   document.getElementById("scoreboard").blur();
-  document.getElementById("cheersCont").tabIndex = "-1";
-  document.getElementById("cheersCont").blur();
+  document.getElementById("cheersContContCont").tabIndex = "-1";
+  document.getElementById("cheersContContCont").blur();
   if (document.getElementById("cheers").scrollHeight > document.getElementById("cheers").offsetHeight) {
     if (document.getElementById("cheers").scrollTop > 0) {
       document.getElementById("backToTop").style.pointerEvents = "none";

@@ -10884,7 +10884,7 @@ function gameOver(event) {
   else {
     document.getElementById("quoteAuthor").style.marginLeft = "24px";
   }
-  document.getElementById("quoteAuthor").style.transition = "padding-left 0s ease 0s";
+  document.getElementById("quoteAuthor").style.transition = "margin-left 0s ease 0s";
   document.getElementById("playAgain").tabIndex = "0";
   document.getElementById("gameOver").style.visibility = "visible";
   document.getElementById("gameOver").style.opacity = "1";
@@ -11314,6 +11314,7 @@ function mobile() {
     document.getElementById("urlButton").tabIndex = "-1";
     document.getElementById("urlButton").blur();
     document.getElementById("mobileButtonContCont").style.marginBottom = "0";
+    document.getElementById("mobileButtonContCont").style.transition = "margin-bottom 0s ease 0s";
     document.getElementById("mobileButton").tabIndex = "-1";
     document.getElementById("mobileButton").blur();
     document.getElementById("mobileImgCont").tabIndex = "-1";
@@ -11476,6 +11477,7 @@ function slideshow() {
   sessionStorage.newSlide = Math.floor(Math.random() * characters.length);
   if (sessionStorage.oldSlide == undefined) {
     document.getElementById("mobileButtonContCont").style.marginBottom = "1em";
+    document.getElementById("mobileButtonContCont").style.transition = "margin-bottom 0s ease 0s";
     document.getElementById("mobileImg").style.filter = "none";
     document.getElementById("mobileImg").style.transition = "filter 0s ease 0s";
     document.getElementById("mobileImg").style.pointerEvents = "auto";

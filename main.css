@@ -2971,7 +2971,8 @@ main {
 
 #troyLassialContCont {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 47.5%);
+  grid-column-gap: 5%;
   grid-template-rows: 1fr;
   left: 25%;
   right: 25%;
@@ -3476,23 +3477,21 @@ main {
 }
 
 #troyLassialCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   position: relative;
+  align-items: flex-end;
 }
 
 .troyLassial {
   position: absolute;
-  left: 0;
-  right: 0;
   bottom: -2em;
+  width: 80%;
 }
 
 #troyLassialSanta {
   display: none;
-  height: 88%;
-}
-
-#troyLassial {
-  height: 75%;
 }
 
 #troyLassialTalkContCont {
@@ -3535,7 +3534,7 @@ main {
   padding-bottom: .25em;
   font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
   color: var(--white);
-  font-size: 1.25em;
+  font-size: 1.1em;
   font-weight: bold;
 }
 

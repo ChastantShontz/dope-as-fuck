@@ -4240,10 +4240,10 @@ function cheer(cheer, pointsIncrement, event) {
       }
       else if (document.getElementById("cheerMessage" + sessionStorage.cheer).innerHTML == "Halftime!") {
         if (sessionStorage.period == 1) {
-          document.getElementById("troyLassialTalk").innerHTML = "Halftime? Are you kidding? Even someone like me knows that there's no halftime in hockey, just three periods with breaks in between them. The real \"halftime\" isn't for another half a period. For your appalling ignorance on this sport, I'm going to take away one of your lives.";
+          document.getElementById("troyLassialTalk").innerHTML = "Halftime? Are you kidding? There's no halftime in hockey, just three periods with breaks in between. The real \"halftime\" isn't for another half a period. For your appalling ignorance, I'm going to take away one of your lives.";
         }
         else if (sessionStorage.period == 2) {
-          document.getElementById("troyLassialTalk").innerHTML = "Halftime? Are you kidding? Even someone like me knows that there's no halftime in hockey, just three periods with breaks in between them. The real \"halftime\" already went by. For your appalling ignorance on this sport, I'm going to take away one of your lives.";
+          document.getElementById("troyLassialTalk").innerHTML = "Halftime? Are you kidding? There's no halftime in hockey, just three periods with breaks in between. The real \"halftime\" already went by. For your appalling ignorance, I'm going to take away one of your lives.";
         }
       }
       else if (document.getElementById("cheerMessage" + sessionStorage.cheer).innerHTML == "Santa isn't real!") {
@@ -4255,7 +4255,7 @@ function cheer(cheer, pointsIncrement, event) {
         document.getElementById("troyLassialTalk").innerHTML = "Excuse me, this is a women's game! Calling our goalie \"sexy\" is dehumanizing and misogynistic! As punishment for your appalling microaggression, I'll be taking one of your lives away.";
       }
       else if (document.getElementById("cheerMessage" + sessionStorage.cheer).innerHTML == "Fuck SLU!") {
-        document.getElementById("troyLassialTalk").innerHTML = "Suck flu? What on Earth does that mean? Are you sure you weren't trying to say something else? Unfortunately, I can't eject you just for wanting to suck the flu. But please consider how you are representing Clarkson with your language.";
+        document.getElementById("troyLassialTalk").innerHTML = "Suck flu? What on Earth does that mean? Are you sure you weren't trying to say something else? Unfortunately, I can't eject you just for wanting to suck the flu. But please reconsider how you are representing Clarkson.";
       }
       else if (document.getElementById("cheerMessage" + sessionStorage.cheer).innerHTML == "You're a hooker!") {
         document.getElementById("troyLassialTalk").innerHTML = "Did I just hear you call " + (globalThis.players).women.slu[sessionStorage.offender].name + " a hooker? What made you think that was acceptable? I am outraged by this sexist language! Maybe you'll learn your lesson after I take one of your lives away.";
@@ -4387,7 +4387,7 @@ function troyLassialExit(event) {
     document.getElementById("troyLassialContCont").blur();
     document.getElementById("troyLassialButton").tabIndex = "-1";
     document.getElementById("troyLassialButton").blur();
-    if ((document.getElementById("troyLassialTalk").innerHTML == "It's funny, that sounded an awful lot like the \"bullshit\" word. Maybe that was intentional of you? I suppose that technically, you've done nothing wrong. I'll be watching you like a hawk, though, so beware!") || (document.getElementById("troyLassialTalk").innerHTML == "Suck flu? What on Earth does that mean? Are you sure you weren't trying to say something else? Unfortunately, I can't eject you just for wanting to suck the flu. But please consider how you are representing Clarkson with your language.")) {
+    if ((document.getElementById("troyLassialTalk").innerHTML == "It's funny, that sounded an awful lot like the \"bullshit\" word. Maybe that was intentional of you? I suppose that technically, you've done nothing wrong. I'll be watching you like a hawk, though, so beware!") || (document.getElementById("troyLassialTalk").innerHTML == "Suck flu? What on Earth does that mean? Are you sure you weren't trying to say something else? Unfortunately, I can't eject you just for wanting to suck the flu. But please reconsider how you are representing Clarkson.")) {
       document.getElementById("cheer" + sessionStorage.cheer).classList.replace("incorrectCheer", "correctCheer");
       document.getElementById("cheer" + sessionStorage.cheer).style.background = "var(--clarksonGreen)";
       document.getElementById("cheer" + sessionStorage.cheer).style.borderBottom = ".05em solid var(--clarksonGreen)";
@@ -7292,7 +7292,7 @@ function fuckSlu(event) {
   }
   else if (sessionStorage.fuckSlu == 10) {
     closeYoutubeSong(event);
-    document.getElementById("troyLassialTalk").innerHTML = "You know, it's not very sportsmanlike to use vulgar language to demean the other team like this. And it violates the ECAC's rules on harassment. I'm afraid I'm going to have to ban <i>Sweet Caroline</i> to make sure this doesn't happen again. Oh, and you lose a life, too.";
+    document.getElementById("troyLassialTalk").innerHTML = "You know, it's not very sportsmanlike to use vulgar language to demean the other team like this. I'm afraid I'm going to have to ban <i>Sweet Caroline</i> to make sure this doesn't happen again. Oh, and you lose a life, too.";
     troyLassialEntrance();
   }
 }
@@ -9823,7 +9823,7 @@ function drunk(drinksIncrement, event) {
     }
     speakerPause();
     sessionStorage.lives = 0;
-    document.getElementById("troyLassialTalk").innerHTML = "I have just received an incident report of which you were involved. It seems like last knight you blacked out from excessive alcohol comsumption and had to be taken to the hospital, for which you were billed $1,000. To ensure this doesn't happen again, I'm going to have to ban you from playing this game anymore.";
+    document.getElementById("troyLassialTalk").innerHTML = "It seems last knight you blacked out from excessive alcohol comsumption and had to be taken to the hospital. To ensure this doesn't happen again, I'm going to have to ban you from playing this game anymore.";
     troyLassialEntrance();
   }
 }

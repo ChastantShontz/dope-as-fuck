@@ -3009,7 +3009,7 @@ main {
   border-radius: 1em;
   background: var(--white);
   opacity: 0;
-  padding: 1%;
+  padding: 1em;
   border: .05em solid var(--clarksonGreen);
   align-items: center;
 }
@@ -3588,7 +3588,10 @@ main {
   border-radius: .5em;
   background: var(--buttonGreen);
   min-width: 25%;
-  padding: .25em;
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
   font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
   color: var(--white);
   font-size: 2em;
@@ -3733,7 +3736,10 @@ main {
   border-radius: .5em;
   background: var(--buttonGreen);
   min-width: 33%;
-  padding: .25em;
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
   font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
   color: var(--white);
   font-size: 2em;

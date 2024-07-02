@@ -1435,6 +1435,7 @@ main {
   border-radius: .1em;
   background: var(--white);
   width: 16em;
+  padding: .5em;
   box-shadow: .25em .25em .5em 0 var(--gray);
   transform: scale(0);
   pointer-events: none;
@@ -1513,8 +1514,9 @@ main {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  height: 6.5em;
-  width: 100%;
+  right: .5em;
+  height: 6em;
+  width: calc(100% + 1em);
   align-items: flex-start;
 }
 
@@ -1567,7 +1569,7 @@ main {
   position: absolute;
   border-radius: .1em;
   background: var(--white);
-  height: 6em;
+  height: 100%;
   width: 6em;
   margin-left: .5em;
 }
@@ -1707,7 +1709,7 @@ main {
 
 .playerDivider {
   width: 90%;
-  margin-top: .25em;
+  margin-top: .5em;
   margin-bottom: .5em;
 }
 
@@ -1720,8 +1722,7 @@ main {
 }
 
 .playerStats {
-  width: 96%;
-  margin: 2%;
+  width: 100%;
 }
 
 .clarksonStats {
@@ -1767,7 +1768,7 @@ main {
 }
 
 .playerVisiting {
-  margin: .25em;
+  margin-top: .25em;
   font-family: "EB Garamond", "Merriweather", "Times New Roman", serif;
   font-size: .75em;
 }

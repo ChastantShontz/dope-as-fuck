@@ -3658,37 +3658,36 @@ main {
   text-align: center;
 }
 
-#gameOverMessage {
+#gameOverHeading {
   font-family: "Press Start 2P", fantasy;
   font-size: 4em;
   font-weight: bold;
   text-align: center;
 }
 
-#gameOverYourScore {
+.gameOverScore {
   font-family: "Russo One", fantasy;
   color: var(--blue);
-  font-size: 2em;
   font-weight: bold;
 }
 
-#gameOverYourScoreNum,
-#gameOverHighScoreNum {
+.gameOverHighScore {
+  display: none;
+  font-size: 1.25em;
+}
+
+#gameOverYourScore {
+  font-size: 2em;
+}
+
+.gameOverScoreNum {
   font-family: "Oswald", fantasy;
   color: var(--orange);
 }
 
-#gameOverScoreSubheadings {
+#gameOverHighScores {
   display: none;
   margin-left: 1em;
-}
-
-.gameOverScoreSubheading {
-  display: none;
-  font-family: "Russo One", fantasy;
-  color: var(--blue);
-  font-size: 1.25em;
-  font-weight: bold;
 }
 
 #quote {

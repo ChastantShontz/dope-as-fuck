@@ -4372,8 +4372,8 @@ function troyLassialExit(event) {
       document.getElementById("troyLassialContCont").blur();
       document.getElementById("troyLassialButton").tabIndex = "-1";
       document.getElementById("troyLassialButton").blur();
-      document.getElementById("gameOverMessage").style.color = "var(--sluRed)";
-      document.getElementById("gameOverMessage").style.transition = "color 0s ease 0s";
+      document.getElementById("gameOverHeading").style.color = "var(--sluRed)";
+      document.getElementById("gameOverHeading").style.transition = "color 0s ease 0s";
       gameOver(event);
       if (sessionStorage.drinks >= 53) {
         console.log("Well, you know what they say: we're not musicians with an alcohol problem, we're alcoholics with a music problem");
@@ -8450,8 +8450,8 @@ function goodbye() {
   if ((sessionStorage.backup != undefined) && (sessionStorage.backup != "")) {
     sessionStorage.backup = "";
   }
-  document.getElementById("gameOverMessage").style.color = "var(--clarksonGreen)";
-  document.getElementById("gameOverMessage").style.transition = "color 0s ease 0s";
+  document.getElementById("gameOverHeading").style.color = "var(--clarksonGreen)";
+  document.getElementById("gameOverHeading").style.transition = "color 0s ease 0s";
   document.getElementById("ok").onclick = gameOver;
 }
 
@@ -8534,8 +8534,8 @@ function declineTerms(event) {
   document.getElementById("cover").style.transition = "all .25s ease 0s";
   document.getElementById("cover").tabIndex = "-1";
   document.getElementById("cover").blur();
-  document.getElementById("gameOverMessage").style.color = "var(--clarksonGreen)";
-  document.getElementById("gameOverMessage").style.transition = "color 0s ease 0s";
+  document.getElementById("gameOverHeading").style.color = "var(--clarksonGreen)";
+  document.getElementById("gameOverHeading").style.transition = "color 0s ease 0s";
   document.getElementById("ok").onclick = gameOver;
 }
 
@@ -9595,8 +9595,8 @@ function failIce(event) {
     document.getElementById("bapple").style.transform = "scale(1)";
     document.getElementById("bapple").style.transition = "transform .25s ease 0s";
   }
-  document.getElementById("gameOverMessage").style.color = "var(--sluRed)";
-  document.getElementById("gameOverMessage").style.transition = "color 0s ease 0s";
+  document.getElementById("gameOverHeading").style.color = "var(--sluRed)";
+  document.getElementById("gameOverHeading").style.transition = "color 0s ease 0s";
   gameOver(event);
 }
 
@@ -10877,7 +10877,7 @@ function gameOver(event) {
       document.getElementById("gameOverHighScoreNum").innerHTML = localStorage.highScore;
       document.getElementById("gameOverHighScore").style.display = "block";
     }
-    document.getElementById("gameOverScoreSubheadings").style.display = "block";
+    document.getElementById("gameOverHighScores").style.display = "block";
   }
   sessionStorage.quote = Math.floor(Math.random() * quotes.length);
   document.getElementById("quoteLine").innerHTML = quotes[sessionStorage.quote].line;

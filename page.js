@@ -1190,7 +1190,7 @@ let quotes = [
     author: "<b>John</b>"
   },
   {
-    line: "My cousin's name is \"Fingers.\"",
+    line: "My cousin's name is Fingers.",
     author: "<b>Liam</b>"
   },
   {
@@ -4877,7 +4877,7 @@ function gotIt11() {
   sessionStorage.songPrime = 67;
   document.getElementById("ok").onclick = openSelection;
   sessionStorage.function = 12;
-  console.log("Hey... That hurts, man...");
+  console.log("Hey... That hurts, man");
 }
 
 function gotIt12() {
@@ -8803,7 +8803,7 @@ function drinkingSongSetup() {
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "LinesContCont").style.opacity = "1";
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "LinesContCont").style.transition = "all .25s ease .25s";
     if (sessionStorage.singing == 1) {
-      console.log("My favorite part of the knight!");
+      console.log("My favorite part of the knight");
     }
     else if (sessionStorage.singing == 3) {
       console.log("Suck on that, Mom");
@@ -9052,7 +9052,7 @@ function drinkingSongSecondResponse(event) {
         document.getElementById("tijuanaButton").style.visibility = "hidden";
         document.getElementById("tijuanaButton").style.opacity = "0";
         document.getElementById("tijuanaButton").style.transition = "visibility 0s ease 0s, opacity 0s ease 0s, transform .1s ease 0s";
-        console.log("My favorite part of the knight!");
+        console.log("My favorite part of the knight");
       }
       document.getElementById("tijuanaLinesContCont").style.visibility = "hidden";
       document.getElementById("tijuanaLinesContCont").style.opacity = "0";
@@ -9111,7 +9111,7 @@ function drinkingSongSecondResponse(event) {
         console.log("OUCH");
       }
       else if (document.getElementById("theSMManVerse" + sessionStorage.theSMManLine).innerHTML == "...take my roommate?") {
-        console.log("I can, and it sure felt good!");
+        console.log("I can, and it sure felt good");
       }
       else if (document.getElementById("theSMManVerse" + sessionStorage.theSMManLine).innerHTML == "...take Shane?") {
         console.log("I really hope Chawgo never finds this feature");
@@ -9966,7 +9966,7 @@ function cuntEmpireExit() {
   document.getElementById("cuntEmpireAdvertisementLink").tabIndex = "-1";
   document.getElementById("cuntEmpireAdvertisementLink").blur();
   setTimeout(cuntEmpireEntrance, 600000);
-  console.log("Not horny enough? Maybe later...");
+  console.log("Not horny enough? Maybe later");
 }
 
 function viewAccountToggleOpen() {
@@ -10250,7 +10250,7 @@ function accountStore(field) {
         console.log("Oh, I'm here?");
       }
       else if ((localStorage.name).match(/charl(ie|es)/ism)) {
-        console.log("You know, " + localStorage.name + " has kind of a sexy ring to it");
+        console.log(localStorage.name + " has kind of a sexy ring to it");
       }
       else if ((localStorage.name).match(/\bben/ism)) {
         console.log("Eww, " + localStorage.name + " is an awful name");
@@ -10267,8 +10267,8 @@ function accountStore(field) {
       else if ((localStorage.name).match(/(isa)?bella/ism)) {
         console.log("No, who told you, " + localStorage.name + "?");
       }
-      else if ((localStorage.name).match(/co(l)*in/ism)) {
-        console.log("If " + localStorage.name + " is code for Colin Whitesell, we all miss you, bro!");
+      else if ((localStorage.name).match(/co(l)?in/ism)) {
+        console.log("If " + localStorage.name + " is code for Colin Whitesell, we all miss you, bro");
       }
       else {
         console.log(localStorage.name + ", that's a nice name!");
@@ -10276,7 +10276,7 @@ function accountStore(field) {
     }
     else if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "year") {
       if ((localStorage.year).match(/school/ism)) {
-        console.log("Eww, children, gross...");
+        console.log("Eww, children, gross");
       }
       else if ((localStorage.year).match(/grad|alum/ism)) {
         console.log("Damn, you're old!");
@@ -10316,7 +10316,7 @@ function accountStore(field) {
         console.log("I'm from " + localStorage.hometown + " too, small world");
       }
       else if ((localStorage.hometown).match(/ithaca/ism)) {
-        console.log("Jump for joy!");
+        console.log("Jump for joy, Cornell!");
       }
       else if ((localStorage.hometown).match(/new haven/ism)) {
         console.log("Eww, so that's why you smell");

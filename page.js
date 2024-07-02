@@ -9394,7 +9394,7 @@ function singIce(event) {
     document.getElementById("conductor").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
     document.getElementById("conductor").onclick = pillow;
   }
-  document.getElementById("conductorCont").style.zIndex = "93";
+  document.getElementById("conductorCont").style.zIndex = "92";
   document.getElementById("viewAccountToggle").style.pointerEvents = "none";
   document.getElementById("viewAccountToggle").tabIndex = "-1";
   document.getElementById("viewAccountToggle").blur();
@@ -9417,7 +9417,7 @@ function singIce(event) {
   document.getElementById("iceContContCont").style.transform = "skew(" + (Math.ceil(Math.random() * transformValue) * ((Math.round(Math.random())) ? (1) : (-1))) + "deg) scale(1)";
   document.getElementById("iceContContCont").style.transition = "visibility 0s ease 0s, left 1s ease 0s, right 1s ease 0s, top 1s ease 0s, bottom 1s ease 0s, background .25s ease .75s, opacity 0s ease 0s, border .25s ease .75s, transform 1s ease 0s";
   document.getElementById("iceContContCont").tabIndex = "0";
-  document.getElementById("cover").style.zIndex = "92";
+  document.getElementById("cover").style.zIndex = "91";
   document.getElementById("cover").style.visibility = "visible";
   document.getElementById("cover").style.background = "rgba(153, 153, 153, .75)";
   document.getElementById("cover").style.opacity = "1";
@@ -9515,7 +9515,7 @@ function bitchIce(event) {
       sessionStorage.drinks++;
       localStorage.totalDrinks++;
     }
-    document.getElementById("conductorCont").style.zIndex = "94";
+    document.getElementById("conductorCont").style.zIndex = "93";
     document.getElementById("conductorCont").style.filter = "blur(0)";
     document.getElementById("conductorCont").style.transform = "skew(0)";
     document.getElementById("conductorCont").style.transition = "all 0s ease 0s";
@@ -9538,7 +9538,7 @@ function bitchIce(event) {
     document.getElementById("iceButton").tabIndex = "-1";
     document.getElementById("iceButton").disabled = true;
     document.getElementById("iceButton").blur();
-    document.getElementById("triangleFaceCont").style.zIndex = "93";
+    document.getElementById("triangleFaceCont").style.zIndex = "92";
     speakerPause();
     sessionStorage.lives = 0;
     enableButton();
@@ -9577,8 +9577,8 @@ function bitchIce(event) {
 }
 
 function failIce(event) {
-  document.getElementById("conductorCont").style.zIndex = "93";
-  document.getElementById("cover").style.zIndex = "94";
+  document.getElementById("conductorCont").style.zIndex = "92";
+  document.getElementById("cover").style.zIndex = "93";
   document.getElementById("iceContContCont").style.visibility = "hidden";
   document.getElementById("iceContContCont").style.opacity = "0";
   document.getElementById("iceContContCont").style.transition = "all .25s ease 0s";
@@ -9586,7 +9586,7 @@ function failIce(event) {
   document.getElementById("iceContContCont").blur();
   document.getElementById("iceButton").tabIndex = "-1";
   document.getElementById("iceButton").blur();
-  document.getElementById("triangleFaceCont").style.zIndex = "92";
+  document.getElementById("triangleFaceCont").style.zIndex = "91";
   if (sessionStorage.beer == 1) {
     document.getElementById("busch").style.transform = "scale(1)";
     document.getElementById("busch").style.transition = "transform .25s ease 0s";
@@ -9639,8 +9639,8 @@ function finishIce(event) {
   if ((sessionStorage.backup != undefined) && (sessionStorage.backup != "")) {
     sessionStorage.backup = "";
   }
-  document.getElementById("conductorCont").style.zIndex = "92";
-  document.getElementById("cover").style.zIndex = "93";
+  document.getElementById("conductorCont").style.zIndex = "91";
+  document.getElementById("cover").style.zIndex = "92";
   if (sessionStorage.drinks < 50) {
     document.getElementById("cover").style.visibility = "hidden";
     document.getElementById("cover").style.opacity = "0";
@@ -9815,9 +9815,9 @@ function drunk(drinksIncrement, event) {
   }
   else if (sessionStorage.drinks >= 53) {
     sessionStorage.level = 7;
-    document.getElementById("conductorCont").style.zIndex = "93";
-    document.getElementById("cover").style.zIndex = "94";
-    document.getElementById("triangleFaceCont").style.zIndex = "92";
+    document.getElementById("conductorCont").style.zIndex = "92";
+    document.getElementById("cover").style.zIndex = "93";
+    document.getElementById("triangleFaceCont").style.zIndex = "91";
     document.getElementById("triangleFaceCont").style.opacity = "1";
     document.getElementById("triangleFaceCont").style.transition = "opacity 0s ease 0s";
     if (sessionStorage.beer == 1) {
@@ -10049,14 +10049,14 @@ function openAccount(event) {
   document.getElementById("account").style.opacity = "1";
   document.getElementById("account").style.transition = "all 0s ease 0s";
   document.getElementById("account").tabIndex = "0";
-  document.getElementById("cover").style.zIndex = "94";
+  document.getElementById("cover").style.zIndex = "93";
   document.getElementById("cover").style.visibility = "visible";
   document.getElementById("cover").style.background = "rgba(153, 153, 153, .95)";
   document.getElementById("cover").style.opacity = "1";
   document.getElementById("cover").style.transition = "visibility .25s ease 0s, background 0s ease 0s, opacity .25s ease 0s";
   document.getElementById("cover").tabIndex = "0";
   if (sessionStorage.drinks != undefined) {
-    document.getElementById("triangleFaceCont").style.zIndex = "93";
+    document.getElementById("triangleFaceCont").style.zIndex = "92";
   }
   sessionStorage.scope = "input";
   document.onclick = null;
@@ -10776,7 +10776,7 @@ function hideMemory() {
 
 function closeAccount() {
   sessionStorage.removeItem("scope");
-  document.getElementById("cover").style.zIndex = "93";
+  document.getElementById("cover").style.zIndex = "92";
   document.getElementById("cover").style.visibility = "hidden";
   document.getElementById("cover").style.background = "rgba(153, 153, 153, .75)";
   document.getElementById("cover").style.opacity = "0";
@@ -10816,7 +10816,7 @@ function closeAccount() {
   document.getElementById("accountExit").tabIndex = "-1";
   document.getElementById("accountExit").blur();
   if (sessionStorage.drinks != undefined) {
-    document.getElementById("triangleFaceCont").style.zIndex = "94";
+    document.getElementById("triangleFaceCont").style.zIndex = "93";
   }
   document.onclick = collapse;
   if ((document.getElementById("knightmobile").style.left == "13%") || (document.getElementById("knightmobile").style.bottom == "35%")) {

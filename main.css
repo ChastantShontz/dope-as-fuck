@@ -33,7 +33,7 @@ main {
 }
 
 #loading {
-  z-index: 96;
+  z-index: 95;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -138,7 +138,7 @@ main {
 }
 
 #conductorCont {
-  z-index: 92;
+  z-index: 91;
   display: grid;
   grid-template-columns: calc(33% - .1em) calc(67% - .1em);
   grid-column-gap: .2em;
@@ -274,7 +274,7 @@ main {
 }
 
 #viewAccount {
-  z-index: 91;
+  z-index: 90;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -2798,7 +2798,7 @@ main {
 }
 
 #triangleFaceCont {
-  z-index: 94;
+  z-index: 93;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -2817,7 +2817,7 @@ main {
 }
 
 #cuntEmpireContContCont {
-  z-index: 95;
+  z-index: 94;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -2909,7 +2909,7 @@ main {
 }
 
 #raffle {
-  z-index: 97;
+  z-index: 96;
   display: none;
   position: absolute;
   left: 0;
@@ -2920,7 +2920,7 @@ main {
 }
 
 #cover {
-  z-index: 93;
+  z-index: 92;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -4184,7 +4184,7 @@ main {
 }
 
 #password {
-  z-index: 98;
+  z-index: 97;
   position: fixed;
   left: calc(50% - 12.5em);
   right: calc(50% - 12.5em);
@@ -4246,7 +4246,7 @@ main {
 }
 
 #secret {
-  z-index: 98;
+  z-index: 97;
   visibility: hidden;
   position: fixed;
   left: 0;
@@ -6105,7 +6105,7 @@ screen and (max-width: 1200px) {
   }
 
   #mobile {
-    z-index: 99;
+    z-index: 98;
     display: flex;
     flex-direction: column;
     justify-content: center;

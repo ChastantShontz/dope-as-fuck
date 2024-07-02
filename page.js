@@ -10255,6 +10255,9 @@ function accountStore(field) {
       else if ((localStorage.name).match(/\bben/ism)) {
         console.log("Eww, " + localStorage.name + " is an awful name");
       }
+      else if ((localStorage.name).match(/(connor\s)?ch(aw)?awgo/ism)) {
+        console.log("Many moons, " + localStorage.name + ", my redskin");
+      }
       else if ((localStorage.name).match(/ryan/ism)) {
         console.log(localStorage.name + " sounds like a boy's name, if you're a chick your parents hated you");
       }

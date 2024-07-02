@@ -4481,7 +4481,7 @@ function gotIt7() {
   document.getElementById("goldenKnight").style.left = "52%";
   document.getElementById("goldenKnight").style.opacity = "1";
   document.getElementById("goldenKnight").style.transition = "visibility .25s ease .25s, left 0s ease 6.5s, opacity .25s ease .25s";
-  document.getElementById("goldenKnight").style.animation = "goldenKnightLap 6s ease .5s 1 forwards";
+  document.getElementById("goldenKnight").style.animation = "goldenKnightLap 6s linear .5s 1 forwards";
   setTimeout(() => (
     document.getElementById("goldenKnight").style.animation = "none"
   ), 6500);
@@ -4524,7 +4524,7 @@ function gotIt8() {
       document.getElementById("zebra2").style.right = "52%";
       document.getElementById("zebra2").style.transition = "visibility .25s ease .25s, right 0s ease 6.5s, opacity .25s ease .25s";
     }
-    document.getElementsByClassName("zebra")[i].style.animation = "zebra" + animationName + "Lap 6s ease .5s 1 forwards";
+    document.getElementsByClassName("zebra")[i].style.animation = "zebra" + animationName + "Lap 6s linear .5s 1 forwards";
     const reset = (x) => {
       setTimeout(() => (
         document.getElementsByClassName("zebra")[x].style.animation = "none"

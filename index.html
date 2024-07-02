@@ -2743,10 +2743,12 @@
           </div>
           <button type="button" title="Exit (escape)" id="youtubeExit" tabindex="-1" aria-label="Close the YouTube video player" onclick="closeYoutubeSong(event)">&times;</button>
         </div>
-        <div class="modal drunkCont" id="iceContCont">
-          <div id="iceCont">
-            <img src="img/ice.png" alt="A Smirnoff Ice that you are now forced to drink or you'll be a bitch" fetchpriority="low" decoding="async" loading="lazy" class="load" id="ice" onload="load(event)">
-            <div id="iceCover">
+        <div class="modal drunkCont" id="iceContContCont">
+          <div id="iceContCont">
+            <div id="iceCont">
+              <img src="img/ice.png" alt="A Smirnoff Ice that you are now forced to drink or you'll be a bitch" fetchpriority="low" decoding="async" loading="lazy" class="load" id="ice" onload="load(event)">
+              <div id="iceCover">
+              </div>
             </div>
             <div id="iceButtonCont">
               <button type="button" class="defaultButton drunkText" id="iceButton" tabindex="-1" aria-label="Drink the Smirnoff Ice" onclick="drinkIce(event)">Drink!</button>

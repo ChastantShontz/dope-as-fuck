@@ -9406,17 +9406,17 @@ function singIce(event) {
   document.getElementById("iceButtonCont").style.opacity = "1";
   document.getElementById("iceButtonCont").style.transition = "all .25s ease .75s";
   var transformValue = ((sessionStorage.level - 1) * 9);
-  document.getElementById("iceContCont").style.visibility = "visible";
-  document.getElementById("iceContCont").style.left = "35%";
-  document.getElementById("iceContCont").style.right = "35%";
-  document.getElementById("iceContCont").style.top = "10%";
-  document.getElementById("iceContCont").style.bottom = "30%";
-  document.getElementById("iceContCont").style.background = "var(--white)";
-  document.getElementById("iceContCont").style.opacity = "1";
-  document.getElementById("iceContCont").style.border = ".05em solid var(--clarksonGreen)";
-  document.getElementById("iceContCont").style.transform = "skew(" + (Math.ceil(Math.random() * transformValue) * ((Math.round(Math.random())) ? (1) : (-1))) + "deg) scale(1)";
-  document.getElementById("iceContCont").style.transition = "visibility 0s ease 0s, left 1s ease 0s, right 1s ease 0s, top 1s ease 0s, bottom 1s ease 0s, background .25s ease .75s, opacity 0s ease 0s, border .25s ease .75s, transform 1s ease 0s";
-  document.getElementById("iceContCont").tabIndex = "0";
+  document.getElementById("iceContContCont").style.visibility = "visible";
+  document.getElementById("iceContContCont").style.left = "35%";
+  document.getElementById("iceContContCont").style.right = "35%";
+  document.getElementById("iceContContCont").style.top = "10%";
+  document.getElementById("iceContContCont").style.bottom = "30%";
+  document.getElementById("iceContContCont").style.background = "var(--white)";
+  document.getElementById("iceContContCont").style.opacity = "1";
+  document.getElementById("iceContContCont").style.border = ".05em solid var(--clarksonGreen)";
+  document.getElementById("iceContContCont").style.transform = "skew(" + (Math.ceil(Math.random() * transformValue) * ((Math.round(Math.random())) ? (1) : (-1))) + "deg) scale(1)";
+  document.getElementById("iceContContCont").style.transition = "visibility 0s ease 0s, left 1s ease 0s, right 1s ease 0s, top 1s ease 0s, bottom 1s ease 0s, background .25s ease .75s, opacity 0s ease 0s, border .25s ease .75s, transform 1s ease 0s";
+  document.getElementById("iceContContCont").tabIndex = "0";
   document.getElementById("cover").style.zIndex = "92";
   document.getElementById("cover").style.visibility = "visible";
   document.getElementById("cover").style.background = "rgba(153, 153, 153, .75)";
@@ -9579,11 +9579,11 @@ function bitchIce(event) {
 function failIce(event) {
   document.getElementById("conductorCont").style.zIndex = "93";
   document.getElementById("cover").style.zIndex = "94";
-  document.getElementById("iceContCont").style.visibility = "hidden";
-  document.getElementById("iceContCont").style.opacity = "0";
-  document.getElementById("iceContCont").style.transition = "all .25s ease 0s";
-  document.getElementById("iceContCont").tabIndex = "-1";
-  document.getElementById("iceContCont").blur();
+  document.getElementById("iceContContCont").style.visibility = "hidden";
+  document.getElementById("iceContContCont").style.opacity = "0";
+  document.getElementById("iceContContCont").style.transition = "all .25s ease 0s";
+  document.getElementById("iceContContCont").tabIndex = "-1";
+  document.getElementById("iceContContCont").blur();
   document.getElementById("iceButton").tabIndex = "-1";
   document.getElementById("iceButton").blur();
   document.getElementById("triangleFaceCont").style.zIndex = "92";
@@ -9649,18 +9649,18 @@ function finishIce(event) {
     document.getElementById("cover").blur();
   }
   var transformValue = ((sessionStorage.level - 1) * 9);
-  document.getElementById("iceContCont").style.visibility = "hidden";
-  document.getElementById("iceContCont").style.left = "16%";
-  document.getElementById("iceContCont").style.right = "54%";
-  document.getElementById("iceContCont").style.top = "30%";
-  document.getElementById("iceContCont").style.bottom = "10%";
-  document.getElementById("iceContCont").style.background = "transparent";
-  document.getElementById("iceContCont").style.opacity = "0";
-  document.getElementById("iceContCont").style.border = ".05em solid transparent";
-  document.getElementById("iceContCont").style.transform = "skew(" + (Math.ceil(Math.random() * transformValue) * ((Math.round(Math.random())) ? (1) : (-1))) + "deg) scale(0)";
-  document.getElementById("iceContCont").style.transition = "visibility .25s ease 0s, left 0s ease .25s, right 0s ease .25s, top 0s ease .25s, bottom 0s ease .25s, background 0s ease .25s, opacity .25s ease 0s, border 0s ease .25s, transform 0s ease .25s";
-  document.getElementById("iceContCont").tabIndex = "-1";
-  document.getElementById("iceContCont").blur();
+  document.getElementById("iceContContCont").style.visibility = "hidden";
+  document.getElementById("iceContContCont").style.left = "16%";
+  document.getElementById("iceContContCont").style.right = "54%";
+  document.getElementById("iceContContCont").style.top = "30%";
+  document.getElementById("iceContContCont").style.bottom = "10%";
+  document.getElementById("iceContContCont").style.background = "transparent";
+  document.getElementById("iceContContCont").style.opacity = "0";
+  document.getElementById("iceContContCont").style.border = ".05em solid transparent";
+  document.getElementById("iceContContCont").style.transform = "skew(" + (Math.ceil(Math.random() * transformValue) * ((Math.round(Math.random())) ? (1) : (-1))) + "deg) scale(0)";
+  document.getElementById("iceContContCont").style.transition = "visibility .25s ease 0s, left 0s ease .25s, right 0s ease .25s, top 0s ease .25s, bottom 0s ease .25s, background 0s ease .25s, opacity .25s ease 0s, border 0s ease .25s, transform 0s ease .25s";
+  document.getElementById("iceContContCont").tabIndex = "-1";
+  document.getElementById("iceContContCont").blur();
   document.getElementById("iceCover").style.bottom = "100%";
   document.getElementById("iceCover").style.transition = "bottom 0s ease .25s";
   document.getElementById("iceButton").tabIndex = "-1";
@@ -9804,7 +9804,7 @@ function drunk(drinksIncrement, event) {
     var transitionDuration = ((sessionStorage.level - 1) * .25);
     for (var i = 0; i < document.getElementsByClassName("drunkCont").length; i++) {
       document.getElementsByClassName("drunkCont")[i].style.filter = "blur(" + filterValue + "em)";
-      if ((document.getElementsByClassName("drunkCont")[i] == document.getElementById("promoCont")) || (document.getElementsByClassName("drunkCont")[i] == document.getElementById("iceContCont"))) {
+      if ((document.getElementsByClassName("drunkCont")[i] == document.getElementById("promoCont")) || (document.getElementsByClassName("drunkCont")[i] == document.getElementById("iceContContCont"))) {
         document.getElementsByClassName("drunkCont")[i].style.transform = "skew(" + (Math.ceil(Math.random() * transformValue) * ((Math.round(Math.random())) ? (1) : (-1))) + "deg) scale(0)";
       }
       else {

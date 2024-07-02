@@ -2953,9 +2953,10 @@ main {
   align-items: center;
 }
 
-#iceContCont {
+#iceContContCont {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 39% 59%;
+  grid-column-gap: 2%;
   grid-template-rows: 1fr;
   visibility: hidden;
   left: 16%;
@@ -2964,6 +2965,7 @@ main {
   bottom: 10%;
   border-radius: 1em;
   opacity: 0;
+  padding: 1em;
   border: .05em solid transparent;
   transform: skew(0)
              scale(0);
@@ -2971,8 +2973,8 @@ main {
 
 #troyLassialContCont {
   display: grid;
-  grid-template-columns: repeat(2, 47.5%);
-  grid-column-gap: 5%;
+  grid-template-columns: repeat(2, 49%);
+  grid-column-gap: 2%;
   grid-template-rows: 1fr;
   left: 25%;
   right: 25%;
@@ -3404,7 +3406,7 @@ main {
   background: rgba(179, 14, 15, .5);
 }
 
-#iceCont {
+#iceContCont {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -3412,13 +3414,24 @@ main {
   align-items: center;
 }
 
+#iceCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+
 #ice {
-  height: 60vh;
+  position: absolute;
+  height: 95%;
 }
 
 #iceCover {
   position: absolute;
-  left: 10%;
+  left: 0;
   right: 0;
   top: 0;
   bottom: 100%;
@@ -3451,7 +3464,7 @@ main {
   flex-direction: row;
   justify-content: center;
   position: relative;
-  right: 20%;
+  right: 0;
   align-items: center;
 }
 

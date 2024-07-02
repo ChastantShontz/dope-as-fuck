@@ -2398,6 +2398,7 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
+  padding: .5em;
   border-bottom-left-radius: .8em;
   border-bottom-right-radius: .8em;
   opacity: 0;

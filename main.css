@@ -167,6 +167,9 @@ main {
 #conductorName {
   width: 100%;
   padding-left: 1em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
   border-bottom: .2rem solid var(--clarksonGreen);
   font-family: "Russo One", fantasy;
   color: var(--clarksonGreen);
@@ -182,7 +185,7 @@ main {
 
 #okSpacer {
   float: right;
-  height: 5.2em;
+  height: 5em;
   width: 0;
 }
 
@@ -813,6 +816,10 @@ main {
 
 #scoreboardHeading {
   width: 100%;
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
   border-bottom: .2rem solid var(--blue);
   font-family: "Russo One", fantasy;
   color: var(--blue);
@@ -871,6 +878,10 @@ main {
 
 #cheerHeading {
   width: 100%;
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
   border-bottom: .2rem solid var(--blue);
   font-family: "Russo One", fantasy;
   color: var(--blue);
@@ -2340,6 +2351,10 @@ main {
 
 #drinkingSongsHeading {
   width: 100%;
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
   border-bottom: .2rem solid var(--clarksonGreen);
   font-family: "Russo One", fantasy;
   color: var(--clarksonGreen);
@@ -2550,6 +2565,10 @@ main {
 
 #dafCounterHeading {
   width: 100%;
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
   border-bottom: .2rem solid var(--clarksonGreen);
   font-family: "Russo One", fantasy;
   color: var(--blue);
@@ -3525,6 +3544,9 @@ main {
 #troyLassialName {
   width: 100%;
   padding-left: 1em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
   border-bottom: .2rem solid var(--clarksonGreen);
   font-family: "Russo One", fantasy;
   color: var(--clarksonGreen);

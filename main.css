@@ -178,14 +178,14 @@ main {
 }
 
 #conductorTalkCont {
-  height: 7.9em;
+  height: 7.65em;
   width: 100%;
   overflow-y: auto;
 }
 
 #okSpacer {
   float: right;
-  height: 5em;
+  height: 4.95em;
   width: 0;
 }
 

@@ -4849,40 +4849,63 @@
         }
 
         #noscriptHeading {
+          margin-left: .5em;
           font-family: "Arial", sans-serif;
           font-size: 2em;
+          font-weight: bold;
         }
 
         #noscriptMessage {
           font-family: "Times New Roman", serif;
         }
 
+        #noscriptEnable {
+          list-style: none;
+        }
+
         .noscriptEnableBrowser {
+          margin-left: -1em;
           font-family: "Times New Roman", serif;
         }
 
-        #noscriptEnableGoogleChrome {
-          list-style: url("img/googleChrome.png");
+        .noscriptEnableBrowser::before {
+          content: "";
+          display: inline-block;
+          height: .75em;
+          width: .75em;
+          margin-right: .25em;
         }
 
-        #noscriptEnableMozillaFirefox {
-          list-style: url("img/mozillaFirefox.png");
+        #noscriptEnableGoogleChrome::before {
+          background: url("img/googleChrome.png") center / cover;
         }
 
-        #noscriptEnableMicrosoftEdge {
-          list-style: url("img/microsoftEdge.png");
+        #noscriptEnableMozillaFirefox::before {
+          background: url("img/mozillaFirefox.png") center / cover;
         }
 
-        #noscriptEnableSafari {
-          list-style: url("img/safari.png");
+        #noscriptEnableMicrosoftEdge::before {
+          background: url("img/microsoftEdge.png") center / cover;
         }
 
-        #noscriptEnableOpera {
-          list-style: url("img/opera.png");
+        #noscriptEnableSafari::before {
+          background: url("img/safari.png") center / cover;
         }
 
-        #noscriptEnableInternetExplorer {
-          list-style: url("img/internetExplorer.png");
+        #noscriptEnableOpera::before {
+          background: url("img/opera.png") center / cover;
+        }
+
+        #noscriptEnableInternetExplorer::before {
+          background: url("img/internetExplorer.png") center / cover;
+        }
+
+        .noscriptEnableBrowserLink {
+          color: var(--black) !important;
+        }
+
+        .noscriptEnableBrowserLink:hover > .browser {
+          text-decoration: underline currentColor solid .05em;
         }
 
         .browser {
@@ -4913,6 +4936,10 @@
           color: var(--internetExplorerBlue);
         }
 
+        .noscriptEnableBrowserOpenInNew {
+          font-weight: bold;
+        }
+
         :root {
           --operaRed: #FF1429;
           --googleChromeRed: #DD4C40;
@@ -4920,6 +4947,7 @@
           --microsoftEdgeTurquoise: #35C6B6;
           --safariBlue: #07B5EB;
           --internetExplorerBlue: #38A3DF;
+          --black: #000000;
           --white: #FFFFFF;
         }
 
@@ -4938,12 +4966,12 @@
         </div>
         <br>
         <ul id="noscriptEnable">
-          <li class="noscriptEnableBrowser" id="noscriptEnableGoogleChrome"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/chrome" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Google Chrome docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableGoogleChromeLink" aria-label="Learn how to enable JavaScript on Google Chrome">Enable on <span class="browser" id="googleChrome">Google Chrome</span><span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableGoogleChromeOpenInNew">open_in_new</span></a></li>
-          <li class="noscriptEnableBrowser" id="noscriptEnableMozillaFirefox"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/firefox" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Mozilla Firefox docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableMozillaFirefoxLink" aria-label="Learn how to enable JavaScript on Mozilla Firefox">Enable on <span class="browser" id="mozillaFirefox">Mozilla Firefox</span><span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableMozillaFirefoxOpenInNew">open_in_new</span></a></li>
-          <li class="noscriptEnableBrowser" id="noscriptEnableMicrosoftEdge"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/edge" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Microsoft Edge docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableMicrosoftEdgeLink" aria-label="Learn how to enable JavaScript on Microsoft Edge">Enable on <span class="browser" id="microsoftEdge">Microsoft Edge</span><span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableMicrosoftEdgeOpenInNew">open_in_new</span></a></li>
-          <li class="noscriptEnableBrowser" id="noscriptEnableSafari"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/safari" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Safari docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableSafariLink" aria-label="Learn how to enable JavaScript on Safari">Enable on <span class="browser" id="safari">Safari</span><span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableSafariOpenInNew">open_in_new</span></a></li>
-          <li class="noscriptEnableBrowser" id="noscriptEnableOpera"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/opera" hreflang="en-us" charset="utf-8" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Opera docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableOperaLink" aria-label="Learn how to enable JavaScript on Opera">Enable on <span class="browser" id="opera">Opera</span><span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableOperaOpenInNew">open_in_new</span></a></li>
-          <li class="noscriptEnableBrowser" id="noscriptEnableInternetExplorer"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/internet-explorer" charset="utf-8" hreflang="en-us" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Internet Explorer docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableInternetExplorerLink" aria-label="Learn how to enable JavaScript on Internet Explorer">Enable on <span class="browser" id="internetExplorer">Internet Explorer</span><span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableInternetExplorerOpenInNew">open_in_new</span></a></li>
+          <li class="noscriptEnableBrowser" id="noscriptEnableGoogleChrome"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/chrome" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Google Chrome docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableGoogleChromeLink" aria-label="Learn how to enable JavaScript on Google Chrome">Enable on <span class="browser" id="googleChrome">Google Chrome<span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableGoogleChromeOpenInNew">open_in_new</span></span></a></li>
+          <li class="noscriptEnableBrowser" id="noscriptEnableMozillaFirefox"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/firefox" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Mozilla Firefox docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableMozillaFirefoxLink" aria-label="Learn how to enable JavaScript on Mozilla Firefox">Enable on <span class="browser" id="mozillaFirefox">Mozilla Firefox<span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableMozillaFirefoxOpenInNew">open_in_new</span></span></a></li>
+          <li class="noscriptEnableBrowser" id="noscriptEnableMicrosoftEdge"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/edge" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Microsoft Edge docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableMicrosoftEdgeLink" aria-label="Learn how to enable JavaScript on Microsoft Edge">Enable on <span class="browser" id="microsoftEdge">Microsoft Edge<span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableMicrosoftEdgeOpenInNew">open_in_new</span></span></a></li>
+          <li class="noscriptEnableBrowser" id="noscriptEnableSafari"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/safari" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Safari docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableSafariLink" aria-label="Learn how to enable JavaScript on Safari">Enable on <span class="browser" id="safari">Safari<span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableSafariOpenInNew">open_in_new</span></span></a></li>
+          <li class="noscriptEnableBrowser" id="noscriptEnableOpera"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/opera" hreflang="en-us" charset="utf-8" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Opera docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableOperaLink" aria-label="Learn how to enable JavaScript on Opera">Enable on <span class="browser" id="opera">Opera<span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableOperaOpenInNew">open_in_new</span></span></a></li>
+          <li class="noscriptEnableBrowser" id="noscriptEnableInternetExplorer"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/internet-explorer" charset="utf-8" hreflang="en-us" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Internet Explorer docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableInternetExplorerLink" aria-label="Learn how to enable JavaScript on Internet Explorer">Enable on <span class="browser" id="internetExplorer">Internet Explorer<span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableInternetExplorerOpenInNew">open_in_new</span></span></a></li>
         </ul>
       </article>
     </noscript>

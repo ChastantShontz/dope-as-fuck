@@ -844,6 +844,10 @@ let quotes = [
     author: "<b>Garrett</b>"
   },
   {
+    line: "Did you ever realize that sex and food are the only two things that we humans do for the survival of our species, but also just for fun?",
+    author: "some dude probably tripping on shrooms"
+  },
+  {
     line: "Do you think Claire's would pierce my penis for me?",
     author: "<b>CAMPO</b>"
   },

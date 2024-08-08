@@ -6122,7 +6122,7 @@ footer {
 /* Media Queries */
 
 @media only screen and (max-height: 600px),
-screen and (max-width: 1200px) {
+only screen and (max-width: 1200px) {
   body {
     background: var(--white);
   }

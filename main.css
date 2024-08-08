@@ -1711,11 +1711,11 @@ main {
 }
 
 .clarksonDivider {
-  border: .05em inset var(--clarksonGreen);
+  background: var(--clarksonGreen);
 }
 
 .sluDivider {
-  border: .05em inset var(--sluRed);
+  background: var(--sluRed);
 }
 
 .playerStats {

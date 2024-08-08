@@ -299,8 +299,10 @@ input[type="submit"].defaultButton:active {
 
 /* Ensures that the <hr> always takes up the entire width of its container and has the same margins on the top and bottom */
 hr {
+  background: var(--black);
+  height: .1em;
   width: 100%;
-  border: .05em solid var(--black);
+  border: none;
   margin-top: 1em;
   margin-bottom: 1em;
 }

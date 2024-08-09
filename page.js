@@ -3541,6 +3541,9 @@ function gotIt6(event) {
   if (sessionStorage.gender == 1) {
     for (var i = 0; i < document.getElementsByClassName("menGoalie").length; i++) {
       const activate = (x) => {
+        document.getElementsByClassName("menGoalie")[x].style.visibility = "visible";
+        document.getElementsByClassName("menGoalie")[x].style.opacity = "100%";
+        document.getElementsByClassName("menGoalie")[x].style.transition = "all 0s ease 1s";
         setTimeout(() => (
           document.getElementsByClassName("menGoalie")[x].style.pointerEvents = "auto"
         ), 3000);
@@ -3557,6 +3560,9 @@ function gotIt6(event) {
   else if (sessionStorage.gender == 2) {
     for (var i = 0; i < document.getElementsByClassName("womenGoalie").length; i++) {
       const activate = (x) => {
+        document.getElementsByClassName("womenGoalie")[x].style.visibility = "visible";
+        document.getElementsByClassName("womenGoalie")[x].style.opacity = "100%";
+        document.getElementsByClassName("womenGoalie")[x].style.transition = "all 0s ease 1s";
         setTimeout(() => (
           document.getElementsByClassName("womenGoalie")[x].style.pointerEvents = "auto"
         ), 3000);

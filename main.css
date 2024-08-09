@@ -1125,11 +1125,6 @@ main {
   pointer-events: none;
 }
 
-.goalie {
-  visibility: visible;
-  opacity: 100%;
-}
-
 .clarksonGoalie {
   right: 0;
   border-bottom-right-radius: 0;

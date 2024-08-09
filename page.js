@@ -2522,7 +2522,7 @@ function shortcutUndo(event) {
 }
 
 function load(event) {
-  if (document.getElementsByTagName("main")[0].style.cursor != "auto") {
+  if (document.body.style.cursor != "auto") {
     for (var i = 0; i < (document.getElementsByClassName("load").length - 1); i++) {
       if (document.getElementsByClassName("load")[i] == event.target) {
         if (sessionStorage.loadIncrementInterval != undefined) {
@@ -2545,7 +2545,7 @@ function load(event) {
 }
 
 function loadIncrement(newLoad) {
-  if (document.getElementsByTagName("main")[0].style.cursor != "auto") {
+  if (document.body.style.cursor != "auto") {
     sessionStorage.newLoad = newLoad;
     if (sessionStorage.newLoad <= 99.86) {
       if (sessionStorage.newLoad <= 98.81) {
@@ -2660,7 +2660,7 @@ function gameBegins(event) {
   document.getElementById("raffle").style.left = Math.ceil(Math.random() * (window.innerWidth - 1)) + "px";
   document.getElementById("raffle").style.top = Math.ceil(Math.random() * (window.innerHeight - 1)) + "px";
   document.getElementById("raffle").style.transition = "all 0s ease 0s";
-  document.getElementsByTagName("main")[0].style.cursor = "auto";
+  document.body.style.cursor = "auto";
   document.getElementById("loading").style.display = "none";
   for (var i = 0; i < document.getElementsByClassName("loadingMessageDot").length; i++) {
     document.getElementsByClassName("loadingMessageDot")[i].style.animation = "none";
@@ -12055,7 +12055,7 @@ function mobileGrow() {
   document.getElementById("mobileBio").style.display = "none";
   sessionStorage.removeItem("oldSlide");
   sessionStorage.removeItem("newSlide");
-  if ((document.getElementById("conductorCont").style.left != "2em") && (document.getElementsByTagName("main")[0].style.cursor == "auto")) {
+  if ((document.getElementById("conductorCont").style.left != "2em") && (document.body.style.cursor == "auto")) {
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
       if (document.getElementById("conductorTalkCont").scrollTop > 0) {
         document.getElementById("conductorTalkCont").scrollTop = 0;

@@ -9112,9 +9112,9 @@ function gotIt27() {
       document.getElementById("bapple").tabIndex = "0"
     ), 2500);
   }
-  document.getElementById("beerCont").style.visibility = "visible";
-  document.getElementById("beerCont").style.opacity = "100%";
-  document.getElementById("beerCont").style.transition = "visibility .25s ease 2.5s, opacity .25s ease 2.5s";
+  document.getElementById("beers").style.visibility = "visible";
+  document.getElementById("beers").style.opacity = "100%";
+  document.getElementById("beers").style.transition = "visibility .25s ease 2.5s, opacity .25s ease 2.5s";
   sessionStorage.drinks = 0;
   sessionStorage.emphasizeBeerInterval = setInterval(emphasizeBeer, 60000);
   sessionStorage.iceDecrement = 10;

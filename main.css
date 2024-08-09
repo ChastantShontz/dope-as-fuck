@@ -2676,7 +2676,7 @@ main {
   width: 100%;
 }
 
-#beerCont {
+#beers {
   visibility: hidden;
   opacity: 0%;
   pointer-events: auto;

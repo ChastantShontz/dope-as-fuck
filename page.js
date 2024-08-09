@@ -9109,14 +9109,14 @@ function gotIt27() {
   sessionStorage.drinks = 0;
   sessionStorage.emphasizeBeerInterval = setInterval(emphasizeBeer, 60000);
   sessionStorage.iceDecrement = 10;
-  for (var i = 0; i < document.getElementsByClassName("partyActivity").length; i++) {
-    document.getElementsByClassName("partyActivity")[i].style.visibility = "visible";
-    document.getElementsByClassName("partyActivity")[i].style.opacity = "100%";
-    document.getElementsByClassName("partyActivity")[i].style.transition = "all .25s ease " + ((i * .5) + 1.5) + "s";
+  for (var i = 0; i < document.getElementsByClassName("activity").length; i++) {
+    document.getElementsByClassName("activity")[i].style.visibility = "visible";
+    document.getElementsByClassName("activity")[i].style.opacity = "100%";
+    document.getElementsByClassName("activity")[i].style.transition = "all .25s ease " + ((i * .5) + 1.5) + "s";
   }
-  document.getElementById("party").style.visibility = "visible";
-  document.getElementById("party").style.opacity = "100%";
-  document.getElementById("party").style.transition = "all 0s ease 1.5s";
+  document.getElementById("activities").style.visibility = "visible";
+  document.getElementById("activities").style.opacity = "100%";
+  document.getElementById("activities").style.transition = "all 0s ease 1.5s";
   for (var i = 0; i < document.getElementsByClassName("socialMedia").length; i++) {
     var transitionDelay = ((i * .25) + 2.75);
     document.getElementsByClassName("socialMedia")[i].style.visibility = "visible";

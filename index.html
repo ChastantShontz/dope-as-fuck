@@ -2021,7 +2021,7 @@
           <img src="img/plane.png" alt="A plane flying with a banner to celebrate hitting Tijuana" fetchpriority="low" decoding="async" loading="lazy" class="load" id="planePrime" onload="load(event)">
         </div>
       </article>
-      <article id="partyCont">
+      <article id="party">
         <div class="drunkCont" id="houseCont">
           <div id="house">
             <img src="img/mahogany.png" alt="Mahogany welcoming you into his house" fetchpriority="low" decoding="async" loading="lazy" class="bandieHome load" id="mahoganyHome" onload="load(event)">
@@ -2622,15 +2622,15 @@
             </div>
           </div>
         </div>
-        <section id="party">
-          <div class="partyActivity drunkCont" id="dafCounterCont">
+        <section id="activities">
+          <div class="activity drunkCont" id="dafCounterCont">
             <p class="drunkText" id="dafCounterHeading">DAF: <span class="drunkText" id="dafCounterNum"></span></p>
             <div id="dafCounter">
               <button type="button" class="defaultButton drunkText" id="dafCounterButton" tabindex="-1" aria-label="Add to the DAF counter" onclick="dafCounterCount(event)">DAF!</button>
               <p class="drunkText" id="dafCounterError">ERROR</p>
             </div>
           </div>
-          <div class="partyActivity drunkCont" id="speakerCont">
+          <div class="activity drunkCont" id="speakerCont">
             <img src="img/speaker.png" alt="A speaker to play music with" fetchpriority="low" decoding="async" loading="lazy" class="load" id="speaker" onload="load(event)">
             <select class="drunkText" id="speakerSongs" tabindex="-1" aria-label="Select a song to play" onchange="speakerPlay()">
               <option value="default" class="speakerSong" id="speakerSongDefault" selected>Play a song!</option>
@@ -2717,7 +2717,7 @@
               <button type="button" title="Pause" class="speakerControl disabled" id="speakerPause" tabindex="-1" aria-label="Pause the speaker song" onclick="speakerPause()" disabled></button>
             </div>
           </div>
-          <div class="partyActivity" id="beers">
+          <div class="activity" id="beers">
             <img src="img/bapple.png" alt="A can of Bapple to drink from" fetchpriority="low" decoding="async" loading="lazy" class="beer drunkCont load" id="bapple" aria-label="Drink from the Bapple can" onload="load(event)" onclick="drinkBeer(event)">
             <img src="img/busch.png" alt="A can of Busch to drink from" fetchpriority="low" decoding="async" loading="lazy" class="beer drunkCont load" id="busch" aria-label="Drink from the Busch can" onload="load(event)" onclick="drinkBeer(event)">
           </div>

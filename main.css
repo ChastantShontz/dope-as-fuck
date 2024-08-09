@@ -2537,7 +2537,7 @@ main {
   display: none;
 }
 
-#party {
+#activities {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -2551,7 +2551,7 @@ main {
   pointer-events: none;
 }
 
-.partyActivity {
+.activity {
   visibility: hidden;
   opacity: 0%;
   pointer-events: auto;

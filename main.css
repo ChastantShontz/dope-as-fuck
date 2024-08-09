@@ -2679,12 +2679,13 @@ main {
 #beers {
   visibility: hidden;
   opacity: 0%;
+  height: 10em;
   pointer-events: auto;
 }
 
 .beer {
   display: none;
-  height: 10em;
+  height: 100%;
   transition: transform .25s ease 0s;
   cursor: pointer;
 }

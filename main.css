@@ -2551,14 +2551,17 @@ main {
   pointer-events: none;
 }
 
-#dafCounterCont {
+.partyActivity {
   visibility: hidden;
+  opacity: 0%;
+  pointer-events: auto;
+}
+
+#dafCounterCont {
   border-radius: 1em;
   background: var(--white);
-  opacity: 0%;
   width: 33%;
   border: .2em solid var(--clarksonGreen);
-  pointer-events: auto;
 }
 
 #dafCounterHeading {
@@ -2619,11 +2622,8 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  visibility: hidden;
-  opacity: 0%;
   width: 10em;
   align-items: center;
-  pointer-events: auto;
 }
 
 #speaker {
@@ -2677,10 +2677,7 @@ main {
 }
 
 #beers {
-  visibility: hidden;
-  opacity: 0%;
   height: 10em;
-  pointer-events: auto;
 }
 
 .beer {

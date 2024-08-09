@@ -9078,9 +9078,6 @@ function gotIt27() {
   setTimeout(() => (
     document.getElementById("dafCounterButton").tabIndex = "0"
   ), 1500);
-  document.getElementById("dafCounterCont").style.visibility = "visible";
-  document.getElementById("dafCounterCont").style.opacity = "100%";
-  document.getElementById("dafCounterCont").style.transition = "all .25s ease 1.5s";
   setTimeout(() => (
     document.getElementById("dafCounterCont").tabIndex = "0"
   ), 1500);
@@ -9088,9 +9085,6 @@ function gotIt27() {
   setTimeout(() => (
     document.getElementById("speakerSongs").tabIndex = "0"
   ), 2000);
-  document.getElementById("speakerCont").style.visibility = "visible";
-  document.getElementById("speakerCont").style.opacity = "100%";
-  document.getElementById("speakerCont").style.transition = "all .25s ease 2s";
   for (var i = 0; i < document.getElementsByClassName("audio").length; i++) {
     document.getElementsByClassName("audio")[i].onended = speakerNewSong;
   }
@@ -9112,12 +9106,14 @@ function gotIt27() {
       document.getElementById("bapple").tabIndex = "0"
     ), 2500);
   }
-  document.getElementById("beers").style.visibility = "visible";
-  document.getElementById("beers").style.opacity = "100%";
-  document.getElementById("beers").style.transition = "visibility .25s ease 2.5s, opacity .25s ease 2.5s";
   sessionStorage.drinks = 0;
   sessionStorage.emphasizeBeerInterval = setInterval(emphasizeBeer, 60000);
   sessionStorage.iceDecrement = 10;
+  for (var i = 0; i < document.getElementsByClassName("partyActivity").length; i++) {
+    document.getElementsByClassName("partyActivity")[i].style.visibility = "visible";
+    document.getElementsByClassName("partyActivity")[i].style.opacity = "100%";
+    document.getElementsByClassName("partyActivity")[i].style.transition = "all .25s ease " + ((i * .5) + 1.5) + "s";
+  }
   document.getElementById("party").style.visibility = "visible";
   document.getElementById("party").style.opacity = "100%";
   document.getElementById("party").style.transition = "all 0s ease 1.5s";

@@ -3351,7 +3351,7 @@ function gotIt4() {
   }
   disableButton();
   document.getElementById("map").style.visibility = "visible";
-  document.getElementById("map").style.opacity = "1";
+  document.getElementById("map").style.opacity = "100%";
   document.getElementById("map").style.transition = "all 1s ease 0s";
   document.getElementById("map").tabIndex = "0";
   document.getElementById("knightmobile").style.bottom = "35%";
@@ -3622,7 +3622,7 @@ function gotIt6(event) {
   document.getElementById("sidebar").style.visibility = "visible";
   document.getElementById("sidebar").style.left = "5%";
   document.getElementById("sidebar").style.right = "80%";
-  document.getElementById("sidebar").style.opacity = "1";
+  document.getElementById("sidebar").style.opacity = "100%";
   document.getElementById("sidebar").style.transition = "visibility 0s ease 2s, left 1s ease 2s, right 1s ease 2s, opacity 0s ease 2s";
   document.getElementById("raffle").style.display = "block";
   for (var i = 0; i < document.getElementsByClassName("lifeCont").length; i++) {
@@ -3640,7 +3640,7 @@ function gotIt6(event) {
     activate(i, (transitionDelay * 1000));
   }
   document.getElementById("lives").style.visibility = "visible";
-  document.getElementById("lives").style.opacity = "1";
+  document.getElementById("lives").style.opacity = "100%";
   document.getElementById("lives").style.transition = "all 0s ease 3s";
   sessionStorage.lives = 6;
   sessionStorage.redo = 0;
@@ -3709,7 +3709,7 @@ function speedrun(stage) {
     for (var i = 0; i < document.getElementsByClassName("disappearInt").length; i++) {
       if (document.getElementsByClassName("disappearInt")[i].style.visibility == "visible") {
         document.getElementsByClassName("disappearInt")[i].style.visibility = "hidden";
-        document.getElementsByClassName("disappearInt")[i].style.opacity = "0";
+        document.getElementsByClassName("disappearInt")[i].style.opacity = "0%";
         document.getElementsByClassName("disappearInt")[i].style.transition = "all .25s ease 0s";
         if (document.getElementsByClassName("disappearInt")[i].tabIndex == "0") {
           document.getElementsByClassName("disappearInt")[i].tabIndex = "-1";
@@ -3782,7 +3782,7 @@ function openSelection() {
   if (sessionStorage.answer != undefined) {
     for (var i = 0; i < document.getElementsByClassName("choice").length; i++) {
       document.getElementsByClassName("choice")[i].style.visibility = "visible";
-      document.getElementsByClassName("choice")[i].style.opacity = "1";
+      document.getElementsByClassName("choice")[i].style.opacity = "100%";
       document.getElementsByClassName("choice")[i].style.transition = "all 0s ease 0s";
       document.getElementsByClassName("choice")[i].style.pointerEvents = "auto";
       if ((i + 1) == sessionStorage.answer) {
@@ -3792,18 +3792,18 @@ function openSelection() {
       }
     }
     document.getElementById("choose").style.visibility = "visible";
-    document.getElementById("choose").style.opacity = "1";
+    document.getElementById("choose").style.opacity = "100%";
     document.getElementById("choose").style.transition = "visibility 0s ease 0s, opacity 0s ease 0s, transform .1s ease 0s";
   }
   document.getElementById("choicesCont").style.visibility = "visible";
-  document.getElementById("choicesCont").style.opacity = "1";
+  document.getElementById("choicesCont").style.opacity = "100%";
   document.getElementById("choicesCont").style.transition = "all 0s ease 0s";
   document.getElementById("choicesContCont").style.visibility = "visible";
-  document.getElementById("choicesContCont").style.opacity = "1";
+  document.getElementById("choicesContCont").style.opacity = "100%";
   document.getElementById("choicesContCont").style.transition = "all 0s ease 0s";
   document.getElementById("choicesContCont").tabIndex = "0";
   document.getElementById("cover").style.visibility = "visible";
-  document.getElementById("cover").style.opacity = "1";
+  document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "all .25s ease 0s";
   document.getElementById("cover").tabIndex = "0";
 }
@@ -3868,7 +3868,7 @@ function chooseAnswer(event) {
   for (var i = 0; i < document.getElementsByClassName("choice").length; i++) {
     if ((i + 1) != sessionStorage.answer) {
       document.getElementsByClassName("choice")[i].style.visibility = "hidden";
-      document.getElementsByClassName("choice")[i].style.opacity = "0";
+      document.getElementsByClassName("choice")[i].style.opacity = "0%";
       document.getElementsByClassName("choice")[i].style.transition = "all 1s ease 0s";
       document.getElementsByClassName("choice")[i].style.pointerEvents = "none";
       document.getElementsByClassName("choice")[i].tabIndex = "-1";
@@ -3876,7 +3876,7 @@ function chooseAnswer(event) {
     }
   }
   document.getElementById("choose").style.visibility = "hidden";
-  document.getElementById("choose").style.opacity = "0";
+  document.getElementById("choose").style.opacity = "0%";
   document.getElementById("choose").style.transition = "visibility 1s ease 0s, opacity 1s ease 0s, transform .1s ease 0s";
   document.getElementById("choose").tabIndex = "-1";
   document.getElementById("choose").disabled = true;
@@ -3911,17 +3911,17 @@ function chooseAnswer(event) {
       console.error("F");
     }
     document.getElementById("answer").style.visibility = "visible";
-    document.getElementById("answer").style.opacity = "1";
+    document.getElementById("answer").style.opacity = "100%";
     document.getElementById("answer").style.transition = "all 0s ease 1.5s";
     document.getElementById("answerCont").style.visibility = "visible";
-    document.getElementById("answerCont").style.opacity = "1";
+    document.getElementById("answerCont").style.opacity = "100%";
     document.getElementById("answerCont").style.transition = "all .25s ease 1.5s";
     document.getElementById("choice" + sessionStorage.answer).style.animation = "fadeOut 1s ease 1.5s 1 forwards";
     document.getElementById("choice" + sessionStorage.answer).style.pointerEvents = "none";
     document.getElementById("choice" + sessionStorage.answer).tabIndex = "-1";
     document.getElementById("choice" + sessionStorage.answer).blur();
     document.getElementById("choicesCont").style.visibility = "hidden";
-    document.getElementById("choicesCont").style.opacity = "0";
+    document.getElementById("choicesCont").style.opacity = "0%";
     document.getElementById("choicesCont").style.transition = "all 0s ease 2.5s";
     answers.push(document.getElementById("choose").value);
     localStorage.answers = JSON.stringify(answers);
@@ -3993,7 +3993,7 @@ function chooseAnswer(event) {
   }
   else if (sessionStorage.selection == 2) {
     document.getElementById("choicesCont").style.visibility = "hidden";
-    document.getElementById("choicesCont").style.opacity = "0";
+    document.getElementById("choicesCont").style.opacity = "0%";
     document.getElementById("choicesCont").style.transition = "all .25s ease 1.5s";
     setTimeout(closeSelection.bind(null, event), 1500);
   }
@@ -4001,17 +4001,17 @@ function chooseAnswer(event) {
 
 function correctAnswer(event) {
   document.getElementById("answer").style.visibility = "hidden";
-  document.getElementById("answer").style.opacity = "0";
+  document.getElementById("answer").style.opacity = "0%";
   document.getElementById("answer").style.transition = "all .25s ease 0s";
   document.getElementById("correctAnswerPrompt").style.visibility = "visible";
-  document.getElementById("correctAnswerPrompt").style.opacity = "1";
+  document.getElementById("correctAnswerPrompt").style.opacity = "100%";
   document.getElementById("correctAnswerPrompt").style.transition = "all .25s ease .25s";
   document.getElementById("correctAnswer").innerHTML = songs[sessionStorage.songPrime].title;
   document.getElementById("correctAnswer").style.visibility = "visible";
-  document.getElementById("correctAnswer").style.opacity = "1";
+  document.getElementById("correctAnswer").style.opacity = "100%";
   document.getElementById("correctAnswer").style.transition = "all .25s ease 1s";
   document.getElementById("correctAnswerCont").style.visibility = "visible";
-  document.getElementById("correctAnswerCont").style.opacity = "1";
+  document.getElementById("correctAnswerCont").style.opacity = "100%";
   document.getElementById("correctAnswerCont").style.transition = "all 0s ease .25s";
   setTimeout(closeSelection.bind(null, event), 2250);
 }
@@ -4019,11 +4019,11 @@ function correctAnswer(event) {
 function closeSelection(event) {
   if (sessionStorage.selection == 1) {
     document.getElementById("answerCont").style.visibility = "hidden";
-    document.getElementById("answerCont").style.opacity = "0";
+    document.getElementById("answerCont").style.opacity = "0%";
     document.getElementById("answerCont").style.transition = "all .25s ease 0s";
     if (sessionStorage.accurate == String(true)) {
       document.getElementById("answer").style.visibility = "hidden";
-      document.getElementById("answer").style.opacity = "0";
+      document.getElementById("answer").style.opacity = "0%";
       document.getElementById("answer").style.transition = "all 0s ease .25s";
       if ((sessionStorage.period == "OT") && (((sessionStorage.goal == 1) && (sessionStorage.clarksonScore == 1)) || ((sessionStorage.goal == 2) && (sessionStorage.sluScore == 1)))) {
         if ((sessionStorage.goal == 1) && (sessionStorage.clarksonScore == 1)) {
@@ -4043,13 +4043,13 @@ function closeSelection(event) {
     }
     else {
       document.getElementById("correctAnswerCont").style.visibility = "hidden";
-      document.getElementById("correctAnswerCont").style.opacity = "0";
+      document.getElementById("correctAnswerCont").style.opacity = "0%";
       document.getElementById("correctAnswerCont").style.transition = "all 0s ease .25s";
       document.getElementById("correctAnswerPrompt").style.visibility = "hidden";
-      document.getElementById("correctAnswerPrompt").style.opacity = "0";
+      document.getElementById("correctAnswerPrompt").style.opacity = "0%";
       document.getElementById("correctAnswerPrompt").style.transition = "all 0s ease .25s";
       document.getElementById("correctAnswer").style.visibility = "hidden";
-      document.getElementById("correctAnswer").style.opacity = "0";
+      document.getElementById("correctAnswer").style.opacity = "0%";
       document.getElementById("correctAnswer").style.transition = "all 0s ease .25s";
       if (sessionStorage.lives > 1) {
         if (((sessionStorage.period == "OT") && (((sessionStorage.goal == 1) && (sessionStorage.clarksonScore == 1)) || ((sessionStorage.goal == 2) && (sessionStorage.sluScore == 1)))) || ((sessionStorage.goal = 1) && (sessionStorage.clarksonScore == 10))) {
@@ -4075,7 +4075,7 @@ function closeSelection(event) {
   }
   else if (sessionStorage.selection == 2) {
     document.getElementById("choice" + sessionStorage.answer).style.visibility = "hidden";
-    document.getElementById("choice" + sessionStorage.answer).style.opacity = "0";
+    document.getElementById("choice" + sessionStorage.answer).style.opacity = "0%";
     document.getElementById("choice" + sessionStorage.answer).style.transition = "all .25s ease 0s";
     document.getElementById("choice" + sessionStorage.answer).style.pointerEvents = "none";
     document.getElementById("choice" + sessionStorage.answer).tabIndex = "-1";
@@ -4089,12 +4089,12 @@ function closeSelection(event) {
     setTimeout(enableButton, 750);
   }
   document.getElementById("cover").style.visibility = "hidden";
-  document.getElementById("cover").style.opacity = "0";
+  document.getElementById("cover").style.opacity = "0%";
   document.getElementById("cover").style.transition = "all .25s ease .25s";
   document.getElementById("cover").tabIndex = "-1";
   document.getElementById("cover").blur();
   document.getElementById("choicesContCont").style.visibility = "hidden";
-  document.getElementById("choicesContCont").style.opacity = "0";
+  document.getElementById("choicesContCont").style.opacity = "0%";
   document.getElementById("choicesContCont").style.transition = "all 0s ease .5s";
   document.getElementById("choicesContCont").tabIndex = "-1";
   document.getElementById("choicesContCont").blur();
@@ -4148,10 +4148,10 @@ function loseLife(event) {
         sessionStorage.backup = "";
       }
     }
-    document.getElementById("presidentLife").style.opacity = ".5";
+    document.getElementById("presidentLife").style.opacity = "50%";
     document.getElementById("presidentLife").style.transition = "opacity .25s ease 0s";
     document.getElementById("presidentDie").style.visibility = "visible";
-    document.getElementById("presidentDie").style.opacity = "1";
+    document.getElementById("presidentDie").style.opacity = "100%";
     document.getElementById("presidentDie").style.transition = "all .25s ease 0s";
     console.group("Caroline: Shit! " + ((localStorage.name == undefined) ? ("This guy") : (localStorage.name)) + " killed me!");
     console.log("Kami: Oh no!");
@@ -4174,10 +4174,10 @@ function loseLife(event) {
         sessionStorage.backup = "";
       }
     }
-    document.getElementById("vicePresidentLife").style.opacity = ".5";
+    document.getElementById("vicePresidentLife").style.opacity = "50%";
     document.getElementById("vicePresidentLife").style.transition = "opacity .25s ease 0s";
     document.getElementById("vicePresidentDie").style.visibility = "visible";
-    document.getElementById("vicePresidentDie").style.opacity = "1";
+    document.getElementById("vicePresidentDie").style.opacity = "100%";
     document.getElementById("vicePresidentDie").style.transition = "all .25s ease 0s";
     console.group("Liam: NOOO!!! My reign was so short-lived...");
     console.log("Ryan: Serves you right, Liam!");
@@ -4202,10 +4202,10 @@ function loseLife(event) {
         sessionStorage.backup = "";
       }
     }
-    document.getElementById("businessManagerLife").style.opacity = ".5";
+    document.getElementById("businessManagerLife").style.opacity = "50%";
     document.getElementById("businessManagerLife").style.transition = "opacity .25s ease 0s";
     document.getElementById("businessManagerDie").style.visibility = "visible";
-    document.getElementById("businessManagerDie").style.opacity = "1";
+    document.getElementById("businessManagerDie").style.opacity = "100%";
     document.getElementById("businessManagerDie").style.transition = "all .25s ease 0s";
     console.group("Kami: Not me, too!");
     console.log("Ryan: Kami! Don't go!");
@@ -4228,10 +4228,10 @@ function loseLife(event) {
         sessionStorage.backup = "";
       }
     }
-    document.getElementById("historianLife").style.opacity = ".5";
+    document.getElementById("historianLife").style.opacity = "50%";
     document.getElementById("historianLife").style.transition = "opacity .25s ease 0s";
     document.getElementById("historianDie").style.visibility = "visible";
-    document.getElementById("historianDie").style.opacity = "1";
+    document.getElementById("historianDie").style.opacity = "100%";
     document.getElementById("historianDie").style.transition = "all .25s ease 0s";
     console.group("Garrett: Yes! I'll finally get to see Liam again!");
     console.log("Corsner: You're way to excited about dying, man");
@@ -4252,10 +4252,10 @@ function loseLife(event) {
         sessionStorage.backup = "";
       }
     }
-    document.getElementById("socialMediaChairLife").style.opacity = ".5";
+    document.getElementById("socialMediaChairLife").style.opacity = "50%";
     document.getElementById("socialMediaChairLife").style.transition = "opacity .25s ease 0s";
     document.getElementById("socialMediaChairDie").style.visibility = "visible";
-    document.getElementById("socialMediaChairDie").style.opacity = "1";
+    document.getElementById("socialMediaChairDie").style.opacity = "100%";
     document.getElementById("socialMediaChairDie").style.transition = "all .25s ease 0s";
     document.getElementById("publishedPaper").href = "https://www.nytimes.com/1986/09/05/nyregion/rape-and-murder-scar-innocence-of-potsdam.html";
     document.getElementById("publishedPaper").style.borderRadius = "0";
@@ -4270,13 +4270,13 @@ function loseLife(event) {
     console.groupEnd();
   }
   else if (sessionStorage.lives == 0) {
-    document.getElementById("freshmanRepresentativeLife").style.opacity = ".5";
+    document.getElementById("freshmanRepresentativeLife").style.opacity = "50%";
     document.getElementById("freshmanRepresentativeLife").style.transition = "opacity .25s ease 0s";
     document.getElementById("freshmanRepresentativeDie").style.visibility = "visible";
-    document.getElementById("freshmanRepresentativeDie").style.opacity = "1";
+    document.getElementById("freshmanRepresentativeDie").style.opacity = "100%";
     document.getElementById("freshmanRepresentativeDie").style.transition = "all .25s ease 0s";
     document.getElementById("cheersCover").style.visibility = "visible";
-    document.getElementById("cheersCover").style.opacity = ".75";
+    document.getElementById("cheersCover").style.opacity = "75%";
     document.getElementById("cheersCover").style.transition = "all .25s ease .25s";
     document.getElementById("cheers").style.overflowY = "hidden";
     setTimeout(die, 250);
@@ -4328,14 +4328,14 @@ function acceptLife(event) {
   document.getElementById("cheerScore").innerHTML = sessionStorage.points;
   remember(event);
   sessionStorage.lives++;
-  document.getElementById("freshmanRepresentativeLife").style.opacity = "1";
+  document.getElementById("freshmanRepresentativeLife").style.opacity = "100%";
   document.getElementById("freshmanRepresentativeLife").style.transition = "opacity .25s ease 0s";
   document.getElementById("freshmanRepresentativeDie").style.visibility = "hidden";
-  document.getElementById("freshmanRepresentativeDie").style.opacity = "0";
+  document.getElementById("freshmanRepresentativeDie").style.opacity = "0%";
   document.getElementById("freshmanRepresentativeDie").style.transition = "all .25s ease 0s";
   sessionStorage.redo++;
   document.getElementById("cheersCover").style.visibility = "hidden";
-  document.getElementById("cheersCover").style.opacity = "0";
+  document.getElementById("cheersCover").style.opacity = "0%";
   document.getElementById("cheersCover").style.transition = "all .25s ease 0s";
   document.getElementById("cheers").style.overflowY = "auto";
   newFunction();
@@ -4345,7 +4345,7 @@ function acceptLife(event) {
 function awayFromTop() {
   if (document.getElementById("cheers").scrollTop == 0) {
     document.getElementById("backToTop").style.visibility = "hidden";
-    document.getElementById("backToTop").style.opacity = "0";
+    document.getElementById("backToTop").style.opacity = "0%";
     document.getElementById("backToTop").style.transition = "all 0s ease 0s";
     document.getElementById("backToTop").style.pointerEvents = "none";
     document.getElementById("backToTop").tabIndex = "-1";
@@ -4713,7 +4713,7 @@ function troyLassialEntrance() {
   document.getElementById("troyLassialContCont").style.transition = "transform .5s ease 0s";
   document.getElementById("troyLassialContCont").tabIndex = "0";
   document.getElementById("cover").style.visibility = "visible";
-  document.getElementById("cover").style.opacity = "1";
+  document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "all .25s ease 0s";
   document.getElementById("cover").tabIndex = "0";
   console.log("FUCK YOU TROY!!!");
@@ -4723,7 +4723,7 @@ function troyLassialExit(event) {
   if (sessionStorage.lives == 0) {
     if (((sessionStorage.points >= 30) && (sessionStorage.redo == 0)) && (sessionStorage.drinks == undefined)) {
       document.getElementById("cover").style.visibility = "hidden";
-      document.getElementById("cover").style.opacity = "0";
+      document.getElementById("cover").style.opacity = "0%";
       document.getElementById("cover").style.transition = "all .25s ease .25s";
       document.getElementById("cover").tabIndex = "-1";
       document.getElementById("cover").blur();
@@ -4752,7 +4752,7 @@ function troyLassialExit(event) {
     }
     else {
       document.getElementById("troyLassialContCont").style.visibility = "hidden";
-      document.getElementById("troyLassialContCont").style.opacity = "0";
+      document.getElementById("troyLassialContCont").style.opacity = "0%";
       document.getElementById("troyLassialContCont").style.transition = "all .25s ease 0s";
       document.getElementById("troyLassialContCont").tabIndex = "-1";
       document.getElementById("troyLassialContCont").blur();
@@ -4768,7 +4768,7 @@ function troyLassialExit(event) {
   }
   else if (sessionStorage.lives > 0) {
     document.getElementById("cover").style.visibility = "hidden";
-    document.getElementById("cover").style.opacity = "0";
+    document.getElementById("cover").style.opacity = "0%";
     document.getElementById("cover").style.transition = "all .25s ease .25s";
     document.getElementById("cover").tabIndex = "-1";
     document.getElementById("cover").blur();
@@ -4866,7 +4866,7 @@ function gotIt7() {
   disableButton();
   document.getElementById("goldenKnight").style.visibility = "visible";
   document.getElementById("goldenKnight").style.left = "52%";
-  document.getElementById("goldenKnight").style.opacity = "1";
+  document.getElementById("goldenKnight").style.opacity = "100%";
   document.getElementById("goldenKnight").style.transition = "visibility .25s ease .25s, left 0s ease 6.5s, opacity .25s ease .25s";
   document.getElementById("goldenKnight").style.animation = "goldenKnightLap 6s ease .5s 1 forwards";
   setTimeout(() => (
@@ -4900,12 +4900,12 @@ function gotIt8() {
   ];
   enableCheers(enableClassLists, enableStyles);
   document.getElementById("goldenKnight").style.visibility = "hidden";
-  document.getElementById("goldenKnight").style.opacity = "0";
+  document.getElementById("goldenKnight").style.opacity = "0%";
   document.getElementById("goldenKnight").style.transition = "all .25s ease 0s";
   for (var i = 0; i < document.getElementsByClassName("zebra").length; i++) {
     var animationName = (i + 1);
     document.getElementsByClassName("zebra")[i].style.visibility = "visible";
-    document.getElementsByClassName("zebra")[i].style.opacity = "1";
+    document.getElementsByClassName("zebra")[i].style.opacity = "100%";
     if (i == 0) {
       document.getElementById("zebra1").style.left = "52%";
       document.getElementById("zebra1").style.transition = "visibility .25s ease .25s, left 0s ease 6.5s, opacity .25s ease .25s";
@@ -4951,7 +4951,7 @@ function gotIt9() {
   disableCheers(disableClassLists, disableStyles);
   for (var i = 0; i < document.getElementsByClassName("zebra").length; i++) {
     document.getElementsByClassName("zebra")[i].style.visibility = "hidden";
-    document.getElementsByClassName("zebra")[i].style.opacity = "0";
+    document.getElementsByClassName("zebra")[i].style.opacity = "0%";
     document.getElementsByClassName("zebra")[i].style.transition = "all .25s ease 0s";
   }
   if (sessionStorage.gender == 1) {
@@ -4978,7 +4978,7 @@ function gotIt9() {
           document.getElementById("zachTsekos").style.left = "75%";
           document.getElementById("zachTsekos").style.bottom = "80%";
         }
-        document.getElementsByClassName("clarksonMenPlayer")[i].style.opacity = "1";
+        document.getElementsByClassName("clarksonMenPlayer")[i].style.opacity = "100%";
         document.getElementsByClassName("clarksonMenPlayer")[i].style.transition = "visibility .25s ease .25s, left 2s ease .5s, bottom 2s ease .5s, opacity .25s ease .25s";
         const activate = (x) => {
           setTimeout(() => (
@@ -5019,7 +5019,7 @@ function gotIt9() {
           document.getElementById("jennaGoodwin").style.left = "75%";
           document.getElementById("jennaGoodwin").style.bottom = "80%";
         }
-        document.getElementsByClassName("clarksonWomenPlayer")[i].style.opacity = "1";
+        document.getElementsByClassName("clarksonWomenPlayer")[i].style.opacity = "100%";
         document.getElementsByClassName("clarksonWomenPlayer")[i].style.transition = "visibility .25s ease .25s, left 2s ease .5s, bottom 2s ease .5s, opacity .25s ease .25s";
         const activate = (x) => {
           setTimeout(() => (
@@ -5087,7 +5087,7 @@ function gotIt10() {
           document.getElementById("tuckerMcintosh").style.right = "75%";
           document.getElementById("tuckerMcintosh").style.bottom = "80%";
         }
-        document.getElementsByClassName("sluMenPlayer")[i].style.opacity = "1";
+        document.getElementsByClassName("sluMenPlayer")[i].style.opacity = "100%";
         document.getElementsByClassName("sluMenPlayer")[i].style.transition = "visibility .25s ease .25s, right 2s ease .5s, bottom 2s ease .5s, opacity .25s ease .25s";
         const activate = (x) => {
           setTimeout(() => (
@@ -5128,7 +5128,7 @@ function gotIt10() {
           document.getElementById("kristinaBahl").style.right = "75%";
           document.getElementById("kristinaBahl").style.bottom = "80%";
         }
-        document.getElementsByClassName("sluWomenPlayer")[i].style.opacity = "1";
+        document.getElementsByClassName("sluWomenPlayer")[i].style.opacity = "100%";
         document.getElementsByClassName("sluWomenPlayer")[i].style.transition = "visibility .25s ease .25s, right 2s ease .5s, bottom 2s ease .5s, opacity .25s ease .25s";
         const activate = (x) => {
           setTimeout(() => (
@@ -5271,7 +5271,7 @@ function gotIt11() {
   ];
   disableCheers(disableClassLists, disableStyles);
   document.getElementById("flagCont").style.visibility = "visible";
-  document.getElementById("flagCont").style.opacity = "1";
+  document.getElementById("flagCont").style.opacity = "100%";
   document.getElementById("flagCont").style.transition = "all .25s ease 0s";
   sessionStorage.songPrime = 67;
   document.getElementById("ok").onclick = function() {
@@ -5322,11 +5322,11 @@ function gotIt12() {
     ), 1500);
   }
   document.getElementById("flagCont").style.visibility = "hidden";
-  document.getElementById("flagCont").style.opacity = "0";
+  document.getElementById("flagCont").style.opacity = "0%";
   document.getElementById("flagCont").style.transition = "all .25s ease 0s";
   document.getElementById("puck").style.visibility = "visible";
   document.getElementById("puck").style.top = "50%";
-  document.getElementById("puck").style.opacity = "1";
+  document.getElementById("puck").style.opacity = "100%";
   document.getElementById("puck").style.transition = "visibility .25s ease .25s, top 1s ease 1s, opacity .25s ease .25s";
   sessionStorage.position = 5;
   sessionStorage.scorer = 4;
@@ -5360,7 +5360,7 @@ function gotIt13() {
   sessionStorage.order = Math.ceil(Math.random() * 4);
   sequence(sessionStorage.order);
   document.getElementById("goalMessages").style.visibility = "visible";
-  document.getElementById("goalMessages").style.opacity = "1";
+  document.getElementById("goalMessages").style.opacity = "100%";
   document.getElementById("goalMessages").style.transition = "all 0s ease 0s";
   sessionStorage.songPrime = 34;
   setTimeout(enableButton, 2750);
@@ -5897,13 +5897,13 @@ function goal() {
 
 function puckFadeOut() {
   document.getElementById("puck").style.visibility = "hidden";
-  document.getElementById("puck").style.opacity = "0";
+  document.getElementById("puck").style.opacity = "0%";
   document.getElementById("puck").style.transition = "all .25s ease 0s";
 }
 
 function puckFadeIn() {
   document.getElementById("puck").style.visibility = "visible";
-  document.getElementById("puck").style.opacity = "1";
+  document.getElementById("puck").style.opacity = "100%";
   document.getElementById("puck").style.transition = "all .25s ease 0s";
 }
 
@@ -6209,7 +6209,7 @@ function block() {
       disableCheers(disableClassLists, disableStyles);
       document.getElementById("offenderName").innerHTML = "our Golden Knights";
       document.getElementById("cage" + sessionStorage.clarksonCage).style.visibility = "hidden";
-      document.getElementById("cage" + sessionStorage.clarksonCage).style.opacity = "0";
+      document.getElementById("cage" + sessionStorage.clarksonCage).style.opacity = "0%";
       document.getElementById("cage" + sessionStorage.clarksonCage).style.transition = "all .25s ease 0s";
       sessionStorage.removeItem("clarksonCage");
     }
@@ -6218,7 +6218,7 @@ function block() {
     sessionStorage.sluTimeout--;
     if (sessionStorage.sluTimeout == 0) {
       document.getElementById("cage" + sessionStorage.sluCage).style.visibility = "hidden";
-      document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "0";
+      document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "0%";
       document.getElementById("cage" + sessionStorage.sluCage).style.transition = "all .25s ease 0s";
       sessionStorage.removeItem("sluCage");
     }
@@ -6433,7 +6433,7 @@ function celebrate() {
       disableCheers(disableClassLists, disableStyles);
       document.getElementById("offenderName").innerHTML = "our Golden Knights";
       document.getElementById("cage" + sessionStorage.clarksonCage).style.visibility = "hidden";
-      document.getElementById("cage" + sessionStorage.clarksonCage).style.opacity = "0";
+      document.getElementById("cage" + sessionStorage.clarksonCage).style.opacity = "0%";
       document.getElementById("cage" + sessionStorage.clarksonCage).style.transition = "all .25s ease 0s";
       sessionStorage.removeItem("clarksonCage");
     }
@@ -6442,7 +6442,7 @@ function celebrate() {
     sessionStorage.sluTimeout--;
     if (sessionStorage.sluTimeout == 0) {
       document.getElementById("cage" + sessionStorage.sluCage).style.visibility = "hidden";
-      document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "0";
+      document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "0%";
       document.getElementById("cage" + sessionStorage.sluCage).style.transition = "all .25s ease 0s";
       sessionStorage.removeItem("sluCage");
     }
@@ -6571,13 +6571,13 @@ function penalty() {
     enableCheers(enableClassLists, enableStyles);
     sessionStorage.clarksonCage = sessionStorage.offender;
     document.getElementById("cage" + sessionStorage.clarksonCage).style.visibility = "visible";
-    document.getElementById("cage" + sessionStorage.clarksonCage).style.opacity = "1";
+    document.getElementById("cage" + sessionStorage.clarksonCage).style.opacity = "100%";
     document.getElementById("cage" + sessionStorage.clarksonCage).style.transition = "all .25s ease 0s";
     if ((sessionStorage.sluTimeout > 0) && (sessionStorage.sluTimeout != "ejection")) {
       sessionStorage.sluTimeout--;
       if (sessionStorage.sluTimeout == 0) {
         document.getElementById("cage" + sessionStorage.sluCage).style.visibility = "hidden";
-        document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "0";
+        document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "0%";
         document.getElementById("cage" + sessionStorage.sluCage).style.transition = "all .25s ease 0s";
         sessionStorage.removeItem("sluCage");
       }
@@ -6617,7 +6617,7 @@ function penalty() {
     enableCheers(enableClassLists, enableStyles);
     sessionStorage.sluCage = (+sessionStorage.offender + 5);
     document.getElementById("cage" + sessionStorage.sluCage).style.visibility = "visible";
-    document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "1";
+    document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "100%";
     document.getElementById("cage" + sessionStorage.sluCage).style.transition = "all .25s ease 0s";
     if ((sessionStorage.clarksonTimeout > 0) && (sessionStorage.clarksonTimeout != "ejection")) {
       sessionStorage.clarksonTimeout--;
@@ -6631,7 +6631,7 @@ function penalty() {
         disableCheers(disableClassLists, disableStyles);
         document.getElementById("offenderName").innerHTML = "our Golden Knights";
         document.getElementById("cage" + sessionStorage.clarksonCage).style.visibility = "hidden";
-        document.getElementById("cage" + sessionStorage.clarksonCage).style.opacity = "0";
+        document.getElementById("cage" + sessionStorage.clarksonCage).style.opacity = "0%";
         document.getElementById("cage" + sessionStorage.clarksonCage).style.transition = "all .25s ease 0s";
         sessionStorage.removeItem("clarksonCage");
       }
@@ -6711,10 +6711,10 @@ function gotIt14() {
   document.getElementById("puck").style.visibility = "hidden";
   document.getElementById("puck").style.left = "calc(50% - .5em)";
   document.getElementById("puck").style.top = "0";
-  document.getElementById("puck").style.opacity = "0";
+  document.getElementById("puck").style.opacity = "0%";
   document.getElementById("puck").style.transition = "visibility .25s ease 0s, left 0s ease .25s, top 0s ease .25s, opacity .25s ease 0s";
   document.getElementById("goalMessages").style.visibility = "hidden";
-  document.getElementById("goalMessages").style.opacity = "0";
+  document.getElementById("goalMessages").style.opacity = "0%";
   document.getElementById("goalMessages").style.transition = "all 0s ease 0s";
   sessionStorage.songPrime = 58;
   document.getElementById("ok").onclick = function() {
@@ -6768,7 +6768,7 @@ function gotIt15() {
   enableCheers(enableClassLists, enableStyles);
   document.getElementById("tonyCollins").style.visibility = "visible";
   document.getElementById("tonyCollins").style.left = "20%";
-  document.getElementById("tonyCollins").style.opacity = "1";
+  document.getElementById("tonyCollins").style.opacity = "100%";
   document.getElementById("tonyCollins").style.transition = "visibility .25s ease 0s, left 2s ease .25s, opacity .25s ease 0s";
   sessionStorage.songPrime = 8;
   setTimeout(enableButton, 2250);
@@ -6844,7 +6844,7 @@ function gotIt16() {
     ), 1500);
   }
   document.getElementById("tonyCollins").style.visibility = "hidden";
-  document.getElementById("tonyCollins").style.opacity = "0";
+  document.getElementById("tonyCollins").style.opacity = "0%";
   document.getElementById("tonyCollins").style.transition = "all .25s ease 0s";
   sessionStorage.period++;
   document.getElementById("scoreboardPeriod").innerHTML = sessionStorage.period;
@@ -6865,11 +6865,11 @@ function gotIt16() {
     }
   }
   document.getElementById("goalMessages").style.visibility = "visible";
-  document.getElementById("goalMessages").style.opacity = "1";
+  document.getElementById("goalMessages").style.opacity = "100%";
   document.getElementById("goalMessages").style.transition = "visibility 0s ease 0s, opacity 0s ease 0s, transform 0s ease .625s";
   document.getElementById("puck").style.visibility = "visible";
   document.getElementById("puck").style.top = "50%";
-  document.getElementById("puck").style.opacity = "1";
+  document.getElementById("puck").style.opacity = "100%";
   document.getElementById("puck").style.transition = "visibility .25s ease 1.75s, top 1s ease 2.5s, opacity .25s ease 1.75s";
   sessionStorage.position = 5;
   sessionStorage.scorer = 4;
@@ -6942,10 +6942,10 @@ function gotIt17() {
   document.getElementById("puck").style.visibility = "hidden";
   document.getElementById("puck").style.left = "calc(50% - .5em)";
   document.getElementById("puck").style.top = "0";
-  document.getElementById("puck").style.opacity = "0";
+  document.getElementById("puck").style.opacity = "0%";
   document.getElementById("puck").style.transition = "visibility .25s ease 0s, left 0s ease .25s, top 0s ease .25s, opacity .25s ease 0s";
   document.getElementById("goalMessages").style.visibility = "hidden";
-  document.getElementById("goalMessages").style.opacity = "0";
+  document.getElementById("goalMessages").style.opacity = "0%";
   document.getElementById("goalMessages").style.transition = "all 0s ease 0s";
   sessionStorage.songPrime = 58;
   document.getElementById("ok").onclick = function() {
@@ -7087,13 +7087,13 @@ function openYoutubeSong() {
     document.getElementById("youtubeExit").tabIndex = "0";
     if (sessionStorage.youtube == 14) {
       document.getElementById("danceInstructions").style.visibility = "visible";
-      document.getElementById("danceInstructions").style.opacity = "1";
+      document.getElementById("danceInstructions").style.opacity = "100%";
       document.getElementById("danceInstructions").style.transition = "all 0s ease 0s";
     }
     else if (sessionStorage.youtube == 52) {
       document.getElementById("fuckSluButton").tabIndex = "0";
       document.getElementById("fuckSluButtonCont").style.visibility = "visible";
-      document.getElementById("fuckSluButtonCont").style.opacity = "1";
+      document.getElementById("fuckSluButtonCont").style.opacity = "100%";
       document.getElementById("fuckSluButtonCont").style.transition = "all 0s ease 0s";
       sessionStorage.fuckSlu = 0;
     }
@@ -7101,7 +7101,7 @@ function openYoutubeSong() {
     document.getElementById("youtubeSongsContCont").style.transition = "transform .5s ease 0s";
     document.getElementById("youtubeSongsContCont").tabIndex = "0";
     document.getElementById("cover").style.visibility = "visible";
-    document.getElementById("cover").style.opacity = "1";
+    document.getElementById("cover").style.opacity = "100%";
     document.getElementById("cover").style.transition = "all .25s ease 0s";
     document.getElementById("cover").tabIndex = "0";
     sessionStorage.scope = "document";
@@ -7207,13 +7207,13 @@ function hideCursor() {
 
 function emphasizeYoutubePlayPause() {
   sessionStorage.scope = "player";
-  document.getElementById("youtubePlayPauseIcon").style.opacity = ".9";
+  document.getElementById("youtubePlayPauseIcon").style.opacity = "90%";
   document.getElementById("youtubePlayPauseIcon").style.transition = "opacity 0s ease 0s";
 }
 
 function deEmphasizeYoutubePlayPause() {
   sessionStorage.scope = "document";
-  document.getElementById("youtubePlayPauseIcon").style.opacity = "1";
+  document.getElementById("youtubePlayPauseIcon").style.opacity = "100%";
   document.getElementById("youtubePlayPauseIcon").style.transition = "opacity 0s ease 0s";
 }
 
@@ -7236,11 +7236,11 @@ function youtubePlay(method, event) {
       document.getElementById("youtubeSongs").onmouseenter = null;
       document.getElementById("youtubeSongs").onmouseleave = null;
       document.getElementById("youtubePlayPauseIconShape").style.clipPath = "polygon(0% 0%, 100% 50%, 0% 100%, 0% 0%)";
-      document.getElementById("youtubePlayPauseIconShape").style.background = "rgba(68, 68, 68, .5)";
+      document.getElementById("youtubePlayPauseIconShape").style.background = "rgba(68, 68, 68, 50%)";
       document.getElementById("youtubePlayPauseIconShape").style.border = "none";
       document.getElementById("youtubePlayPauseIconShape").style.transition = "all 0s ease 0s";
       document.getElementById("youtubePlayPauseIcon").style.visibility = "hidden";
-      document.getElementById("youtubePlayPauseIcon").style.opacity = "0";
+      document.getElementById("youtubePlayPauseIcon").style.opacity = "0%";
       document.getElementById("youtubePlayPauseIcon").style.transform = "scale(1.25)";
       document.getElementById("youtubePlayPauseIcon").style.transition = "all .5s ease 0s";
       document.getElementById("youtubeSongs").ariaLabel = "Pause the YouTube song";
@@ -7267,7 +7267,7 @@ function youtubePlay(method, event) {
               document.getElementById("fuckSluMessage").style.visibility = "hidden"
             ), 250);
             setTimeout(() => (
-              document.getElementById("fuckSluMessage").style.opacity = "0"
+              document.getElementById("fuckSluMessage").style.opacity = "0%"
             ), 250);
             setTimeout(() => (
               document.getElementById("fuckSluMessage").style.transition = "all 0s ease 0s"
@@ -7303,22 +7303,22 @@ function youtubePause(method, event) {
       if ((method == "click") || (method == "space")) {
         document.getElementById("youtubePlayPauseIconShape").style.clipPath = "none";
         document.getElementById("youtubePlayPauseIconShape").style.background = "transparent";
-        document.getElementById("youtubePlayPauseIconShape").style.borderLeft = "2em solid rgba(68, 68, 68, .5)";
-        document.getElementById("youtubePlayPauseIconShape").style.borderRight = "2em solid rgba(68, 68, 68, .5)";
+        document.getElementById("youtubePlayPauseIconShape").style.borderLeft = "2em solid rgba(68, 68, 68, 50%)";
+        document.getElementById("youtubePlayPauseIconShape").style.borderRight = "2em solid rgba(68, 68, 68, 50%)";
         document.getElementById("youtubePlayPauseIconShape").style.transition = "all 0s ease 0s";
         document.getElementById("youtubePlayPauseIcon").style.visibility = "visible";
         if (sessionStorage.scope == "player") {
-          document.getElementById("youtubePlayPauseIcon").style.opacity = ".9";
+          document.getElementById("youtubePlayPauseIcon").style.opacity = "90%";
         }
         else if (sessionStorage.scope == "document") {
-          document.getElementById("youtubePlayPauseIcon").style.opacity = "1";
+          document.getElementById("youtubePlayPauseIcon").style.opacity = "100%";
         }
         document.getElementById("youtubePlayPauseIcon").style.transform = "scale(1)";
         document.getElementById("youtubePlayPauseIcon").style.transition = "all .5s ease 0s";
       }
       else if ((method == "restart") || (method == "exit")) {
         document.getElementById("youtubePlayPauseIconShape").style.clipPath = "polygon(0% 0%, 100% 50%, 0% 100%, 0% 0%)";
-        document.getElementById("youtubePlayPauseIconShape").style.background = "rgba(68, 68, 68, .5)";
+        document.getElementById("youtubePlayPauseIconShape").style.background = "rgba(68, 68, 68, 50%)";
         document.getElementById("youtubePlayPauseIconShape").style.border = "none";
         if (method == "restart") {
           document.getElementById("youtubePlayPauseIconShape").style.transition = "all .5s ease 0s";
@@ -7328,7 +7328,7 @@ function youtubePause(method, event) {
         }
         if (document.getElementById("youtubePlayPauseIcon").style.visibility == "hidden") {
           document.getElementById("youtubePlayPauseIcon").style.visibility = "visible";
-          document.getElementById("youtubePlayPauseIcon").style.opacity = "1";
+          document.getElementById("youtubePlayPauseIcon").style.opacity = "100%";
           document.getElementById("youtubePlayPauseIcon").style.transform = "scale(1)";
           if (method == "restart") {
             document.getElementById("youtubePlayPauseIcon").style.transition = "all .5s ease 0s";
@@ -7767,7 +7767,7 @@ function closeYoutubeSong(event) {
   youtubePause("exit", event);
   if ((sessionStorage.youtube != 52) || (sessionStorage.fuckSlu < 10)) {
     document.getElementById("cover").style.visibility = "hidden";
-    document.getElementById("cover").style.opacity = "0";
+    document.getElementById("cover").style.opacity = "0%";
     document.getElementById("cover").style.transition = "all .25s ease .25s";
     document.getElementById("cover").tabIndex = "-1";
     document.getElementById("cover").blur();
@@ -7796,12 +7796,12 @@ function closeYoutubeSong(event) {
   document.getElementById("youtubeExit").blur();
   if (sessionStorage.youtube == 14) {
     document.getElementById("danceInstructions").style.visibility = "hidden";
-    document.getElementById("danceInstructions").style.opacity = "0";
+    document.getElementById("danceInstructions").style.opacity = "0%";
     document.getElementById("danceInstructions").style.transition = "all 0s ease .5s";
   }
   else if (sessionStorage.youtube == 52) {
     document.getElementById("fuckSluButtonCont").style.visibility = "hidden";
-    document.getElementById("fuckSluButtonCont").style.opacity = "0";
+    document.getElementById("fuckSluButtonCont").style.opacity = "0%";
     document.getElementById("fuckSluButtonCont").style.transition = "all 0s ease .5s";
     document.getElementById("fuckSluButton").tabIndex = "-1";
     document.getElementById("fuckSluButton").blur();
@@ -7904,11 +7904,11 @@ function gotIt20() {
     }
   }
   document.getElementById("goalMessages").style.visibility = "visible";
-  document.getElementById("goalMessages").style.opacity = "1";
+  document.getElementById("goalMessages").style.opacity = "100%";
   document.getElementById("goalMessages").style.transition = "visibility 0s ease 0s, opacity 0s ease 0s, transform 0s ease .5s";
   document.getElementById("puck").style.visibility = "visible";
   document.getElementById("puck").style.top = "50%";
-  document.getElementById("puck").style.opacity = "1";
+  document.getElementById("puck").style.opacity = "100%";
   document.getElementById("puck").style.transition = "visibility .25s ease 1.5s, top 1s ease 2.25s, opacity .25s ease 1.5s";
   sessionStorage.position = 5;
   sessionStorage.scorer = 4;
@@ -8170,7 +8170,7 @@ function win() {
   ];
   enableCheers(enableClassLists, enableStyles);
   document.getElementById("goalMessages").style.visibility = "hidden";
-  document.getElementById("goalMessages").style.opacity = "0";
+  document.getElementById("goalMessages").style.opacity = "0%";
   document.getElementById("goalMessages").style.transition = "all 0s ease 0s";
   if ((sessionStorage.clarksonTimeout > 0) || (sessionStorage.clarksonTimeout == "ejection")) {
     var disableClassLists = [
@@ -8182,18 +8182,18 @@ function win() {
     disableCheers(disableClassLists, disableStyles);
     document.getElementById("offenderName").innerHTML = "our Golden Knights";
     document.getElementById("cage" + sessionStorage.clarksonCage).style.visibility = "hidden";
-    document.getElementById("cage" + sessionStorage.clarksonCage).style.opacity = "0";
+    document.getElementById("cage" + sessionStorage.clarksonCage).style.opacity = "0%";
     document.getElementById("cage" + sessionStorage.clarksonCage).style.transition = "all .25s ease 0s";
     sessionStorage.removeItem("clarksonCage");
   }
   if ((sessionStorage.sluTimeout > 0) || (sessionStorage.sluTimeout == "ejection")) {
     document.getElementById("cage" + sessionStorage.sluCage).style.visibility = "hidden";
-    document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "0";
+    document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "0%";
     document.getElementById("cage" + sessionStorage.sluCage).style.transition = "all .25s ease 0s";
     sessionStorage.removeItem("sluCage");
   }
   document.getElementById("puck").style.visibility = "hidden";
-  document.getElementById("puck").style.opacity = "0";
+  document.getElementById("puck").style.opacity = "0%";
   document.getElementById("puck").style.transition = "all .25s ease 0s";
   if (sessionStorage.gender == 1) {
     for (var i = 0; i < document.getElementsByClassName("menStatsCont").length; i++) {
@@ -8203,7 +8203,7 @@ function win() {
     }
     for (var i = 0; i < document.getElementsByClassName("sluMenPlayer").length; i++) {
       document.getElementsByClassName("sluMenPlayer")[i].style.visibility = "hidden";
-      document.getElementsByClassName("sluMenPlayer")[i].style.opacity = "0";
+      document.getElementsByClassName("sluMenPlayer")[i].style.opacity = "0%";
       document.getElementsByClassName("sluMenPlayer")[i].style.transition = "all 1s ease 0s";
       document.getElementsByClassName("sluMenPlayer")[i].tabIndex = "-1";
       document.getElementsByClassName("sluMenPlayer")[i].blur();
@@ -8228,7 +8228,7 @@ function win() {
     }
     for (var i = 0; i < document.getElementsByClassName("sluWomenPlayer").length; i++) {
       document.getElementsByClassName("sluWomenPlayer")[i].style.visibility = "hidden";
-      document.getElementsByClassName("sluWomenPlayer")[i].style.opacity = "0";
+      document.getElementsByClassName("sluWomenPlayer")[i].style.opacity = "0%";
       document.getElementsByClassName("sluWomenPlayer")[i].style.transition = "all 1s ease 0s";
       document.getElementsByClassName("sluWomenPlayer")[i].tabIndex = "-1";
       document.getElementsByClassName("sluWomenPlayer")[i].blur();
@@ -8246,19 +8246,19 @@ function win() {
     }
   }
   document.getElementById("clarksonVictoryMessageCont").style.visibility = "visible";
-  document.getElementById("clarksonVictoryMessageCont").style.opacity = "1";
+  document.getElementById("clarksonVictoryMessageCont").style.opacity = "100%";
   document.getElementById("clarksonVictoryMessageCont").style.transition = "all 0s ease 1s";
   document.getElementById("victoryMessages").style.visibility = "visible";
-  document.getElementById("victoryMessages").style.opacity = "1";
+  document.getElementById("victoryMessages").style.opacity = "100%";
   document.getElementById("victoryMessages").style.transition = "all 0s ease 1s";
   document.getElementById("golden").style.visibility = "visible";
-  document.getElementById("golden").style.opacity = "1";
+  document.getElementById("golden").style.opacity = "100%";
   document.getElementById("golden").style.transition = "all .25s ease 1s";
   document.getElementById("knight").style.visibility = "visible";
-  document.getElementById("knight").style.opacity = "1";
+  document.getElementById("knight").style.opacity = "100%";
   document.getElementById("knight").style.transition = "all .25s ease 1.75s";
   document.getElementById("victoryClarkson").style.visibility = "visible";
-  document.getElementById("victoryClarkson").style.opacity = "1";
+  document.getElementById("victoryClarkson").style.opacity = "100%";
   document.getElementById("victoryClarkson").style.transition = "all .25s ease 2.5s";
   setTimeout(enableButton, 2750);
   document.getElementById("ok").onclick = function() {
@@ -8313,7 +8313,7 @@ function lose() {
   ];
   disableCheers(disableClassLists, disableStyles);
   document.getElementById("goalMessages").style.visibility = "hidden";
-  document.getElementById("goalMessages").style.opacity = "0";
+  document.getElementById("goalMessages").style.opacity = "0%";
   document.getElementById("goalMessages").style.transition = "all 0s ease 0s";
   if ((sessionStorage.clarksonTimeout > 0) || (sessionStorage.clarksonTimeout == "ejection")) {
     var disableClassLists = [
@@ -8325,18 +8325,18 @@ function lose() {
     disableCheers(disableClassLists, disableStyles);
     document.getElementById("offenderName").innerHTML = "our Golden Knights";
     document.getElementById("cage" + sessionStorage.clarksonCage).style.visibility = "hidden";
-    document.getElementById("cage" + sessionStorage.clarksonCage).style.opacity = "0";
+    document.getElementById("cage" + sessionStorage.clarksonCage).style.opacity = "0%";
     document.getElementById("cage" + sessionStorage.clarksonCage).style.transition = "all .25s ease 0s";
     sessionStorage.removeItem("clarksonCage");
   }
   if ((sessionStorage.sluTimeout > 0) || (sessionStorage.sluTimeout == "ejection")) {
     document.getElementById("cage" + sessionStorage.sluCage).style.visibility = "hidden";
-    document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "0";
+    document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "0%";
     document.getElementById("cage" + sessionStorage.sluCage).style.transition = "all .25s ease 0s";
     sessionStorage.removeItem("sluCage");
   }
   document.getElementById("puck").style.visibility = "hidden";
-  document.getElementById("puck").style.opacity = "0";
+  document.getElementById("puck").style.opacity = "0%";
   document.getElementById("puck").style.transition = "all .25s ease 0s";
   if (sessionStorage.gender == 1) {
     for (var i = 0; i < document.getElementsByClassName("menStatsCont").length; i++) {
@@ -8346,7 +8346,7 @@ function lose() {
     }
     for (var i = 0; i < document.getElementsByClassName("clarksonMenPlayer").length; i++) {
       document.getElementsByClassName("clarksonMenPlayer")[i].style.visibility = "hidden";
-      document.getElementsByClassName("clarksonMenPlayer")[i].style.opacity = "0";
+      document.getElementsByClassName("clarksonMenPlayer")[i].style.opacity = "0%";
       document.getElementsByClassName("clarksonMenPlayer")[i].style.transition = "all 1s ease 0s";
       document.getElementsByClassName("clarksonMenPlayer")[i].tabIndex = "-1";
       document.getElementsByClassName("clarksonMenPlayer")[i].blur();
@@ -8371,7 +8371,7 @@ function lose() {
     }
     for (var i = 0; i < document.getElementsByClassName("clarksonWomenPlayer").length; i++) {
       document.getElementsByClassName("clarksonWomenPlayer")[i].style.visibility = "hidden";
-      document.getElementsByClassName("clarksonWomenPlayer")[i].style.opacity = "0";
+      document.getElementsByClassName("clarksonWomenPlayer")[i].style.opacity = "0%";
       document.getElementsByClassName("clarksonWomenPlayer")[i].style.transition = "all 1s ease 0s";
       document.getElementsByClassName("clarksonWomenPlayer")[i].tabIndex = "-1";
       document.getElementsByClassName("clarksonWomenPlayer")[i].blur();
@@ -8389,10 +8389,10 @@ function lose() {
     }
   }
   document.getElementById("sluVictoryMessageCont").style.visibility = "visible";
-  document.getElementById("sluVictoryMessageCont").style.opacity = "1";
+  document.getElementById("sluVictoryMessageCont").style.opacity = "100%";
   document.getElementById("sluVictoryMessageCont").style.transition = "all 0s ease 1s";
   document.getElementById("victoryMessages").style.visibility = "visible";
-  document.getElementById("victoryMessages").style.opacity = "1";
+  document.getElementById("victoryMessages").style.opacity = "100%";
   document.getElementById("victoryMessages").style.transition = "all .25s ease 1s";
   document.getElementById("saints").style.transform = "rotate(20deg)";
   document.getElementById("saints").style.transition = "transform 0s ease 4s";
@@ -8424,22 +8424,22 @@ function gotIt22() {
     sessionStorage.backup = "";
   }
   document.getElementById("victoryMessages").style.visibility = "hidden";
-  document.getElementById("victoryMessages").style.opacity = "0";
+  document.getElementById("victoryMessages").style.opacity = "0%";
   document.getElementById("victoryMessages").style.transition = "all .25s ease 0s";
   document.getElementById("clarksonVictoryMessageCont").style.visibility = "hidden";
-  document.getElementById("clarksonVictoryMessageCont").style.opacity = "0";
+  document.getElementById("clarksonVictoryMessageCont").style.opacity = "0%";
   document.getElementById("clarksonVictoryMessageCont").style.transition = "all 0s ease .25s";
   document.getElementById("golden").style.visibility = "hidden";
-  document.getElementById("golden").style.opacity = "0";
+  document.getElementById("golden").style.opacity = "0%";
   document.getElementById("golden").style.transition = "all 0s ease .25s";
   document.getElementById("knight").style.visibility = "hidden";
-  document.getElementById("knight").style.opacity = "0";
+  document.getElementById("knight").style.opacity = "0%";
   document.getElementById("knight").style.transition = "all 0s ease .25s";
   document.getElementById("victoryClarkson").style.visibility = "hidden";
-  document.getElementById("victoryClarkson").style.opacity = "0";
+  document.getElementById("victoryClarkson").style.opacity = "0%";
   document.getElementById("victoryClarkson").style.transition = "all 0s ease .25s";
   document.getElementById("handCont").style.visibility = "visible";
-  document.getElementById("handCont").style.opacity = "1";
+  document.getElementById("handCont").style.opacity = "100%";
   document.getElementById("handCont").style.transition = "all .25s ease .25s";
   document.getElementById("hand").style.transform = "rotate(30deg)";
   document.getElementById("hand").style.transition = "transform .5s ease .75s";
@@ -8472,10 +8472,10 @@ function gotIt23() {
   enableCheers(enableClassLists, enableStyles);
   if (sessionStorage.clarksonScore < sessionStorage.sluScore) {
     document.getElementById("victoryMessages").style.visibility = "hidden";
-    document.getElementById("victoryMessages").style.opacity = "0";
+    document.getElementById("victoryMessages").style.opacity = "0%";
     document.getElementById("victoryMessages").style.transition = "all .25s ease 0s";
     document.getElementById("sluVictoryMessageCont").style.visibility = "hidden";
-    document.getElementById("sluVictoryMessageCont").style.opacity = "0";
+    document.getElementById("sluVictoryMessageCont").style.opacity = "0%";
     document.getElementById("sluVictoryMessageCont").style.transition = "all 0s ease .25s";
     if (sessionStorage.gender == 1) {
       for (var i = 0; i < document.getElementsByClassName("sluMenPlayer").length; i++) {
@@ -8504,7 +8504,7 @@ function gotIt23() {
           document.getElementsByClassName("sluMenPlayer")[i].style.right = "-18em";
           document.getElementsByClassName("sluMenPlayer")[i].style.bottom = "12em";
         }
-        document.getElementsByClassName("sluMenPlayer")[i].style.opacity = "0";
+        document.getElementsByClassName("sluMenPlayer")[i].style.opacity = "0%";
         document.getElementsByClassName("sluMenPlayer")[i].style.transition = "all 0s ease " + transitionDelay + "s";
         document.getElementsByClassName("sluMenPlayer")[i].style.animation = "sluPlayer" + animationName + "Exit " + animationDuration + "s linear " + animationDelay + "s 1 forwards";
         const reset = (x, y) => {
@@ -8548,7 +8548,7 @@ function gotIt23() {
           document.getElementsByClassName("sluWomenPlayer")[i].style.right = "-18em";
           document.getElementsByClassName("sluWomenPlayer")[i].style.bottom = "12em";
         }
-        document.getElementsByClassName("sluWomenPlayer")[i].style.opacity = "0";
+        document.getElementsByClassName("sluWomenPlayer")[i].style.opacity = "0%";
         document.getElementsByClassName("sluWomenPlayer")[i].style.transition = "all 0s ease " + transitionDelay + "s";
         document.getElementsByClassName("sluWomenPlayer")[i].style.animation = "sluPlayer" + animationName + "Exit " + animationDuration + "s linear " + animationDelay + "s 1 forwards";
         const reset = (x, y) => {
@@ -8568,7 +8568,7 @@ function gotIt23() {
   }
   else if (sessionStorage.clarksonScore > sessionStorage.sluScore) {
     document.getElementById("handCont").style.visibility = "hidden";
-    document.getElementById("handCont").style.opacity = "0";
+    document.getElementById("handCont").style.opacity = "0%";
     document.getElementById("handCont").style.transition = "all .25s ease 0s";
     if (sessionStorage.gender == 1) {
       for (var i = 0; i < document.getElementsByClassName("clarksonMenPlayer").length; i++) {
@@ -8593,7 +8593,7 @@ function gotIt23() {
           document.getElementsByClassName("clarksonMenPlayer")[i].style.left = "-18em";
           document.getElementsByClassName("clarksonMenPlayer")[i].style.bottom = "12em";
         }
-        document.getElementsByClassName("clarksonMenPlayer")[i].style.opacity = "0";
+        document.getElementsByClassName("clarksonMenPlayer")[i].style.opacity = "0%";
         document.getElementsByClassName("clarksonMenPlayer")[i].style.transition = "all 0s ease " + transitionDelay + "s";
         document.getElementsByClassName("clarksonMenPlayer")[i].style.animation = "clarksonPlayer" + animationName + "Exit " + animationDuration + "s linear " + animationDelay + "s 1 forwards";
         const reset = (x, y) => {
@@ -8633,7 +8633,7 @@ function gotIt23() {
           document.getElementsByClassName("clarksonWomenPlayer")[i].style.left = "-18em";
           document.getElementsByClassName("clarksonWomenPlayer")[i].style.bottom = "12em";
         }
-        document.getElementsByClassName("clarksonWomenPlayer")[i].style.opacity = "0";
+        document.getElementsByClassName("clarksonWomenPlayer")[i].style.opacity = "0%";
         document.getElementsByClassName("clarksonWomenPlayer")[i].style.transition = "all 0s ease " + transitionDelay + "s";
         document.getElementsByClassName("clarksonWomenPlayer")[i].style.animation = "clarksonPlayer" + animationName + "Exit " + animationDuration + "s linear " + animationDelay + "s 1 forwards";
         const reset = (x, y) => {
@@ -8702,7 +8702,7 @@ function gotIt24() {
   disableCheers(disableClassLists, disableStyles);
   for (var i = 0; i < document.getElementsByClassName("disappearExt").length; i++) {
     document.getElementsByClassName("disappearExt")[i].style.visibility = "hidden";
-    document.getElementsByClassName("disappearExt")[i].style.opacity = "0";
+    document.getElementsByClassName("disappearExt")[i].style.opacity = "0%";
     document.getElementsByClassName("disappearExt")[i].style.transition = "all 1s ease 0s";
   }
   document.getElementById("scoreboard").tabIndex = "-1";
@@ -8737,35 +8737,35 @@ function gotIt24() {
     }
     document.getElementsByClassName("bandie")[i].style.visibility = "visible";
     if (document.getElementsByClassName("bandie")[i] == document.getElementById("benSolo")) {
-      document.getElementById("benSolo").style.opacity = "0";
+      document.getElementById("benSolo").style.opacity = "0%";
       document.getElementById("benSolo").style.transition = "visibility 0s ease " + transitionDelay + "s, opacity 0s ease 0s";
     }
     else {
       if ((document.getElementsByClassName("bandie")[i] == document.getElementById("carolineMoreau")) && (sessionStorage.lives < 6)) {
-        document.getElementById("carolineMoreau").style.opacity = ".25";
+        document.getElementById("carolineMoreau").style.opacity = "25%";
       }
       else if ((document.getElementsByClassName("bandie")[i] == document.getElementById("liamDurkin")) && (sessionStorage.lives < 5)) {
-        document.getElementById("liamDurkin").style.opacity = ".25";
+        document.getElementById("liamDurkin").style.opacity = "25%";
       }
       else if ((document.getElementsByClassName("bandie")[i] == document.getElementById("kamiMiller")) && (sessionStorage.lives < 4)) {
-        document.getElementById("kamiMiller").style.opacity = ".25";
+        document.getElementById("kamiMiller").style.opacity = "25%";
       }
       else if ((document.getElementsByClassName("bandie")[i] == document.getElementById("garrettWillard")) && (sessionStorage.lives < 3)) {
-        document.getElementById("garrettWillard").style.opacity = ".25";
+        document.getElementById("garrettWillard").style.opacity = "25%";
       }
       else if ((document.getElementsByClassName("bandie")[i] == document.getElementById("ryanMccarthy")) && (sessionStorage.lives < 2)) {
-        document.getElementById("ryanMccarthy").style.opacity = ".25";
+        document.getElementById("ryanMccarthy").style.opacity = "25%";
         document.getElementById("ryanMccarthyLink").href = "https://www.nytimes.com/1986/09/05/nyregion/rape-and-murder-scar-innocence-of-potsdam.html";
       }
       else {
-        document.getElementsByClassName("bandie")[i].style.opacity = "1";
+        document.getElementsByClassName("bandie")[i].style.opacity = "100%";
       }
       document.getElementsByClassName("bandie")[i].style.transition = "all .25s ease " + transitionDelay + "s";
     }
   }
   for (var i = 0; i < document.getElementsByClassName("bandieCont").length; i++) {
     document.getElementsByClassName("bandieCont")[i].style.visibility = "visible";
-    document.getElementsByClassName("bandieCont")[i].style.opacity = "1";
+    document.getElementsByClassName("bandieCont")[i].style.opacity = "100%";
     if (document.getElementsByClassName("bandieCont")[i] == document.getElementById("nickSchalagoCont")) {
       document.getElementById("nickSchalagoCont").style.transition = "all 0s ease 1.8s";
     }
@@ -8780,10 +8780,10 @@ function gotIt24() {
     }
   }
   document.getElementById("bandiesCont").style.visibility = "visible";
-  document.getElementById("bandiesCont").style.opacity = "1";
+  document.getElementById("bandiesCont").style.opacity = "100%";
   document.getElementById("bandiesCont").style.transition = "all 0s ease 1.5s";
   document.getElementById("congrats").style.visibility = "visible";
-  document.getElementById("congrats").style.opacity = "1";
+  document.getElementById("congrats").style.opacity = "100%";
   document.getElementById("congrats").style.transition = "all .25s ease 3.7s";
   document.getElementById("rink").style.left = "2.5%";
   document.getElementById("rink").style.right = "2.5%";
@@ -8819,11 +8819,11 @@ function openPoem() {
   }
   document.getElementById("poemExit").tabIndex = "0";
   document.getElementById("poem").style.visibility = "visible";
-  document.getElementById("poem").style.opacity = "1";
+  document.getElementById("poem").style.opacity = "100%";
   document.getElementById("poem").style.transition = "all 0s ease 0s";
   document.getElementById("poem").tabIndex = "0";
   document.getElementById("cover").style.visibility = "visible";
-  document.getElementById("cover").style.opacity = "1";
+  document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "all .25s ease 0s";
   document.getElementById("cover").tabIndex = "0";
   document.onclick = null;
@@ -8837,12 +8837,12 @@ function openPoem() {
 function closePoem(event) {
   if ((event.type == "click") || ((event.type == "keydown") && (event.key == "Escape"))) {
     document.getElementById("cover").style.visibility = "hidden";
-    document.getElementById("cover").style.opacity = "0";
+    document.getElementById("cover").style.opacity = "0%";
     document.getElementById("cover").style.transition = "all .25s ease 0s";
     document.getElementById("cover").tabIndex = "-1";
     document.getElementById("cover").blur();
     document.getElementById("poem").style.visibility = "hidden";
-    document.getElementById("poem").style.opacity = "0";
+    document.getElementById("poem").style.opacity = "0%";
     document.getElementById("poem").style.transition = "all 0s ease .25s";
     document.getElementById("poem").tabIndex = "-1";
     document.getElementById("poem").blur();
@@ -8983,7 +8983,7 @@ function gotIt26() {
 
 function firewall() {
   document.getElementById("cover").style.visibility = "visible";
-  document.getElementById("cover").style.opacity = "1";
+  document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "all .25s ease 0s";
   document.getElementById("cover").tabIndex = "0";
   for (var i = 0; i < document.getElementsByClassName("confirmButton").length; i++) {
@@ -9006,7 +9006,7 @@ function acceptTerms(event) {
     document.getElementsByClassName("confirmButton")[i].blur();
   }
   document.getElementById("cover").style.visibility = "hidden";
-  document.getElementById("cover").style.opacity = "0";
+  document.getElementById("cover").style.opacity = "0%";
   document.getElementById("cover").style.transition = "all .25s ease 0s";
   document.getElementById("cover").tabIndex = "-1";
   document.getElementById("cover").blur();
@@ -9034,7 +9034,7 @@ function declineTerms(event) {
     document.getElementsByClassName("confirmButton")[i].blur();
   }
   document.getElementById("cover").style.visibility = "hidden";
-  document.getElementById("cover").style.opacity = "0";
+  document.getElementById("cover").style.opacity = "0%";
   document.getElementById("cover").style.transition = "all .25s ease 0s";
   document.getElementById("cover").tabIndex = "-1";
   document.getElementById("cover").blur();
@@ -9091,7 +9091,7 @@ function gotIt27() {
     document.getElementById("dafCounterButton").tabIndex = "0"
   ), 1500);
   document.getElementById("dafCounterCont").style.visibility = "visible";
-  document.getElementById("dafCounterCont").style.opacity = "1";
+  document.getElementById("dafCounterCont").style.opacity = "100%";
   document.getElementById("dafCounterCont").style.transition = "all .25s ease 1.5s";
   setTimeout(() => (
     document.getElementById("dafCounterCont").tabIndex = "0"
@@ -9101,7 +9101,7 @@ function gotIt27() {
     document.getElementById("speakerSongs").tabIndex = "0"
   ), 2000);
   document.getElementById("speakerCont").style.visibility = "visible";
-  document.getElementById("speakerCont").style.opacity = "1";
+  document.getElementById("speakerCont").style.opacity = "100%";
   document.getElementById("speakerCont").style.transition = "all .25s ease 2s";
   for (var i = 0; i < document.getElementsByClassName("audio").length; i++) {
     document.getElementsByClassName("audio")[i].onended = speakerNewSong;
@@ -9125,18 +9125,18 @@ function gotIt27() {
     ), 2500);
   }
   document.getElementById("beerCont").style.visibility = "visible";
-  document.getElementById("beerCont").style.opacity = "1";
+  document.getElementById("beerCont").style.opacity = "100%";
   document.getElementById("beerCont").style.transition = "visibility .25s ease 2.5s, opacity .25s ease 2.5s";
   sessionStorage.drinks = 0;
   sessionStorage.emphasizeBeerInterval = setInterval(emphasizeBeer, 60000);
   sessionStorage.iceDecrement = 10;
   document.getElementById("party").style.visibility = "visible";
-  document.getElementById("party").style.opacity = "1";
+  document.getElementById("party").style.opacity = "100%";
   document.getElementById("party").style.transition = "all 0s ease 1.5s";
   for (var i = 0; i < document.getElementsByClassName("socialMedia").length; i++) {
     var transitionDelay = ((i * .25) + 2.75);
     document.getElementsByClassName("socialMedia")[i].style.visibility = "visible";
-    document.getElementsByClassName("socialMedia")[i].style.opacity = "1";
+    document.getElementsByClassName("socialMedia")[i].style.opacity = "100%";
     document.getElementsByClassName("socialMedia")[i].style.transition = "all .25s ease " + transitionDelay + "s";
     const activate = (x, y) => {
       setTimeout(() => (
@@ -9146,7 +9146,7 @@ function gotIt27() {
     activate(i, (transitionDelay * 1000));
   }
   document.getElementById("socialMedias").style.visibility = "visible";
-  document.getElementById("socialMedias").style.opacity = "1";
+  document.getElementById("socialMedias").style.opacity = "100%";
   document.getElementById("socialMedias").style.transition = "all 0s ease 2.75s";
   sessionStorage.promo = 0;
   if (sessionStorage.clarksonScore <= sessionStorage.sluScore) {
@@ -9236,7 +9236,7 @@ function selectDrinkingSong() {
     if (i == (4 - sessionStorage.singing)) {
       document.getElementsByClassName("drinkingSongCont")[i].style.zIndex = "1";
       document.getElementsByClassName("drinkingSongCont")[i].style.visibility = "visible";
-      document.getElementsByClassName("drinkingSongCont")[i].style.opacity = "1";
+      document.getElementsByClassName("drinkingSongCont")[i].style.opacity = "100%";
       document.getElementsByClassName("drinkingSongCont")[i].style.transition = "all .25s ease 0s";
       if (eval("sessionStorage." + document.getElementsByClassName("drinkingSongChoice")[4 - (i + 1)].value + "Chorus") == 0) {
         document.getElementsByClassName("drinkingSongButton")[i].tabIndex = "0";
@@ -9248,7 +9248,7 @@ function selectDrinkingSong() {
     else {
       document.getElementsByClassName("drinkingSongCont")[i].style.zIndex = "0";
       document.getElementsByClassName("drinkingSongCont")[i].style.visibility = "hidden";
-      document.getElementsByClassName("drinkingSongCont")[i].style.opacity = "0";
+      document.getElementsByClassName("drinkingSongCont")[i].style.opacity = "0%";
       document.getElementsByClassName("drinkingSongCont")[i].style.transition = "all .25s ease 0s";
       if (eval("sessionStorage." + document.getElementsByClassName("drinkingSongChoice")[4 - (i + 1)].value + "Chorus") == 0) {
         document.getElementsByClassName("drinkingSongButton")[i].tabIndex = "-1";
@@ -9304,10 +9304,10 @@ function drinkingSongSetup() {
   }
   if (eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Chorus") == 0) {
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Button").style.visibility = "hidden";
-    document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Button").style.opacity = "0";
+    document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Button").style.opacity = "0%";
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Button").style.transition = "visibility .25s ease 0s, opacity .25s ease 0s, transform .1s ease 0s";
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "LinesContCont").style.visibility = "visible";
-    document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "LinesContCont").style.opacity = "1";
+    document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "LinesContCont").style.opacity = "100%";
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "LinesContCont").style.transition = "all .25s ease .25s";
     if (sessionStorage.singing == 1) {
       console.log("My favorite part of the knight!");
@@ -9320,7 +9320,7 @@ function drinkingSongSetup() {
     if ((sessionStorage.singing == 1) || (sessionStorage.singing == 2)) {
       document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Cont").style.cursor = "auto";
       document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Song").style.visibility = "hidden";
-      document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Song").style.opacity = "0";
+      document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Song").style.opacity = "0%";
       document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Song").style.transition = "all .25s ease 0s";
       for (var i = 0; i < document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word").length; i++) {
         document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word")[i].style.visibility = "hidden";
@@ -9335,7 +9335,7 @@ function drinkingSongSetup() {
         document.getElementById("theSMManLyrics").style.transition = "font-size 0s ease 0s";
       }
       document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "LinesContCont").style.visibility = "visible";
-      document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "LinesContCont").style.opacity = "1";
+      document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "LinesContCont").style.opacity = "100%";
       document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "LinesContCont").style.transition = "all .25s ease 0s";
     }
   }
@@ -9358,7 +9358,7 @@ function drinkingSongSetup() {
     }
   }
   document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").style.visibility = "visible";
-  document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").style.opacity = "1";
+  document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").style.opacity = "100%";
   document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").style.transition = "all 0s ease .25s";
   if (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").selectedIndex > 0) {
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").selectedIndex = 0;
@@ -9396,7 +9396,7 @@ function drinkingSongVerse(event) {
     }
   }
   document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").style.visibility = "hidden";
-  document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").style.opacity = "0";
+  document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").style.opacity = "0%";
   document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").style.transition = "all .25s ease 0s";
   document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").tabIndex = "-1";
   document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").blur();
@@ -9411,7 +9411,7 @@ function drinkingSongVerse(event) {
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Response" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).style.transition = "opacity 0s ease 0s";
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Response" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).disabled = false;
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").style.visibility = "visible";
-    document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").style.opacity = "1";
+    document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").style.opacity = "100%";
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").style.transition = "all .25s ease 0s";
     if (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").selectedIndex > 0) {
       document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").selectedIndex = 0;
@@ -9430,7 +9430,7 @@ function drinkingSongVerse(event) {
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponse" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).style.transition = "opacity 0s ease 0s";
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponse" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).disabled = false;
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").style.visibility = "visible";
-    document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").style.opacity = "1";
+    document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").style.opacity = "100%";
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").style.transition = "all .25s ease 0s";
     if (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").selectedIndex > 0) {
       document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").selectedIndex = 0;
@@ -9451,7 +9451,7 @@ function drinkingSongFirstResponse(event) {
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Response" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).disabled = true;
     social(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Response" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line"), event);
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").style.visibility = "hidden";
-    document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").style.opacity = "0";
+    document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").style.opacity = "0%";
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").style.transition = "all 0s ease .25s";
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").tabIndex = "-1";
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").blur();
@@ -9464,7 +9464,7 @@ function drinkingSongFirstResponse(event) {
         document.getElementById("tijuanaLyrics").innerHTML = "Knock, knock!"
       ), 250);
       document.getElementById("tijuanaVerses").style.visibility = "visible";
-      document.getElementById("tijuanaVerses").style.opacity = "1";
+      document.getElementById("tijuanaVerses").style.opacity = "100%";
       document.getElementById("tijuanaVerses").style.transition = "all 0s ease .25s";
       document.getElementById("tijuanaVerses").selectedIndex = 0;
       document.getElementById("tijuanaVerses").tabIndex = "0";
@@ -9472,11 +9472,11 @@ function drinkingSongFirstResponse(event) {
     else {
       if (sessionStorage.singing == 1) {
         document.getElementById("tijuanaLinesContCont").style.visibility = "hidden";
-        document.getElementById("tijuanaLinesContCont").style.opacity = "0";
+        document.getElementById("tijuanaLinesContCont").style.opacity = "0%";
         document.getElementById("tijuanaLinesContCont").style.transition = "all .25s ease 0s";
         document.getElementById("tijuanaCont").style.cursor = "wait";
         document.getElementById("tijuanaSong").style.visibility = "visible";
-        document.getElementById("tijuanaSong").style.opacity = "1";
+        document.getElementById("tijuanaSong").style.opacity = "100%";
         document.getElementById("tijuanaSong").style.transition = "all 0s ease .25s";
         for (var i = 0; i < document.getElementsByClassName("tijuanaWord").length; i++) {
           var transitionDelay = (i / 4);
@@ -9515,7 +9515,7 @@ function drinkingSongFirstResponse(event) {
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponse" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).disabled = true;
     social(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponse" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line"), event);
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").style.visibility = "hidden";
-    document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").style.opacity = "0";
+    document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").style.opacity = "0%";
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").style.transition = "all 0s ease .25s";
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").tabIndex = "-1";
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").blur();
@@ -9530,7 +9530,7 @@ function drinkingSongFirstResponse(event) {
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponse" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).style.transition = "opacity 0s ease 0s";
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponse" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).disabled = false;
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").style.visibility = "visible";
-    document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").style.opacity = "1";
+    document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").style.opacity = "100%";
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").style.transition = "all .25s ease 0s";
     if (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").selectedIndex > 0) {
       document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").selectedIndex = 0;
@@ -9550,7 +9550,7 @@ function drinkingSongSecondResponse(event) {
   document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponse" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).disabled = true;
   social(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponse" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line"), event);
   document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").style.visibility = "hidden";
-  document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").style.opacity = "0";
+  document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").style.opacity = "0%";
   document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").style.transition = "all 0s ease .25s";
   document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").tabIndex = "-1";
   document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").blur();
@@ -9560,16 +9560,16 @@ function drinkingSongSecondResponse(event) {
       selectDrinkingSong();
       if (sessionStorage.tijuanaChorus == 0) {
         document.getElementById("tijuanaButton").style.visibility = "hidden";
-        document.getElementById("tijuanaButton").style.opacity = "0";
+        document.getElementById("tijuanaButton").style.opacity = "0%";
         document.getElementById("tijuanaButton").style.transition = "visibility 0s ease 0s, opacity 0s ease 0s, transform .1s ease 0s";
         console.log("My favorite part of the knight!");
       }
       document.getElementById("tijuanaLinesContCont").style.visibility = "hidden";
-      document.getElementById("tijuanaLinesContCont").style.opacity = "0";
+      document.getElementById("tijuanaLinesContCont").style.opacity = "0%";
       document.getElementById("tijuanaLinesContCont").style.transition = "all 0s ease 0s";
       document.getElementById("tijuanaCont").style.cursor = "wait";
       document.getElementById("tijuanaSong").style.visibility = "visible";
-      document.getElementById("tijuanaSong").style.opacity = "1";
+      document.getElementById("tijuanaSong").style.opacity = "100%";
       document.getElementById("tijuanaSong").style.transition = "all 0s ease .25s";
       for (var i = 0; i < document.getElementsByClassName("tijuanaWord").length; i++) {
         var transitionDelay = (i / 4);
@@ -9593,7 +9593,7 @@ function drinkingSongSecondResponse(event) {
     document.getElementById("theSMManLyrics").style.fontSize = "2em";
     document.getElementById("theSMManLyrics").style.transition = "font-size 0s ease .25s";
     document.getElementById("theSMManVerses").style.visibility = "visible";
-    document.getElementById("theSMManVerses").style.opacity = "1";
+    document.getElementById("theSMManVerses").style.opacity = "100%";
     document.getElementById("theSMManVerses").style.transition = "all 0s ease .25s";
     document.getElementById("theSMManVerses").selectedIndex = 0;
     document.getElementById("theSMManVerses").tabIndex = "0";
@@ -9601,11 +9601,11 @@ function drinkingSongSecondResponse(event) {
   else {
     if (sessionStorage.singing == 2) {
       document.getElementById("theSMManLinesContCont").style.visibility = "hidden";
-      document.getElementById("theSMManLinesContCont").style.opacity = "0";
+      document.getElementById("theSMManLinesContCont").style.opacity = "0%";
       document.getElementById("theSMManLinesContCont").style.transition = "all .25s ease 0s";
       document.getElementById("theSMManCont").style.cursor = "wait";
       document.getElementById("theSMManSong").style.visibility = "visible";
-      document.getElementById("theSMManSong").style.opacity = "1";
+      document.getElementById("theSMManSong").style.opacity = "100%";
       document.getElementById("theSMManSong").style.transition = "all 0s ease .25s";
       for (var i = 0; i < document.getElementsByClassName("theSMManWord").length; i++) {
         var transitionDelay = (i / 4);
@@ -9728,7 +9728,7 @@ function dafCounterError() {
   document.getElementById("dafCounterButton").blur();
   document.getElementById("dafCounterNum").innerHTML = "@#$%&";
   document.getElementById("dafCounterError").style.visibility = "visible";
-  document.getElementById("dafCounterError").style.opacity = "1";
+  document.getElementById("dafCounterError").style.opacity = "100%";
   document.getElementById("dafCounterError").style.transition = "all 0s ease 0s";
   compileSound("sawtooth", ["exponential", 140, 90, .25], ["none", 1, null, 0], .25);
 }
@@ -9918,7 +9918,7 @@ function singIce(event) {
   sessionStorage.removeItem("bitch");
   document.getElementById("iceButton").tabIndex = "0";
   document.getElementById("iceButtonCont").style.visibility = "visible";
-  document.getElementById("iceButtonCont").style.opacity = "1";
+  document.getElementById("iceButtonCont").style.opacity = "100%";
   document.getElementById("iceButtonCont").style.transition = "all .25s ease .75s";
   var transformValue = ((sessionStorage.level - 1) * 9);
   document.getElementById("iceContContCont").style.visibility = "visible";
@@ -9927,19 +9927,19 @@ function singIce(event) {
   document.getElementById("iceContContCont").style.top = "10%";
   document.getElementById("iceContContCont").style.bottom = "30%";
   document.getElementById("iceContContCont").style.background = "var(--white)";
-  document.getElementById("iceContContCont").style.opacity = "1";
+  document.getElementById("iceContContCont").style.opacity = "100%";
   document.getElementById("iceContContCont").style.border = ".05em solid var(--clarksonGreen)";
   document.getElementById("iceContContCont").style.transform = "skew(" + (Math.ceil(Math.random() * transformValue) * ((Math.round(Math.random())) ? (1) : (-1))) + "deg) scale(1)";
   document.getElementById("iceContContCont").style.transition = "visibility 0s ease 0s, left 1s ease 0s, right 1s ease 0s, top 1s ease 0s, bottom 1s ease 0s, background .25s ease .75s, opacity 0s ease 0s, border .25s ease .75s, transform 1s ease 0s";
   document.getElementById("iceContContCont").tabIndex = "0";
   document.getElementById("cover").style.zIndex = "91";
   document.getElementById("cover").style.visibility = "visible";
-  document.getElementById("cover").style.background = "rgba(153, 153, 153, .75)";
-  document.getElementById("cover").style.opacity = "1";
+  document.getElementById("cover").style.background = "rgba(153, 153, 153, 75%)";
+  document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "visibility 0s ease 0s, background .25s ease .75s, opacity 0s ease 0s";
   document.getElementById("cover").tabIndex = "0";
   document.getElementById("iceSong").style.visibility = "visible";
-  document.getElementById("iceSong").style.opacity = "1";
+  document.getElementById("iceSong").style.opacity = "100%";
   document.getElementById("iceSong").style.transition = "all 0s ease 1.5s";
   for (var i = 0; i < document.getElementsByClassName("iceWord").length; i++) {
     var transitionDelay = ((i / 4) + 1.25);
@@ -9952,7 +9952,7 @@ function singIce(event) {
 
 function countdownIce(event) {
   document.getElementById("iceSong").style.visibility = "hidden";
-  document.getElementById("iceSong").style.opacity = "0";
+  document.getElementById("iceSong").style.opacity = "0%";
   document.getElementById("iceSong").style.transition = "all .25s ease 0s";
   for (var i = 0; i < document.getElementsByClassName("iceWord").length; i++) {
     document.getElementsByClassName("iceWord")[i].style.visibility = "hidden";
@@ -9961,7 +9961,7 @@ function countdownIce(event) {
   sessionStorage.countdown = 8;
   document.getElementById("iceCounter").innerHTML = sessionStorage.countdown;
   document.getElementById("iceCounter").style.visibility = "visible";
-  document.getElementById("iceCounter").style.opacity = "1";
+  document.getElementById("iceCounter").style.opacity = "100%";
   document.getElementById("iceCounter").style.color = "var(--clarksonGreen)";
   document.getElementById("iceCounter").style.fontSize = "5em";
   document.getElementById("iceCounter").style.transition = "visibility .25s ease 0s, opacity .25s ease 0s, color 0s ease 0s, font-size 0s ease 0s";
@@ -10100,7 +10100,7 @@ function failIce(event) {
   document.getElementById("conductorCont").style.zIndex = "92";
   document.getElementById("cover").style.zIndex = "93";
   document.getElementById("iceContContCont").style.visibility = "hidden";
-  document.getElementById("iceContContCont").style.opacity = "0";
+  document.getElementById("iceContContCont").style.opacity = "0%";
   document.getElementById("iceContContCont").style.transition = "all .25s ease 0s";
   document.getElementById("iceContContCont").tabIndex = "-1";
   document.getElementById("iceContContCont").blur();
@@ -10163,7 +10163,7 @@ function finishIce(event) {
   document.getElementById("cover").style.zIndex = "92";
   if (sessionStorage.drinks < 50) {
     document.getElementById("cover").style.visibility = "hidden";
-    document.getElementById("cover").style.opacity = "0";
+    document.getElementById("cover").style.opacity = "0%";
     document.getElementById("cover").style.transition = "all .25s ease 0s";
     document.getElementById("cover").tabIndex = "-1";
     document.getElementById("cover").blur();
@@ -10175,7 +10175,7 @@ function finishIce(event) {
   document.getElementById("iceContContCont").style.top = "30%";
   document.getElementById("iceContContCont").style.bottom = "10%";
   document.getElementById("iceContContCont").style.background = "transparent";
-  document.getElementById("iceContContCont").style.opacity = "0";
+  document.getElementById("iceContContCont").style.opacity = "0%";
   document.getElementById("iceContContCont").style.border = ".05em solid transparent";
   document.getElementById("iceContContCont").style.transform = "skew(" + (Math.ceil(Math.random() * transformValue) * ((Math.round(Math.random())) ? (1) : (-1))) + "deg) scale(0)";
   document.getElementById("iceContContCont").style.transition = "visibility .25s ease 0s, left 0s ease .25s, right 0s ease .25s, top 0s ease .25s, bottom 0s ease .25s, background 0s ease .25s, opacity .25s ease 0s, border 0s ease .25s, transform 0s ease .25s";
@@ -10186,17 +10186,17 @@ function finishIce(event) {
   document.getElementById("iceButton").tabIndex = "-1";
   document.getElementById("iceButton").blur();
   document.getElementById("iceButtonCont").style.visibility = "hidden";
-  document.getElementById("iceButtonCont").style.opacity = "0";
+  document.getElementById("iceButtonCont").style.opacity = "0%";
   document.getElementById("iceButtonCont").style.transition = "all 0s ease .25s";
   document.getElementById("iceSong").style.visibility = "hidden";
-  document.getElementById("iceSong").style.opacity = "0";
+  document.getElementById("iceSong").style.opacity = "0%";
   document.getElementById("iceSong").style.transition = "all 0s ease .25s";
   for (var i = 0; i < document.getElementsByClassName("iceWord").length; i++) {
     document.getElementsByClassName("iceWord")[i].style.visibility = "hidden";
     document.getElementsByClassName("iceWord")[i].style.transition = "visibility 0s ease .25s";
   }
   document.getElementById("iceCounter").style.visibility = "hidden";
-  document.getElementById("iceCounter").style.opacity = "0";
+  document.getElementById("iceCounter").style.opacity = "0%";
   document.getElementById("iceCounter").style.transition = "all 0s ease .25s";
   document.getElementById("iceCounter").style.animation = "none";
   if (sessionStorage.beer == 1) {
@@ -10264,7 +10264,7 @@ function drunk(drinksIncrement, event) {
       for (var i = 0; i < document.getElementsByClassName("drunkText").length; i++) {
         document.getElementsByClassName("drunkText")[i].style.fontFamily = "\"Slackey\", fantasy";
       }
-      document.getElementById("triangleFaceCont").style.opacity = ".25";
+      document.getElementById("triangleFaceCont").style.opacity = "25%";
       document.getElementById("triangleFaceCont").style.transition = "opacity 0s ease 0s";
       document.getElementById("websiteCont").style.setProperty("--leftValue", "-38em");
     }
@@ -10272,21 +10272,21 @@ function drunk(drinksIncrement, event) {
       sessionStorage.level = 3;
       sessionStorage.dafCountIncrement = 3;
       sessionStorage.iceDecrement = 8;
-      document.getElementById("triangleFaceCont").style.opacity = ".33";
+      document.getElementById("triangleFaceCont").style.opacity = "33%";
       document.getElementById("triangleFaceCont").style.transition = "opacity 0s ease 0s";
     }
     else if ((sessionStorage.drinks >= 27) && (sessionStorage.drinks < 36)) {
       sessionStorage.level = 4;
       sessionStorage.dafCountIncrement = 5;
       sessionStorage.iceDecrement = 5;
-      document.getElementById("triangleFaceCont").style.opacity = ".5";
+      document.getElementById("triangleFaceCont").style.opacity = "50%";
       document.getElementById("triangleFaceCont").style.transition = "opacity 0s ease 0s";
     }
     else if ((sessionStorage.drinks >= 36) && (sessionStorage.drinks < 45)) {
       sessionStorage.level = 5;
       sessionStorage.dafCountIncrement = 8;
       sessionStorage.iceDecrement = 3;
-      document.getElementById("triangleFaceCont").style.opacity = ".67";
+      document.getElementById("triangleFaceCont").style.opacity = "67%";
       document.getElementById("triangleFaceCont").style.transition = "opacity 0s ease 0s";
     }
     else if ((sessionStorage.drinks >= 45) && (sessionStorage.drinks < 53)) {
@@ -10311,7 +10311,7 @@ function drunk(drinksIncrement, event) {
         document.getElementById("conductor").style.background = "url(\"img/pillow.png\") center / cover";
       }
       document.getElementById("conductor").onclick = null;
-      document.getElementById("triangleFaceCont").style.opacity = ".75";
+      document.getElementById("triangleFaceCont").style.opacity = "75%";
       document.getElementById("triangleFaceCont").style.transition = "opacity 0s ease 0s";
       for (var i = 1; i < document.getElementsByClassName("speakerSong").length; i++) {
         document.getElementsByClassName("speakerSong")[i].innerHTML = "Tijuana";
@@ -10338,7 +10338,7 @@ function drunk(drinksIncrement, event) {
     document.getElementById("conductorCont").style.zIndex = "92";
     document.getElementById("cover").style.zIndex = "93";
     document.getElementById("triangleFaceCont").style.zIndex = "91";
-    document.getElementById("triangleFaceCont").style.opacity = "1";
+    document.getElementById("triangleFaceCont").style.opacity = "100%";
     document.getElementById("triangleFaceCont").style.transition = "opacity 0s ease 0s";
     if (sessionStorage.beer == 1) {
       document.getElementById("busch").style.pointerEvents = "none";
@@ -10375,7 +10375,7 @@ function openPromo() {
   document.getElementById("promoCont").style.transition = "transform .5s ease 0s";
   document.getElementById("promoCont").tabIndex = "0";
   document.getElementById("cover").style.visibility = "visible";
-  document.getElementById("cover").style.opacity = "1";
+  document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "all .25s ease 0s";
   document.getElementById("cover").tabIndex = "0";
   document.onclick = null;
@@ -10389,10 +10389,10 @@ function openPromo() {
 function showPromoControls() {
   if ((sessionStorage.promo == 1) || (document.getElementById("promo").currentTime > 0)) {
     document.getElementById("promoTitle").style.visibility = "visible";
-    document.getElementById("promoTitle").style.opacity = "1";
+    document.getElementById("promoTitle").style.opacity = "100%";
     document.getElementById("promoTitle").style.transition = "all .25s ease 0s";
     document.getElementById("promoExit").style.visibility = "visible";
-    document.getElementById("promoExit").style.opacity = "1";
+    document.getElementById("promoExit").style.opacity = "100%";
     document.getElementById("promoExit").style.transition = "all .25s ease 0s";
   }
 }
@@ -10400,10 +10400,10 @@ function showPromoControls() {
 function hidePromoControls() {
   if ((sessionStorage.promo == 1) || (document.getElementById("promo").currentTime > 0)) {
     document.getElementById("promoTitle").style.visibility = "hidden";
-    document.getElementById("promoTitle").style.opacity = "0";
+    document.getElementById("promoTitle").style.opacity = "0%";
     document.getElementById("promoTitle").style.transition = "all .25s ease 0s";
     document.getElementById("promoExit").style.visibility = "hidden";
-    document.getElementById("promoExit").style.opacity = "0";
+    document.getElementById("promoExit").style.opacity = "0%";
     document.getElementById("promoExit").style.transition = "all .25s ease 0s";
   }
 }
@@ -10496,7 +10496,7 @@ function fullscreenExit() {
 function closePromo(event) {
   document.getElementById("promo").pause();
   document.getElementById("cover").style.visibility = "hidden";
-  document.getElementById("cover").style.opacity = "0";
+  document.getElementById("cover").style.opacity = "0%";
   document.getElementById("cover").tabIndex = "-1";
   document.getElementById("cover").blur();
   var transformValue = ((sessionStorage.level - 1) * 9);
@@ -10682,13 +10682,13 @@ function openAccount(event) {
   }
   document.getElementById("accountExit").tabIndex = "0";
   document.getElementById("account").style.visibility = "visible";
-  document.getElementById("account").style.opacity = "1";
+  document.getElementById("account").style.opacity = "100%";
   document.getElementById("account").style.transition = "all 0s ease 0s";
   document.getElementById("account").tabIndex = "0";
   document.getElementById("cover").style.zIndex = "93";
   document.getElementById("cover").style.visibility = "visible";
-  document.getElementById("cover").style.background = "rgba(153, 153, 153, .95)";
-  document.getElementById("cover").style.opacity = "1";
+  document.getElementById("cover").style.background = "rgba(153, 153, 153, 95%)";
+  document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "visibility .25s ease 0s, background 0s ease 0s, opacity .25s ease 0s";
   document.getElementById("cover").tabIndex = "0";
   if (sessionStorage.drinks != undefined) {
@@ -10768,7 +10768,7 @@ function accountMessageEntrance() {
     sessionStorage.removeItem("accountMessageExitDisplayTimeout");
   }
   document.getElementById("accountMessage").style.display = "block";
-  document.getElementById("accountMessage").style.opacity = "1";
+  document.getElementById("accountMessage").style.opacity = "100%";
   document.getElementById("accountMessage").style.transition = "opacity 0s ease 0s";
   sessionStorage.accountMessageExitTimeout = setTimeout(accountMessageExit, 5000);
 }
@@ -10777,7 +10777,7 @@ function accountMessageExit() {
   sessionStorage.accountMessageExitDisplayTimeout = setTimeout(() => (
     document.getElementById("accountMessage").style.display = "none"
   ), 2000);
-  document.getElementById("accountMessage").style.opacity = "0";
+  document.getElementById("accountMessage").style.opacity = "0%";
   document.getElementById("accountMessage").style.transition = "opacity 2s ease 0s";
 }
 
@@ -11426,13 +11426,13 @@ function closeAccount() {
   sessionStorage.removeItem("scope");
   document.getElementById("cover").style.zIndex = "92";
   document.getElementById("cover").style.visibility = "hidden";
-  document.getElementById("cover").style.background = "rgba(153, 153, 153, .75)";
-  document.getElementById("cover").style.opacity = "0";
+  document.getElementById("cover").style.background = "rgba(153, 153, 153, 75%)";
+  document.getElementById("cover").style.opacity = "0%";
   document.getElementById("cover").style.transition = "visibility .25s ease 0s, background 0s ease .25s, opacity .25s ease 0s";
   document.getElementById("cover").tabIndex = "-1";
   document.getElementById("cover").blur();
   document.getElementById("account").style.visibility = "hidden";
-  document.getElementById("account").style.opacity = "0";
+  document.getElementById("account").style.opacity = "0%";
   document.getElementById("account").style.transition = "all 0s ease .25s";
   document.getElementById("account").tabIndex = "-1";
   document.getElementById("account").blur();
@@ -11544,15 +11544,15 @@ function gameOver(event) {
   document.getElementById("quoteAuthor").style.transition = "margin-left 0s ease 0s";
   document.getElementById("playAgain").tabIndex = "0";
   document.getElementById("gameOver").style.visibility = "visible";
-  document.getElementById("gameOver").style.opacity = "1";
+  document.getElementById("gameOver").style.opacity = "100%";
   document.getElementById("gameOver").style.transition = "all 0s ease 0s";
   document.getElementById("gameOver").tabIndex = "0";
   document.getElementById("cover").style.visibility = "visible";
-  document.getElementById("cover").style.opacity = "1";
+  document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "all .25s ease 0s";
   document.getElementById("cover").tabIndex = "0";
   document.getElementById("screensavers").style.visibility = "visible";
-  document.getElementById("screensavers").style.opacity = "1";
+  document.getElementById("screensavers").style.opacity = "100%";
   document.getElementById("screensavers").style.transition = "all .25s ease 0s";
   audioNewSong();
   if ((sessionStorage.lives == 0) && (sessionStorage.drinks == undefined)) {
@@ -11786,7 +11786,7 @@ function passwordStore() {
     document.getElementById("passwordInputCont").style.marginBottom = "1em";
     document.getElementById("passwordInputCont").style.transition = "margin-bottom 0s ease 0s";
     document.getElementById("passwordMessage").style.visibility = "visible";
-    document.getElementById("passwordMessage").style.opacity = "1";
+    document.getElementById("passwordMessage").style.opacity = "100%";
     document.getElementById("passwordMessage").style.height = "auto";
     document.getElementById("passwordMessage").style.transition = "visibility .25s ease 0s, opacity .25s ease 0s, height 0s ease 0s";
     document.getElementById("passwordMessage").style.animation = "emphasizeMessage .5s ease .25s 1 forwards";
@@ -11839,7 +11839,7 @@ function passwordUnlock() {
     ), 100);
   }
   document.getElementById("passwordMessage").style.visibility = "hidden";
-  document.getElementById("passwordMessage").style.opacity = "0";
+  document.getElementById("passwordMessage").style.opacity = "0%";
   document.getElementById("passwordMessage").style.height = "0";
   document.getElementById("passwordMessage").style.transition = "all 0s ease 0s";
 }
@@ -11868,7 +11868,7 @@ function hidePassword() {
       document.getElementById("passwordInputCont").style.marginBottom = "0";
       document.getElementById("passwordInputCont").style.transition = "margin-bottom 0s ease 0s";
       document.getElementById("passwordMessage").style.visibility = "hidden";
-      document.getElementById("passwordMessage").style.opacity = "0";
+      document.getElementById("passwordMessage").style.opacity = "0%";
       document.getElementById("passwordMessage").style.height = "0";
       document.getElementById("passwordMessage").style.transition = "all 0s ease 0s";
     }
@@ -11914,11 +11914,11 @@ function showSecret() {
   }
   document.getElementById("secretExit").tabIndex = "0";
   document.getElementById("secretModal").style.visibility = "visible";
-  document.getElementById("secretModal").style.opacity = "1";
+  document.getElementById("secretModal").style.opacity = "100%";
   document.getElementById("secretModal").style.transition = "all 0s ease .25s";
   document.getElementById("secretModal").tabIndex = "0";
   document.getElementById("secret").style.visibility = "visible";
-  document.getElementById("secret").style.opacity = "1";
+  document.getElementById("secret").style.opacity = "100%";
   document.getElementById("secret").style.transition = "all .25s ease .25s";
   document.getElementById("secret").tabIndex = "0";
   if (document.getElementById("theOneThatGotAway").currentTime > 0) {
@@ -11942,12 +11942,12 @@ function hideSecret(event) {
   if ((event.type == "click") || ((event.type == "keydown") && (event.key == "Escape"))) {
     document.getElementById("theOneThatGotAway").pause();
     document.getElementById("secret").style.visibility = "hidden";
-    document.getElementById("secret").style.opacity = "0";
+    document.getElementById("secret").style.opacity = "0%";
     document.getElementById("secret").style.transition = "all .25s ease 0s";
     document.getElementById("secret").tabIndex = "-1";
     document.getElementById("secret").blur();
     document.getElementById("secretModal").style.visibility = "hidden";
-    document.getElementById("secretModal").style.opacity = "0";
+    document.getElementById("secretModal").style.opacity = "0%";
     document.getElementById("secretModal").style.transition = "all 0s ease .25s";
     document.getElementById("secretModal").tabIndex = "-1";
     document.getElementById("secretModal").blur();
@@ -12066,7 +12066,7 @@ function mobileGrow() {
   document.getElementById("mobileButton").blur();
   document.getElementById("mobileImgCont").tabIndex = "-1";
   document.getElementById("mobileImgCont").blur();
-  document.getElementById("mobileImg").style.background = "rgba(0, 61, 124, .5) url(\"img/mystery.png\") center / cover";
+  document.getElementById("mobileImg").style.background = "rgba(0, 61, 124, 50%) url(\"img/mystery.png\") center / cover";
   document.getElementById("mobileImg").style.filter = "blur(1em)";
   document.getElementById("mobileImg").style.transition = "all 0s ease 0s";
   document.getElementById("mobileImg").style.pointerEvents = "none";
@@ -12205,7 +12205,7 @@ function copyUrl(event) {
   else if ((event.pageY - event.clientY) >= (50 + ((screen.width - window.innerWidth) / 6))) {
     document.getElementById("urlMessage").style.top = ((event.pageY - (window.innerHeight / 6)) + (50 + ((screen.width - window.innerWidth) / 6))) + "px";
   }
-  document.getElementById("urlMessage").style.opacity = "1";
+  document.getElementById("urlMessage").style.opacity = "100%";
   document.getElementById("urlMessage").style.transition = "all 0s ease 0s";
   sessionStorage.urlMessageExitTimeout = setTimeout(urlMessageExit, 1000);
 }
@@ -12216,7 +12216,7 @@ function urlMessageExit() {
   ), 1000);
   document.getElementById("urlMessage").style.left = "0";
   document.getElementById("urlMessage").style.top = "0";
-  document.getElementById("urlMessage").style.opacity = "0";
+  document.getElementById("urlMessage").style.opacity = "0%";
   document.getElementById("urlMessage").style.transition = "left 0s ease 1s, top 0s ease 1s, opacity 1s ease 0s";
 }
 

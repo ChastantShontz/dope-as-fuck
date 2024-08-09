@@ -47,7 +47,7 @@ main {
 }
 
 #loadingMessage {
-  background: linear-gradient(to right, rgba(0, 0, 0, .1), 10%, rgba(0, 0, 0, .5), 90%, rgba(0, 0, 0, .1));
+  background: linear-gradient(to right, rgba(0, 0, 0, 10%), 10%, rgba(0, 0, 0, 50%), 90%, rgba(0, 0, 0, 10%));
   width: 100%;
   padding-top: .5em;
   padding-bottom: .5em;
@@ -340,7 +340,7 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: 0;
+  opacity: 0%;
 }
 
 .screensaver {
@@ -359,7 +359,7 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: .01;
+  opacity: 1%;
   align-items: center;
   pointer-events: none;
 }
@@ -459,7 +459,7 @@ main {
   display: grid;
   grid-template-columns: 15% 85%;
   grid-template-rows: 1fr;
-  background: rgba(220, 171, 38, .1);
+  background: rgba(220, 171, 38, 10%);
   padding: .25em;
   border-left: .1em solid var(--discordYellow);
 }
@@ -500,7 +500,7 @@ main {
 
 #discordUsers {
   border-radius: .1em;
-  background: rgba(114, 137, 218, .5);
+  background: rgba(114, 137, 218, 50%);
   font-weight: bold;
 }
 
@@ -597,7 +597,7 @@ main {
   bottom: calc(12em + 5%);
   border-radius: 1em;
   background: url("img/map.png") center / cover;
-  opacity: 0;
+  opacity: 0%;
 }
 
 .college {
@@ -623,7 +623,7 @@ main {
   position: absolute;
   border-radius: .5em;
   background: var(--white);
-  opacity: 0;
+  opacity: 0%;
   height: 5em;
   width: 5em;
   border: .2em solid var(--clarksonGreen);
@@ -684,7 +684,7 @@ main {
   left: 32em;
   right: 0;
   bottom: -8em;
-  opacity: 0;
+  opacity: 0%;
   height: 19em;
   pointer-events: none;
 }
@@ -769,7 +769,7 @@ main {
 .die {
   visibility: hidden;
   position: absolute;
-  opacity: 0;
+  opacity: 0%;
   line-height: 10rlh;
   color: var(--sluRed);
   font-size: 20em;
@@ -797,7 +797,7 @@ main {
   right: 42.5%;
   top: 5%;
   bottom: calc(12em + 5%);
-  opacity: 0;
+  opacity: 0%;
   align-items: center;
   pointer-events: none;
 }
@@ -995,7 +995,7 @@ main {
   bottom: .75em;
   border-radius: .1em;
   background: var(--blue);
-  opacity: 0;
+  opacity: 0%;
   height: 2em;
   width: 1.5em;
   padding-left: .1em;
@@ -1021,7 +1021,7 @@ main {
   top: 0;
   bottom: 0;
   background: var(--gray);
-  opacity: 0;
+  opacity: 0%;
 }
 
 #rink {
@@ -1120,14 +1120,14 @@ main {
   bottom: 0;
   border-bottom-left-radius: .8em;
   border-bottom-right-radius: .8em;
-  opacity: 0;
+  opacity: 0%;
   width: 2.8em;
   pointer-events: none;
 }
 
 .goalie {
   visibility: visible;
-  opacity: 1;
+  opacity: 100%;
 }
 
 .clarksonGoalie {
@@ -1326,7 +1326,7 @@ main {
   z-index: 2;
   visibility: hidden;
   position: absolute;
-  opacity: 0;
+  opacity: 0%;
   width: 5.6em;
 }
 
@@ -1586,122 +1586,122 @@ main {
 
 #ethanHaiderHeadshot {
   background: url("img/ethanHaider.png") top / cover,
-              linear-gradient(rgba(96, 144, 137, .1), rgba(96, 144, 137, .1)) center / cover;
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
 }
 
 #michellePasiechnykHeadshot {
   background: url("img/michellePasiechnyk.png") top / cover,
-              linear-gradient(rgba(96, 144, 137, .1), rgba(96, 144, 137, .1)) center / cover;
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
 }
 
 #alexCampbellHeadshot {
   background: url("img/alexCampbell.png") top / cover,
-              linear-gradient(rgba(96, 144, 137, .1), rgba(96, 144, 137, .1)) center / cover;
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
 }
 
 #chrisKlackHeadshot {
   background: url("img/chrisKlack.png") top / cover,
-              linear-gradient(rgba(96, 144, 137, .1), rgba(96, 144, 137, .1)) center / cover;
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
 }
 
 #dustynMcfaulHeadshot {
   background: url("img/dustynMcfaul.png") top / cover,
-              linear-gradient(rgba(96, 144, 137, .1), rgba(96, 144, 137, .1)) center / cover;
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
 }
 
 #jackJacomeHeadshot {
   background: url("img/jackJacome.png") top / cover,
-              linear-gradient(rgba(96, 144, 137, .1), rgba(96, 144, 137, .1)) center / cover;
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
 }
 
 #zachTsekosHeadshot {
   background: url("img/zachTsekos.png") top / cover,
-              linear-gradient(rgba(96, 144, 137, .1), rgba(96, 144, 137, .1)) center / cover;
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
 }
 
 #anneCherkowskiHeadshot {
   background: url("img/anneCherkowski.png") top / cover,
-              linear-gradient(rgba(96, 144, 137, .1), rgba(96, 144, 137, .1)) center / cover;
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
 }
 
 #brookeMcquiggeHeadshot {
   background: url("img/brookeMcquigge.png") top / cover,
-              linear-gradient(rgba(96, 144, 137, .1), rgba(96, 144, 137, .1)) center / cover;
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
 }
 
 #gabrielleDavidHeadshot {
   background: url("img/gabrielleDavid.png") top / cover,
-              linear-gradient(rgba(96, 144, 137, .1), rgba(96, 144, 137, .1)) center / cover;
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
 }
 
 #haleyWinnHeadshot {
   background: url("img/haleyWinn.png") top / cover,
-              linear-gradient(rgba(96, 144, 137, .1), rgba(96, 144, 137, .1)) center / cover;
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
 }
 
 #jennaGoodwinHeadshot {
   background: url("img/jennaGoodwin.png") top / cover,
-              linear-gradient(rgba(96, 144, 137, .1), rgba(96, 144, 137, .1)) center / cover;
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
 }
 
 #ashtonFryHeadshot {
   background: url("img/ashtonFry.png") top / cover,
-              linear-gradient(rgba(219, 198, 152, .1), rgba(219, 198, 152, .1)) center / cover;
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
 }
 
 #cameronBuhlHeadshot {
   background: url("img/cameronBuhl.png") top / cover,
-              linear-gradient(rgba(219, 198, 152, .1), rgba(219, 198, 152, .1)) center / cover;
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
 }
 
 #davidJankowskiHeadshot {
   background: url("img/davidJankowski.png") top / cover,
-              linear-gradient(rgba(219, 198, 152, .1), rgba(219, 198, 152, .1)) center / cover;
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
 }
 
 #nicholasTrelaHeadshot {
   background: url("img/nicholasTrela.png") top / cover,
-              linear-gradient(rgba(219, 198, 152, .1), rgba(219, 198, 152, .1)) center / cover;
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
 }
 
 #tuckerMcintoshHeadshot {
   background: url("img/tuckerMcintosh.png") top / cover,
-              linear-gradient(rgba(219, 198, 152, .1), rgba(219, 198, 152, .1)) center / cover;
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
 }
 
 #alyMcleodHeadshot {
   background: url("img/alyMcleod.png") top / cover,
-              linear-gradient(rgba(219, 198, 152, .1), rgba(219, 198, 152, .1)) center / cover;
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
 }
 
 #brittneyGoutHeadshot {
   background: url("img/brittneyGout.png") top / cover,
-              linear-gradient(rgba(219, 198, 152, .1), rgba(219, 198, 152, .1)) center / cover;
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
 }
 
 #gabiJonesHeadshot {
   background: url("img/gabiJones.png") top / cover,
-              linear-gradient(rgba(219, 198, 152, .1), rgba(219, 198, 152, .1)) center / cover;
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
 }
 
 #hillarySterlingHeadshot {
   background: url("img/hillarySterling.png") top / cover,
-              linear-gradient(rgba(219, 198, 152, .1), rgba(219, 198, 152, .1)) center / cover;
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
 }
 
 #kristinaBahlHeadshot {
   background: url("img/kristinaBahl.png") top / cover,
-              linear-gradient(rgba(219, 198, 152, .1), rgba(219, 198, 152, .1)) center / cover;
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
 }
 
 #danielAllinHeadshot {
   background: url("img/danielAllin.png") top / cover,
-              linear-gradient(rgba(219, 198, 152, .1), rgba(219, 198, 152, .1)) center / cover;
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
 }
 
 #hopeCrisafiHeadshot {
   background: url("img/hopeCrisafi.png") top / cover,
-              linear-gradient(rgba(219, 198, 152, .1), rgba(219, 198, 152, .1)) center / cover;
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
 }
 
 .playerDivider {
@@ -1735,11 +1735,11 @@ main {
 }
 
 .clarksonOddRow {
-  background: rgba(96, 144, 137, .5);
+  background: rgba(96, 144, 137, 50%);
 }
 
 .clarksonEvenRow {
-  background: rgba(96, 144, 137, .1);
+  background: rgba(96, 144, 137, 10%);
 }
 
 .sluRow {
@@ -1747,11 +1747,11 @@ main {
 }
 
 .sluOddRow {
-  background: rgba(219, 198, 152, .5);
+  background: rgba(219, 198, 152, 50%);
 }
 
 .sluEvenRow {
-  background: rgba(219, 198, 152, .1);
+  background: rgba(219, 198, 152, 10%);
 }
 
 .clarksonCell {
@@ -1776,7 +1776,7 @@ main {
   position: absolute;
   left: 40%;
   bottom: 0;
-  opacity: 0;
+  opacity: 0%;
   width: 5em;
 }
 
@@ -1785,7 +1785,7 @@ main {
   visibility: hidden;
   position: absolute;
   bottom: 0;
-  opacity: 0;
+  opacity: 0%;
   width: 5em;
 }
 
@@ -1806,7 +1806,7 @@ main {
   top: 5%;
   border-bottom-left-radius: .8em;
   border-bottom-right-radius: .8em;
-  opacity: 0;
+  opacity: 0%;
   width: 2.8em;
 }
 
@@ -1818,7 +1818,7 @@ main {
   top: 0;
   border-radius: 50%;
   background: var(--black);
-  opacity: 0;
+  opacity: 0%;
   height: 1em;
   width: 1em;
 }
@@ -1835,8 +1835,8 @@ main {
   top: -.2em;
   bottom: -.2em;
   border-radius: 5em;
-  background: rgba(255, 255, 255, .75);
-  opacity: 0;
+  background: rgba(255, 255, 255, 75%);
+  opacity: 0%;
   align-items: center;
 }
 
@@ -1856,7 +1856,7 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: 0;
+  opacity: 0%;
   align-items: center;
   pointer-events: none;
 }
@@ -1877,7 +1877,7 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: 0;
+  opacity: 0%;
   align-items: center;
   pointer-events: none;
 }
@@ -1885,7 +1885,7 @@ main {
 .goalMessage {
   visibility: hidden;
   position: absolute;
-  opacity: 0;
+  opacity: 0%;
   font-weight: bold;
   text-align: center;
   user-select: none;
@@ -1919,7 +1919,7 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: 0;
+  opacity: 0%;
   pointer-events: none;
 }
 
@@ -1929,7 +1929,7 @@ main {
   flex-direction: row;
   justify-content: center;
   visibility: hidden;
-  opacity: 0;
+  opacity: 0%;
   align-items: center;
 }
 
@@ -1966,7 +1966,7 @@ main {
 #knight,
 #victoryClarkson {
   visibility: hidden;
-  opacity: 0;
+  opacity: 0%;
 }
 
 #bandiesCont {
@@ -1980,7 +1980,7 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: 0;
+  opacity: 0%;
   align-items: center;
 }
 
@@ -2010,7 +2010,7 @@ main {
 .bandie {
   visibility: hidden;
   position: absolute;
-  opacity: 0;
+  opacity: 0%;
   height: 100%;
 }
 
@@ -2208,7 +2208,7 @@ main {
 
 .bandieCont {
   visibility: hidden;
-  opacity: 0;
+  opacity: 0%;
 }
 
 #dedicationCont {
@@ -2246,7 +2246,7 @@ main {
 #congrats {
   visibility: hidden;
   position: absolute;
-  opacity: 0;
+  opacity: 0%;
   font-family: "Luckiest Guy", fantasy;
   color: var(--clarksonGreen);
   font-size: 5em;
@@ -2402,7 +2402,7 @@ main {
   padding: .5em;
   border-bottom-left-radius: .8em;
   border-bottom-right-radius: .8em;
-  opacity: 0;
+  opacity: 0%;
   align-items: center;
 }
 
@@ -2422,7 +2422,7 @@ main {
   z-index: 1;
   visibility: visible;
   background: url("img/tijuana.png") center / cover;
-  opacity: 1;
+  opacity: 100%;
 }
 
 .drinkingSongButton {
@@ -2444,8 +2444,8 @@ main {
   left: 10%;
   right: 10%;
   border-radius: .5em;
-  background: rgba(255, 255, 255, .5);
-  opacity: 0;
+  background: rgba(255, 255, 255, 50%);
+  opacity: 0%;
   padding: 1em;
   font-family: "Merienda", "Satisfy", "Brush Script MT", cursive;
   font-style: italic;
@@ -2480,13 +2480,13 @@ main {
   right: 0;
   top: 25%;
   bottom: 25%;
-  opacity: 0;
+  opacity: 0%;
   align-items: center;
 }
 
 .drinkingSongLyrics {
   border-radius: .5em;
-  background: rgba(255, 255, 255, .5);
+  background: rgba(255, 255, 255, 50%);
   width: 80%;
   padding: .25em;
   font-family: "Acme", fantasy;
@@ -2524,7 +2524,7 @@ main {
 .drinkingSongLines {
   visibility: hidden;
   position: absolute;
-  opacity: 0;
+  opacity: 0%;
   width: 100%;
   border: .1em solid var(--clarksonGreen);
   font-family: "Roboto", "Arial", sans-serif;
@@ -2550,7 +2550,7 @@ main {
   left: 5%;
   right: 65%;
   bottom: 30%;
-  opacity: 0;
+  opacity: 0%;
   align-items: center;
   pointer-events: none;
 }
@@ -2559,7 +2559,7 @@ main {
   visibility: hidden;
   border-radius: 1em;
   background: var(--white);
-  opacity: 0;
+  opacity: 0%;
   width: 33%;
   border: .2em solid var(--clarksonGreen);
   pointer-events: auto;
@@ -2610,7 +2610,7 @@ main {
 #dafCounterError {
   visibility: hidden;
   position: absolute;
-  opacity: 0;
+  opacity: 0%;
   font-family: "Rubik Mono One", fantasy;
   color: var(--errorRed);
   font-size: 1.5em;
@@ -2624,7 +2624,7 @@ main {
   flex-direction: column;
   justify-content: center;
   visibility: hidden;
-  opacity: 0;
+  opacity: 0%;
   width: 10em;
   align-items: center;
   pointer-events: auto;
@@ -2682,7 +2682,7 @@ main {
 
 #beerCont {
   visibility: hidden;
-  opacity: 0;
+  opacity: 0%;
   pointer-events: auto;
 }
 
@@ -2707,7 +2707,7 @@ main {
   right: 5%;
   top: 91%;
   bottom: 1%;
-  opacity: 0;
+  opacity: 0%;
   align-items: center;
   pointer-events: none;
 }
@@ -2716,7 +2716,7 @@ main {
   visibility: hidden;
   position: relative;
   border-radius: .5em;
-  opacity: 0;
+  opacity: 0%;
   height: 2em;
   width: 2em;
   pointer-events: auto;
@@ -2807,7 +2807,7 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: .01;
+  opacity: 1%;
   align-items: center;
   pointer-events: none;
 }
@@ -2895,7 +2895,7 @@ main {
   right: 0;
   top: -.25em;
   background: transparent;
-  opacity: .25;
+  opacity: 25%;
   cursor: default;
 }
 
@@ -2930,8 +2930,8 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(153, 153, 153, .75);
-  opacity: 0;
+  background: rgba(153, 153, 153, 75%);
+  opacity: 0%;
   align-items: center;
 }
 
@@ -2947,7 +2947,7 @@ main {
   bottom: 10%;
   border-radius: .1em;
   background: var(--white);
-  opacity: 0;
+  opacity: 0%;
   border: .2em solid var(--clarksonGreen);
 }
 
@@ -2985,7 +2985,7 @@ main {
   top: 30%;
   bottom: 10%;
   border-radius: 1em;
-  opacity: 0;
+  opacity: 0%;
   padding: 1em;
   border: .05em solid transparent;
   transform: skew(0)
@@ -3015,7 +3015,7 @@ main {
   bottom: 25%;
   border-radius: 1em;
   background: var(--white);
-  opacity: 0;
+  opacity: 0%;
   padding: 2em;
   border: .05em solid var(--clarksonGreen);
 }
@@ -3031,7 +3031,7 @@ main {
   bottom: 25%;
   border-radius: 1em;
   background: var(--white);
-  opacity: 0;
+  opacity: 0%;
   padding: 1em;
   border: .05em solid var(--clarksonGreen);
   align-items: center;
@@ -3089,7 +3089,7 @@ main {
 }
 
 #poemExit:active {
-  color: rgba(179, 14, 15, .5);
+  color: rgba(179, 14, 15, 50%);
 }
 
 #promo {
@@ -3100,7 +3100,7 @@ main {
 }
 
 #promo::cue {
-  background: rgba(0, 0, 0, .75);
+  background: rgba(0, 0, 0, 75%);
   font-family: "Roboto", "Arial", sans-serif;
 }
 
@@ -3140,7 +3140,7 @@ main {
 }
 
 #promoExit:hover {
-  color: rgba(72, 160, 247, .9);
+  color: rgba(72, 160, 247, 90%);
 }
 
 #promoExit:active {
@@ -3169,38 +3169,38 @@ main {
 #danceInstructions {
   visibility: hidden;
   position: absolute;
-  opacity: 0;
+  opacity: 0%;
   font-family: "Acme", fantasy;
   color: var(--white);
   font-size: 3em;
   font-weight: bold;
   text-shadow: .01em .01em .01em var(--black),
-               .02em .02em .01em rgba(0, 0, 0, .8),
-               .03em .03em .01em rgba(0, 0, 0, .6),
-               .04em .04em .01em rgba(0, 0, 0, .4),
-               .05em .05em .01em rgba(0, 0, 0, .2),
+               .02em .02em .01em rgba(0, 0, 0, 80%),
+               .03em .03em .01em rgba(0, 0, 0, 60%),
+               .04em .04em .01em rgba(0, 0, 0, 40%),
+               .05em .05em .01em rgba(0, 0, 0, 20%),
                -.01em .01em .01em var(--black),
-               -.02em .02em .01em rgba(0, 0, 0, .8),
-               -.03em .03em .01em rgba(0, 0, 0, .6),
-               -.04em .04em .01em rgba(0, 0, 0, .4),
-               -.05em .05em .01em rgba(0, 0, 0, .2),
+               -.02em .02em .01em rgba(0, 0, 0, 80%),
+               -.03em .03em .01em rgba(0, 0, 0, 60%),
+               -.04em .04em .01em rgba(0, 0, 0, 40%),
+               -.05em .05em .01em rgba(0, 0, 0, 20%),
                .01em -.01em .01em var(--black),
-               .02em -.02em .01em rgba(0, 0, 0, .8),
-               .03em -.03em .01em rgba(0, 0, 0, .6),
-               .04em -.04em .01em rgba(0, 0, 0, .4),
-               .05em -.05em .01em rgba(0, 0, 0, .2),
+               .02em -.02em .01em rgba(0, 0, 0, 80%),
+               .03em -.03em .01em rgba(0, 0, 0, 60%),
+               .04em -.04em .01em rgba(0, 0, 0, 40%),
+               .05em -.05em .01em rgba(0, 0, 0, 20%),
                -.01em -.01em .01em var(--black),
-               -.02em -.02em .01em rgba(0, 0, 0, .8),
-               -.03em -.03em .01em rgba(0, 0, 0, .6),
-               -.04em -.04em .01em rgba(0, 0, 0, .4),
-               -.05em -.05em .01em rgba(0, 0, 0, .2);
+               -.02em -.02em .01em rgba(0, 0, 0, 80%),
+               -.03em -.03em .01em rgba(0, 0, 0, 60%),
+               -.04em -.04em .01em rgba(0, 0, 0, 40%),
+               -.05em -.05em .01em rgba(0, 0, 0, 20%);
   user-select: none;
 }
 
 #fuckSluMessage {
   visibility: hidden;
   position: absolute;
-  opacity: 0;
+  opacity: 0%;
   font-family: "Rubik Mono One", fantasy;
   color: var(--sluRed);
   font-size: 3.5em;
@@ -3224,10 +3224,10 @@ main {
   justify-content: center;
   position: absolute;
   border-radius: 50%;
-  background: rgba(194, 194, 194, .5);
+  background: rgba(194, 194, 194, 50%);
   height: 10em;
   width: 10em;
-  border: .5em solid rgba(156, 156, 156, .5);
+  border: .5em solid rgba(156, 156, 156, 50%);
   align-items: center;
   pointer-events: none;
 }
@@ -3236,7 +3236,7 @@ main {
   position: relative;
   left: 5%;
   clip-path: polygon(0% 0%, 100% 50%, 0% 100%, 0% 0%);
-  background: rgba(24, 24, 24, .5);
+  background: rgba(24, 24, 24, 50%);
   height: 60%;
   width: 60%;
 }
@@ -3394,7 +3394,7 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: 0;
+  opacity: 0%;
   align-items: center;
   pointer-events: none;
 }
@@ -3437,7 +3437,7 @@ main {
 }
 
 #youtubeExit:active {
-  background: rgba(179, 14, 15, .5);
+  background: rgba(179, 14, 15, 50%);
 }
 
 #iceContCont {
@@ -3477,7 +3477,7 @@ main {
   position: absolute;
   bottom: .5em;
   border-radius: .25em;
-  opacity: 0;
+  opacity: 0%;
   font-size: 1.5em;
 }
 
@@ -3507,7 +3507,7 @@ main {
   position: absolute;
   left: 0;
   right: 0;
-  opacity: 0;
+  opacity: 0%;
   font-family: "Merienda", "Satisfy", "Brush Script MT", cursive;
   font-style: italic;
   text-align: center;
@@ -3516,7 +3516,7 @@ main {
 #iceCounter {
   visibility: hidden;
   position: absolute;
-  opacity: 0;
+  opacity: 0%;
   font-family: "Acme", fantasy;
   color: var(--clarksonGreen);
   font-size: 5em;
@@ -3600,7 +3600,7 @@ main {
   right: 2em;
   top: 2em;
   bottom: 2em;
-  opacity: 0;
+  opacity: 0%;
 }
 
 #choices {
@@ -3657,14 +3657,14 @@ main {
   right: 2em;
   top: 2em;
   bottom: 2em;
-  opacity: 0;
+  opacity: 0%;
   align-items: center;
 }
 
 #answer {
   visibility: hidden;
   position: absolute;
-  opacity: 0;
+  opacity: 0%;
   font-family: "Bungee", fantasy;
   font-size: 6em;
   font-weight: bold;
@@ -3675,12 +3675,12 @@ main {
   position: absolute;
   left: 5%;
   right: 5%;
-  opacity: 0;
+  opacity: 0%;
 }
 
 #correctAnswerPrompt {
   visibility: hidden;
-  opacity: 0;
+  opacity: 0%;
   font-family: "Belanosima", fantasy;
   color: var(--blue);
   font-size: 2em;
@@ -3690,7 +3690,7 @@ main {
 
 #correctAnswer {
   visibility: hidden;
-  opacity: 0;
+  opacity: 0%;
   font-family: "Anton", fantasy;
   color: var(--clarksonGreen);
   font-size: 3em;
@@ -3805,7 +3805,7 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: 0;
+  opacity: 0%;
 }
 
 #infoDataMemoryCont {
@@ -4121,7 +4121,7 @@ main {
 }
 
 #accountExit:active {
-  color: rgba(179, 14, 15, .5);
+  color: rgba(179, 14, 15, 50%);
 }
 
 #accountMessage {
@@ -4131,7 +4131,7 @@ main {
   bottom: 2em;
   border-radius: .1em;
   background: var(--darkGray);
-  opacity: 0;
+  opacity: 0%;
   padding-left: .25em;
   padding-right: .25em;
   padding-top: .1em;
@@ -4194,7 +4194,7 @@ main {
 }
 
 #decline {
-  background: rgba(180, 30, 47, .5);
+  background: rgba(180, 30, 47, 50%);
   padding-left: .15em;
   padding-right: .15em;
   border: .1em solid var(--sluRed);
@@ -4256,7 +4256,7 @@ main {
 
 #passwordMessage {
   visibility: hidden;
-  opacity: 0;
+  opacity: 0%;
   height: 0;
   width: 100%;
   font-family: "Belanosima", fantasy;
@@ -4276,9 +4276,9 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  background: linear-gradient(rgba(221, 221, 221, .5), rgba(221, 221, 221, .5)) center / cover,
+  background: linear-gradient(rgba(221, 221, 221, 50%), rgba(221, 221, 221, 50%)) center / cover,
               url("img/bardCollegeAtSimonsRock.png") center / cover;
-  opacity: 0;
+  opacity: 0%;
 }
 
 #secret * {
@@ -4298,7 +4298,7 @@ main {
   bottom: 12.5%;
   border-radius: 1em;
   background: var(--white);
-  opacity: 0;
+  opacity: 0%;
   border: .5em solid var(--secretPurple);
 }
 
@@ -4416,7 +4416,7 @@ main {
 }
 
 #secretExit:active {
-  color: rgba(227, 184, 229, .5);
+  color: rgba(227, 184, 229, 50%);
 }
 
 footer {
@@ -4565,7 +4565,7 @@ footer {
 
 #mobileImg {
   border-radius: .6em;
-  background: linear-gradient(rgba(0, 61, 124, .1), rgba(0, 61, 124, .1)) center / cover,
+  background: linear-gradient(rgba(0, 61, 124, 10%), rgba(0, 61, 124, 10%)) center / cover,
               url("img/mystery.png") left / cover;
   height: 90%;
   width: 90%;
@@ -4699,16 +4699,16 @@ footer {
 @keyframes arrowBlink {
   0% {
     visibility: hidden;
-    opacity: 0;
+    opacity: 0%;
   }
   25%,
   75% {
     visibility: visible;
-    opacity: 1;
+    opacity: 100%;
   }
   100% {
     visibility: hidden;
-    opacity: 0;
+    opacity: 0%;
   }
 }
 
@@ -4742,16 +4742,16 @@ footer {
 @keyframes fadeOut {
   0% {
     visibility: visible;
-    opacity: 1;
+    opacity: 100%;
   }
   25%,
   75% {
     visibility: visible;
-    opacity: .5;
+    opacity: 50%;
   }
   100% {
     visibility: hidden;
-    opacity: 0;
+    opacity: 0%;
   }
 }
 
@@ -4978,27 +4978,27 @@ footer {
 @keyframes clarksonGoalMessage {
   0% {
     visibility: hidden;
-    opacity: 0;
+    opacity: 0%;
     transform: scale(1);
   }
   10% {
     visibility: visible;
-    opacity: 1;
+    opacity: 100%;
     transform: scale(1);
   }
   50% {
     visibility: visible;
-    opacity: 1;
+    opacity: 100%;
     transform: scale(1.5);
   }
   90% {
     visibility: visible;
-    opacity: 1;
+    opacity: 100%;
     transform: scale(1);
   }
   100% {
     visibility: hidden;
-    opacity: 0;
+    opacity: 0%;
     transform: scale(1);
   }
 }
@@ -5010,7 +5010,7 @@ footer {
     right: auto;
     top: auto;
     bottom: auto;
-    opacity: 0;
+    opacity: 0%;
     transform: rotate(0)
                scale(1);
   }
@@ -5021,7 +5021,7 @@ footer {
     right: auto;
     top: auto;
     bottom: auto;
-    opacity: 1;
+    opacity: 100%;
     transform: rotate(0)
                scale(1);
   }
@@ -5031,7 +5031,7 @@ footer {
     right: auto;
     top: 5%;
     bottom: auto;
-    opacity: 1;
+    opacity: 100%;
     transform: rotate(69deg)
                scale(1);
   }
@@ -5041,7 +5041,7 @@ footer {
     right: 40%;
     top: auto;
     bottom: 10%;
-    opacity: 1;
+    opacity: 100%;
     transform: rotate(69deg)
                scale(-1);
   }
@@ -5051,7 +5051,7 @@ footer {
     right: 15%;
     top: 30%;
     bottom: auto;
-    opacity: 1;
+    opacity: 100%;
     transform: rotate(420deg)
                scale(-1);
   }
@@ -5062,7 +5062,7 @@ footer {
     right: auto;
     top: auto;
     bottom: 20%;
-    opacity: 1;
+    opacity: 100%;
     transform: rotate(420deg)
                scale(1);
   }
@@ -5072,7 +5072,7 @@ footer {
     right: auto;
     top: auto;
     bottom: 20%;
-    opacity: 0;
+    opacity: 0%;
     transform: rotate(420deg)
                scale(1);
   }
@@ -5111,27 +5111,27 @@ footer {
 @keyframes fuckSlu {
   0% {
     visibility: hidden;
-    opacity: 0;
+    opacity: 0%;
     transform: scale(1);
   }
   1% {
     visibility: visible;
-    opacity: 1;
+    opacity: 100%;
     transform: scale(1);
   }
   50% {
     visibility: visible;
-    opacity: 1;
+    opacity: 100%;
     transform: scale(1.5);
   }
   99% {
     visibility: visible;
-    opacity: 1;
+    opacity: 100%;
     transform: scale(1);
   }
   100% {
     visibility: hidden;
-    opacity: 0;
+    opacity: 0%;
     transform: scale(1);
   }
 }
@@ -5152,7 +5152,7 @@ footer {
   }
   34%,
   99% {
-    background: rgba(179, 14, 15, .5);
+    background: rgba(179, 14, 15, 50%);
     border-left: .05em solid var(--exitRed);
     border-bottom: .05em solid var(--exitRed);
     color: var(--white);
@@ -5207,7 +5207,7 @@ footer {
   92%,
   94%,
   100% {
-    opacity: 1;
+    opacity: 100%;
   }
   9%,
   12%,
@@ -5216,7 +5216,7 @@ footer {
   63%,
   82%,
   93% {
-    opacity: 0;
+    opacity: 0%;
   }
 }
 
@@ -5239,54 +5239,54 @@ footer {
     visibility: visible;
     right: 0;
     bottom: 0;
-    opacity: 1;
+    opacity: 100%;
   }
   3%,
   5% {
     visibility: visible;
     right: 2em;
     bottom: 0;
-    opacity: 1;
+    opacity: 100%;
   }
   11%,
   13% {
     visibility: visible;
     right: 2em;
     bottom: 11em;
-    opacity: 1;
+    opacity: 100%;
   }
   41%,
   43% {
     visibility: visible;
     right: -58em;
     bottom: 11em;
-    opacity: 1;
+    opacity: 100%;
   }
   57%,
   59% {
     visibility: visible;
     right: -58em;
     bottom: -9em;
-    opacity: 1;
+    opacity: 100%;
   }
   87%,
   89% {
     visibility: visible;
     right: 2em;
     bottom: -9em;
-    opacity: 1;
+    opacity: 100%;
   }
   96% {
     visibility: visible;
     right: 2em;
     bottom: 0;
-    opacity: 1;
+    opacity: 100%;
   }
   100% {
     visibility: hidden;
     right: 2em;
     bottom: 0;
-    opacity: 0;
+    opacity: 0%;
   }
 }
 
@@ -5295,54 +5295,54 @@ footer {
     visibility: visible;
     left: -10%;
     bottom: 68%;
-    opacity: 1;
+    opacity: 100%;
   }
   6%,
   8% {
     visibility: visible;
     left: -18em;
     bottom: 12em;
-    opacity: 1;
+    opacity: 100%;
   }
   14%,
   16% {
     visibility: visible;
     left: -18em;
     bottom: 23em;
-    opacity: 1;
+    opacity: 100%;
   }
   43%,
   45% {
     visibility: visible;
     left: 41em;
     bottom: 23em;
-    opacity: 1;
+    opacity: 100%;
   }
   58%,
   60% {
     visibility: visible;
     left: 41em;
     bottom: 2em;
-    opacity: 1;
+    opacity: 100%;
   }
   88%,
   90% {
     visibility: visible;
     left: -18em;
     bottom: 2em;
-    opacity: 1;
+    opacity: 100%;
   }
   96% {
     visibility: visible;
     left: -18em;
     bottom: 12em;
-    opacity: 1;
+    opacity: 100%;
   }
   100% {
     visibility: hidden;
     left: -18em;
     bottom: 12em;
-    opacity: 0;
+    opacity: 0%;
   }
 }
 
@@ -5351,54 +5351,54 @@ footer {
     visibility: visible;
     left: -10%;
     bottom: 18%;
-    opacity: 1;
+    opacity: 100%;
   }
   6%,
   8% {
     visibility: visible;
     left: -18em;
     bottom: 12em;
-    opacity: 1;
+    opacity: 100%;
   }
   14%,
   16% {
     visibility: visible;
     left: -18em;
     bottom: 23em;
-    opacity: 1;
+    opacity: 100%;
   }
   43%,
   45% {
     visibility: visible;
     left: 41em;
     bottom: 23em;
-    opacity: 1;
+    opacity: 100%;
   }
   58%,
   60% {
     visibility: visible;
     left: 41em;
     bottom: 2em;
-    opacity: 1;
+    opacity: 100%;
   }
   88%,
   90% {
     visibility: visible;
     left: -18em;
     bottom: 2em;
-    opacity: 1;
+    opacity: 100%;
   }
   96% {
     visibility: visible;
     left: -18em;
     bottom: 12em;
-    opacity: 1;
+    opacity: 100%;
   }
   100% {
     visibility: hidden;
     left: -18em;
     bottom: 12em;
-    opacity: 0;
+    opacity: 0%;
   }
 }
 
@@ -5407,54 +5407,54 @@ footer {
     visibility: visible;
     left: 75%;
     bottom: 5%;
-    opacity: 1;
+    opacity: 100%;
   }
   13%,
   15% {
     visibility: visible;
     left: -18em;
     bottom: 12em;
-    opacity: 1;
+    opacity: 100%;
   }
   20%,
   22% {
     visibility: visible;
     left: -18em;
     bottom: 23em;
-    opacity: 1;
+    opacity: 100%;
   }
   47%,
   49% {
     visibility: visible;
     left: 41em;
     bottom: 23em;
-    opacity: 1;
+    opacity: 100%;
   }
   61%,
   63% {
     visibility: visible;
     left: 41em;
     bottom: 2em;
-    opacity: 1;
+    opacity: 100%;
   }
   89%,
   91% {
     visibility: visible;
     left: -18em;
     bottom: 2em;
-    opacity: 1;
+    opacity: 100%;
   }
   97% {
     visibility: visible;
     left: -18em;
     bottom: 12em;
-    opacity: 1;
+    opacity: 100%;
   }
   100% {
     visibility: hidden;
     left: -18em;
     bottom: 12em;
-    opacity: 0;
+    opacity: 0%;
   }
 }
 
@@ -5463,54 +5463,54 @@ footer {
     visibility: visible;
     left: 75%;
     bottom: 43%;
-    opacity: 1;
+    opacity: 100%;
   }
   13%,
   15% {
     visibility: visible;
     left: -18em;
     bottom: 12em;
-    opacity: 1;
+    opacity: 100%;
   }
   20%,
   22% {
     visibility: visible;
     left: -18em;
     bottom: 23em;
-    opacity: 1;
+    opacity: 100%;
   }
   47%,
   49% {
     visibility: visible;
     left: 41em;
     bottom: 23em;
-    opacity: 1;
+    opacity: 100%;
   }
   61%,
   63% {
     visibility: visible;
     left: 41em;
     bottom: 2em;
-    opacity: 1;
+    opacity: 100%;
   }
   89%,
   91% {
     visibility: visible;
     left: -18em;
     bottom: 2em;
-    opacity: 1;
+    opacity: 100%;
   }
   97% {
     visibility: visible;
     left: -18em;
     bottom: 12em;
-    opacity: 1;
+    opacity: 100%;
   }
   100% {
     visibility: hidden;
     left: -18em;
     bottom: 12em;
-    opacity: 0;
+    opacity: 0%;
   }
 }
 
@@ -5519,54 +5519,54 @@ footer {
     visibility: visible;
     left: 75%;
     bottom: 80%;
-    opacity: 1;
+    opacity: 100%;
   }
   13%,
   15% {
     visibility: visible;
     left: -18em;
     bottom: 12em;
-    opacity: 1;
+    opacity: 100%;
   }
   20%,
   22% {
     visibility: visible;
     left: -18em;
     bottom: 23em;
-    opacity: 1;
+    opacity: 100%;
   }
   47%,
   49% {
     visibility: visible;
     left: 41em;
     bottom: 23em;
-    opacity: 1;
+    opacity: 100%;
   }
   61%,
   63% {
     visibility: visible;
     left: 41em;
     bottom: 2em;
-    opacity: 1;
+    opacity: 100%;
   }
   89%,
   91% {
     visibility: visible;
     left: -18em;
     bottom: 2em;
-    opacity: 1;
+    opacity: 100%;
   }
   97% {
     visibility: visible;
     left: -18em;
     bottom: 12em;
-    opacity: 1;
+    opacity: 100%;
   }
   100% {
     visibility: hidden;
     left: -18em;
     bottom: 12em;
-    opacity: 0;
+    opacity: 0%;
   }
 }
 
@@ -5575,54 +5575,54 @@ footer {
     visibility: visible;
     left: 0;
     bottom: 0;
-    opacity: 1;
+    opacity: 100%;
   }
   3%,
   5% {
     visibility: visible;
     left: 2em;
     bottom: 0;
-    opacity: 1;
+    opacity: 100%;
   }
   11%,
   13% {
     visibility: visible;
     left: 2em;
     bottom: -9em;
-    opacity: 1;
+    opacity: 100%;
   }
   41%,
   43% {
     visibility: visible;
     left: -58em;
     bottom: -9em;
-    opacity: 1;
+    opacity: 100%;
   }
   57%,
   59% {
     visibility: visible;
     left: -58em;
     bottom: 11em;
-    opacity: 1;
+    opacity: 100%;
   }
   87%,
   89% {
     visibility: visible;
     left: 2em;
     bottom: 11em;
-    opacity: 1;
+    opacity: 100%;
   }
   96% {
     visibility: visible;
     left: 2em;
     bottom: 0;
-    opacity: 1;
+    opacity: 100%;
   }
   100% {
     visibility: hidden;
     left: 2em;
     bottom: 0;
-    opacity: 0;
+    opacity: 0%;
   }
 }
 
@@ -5631,54 +5631,54 @@ footer {
     visibility: visible;
     right: -10%;
     bottom: 68%;
-    opacity: 1;
+    opacity: 100%;
   }
   6%,
   8% {
     visibility: visible;
     right: -18em;
     bottom: 12em;
-    opacity: 1;
+    opacity: 100%;
   }
   14%,
   16% {
     visibility: visible;
     right: -18em;
     bottom: 2em;
-    opacity: 1;
+    opacity: 100%;
   }
   43%,
   45% {
     visibility: visible;
     right: 41em;
     bottom: 2em;
-    opacity: 1;
+    opacity: 100%;
   }
   58%,
   60% {
     visibility: visible;
     right: 41em;
     bottom: 23em;
-    opacity: 1;
+    opacity: 100%;
   }
   88%,
   90% {
     visibility: visible;
     right: -18em;
     bottom: 23em;
-    opacity: 1;
+    opacity: 100%;
   }
   96% {
     visibility: visible;
     right: -18em;
     bottom: 12em;
-    opacity: 1;
+    opacity: 100%;
   }
   100% {
     visibility: hidden;
     right: -18em;
     bottom: 12em;
-    opacity: 0;
+    opacity: 0%;
   }
 }
 
@@ -5687,54 +5687,54 @@ footer {
     visibility: visible;
     right: -10%;
     bottom: 18%;
-    opacity: 1;
+    opacity: 100%;
   }
   6%,
   8% {
     visibility: visible;
     right: -18em;
     bottom: 12em;
-    opacity: 1;
+    opacity: 100%;
   }
   14%,
   16% {
     visibility: visible;
     right: -18em;
     bottom: 2em;
-    opacity: 1;
+    opacity: 100%;
   }
   43%,
   45% {
     visibility: visible;
     right: 41em;
     bottom: 2em;
-    opacity: 1;
+    opacity: 100%;
   }
   58%,
   60% {
     visibility: visible;
     right: 41em;
     bottom: 23em;
-    opacity: 1;
+    opacity: 100%;
   }
   88%,
   90% {
     visibility: visible;
     right: -18em;
     bottom: 23em;
-    opacity: 1;
+    opacity: 100%;
   }
   96% {
     visibility: visible;
     right: -18em;
     bottom: 12em;
-    opacity: 1;
+    opacity: 100%;
   }
   100% {
     visibility: hidden;
     right: -18em;
     bottom: 12em;
-    opacity: 0;
+    opacity: 0%;
   }
 }
 
@@ -5743,54 +5743,54 @@ footer {
     visibility: visible;
     right: 75%;
     bottom: 5%;
-    opacity: 1;
+    opacity: 100%;
   }
   13%,
   15% {
     visibility: visible;
     right: -18em;
     bottom: 12em;
-    opacity: 1;
+    opacity: 100%;
   }
   20%,
   22% {
     visibility: visible;
     right: -18em;
     bottom: 2em;
-    opacity: 1;
+    opacity: 100%;
   }
   47%,
   49% {
     visibility: visible;
     right: 41em;
     bottom: 2em;
-    opacity: 1;
+    opacity: 100%;
   }
   61%,
   63% {
     visibility: visible;
     right: 41em;
     bottom: 23em;
-    opacity: 1;
+    opacity: 100%;
   }
   89%,
   91% {
     visibility: visible;
     right: -18em;
     bottom: 23em;
-    opacity: 1;
+    opacity: 100%;
   }
   97% {
     visibility: visible;
     right: -18em;
     bottom: 12em;
-    opacity: 1;
+    opacity: 100%;
   }
   100% {
     visibility: hidden;
     right: -18em;
     bottom: 12em;
-    opacity: 0;
+    opacity: 0%;
   }
 }
 
@@ -5799,54 +5799,54 @@ footer {
     visibility: visible;
     right: 75%;
     bottom: 43%;
-    opacity: 1;
+    opacity: 100%;
   }
   13%,
   15% {
     visibility: visible;
     right: -18em;
     bottom: 12em;
-    opacity: 1;
+    opacity: 100%;
   }
   20%,
   22% {
     visibility: visible;
     right: -18em;
     bottom: 2em;
-    opacity: 1;
+    opacity: 100%;
   }
   47%,
   49% {
     visibility: visible;
     right: 41em;
     bottom: 2em;
-    opacity: 1;
+    opacity: 100%;
   }
   61%,
   63% {
     visibility: visible;
     right: 41em;
     bottom: 23em;
-    opacity: 1;
+    opacity: 100%;
   }
   89%,
   91% {
     visibility: visible;
     right: -18em;
     bottom: 23em;
-    opacity: 1;
+    opacity: 100%;
   }
   97% {
     visibility: visible;
     right: -18em;
     bottom: 12em;
-    opacity: 1;
+    opacity: 100%;
   }
   100% {
     visibility: hidden;
     right: -18em;
     bottom: 12em;
-    opacity: 0;
+    opacity: 0%;
   }
 }
 
@@ -5855,54 +5855,54 @@ footer {
     visibility: visible;
     right: 75%;
     bottom: 80%;
-    opacity: 1;
+    opacity: 100%;
   }
   13%,
   15% {
     visibility: visible;
     right: -18em;
     bottom: 12em;
-    opacity: 1;
+    opacity: 100%;
   }
   20%,
   22% {
     visibility: visible;
     right: -18em;
     bottom: 2em;
-    opacity: 1;
+    opacity: 100%;
   }
   47%,
   49% {
     visibility: visible;
     right: 41em;
     bottom: 2em;
-    opacity: 1;
+    opacity: 100%;
   }
   61%,
   63% {
     visibility: visible;
     right: 41em;
     bottom: 23em;
-    opacity: 1;
+    opacity: 100%;
   }
   89%,
   91% {
     visibility: visible;
     right: -18em;
     bottom: 23em;
-    opacity: 1;
+    opacity: 100%;
   }
   97% {
     visibility: visible;
     right: -18em;
     bottom: 12em;
-    opacity: 1;
+    opacity: 100%;
   }
   100% {
     visibility: hidden;
     right: -18em;
     bottom: 12em;
-    opacity: 0;
+    opacity: 0%;
   }
 }
 
@@ -5916,7 +5916,7 @@ footer {
   }
   34%,
   99% {
-  color: rgba(179, 14, 15, .5);
+  color: rgba(179, 14, 15, 50%);
   }
   100% {
     color: var(--darkGray);
@@ -6015,7 +6015,7 @@ footer {
   }
   1%,
   33% {
-    color: rgba(72, 160, 247, .9);
+    color: rgba(72, 160, 247, 90%);
   }
   34%,
   99% {
@@ -6075,7 +6075,7 @@ footer {
   }
   34%,
   99% {
-  color: rgba(227, 184, 229, .5);
+  color: rgba(227, 184, 229, 50%);
   }
   100% {
     color: var(--darkGray);

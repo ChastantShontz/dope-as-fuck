@@ -8,7 +8,7 @@
 
 /* Any element with the "disabled" attribute set to "true" will become partially transparent and unclickable */
 *[disabled] {
-  opacity: .5 !important;
+  opacity: 50% !important;
   pointer-events: none !important;
 }
 

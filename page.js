@@ -3548,9 +3548,6 @@ function gotIt6(event) {
           document.getElementsByClassName("menGoalie")[x].style.pointerEvents = "auto"
         ), 3000);
         setTimeout(() => (
-          document.getElementsByClassName("menGoalie")[x].style.cursor = "pointer"
-        ), 3000);
-        setTimeout(() => (
           document.getElementsByClassName("menGoalie")[x].tabIndex = "0"
         ), 3000);
       }
@@ -3565,9 +3562,6 @@ function gotIt6(event) {
         document.getElementsByClassName("womenGoalie")[x].style.transition = "all 0s ease 1s";
         setTimeout(() => (
           document.getElementsByClassName("womenGoalie")[x].style.pointerEvents = "auto"
-        ), 3000);
-        setTimeout(() => (
-          document.getElementsByClassName("womenGoalie")[x].style.cursor = "pointer"
         ), 3000);
         setTimeout(() => (
           document.getElementsByClassName("womenGoalie")[x].tabIndex = "0"
@@ -4991,9 +4985,6 @@ function gotIt9() {
             document.getElementsByClassName("clarksonMenPlayer")[x].style.pointerEvents = "auto"
           ), 2500);
           setTimeout(() => (
-            document.getElementsByClassName("clarksonMenPlayer")[x].style.cursor = "pointer"
-          ), 2500);
-          setTimeout(() => (
             document.getElementsByClassName("clarksonMenPlayer")[x].tabIndex = "0"
           ), 2500);
         }
@@ -5030,9 +5021,6 @@ function gotIt9() {
         const activate = (x) => {
           setTimeout(() => (
             document.getElementsByClassName("clarksonWomenPlayer")[x].style.pointerEvents = "auto"
-          ), 2500);
-          setTimeout(() => (
-            document.getElementsByClassName("clarksonWomenPlayer")[x].style.cursor = "pointer"
           ), 2500);
           setTimeout(() => (
             document.getElementsByClassName("clarksonWomenPlayer")[x].tabIndex = "0"
@@ -5100,9 +5088,6 @@ function gotIt10() {
             document.getElementsByClassName("sluMenPlayer")[x].style.pointerEvents = "auto"
           ), 2500);
           setTimeout(() => (
-            document.getElementsByClassName("sluMenPlayer")[x].style.cursor = "pointer"
-          ), 2500);
-          setTimeout(() => (
             document.getElementsByClassName("sluMenPlayer")[x].tabIndex = "0"
           ), 2500);
         }
@@ -5139,9 +5124,6 @@ function gotIt10() {
         const activate = (x) => {
           setTimeout(() => (
             document.getElementsByClassName("sluWomenPlayer")[x].style.pointerEvents = "auto"
-          ), 2500);
-          setTimeout(() => (
-            document.getElementsByClassName("sluWomenPlayer")[x].style.cursor = "pointer"
           ), 2500);
           setTimeout(() => (
             document.getElementsByClassName("sluWomenPlayer")[x].tabIndex = "0"

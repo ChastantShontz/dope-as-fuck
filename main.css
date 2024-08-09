@@ -1123,6 +1123,7 @@ main {
   opacity: 0%;
   width: 2.8em;
   pointer-events: none;
+  cursor: pointer;
 }
 
 .clarksonGoalie {

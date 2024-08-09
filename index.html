@@ -417,7 +417,7 @@
       <img src="img/knightmobile.png" alt="The KnightMobile driving to SLU" fetchpriority="low" decoding="async" loading="lazy" class="load" id="knightmobile" onload="load(event)">
       <div id="crappleton">
       </div>
-      <article id="rinkCont">
+      <article id="game">
         <section class="disappearExt" id="lives">
           <div class="lifeContCont" id="freshmanRepresentativeLifeContCont">
             <div title="Nick Corsner, Freshman Representative" class="lifeCont" id="freshmanRepresentativeLifeCont" onclick="speedrun(0)">
@@ -463,8 +463,8 @@
             </div>
           </div>
         </section>
-        <section class="disappearExt" id="sidebar">
-          <div id="scoreboard">
+        <section class="disappearExt" id="gameActivities">
+          <div class="gameActivity" id="scoreboard">
             <p id="scoreboardHeading">Period: <span id="scoreboardPeriod"></span></p>
             <div id="scoreboardSides">
               <div class="scoreboardCollegeSide" id="scoreboardClarksonSide">
@@ -477,7 +477,7 @@
               </div>
             </div>
           </div>
-          <div id="cheersContContCont">
+          <div class="gameActivity" id="cheersContContCont">
             <p id="cheerHeading">Cheer Score: <span id="cheerScore"></span></p>
             <div id="cheersContCont">
               <div id="cheersCont">
@@ -2622,15 +2622,15 @@
             </div>
           </div>
         </div>
-        <section id="activities">
-          <div class="activity drunkCont" id="dafCounterCont">
+        <section id="partyActivities">
+          <div class="partyActivity drunkCont" id="dafCounterCont">
             <p class="drunkText" id="dafCounterHeading">DAF: <span class="drunkText" id="dafCounterNum"></span></p>
             <div id="dafCounter">
               <button type="button" class="defaultButton drunkText" id="dafCounterButton" tabindex="-1" aria-label="Add to the DAF counter" onclick="dafCounterCount(event)">DAF!</button>
               <p class="drunkText" id="dafCounterError">ERROR</p>
             </div>
           </div>
-          <div class="activity drunkCont" id="speakerCont">
+          <div class="partyActivity drunkCont" id="speakerCont">
             <img src="img/speaker.png" alt="A speaker to play music with" fetchpriority="low" decoding="async" loading="lazy" class="load" id="speaker" onload="load(event)">
             <select class="drunkText" id="speakerSongs" tabindex="-1" aria-label="Select a song to play" onchange="speakerPlay()">
               <option value="default" class="speakerSong" id="speakerSongDefault" selected>Play a song!</option>
@@ -2717,7 +2717,7 @@
               <button type="button" title="Pause" class="speakerControl disabled" id="speakerPause" tabindex="-1" aria-label="Pause the speaker song" onclick="speakerPause()" disabled></button>
             </div>
           </div>
-          <div class="activity" id="beers">
+          <div class="partyActivity" id="beers">
             <img src="img/bapple.png" alt="A can of Bapple to drink from" fetchpriority="low" decoding="async" loading="lazy" class="beer drunkCont load" id="bapple" aria-label="Drink from the Bapple can" onload="load(event)" onclick="drinkBeer(event)">
             <img src="img/busch.png" alt="A can of Busch to drink from" fetchpriority="low" decoding="async" loading="lazy" class="beer drunkCont load" id="busch" aria-label="Drink from the Busch can" onload="load(event)" onclick="drinkBeer(event)">
           </div>

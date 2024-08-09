@@ -3589,11 +3589,6 @@ function gotIt6(event) {
   document.getElementById("scoreboardClarksonScore").innerHTML = sessionStorage.clarksonScore;
   sessionStorage.sluScore = 0;
   document.getElementById("scoreboardSluScore").innerHTML = sessionStorage.sluScore;
-  document.getElementById("scoreboard").style.transform = "scale(1)";
-  document.getElementById("scoreboard").style.transition = "transform 0s ease 2s";
-  setTimeout(() => (
-    document.getElementById("scoreboard").tabIndex = "0"
-  ), 2000);
   sessionStorage.points = 0;
   sessionStorage.oldHighScore = localStorage.highScore;
   document.getElementById("cheerScore").innerHTML = sessionStorage.points;
@@ -3614,16 +3609,18 @@ function gotIt6(event) {
       document.getElementById("cheers").scrollTop = 0;
     }
   }
-  document.getElementById("cheersContContCont").style.transform = "scale(1)";
-  document.getElementById("cheersContContCont").style.transition = "transform 0s ease 2s";
-  setTimeout(() => (
-    document.getElementById("cheersContContCont").tabIndex = "0"
-  ), 2000);
-  document.getElementById("sidebar").style.visibility = "visible";
-  document.getElementById("sidebar").style.left = "5%";
-  document.getElementById("sidebar").style.right = "80%";
-  document.getElementById("sidebar").style.opacity = "100%";
-  document.getElementById("sidebar").style.transition = "visibility 0s ease 2s, left 1s ease 2s, right 1s ease 2s, opacity 0s ease 2s";
+  for (var i = 0; i < document.getElementsByClassName("gameActivity").length; i++) {
+    document.getElementsByClassName("gameActivity")[i].style.transform = "scale(1)";
+    document.getElementsByClassName("gameActivity")[i].style.transition = "transform 0s ease 2s";
+    setTimeout(() => (
+      document.getElementsByClassName("gameActivity")[i].tabIndex = "0"
+    ), 2000);
+  }
+  document.getElementById("gameActivities").style.visibility = "visible";
+  document.getElementById("gameActivities").style.left = "5%";
+  document.getElementById("gameActivities").style.right = "80%";
+  document.getElementById("gameActivities").style.opacity = "100%";
+  document.getElementById("gameActivities").style.transition = "visibility 0s ease 2s, left 1s ease 2s, right 1s ease 2s, opacity 0s ease 2s";
   document.getElementById("raffle").style.display = "block";
   for (var i = 0; i < document.getElementsByClassName("lifeCont").length; i++) {
     var transitionDelay = ((i / 2) + 3);
@@ -9109,14 +9106,14 @@ function gotIt27() {
   sessionStorage.drinks = 0;
   sessionStorage.emphasizeBeerInterval = setInterval(emphasizeBeer, 60000);
   sessionStorage.iceDecrement = 10;
-  for (var i = 0; i < document.getElementsByClassName("activity").length; i++) {
-    document.getElementsByClassName("activity")[i].style.visibility = "visible";
-    document.getElementsByClassName("activity")[i].style.opacity = "100%";
-    document.getElementsByClassName("activity")[i].style.transition = "all .25s ease " + ((i * .5) + 1.5) + "s";
+  for (var i = 0; i < document.getElementsByClassName("partyActivity").length; i++) {
+    document.getElementsByClassName("partyActivity")[i].style.visibility = "visible";
+    document.getElementsByClassName("partyActivity")[i].style.opacity = "100%";
+    document.getElementsByClassName("partyActivity")[i].style.transition = "all .25s ease " + ((i * .5) + 1.5) + "s";
   }
-  document.getElementById("activities").style.visibility = "visible";
-  document.getElementById("activities").style.opacity = "100%";
-  document.getElementById("activities").style.transition = "all 0s ease 1.5s";
+  document.getElementById("partyActivities").style.visibility = "visible";
+  document.getElementById("partyActivities").style.opacity = "100%";
+  document.getElementById("partyActivities").style.transition = "all 0s ease 1.5s";
   for (var i = 0; i < document.getElementsByClassName("socialMedia").length; i++) {
     var transitionDelay = ((i * .25) + 2.75);
     document.getElementsByClassName("socialMedia")[i].style.visibility = "visible";

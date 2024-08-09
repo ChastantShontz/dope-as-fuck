@@ -787,7 +787,7 @@ main {
   cursor: default;
 }
 
-#sidebar {
+#gameActivities {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -802,13 +802,20 @@ main {
   pointer-events: none;
 }
 
-#scoreboard {
-  border-radius: 1em;
+.gameActivity {
   background: var(--white);
   width: 100%;
   border: .2em solid var(--blue);
   transform: scale(0);
   pointer-events: auto;
+}
+
+#scoreboard {
+  border-radius: 1em;
+}
+
+#cheersContContCont {
+  border-radius: .1em;
 }
 
 #scoreboardHeading {
@@ -862,15 +869,6 @@ main {
 
 #scoreboardSluScore {
   color: var(--sluRed);
-}
-
-#cheersContContCont {
-  border-radius: .1em;
-  background: var(--white);
-  width: 100%;
-  border: .2em solid var(--blue);
-  transform: scale(0);
-  pointer-events: auto;
 }
 
 #cheerHeading {
@@ -2537,7 +2535,7 @@ main {
   display: none;
 }
 
-#activities {
+#partyActivities {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -2551,7 +2549,7 @@ main {
   pointer-events: none;
 }
 
-.activity {
+.partyActivity {
   visibility: hidden;
   opacity: 0%;
   pointer-events: auto;
@@ -2562,6 +2560,18 @@ main {
   background: var(--white);
   width: 33%;
   border: .2em solid var(--clarksonGreen);
+}
+
+#speakerCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 10em;
+  align-items: center;
+}
+
+#beers {
+  height: 10em;
 }
 
 #dafCounterHeading {
@@ -2618,14 +2628,6 @@ main {
   user-select: none;
 }
 
-#speakerCont {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 10em;
-  align-items: center;
-}
-
 #speaker {
   width: 100%;
 }
@@ -2674,10 +2676,6 @@ main {
   background: var(--youtubeDarkGray);
   height: 100%;
   width: 100%;
-}
-
-#beers {
-  height: 10em;
 }
 
 .beer {

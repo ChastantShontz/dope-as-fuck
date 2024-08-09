@@ -3540,10 +3540,10 @@ function gotIt6(event) {
   document.getElementById("crappleton").blur();
   if (sessionStorage.gender == 1) {
     for (var i = 0; i < document.getElementsByClassName("menGoalie").length; i++) {
+      document.getElementsByClassName("menGoalie")[x].style.visibility = "visible";
+      document.getElementsByClassName("menGoalie")[x].style.opacity = "100%";
+      document.getElementsByClassName("menGoalie")[x].style.transition = "all 0s ease 1s";
       const activate = (x) => {
-        document.getElementsByClassName("menGoalie")[x].style.visibility = "visible";
-        document.getElementsByClassName("menGoalie")[x].style.opacity = "100%";
-        document.getElementsByClassName("menGoalie")[x].style.transition = "all 0s ease 1s";
         setTimeout(() => (
           document.getElementsByClassName("menGoalie")[x].style.pointerEvents = "auto"
         ), 3000);
@@ -3556,10 +3556,10 @@ function gotIt6(event) {
   }
   else if (sessionStorage.gender == 2) {
     for (var i = 0; i < document.getElementsByClassName("womenGoalie").length; i++) {
+      document.getElementsByClassName("womenGoalie")[x].style.visibility = "visible";
+      document.getElementsByClassName("womenGoalie")[x].style.opacity = "100%";
+      document.getElementsByClassName("womenGoalie")[x].style.transition = "all 0s ease 1s";
       const activate = (x) => {
-        document.getElementsByClassName("womenGoalie")[x].style.visibility = "visible";
-        document.getElementsByClassName("womenGoalie")[x].style.opacity = "100%";
-        document.getElementsByClassName("womenGoalie")[x].style.transition = "all 0s ease 1s";
         setTimeout(() => (
           document.getElementsByClassName("womenGoalie")[x].style.pointerEvents = "auto"
         ), 3000);
@@ -3612,9 +3612,12 @@ function gotIt6(event) {
   for (var i = 0; i < document.getElementsByClassName("gameActivity").length; i++) {
     document.getElementsByClassName("gameActivity")[i].style.transform = "scale(1)";
     document.getElementsByClassName("gameActivity")[i].style.transition = "transform 0s ease 2s";
-    setTimeout(() => (
-      document.getElementsByClassName("gameActivity")[i].tabIndex = "0"
-    ), 2000);
+    const activate = (x) => {
+      setTimeout(() => (
+        document.getElementsByClassName("gameActivity")[x].tabIndex = "0"
+      ), 2000);
+    }
+    activate(i);
   }
   document.getElementById("gameActivities").style.visibility = "visible";
   document.getElementById("gameActivities").style.left = "5%";

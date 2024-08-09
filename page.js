@@ -8760,8 +8760,8 @@ function gotIt24() {
     else if (document.getElementsByClassName("bandieCont")[i] == document.getElementById("knightguardCont")) {
       document.getElementById("knightguardCont").style.transition = "all 0s ease 3.8s";
     }
-    else if (document.getElementsByClassName("bandieCont")[i] == document.getElementById("benCont")) {
-      document.getElementById("benCont").style.transition = "all 0s ease 3.9s";
+    else if (document.getElementsByClassName("bandieCont")[i] == document.getElementById("bensCont")) {
+      document.getElementById("bensCont").style.transition = "all 0s ease 3.9s";
     }
     else if (document.getElementsByClassName("bandieCont")[i] == document.getElementById("ryanMccarthyCont")) {
       document.getElementById("ryanMccarthyCont").style.transition = "all 0s ease 4.5s";

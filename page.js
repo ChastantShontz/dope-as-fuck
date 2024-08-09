@@ -8754,17 +8754,10 @@ function gotIt24() {
   for (var i = 0; i < document.getElementsByClassName("bandieCont").length; i++) {
     document.getElementsByClassName("bandieCont")[i].style.visibility = "visible";
     document.getElementsByClassName("bandieCont")[i].style.opacity = "100%";
-    if (document.getElementsByClassName("bandieCont")[i] == document.getElementById("nickSchalagoCont")) {
-      document.getElementById("nickSchalagoCont").style.transition = "all 0s ease 1.8s";
-    }
-    else if (document.getElementsByClassName("bandieCont")[i] == document.getElementById("knightguardCont")) {
-      document.getElementById("knightguardCont").style.transition = "all 0s ease 3.8s";
-    }
-    else if (document.getElementsByClassName("bandieCont")[i] == document.getElementById("bensCont")) {
-      document.getElementById("bensCont").style.transition = "all 0s ease 3.9s";
-    }
-    else if (document.getElementsByClassName("bandieCont")[i] == document.getElementById("ryanMccarthyCont")) {
-      document.getElementById("ryanMccarthyCont").style.transition = "all 0s ease 4.5s";
+    for (var j = 0; j < document.getElementsByClassName("bandieCont")[i].children.length; j++) {
+      if (document.getElementsByClassName("bandieCont")[i].children[j].classList.contains("bandie")) {
+        document.getElementsByClassName("bandieCont")[i].style.transition = (document.getElementsByClassName("bandieCont")[i].children[j].style.transition).replace(/\.25s/sm, "0s");
+      }
     }
   }
   document.getElementById("bandiesCont").style.visibility = "visible";

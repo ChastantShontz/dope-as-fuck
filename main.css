@@ -2988,7 +2988,7 @@ main {
              scale(0);
 }
 
-#troyLassialContCont {
+#troyLassialCont {
   display: grid;
   grid-template-columns: repeat(2, 49%);
   grid-column-gap: 2%;
@@ -3520,7 +3520,7 @@ main {
   user-select: none;
 }
 
-#troyLassialCont {
+#troyLassials {
   display: flex;
   flex-direction: row;
   justify-content: center;

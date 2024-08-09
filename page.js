@@ -4709,9 +4709,9 @@ function troyLassialEntrance() {
   document.getElementById("viewAccountToggle").tabIndex = "-1";
   document.getElementById("viewAccountToggle").blur();
   document.getElementById("troyLassialButton").tabIndex = "0";
-  document.getElementById("troyLassialContCont").style.transform = "scale(1)";
-  document.getElementById("troyLassialContCont").style.transition = "transform .5s ease 0s";
-  document.getElementById("troyLassialContCont").tabIndex = "0";
+  document.getElementById("troyLassialCont").style.transform = "scale(1)";
+  document.getElementById("troyLassialCont").style.transition = "transform .5s ease 0s";
+  document.getElementById("troyLassialCont").tabIndex = "0";
   document.getElementById("cover").style.visibility = "visible";
   document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "all .25s ease 0s";
@@ -4727,10 +4727,10 @@ function troyLassialExit(event) {
       document.getElementById("cover").style.transition = "all .25s ease .25s";
       document.getElementById("cover").tabIndex = "-1";
       document.getElementById("cover").blur();
-      document.getElementById("troyLassialContCont").style.transform = "scale(0)";
-      document.getElementById("troyLassialContCont").style.transition = "transform .5s ease 0s";
-      document.getElementById("troyLassialContCont").tabIndex = "-1";
-      document.getElementById("troyLassialContCont").blur();
+      document.getElementById("troyLassialCont").style.transform = "scale(0)";
+      document.getElementById("troyLassialCont").style.transition = "transform .5s ease 0s";
+      document.getElementById("troyLassialCont").tabIndex = "-1";
+      document.getElementById("troyLassialCont").blur();
       document.getElementById("troyLassialButton").tabIndex = "-1";
       document.getElementById("troyLassialButton").blur();
       setTimeout(newLife, 750);
@@ -4751,11 +4751,11 @@ function troyLassialExit(event) {
       setTimeout(enableButton, 750);
     }
     else {
-      document.getElementById("troyLassialContCont").style.visibility = "hidden";
-      document.getElementById("troyLassialContCont").style.opacity = "0%";
-      document.getElementById("troyLassialContCont").style.transition = "all .25s ease 0s";
-      document.getElementById("troyLassialContCont").tabIndex = "-1";
-      document.getElementById("troyLassialContCont").blur();
+      document.getElementById("troyLassialCont").style.visibility = "hidden";
+      document.getElementById("troyLassialCont").style.opacity = "0%";
+      document.getElementById("troyLassialCont").style.transition = "all .25s ease 0s";
+      document.getElementById("troyLassialCont").tabIndex = "-1";
+      document.getElementById("troyLassialCont").blur();
       document.getElementById("troyLassialButton").tabIndex = "-1";
       document.getElementById("troyLassialButton").blur();
       document.getElementById("gameOverHeading").style.color = "var(--sluRed)";
@@ -4772,10 +4772,10 @@ function troyLassialExit(event) {
     document.getElementById("cover").style.transition = "all .25s ease .25s";
     document.getElementById("cover").tabIndex = "-1";
     document.getElementById("cover").blur();
-    document.getElementById("troyLassialContCont").style.transform = "scale(0)";
-    document.getElementById("troyLassialContCont").style.transition = "transform .5s ease 0s";
-    document.getElementById("troyLassialContCont").tabIndex = "-1";
-    document.getElementById("troyLassialContCont").blur();
+    document.getElementById("troyLassialCont").style.transform = "scale(0)";
+    document.getElementById("troyLassialCont").style.transition = "transform .5s ease 0s";
+    document.getElementById("troyLassialCont").tabIndex = "-1";
+    document.getElementById("troyLassialCont").blur();
     document.getElementById("troyLassialButton").tabIndex = "-1";
     document.getElementById("troyLassialButton").blur();
     if ((document.getElementById("troyLassialTalk").innerHTML == "It's funny, that sounded an awful lot like the \"bullshit\" word. Maybe that was intentional of you? I suppose that technically, you've done nothing wrong. I'll be watching you like a hawk, though, so beware!") || (document.getElementById("troyLassialTalk").innerHTML == "Suck flu? What on Earth does that mean? Are you sure you weren't trying to say something else? Unfortunately, I can't eject you just for wanting to suck the flu. But please reconsider how you are representing Clarkson.")) {

@@ -1,0 +1,6156 @@
+/* Imported Fonts */
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Symbols+Outlined");
+@import url("https://fonts.googleapis.com/css?family=Acme|Aldrich|Anton|Archivo+Black|Bangers|Belanosima|Boogaloo|Bungee|Candal|Creepster|Dosis|EB+Garamond|Kalam|Kanit|Lekton|Libre+Barcode+128|Luckiest+Guy|Merienda|Merriweather|Monoton|Montserrat|Oswald|Palette+Mosaic|Patrick+Hand|Press+Start+2P|Roboto|Rubik+Mono+One|Russo+One|Satisfy|Shadows+Into+Light|Slackey|Source+Code+Pro|Titillium+Web|Wallpoet|Zilla+Slab");
+
+/* Element Styles */
+
+* {
+  accent-color: var(--clarksonGreen);
+}
+
+*::selection {
+  background: var(--clarksonGreen) !important;
+  color: var(--white) !important;
+}
+
+html {
+  font-size: 1em;
+}
+
+body {
+  background: fixed url("img/pepBand.png") center / cover;
+  height: 100vh;
+  width: 100vw;
+  cursor: wait;
+}
+
+header {
+  display: none;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+#loading {
+  z-index: 95;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  align-items: center;
+  pointer-events: none;
+}
+
+#loadingMessage {
+  background: linear-gradient(to right, rgba(0, 0, 0, 10%), 10%, rgba(0, 0, 0, 50%), 90%, rgba(0, 0, 0, 10%));
+  width: 100%;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  font-family: "Candal", fantasy;
+  color: var(--white);
+  font-size: 4em;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  text-shadow: .01em .01em .01em var(--black),
+               -.01em .01em .01em var(--black),
+               .01em -.01em .01em var(--black),
+               -.01em -.01em .01em var(--black);
+  user-select: none;
+}
+
+#loadingMessageDots {
+  display: inline-block;
+}
+
+.loadingMessageDot {
+  display: inline-block;
+  margin-left: .1em;
+  margin-right: .1em;
+  transform: scaleX(1.5)
+             scaleY(.75);
+  transform-origin: bottom;
+}
+
+#loadingMessageDot1 {
+  animation: bounce 1s ease 0s infinite forwards;
+}
+
+#loadingMessageDot2 {
+  animation: bounce 1s ease .33s infinite forwards;
+}
+
+#loadingMessageDot3 {
+  animation: bounce 1s ease .67s infinite forwards;
+}
+
+#loadingBarContCont {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#loadingBarPercent {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: .5em;
+  font-family: "Oswald", fantasy;
+  color: var(--buttonGreen);
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+}
+
+#loadingBarCont {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--lightGray);
+  height: 1em;
+}
+
+#loadingBar {
+  position: absolute;
+  left: 0;
+  right: 100%;
+  top: 0;
+  bottom: 0;
+  background: var(--buttonGreen);
+}
+
+#loadingBarShimmer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(to right, transparent 0% 10%, var(var(--shimmerWhite)) 40% 60%, transparent 90% 100%) -10em / 10em 100%;
+  animation: loadingBarShimmer 5s ease 0s infinite backwards;
+}
+
+#conductorCont {
+  z-index: 91;
+  display: grid;
+  grid-template-columns: calc(33% - .1em) calc(67% - .1em);
+  grid-column-gap: .2em;
+  grid-template-rows: 1fr;
+  position: fixed;
+  left: -30em;
+  bottom: 2em;
+  border-radius: .5em;
+  background: var(--white);
+  height: 10em;
+  width: 30em;
+  border: .2em solid var(--clarksonGreen);
+}
+
+#conductor {
+  border-top-left-radius: .3em;
+  border-bottom-left-radius: .3em;
+  background: url("img/joeDesenaBG.png") center / cover;
+  border-right: .2em solid var(--clarksonGreen);
+}
+
+#conductorTalkContCont {
+  border-left: .2em solid var(--clarksonGreen);
+}
+
+#conductorName {
+  width: 100%;
+  padding-left: 1em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  border-bottom: .2rem solid var(--clarksonGreen);
+  font-family: "Russo One", fantasy;
+  color: var(--clarksonGreen);
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+#conductorTalkCont {
+  height: 7.65em;
+  width: 100%;
+  overflow-y: auto;
+}
+
+#okSpacer {
+  float: right;
+  height: 4.95em;
+  width: 0;
+}
+
+#ok {
+  position: relative;
+  float: right;
+  clear: right;
+  border-radius: .25em;
+  background: var(--buttonGreen);
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  margin: .2rem;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
+  color: var(--white);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#okShimmer {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: .25em;
+  background: linear-gradient(60deg, transparent 0% 40%, var(--shimmerWhite) 45% 55%, transparent 60% 100%) -2em / 2em 100%;
+  pointer-events: none;
+}
+
+#conductorTalk {
+  width: 100%;
+  padding: .5em;
+  font-family: "Merriweather", "Times New Roman", serif;
+  font-size: .85em;
+}
+
+.arrowKeyCont {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 1.25em;
+  width: 1.25em;
+  padding-left: 0;
+  padding-right: 0;
+  align-items: center;
+}
+
+.arrowKey {
+  background: var(--darkGray);
+  height: .75em;
+  width: .75em;
+}
+
+#rightArrowKey {
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%, 0% 0%);
+}
+
+#upArrowKey {
+  clip-path: polygon(0% 100%, 50% 0%, 100% 100%, 0% 100%);
+}
+
+.playerInline {
+  line-height: .85lh;
+  font-size: 1rem;
+}
+
+.clarksonPlayerInline {
+  font-family: "Bangers", fantasy;
+  color: var(--clarksonGreen);
+}
+
+.sluPlayerInline {
+  font-family: "Creepster", fantasy;
+  color: var(--sluRed);
+  text-shadow: .05em .05em .01em var(--black),
+               -.05em .05em .01em var(--black),
+               .05em -.05em .01em var(--black),
+               -.05em -.05em .01em var(--black);
+}
+
+#laughter {
+  word-break: break-all;
+}
+
+#viewAccount {
+  z-index: 90;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  right: -10.2em;
+  top: 10%;
+  border-radius: .5em;
+  background: var(--white);
+  border: .2em solid var(--clarksonGreen);
+  align-items: center;
+}
+
+#viewAccountToggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: transparent;
+  height: 2em;
+  width: 2em;
+  border-right: .2em solid var(--clarksonGreen);
+  align-items: center;
+  pointer-events: none;
+}
+
+#viewAccountToggleShape {
+  display: inline-block;
+  clip-path: polygon(100% 0%, 100% 100%, 0% 50%, 100% 0%);
+  background: var(--clarksonGreen);
+  height: 1.5em;
+  width: 1.5em;
+}
+
+#viewAccountButtonCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 10em;
+  align-items: center;
+}
+
+#viewAccountButton {
+  border-radius: .25em;
+  background: var(--buttonGreen);
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
+  color: var(--white);
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#background {
+  z-index: -1;
+  position: relative;
+}
+
+#screensavers {
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0%;
+}
+
+.screensaver {
+  display: none;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+#subliminalMessageCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 1%;
+  align-items: center;
+  pointer-events: none;
+}
+
+#subliminalMessage {
+  font-family: "Monoton", fantasy;
+  font-size: 20vh;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+}
+
+.notice {
+  position: fixed;
+  left: 0;
+  font-family: "EB Garamond", "Merriweather", "Times New Roman", serif;
+  font-size: .67em;
+  user-select: none;
+  pointer-events: none;
+}
+
+#disclaimer {
+  top: 0;
+}
+
+#copyright {
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+#discordLogo {
+  position: fixed;
+  left: calc(50% - 2.5em);
+  right: calc(50% - 2.5em);
+  bottom: -6em;
+  border-radius: .5em;
+  background: url("img/discord.png") center / cover;
+  height: 5em;
+  width: 5em;
+  cursor: pointer;
+}
+
+#discordNotification {
+  position: absolute;
+  right: -.5em;
+  top: -.5em;
+  border-radius: 50%;
+  background: var(--notificationRed);
+  height: 1.5em;
+  width: 1.5em;
+  font-family: "Oswald", fantasy;
+  color: var(--white);
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+}
+
+#discord {
+  position: fixed;
+  left: 40%;
+  right: 40%;
+  bottom: -9%;
+  border-radius: .5em;
+  background: var(--discordGray);
+  transform: scale(0);
+}
+
+#discordHeading {
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+  background: var(--discordDarkGray);
+  width: 100%;
+  padding: .25em;
+  border-bottom: .1em solid var(--black);
+}
+
+#discordMenu {
+  display: inline-block;
+  margin-left: .25em;
+  color: var(--discordLightGray);
+  font-size: 1.25em;
+  font-weight: bold;
+  user-select: none;
+}
+
+#discordAnnouncements {
+  display: inline-block;
+  margin-left: 1em;
+  font-family: "Dosis", fantasy;
+  color: var(--discordLightGray);
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#discordMessageContCont {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: 1fr;
+  background: rgba(220, 171, 38, 10%);
+  padding: .25em;
+  border-left: .1em solid var(--discordYellow);
+}
+
+#discordProfileCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#discordProfile {
+  position: relative;
+  right: .1em;
+  top: .25em;
+  border-radius: 50%;
+  background: url("img/ryanMccarthyBG.png") center / cover;
+  height: 2em;
+  width: 2em;
+}
+
+#discordUsername {
+  font-family: "Dosis", fantasy;
+  color: var(--discordYellow);
+  font-weight: bold;
+}
+
+#discordDate {
+  color: var(--discordLightGray);
+  font-size: .75em;
+  font-weight: normal;
+}
+
+#discordMessage {
+  font-family: "Dosis", fantasy;
+  color: var(--white);
+}
+
+#discordUsers {
+  border-radius: .1em;
+  background: rgba(114, 137, 218, 50%);
+  font-weight: bold;
+}
+
+#discordToolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom-left-radius: .5em;
+  border-bottom-right-radius: .5em;
+  padding: .25em;
+  border-top: .1em solid var(--black);
+  align-items: center;
+}
+
+#discordPlus {
+  border-radius: 50%;
+  background: var(--discordDarkGray);
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  color: var(--discordLightGray);
+  font-size: 1.25em;
+  font-weight: bold;
+  user-select: none;
+}
+
+#discordBubble {
+  border-radius: 1em;
+  background: var(--discordDarkGray);
+  width: 85%;
+  padding: .5em;
+  font-family: "Dosis", fantasy;
+  color: var(--discordLightGray);
+  user-select: none;
+}
+
+.genderCont {
+  position: fixed;
+  bottom: 40%;
+  width: 15em;
+  cursor: pointer;
+}
+
+#menCont {
+  left: -15em;
+}
+
+#womenCont {
+  right: -15em;
+}
+
+.gender {
+  border-radius: .5em;
+  height: 15em;
+  width: 100%;
+  margin-bottom: .25em;
+}
+
+#men {
+  background: url("img/danielAllinBG.png") top / cover;
+  transform: scaleX(-1);
+}
+
+#women {
+  background: url("img/hopeCrisafiBG.png") top / cover;
+}
+
+.genderLabel {
+  border-radius: .5em;
+  background: var(--white);
+  width: 100%;
+  font-family: "Titillium Web", "Roboto", "Arial", sans-serif;
+  font-size: 1.25em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#menLabel {
+  color: var(--allinBlue);
+  transform: scaleX(1);
+}
+
+#womenLabel {
+  color: var(--hopeRed);
+}
+
+#map {
+  visibility: hidden;
+  position: fixed;
+  left: 5%;
+  right: 5%;
+  top: 5%;
+  bottom: calc(12em + 5%);
+  border-radius: 1em;
+  background: url("img/map.png") center / cover;
+  opacity: 0%;
+}
+
+.college {
+  position: absolute;
+  width: 5em;
+}
+
+#clarkson {
+  left: 1em;
+  bottom: 2em;
+}
+
+#slu {
+  right: 1em;
+  top: 4em;
+}
+
+.arrowIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  visibility: hidden;
+  position: absolute;
+  border-radius: .5em;
+  background: var(--white);
+  opacity: 0%;
+  height: 5em;
+  width: 5em;
+  border: .2em solid var(--clarksonGreen);
+  align-items: center;
+}
+
+#rightArrowIcon {
+  left: 16%;
+  bottom: 2%;
+}
+
+#upArrowIcon {
+  left: 8%;
+  bottom: 21%;
+}
+
+.arrowIconShape {
+  background: var(--clarksonGreen);
+  height: 4em;
+  width: 4em;
+}
+
+#rightArrowIconShape {
+  clip-path: polygon(0% 25%, 50% 25%, 50% 0%, 100% 50%, 50% 100%, 50% 75%, 0% 75%, 0% 25%);
+}
+
+#upArrowIconShape {
+  clip-path: polygon(25% 100%, 25% 50%, 0% 50%, 50% 0%, 100% 50%, 75% 50%, 75% 100%, 25% 100%);
+}
+
+#knightmobile {
+  position: fixed;
+  left: -25em;
+  bottom: calc(12em + 5%);
+  width: 5em;
+  transform: scale(5);
+  transform-origin: bottom left;
+}
+
+#crappleton {
+  position: fixed;
+  left: 25%;
+  right: 25%;
+  bottom: calc(12em + 5%);
+  border-radius: 1em;
+  background: url("img/crappleton.png") center / cover;
+  height: 65%;
+  border: .5em solid var(--sluRed);
+  transform: scale(0);
+}
+
+#lives {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  visibility: hidden;
+  position: fixed;
+  left: 32em;
+  right: 0;
+  bottom: -8em;
+  opacity: 0%;
+  height: 19em;
+  pointer-events: none;
+}
+
+.lifeContCont {
+  grid-row-start: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  align-items: flex-start;
+}
+
+#freshmanRepresentativeLifeContCont {
+  grid-column-start: 6;
+}
+
+#socialMediaChairLifeContCont {
+  grid-column-start: 5;
+}
+
+#historianLifeContCont {
+  grid-column-start: 4;
+}
+
+#businessManagerLifeContCont {
+  grid-column-start: 3;
+}
+
+#vicePresidentLifeContCont {
+  grid-column-start: 2;
+}
+
+#presidentLifeContCont {
+  grid-column-start: 1;
+}
+
+.lifeCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  top: 11em;
+  border-radius: 50%;
+  background: var(--white);
+  height: 8em;
+  width: 8em;
+  align-items: center;
+}
+
+.life {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  border: .2em solid var(--clarksonGreen);
+}
+
+#freshmanRepresentativeLife {
+  background: url("img/nickCorsnerBG.png") center / cover;
+}
+
+#socialMediaChairLife {
+  background: url("img/ryanMccarthyBG.png") center / cover;
+}
+
+#historianLife {
+  background: url("img/garrettWillardBG.png") center / cover;
+}
+
+#businessManagerLife {
+  background: url("img/kamiMillerBG.png") center / cover;
+}
+
+#vicePresidentLife {
+  background: url("img/liamDurkinBG.png") center / cover;
+}
+
+#presidentLife {
+  background: url("img/carolineMoreauBG.png") center / cover;
+}
+
+.die {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0%;
+  line-height: 10rlh;
+  color: var(--sluRed);
+  font-size: 20em;
+  font-weight: bold;
+  user-select: none;
+}
+
+#publishedPaper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 50%;
+  cursor: default;
+}
+
+#gameActivities {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  visibility: hidden;
+  position: fixed;
+  left: 42.5%;
+  right: 42.5%;
+  top: 5%;
+  bottom: calc(12em + 5%);
+  opacity: 0%;
+  align-items: center;
+  pointer-events: none;
+}
+
+.gameActivity {
+  background: var(--white);
+  width: 100%;
+  border: .2em solid var(--blue);
+  transform: scale(0);
+  pointer-events: auto;
+}
+
+#scoreboard {
+  border-radius: 1em;
+}
+
+#cheersContContCont {
+  border-radius: .1em;
+}
+
+#scoreboardHeading {
+  width: 100%;
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  border-bottom: .2rem solid var(--blue);
+  font-family: "Russo One", fantasy;
+  color: var(--blue);
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#scoreboardPeriod {
+  font-family: "Oswald", fantasy;
+  color: var(--orange);
+}
+
+#scoreboardSides {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  padding: .25em;
+  align-items: center;
+}
+
+.scoreboardCollegeSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.scoreboardCollegeLogo {
+  height: 3em;
+}
+
+.scoreboardCollegeScore {
+  font-family: "Oswald", fantasy;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#scoreboardClarksonScore {
+  color: var(--clarksonGreen);
+}
+
+#scoreboardSluScore {
+  color: var(--sluRed);
+}
+
+#cheerHeading {
+  width: 100%;
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  border-bottom: .2rem solid var(--blue);
+  font-family: "Russo One", fantasy;
+  color: var(--blue);
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#cheerScore {
+  font-family: "Oswald", fantasy;
+  color: var(--orange);
+}
+
+#cheersContCont {
+  position: relative;
+  height: 12em;
+  width: 100%;
+}
+
+#cheersCont {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#cheers {
+  list-style: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 0;
+  overflow-y: auto;
+}
+
+.cheer {
+  position: relative;
+  width: 100%;
+  padding-left: .25em;
+  padding-right: .25em;
+  border-bottom: .05em solid var(--blue);
+  overflow-y: clip;
+  cursor: pointer;
+}
+
+.cheer:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.incorrectCheer:active {
+  background: var(--sluRed);
+  border-bottom: .05em solid var(--sluRed);
+}
+
+.semiCorrectCheer:active {
+  background: var(--clarksonGold);
+  border-bottom: .05em solid var(--clarksonGold);
+}
+
+.correctCheer:active {
+  background: var(--clarksonGreen);
+  border-bottom: .05em solid var(--clarksonGreen);
+}
+
+.genderedCheer {
+  display: none;
+}
+
+.lastCheer {
+  border-bottom: none;
+}
+
+.cheerMessage {
+  width: fit-content;
+  font-family: "Kanit", "Roboto", "Arial", sans-serif;
+  transform-origin: left;
+}
+
+.cheerCover {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#cheerCover7,
+#cheerCover8,
+#cheerCover10,
+#cheerCover12,
+#cheerCover17,
+#cheerCover25,
+#cheerCover30,
+#cheerCover33,
+#cheerCover34,
+#cheerCover38,
+#cheerCover43,
+#cheerCover50,
+#cheerCover52,
+#cheerCover53,
+#cheerCover61 {
+  display: block;
+}
+
+#swallow {
+  display: none;
+}
+
+#backToTop {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  right: 1.25em;
+  bottom: .75em;
+  border-radius: .1em;
+  background: var(--blue);
+  opacity: 0%;
+  height: 2em;
+  width: 1.5em;
+  padding-left: .1em;
+  padding-right: .1em;
+  padding-bottom: .1em;
+  border: .05em solid var(--white);
+  pointer-events: none;
+}
+
+#backToTopShape {
+  display: inline-block;
+  clip-path: polygon(0% 100%, 50% 0%, 100% 100%, 0% 100%);
+  background: var(--white);
+  height: 1em;
+  width: 1em;
+}
+
+#cheersCover {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--gray);
+  opacity: 0%;
+}
+
+#rink {
+  position: fixed;
+  left: 15%;
+  right: 15%;
+  bottom: calc(12em + 5%);
+  border-radius: 5em;
+  background: var(--white);
+  height: calc(100% - (5% + (12em + 5%)));
+  border: .2em solid var(--hockeyDarkBlue);
+  transform: scale(0);
+}
+
+#rinkSections {
+  display: grid;
+  grid-template-columns: 10% repeat(4, 20%) 10%;
+  grid-template-rows: 1fr;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.rinkSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.rinkSectionOuter {
+  justify-content: center;
+}
+
+.rinkSectionMiddle {
+  justify-content: space-around;
+  position: relative;
+  align-items: center;
+}
+
+.rinkSectionInner {
+  justify-content: space-around;
+  position: relative;
+}
+
+#rinkSection1 {
+  border-right: .4em solid var(--hockeyRed);
+  align-items: flex-end;
+}
+
+#rinkSection2 {
+  border-right: .4em solid var(--hockeyDarkBlue);
+}
+
+#rinkSection3 {
+  border-right: .2em double var(--hockeyRed);
+  align-items: flex-start;
+}
+
+#rinkSection4 {
+  border-left: .2em double var(--hockeyRed);
+  align-items: flex-end;
+}
+
+#rinkSection5 {
+  border-left: .4em solid var(--hockeyDarkBlue);
+}
+
+#rinkSection6 {
+  border-left: .4em solid var(--hockeyRed);
+  align-items: flex-start;
+}
+
+.rinkGoal {
+  position: relative;
+  height: 6em;
+  width: 3em;
+  border: .2em solid var(--hockeyRed);
+}
+
+#rinkSection1Goal {
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  border-right: none;
+}
+
+#rinkSection6Goal {
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  border-left: none;
+}
+
+.player {
+  z-index: 2;
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  border-bottom-left-radius: .8em;
+  border-bottom-right-radius: .8em;
+  opacity: 0%;
+  width: 2.8em;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.clarksonGoalie {
+  right: 0;
+  border-bottom-right-radius: 0;
+}
+
+.sluGoalie {
+  left: 0;
+  border-bottom-left-radius: 0;
+}
+
+.playerLeftPosition1 {
+  left: 0;
+}
+
+.playerLeftPosition2 {
+  left: 20%;
+}
+
+.playerLeftPosition3 {
+  left: 40%;
+}
+
+.playerLeftPosition4 {
+  left: 60%;
+}
+
+.playerLeftPosition5 {
+  left: 80%;
+}
+
+.playerRightPosition1 {
+  right: 0;
+}
+
+.playerRightPosition2 {
+  right: 20%;
+}
+
+.playerRightPosition3 {
+  right: 40%;
+}
+
+.playerRightPosition4 {
+  right: 60%;
+}
+
+.playerRightPosition5 {
+  right: 80%;
+}
+
+.rinkSemiCircle {
+  position: absolute;
+  background: var(--hockeyLightBlue);
+  height: 8em;
+  width: 4em;
+  border: .2em solid var(--hockeyRed);
+}
+
+#rinkSection2SemiCircle {
+  left: 0;
+  border-top-right-radius: 5em;
+  border-bottom-right-radius: 5em;
+  border-left: none;
+}
+
+#rinkSection5SemiCircle {
+  right: 0;
+  border-top-left-radius: 5em;
+  border-bottom-left-radius: 5em;
+  border-right: none;
+}
+
+.rinkCircleCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 50%;
+  height: 8em;
+  width: 8em;
+  align-items: center;
+}
+
+.rinkCircleContVisible {
+  position: relative;
+}
+
+.rinkCircleLines {
+  position: absolute;
+  height: 9em;
+  width: 2em;
+  border-left: .2em solid var(--hockeyRed);
+  border-right: .2em solid var(--hockeyRed);
+}
+
+.rinkCircle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: var(--white);
+  border: .2em solid var(--hockeyRed);
+  align-items: center;
+}
+
+.rinkBoxesCont {
+  display: grid;
+  grid-template-columns: repeat(2, 30%);
+  grid-column-gap: 40%;
+  grid-template-rows: repeat(2, 40%);
+  grid-row-gap: 20%;
+  position: absolute;
+  height: 3em;
+  width: 5em;
+}
+
+.rinkBox1 {
+  border-right: .2em solid var(--hockeyRed);
+  border-bottom: .2em solid var(--hockeyRed);
+}
+
+.rinkBox2 {
+  border-left: .2em solid var(--hockeyRed);
+  border-bottom: .2em solid var(--hockeyRed);
+}
+
+.rinkBox3 {
+  border-right: .2em solid var(--hockeyRed);
+  border-top: .2em solid var(--hockeyRed);
+}
+
+.rinkBox4 {
+  border-left: .2em solid var(--hockeyRed);
+  border-top: .2em solid var(--hockeyRed);
+}
+
+.rinkCircleCenterCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--white);
+  height: 1em;
+  width: 1em;
+  border: .2em solid var(--hockeyRed);
+  align-items: center;
+}
+
+.rinkCircleCenterContVisible {
+  position: absolute;
+}
+
+.rinkCircleCenter {
+  background: var(--hockeyRed);
+  height: 100%;
+  width: .4em;
+}
+
+.restaurantCont {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 20%;
+  align-items: center;
+}
+
+.topRestaurantCont {
+  top: 0;
+}
+
+.bottomRestaurantCont {
+  bottom: 0;
+}
+
+#asianBuffetAndMongolianGrill,
+#maxfields,
+#ebensHearth {
+  width: 10em;
+}
+
+#jakesOnTheWater {
+  width: 6em;
+}
+
+.cage {
+  z-index: 2;
+  visibility: hidden;
+  position: absolute;
+  opacity: 0%;
+  width: 5.6em;
+}
+
+#cage1 {
+  left: -20%;
+  bottom: 65%;
+}
+
+#cage2 {
+  left: -20%;
+  bottom: 15%;
+}
+
+#cage3 {
+  left: 65%;
+  bottom: 2%;
+}
+
+#cage4 {
+  left: 65%;
+  bottom: 40%;
+}
+
+#cage5 {
+  left: 65%;
+  bottom: 77%;
+}
+
+#cage6 {
+  right: -20%;
+  bottom: 65%;
+}
+
+#cage7 {
+  right: -20%;
+  bottom: 15%;
+}
+
+#cage8 {
+  right: 65%;
+  bottom: 2%;
+}
+
+#cage9 {
+  right: 65%;
+  bottom: 40%;
+}
+
+#cage10 {
+  right: 65%;
+  bottom: 77%;
+}
+
+#rinkLogoContCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  align-items: center;
+  pointer-events: none;
+}
+
+#rinkCenterSemiCircle {
+  position: absolute;
+  bottom: 0;
+  border-top-left-radius: 5em;
+  border-top-right-radius: 5em;
+  height: 4em;
+  width: 8em;
+  border: .2em solid var(--hockeyRed);
+  border-bottom: none;
+  pointer-events: auto;
+}
+
+#rinkLogoCont {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  border-radius: 50%;
+  height: 8em;
+  width: 8em;
+  border: .2em solid var(--hockeyDarkBlue);
+  align-items: center;
+  pointer-events: auto;
+}
+
+#rinkLogo {
+  position: relative;
+  top: 5%;
+  width: 90%;
+}
+
+.playerStatsCont {
+  z-index: 3;
+  display: none;
+  position: absolute;
+  border-radius: .1em;
+  background: var(--white);
+  width: 16em;
+  padding: .5em;
+  box-shadow: .25em .25em .5em 0 var(--gray);
+  transform: scale(0);
+  pointer-events: none;
+}
+
+.clarksonStatsCont {
+  border: .2em solid var(--clarksonGreen);
+}
+
+.playerLeftPosition0StatsCont {
+  left: -4%;
+  top: 23%;
+}
+
+.playerLeftPosition1StatsCont {
+  left: 18%;
+  top: 1%;
+}
+
+.playerLeftPosition2StatsCont {
+  left: 18%;
+  bottom: -3%;
+}
+
+.playerLeftPosition3StatsCont {
+  left: 35%;
+  bottom: -17%;
+}
+
+.playerLeftPosition4StatsCont {
+  right: 41%;
+  top: 21%;
+}
+
+.playerLeftPosition5StatsCont {
+  left: 35%;
+  top: -13%;
+}
+
+.sluStatsCont {
+  border: .2em solid var(--sluRed);
+}
+
+.playerRightPosition1StatsCont {
+  right: 18%;
+  top: 1%;
+}
+
+.playerRightPosition2StatsCont {
+  right: 18%;
+  bottom: -3%;
+}
+
+.playerRightPosition3StatsCont {
+  right: 35%;
+  bottom: -17%;
+}
+
+.playerRightPosition4StatsCont {
+  left: 41%;
+  top: 21%;
+}
+
+.playerRightPosition5StatsCont {
+  right: 35%;
+  top: -13%;
+}
+
+.playerRightPosition0StatsCont {
+  right: -4%;
+  top: 23%;
+}
+
+.playerHeadshotContCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  right: .5em;
+  height: 6em;
+  width: calc(100% + 1em);
+  align-items: flex-start;
+}
+
+.playerNameCont {
+  width: 100%;
+}
+
+.playerName {
+  clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%, 0% 0%);
+  width: 95%;
+  padding-right: 10%;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  font-family: "Bangers", fantasy;
+  color: var(--white);
+  font-size: 1.1em;
+  text-align: right;
+}
+
+.clarksonName {
+  background: var(--clarksonGreen);
+}
+
+.sluName {
+  background: var(--sluRed);
+}
+
+.playerNumber {
+  clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%, 0% 0%);
+  width: 25%;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  margin-left: 60%;
+  font-family: "Anton", fantasy;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.clarksonNumber {
+  background: var(--clarksonGold);
+  color: var(--clarksonGreen);
+}
+
+.sluNumber {
+  background: var(--sluBrown);
+  color: var(--sluLightBrown);
+}
+
+.playerHeadshotCont {
+  position: absolute;
+  border-radius: .1em;
+  background: var(--white);
+  height: 100%;
+  width: 6em;
+  margin-left: .5em;
+}
+
+.clarksonHeadshotCont {
+  border: .2em solid var(--clarksonGreen);
+}
+
+.sluHeadshotCont {
+  border: .2em solid var(--sluRed);
+}
+
+.playerHeadshot {
+  height: 100%;
+  width: 100%;
+}
+
+#ethanHaiderHeadshot {
+  background: url("img/ethanHaider.png") top / cover,
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
+}
+
+#michellePasiechnykHeadshot {
+  background: url("img/michellePasiechnyk.png") top / cover,
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
+}
+
+#alexCampbellHeadshot {
+  background: url("img/alexCampbell.png") top / cover,
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
+}
+
+#chrisKlackHeadshot {
+  background: url("img/chrisKlack.png") top / cover,
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
+}
+
+#dustynMcfaulHeadshot {
+  background: url("img/dustynMcfaul.png") top / cover,
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
+}
+
+#jackJacomeHeadshot {
+  background: url("img/jackJacome.png") top / cover,
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
+}
+
+#zachTsekosHeadshot {
+  background: url("img/zachTsekos.png") top / cover,
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
+}
+
+#anneCherkowskiHeadshot {
+  background: url("img/anneCherkowski.png") top / cover,
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
+}
+
+#brookeMcquiggeHeadshot {
+  background: url("img/brookeMcquigge.png") top / cover,
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
+}
+
+#gabrielleDavidHeadshot {
+  background: url("img/gabrielleDavid.png") top / cover,
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
+}
+
+#haleyWinnHeadshot {
+  background: url("img/haleyWinn.png") top / cover,
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
+}
+
+#jennaGoodwinHeadshot {
+  background: url("img/jennaGoodwin.png") top / cover,
+              linear-gradient(rgba(96, 144, 137, 10%), rgba(96, 144, 137, 10%)) center / cover;
+}
+
+#ashtonFryHeadshot {
+  background: url("img/ashtonFry.png") top / cover,
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
+}
+
+#cameronBuhlHeadshot {
+  background: url("img/cameronBuhl.png") top / cover,
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
+}
+
+#davidJankowskiHeadshot {
+  background: url("img/davidJankowski.png") top / cover,
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
+}
+
+#nicholasTrelaHeadshot {
+  background: url("img/nicholasTrela.png") top / cover,
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
+}
+
+#tuckerMcintoshHeadshot {
+  background: url("img/tuckerMcintosh.png") top / cover,
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
+}
+
+#alyMcleodHeadshot {
+  background: url("img/alyMcleod.png") top / cover,
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
+}
+
+#brittneyGoutHeadshot {
+  background: url("img/brittneyGout.png") top / cover,
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
+}
+
+#gabiJonesHeadshot {
+  background: url("img/gabiJones.png") top / cover,
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
+}
+
+#hillarySterlingHeadshot {
+  background: url("img/hillarySterling.png") top / cover,
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
+}
+
+#kristinaBahlHeadshot {
+  background: url("img/kristinaBahl.png") top / cover,
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
+}
+
+#danielAllinHeadshot {
+  background: url("img/danielAllin.png") top / cover,
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
+}
+
+#hopeCrisafiHeadshot {
+  background: url("img/hopeCrisafi.png") top / cover,
+              linear-gradient(rgba(219, 198, 152, 10%), rgba(219, 198, 152, 10%)) center / cover;
+}
+
+.playerDivider {
+  width: 90%;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.clarksonDivider {
+  background: var(--clarksonGreen);
+}
+
+.sluDivider {
+  background: var(--sluRed);
+}
+
+.playerStats {
+  width: 100%;
+}
+
+.clarksonStats {
+  border: .05em solid var(--clarksonGreen);
+}
+
+.sluStats {
+  border: .05em solid var(--sluRed);
+}
+
+.clarksonRow {
+  border: .01em solid var(--clarksonGreen);
+}
+
+.clarksonOddRow {
+  background: rgba(96, 144, 137, 50%);
+}
+
+.clarksonEvenRow {
+  background: rgba(96, 144, 137, 10%);
+}
+
+.sluRow {
+  border: .01em solid var(--sluRed);
+}
+
+.sluOddRow {
+  background: rgba(219, 198, 152, 50%);
+}
+
+.sluEvenRow {
+  background: rgba(219, 198, 152, 10%);
+}
+
+.clarksonCell {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: .9em;
+}
+
+.sluCell {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: .9em;
+}
+
+.playerVisiting {
+  margin-top: .25em;
+  font-family: "EB Garamond", "Merriweather", "Times New Roman", serif;
+  font-size: .75em;
+}
+
+#goldenKnight {
+  z-index: 2;
+  visibility: hidden;
+  position: absolute;
+  left: 40%;
+  bottom: 0;
+  opacity: 0%;
+  width: 5em;
+}
+
+.zebra {
+  z-index: 2;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  opacity: 0%;
+  width: 5em;
+}
+
+#zebra1 {
+  left: 40%;
+}
+
+#zebra2 {
+  right: 40%;
+  transform: scaleX(-1);
+}
+
+#tonyCollins {
+  z-index: 2;
+  visibility: hidden;
+  position: absolute;
+  left: 2%;
+  top: 5%;
+  border-bottom-left-radius: .8em;
+  border-bottom-right-radius: .8em;
+  opacity: 0%;
+  width: 2.8em;
+}
+
+#puck {
+  z-index: 2;
+  visibility: hidden;
+  position: absolute;
+  left: calc(50% - .5em);
+  top: 0;
+  border-radius: 50%;
+  background: var(--black);
+  opacity: 0%;
+  height: 1em;
+  width: 1em;
+}
+
+#flagCont {
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  visibility: hidden;
+  position: absolute;
+  left: -.2em;
+  right: -.2em;
+  top: -.2em;
+  bottom: -.2em;
+  border-radius: 5em;
+  background: rgba(255, 255, 255, 75%);
+  opacity: 0%;
+  align-items: center;
+}
+
+#flag {
+  max-height: 95%;
+  width: 60%;
+}
+
+#handCont {
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0%;
+  align-items: center;
+  pointer-events: none;
+}
+
+#hand {
+  height: 75%;
+  pointer-events: auto;
+}
+
+#goalMessages {
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0%;
+  align-items: center;
+  pointer-events: none;
+}
+
+.goalMessage {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0%;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+  pointer-events: auto;
+}
+
+#sluGoalMessage {
+  font-family: "Palette Mosaic", fantasy;
+  font-size: 4em;
+  color: var(--sluRed);
+}
+
+#clarksonGoalMessage {
+  font-family: "Luckiest Guy", fantasy;
+  font-size: 3em;
+  color: var(--clarksonGreen);
+}
+
+#goal {
+  font-size: 3em;
+}
+
+#victoryMessages {
+  z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0%;
+  pointer-events: none;
+}
+
+.victoryMessageCont {
+  grid-row-start: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0%;
+  align-items: center;
+}
+
+.victoryMessage {
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+  pointer-events: auto;
+}
+
+#sluVictoryMessage {
+  font-family: "Palette Mosaic", fantasy;
+  color: var(--sluRed);
+  font-size: 3em;
+}
+
+#clarksonVictoryMessage {
+  font-family: "Luckiest Guy", fantasy;
+  color: var(--clarksonGreen);
+  font-size: 5em;
+}
+
+#saints {
+  display: inline-block;
+  transform-origin: top left;
+}
+
+#victorySlu {
+  display: inline-block;
+  transform-origin: top left;
+}
+
+#golden,
+#knight,
+#victoryClarkson {
+  visibility: hidden;
+  opacity: 0%;
+}
+
+#bandiesCont {
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0%;
+  align-items: center;
+}
+
+#bandies {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.bandiesRow {
+  position: relative;
+}
+
+#bandiesRow2 {
+  bottom: 5%;
+}
+
+#bandiesRow3 {
+  bottom: 10%;
+}
+
+.bandie {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0%;
+  height: 100%;
+}
+
+#nateBeaupre {
+  z-index: 1;
+  left: 0;
+  top: 5%;
+}
+
+#ariaStephan {
+  left: 3%;
+}
+
+#colinPatricelli {
+  left: 9%;
+}
+
+#nickSchalago {
+  z-index: 1;
+  left: 17%;
+  top: 5%;
+}
+
+#king {
+  left: 19%;
+}
+
+#kronk {
+  left: 28%;
+}
+
+#ericBrom {
+  left: 38%;
+}
+
+#garrettWillard {
+  z-index: 1;
+  left: 42%;
+  top: 9%;
+}
+
+#liamDurkin {
+  left: 47%;
+}
+
+#kamiMiller {
+  left: 53%;
+}
+
+#carolineMoreau {
+  left: 56%;
+}
+
+#kellyBoutin {
+  z-index: 1;
+  left: 64%;
+  top: 24%;
+}
+
+#savannahDimaio {
+  left: 64%;
+}
+
+#ethanLaferriere {
+  left: 72%;
+}
+
+#jeffClark {
+  left: 80%;
+}
+
+#owenMears {
+  left: 84%;
+}
+
+#michaelAkers {
+  left: 88%;
+}
+
+#aliceWilser {
+  left: 0;
+}
+
+#gabeAguilar {
+  left: 11%;
+}
+
+#nickMerola {
+  left: 14%;
+  top: 4%;
+}
+
+#carloDesena {
+  left: 20%;
+  top: 25%;
+}
+
+#bellaDesena {
+  left: 23%;
+}
+
+#knightguard {
+  z-index: 1;
+  left: 66%;
+  cursor: pointer;
+}
+
+#benVincens {
+  left: 71%;
+}
+
+#benSolo {
+  left: 70.5%;
+}
+
+#benSolo:hover {
+  opacity: 1 !important;
+}
+
+#brandonWinter {
+  z-index: 1;
+  left: 77%;
+  top: 5%;
+}
+
+#fordSmith {
+  left: 78%;
+}
+
+#coleBennett {
+  left: 84%;
+}
+
+#tomRobinson {
+  left: 2%;
+}
+
+#lindseyPenet {
+  left: 5%;
+}
+
+#ryanMccarthy {
+  left: 12%;
+}
+
+#davidVanill {
+  left: 20%;
+  top: -8%;
+}
+
+#ericLaferriere {
+  left: 27%;
+}
+
+#alexBrenton {
+  left: 33%;
+}
+
+#ariaGarceau {
+  left: 38%;
+}
+
+#willDumont {
+  z-index: 1;
+  left: 44%;
+}
+
+#tomUhl {
+  left: 47%;
+}
+
+#nickCorsner {
+  left: 53%;
+}
+
+#kyleMatthews {
+  left: 62%;
+}
+
+#lyleTrimble {
+  left: 64%;
+}
+
+#isabelleBrown {
+  left: 71%;
+}
+
+#aileenHarvey {
+  left: 77%;
+}
+
+#cassidyMarshall {
+  left: 82%;
+}
+
+.bandieCont {
+  visibility: hidden;
+  opacity: 0%;
+}
+
+#dedicationCont {
+  z-index: 2;
+  position: absolute;
+  left: 10em;
+  bottom: 40%;
+  border-radius: .1em;
+  background: var(--white);
+  width: 20em;
+  padding: .25em;
+  border: .2em solid var(--clarksonGreen);
+  transform: scale(0);
+  pointer-events: none;
+}
+
+#dedication {
+  font-family: "Patrick Hand", "Satisfy", "Brush Script MT", cursive;
+}
+
+.bandieLink {
+  cursor: default;
+}
+
+#knightguardBusinessCard {
+  z-index: 2;
+  position: absolute;
+  left: 61%;
+  bottom: 0;
+  width: 15em;
+  transform: scale(0);
+  pointer-events: none;
+}
+
+#congrats {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0%;
+  font-family: "Luckiest Guy", fantasy;
+  color: var(--clarksonGreen);
+  font-size: 5em;
+  font-weight: bold;
+}
+
+.plane {
+  position: fixed;
+  left: -10em;
+  width: 10em;
+}
+
+#plane1 {
+  top: 25%;
+}
+
+#plane2 {
+  top: 35%;
+}
+
+#plane3 {
+  top: 15%;
+}
+
+#plane4 {
+  top: 45%;
+}
+
+#planePrimeCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: fixed;
+  left: -52em;
+  top: 20%;
+  align-items: center;
+}
+
+#banner {
+  position: relative;
+  left: .25em;
+  background: var(--white);
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  border: .05em solid var(--clarksonGreen);
+  font-family: "Luckiest Guy", fantasy;
+  color: var(--clarksonGreen);
+  font-size: 5em;
+  font-weight: bold;
+  user-select: none;
+}
+
+#planePrime {
+  width: 25em;
+}
+
+#houseCont {
+  position: fixed;
+  left: 40%;
+  right: 5%;
+  top: 100%;
+  border-radius: .5em;
+  height: 80%;
+  border: 1em solid var(--clarksonGreen);
+}
+
+#house {
+  position: relative;
+  background: url("img/house.png") center / cover;
+  height: 100%;
+  width: 100%;
+  --filterValue: 100%;
+}
+
+.bandieHome {
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+}
+
+#mahoganyHome {
+  left: 0;
+}
+
+#kingHome {
+  left: 15%;
+}
+
+#drinkingSongsContContCont {
+  position: fixed;
+  right: 100%;
+  top: 10%;
+  border-radius: 1em;
+  background: var(--white);
+  width: 30%;
+  border: .2em solid var(--clarksonGreen);
+}
+
+#drinkingSongsHeading {
+  width: 100%;
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  border-bottom: .2rem solid var(--clarksonGreen);
+  text-align: center;
+}
+
+#drinkingSongsLabel {
+  font-family: "Russo One", fantasy;
+  color: var(--clarksonGreen);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#drinkingSongChoices {
+  position: relative;
+  bottom: .05em;
+  border: .1em solid var(--clarksonGreen);
+  font-family: "Roboto", "Arial", sans-serif;
+  color: var(--clarksonGreen);
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.drinkingSongChoice {
+  font-size: .75em;
+}
+
+#drinkingSongsContCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  height: 12em;
+  width: 100%;
+  align-items: center;
+}
+
+.drinkingSongCont {
+  z-index: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: .5em;
+  border-bottom-left-radius: .8em;
+  border-bottom-right-radius: .8em;
+  opacity: 0%;
+  align-items: center;
+}
+
+#weLikeItHereCont {
+  background: url("img/weLikeItHere.png") center / cover;
+}
+
+#highAboveCayugasWatersCont {
+  background: url("img/highAboveCayugasWaters.png") center / cover;
+}
+
+#theSMManCont {
+  background: url("img/theSMMan.png") center / cover;
+}
+
+#tijuanaCont {
+  z-index: 1;
+  visibility: visible;
+  background: url("img/tijuana.png") center / cover;
+  opacity: 100%;
+}
+
+.drinkingSongButton {
+  position: absolute;
+  border-radius: .25em;
+  background: var(--buttonGreen);
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  color: var(--white);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.drinkingSong {
+  visibility: hidden;
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  border-radius: .5em;
+  background: rgba(255, 255, 255, 50%);
+  opacity: 0%;
+  padding: 1em;
+  font-family: "Merienda", "Satisfy", "Brush Script MT", cursive;
+  font-style: italic;
+  text-align: center;
+}
+
+.drinkingSongWord {
+  visibility: hidden;
+}
+
+.firstWord::before {
+  content: "\01d160\00a0";
+  display: inline-block;
+  transform: scale(2);
+  transform-origin: bottom right;
+}
+
+.lastWord::after {
+  content: "\00a0\01d161\01d161";
+  display: inline-block;
+  transform: scale(1.5);
+  transform-origin: top left;
+}
+
+.drinkingSongLinesContCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25%;
+  bottom: 25%;
+  opacity: 0%;
+  align-items: center;
+}
+
+.drinkingSongLyrics {
+  border-radius: .5em;
+  background: rgba(255, 255, 255, 50%);
+  width: 80%;
+  padding: .25em;
+  font-family: "Acme", fantasy;
+  color: var(--clarksonGreen);
+  font-weight: bold;
+  text-align: center;
+}
+
+#weLikeItHereLyrics {
+  font-size: 1.25em;
+}
+
+#highAboveCayugasWatersLyrics {
+  font-size: 1.5em;
+}
+
+#theSMManLyrics,
+#tijuanaLyrics {
+  font-size: 2em;
+}
+
+.drinkingSongLinesCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  border-radius: .5em;
+  background: var(--white);
+  height: 1.5em;
+  width: 40%;
+  font-size: .9em;
+  align-items: center;
+}
+
+.drinkingSongLines {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0%;
+  width: 100%;
+  border: .1em solid var(--clarksonGreen);
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+.agedLine,
+.genderedLine {
+  display: none;
+}
+
+#theSMManVerse89,
+#theSMManFirstResponse89,
+#theSMManSecondResponse89 {
+  display: none;
+}
+
+#partyActivities {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  visibility: hidden;
+  position: fixed;
+  left: 5%;
+  right: 65%;
+  bottom: 30%;
+  opacity: 0%;
+  align-items: center;
+  pointer-events: none;
+}
+
+.partyActivity {
+  visibility: hidden;
+  opacity: 0%;
+  pointer-events: auto;
+}
+
+#dafCounterCont {
+  border-radius: 1em;
+  background: var(--white);
+  width: 33%;
+  border: .2em solid var(--clarksonGreen);
+}
+
+#speakerCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 10em;
+  align-items: center;
+}
+
+#beers {
+  height: 10em;
+}
+
+#dafCounterHeading {
+  width: 100%;
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  border-bottom: .2rem solid var(--clarksonGreen);
+  font-family: "Russo One", fantasy;
+  color: var(--blue);
+  font-size: 1.25em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#dafCounter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  height: 5em;
+  width: 100%;
+  align-items: center;
+}
+
+#dafCounterNum {
+  font-family: "Oswald", fantasy;
+  color: var(--orange);
+}
+
+#dafCounterButton {
+  border-radius: .25em;
+  background: url("img/chestnuts.png") center / cover;
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
+  color: var(--white);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#dafCounterError {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0%;
+  font-family: "Rubik Mono One", fantasy;
+  color: var(--errorRed);
+  font-size: 1.5em;
+  font-weight: bold;
+  transform: rotate(315deg);
+  user-select: none;
+}
+
+#speaker {
+  width: 100%;
+}
+
+#speakerSongs {
+  width: 100%;
+  border: .1em solid var(--clarksonGreen);
+  margin-bottom: .5em;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: .9em;
+}
+
+#speakerControls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 1em;
+  background: var(--white);
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  border: .05em solid var(--clarksonGreen);
+  align-items: center;
+}
+
+.speakerControl {
+  background: transparent;
+  height: 1.25em;
+  width: 1.25em;
+}
+
+#speakerPlay {
+  margin-right: .5em;
+}
+
+#speakerPause {
+  border-left: .5em solid var(--youtubeDarkGray);
+  border-right: .5em solid var(--youtubeDarkGray);
+  margin-left: .5em;
+}
+
+#speakerPlayShape {
+  display: inline-block;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%, 0% 0%);
+  background: var(--youtubeDarkGray);
+  height: 100%;
+  width: 100%;
+}
+
+.beer {
+  display: none;
+  height: 100%;
+  transition: transform .25s ease 0s;
+  cursor: pointer;
+}
+
+.beer:active {
+  transform: scale(1.1) !important;
+}
+
+#socialMedias {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  visibility: hidden;
+  position: fixed;
+  left: 40%;
+  right: 5%;
+  top: 91%;
+  bottom: 1%;
+  opacity: 0%;
+  align-items: center;
+  pointer-events: none;
+}
+
+.socialMedia {
+  visibility: hidden;
+  position: relative;
+  border-radius: .5em;
+  opacity: 0%;
+  height: 2em;
+  width: 2em;
+  pointer-events: auto;
+}
+
+#youtube {
+  background: url("img/youtube.png") center / cover;
+  cursor: pointer;
+}
+
+#tiktok {
+  background: url("img/tiktok.png") center / cover;
+}
+
+#x {
+  background: url("img/x.png") center / cover;
+}
+
+#instagram {
+  background: url("img/instagram.png") center / cover;
+}
+
+#facebook {
+  background: url("img/facebook.png") center / cover;
+}
+
+.socialMediaLink {
+  display: inline-block;
+  border-radius: .5em;
+  height: 100%;
+  width: 100%;
+}
+
+#websiteCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: fixed;
+  left: -29em;
+  --leftValue: -29em;
+  top: 1em;
+  align-items: center;
+}
+
+#drums {
+  height: 2.5em;
+  width: 2.5em;
+}
+
+.drum {
+  display: none;
+  height: 100%;
+  width: 100%;
+  transform-origin: bottom left;
+}
+
+#website {
+  border-radius: .5em;
+  background: var(--white);
+  width: max-content;
+  padding: .25em;
+  border: .2rem solid var(--clarksonGreen);
+  font-family: "Montserrat", "Roboto", "Arial", sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#websiteLink {
+  font-family: "Zilla Slab", "Merriweather", "Times New Roman", serif;
+  font-size: 1.25rem;
+}
+
+#websiteLink:visited {
+  color: var(--blue);
+}
+
+#websiteLink:active {
+  color: var(--violet);
+}
+
+#triangleFaceCont {
+  z-index: 93;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 1%;
+  align-items: center;
+  pointer-events: none;
+}
+
+#triangleFace {
+  height: 150%;
+}
+
+#cuntEmpireContContCont {
+  z-index: 94;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  right: 1em;
+  top: -10em;
+  background: var(--white);
+  height: 10em;
+  width: 20em;
+  padding: .5em;
+  border: .2em solid var(--cuntEmpireGreen);
+  align-items: center;
+}
+
+#cuntEmpireContCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+
+#cuntEmpireCont {
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - .25em));
+  grid-column-gap: .5em;
+  grid-template-rows: 1fr;
+  height: 100%;
+  width: 100%;
+}
+
+#cuntEmpire {
+  position: relative;
+  background: url("img/cuntEmpire.png") left / cover;
+}
+
+#cuntEmpireLogo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40%;
+}
+
+#cuntEmpireLink {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#cuntEmpireHeading {
+  font-family: "EB Garamond", "Merriweather", "Times New Roman", serif;
+  color: var(--cuntEmpireGreen);
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#cuntEmpireHeadingLink {
+  color: var(--cuntEmpireGreen);
+}
+
+#cuntEmpireAdvertisement {
+  font-family: "EB Garamond", "Merriweather", "Times New Roman", serif;
+  color: var(--black);
+}
+
+#cuntEmpireAdvertisementLink {
+  color: var(--black);
+}
+
+#cuntEmpireExit {
+  position: absolute;
+  right: 0;
+  top: -.25em;
+  background: transparent;
+  opacity: 25%;
+  cursor: default;
+}
+
+#cuntEmpireCover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  cursor: default;
+}
+
+#raffle {
+  z-index: 96;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--white);
+  height: 1px;
+  width: 1px;
+}
+
+#cover {
+  z-index: 92;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(153, 153, 153, 75%);
+  opacity: 0%;
+  align-items: center;
+}
+
+.modal {
+  position: fixed;
+}
+
+#poem {
+  visibility: hidden;
+  left: 40%;
+  right: 40%;
+  top: 10%;
+  bottom: 10%;
+  border-radius: .1em;
+  background: var(--white);
+  opacity: 0%;
+  border: .2em solid var(--clarksonGreen);
+}
+
+#promoCont {
+  height: fit-content;
+  width: 50%;
+  transform: skew(0)
+             scale(0);
+}
+
+#youtubeSongsContCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+  border-radius: 1em;
+  background: var(--white);
+  padding: 2em;
+  border: .05em solid var(--youtubeDarkGray);
+  transform: scale(0);
+  align-items: center;
+}
+
+#iceContContCont {
+  display: grid;
+  grid-template-columns: 39% 59%;
+  grid-column-gap: 2%;
+  grid-template-rows: 1fr;
+  visibility: hidden;
+  left: 16%;
+  right: 54%;
+  top: 30%;
+  bottom: 10%;
+  border-radius: 1em;
+  opacity: 0%;
+  padding: 1em;
+  border: .05em solid transparent;
+  transform: skew(0)
+             scale(0);
+}
+
+#troyLassialCont {
+  display: grid;
+  grid-template-columns: repeat(2, 49%);
+  grid-column-gap: 2%;
+  grid-template-rows: 1fr;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+  border-radius: 1em;
+  background: url("img/hell.png") bottom / cover;
+  padding: 2em;
+  transform: scale(0);
+}
+
+#choicesContCont {
+  visibility: hidden;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+  border-radius: 1em;
+  background: var(--white);
+  opacity: 0%;
+  padding: 2em;
+  border: .05em solid var(--clarksonGreen);
+}
+
+#gameOver {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  visibility: hidden;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+  border-radius: 1em;
+  background: var(--white);
+  opacity: 0%;
+  padding: 1em;
+  border: .05em solid var(--clarksonGreen);
+  align-items: center;
+}
+
+#poemTextCont {
+  height: 100%;
+  width: 100%;
+  padding: .5em;
+  overflow-y: auto;
+}
+
+#poemText {
+  width: 100%;
+}
+
+.poemLine {
+  font-family: "Shadows Into Light", "Satisfy", "Brush Script MT", cursive;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#poemAuthors {
+  display: block;
+  margin-left: 24px;
+  font-family: "Shadows Into Light", "Satisfy", "Brush Script MT", cursive;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+#poemAuthors::before {
+  content: "\2014";
+  cursor: text;
+}
+
+#poemAdapters {
+  font-size: .9rem;
+}
+
+#poemExit {
+  position: absolute;
+  right: 1.25em;
+  top: .25em;
+  background: transparent;
+  color: var(--darkGray);
+  font-weight: bold;
+  text-shadow: .01em .01em 0 var(--white),
+               -.01em .01em 0 var(--white),
+               .01em -.01em 0 var(--white),
+               -.01em -.01em 0 var(--white);
+}
+
+#poemExit:hover {
+  color: var(--exitRed);
+}
+
+#poemExit:active {
+  color: rgba(179, 14, 15, 50%);
+}
+
+#promo {
+  border-radius: 1em;
+  height: 100%;
+  width: 100%;
+  border: 1em solid var(--clarksonGreen);
+}
+
+#promo::cue {
+  background: rgba(0, 0, 0, 75%);
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+.smallScreenPromo::cue {
+  font-size: 1.25em;
+}
+
+.fullscreenPromo::cue {
+  font-size: 2.5em;
+}
+
+#promoTitle {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: var(--white);
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+#promoTitleLink {
+  color: var(--white);
+}
+
+#promoExit {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: transparent;
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-bottom: .1em;
+  color: var(--darkGray);
+  font-size: 2em;
+  cursor: default;
+}
+
+#promoExit:hover {
+  color: rgba(72, 160, 247, 90%);
+}
+
+#promoExit:active {
+  color: var(--videoBlue);
+}
+
+#youtubeSongsCont {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 90% 10%;
+  height: 100%;
+  width: 100%;
+}
+
+#youtubeSongs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+  border: .1em solid var(--youtubeDarkGray);
+  align-items: center;
+}
+
+#danceInstructions {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0%;
+  font-family: "Acme", fantasy;
+  color: var(--white);
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: .01em .01em .01em var(--black),
+               .02em .02em .01em rgba(0, 0, 0, 80%),
+               .03em .03em .01em rgba(0, 0, 0, 60%),
+               .04em .04em .01em rgba(0, 0, 0, 40%),
+               .05em .05em .01em rgba(0, 0, 0, 20%),
+               -.01em .01em .01em var(--black),
+               -.02em .02em .01em rgba(0, 0, 0, 80%),
+               -.03em .03em .01em rgba(0, 0, 0, 60%),
+               -.04em .04em .01em rgba(0, 0, 0, 40%),
+               -.05em .05em .01em rgba(0, 0, 0, 20%),
+               .01em -.01em .01em var(--black),
+               .02em -.02em .01em rgba(0, 0, 0, 80%),
+               .03em -.03em .01em rgba(0, 0, 0, 60%),
+               .04em -.04em .01em rgba(0, 0, 0, 40%),
+               .05em -.05em .01em rgba(0, 0, 0, 20%),
+               -.01em -.01em .01em var(--black),
+               -.02em -.02em .01em rgba(0, 0, 0, 80%),
+               -.03em -.03em .01em rgba(0, 0, 0, 60%),
+               -.04em -.04em .01em rgba(0, 0, 0, 40%),
+               -.05em -.05em .01em rgba(0, 0, 0, 20%);
+  user-select: none;
+}
+
+#fuckSluMessage {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0%;
+  font-family: "Rubik Mono One", fantasy;
+  color: var(--sluRed);
+  font-size: 3.5em;
+  font-weight: bold;
+  user-select: none;
+}
+
+#youtubeTitle {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: var(--white);
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+#youtubePlayPauseIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(194, 194, 194, 50%);
+  height: 10em;
+  width: 10em;
+  border: .5em solid rgba(156, 156, 156, 50%);
+  align-items: center;
+  pointer-events: none;
+}
+
+#youtubePlayPauseIconShape {
+  position: relative;
+  left: 5%;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%, 0% 0%);
+  background: rgba(24, 24, 24, 50%);
+  height: 60%;
+  width: 60%;
+}
+
+#youtubeToolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  border-bottom-left-radius: .5em;
+  border-bottom-right-radius: .5em;
+  border: .1em solid var(--youtubeDarkGray);
+  border-top: none;
+  align-items: center;
+}
+
+#youtubeDurationCont {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -.15em;
+  background: var(--youtubeGray);
+  height: .2em;
+  cursor: pointer;
+}
+
+#youtubeSeek {
+  z-index: 0;
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 100%;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+#youtubeDuration {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  right: 100%;
+  top: 0;
+  bottom: 0;
+  background: var(--youtubeRed);
+  pointer-events: none;
+}
+
+#youtubeControls {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+
+.youtubeControl {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#youtubePlayPauseButton {
+  background: transparent;
+  height: 1.25em;
+  width: 1.25em;
+  margin-left: .5em;
+  margin-right: .5em;
+}
+
+#youtubePlayPauseButtonShape {
+  display: inline-block;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%, 0% 0%);
+  background: var(--youtubeDarkGray);
+  height: 100%;
+  width: 100%;
+}
+
+#youtubeTimer {
+  font-family: "Oswald", fantasy;
+  color: var(--youtubeDarkGray);
+}
+
+.youtubeTime {
+  z-index: 1;
+  display: inline-block;
+  position: relative;
+  width: calc(4.5ch + .4em);
+  text-align: center;
+}
+
+#youtubeCountingTime {
+  cursor: text;
+}
+
+#youtubeFullTime {
+  letter-spacing: .1ch;
+}
+
+.youtubeCountingTimeUnits {
+  z-index: -1;
+  display: inline-block;
+  position: relative;
+  border-radius: .1em;
+  width: calc(2ch + .2em);
+  border: .1em solid transparent;
+  text-align: center;
+}
+
+.youtubeCountingTimeUnits:hover {
+  background: #F3F3F3;
+  border: .1em solid var(--youtubeLightGray);
+}
+
+.youtubeCountingTimeUnits:active,
+.youtubeCountingTimeUnits:focus {
+  background: #E8E8E8;
+  border: .1em solid transparent;
+}
+
+.youtubeJump {
+  border-radius: .1em;
+  background: var(--youtubeDarkGray);
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
+  color: var(--white);
+  font-weight: bold;
+}
+
+#youtubeRestart {
+  margin-left: .5em;
+  margin-right: .25em;
+}
+
+#youtubeSkip {
+  margin-left: .25em;
+  margin-right: .5em;
+}
+
+#fuckSluButtonCont {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0%;
+  align-items: center;
+  pointer-events: none;
+}
+
+#fuckSluButton {
+  border-radius: .5em;
+  background: var(--sluRed);
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  font-family: "Rubik Mono One", fantasy;
+  color: var(--white);
+  font-weight: bold;
+  pointer-events: auto;
+}
+
+#youtubeExit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-top-right-radius: .75em;
+  border-bottom-left-radius: .25em;
+  background: transparent;
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-bottom: .1em;
+  border-left: .05em solid transparent;
+  border-bottom: .05em solid transparent;
+  color: var(--exitRed);
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+#youtubeExit:hover {
+  background: var(--exitRed);
+  border-left: .05em solid var(--exitRed);
+  border-bottom: .05em solid var(--exitRed);
+  color: var(--white);
+}
+
+#youtubeExit:active {
+  background: rgba(179, 14, 15, 50%);
+}
+
+#iceContCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+
+#iceCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+
+#ice {
+  position: absolute;
+  height: 95%;
+}
+
+#iceCover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 100%;
+  background: var(--white);
+}
+
+#iceButtonCont {
+  visibility: hidden;
+  position: absolute;
+  bottom: .5em;
+  border-radius: .25em;
+  opacity: 0%;
+  font-size: 1.5em;
+}
+
+#iceButton {
+  border-radius: .25em;
+  background: var(--buttonGreen);
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
+  color: var(--white);
+  font-weight: bold;
+}
+
+#iceSongCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  right: 0;
+  align-items: center;
+}
+
+#iceSong {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0%;
+  font-family: "Merienda", "Satisfy", "Brush Script MT", cursive;
+  font-style: italic;
+  text-align: center;
+}
+
+#iceCounter {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0%;
+  font-family: "Acme", fantasy;
+  color: var(--clarksonGreen);
+  font-size: 5em;
+  font-weight: bold;
+  user-select: none;
+}
+
+#troyLassials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  align-items: flex-end;
+}
+
+.troyLassial {
+  position: absolute;
+  bottom: -2em;
+  width: 80%;
+}
+
+#troyLassialSanta {
+  display: none;
+}
+
+#troyLassialTalkContCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#troyLassialTalkCont {
+  border-radius: .5em;
+  background: var(--white);
+  width: 100%;
+  border: .2em solid var(--clarksonGreen);
+}
+
+#troyLassialName {
+  width: 100%;
+  padding-left: 1em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  border-bottom: .2rem solid var(--clarksonGreen);
+  font-family: "Russo One", fantasy;
+  color: var(--clarksonGreen);
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+#troyLassialTalk {
+  width: 100%;
+  padding: .5em;
+  font-family: "Merriweather", "Times New Roman", serif;
+  font-size: .85em;
+}
+
+#troyLassialButton {
+  border-radius: .5em;
+  background: var(--clarksonGreen);
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
+  color: var(--white);
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#choicesCont {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 77.5% 17.5%;
+  grid-row-gap: 5%;
+  visibility: hidden;
+  position: absolute;
+  left: 2em;
+  right: 2em;
+  top: 2em;
+  bottom: 2em;
+  opacity: 0%;
+}
+
+#choices {
+  display: grid;
+  grid-template-columns: repeat(2, 47.5%);
+  grid-column-gap: 5%;
+  grid-template-rows: repeat(2, 45%);
+  grid-row-gap: 10%;
+}
+
+.choice {
+  border-radius: .5em;
+  background: var(--white);
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  border: .1em solid var(--clarksonGreen);
+  font-family: "Boogaloo", fantasy;
+  color: var(--clarksonGreen);
+  font-size: 2em;
+  font-weight: bold;
+  box-shadow: .25em .25em 1em 0 var(--gray);
+}
+
+#chooseCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#choose {
+  border-radius: .5em;
+  background: var(--buttonGreen);
+  min-width: 25%;
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
+  color: var(--white);
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#answerCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  visibility: hidden;
+  position: absolute;
+  left: 2em;
+  right: 2em;
+  top: 2em;
+  bottom: 2em;
+  opacity: 0%;
+  align-items: center;
+}
+
+#answer {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0%;
+  font-family: "Bungee", fantasy;
+  font-size: 6em;
+  font-weight: bold;
+}
+
+#correctAnswerCont {
+  visibility: hidden;
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  opacity: 0%;
+}
+
+#correctAnswerPrompt {
+  visibility: hidden;
+  opacity: 0%;
+  font-family: "Belanosima", fantasy;
+  color: var(--blue);
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#correctAnswer {
+  visibility: hidden;
+  opacity: 0%;
+  font-family: "Anton", fantasy;
+  color: var(--clarksonGreen);
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#gameOverHeading {
+  font-family: "Press Start 2P", fantasy;
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.gameOverScore {
+  font-family: "Russo One", fantasy;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.gameOverHighScore {
+  display: none;
+  font-size: 1.25em;
+}
+
+#gameOverYourScore {
+  font-size: 2em;
+}
+
+.gameOverScoreNum {
+  font-family: "Oswald", fantasy;
+  color: var(--orange);
+}
+
+#gameOverHighScores {
+  display: none;
+  margin-left: 1em;
+}
+
+#quote {
+  width: 50%;
+  margin: 0;
+}
+
+#quoteLine {
+  display: block;
+  font-family: "Patrick Hand", "Satisfy", "Brush Script MT", cursive;
+  color: var(--red);
+}
+
+#quoteLine1::after {
+  content: close-quote;
+  font-style: normal;
+  cursor: text;
+}
+
+#quoteLine2::before {
+  content: open-quote;
+  font-style: normal;
+  cursor: text;
+}
+
+.barcode {
+  font-family: "Libre Barcode 128";
+}
+
+#quoteLineLine {
+  display: inline-block;
+}
+
+#quoteLineAuthor {
+  display: inline-block;
+  margin-left: 24px;
+  font-style: italic;
+}
+
+#quoteLineAuthor::before {
+  content: "\2014";
+  cursor: text;
+}
+
+#quoteAuthor {
+  display: block;
+  margin-left: 24px;
+  font-family: "Patrick Hand", "Satisfy", "Brush Script MT", cursive;
+  color: var(--red);
+}
+
+#quoteAuthor::before {
+  content: "\2014";
+  cursor: text;
+}
+
+#playAgain {
+  border-radius: .5em;
+  background: var(--buttonGreen);
+  min-width: 33%;
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
+  color: var(--white);
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#account {
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0%;
+}
+
+#infoDataMemoryCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  padding: 5%;
+  align-items: center;
+  overflow-y: auto;
+}
+
+#accountHeadingCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: .5em;
+  align-items: center;
+}
+
+#accountHeading {
+  width: 100%;
+  font-family: "Lekton", "Courier New", monospace;
+  color: var(--darkGray);
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#accountSubheading {
+  width: 100%;
+  margin-bottom: -.25em;
+  font-family: "Lekton", "Courier New", monospace;
+  color: var(--darkGray);
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#accountInstructions {
+  width: 100%;
+}
+
+.accountInstruction {
+  width: 100%;
+  font-family: "Lekton", "Courier New", monospace;
+  color: var(--darkGray);
+  font-size: .9em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#accountInstruction2 {
+  display: none;
+}
+
+.key {
+  font-family: "Source Code Pro", "Lekton", "Courier New", monospace;
+  font-weight: normal;
+}
+
+.infoButton {
+  border-radius: .1em;
+  padding-left: .1em;
+  padding-right: .1em;
+  font-weight: bold;
+}
+
+.clearInfoButton {
+  display: none;
+  background: var(--darkGray);
+  margin-right: .1em;
+  margin-bottom: .25em;
+  font-family: "Aldrich", "Lekton", "Courier New", monospace;
+  color: var(--lightGray);
+}
+
+.enterInfoButton {
+  background: var(--lightGray);
+  border: .05em solid var(--darkGray);
+  margin-left: .25em;
+  margin-bottom: .1em;
+  color: var(--darkGray);
+  font-size: 1.25em;
+}
+
+#clearAll {
+  margin-right: 0;
+  margin-bottom: 0;
+  font-size: 1.1em;
+}
+
+#infoDataMemory {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+}
+
+#infoData {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+}
+
+#info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 2em;
+  align-items: center;
+}
+
+#infoGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border: .1em solid var(--darkGray);
+  align-items: center;
+}
+
+#infoLegend {
+  font-family: "Lekton", "Courier New", monospace;
+  color: var(--darkGray);
+}
+
+#infoFields {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  height: 100%;
+  width: 100%;
+  align-items: end;
+}
+
+.infoFieldCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoField {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  bottom: .5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  align-items: flex-start;
+}
+
+.infoInputContContCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.infoInputContCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.infoLabelCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.infoLabel {
+  margin-left: .1em;
+  margin-bottom: .1em;
+  font-family: "Lekton", "Courier New", monospace;
+  color: var(--darkGray);
+  font-weight: bold;
+}
+
+.infoInputCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infoInput {
+  background: var(--lightGray);
+  border: .1em solid var(--darkGray) !important;
+  margin-bottom: .1em;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: var(--darkGray);
+  font-size: .9em !important;
+}
+
+.invalidInfoInput::selection {
+  background: var(--errorRed) !important;
+}
+
+.invalidInfoMessage {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  accent-color: var(--errorRed);
+  font-family: "EB Garamond", "Merriweather", "Times New Roman", serif;
+  color: var(--errorRed);
+  font-size: .75em;
+}
+
+.invalidInfoMessage::selection {
+  background: var(--errorRed) !important;
+}
+
+#data {
+  display: none;
+  width: 50%;
+  border: .1em solid var(--darkGray);
+  margin-bottom: 2em;
+}
+
+.dataRow {
+  display: none;
+  border: .1em solid var(--darkGray);
+}
+
+.dataHeadRow {
+  display: table-row;
+}
+
+.dataCell {
+  padding-left: 1em;
+  padding-right: 1em;
+  font-family: "Lekton", "Courier New", monospace;
+  color: var(--darkGray);
+  font-size: .9em;
+  font-weight: bold;
+}
+
+.dataHeadCell {
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.dataDataCell {
+  text-align: right;
+}
+
+.dataOutput {
+  user-select: auto;
+  cursor: text;
+}
+
+#memoryCont {
+  width: 33%;
+}
+
+#memory {
+  width: 100%;
+  border: .1em solid var(--darkGray);
+}
+
+#memoryToggle {
+  background: var(--darkGray);
+  width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+  border: .1em solid var(--darkGray);
+  font-family: "Lekton", "Courier New", monospace;
+  color: var(--lightGray);
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.memoryCell {
+  padding-left: 1em;
+  padding-right: 1em;
+  border: .1em solid var(--darkGray);
+  font-family: "Lekton", "Courier New", monospace;
+  font-weight: bold;
+}
+
+.memoryBodyCell {
+  background: var(--lightGray);
+  color: var(--darkGray);
+  font-size: .9em;
+}
+
+#accountExit {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  background: transparent;
+  color: var(--darkGray);
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#accountExit:hover {
+  color: var(--exitRed);
+}
+
+#accountExit:active {
+  color: rgba(179, 14, 15, 50%);
+}
+
+#accountMessage {
+  display: none;
+  position: absolute;
+  left: 2em;
+  bottom: 2em;
+  border-radius: .1em;
+  background: var(--darkGray);
+  opacity: 0%;
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  font-family: "Lekton", "Courier New", monospace;
+  color: var(--lightGray);
+  font-weight: bold;
+  box-shadow: .25em .25em .5em 0 var(--darkGray);
+  user-select: none;
+  pointer-events: none;
+}
+
+#confirm {
+  position: fixed;
+  left: 40%;
+  right: 40%;
+  top: 20%;
+  border-radius: .5em;
+  border: .2em solid var(--clarksonGreen);
+}
+
+#confirmMessages {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.confirmMessage {
+  font-family: "Merriweather", "Times New Roman", serif;
+  font-size: .85em;
+}
+
+#acceptInline {
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
+  color: var(--clarksonGreen);
+  font-weight: bold;
+}
+
+#confirmButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}
+
+.confirmButton {
+  border-radius: .25em;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
+  color: var(--white);
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#accept {
+  background: var(--clarksonGreen);
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+}
+
+#decline {
+  background: rgba(180, 30, 47, 50%);
+  padding-left: .15em;
+  padding-right: .15em;
+  border: .1em solid var(--sluRed);
+}
+
+#assets {
+  display: none;
+}
+
+#password {
+  z-index: 97;
+  position: fixed;
+  left: calc(50% - 12.5em);
+  right: calc(50% - 12.5em);
+  top: 40%;
+  border-radius: .5em;
+  width: auto;
+  padding: 1em;
+  border: .2em solid var(--secretPurple);
+}
+
+#password,
+#password * {
+  accent-color: var(--secretPurple);
+}
+
+#password::selection,
+#password *::selection {
+  background: var(--secretPurple) !important;
+}
+
+#passwordInputCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}
+
+#passwordInput {
+  border: .1em solid var(--secretPurple);
+  font-family: "Roboto", "Arial", sans-serif;
+  color: var(--gray);
+  font-size: 1.1em;
+}
+
+#enterPassword {
+  border-radius: .25em;
+  background: var(--secretPurple);
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
+  color: var(--white);
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+#passwordMessage {
+  visibility: hidden;
+  opacity: 0%;
+  height: 0;
+  width: 100%;
+  font-family: "Belanosima", fantasy;
+  font-weight: bold;
+  text-align: center;
+}
+
+#passwordMessageTimer {
+  font-size: 2em;
+}
+
+#secret {
+  z-index: 97;
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(221, 221, 221, 50%), rgba(221, 221, 221, 50%)) center / cover,
+              url("img/bardCollegeAtSimonsRock.png") center / cover;
+  opacity: 0%;
+}
+
+#secret * {
+  accent-color: var(--secretPurple);
+}
+
+#secret *::selection {
+  background: var(--secretPurple) !important;
+}
+
+#secretModal {
+  visibility: hidden;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 12.5%;
+  bottom: 12.5%;
+  border-radius: 1em;
+  background: var(--white);
+  opacity: 0%;
+  border: .5em solid var(--secretPurple);
+}
+
+#secretMessageContContCont {
+  height: 100%;
+  width: 100%;
+  padding: 2%;
+  overflow-y: auto;
+}
+
+#secretHeading {
+  margin-left: 1em;
+  margin-bottom: .5em;
+  font-family: "Satisfy", "Brush Script MT", cursive;
+  color: var(--secretPurple);
+  font-size: 2em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#secretMessageContCont {
+  width: 100%;
+}
+
+.alisonIskoSpacer {
+  clear: both;
+  height: 2em;
+  width: 0;
+}
+
+#alisonIskoHotelSpacer {
+  float: left;
+}
+
+#alisonIskoBenchSpacer {
+  float: right;
+}
+
+.alisonIsko {
+  clear: both;
+  border-radius: .5em;
+  height: 10em;
+  width: 10em;
+  border: .2em solid var(--secretPurple);
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+#alisonIskoHotel {
+  float: left;
+  background: url("img/alisonIskoHotel.png") bottom / cover;
+  transform: rotate(6deg);
+}
+
+#alisonIskoBench {
+  float: right;
+  background: url("img/alisonIskoBench.png") center / cover;
+  transform: rotate(-20deg);
+}
+
+#secretMessageCont {
+  width: 100%;
+}
+
+#secretMessage {
+  width: 100%;
+}
+
+.secretMessageParagraph {
+  font-family: "Satisfy", "Brush Script MT", cursive;
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+#secretAuthor {
+  display: block;
+  margin-left: 48px;
+  font-family: "Satisfy", "Brush Script MT", cursive;
+  font-size: 1.1em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#secretAuthor::before {
+  content: "\2014";
+  cursor: text;
+}
+
+#secretAuthorHearts {
+  font-style: normal;
+}
+
+.secretAuthorHeart {
+  display: inline-block;
+}
+
+#secretExit {
+  position: absolute;
+  right: 1.25em;
+  top: .25em;
+  background: transparent;
+  color: var(--darkGray);
+  font-size: 1.25em;
+  font-weight: bold;
+  text-shadow: .01em .01em 0 var(--white),
+               -.01em .01em 0 var(--white),
+               .01em -.01em 0 var(--white),
+               -.01em -.01em 0 var(--white);
+}
+
+#secretExit:hover {
+  color: var(--secretPurple);
+}
+
+#secretExit:active {
+  color: rgba(227, 184, 229, 50%);
+}
+
+footer {
+  display: none;
+}
+
+#mobile {
+  z-index: -2;
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 2%;
+  overflow-y: auto;
+}
+
+#mobileMessagesContCont {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+#mobileHeading {
+  width: 100%;
+  margin-bottom: .5em;
+  font-family: "Russo One", fantasy;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#mobileMessagesCont {
+  width: 100%;
+}
+
+#mobileMessages {
+  width: 100%;
+}
+
+.mobileMessage {
+  font-family: "Merriweather", "Times New Roman", serif;
+  font-size: .85em;
+}
+
+#url {
+  padding-left: 0;
+  padding-right: 0;
+  font-family: "Source Code Pro", "Lekton", "Courier New", monospace;
+}
+
+#urlText {
+  border-top-left-radius: .1em;
+  border-bottom-left-radius: .1em;
+  padding-left: .1em;
+  padding-right: .1em;
+}
+
+#urlText:hover {
+  background: #E8E8E8;
+}
+
+#urlText:active {
+  background: #F3F3F3;
+}
+
+#urlButton {
+  border-top-right-radius: .1em;
+  border-bottom-right-radius: .1em;
+  border-left: .05em solid var(--darkGray);
+  cursor: pointer;
+}
+
+#urlButton:hover {
+  background: #E8E8E8;
+  user-select: none;
+}
+
+#urlButton:active {
+  background: #F3F3F3;
+}
+
+#urlMessage {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: .1em;
+  background: var(--darkGray);
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  border: .05em solid var(--lightGray);
+  font-family: "Roboto", "Arial", sans-serif;
+  color: var(--lightGray);
+  font-weight: bold;
+  user-select: none;
+  pointer-events: none;
+}
+
+#mobileButtonContCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  align-items: flex-start;
+}
+
+#mobileButtonCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 10em;
+  align-items: center;
+}
+
+#mobileButton {
+  border-radius: .25em;
+  background: var(--buttonGreen);
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
+  color: var(--white);
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+#mobileImgContCont {
+  width: 10em;
+}
+
+#mobileImgCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 1em;
+  background: url("img/space.png") center / cover;
+  height: 10em;
+  width: 100%;
+  margin-bottom: .1em;
+  align-items: center;
+}
+
+#mobileImg {
+  border-radius: .6em;
+  background: linear-gradient(rgba(0, 61, 124, 10%), rgba(0, 61, 124, 10%)) center / cover,
+              url("img/mystery.png") left / cover;
+  height: 90%;
+  width: 90%;
+  filter: blur(1em);
+  pointer-events: none;
+}
+
+#mobileImgCaption {
+  width: 100%;
+  padding-left: .25em;
+  padding-right: .25em;
+  font-family: "Titillium Web", "Roboto", "Arial", sans-serif;
+}
+
+#mobileBio {
+  display: none;
+  width: 100%;
+  font-family: "Merriweather", "Times New Roman", serif;
+  font-size: .85em;
+}
+
+.character {
+  font-weight: bold;
+}
+
+.mainCharacter {
+  line-height: .85lh;
+  font-size: 1rem;
+}
+
+.jediMainCharacter {
+  font-family: "Kalam", "Satisfy", "Brush Script MT", cursive;
+  color: var(--jediBlue);
+}
+
+.sithMainCharacter {
+  font-family: "Wallpoet", fantasy;
+  color: var(--sithRed);
+}
+
+#thrawn {
+  line-height: 1rlh;
+  font-size: .85rem;
+}
+
+/* Animation Effects */
+
+@keyframes bounce {
+  0% {
+    transform: scaleX(1.5)
+               scaleY(.75);
+  }
+  50% {
+    transform: scaleX(.75)
+               scaleY(1.5);
+  }
+  100% {
+    transform: scaleX(1.5)
+               scaleY(.75);
+  }
+}
+
+@keyframes loadingBarShimmer {
+  0% {
+    background: linear-gradient(to right, transparent 0% 10%, var(--shimmerWhite) 40% 60%, transparent 90% 100%) -10em / 10em 100%;
+  }
+  100% {
+    background: linear-gradient(to right, transparent 0% 10%, var(--shimmerWhite) 40% 60%, transparent 90% 100%) calc(100% + 10em) / 10em 100%;
+  }
+}
+
+@keyframes okShimmer {
+  0% {
+    background: linear-gradient(60deg, transparent 0% 40%, var(--shimmerWhite) 45% 55%, transparent 60% 100%) -2em / 2em 100%;
+  }
+  100% {
+    background: linear-gradient(60deg, transparent 0% 40%, var(--shimmerWhite) 45% 55%, transparent 60% 100%) calc(100% + 2em) / 2em 100%;
+  }
+}
+
+@keyframes emphasizeCont {
+  0% {
+    box-shadow: none;
+    transform: scale(1);
+  }
+  17% {
+    box-shadow: 0 0 .5em .5em var(--clarksonGold);
+  }
+  33%,
+  67% {
+    box-shadow: 0 0 .5em .5em var(--clarksonGold);
+    transform: scale(1.1);
+  }
+  83% {
+    box-shadow: 0 0 .5em .5em var(--clarksonGold);
+  }
+  100% {
+    box-shadow: none;
+    transform: scale(1);
+  }
+}
+
+@keyframes driveForward {
+  0% {
+    left: 13%;
+  }
+  100% {
+    left: 83%;
+  }
+}
+
+@keyframes driveUp {
+  0% {
+    bottom: 35%;
+    transform: rotate(0);
+  }
+  10% {
+    bottom: 35%;
+    transform: rotate(-90deg);
+  }
+  90% {
+    bottom: 81%;
+    transform: rotate(-90deg);
+  }
+  100% {
+    bottom: 81%;
+    transform: rotate(0);
+  }
+}
+
+@keyframes arrowBlink {
+  0% {
+    visibility: hidden;
+    opacity: 0%;
+  }
+  25%,
+  75% {
+    visibility: visible;
+    opacity: 100%;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0%;
+  }
+}
+
+@keyframes expand {
+  0% {
+    left: 15%;
+    right: 15%;
+    transform: scaleX(0)
+               scaleY(0);
+  }
+  25% {
+    left: 15%;
+    right: 15%;
+    transform: scaleX(1)
+               scaleY(.01);
+  }
+  50% {
+    left: 15%;
+    right: 15%;
+    transform: scaleX(1)
+               scaleY(1);
+  }
+  100% {
+    left: 25%;
+    right: 5%;
+    transform: scaleX(1)
+               scaleY(1);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    visibility: visible;
+    opacity: 100%;
+  }
+  25%,
+  75% {
+    visibility: visible;
+    opacity: 50%;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0%;
+  }
+}
+
+@keyframes selectCheer {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bendOver {
+  0% {
+    border-bottom-left-radius: 0;
+    transform: rotate(0);
+  }
+  40%,
+  60% {
+    border-bottom-left-radius: .8em;
+    transform: rotate(-60deg);
+  }
+  100% {
+    border-bottom-left-radius: 0;
+    transform: rotate(0);
+  }
+}
+
+@keyframes goldenKnightLap {
+  0% {
+    left: 40%;
+    bottom: 0;
+    transform: scaleX(1);
+  }
+  15% {
+    left: 2%;
+    bottom: 2%;
+    transform: scaleX(1);
+  }
+  19% {
+    left: 2%;
+    bottom: 2%;
+    transform: scaleX(1);
+  }
+  31% {
+    left: 2%;
+    bottom: 75%;
+    transform: scaleX(1);
+  }
+  35% {
+    left: 2%;
+    bottom: 75%;
+    transform: scaleX(-1);
+  }
+  65% {
+    left: 90%;
+    bottom: 75%;
+    transform: scaleX(-1);
+  }
+  69% {
+    left: 90%;
+    bottom: 75%;
+    transform: scaleX(-1);
+  }
+  81% {
+    left: 90%;
+    bottom: 2%;
+    transform: scaleX(-1);
+  }
+  85% {
+    left: 90%;
+    bottom: 2%;
+    transform: scaleX(1);
+  }
+  100% {
+    left: 52%;
+    bottom: 0;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes zebra1Lap {
+  0% {
+    left: 40%;
+    bottom: 0;
+    transform: rotate(0)
+               scaleX(1);
+  }
+  15% {
+    left: 2%;
+    bottom: 2%;
+    transform: rotate(0)
+               scaleX(1);
+  }
+  19% {
+    left: 2%;
+    bottom: 2%;
+    transform: rotate(90deg)
+               scaleX(1);
+  }
+  31% {
+    left: 2%;
+    bottom: 80%;
+    transform: rotate(90deg)
+               scaleX(1);
+  }
+  35% {
+    left: 2%;
+    bottom: 80%;
+    transform: rotate(0)
+               scaleX(-1);
+  }
+  65% {
+    left: 90%;
+    bottom: 80%;
+    transform: rotate(0)
+               scaleX(-1);
+  }
+  69% {
+    left: 90%;
+    bottom: 80%;
+    transform: rotate(90deg)
+               scaleX(-1);
+  }
+  81% {
+    left: 90%;
+    bottom: 2%;
+    transform: rotate(90deg)
+               scaleX(-1);
+  }
+  85% {
+    left: 90%;
+    bottom: 2%;
+    transform: rotate(0)
+               scaleX(1);
+  }
+  100% {
+    left: 52%;
+    bottom: 0;
+    transform: rotate(0)
+               scaleX(1);
+  }
+}
+
+@keyframes zebra2Lap {
+  0% {
+    right: 40%;
+    bottom: 0;
+    transform: rotate(0)
+               scaleX(-1);
+  }
+  15% {
+    right: 2%;
+    bottom: 2%;
+    transform: rotate(0)
+               scaleX(-1);
+  }
+  19% {
+    right: 2%;
+    bottom: 2%;
+    transform: rotate(-90deg)
+               scaleX(-1);
+  }
+  31% {
+    right: 2%;
+    bottom: 80%;
+    transform: rotate(-90deg)
+               scaleX(-1);
+  }
+  35% {
+    right: 2%;
+    bottom: 80%;
+    transform: rotate(0)
+               scaleX(1);
+  }
+  65% {
+    right: 90%;
+    bottom: 80%;
+    transform: rotate(0)
+               scaleX(1);
+  }
+  69% {
+    right: 90%;
+    bottom: 80%;
+    transform: rotate(-90deg)
+               scaleX(1);
+  }
+  81% {
+    right: 90%;
+    bottom: 2%;
+    transform: rotate(-90deg)
+               scaleX(1);
+  }
+  85% {
+    right: 90%;
+    bottom: 2%;
+    transform: rotate(0)
+               scaleX(-1);
+  }
+  100% {
+    right: 52%;
+    bottom: 0;
+    transform: rotate(0)
+               scaleX(-1);
+  }
+}
+
+@keyframes block {
+  0% {
+    bottom: 0;
+  }
+  40%,
+  60% {
+    bottom: 1.5em;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes clarksonGoalMessage {
+  0% {
+    visibility: hidden;
+    opacity: 0%;
+    transform: scale(1);
+  }
+  10% {
+    visibility: visible;
+    opacity: 100%;
+    transform: scale(1);
+  }
+  50% {
+    visibility: visible;
+    opacity: 100%;
+    transform: scale(1.5);
+  }
+  90% {
+    visibility: visible;
+    opacity: 100%;
+    transform: scale(1);
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0%;
+    transform: scale(1);
+  }
+}
+
+@keyframes sluGoalMessage {
+  0% {
+    visibility: hidden;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    opacity: 0%;
+    transform: rotate(0)
+               scale(1);
+  }
+  8%,
+  17% {
+    visibility: visible;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    opacity: 100%;
+    transform: rotate(0)
+               scale(1);
+  }
+  33% {
+    visibility: visible;
+    left: 50%;
+    right: auto;
+    top: 5%;
+    bottom: auto;
+    opacity: 100%;
+    transform: rotate(69deg)
+               scale(1);
+  }
+  50% {
+    visibility: visible;
+    left: auto;
+    right: 40%;
+    top: auto;
+    bottom: 10%;
+    opacity: 100%;
+    transform: rotate(69deg)
+               scale(-1);
+  }
+  67% {
+    visibility: visible;
+    left: auto;
+    right: 15%;
+    top: 30%;
+    bottom: auto;
+    opacity: 100%;
+    transform: rotate(420deg)
+               scale(-1);
+  }
+  83%,
+  92% {
+    visibility: visible;
+    left: 20%;
+    right: auto;
+    top: auto;
+    bottom: 20%;
+    opacity: 100%;
+    transform: rotate(420deg)
+               scale(1);
+  }
+  100% {
+    visibility: hidden;
+    left: 20%;
+    right: auto;
+    top: auto;
+    bottom: 20%;
+    opacity: 0%;
+    transform: rotate(420deg)
+               scale(1);
+  }
+}
+
+@keyframes fly {
+  0% {
+    left: -50em;
+  }
+  40% {
+    left: 20%;
+  }
+  60% {
+    left: 30%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes set {
+  0% {
+    background: #E8E8E8;
+    border: .1em solid var(--youtubeLightGray);
+  }
+  33% {
+    background: var(--lightGray);
+    border: .1em solid var(--youtubeLightGray);
+  }
+  100% {
+    background: none;
+    border: .1em solid transparent;
+  }
+}
+
+@keyframes fuckSlu {
+  0% {
+    visibility: hidden;
+    opacity: 0%;
+    transform: scale(1);
+  }
+  1% {
+    visibility: visible;
+    opacity: 100%;
+    transform: scale(1);
+  }
+  50% {
+    visibility: visible;
+    opacity: 100%;
+    transform: scale(1.5);
+  }
+  99% {
+    visibility: visible;
+    opacity: 100%;
+    transform: scale(1);
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0%;
+    transform: scale(1);
+  }
+}
+
+@keyframes youtubeExit {
+  0% {
+    background: transparent;
+    border-left: .05em solid transparent;
+    border-bottom: .05em solid transparent;
+    color: var(--exitRed);
+  }
+  1%,
+  33% {
+    background: var(--exitRed);
+    border-left: .05em solid var(--exitRed);
+    border-bottom: .05em solid var(--exitRed);
+    color: var(--white);
+  }
+  34%,
+  99% {
+    background: rgba(179, 14, 15, 50%);
+    border-left: .05em solid var(--exitRed);
+    border-bottom: .05em solid var(--exitRed);
+    color: var(--white);
+  }
+  100% {
+    background: transparent;
+    border-left: .05em solid transparent;
+    border-bottom: .05em solid transparent;
+    color: var(--exitRed);
+  }
+}
+
+@keyframes saintsHang {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes victoryHang {
+  0% {
+    transform: rotate(0);
+  }
+  14%,
+  29% {
+    transform: rotate(10deg);
+  }
+  86% {
+    transform: rotate(110deg);
+  }
+  100% {
+    transform: rotate(80deg);
+  }
+}
+
+@keyframes victoryFlicker {
+  0%,
+  8%,
+  10%,
+  11%,
+  13%,
+  17%,
+  19%,
+  44%,
+  46%,
+  62%,
+  64%,
+  81%,
+  83%,
+  92%,
+  94%,
+  100% {
+    opacity: 100%;
+  }
+  9%,
+  12%,
+  18%,
+  45%,
+  63%,
+  82%,
+  93% {
+    opacity: 0%;
+  }
+}
+
+@keyframes wave {
+  0%,
+  5% {
+    transform: rotate(30deg);
+  }
+  50%,
+  55% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes clarksonPlayer1Exit {
+  0% {
+    visibility: visible;
+    right: 0;
+    bottom: 0;
+    opacity: 100%;
+  }
+  3%,
+  5% {
+    visibility: visible;
+    right: 2em;
+    bottom: 0;
+    opacity: 100%;
+  }
+  11%,
+  13% {
+    visibility: visible;
+    right: 2em;
+    bottom: 11em;
+    opacity: 100%;
+  }
+  41%,
+  43% {
+    visibility: visible;
+    right: -58em;
+    bottom: 11em;
+    opacity: 100%;
+  }
+  57%,
+  59% {
+    visibility: visible;
+    right: -58em;
+    bottom: -9em;
+    opacity: 100%;
+  }
+  87%,
+  89% {
+    visibility: visible;
+    right: 2em;
+    bottom: -9em;
+    opacity: 100%;
+  }
+  96% {
+    visibility: visible;
+    right: 2em;
+    bottom: 0;
+    opacity: 100%;
+  }
+  100% {
+    visibility: hidden;
+    right: 2em;
+    bottom: 0;
+    opacity: 0%;
+  }
+}
+
+@keyframes clarksonPlayer2Exit {
+  0% {
+    visibility: visible;
+    left: -10%;
+    bottom: 68%;
+    opacity: 100%;
+  }
+  6%,
+  8% {
+    visibility: visible;
+    left: -18em;
+    bottom: 12em;
+    opacity: 100%;
+  }
+  14%,
+  16% {
+    visibility: visible;
+    left: -18em;
+    bottom: 23em;
+    opacity: 100%;
+  }
+  43%,
+  45% {
+    visibility: visible;
+    left: 41em;
+    bottom: 23em;
+    opacity: 100%;
+  }
+  58%,
+  60% {
+    visibility: visible;
+    left: 41em;
+    bottom: 2em;
+    opacity: 100%;
+  }
+  88%,
+  90% {
+    visibility: visible;
+    left: -18em;
+    bottom: 2em;
+    opacity: 100%;
+  }
+  96% {
+    visibility: visible;
+    left: -18em;
+    bottom: 12em;
+    opacity: 100%;
+  }
+  100% {
+    visibility: hidden;
+    left: -18em;
+    bottom: 12em;
+    opacity: 0%;
+  }
+}
+
+@keyframes clarksonPlayer3Exit {
+  0% {
+    visibility: visible;
+    left: -10%;
+    bottom: 18%;
+    opacity: 100%;
+  }
+  6%,
+  8% {
+    visibility: visible;
+    left: -18em;
+    bottom: 12em;
+    opacity: 100%;
+  }
+  14%,
+  16% {
+    visibility: visible;
+    left: -18em;
+    bottom: 23em;
+    opacity: 100%;
+  }
+  43%,
+  45% {
+    visibility: visible;
+    left: 41em;
+    bottom: 23em;
+    opacity: 100%;
+  }
+  58%,
+  60% {
+    visibility: visible;
+    left: 41em;
+    bottom: 2em;
+    opacity: 100%;
+  }
+  88%,
+  90% {
+    visibility: visible;
+    left: -18em;
+    bottom: 2em;
+    opacity: 100%;
+  }
+  96% {
+    visibility: visible;
+    left: -18em;
+    bottom: 12em;
+    opacity: 100%;
+  }
+  100% {
+    visibility: hidden;
+    left: -18em;
+    bottom: 12em;
+    opacity: 0%;
+  }
+}
+
+@keyframes clarksonPlayer4Exit {
+  0% {
+    visibility: visible;
+    left: 75%;
+    bottom: 5%;
+    opacity: 100%;
+  }
+  13%,
+  15% {
+    visibility: visible;
+    left: -18em;
+    bottom: 12em;
+    opacity: 100%;
+  }
+  20%,
+  22% {
+    visibility: visible;
+    left: -18em;
+    bottom: 23em;
+    opacity: 100%;
+  }
+  47%,
+  49% {
+    visibility: visible;
+    left: 41em;
+    bottom: 23em;
+    opacity: 100%;
+  }
+  61%,
+  63% {
+    visibility: visible;
+    left: 41em;
+    bottom: 2em;
+    opacity: 100%;
+  }
+  89%,
+  91% {
+    visibility: visible;
+    left: -18em;
+    bottom: 2em;
+    opacity: 100%;
+  }
+  97% {
+    visibility: visible;
+    left: -18em;
+    bottom: 12em;
+    opacity: 100%;
+  }
+  100% {
+    visibility: hidden;
+    left: -18em;
+    bottom: 12em;
+    opacity: 0%;
+  }
+}
+
+@keyframes clarksonPlayer5Exit {
+  0% {
+    visibility: visible;
+    left: 75%;
+    bottom: 43%;
+    opacity: 100%;
+  }
+  13%,
+  15% {
+    visibility: visible;
+    left: -18em;
+    bottom: 12em;
+    opacity: 100%;
+  }
+  20%,
+  22% {
+    visibility: visible;
+    left: -18em;
+    bottom: 23em;
+    opacity: 100%;
+  }
+  47%,
+  49% {
+    visibility: visible;
+    left: 41em;
+    bottom: 23em;
+    opacity: 100%;
+  }
+  61%,
+  63% {
+    visibility: visible;
+    left: 41em;
+    bottom: 2em;
+    opacity: 100%;
+  }
+  89%,
+  91% {
+    visibility: visible;
+    left: -18em;
+    bottom: 2em;
+    opacity: 100%;
+  }
+  97% {
+    visibility: visible;
+    left: -18em;
+    bottom: 12em;
+    opacity: 100%;
+  }
+  100% {
+    visibility: hidden;
+    left: -18em;
+    bottom: 12em;
+    opacity: 0%;
+  }
+}
+
+@keyframes clarksonPlayer6Exit {
+  0% {
+    visibility: visible;
+    left: 75%;
+    bottom: 80%;
+    opacity: 100%;
+  }
+  13%,
+  15% {
+    visibility: visible;
+    left: -18em;
+    bottom: 12em;
+    opacity: 100%;
+  }
+  20%,
+  22% {
+    visibility: visible;
+    left: -18em;
+    bottom: 23em;
+    opacity: 100%;
+  }
+  47%,
+  49% {
+    visibility: visible;
+    left: 41em;
+    bottom: 23em;
+    opacity: 100%;
+  }
+  61%,
+  63% {
+    visibility: visible;
+    left: 41em;
+    bottom: 2em;
+    opacity: 100%;
+  }
+  89%,
+  91% {
+    visibility: visible;
+    left: -18em;
+    bottom: 2em;
+    opacity: 100%;
+  }
+  97% {
+    visibility: visible;
+    left: -18em;
+    bottom: 12em;
+    opacity: 100%;
+  }
+  100% {
+    visibility: hidden;
+    left: -18em;
+    bottom: 12em;
+    opacity: 0%;
+  }
+}
+
+@keyframes sluPlayer1Exit {
+  0% {
+    visibility: visible;
+    left: 0;
+    bottom: 0;
+    opacity: 100%;
+  }
+  3%,
+  5% {
+    visibility: visible;
+    left: 2em;
+    bottom: 0;
+    opacity: 100%;
+  }
+  11%,
+  13% {
+    visibility: visible;
+    left: 2em;
+    bottom: -9em;
+    opacity: 100%;
+  }
+  41%,
+  43% {
+    visibility: visible;
+    left: -58em;
+    bottom: -9em;
+    opacity: 100%;
+  }
+  57%,
+  59% {
+    visibility: visible;
+    left: -58em;
+    bottom: 11em;
+    opacity: 100%;
+  }
+  87%,
+  89% {
+    visibility: visible;
+    left: 2em;
+    bottom: 11em;
+    opacity: 100%;
+  }
+  96% {
+    visibility: visible;
+    left: 2em;
+    bottom: 0;
+    opacity: 100%;
+  }
+  100% {
+    visibility: hidden;
+    left: 2em;
+    bottom: 0;
+    opacity: 0%;
+  }
+}
+
+@keyframes sluPlayer2Exit {
+  0% {
+    visibility: visible;
+    right: -10%;
+    bottom: 68%;
+    opacity: 100%;
+  }
+  6%,
+  8% {
+    visibility: visible;
+    right: -18em;
+    bottom: 12em;
+    opacity: 100%;
+  }
+  14%,
+  16% {
+    visibility: visible;
+    right: -18em;
+    bottom: 2em;
+    opacity: 100%;
+  }
+  43%,
+  45% {
+    visibility: visible;
+    right: 41em;
+    bottom: 2em;
+    opacity: 100%;
+  }
+  58%,
+  60% {
+    visibility: visible;
+    right: 41em;
+    bottom: 23em;
+    opacity: 100%;
+  }
+  88%,
+  90% {
+    visibility: visible;
+    right: -18em;
+    bottom: 23em;
+    opacity: 100%;
+  }
+  96% {
+    visibility: visible;
+    right: -18em;
+    bottom: 12em;
+    opacity: 100%;
+  }
+  100% {
+    visibility: hidden;
+    right: -18em;
+    bottom: 12em;
+    opacity: 0%;
+  }
+}
+
+@keyframes sluPlayer3Exit {
+  0% {
+    visibility: visible;
+    right: -10%;
+    bottom: 18%;
+    opacity: 100%;
+  }
+  6%,
+  8% {
+    visibility: visible;
+    right: -18em;
+    bottom: 12em;
+    opacity: 100%;
+  }
+  14%,
+  16% {
+    visibility: visible;
+    right: -18em;
+    bottom: 2em;
+    opacity: 100%;
+  }
+  43%,
+  45% {
+    visibility: visible;
+    right: 41em;
+    bottom: 2em;
+    opacity: 100%;
+  }
+  58%,
+  60% {
+    visibility: visible;
+    right: 41em;
+    bottom: 23em;
+    opacity: 100%;
+  }
+  88%,
+  90% {
+    visibility: visible;
+    right: -18em;
+    bottom: 23em;
+    opacity: 100%;
+  }
+  96% {
+    visibility: visible;
+    right: -18em;
+    bottom: 12em;
+    opacity: 100%;
+  }
+  100% {
+    visibility: hidden;
+    right: -18em;
+    bottom: 12em;
+    opacity: 0%;
+  }
+}
+
+@keyframes sluPlayer4Exit {
+  0% {
+    visibility: visible;
+    right: 75%;
+    bottom: 5%;
+    opacity: 100%;
+  }
+  13%,
+  15% {
+    visibility: visible;
+    right: -18em;
+    bottom: 12em;
+    opacity: 100%;
+  }
+  20%,
+  22% {
+    visibility: visible;
+    right: -18em;
+    bottom: 2em;
+    opacity: 100%;
+  }
+  47%,
+  49% {
+    visibility: visible;
+    right: 41em;
+    bottom: 2em;
+    opacity: 100%;
+  }
+  61%,
+  63% {
+    visibility: visible;
+    right: 41em;
+    bottom: 23em;
+    opacity: 100%;
+  }
+  89%,
+  91% {
+    visibility: visible;
+    right: -18em;
+    bottom: 23em;
+    opacity: 100%;
+  }
+  97% {
+    visibility: visible;
+    right: -18em;
+    bottom: 12em;
+    opacity: 100%;
+  }
+  100% {
+    visibility: hidden;
+    right: -18em;
+    bottom: 12em;
+    opacity: 0%;
+  }
+}
+
+@keyframes sluPlayer5Exit {
+  0% {
+    visibility: visible;
+    right: 75%;
+    bottom: 43%;
+    opacity: 100%;
+  }
+  13%,
+  15% {
+    visibility: visible;
+    right: -18em;
+    bottom: 12em;
+    opacity: 100%;
+  }
+  20%,
+  22% {
+    visibility: visible;
+    right: -18em;
+    bottom: 2em;
+    opacity: 100%;
+  }
+  47%,
+  49% {
+    visibility: visible;
+    right: 41em;
+    bottom: 2em;
+    opacity: 100%;
+  }
+  61%,
+  63% {
+    visibility: visible;
+    right: 41em;
+    bottom: 23em;
+    opacity: 100%;
+  }
+  89%,
+  91% {
+    visibility: visible;
+    right: -18em;
+    bottom: 23em;
+    opacity: 100%;
+  }
+  97% {
+    visibility: visible;
+    right: -18em;
+    bottom: 12em;
+    opacity: 100%;
+  }
+  100% {
+    visibility: hidden;
+    right: -18em;
+    bottom: 12em;
+    opacity: 0%;
+  }
+}
+
+@keyframes sluPlayer6Exit {
+  0% {
+    visibility: visible;
+    right: 75%;
+    bottom: 80%;
+    opacity: 100%;
+  }
+  13%,
+  15% {
+    visibility: visible;
+    right: -18em;
+    bottom: 12em;
+    opacity: 100%;
+  }
+  20%,
+  22% {
+    visibility: visible;
+    right: -18em;
+    bottom: 2em;
+    opacity: 100%;
+  }
+  47%,
+  49% {
+    visibility: visible;
+    right: 41em;
+    bottom: 2em;
+    opacity: 100%;
+  }
+  61%,
+  63% {
+    visibility: visible;
+    right: 41em;
+    bottom: 23em;
+    opacity: 100%;
+  }
+  89%,
+  91% {
+    visibility: visible;
+    right: -18em;
+    bottom: 23em;
+    opacity: 100%;
+  }
+  97% {
+    visibility: visible;
+    right: -18em;
+    bottom: 12em;
+    opacity: 100%;
+  }
+  100% {
+    visibility: hidden;
+    right: -18em;
+    bottom: 12em;
+    opacity: 0%;
+  }
+}
+
+@keyframes buttonExit {
+  0% {
+    color: var(--darkGray);
+  }
+  1%,
+  33% {
+    color: var(--exitRed);
+  }
+  34%,
+  99% {
+  color: rgba(179, 14, 15, 50%);
+  }
+  100% {
+    color: var(--darkGray);
+  }
+}
+
+@keyframes sunset {
+  0% {
+    filter: brightness(var(--filterValue));
+  }
+  100% {
+    filter: brightness(10%);
+  }
+}
+
+@keyframes loop {
+  0% {
+    left: var(--leftValue);
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes drum {
+  0% {
+    transform: rotate(0);
+  }
+  65%,
+  70% {
+    transform: rotate(-60deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes vibrate {
+  0%,
+  8%,
+  10%,
+  11%,
+  13%,
+  17%,
+  19%,
+  44%,
+  46%,
+  62%,
+  64%,
+  81%,
+  83%,
+  92%,
+  94%,
+  100% {
+    transform: scale(1);
+  }
+  9%,
+  12%,
+  18%,
+  45%,
+  63%,
+  82%,
+  93% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes emphasizeBeer {
+  0% {
+    transform: scale(1);
+  }
+  33%,
+  67% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bitch {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes promoExit {
+  0% {
+    color: var(--darkGray);
+  }
+  1%,
+  33% {
+    color: rgba(72, 160, 247, 90%);
+  }
+  34%,
+  99% {
+    color: var(--videoBlue);
+  }
+  100% {
+    color: var(--darkGray);
+  }
+}
+
+@keyframes invalidBlink {
+  0%,
+  33% {
+    visibility: visible;
+  }
+  34%,
+  66% {
+    visibility: hidden;
+  }
+  67%,
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes emphasizeMessage {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes secretExit {
+  0% {
+    color: var(--darkGray);
+  }
+  1%,
+  33% {
+    color: var(--secretPurple);
+  }
+  34%,
+  99% {
+  color: rgba(227, 184, 229, 50%);
+  }
+  100% {
+    color: var(--darkGray);
+  }
+}
+
+/* Color Variables */
+
+:root {
+  --hopeRed: #8A2231;
+  --sluRed: #B41E2F;
+  --exitRed: #B30E0F;
+  --sithRed: #CA0010;
+  --youtubeDarkRed: #D6101D;
+  --errorRed: #F21515;
+  --notificationRed: #F02120;
+  --youtubeRed: #FF0100;
+  --hockeyRed: #E54B5C;
+  --discordYellow: #DCAB26;
+  --clarksonGold: #FFCD00;
+  --cuntEmpireGreen: #6EC10E;
+  --buttonGreen: #5CB245;
+  --clarksonGreen: #004E42;
+  --clarksonLightGreen: #609089;
+  --hockeyDarkBlue: #2F7295;
+  --hockeyLightBlue: #67C6DD;
+  --videoBlue: #48A0F7;
+  --jediBlue: #0289EC;
+  --mysteryBlue: #003D7C;
+  --allinBlue: #1F4C8F;
+  --discordBlue: #7289DA;
+  --secretPurple: #E3B8E5;
+  --sluLightBrown: #DBC698;
+  --sluBrown: #603E31;
+  --youtubeDarkGray: #181818;
+  --discordDarkGray: #25272B;
+  --discordGray: #36393F;
+  --youtubeGray: #9C9C9C;
+  --discordLightGray: #ABACAE;
+  --youtubeLightGray: #C2C2C2;
+  --shimmerWhite: #F5FFF5;
+}
+
+/* Media Queries */
+
+@media only screen and (max-height: 600px),
+only screen and (max-width: 1200px) {
+  body {
+    background: var(--white);
+  }
+
+  main {
+    display: none;
+  }
+
+  #mobile {
+    z-index: 98;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 400px) {
+    #url {
+      word-break: break-all;
+    }
+
+    #mobileButtonContCont {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #mobileButtonCont {
+      height: 4em;
+    }
+
+    #mobileBio {
+      text-align: center;
+    }
+  }
+}
+
+/* End of stylesheet */

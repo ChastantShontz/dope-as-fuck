@@ -1,0 +1,589 @@
+/* Default behavior for all elements */
+* {
+  /* An "!important" tag is needed on the "background-repeat" property to overrule the "background" shorthand. It can only be overruled with another "!important" */
+  background-repeat: no-repeat !important;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Any element with the "disabled" attribute set to "true" will become partially transparent and unclickable */
+*[disabled] {
+  opacity: 50% !important;
+  pointer-events: none !important;
+}
+
+/* Removes the standard 8 pixels of margin around the <body> */
+body {
+  margin: 0;
+}
+
+/* Removes the default top and bottom margins from the <h[1-6]> and <p> */
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  /* A CSS bug causes the <h1> to behave like the <h2> when inside a <div> or similar container. This forces them to adopt the normal <h1> size at all times */
+  font-size: 2em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+blockquote {
+  margin-left: 96px;
+  margin-right: 96px;
+}
+
+/* Makes the text inside a <q> italic and the surrounding quotation marks non-italic */
+
+q {
+  font-style: italic;
+}
+
+q::before,
+q::after {
+  font-style: normal;
+  /* Changes the cursor to make the quotation marks appear like part of the text rather than pseudo-elements */
+  cursor: text;
+}
+
+/* When a <q> is nested inside another one, the italics of both the text and quotation marks will be flipped so that it is always the opposite of the parent element. Valid up to three layers of nesting */
+
+/* The first nested <q> gets curly single quotes. This is already done by default by the CSS */
+q > q {
+  font-style: normal;
+}
+
+q > q::before,
+q > q::after {
+  font-style: italic;
+  cursor: text;
+}
+
+q > q > q {
+  font-style: italic;
+  /* The second nested <q> gets straight double quotes */
+  quotes: "\0022" "\0022";
+}
+
+q > q > q::before,
+q > q > q::after {
+  font-style: normal;
+  cursor: text;
+}
+
+q > q > q > q {
+  font-style: normal;
+  /* The third and final nested <q> gets straight single quotes */
+  quotes: "\0027" "\0027";
+}
+
+q > q > q > q::before,
+q > q > q > q::after {
+  font-style: italic;
+  cursor: text;
+}
+
+cite {
+  font-style: normal;
+}
+
+/* Removes the default underline on the <ins> */
+ins {
+  text-decoration: none;
+}
+
+mark {
+  /* Applies the custom "--yellow" variable to the <mark> instead of the browser default */
+  background: var(--yellow);
+  padding-left: .1em;
+  padding-right: .1em;
+}
+
+dfn {
+  font-style: normal;
+}
+
+/* Forces the text in an <acronym> or <abbr> to be uppercase even if not typed that way and removes the default underline */
+
+acronym {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+abbr {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* All the same styles are given to the <var> and <output> to standardize their appearances */
+
+var {
+  color: var(--darkGray);
+  user-select: none;
+  cursor: default;
+}
+
+output {
+  color: var(--darkGray);
+  user-select: none;
+  cursor: default;
+}
+
+/* All the same styles are given to the <kbd>, <code>, and <samp> to standardize their appearances */
+
+kbd {
+  border-radius: .1em;
+  background: var(--lightGray);
+  padding-left: .1em;
+  padding-right: .1em;
+  border: .05em solid var(--darkGray);
+  color: var(--darkGray);
+  user-select: none;
+  cursor: default;
+}
+
+code {
+  border-radius: .1em;
+  background: var(--lightGray);
+  padding-left: .1em;
+  padding-right: .1em;
+  border: .05em solid var(--darkGray);
+  color: var(--darkGray);
+}
+
+samp {
+  border-radius: .1em;
+  background: var(--lightGray);
+  padding-left: .1em;
+  padding-right: .1em;
+  border: .05em solid var(--darkGray);
+  color: var(--darkGray);
+}
+
+/* Standardizes the sizes of the <sup> and <sub> */
+sup,
+sub {
+  font-size: .5em;
+}
+
+/* To display a fraction, give a <span> the class "fraction" and wrap both the numerator and denominator in a <span> of their own inside it. Do not put any other elements directly inside the outer <span>. Any whole numbers must also go outside it. Can be nested an infinite number of times, as long as the browser can render the font sizes. This can be used as an alternative to the <mfrac> in MathML */
+
+span.fraction {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+span.fraction > span {
+  display: block;
+  position: relative;
+  bottom: .25em;
+  font-size: .5em;
+}
+
+/* Adds styles specific to the numerator <span> */
+span.fraction > span:first-child {
+  margin-bottom: -.01em;
+}
+
+/* Adds styles specific to the denominator <span> */
+span.fraction > span:last-child {
+  border-top: .01em solid currentColor;
+  margin-top: -.02em;
+}
+
+/* The class "normalWeight" can be applied to a <span> with bold text to set the "font-weight" back to "normal", like a reverse <b> or <strong> */
+span.normalWeight {
+  font-weight: normal;
+}
+
+/* The class "normalStyle" can be applied to a <span> with italic text to set the "font-style" back to "normal", like a reverse <i> or <em> */
+span.normalStyle {
+  font-style: normal;
+}
+
+/* The class "noDecoration" can be applied to a <span> with a "text-decoration" to set it back to "none", like a reverse <u>, <strike>, <s>, or <del> */
+span.noDecoration {
+  text-decoration: none;
+}
+
+/* Deals with stylizing the <ruby> annotations found in Asian text and the <rt> and <rp> that often accompany them. The <ruby> is placed above the body text, aligned with its starting position, and allowed to merge with overflowing characters */
+ruby {
+  ruby-position: over;
+  ruby-merge: merge;
+  ruby-align: start;
+}
+
+/* Deals with stylizing the Material Icons and Material Symbols Outlined provided by Google Fonts */
+span.material-icons,
+span.material-symbols-outlined {
+  font-size: 1em;
+}
+
+/* Applies the custom "--blue" and "--violet" variables to the <a> instead of the browser defaults */
+
+a {
+  color: var(--blue);
+  /* Removes the default underline on the <a> */
+  text-decoration: none;
+}
+
+/* The following pseudo-classes provide behavior for an <a> with the class "defaultLink" when it is active, hovered over, or has been visited. The more specific ones have been placed farther down to ensure that they will overrule the others */
+
+a.defaultLink:visited {
+  color: var(--violet);
+}
+
+a.defaultLink:hover {
+  /* Replaces the underline when an <a> is hovered over */
+  text-decoration: underline currentColor solid .05em;
+}
+
+a.defaultLink:active {
+  color: var(--violet);
+}
+
+/* Gives the <button> some default styles that can act as placeholders until overruled */
+button,
+/* These styles also apply to the <input> when it has a "type" of "button", "reset", or "submit" */
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  display: inline-block;
+  border-radius: 0;
+  background: var(--gray);
+  padding: 0;
+  border: none;
+  font-size: 1em;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* Sets an eased transition that will work with the "active" pseudo-class below. This must be applied to the element itself and not the pseudo-class to prevent the styles from instantly reverting back when it is removed */
+button.defaultButton,
+input[type="button"].defaultButton,
+input[type="reset"].defaultButton,
+input[type="submit"].defaultButton {
+  transition: transform .1s ease 0s;
+}
+
+/* This pseudo-class provides behavior for a <button> with the class "defaultButton" when it is active. It will also apply to an <input> with a "type" of "button", "reset", or "submit" */
+button.defaultButton:active,
+input[type="button"].defaultButton:active,
+input[type="reset"].defaultButton:active,
+input[type="submit"].defaultButton:active {
+  transform: scale(.95);
+}
+
+/* Ensures that the <hr> always takes up the entire width of its container and has the same margins on the top and bottom */
+hr {
+  background: var(--black);
+  height: .1em;
+  width: 100%;
+  border: none;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+summary {
+  width: fit-content;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+ol {
+  padding-left: 48px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* The class "outline" can be applied to an <ol> to make it adapt to the standard outline format */
+
+/* The outermost <ol> in an outline gets uppercase Roman numerals */
+ol.outline {
+  list-style: upper-roman;
+}
+
+/* Prevents an <ol> with the class "outline" and any other <ol> nested inside it from having an image as its marker. An "!important" tag is needed to overrule the "list-style" shorthand. It can only be overruled with another "!important" */
+ol.outline,
+ol.outline ol {
+  list-style-image: none !important;
+}
+
+/* When an <ol> is nested inside another one with the class "outline", it will also conform to outline format even if it does not have this class itself. Valid up to four layers of nesting */
+
+/* The first nested <ol> in an outline gets uppercase Latin letters */
+ol.outline > ol {
+  list-style: upper-alpha;
+}
+
+/* The second nested <ol> in an outline gets Arabic numbers. This would be the default without any CSS styling */
+ol.outline > ol > ol {
+  list-style: decimal;
+}
+
+/* The third nested <ol> in an outline gets lowercase Latin letters */
+ol.outline > ol > ol > ol {
+  list-style: lower-alpha;
+}
+
+/* The fourth and final nested <ol> in an outline gets lowercase Roman numerals */
+ol.outline > ol > ol > ol > ol {
+  list-style: lower-roman;
+}
+
+ul,
+menu {
+  padding-left: 48px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Makes the <dl> appear and behave more like a standard list, like the <ol>, <ul>, and <menu> */
+
+dl {
+  padding-left: 48px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+dt {
+  margin-left: -48px;
+  font-weight: bold;
+}
+
+dd {
+  display: list-item;
+  list-style: none;
+  margin-left: 0;
+}
+
+/* Because there is no "list-style" for a dashed list, the marker for the <dd> is done with a pseudo-element instead */
+dd::marker {
+  content: "-\00a0";
+}
+
+/* Assigns fixed dimensions to the <table> and eliminates excessive spacing */
+table {
+  table-layout: fixed;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+th {
+  padding: .1em;
+  text-align: left;
+  vertical-align: top;
+}
+
+td {
+  padding: .1em;
+  vertical-align: top;
+}
+
+fieldset {
+  padding: .5em;
+  border: .1em solid var(--black);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+legend {
+  padding-left: .1em;
+  padding-right: .1em;
+  margin-left: 5%;
+  font-weight: bold;
+}
+
+dialog {
+  padding: .5em;
+  border: .1em solid var(--black);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+meter {
+  display: inline-block;
+}
+
+progress {
+  display: inline-block;
+}
+
+/* Gives the <select> some default styles that can act as placeholders until overruled */
+select {
+  display: inline-block;
+  border-radius: .5em;
+  background: var(--white);
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  border: .1em solid var(--black);
+  font-size: 1em;
+  cursor: pointer;
+}
+
+optgroup {
+  font-style: normal;
+}
+
+/* Any <option> with the "value" of "default" will automatically have its "font-weight" set to "bold" */
+option[value="default"] {
+  font-weight: bold;
+}
+
+input {
+  display: inline-block;
+}
+
+/* Standardizes the appearances of any <input> with a "type" that is text-based */
+input[type="text"],
+input[type="search"],
+input[type="url"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="number"],
+input[type="week"],
+input[type="month"],
+input[type="time"],
+input[type="date"],
+input[type="datetime-local"] {
+  border-radius: .1em;
+  padding: .1em;
+  border: .05em solid var(--black);
+  font-size: 1em;
+}
+
+/* Depending on browsers, an <input> with a following "type" may not obey the "size" attribute. This approximates this by setting their width based on the numbers of characters they can visibly fit */
+input[type="number"],
+input[type="week"],
+input[type="month"],
+input[type="time"],
+input[type="date"],
+input[type="datetime-local"] {
+  width: 25ch;
+}
+
+/* Sets a button-esq cursor on any <input> with a "type" that requires it to be clicked on */
+input[type="week"],
+input[type="month"],
+input[type="time"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="file"],
+input[type="color"],
+input[type="checkbox"],
+input[type="radio"],
+input[type="image"],
+input[type="range"] {
+  cursor: pointer;
+}
+
+/* An <input> with the "type" of "file" needs to have its "font-size" set but does not obey the other styles given to the text-based ones */
+input[type="file"] {
+  font-size: 1em;
+}
+
+textarea {
+  display: inline-block;
+  padding: .5em;
+  border: .1em solid var(--black);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+label {
+  cursor: text;
+}
+
+figure {
+  margin: 0;
+}
+
+/* Many inline elements have their "display" changed to "inline-block" so they will be easier to resize */
+
+img {
+  display: inline-block;
+  user-select: none;
+}
+
+picture {
+  display: inline-block;
+}
+
+svg {
+  display: inline-block;
+}
+
+canvas {
+  display: inline-block;
+}
+
+video {
+  display: inline-block;
+  user-select: none;
+}
+
+embed {
+  display: inline-block;
+}
+
+object {
+  display: inline-block;
+}
+
+iframe {
+  display: inline-block;
+}
+
+/* Provides a library of convenient variables for some of the most common colors. With the exceptions of "--black" and "--white", which are the purest versions of those colors, none of these are the same as the corresponding CSS keywords */
+:root {
+  --darkRed: #520202;
+  --red: #D01313;
+  --darkOrange: #A82F03;
+  --orange: #FA9600;
+  --gold: #DFC010;
+  --yellow: #FDF228;
+  --lightGreen: #B8E048;
+  --green: #209748;
+  --darkGreen: #033615;
+  --turquoise: #34C9A4;
+  --lightBlue: #76E8F0;
+  --blue: #2D5BB8;
+  --darkBlue: #070266;
+  --indigo: #390270;
+  --violet: #9A3CC9;
+  --pink: #FC95E4;
+  --tan: #C28659;
+  --lightBrown: #693D1C;
+  --brown: #260F00;
+  --black: #000000;
+  --darkGray: #444444;
+  --gray: #999999;
+  --lightGray: #DDDDDD;
+  --white: #FFFFFF;
+}

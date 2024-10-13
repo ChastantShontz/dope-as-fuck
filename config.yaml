@@ -1,0 +1,1483 @@
+---
+
+procotol:
+  path: "index.html"
+  relationship: "config"
+  fetchPriority: "low"
+  parties:
+    source:
+      name: "config.yaml"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      type: "application/yaml"
+    destination:
+      name: "index.html"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      type: "text/html"
+docType: "html"
+language:
+  dialect: "en"
+  country: "us"
+translatable: false
+direction: "left to right"
+xmlns: "http://www.w3.org/1999/xhtml"
+prefix: "og:http://ogp.me/ns#"
+profile: "http://www.w3.org/2007/11/powder-profile"
+itemScope:
+  itemType: "http://schema.org/VideoGame"
+charSet: "utf-8"
+httpEquiv:
+  language:
+    dialect: "en"
+    country: "us"
+  type:
+    content: "text/html"
+    style: "text/css"
+    script: "text/javascript"
+  uaCompatible:
+    chrome: 1
+    ie: "edge"
+  dnsPrefetchControl: true
+  encoding: "gzip"
+  securityPolicy: "*",
+  accessControlAllowOrigin: "*"
+  cacheControl:
+    public: true
+    maxAge: 604800
+    staleWhileRevalidate: 86400
+    staleIfError: 259200
+  vary:
+    - "accept language"
+    - "accept encoding"
+    - "user agent"
+  expires: 604800
+  refresh: -1
+  disposition: "inline"
+  windowTarget: "_top"
+  clearType: false
+  imageToolbar: false
+  pageTransition:
+    enter:
+      method: "blendtrans"
+      duration: .25
+    exit:
+      method: "blendtrans"
+      duration: .25
+  picsLabel:
+    icra:
+      l:
+        - "a"
+        - "b"
+      n: "g"
+      v: "g"
+      o:
+        - "b"
+        - "f"
+        - "g"
+        - "h"
+    safeSurf:
+      ss001: 3
+      ss002: 3
+      ss003: 9
+      ss005: 2
+      ss007: 3
+      ss008: 4
+    rsac:
+      l: 4
+      s: 3
+      n: 0
+      v: 1
+    safeForKids: 2
+url: "https://chastantshontz.github.io/dope-as-fuck"
+pageKey: "home"
+author: "Chestnut"
+email: "chastant542@gmail.com"
+created:
+  date: "2022-04-08"
+medium: "video game"
+generator: "GitHub Desktop"
+handheldFriendly: false
+license: "README.md"
+copyright: "Copyright &copy; 2022 Clarkson University pep band, all rights reserved"
+subject: "pep band conductor"
+description: "A video game that simulates being the conductor of the Clarkson University pep band"
+coverage:
+  spatial:
+    position:
+      latitude: 44.6639493
+      longitude: -75.0016581
+    locality: "Potsdam"
+    state: "NY"
+    country: "USA"
+distribution: "global"
+rating: "restricted"
+keywords:
+  - "alcoholic"
+  - "alcoholic"
+  - "Arrow"
+  - "assassin"
+  - "bandie"
+  - "Beer-lympics"
+  - "bitch"
+  - "black death ball"
+  - "boat"
+  - "boom roasted"
+  - "broken foot"
+  - "Buffalo"
+  - "burger"
+  - "Busch"
+  - "Canton"
+  - "Cheel"
+  - "cheer"
+  - "Christmas tree"
+  - "Clarkson"
+  - "conductor"
+  - "cowbell"
+  - "Crappleton"
+  - "dance"
+  - "dirty sex"
+  - "dope as fuck"
+  - "Dr. Pepper"
+  - "Eben's Hearth"
+  - "energy and fatigue"
+  - "fuck SLU"
+  - "gangbang"
+  - "gate"
+  - "goal"
+  - "Golden Knights"
+  - "halftime"
+  - "hockey"
+  - "ice"
+  - "instrument"
+  - "Jake's On the Water"
+  - "jungle juice"
+  - "kazoo"
+  - "KnightGuard"
+  - "KnightMobile"
+  - "milk and cookies"
+  - "music"
+  - "nail in wood"
+  - "no who told you"
+  - "olive oil"
+  - "overtime"
+  - "penalty"
+  - "pep band"
+  - "pi"
+  - "pillow"
+  - "Potsdam"
+  - "pregame"
+  - "prochnost"
+  - "published paper"
+  - "puck"
+  - "rage cage"
+  - "rapid access path to education"
+  - "rivals"
+  - "Route 11"
+  - "rule of four"
+  - "S&M Man"
+  - "Saints"
+  - "salt mine"
+  - "Santa"
+  - "screwdriver"
+  - "sexy"
+  - "shot"
+  - "sieve"
+  - "sing"
+  - "SLU"
+  - "slut"
+  - "soap"
+  - "social"
+  - "soup"
+  - "spatula"
+  - "Sweet Caroline"
+  - "tech"
+  - "Tijuana"
+  - "tits"
+  - "Toronto"
+  - "ugly"
+  - "Wednesday"
+  - "zebra"
+robots:
+  google:
+    desktop:
+      index: true
+      imageIndex: true
+      indexIfEmbedded: true
+      siteLinksSearchBox: true
+      follow: false
+      cache: true
+      archive: true
+      translate: false
+      snippet: true
+      maxPreview:
+        image: true
+        video: true
+    mobile:
+      index: true
+      imageIndex: true
+      indexIfEmbedded: true
+      siteLinksSearchBox: true
+      follow: false
+      cache: true
+      archive: true
+      translate: false
+      snippet: true
+      maxPreview:
+        image: true
+        video: true
+    readAloud:
+      index: true
+      imageIndex: true
+      indexIfEmbedded: true
+      siteLinksSearchBox: true
+      follow: false
+      cache: true
+      archive: true
+      translate: false
+      snippet: true
+      maxPreview:
+        image: true
+        video: true
+    siteVerification:
+      index: true
+      imageIndex: true
+      indexIfEmbedded: true
+      siteLinksSearchBox: true
+      follow: false
+      cache: true
+      archive: true
+      translate: false
+      snippet: true
+      maxPreview:
+        image: true
+        video: true
+    feedFetcher:
+      index: true
+      imageIndex: true
+      indexIfEmbedded: true
+      siteLinksSearchBox: true
+      follow: false
+      cache: true
+      archive: true
+      translate: false
+      snippet: true
+      maxPreview:
+        image: true
+        video: true
+    news:
+      index: true
+      imageIndex: true
+      indexIfEmbedded: true
+      siteLinksSearchBox: true
+      follow: false
+      cache: true
+      archive: true
+      translate: false
+      snippet: true
+      maxPreview:
+        image: true
+        video: true
+    producer:
+      index: true
+      imageIndex: true
+      indexIfEmbedded: true
+      siteLinksSearchBox: true
+      follow: false
+      cache: true
+      archive: true
+      translate: false
+      snippet: true
+      maxPreview:
+        image: true
+        video: true
+    store:
+      index: true
+      imageIndex: true
+      indexIfEmbedded: true
+      siteLinksSearchBox: true
+      follow: false
+      cache: true
+      archive: true
+      translate: false
+      snippet: true
+      maxPreview:
+        image: true
+        video: true
+    ads:
+      desktop:
+        index: false
+        imageIndex: false
+        indexIfEmbedded: false
+        siteLinksSearchBox: false
+        follow: false
+        cache: false
+        archive: false
+        translate: false
+        snippet: false
+        maxPreview:
+          image: false
+          video: false
+      mobile:
+        index: false
+        imageIndex: false
+        indexIfEmbedded: false
+        siteLinksSearchBox: false
+        follow: false
+        cache: false
+        archive: false
+        translate: false
+        snippet: false
+        maxPreview:
+          image: false
+          video: false
+    mediaPartners:
+      desktop:
+        index: false
+        imageIndex: false
+        indexIfEmbedded: false
+        siteLinksSearchBox: false
+        follow: false
+        cache: false
+        archive: false
+        translate: false
+        snippet: false
+        maxPreview:
+          image: false
+          video: false
+      mobile:
+        index: false
+        imageIndex: false
+        indexIfEmbedded: false
+        siteLinksSearchBox: false
+        follow: false
+        cache: false
+        archive: false
+        translate: false
+        snippet: false
+        maxPreview:
+          image: false
+          video: false
+    apis:
+      index: false
+      imageIndex: false
+      indexIfEmbedded: false
+      siteLinksSearchBox: false
+      follow: false
+      cache: false
+      archive: false
+      translate: false
+      snippet: false
+      maxPreview:
+        image: false
+        video: false
+    media:
+      image:
+        index: true
+        imageIndex: true
+        indexIfEmbedded: true
+        siteLinksSearchBox: true
+        follow: false
+        cache: true
+        archive: true
+        translate: false
+        snippet: true
+        maxPreview:
+          image: true
+          video: true
+      video:
+        index: true
+        imageIndex: true
+        indexIfEmbedded: true
+        siteLinksSearchBox: true
+        follow: false
+        cache: true
+        archive: true
+        translate: false
+        snippet: true
+        maxPreview:
+          image: true
+          video: true
+    safety:
+      index: true
+      imageIndex: true
+      indexIfEmbedded: true
+      siteLinksSearchBox: true
+      follow: false
+      cache: true
+      archive: true
+      translate: false
+      snippet: true
+      maxPreview:
+        image: true
+        video: true
+    inspectionTool:
+      index: false
+      imageIndex: false
+      indexIfEmbedded: false
+      siteLinksSearchBox: false
+      follow: false
+      cache: false
+      archive: false
+      translate: false
+      snippet: false
+      maxPreview:
+        image: false
+        video: false
+    extended:
+      index: true
+      imageIndex: true
+      indexIfEmbedded: true
+      siteLinksSearchBox: true
+      follow: false
+      cache: true
+      archive: true
+      translate: false
+      snippet: true
+      maxPreview:
+        image: true
+        video: true
+    other:
+      media:
+        image:
+          index: true
+          imageIndex: true
+          indexIfEmbedded: true
+          siteLinksSearchBox: true
+          follow: false
+          cache: true
+          archive: true
+          translate: false
+          snippet: true
+          maxPreview:
+            image: true
+            video: true
+        video:
+          index: true
+          imageIndex: true
+          indexIfEmbedded: true
+          siteLinksSearchBox: true
+          follow: false
+          cache: true
+          archive: true
+          translate: false
+          snippet: true
+          maxPreview:
+            image: true
+            video: true
+  bing:
+    index: true
+    imageIndex: true
+    indexIfEmbedded: true
+    siteLinksSearchBox: true
+    follow: false
+    cache: true
+    archive: true
+    translate: false
+    snippet: true
+    maxPreview:
+      image: true
+      video: true
+  slurp:
+    index: true
+    imageIndex: true
+    indexIfEmbedded: true
+    siteLinksSearchBox: true
+    follow: false
+    cache: true
+    archive: true
+    translate: false
+    snippet: true
+    maxPreview:
+      image: true
+      video: true
+  duckDuckGo:
+    index: true
+    imageIndex: true
+    indexIfEmbedded: true
+    siteLinksSearchBox: true
+    follow: false
+    cache: true
+    archive: true
+    translate: false
+    snippet: true
+    maxPreview:
+      image: true
+      video: true
+  swift:
+    index: true
+    imageIndex: true
+    indexIfEmbedded: true
+    siteLinksSearchBox: true
+    follow: false
+    cache: true
+    archive: true
+    translate: false
+    snippet: true
+    maxPreview:
+      image: true
+      video: true
+  commonCrawl:
+    index: true
+    imageIndex: true
+    indexIfEmbedded: true
+    siteLinksSearchBox: true
+    follow: false
+    cache: true
+    archive: true
+    translate: false
+    snippet: true
+    maxPreview:
+      image: true
+      video: true
+  yandex:
+    index: true
+    imageIndex: true
+    indexIfEmbedded: true
+    siteLinksSearchBox: true
+    follow: false
+    cache: true
+    archive: true
+    translate: false
+    snippet: true
+    maxPreview:
+      image: true
+      video: true
+  baidu:
+    index: true
+    imageIndex: true
+    indexIfEmbedded: true
+    siteLinksSearchBox: true
+    follow: false
+    cache: true
+    archive: true
+    translate: false
+    snippet: true
+    maxPreview:
+      image: true
+      video: true
+  sogou:
+    index: true
+    imageIndex: true
+    indexIfEmbedded: true
+    siteLinksSearchBox: true
+    follow: false
+    cache: true
+    archive: true
+    translate: false
+    snippet: true
+    maxPreview:
+      image: true
+      video: true
+  exalead:
+    index: true
+    imageIndex: true
+    indexIfEmbedded: true
+    siteLinksSearchBox: true
+    follow: false
+    cache: true
+    archive: true
+    translate: false
+    snippet: true
+    maxPreview:
+      image: true
+      video: true
+  apple:
+    index: true
+    imageIndex: true
+    indexIfEmbedded: true
+    siteLinksSearchBox: true
+    follow: false
+    cache: true
+    archive: true
+    translate: false
+    snippet: true
+    maxPreview:
+      image: true
+      video: true
+  amazon:
+    index: true
+    imageIndex: true
+    indexIfEmbedded: true
+    siteLinksSearchBox: true
+    follow: false
+    cache: true
+    archive: true
+    translate: false
+    snippet: true
+    maxPreview:
+      image: true
+      video: true
+  facebook:
+    index: true
+    imageIndex: true
+    indexIfEmbedded: true
+    siteLinksSearchBox: true
+    follow: false
+    cache: true
+    archive: true
+    translate: false
+    snippet: true
+    maxPreview:
+      image: true
+      video: true
+referrerPolicy: "strict origin when cross-origin"
+csrf:
+  param: "authenticity token"
+  token: "neosoNonyuvjdeXeseTsivtyDaipfaTvyujsivtUammEfaumMemmiCvfsejdyjdTaipfaToltsuloTeseTivpemeHafeDvvippiCitomIyeiwiFeppiKunupuCpeaSajvseDdNemmiCepiTiFputomEultOeppeiSmejvpituSesfpezimEissoyhEbvisCiowemGpuauFepeosfEputxeMennIpoqejD"
+retryAfter: 60
+revisitAfter: 604800
+viewport:
+  size:
+    height: "device height"
+    width: "device width"
+  userScalable: true
+  interactiveWidget: "resizes content"
+  scale:
+    initial: 1
+    minimum: .1
+    maximum: 10
+formatDetection: "all"
+color:
+  scheme: "only light"
+  theme: "#004E42"
+compatibility:
+  mobileWebAppCapable: true
+  apple:
+    mobileWebAppCapable: true
+    title: "Conductor Simulator | Conduct the Clarkson University Pep Band!"
+    statusBarStyle: "default"
+    touchFullscreen: true
+  applicationName: "Conductor Simulator | Conduct the Clarkson University Pep Band!"
+  msApplication:
+    startUrl: "https://chastantshontz.github.io/dope-as-fuck"
+    toolTip: "Conductor Simulator | Conduct the Clarkson University Pep Band!"
+    tapHighlight: false
+    navButtonColor: "#004E42"
+    tile:
+      color: "#004E42"
+      image: "img/preview.png"
+    allowDomainApiCalls: true
+    allowDomainMetaTags: true
+    smartTagsPreventParsing: true
+  powder:
+    webDescriptionResource:
+      attribution:
+        domain: "GitHub Pages"
+        organization: "Clarkson University pep band"
+        created:
+          date: "2022-04-08"
+        coverage:
+          temporal:
+            start: "2021-09"
+            end: "2022-03"
+      descriptionResource:
+        description:
+          title: "Conductor Simulator | Conduct the Clarkson University Pep Band!"
+          type: "text/html"
+          certified: true
+          comment: "Fuck SLU!"
+          seeAlso: "https://clarksonpepband.org"
+          icon: "img/favicon.ico"
+        keywords:
+          - "alcoholic"
+          - "alcoholic"
+          - "Arrow"
+          - "assassin"
+          - "bandie"
+          - "Beer-lympics"
+          - "bitch"
+          - "black death ball"
+          - "boat"
+          - "boom roasted"
+          - "broken foot"
+          - "Buffalo"
+          - "burger"
+          - "Busch"
+          - "Canton"
+          - "Cheel"
+          - "cheer"
+          - "Christmas tree"
+          - "Clarkson"
+          - "conductor"
+          - "cowbell"
+          - "Crappleton"
+          - "dance"
+          - "dirty sex"
+          - "dope as fuck"
+          - "Dr. Pepper"
+          - "Eben's Hearth"
+          - "energy and fatigue"
+          - "fuck SLU"
+          - "gangbang"
+          - "gate"
+          - "goal"
+          - "Golden Knights"
+          - "halftime"
+          - "hockey"
+          - "ice"
+          - "instrument"
+          - "Jake's On the Water"
+          - "jungle juice"
+          - "kazoo"
+          - "KnightGuard"
+          - "KnightMobile"
+          - "milk and cookies"
+          - "music"
+          - "nail in wood"
+          - "no who told you"
+          - "olive oil"
+          - "overtime"
+          - "penalty"
+          - "pep band"
+          - "pi"
+          - "pillow"
+          - "Potsdam"
+          - "pregame"
+          - "prochnost"
+          - "published paper"
+          - "puck"
+          - "rage cage"
+          - "rapid access path to education"
+          - "rivals"
+          - "Route 11"
+          - "rule of four"
+          - "S&M Man"
+          - "Saints"
+          - "salt mine"
+          - "Santa"
+          - "screwdriver"
+          - "sexy"
+          - "shot"
+          - "sieve"
+          - "sing"
+          - "SLU"
+          - "slut"
+          - "soap"
+          - "social"
+          - "soup"
+          - "spatula"
+          - "Sweet Caroline"
+          - "tech"
+          - "Tijuana"
+          - "tits"
+          - "Toronto"
+          - "ugly"
+          - "Wednesday"
+          - "zebra"
+  dublinCore:
+    elements:
+      url: "https://chastantshontz.github.io/dope-as-fuck"
+      title: "Conductor Simulator | Conduct the Clarkson University Pep Band!"
+      author: "Chestnut"
+      created:
+        date: "2022-04-08"
+      type: "text/html"
+      license: "README.md"
+      copyright: "Copyright &copy; 2022 Clarkson University pep band, all rights reserved"
+      subject: "pep band conductor"
+      decription: "A video game that simulates being the conductor of the Clarkson University pep band"
+      coverage:
+        spatial:
+          residence: "Clarkson University"
+          streetAddress: "8 Clarkson Ave."
+          locality: "Potsdam"
+          county: "St. Lawrence County"
+          state: "NY"
+          country: "USA"
+          postalCode: 13699
+        temporal:
+          start: "2021-09"
+          end: "2022-03"
+      language:
+        dialect: "en"
+        country: "us"
+      resourceType: "interactive resource"
+    terms:
+      audience: "Clarkson University pep band"
+      educationalLevel: "college"
+      size: 675
+      generator: "GitHub Desktop"
+      rightsHolder: "Clarkson University pep band"
+      tableOfContents:
+        folders:
+          - "fonts"
+          - "img"
+          - "video"
+          - "audio"
+          - ".vscode"
+          - ".git"
+        files:
+          - "index.html"
+          - "main.css"
+          - "normalize.css"
+          - "page.js"
+          - "data.json"
+          - "captions.vtt"
+          - "README.md"
+          - "command.sh"
+          - "config.yaml"
+          - "songs.pdf"
+          - "header.cpp"
+          - "code.m"
+          - ".gitattributes"
+      instrictionalMethod: "simulation"
+  twitter:
+    card: "summary large image"
+    site:
+      username: "@ClarksonPepBand"
+      serialNumber: 635792392
+    url: "https://chastantshontz.github.io/dope-as-fuck"
+    domain: "GitHub Pages"
+    title: "Conductor Simulator | Conduct the Clarkson University Pep Band!"
+    description: "A video game that simulates being the conductor of the Clarkson University pep band"
+    media:
+      image:
+        src: "img/preview.png"
+        alt: "A gameplay preview of Conductor Simulator"
+        size:
+          height: 2400
+          width: 3840
+      video:
+        src: "video/promo.mp4"
+        type: "video/mp4"
+        size:
+          height: 720
+          width: 1280
+  openGraph:
+    url: "https://chastantshontz.github.io/dope-as-fuck"
+    domain: "GitHub Pages"
+    title: "Conductor Simulator | Conduct the Clarkson University Pep Band!"
+    determiner: ""
+    medium: "video game"
+    description: "A video game that simulates being the conductor of the Clarkson University pep band"
+    coverage:
+      spatial:
+        position:
+          latitude: 44.6639493
+          longitude: -75.0016581
+        streetAddress: "8 Clarkson Ave."
+        locality: "Potsdam"
+        state: "NY"
+        country: "USA"
+        postalCode: 13699
+    language:
+      dialect: "en"
+      country: "us"
+    media:
+      image:
+        src: "img/preview.png"
+        alt: "A gameplay preview of Conductor Simulator"
+        type: "image/png"
+        size:
+          height: 2400
+          width: 3840
+      video:
+        src: "video/promo.mp4"
+        actor: "Joe DeSena"
+        created:
+          date: "2020-12-07"
+        type: "video/mp4"
+        duration: 61
+        size:
+          height: 720
+          width: 1280
+      audio:
+        src: "audio/sweetCaroline.mp3"
+        song: "Sweet Caroline"
+        artist: "Neil Diamond"
+        album: "Brother's Love Travelling Salvation Show"
+        type: "audio/mp3"
+  itemProp:
+    schemaVersion: "http://schema.org"
+    url: "https://chastantshontz.github.io/dope-as-fuck"
+    title: "Conductor Simulator | Conduct the Clarkson University Pep Band!"
+    author: "Chestnut"
+    email: "chastant542@gmail.com"
+    organization: "Clarkson University pep band"
+    audience: "Clarkson University pep band"
+    created:
+      location:
+        residence: "Clarkson University"
+        streetAddress: "8 Clarkson Ave."
+        locality: "Potsdam"
+        county: "St. Lawrence County"
+        state: "NY"
+        country: "USA"
+        postalCode: 13699
+      date: "2022-04-08"
+    status: "published"
+    type: "text/html"
+    license: "README.md"
+    copyright: "Copyright &copy; 2022 Clarkson University pep band, all rights reserved"
+    subject: "pep band conductor"
+    description: "A video game that simulates being the conductor of the Clarkson University pep band"
+    comment: "Fuck SLU!"
+    coverage:
+      spatial:
+        residence: "Clarkson University"
+        streetAddress: "8 Clarkson Ave."
+        locality: "Potsdam"
+        county: "St. Lawrence County"
+        state: "NY"
+        country: "USA"
+        postalCode: 13699
+      temporal:
+        start: "2021-09"
+        end: "2022-03"
+    distribution: "global"
+    language:
+      dialect: "en"
+      country: "us"
+    typicalAgeRange: "18&mdash;22"
+    permissions: "no SLUzers"
+    contentRating: "restricted"
+    keywords:
+      - "alcoholic"
+      - "alcoholic"
+      - "Arrow"
+      - "assassin"
+      - "bandie"
+      - "Beer-lympics"
+      - "bitch"
+      - "black death ball"
+      - "boat"
+      - "boom roasted"
+      - "broken foot"
+      - "Buffalo"
+      - "burger"
+      - "Busch"
+      - "Canton"
+      - "Cheel"
+      - "cheer"
+      - "Christmas tree"
+      - "Clarkson"
+      - "conductor"
+      - "cowbell"
+      - "Crappleton"
+      - "dance"
+      - "dirty sex"
+      - "dope as fuck"
+      - "Dr. Pepper"
+      - "Eben's Hearth"
+      - "energy and fatigue"
+      - "fuck SLU"
+      - "gangbang"
+      - "gate"
+      - "goal"
+      - "Golden Knights"
+      - "halftime"
+      - "hockey"
+      - "ice"
+      - "instrument"
+      - "Jake's On the Water"
+      - "jungle juice"
+      - "kazoo"
+      - "KnightGuard"
+      - "KnightMobile"
+      - "milk and cookies"
+      - "music"
+      - "nail in wood"
+      - "no who told you"
+      - "olive oil"
+      - "overtime"
+      - "penalty"
+      - "pep band"
+      - "pi"
+      - "pillow"
+      - "Potsdam"
+      - "pregame"
+      - "prochnost"
+      - "published paper"
+      - "puck"
+      - "rage cage"
+      - "rapid access path to education"
+      - "rivals"
+      - "Route 11"
+      - "rule of four"
+      - "S&M Man"
+      - "Saints"
+      - "salt mine"
+      - "Santa"
+      - "screwdriver"
+      - "sexy"
+      - "shot"
+      - "sieve"
+      - "sing"
+      - "SLU"
+      - "slut"
+      - "soap"
+      - "social"
+      - "soup"
+      - "spatula"
+      - "Sweet Caroline"
+      - "tech"
+      - "Tijuana"
+      - "tits"
+      - "Toronto"
+      - "ugly"
+      - "Wednesday"
+      - "zebra"
+    color: "#004E42"
+    aggregateRating: "11/10"
+    award: "bandie of the month"
+    potentialAction: "play"
+    accessMode: "visual"
+    digitalSourceType: "digital art digital source"
+    applicationCategory: "game"
+    applicationSubCategory: "video game"
+    genre: "satire"
+    generator: "GitHub Desktop"
+    platform: "browser"
+    availableOnDevice: "computer"
+    playMode: "single-player"
+    quest: "beat SLU"
+    character: "Joe DeSena"
+    gameLocation:
+      residence: "St. Lawrence University"
+      streetAddress: "23 Romonda Dr."
+      locality: "Canton"
+      county: "St. Lawrence County"
+      state: "NY"
+      country: "USA"
+      postalCode: 13617
+    cheatCode: "president, freshman representative, business manager, vice president, historian, social media chair"
+    additionalType: "learning resource"
+    teaches: "pep band traditions"
+    assesses: "pep band traditions"
+    learningResourceType: "simulation"
+    interactivityType: "active"
+    educationalUse: "training freshmen"
+    educationalLevel: "college"
+    educationalAlignment: "Clarkson University pep band"
+    media:
+      image: "img/preview.png"
+      video: "video/promo.mp4"
+      audio: "audio/sweetCaroline.mp3"
+title: "Conductor Simulator | Conduct the Clarkson University Pep Band!"
+resources:
+  links:
+    - href: "https://chastantshontz.github.io/dope-as-fuck"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "shortlink"
+      fetchPriority: "low"
+      type: "text/html"
+      id: "shortlink"
+    - href: "https://chastantshontz.github.io/dope-as-fuck"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "canonical"
+      fetchPriority: "low"
+      type: "text/html"
+      id: "canonical"
+    - href: "https://256stuff.com/gray/docs/pics/icra.html"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "schema.pics"
+      fetchPriority: "low"
+      referrerPolicy: "strict origin when cross-origin"
+      crossOrigin: "anonymous"
+      id: "picsIcra"
+    - href: "https://256stuff.com/gray/docs/pics/safesurf.html"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "schema.pics"
+      fetchPriority: "low"
+      referrerPolicy: "strict origin when cross-origin"
+      crossOrigin: "anonymous"
+      id: "picsSafeSurf"
+    - href: "https://256stuff.com/gray/docs/pics/rsac.html"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "schema.pics"
+      fetchPriority: "low"
+      referrerPolicy: "strict origin when cross-origin"
+      crossOrigin: "anonymous"
+      id: "picsRsac"
+    - href: "https://256stuff.com/gray/docs/pics/safeforkids.html"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "schema.pics"
+      fetchPriority: "low"
+      referrerPolicy: "strict origin when cross-origin"
+      crossOrigin: "anonymous"
+      id: "picsSafeForKids"
+    - href: "http://www.w3.org/2007/11/powder-profile"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "schema.powder"
+      fetchPriority: "low"
+      referrerPolicy: "strict origin when cross-origin"
+      crossOrigin: "anonymous"
+      id: "powder"
+    - href: "http://purl.org/dc/elements/1.1"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "schema.dc"
+      fetchPriority: "low"
+      referrerPolicy: "strict origin when cross-origin"
+      crossOrigin: "anonymous"
+      id: "dublinCore"
+    - href: "http://purl.org/dc/terms"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "schema.dcterms"
+      fetchPriority: "low"
+      referrerPolicy: "strict origin when cross-origin"
+      crossOrigin: "anonymous"
+      id: "dublinCoreTerms"
+    - href: "http://ogp.me/ns#"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "schema.og"
+      fetchPriority: "low"
+      referrerPolicy: "strict origin when cross-origin"
+      crossOrigin: "anonymous"
+      id: "openGraphProtocol"
+    - href: "http://schema.org"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "schema.itemprop"
+      fetchPriority: "low"
+      referrerPolicy: "strict origin when cross-origin"
+      crossOrigin: "anonymous"
+      id: "itemprop"
+    - href: "http://www.w3.org/1999/xhtml"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "schema.xmlns"
+      fetchPriority: "low"
+      referrerPolicy: "strict origin when cross-origin"
+      crossOrigin: "anonymous"
+      id: "xhtml"
+    - href: "https://www.tiktok.com/@clarksonpepband"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship:
+        - "external"
+        - "noopener"
+        - "noreferrer"
+        - "nofollow"
+      fetchPriority: "low"
+      referrerPolicy: "strict origin when cross-origin"
+      crossOrigin: "anonymous"
+      type: "text/html"
+      id: "tiktokAccount"
+    - href: "https://x.com/ClarksonPepBand"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship:
+        - "external"
+        - "noopener"
+        - "noreferrer"
+        - "nofollow"
+      fetchPriority: "low"
+      referrerPolicy: "strict origin when cross-origin"
+      crossOrigin: "anonymous"
+      type: "text/html"
+      id: "xAccount"
+    - href: "https://www.instagram.com/clarksonpepband"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship:
+        - "external"
+        - "noopener"
+        - "noreferrer"
+        - "nofollow"
+      fetchPriority: "low"
+      referrerPolicy: "strict origin when cross-origin"
+      crossOrigin: "anonymous"
+      type: "text/html"
+      id: "instagramAccount"
+    - href: "https://www.facebook.com/clarksonpepband"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship:
+        - "external"
+        - "noopener"
+        - "noreferrer"
+        - "nofollow"
+      fetchPriority: "low"
+      referrerPolicy: "strict origin when cross-origin"
+      crossOrigin: "anonymous"
+      type: "text/html"
+      id: "facebookAccount"
+    - href: "https://clarksonpepband.org"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship:
+        - "external"
+        - "noopener"
+        - "noreferrer"
+        - "nofollow"
+      fetchPriority: "low"
+      referrerPolicy: "strict origin when cross-origin"
+      crossOrigin: "anonymous"
+      type: "text/html"
+      id: "externalWebsite"
+    - href: "code.m"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "exclusive"
+      fetchPriority: "low"
+      type: "text/x-objcsrc"
+      id: "codeMatlab"
+    - href: "header.cpp"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "header"
+      fetchPriority: "low"
+      type: "text/x-c"
+      id: "headerCPlusPlus"
+    - href: "songs.pdf"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "download"
+      fetchPriority: "low"
+      type: "application/pdf"
+      id: "songsPdf"
+    - href: "command.sh"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "shell"
+      fetchPriority: "low"
+      type: "text/x-sh"
+      id: "commandBashShellScript"
+    - href: "README.md"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "readme"
+      fetchPriority: "low"
+      type: "text/markdown"
+      id: "readmeMarkdown"
+    - href: "img/pepBand.png"
+      relationship: "apple touch startup image"
+      fetchPriority: "high"
+      type: "image/png"
+      size:
+        height: "any"
+        width: "any"
+      id: "startupImage"
+    - href: "img/joeDesenaIcon1024.png"
+      relationship: "apple touch icon precomposed"
+      fetchPriority: "high"
+      type: "image/png"
+      size:
+        height: 1024
+        width: 1024
+      media: "only screen and (min-device-width: 320px) and (max-device-width: 1600px)"
+      id: "icon1024"
+    - href: "img/joeDesenaIcon172.png"
+      relationship: "apple touch icon precomposed"
+      fetchPriority: "high"
+      type: "image/png"
+      size:
+        height: 172
+        width: 172
+      media: "only screen and (min-device-width: 218px) and (max-device-width: 281px)"
+      id: "icon172"
+    - href: "img/joeDesenaIcon120.png"
+      relationship: "apple touch icon precomposed"
+      fetchPriority: "high"
+      type: "image/png"
+      size:
+        height: 120
+        width: 120
+      media: "only screen and (min-device-width: 320px) and (max-device-width: 1600px)"
+      id: "icon120"
+    - href: "img/joeDesenaIcon86.png"
+      relationship: "apple touch icon precomposed"
+      fetchPriority: "high"
+      type: "image/png"
+      size:
+        height: 86
+        width: 86
+      media: "only screen and (min-device-width: 218px) and (max-device-width: 1600px)"
+      id: "icon86"
+    - href: "img/joeDesenaIcon48.png"
+      relationship: "apple touch icon precomposed"
+      fetchPriority: "high"
+      type: "image/png"
+      size:
+        height: 48
+        width: 48
+      media: "only screen and (min-device-width: 218px) and (max-device-width: 281px)"
+      id: "icon48"
+    - href: "img/joeDesenaIcon40.png"
+      relationship: "apple touch icon precomposed"
+      fetchPriority: "high"
+      type: "image/png"
+      size:
+        height: 40
+        width: 40
+      media: "only screen and (min-device-width: 320px) and (max-device-width: 1600px)"
+      id: "icon40"
+    - href: "img/favicon.png"
+      relationship: "mask icon"
+      fetchPriority: "high"
+      type: "image/png"
+      size:
+        height: 64
+        width: 64
+      id: "faviconPng"
+    - href: "img/favicon.ico"
+      relationship:
+        - "shortcut"
+        - "icon"
+      fetchPriority: "high"
+      type: "image/vnd.microsoft.icon"
+      size:
+        height: 64
+        width: 64
+      id: "faviconIco"
+    - href: "captions.vtt"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "captions"
+      fetchPriority: "low"
+      type: "text/vtt"
+      id: "captionsVideoTextTrack"
+    - href: "data.json"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "import"
+      fetchPriority: "low"
+      type: "application/json"
+      id: "dataJson"
+    - href: "https://fonts.gstatic.com"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "preconnect"
+      fetchPriority: "high"
+      referrerPolicy: "strict origin when cross-origin"
+      crossOrigin: "anonymous"
+      id: "gStatic"
+    - href: "https://fonts.googleapis.com/icon?family=Material+Icons|Material+Symbols+Outlined"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "stylesheet"
+      fetchPriority: "low"
+      referrerPolicy: "strict origin when cross-origin"
+      crossOrigin: "anonymous"
+      type: "text/css"
+      id: "googleIcons"
+    - href: "https://fonts.googleapis.com/css?family=Acme|Aldrich|Anton|Archivo+Black|Bangers|Belanosima|Boogaloo|Bungee|Candal|Creepster|Dosis|EB+Garamond|Kalam|Kanit|Lekton|Libre+Barcode+128|Luckiest+Guy|Merienda|Merriweather|Monoton|Montserrat|Oswald|Palette+Mosaic|Patrick+Hand|Press+Start+2P|Roboto|Rubik+Mono+One|Russo+One|Satisfy|Shadows+Into+Light|Slackey|Source+Code+Pro|Titillium+Web|Wallpoet|Zilla+Slab"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship:
+        - "preload"
+        - "stylesheet"
+      as: "style"
+      fetchPriority: "high"
+      referrerPolicy: "strict origin when cross-origin"
+      crossOrigin: "anonymous"
+      type: "text/css"
+      id: "googleFonts"
+    - href: "normalize.css"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship:
+        - "preload"
+        - "stylesheet"
+      as: "style"
+      fetchPriority: "high"
+      type: "text/css"
+      id: "normalizeStylesheet"
+    - href: "main.css"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship:
+        - "preload"
+        - "stylesheet"
+      as: "style"
+      fetchPriority: "high"
+      type: "text/css"
+      id: "mainStylesheet"
+  scripts:
+    - src: ".vscode/jsconfig.json"
+      charSet: "utf-8"
+      fetchPriority: "low"
+      type: "importmap"
+      loading:
+        async: false
+        defer: true
+      id: "vsCodeJsConfig"
+    - src: ".vscode/main.js"
+      charSet: "utf-8"
+      fetchPriority: "low"
+      type: "module"
+      loading:
+        async: false
+        defer: true
+      id: "vsCodeMain"
+    - src: "page.js"
+      charSet: "utf-8"
+      fetchPriority: "high"
+      type: "text/javascript"
+      loading:
+        async: true
+        defer: false
+      id: "pageScript"

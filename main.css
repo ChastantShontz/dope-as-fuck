@@ -4100,6 +4100,11 @@ main {
   font-size: .9em;
 }
 
+.memoryOutput {
+  user-select: auto;
+  cursor: text;
+}
+
 #accountExit {
   position: absolute;
   right: 1em;

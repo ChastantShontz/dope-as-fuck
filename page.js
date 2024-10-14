@@ -2707,6 +2707,7 @@ function gameBegins(event) {
     document.onclick = unselectUrl;
   }
   else if ((window.innerHeight > 600) && (window.innerWidth > 1200)) {
+    document.getElementById("mobile").tabIndex = "-1";
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
       if (document.getElementById("conductorTalkCont").scrollTop > 0) {
         document.getElementById("conductorTalkCont").scrollTop = 0;
@@ -3755,6 +3756,8 @@ function openSelection() {
     document.getElementById("conductorTalkCont").tabIndex = "-1";
     document.getElementById("conductorTalkCont").blur();
   }
+  document.getElementById("viewAccount").tabIndex = "-1";
+  document.getElementById("viewAccount").blur();
   document.getElementById("viewAccountToggle").style.pointerEvents = "none";
   document.getElementById("viewAccountToggle").tabIndex = "-1";
   document.getElementById("viewAccountToggle").blur();
@@ -4128,6 +4131,9 @@ function closeSelection(event) {
   ), 500);
   setTimeout(() => (
     document.getElementById("viewAccountToggle").tabIndex = "0"
+  ), 500);
+  setTimeout(() => (
+    document.getElementById("viewAccount").tabIndex = "0"
   ), 500);
   if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
     setTimeout(() => (
@@ -4730,6 +4736,8 @@ function troyLassialEntrance() {
     document.getElementById("conductorTalkCont").tabIndex = "-1";
     document.getElementById("conductorTalkCont").blur();
   }
+  document.getElementById("viewAccount").tabIndex = "-1";
+  document.getElementById("viewAccount").blur();
   document.getElementById("viewAccountToggle").style.pointerEvents = "none";
   document.getElementById("viewAccountToggle").tabIndex = "-1";
   document.getElementById("viewAccountToggle").blur();
@@ -4764,6 +4772,9 @@ function troyLassialExit(event) {
       ), 500);
       setTimeout(() => (
         document.getElementById("viewAccountToggle").tabIndex = "0"
+      ), 500);
+      setTimeout(() => (
+        document.getElementById("viewAccount").tabIndex = "0"
       ), 500);
       if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
         setTimeout(() => (
@@ -4866,6 +4877,9 @@ function troyLassialExit(event) {
     ), 500);
     setTimeout(() => (
       document.getElementById("viewAccountToggle").tabIndex = "0"
+    ), 500);
+    setTimeout(() => (
+      document.getElementById("viewAccount").tabIndex = "0"
     ), 500);
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
       setTimeout(() => (
@@ -5184,10 +5198,11 @@ function toggleStats(newStats, method) {
 function showStats(stats, method) {
   sessionStorage.stats = stats;
   if ((method == "click") || ((method == "enter") && (document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].classList.contains("unToggledStatsCont")))) {
-    document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].classList.replace("hiddenStatsCont", "shownStatsCont");
     if (method == "click") {
+      document.getElementsByClassName("player")[sessionStorage.stats - 1].ariaLabel = "Minimize " + ((document.getElementsByClassName("player")[sessionStorage.stats - 1].classList.contains("goalie")) ? ((document.getElementsByClassName("player")[sessionStorage.stats - 1].alt).substring(0, (document.getElementsByClassName("player")[sessionStorage.stats - 1].alt).search(/ in the goal/sm))) : (document.getElementsByClassName("player")[sessionStorage.stats - 1].alt)) + "'s stats";
       document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].classList.replace("unToggledStatsCont", "toggledStatsCont");
     }
+    document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].classList.replace("hiddenStatsCont", "shownStatsCont");
     document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.zIndex = "4";
     if ((sessionStorage.stats == 1) || (sessionStorage.stats == 2)) {
       document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.left = "12%";
@@ -5229,10 +5244,11 @@ function showStats(stats, method) {
 function hideStats(stats, method) {
   sessionStorage.stats = stats;
   if ((method == "click") || ((method == "leave") && (document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].classList.contains("unToggledStatsCont")))) {
-    document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].classList.replace("shownStatsCont", "hiddenStatsCont")
     if (method == "click") {
+      document.getElementsByClassName("player")[sessionStorage.stats - 1].ariaLabel = "Pull up " + ((document.getElementsByClassName("player")[sessionStorage.stats - 1].classList.contains("goalie")) ? ((document.getElementsByClassName("player")[sessionStorage.stats - 1].alt).substring(0, (document.getElementsByClassName("player")[sessionStorage.stats - 1].alt).search(/ in the goal/sm))) : (document.getElementsByClassName("player")[sessionStorage.stats - 1].alt)) + "'s stats";
       document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].classList.replace("toggledStatsCont", "unToggledStatsCont")
     }
+    document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].classList.replace("shownStatsCont", "hiddenStatsCont")
     setTimeout(() => (
       document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.zIndex = "3"
     ), 250);
@@ -7063,6 +7079,8 @@ function openYoutubeSong() {
       document.getElementById("conductorTalkCont").tabIndex = "-1";
       document.getElementById("conductorTalkCont").blur();
     }
+    document.getElementById("viewAccount").tabIndex = "-1";
+    document.getElementById("viewAccount").blur();
     document.getElementById("viewAccountToggle").style.pointerEvents = "none";
     document.getElementById("viewAccountToggle").tabIndex = "-1";
     document.getElementById("viewAccountToggle").blur();
@@ -7636,7 +7654,7 @@ function youtubeJump(event) {
       }
     }
   }
-  if ((event.type != "mousemove") || ((event.type == "mousemove") && (sessionStorage.mousePressed == String(true)))) {
+  if ((event.type != "mousemove") || (sessionStorage.mousePressed == String(true))) {
     if (sessionStorage.progress <= 0) {
       if (sessionStorage.progress < 0) {
         sessionStorage.progress = 0;
@@ -7833,6 +7851,9 @@ function closeYoutubeSong(event) {
   ), 500);
   setTimeout(() => (
     document.getElementById("viewAccountToggle").tabIndex = "0"
+  ), 500);
+  setTimeout(() => (
+    document.getElementById("viewAccount").tabIndex = "0"
   ), 500);
   if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
     setTimeout(() => (
@@ -8810,6 +8831,8 @@ function openPoem() {
     document.getElementById("conductorTalkCont").tabIndex = "-1";
     document.getElementById("conductorTalkCont").blur();
   }
+  document.getElementById("viewAccount").tabIndex = "-1";
+  document.getElementById("viewAccount").blur();
   document.getElementById("viewAccountToggle").style.pointerEvents = "none";
   document.getElementById("viewAccountToggle").tabIndex = "-1";
   document.getElementById("viewAccountToggle").blur();
@@ -8878,6 +8901,9 @@ function closePoem(event) {
     ), 250);
     setTimeout(() => (
       document.getElementById("viewAccountToggle").tabIndex = "0"
+    ), 250);
+    setTimeout(() => (
+      document.getElementById("viewAccount").tabIndex = "0"
     ), 250);
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
       setTimeout(() => (
@@ -9102,6 +9128,9 @@ function gotIt27() {
   setTimeout(() => (
     document.getElementById("speakerSongs").tabIndex = "0"
   ), 2000);
+  setTimeout(() => (
+    document.getElementById("speakerCont").tabIndex = "0"
+  ), 2000);
   for (var i = 0; i < document.getElementsByClassName("audio").length; i++) {
     document.getElementsByClassName("audio")[i].onended = speakerNewSong;
   }
@@ -9162,6 +9191,9 @@ function gotIt27() {
     document.getElementById("websiteLink").tabIndex = "0"
   ), 4000);
   document.getElementById("websiteCont").style.animation = "loop 30s linear 4s infinite forwards";
+  setTimeout(() => (
+    document.getElementById("websiteCont").tabIndex = "0"
+  ), 4000);
   setTimeout(cuntEmpireEntrance, 600000);
   console.log("Oh, you're here? I'll drink to that!");
 }
@@ -10363,13 +10395,15 @@ function openPromo() {
     document.getElementById("conductorTalkCont").tabIndex = "-1";
     document.getElementById("conductorTalkCont").blur();
   }
+  document.getElementById("viewAccount").tabIndex = "-1";
+  document.getElementById("viewAccount").blur();
   document.getElementById("viewAccountToggle").style.pointerEvents = "none";
   document.getElementById("viewAccountToggle").tabIndex = "-1";
   document.getElementById("viewAccountToggle").blur();
   if (document.getElementById("viewAccountToggle").onclick == viewAccountToggleClose) {
     viewAccountToggleClose();
   }
-  document.getElementById("promoTitle").tabIndex = "0";
+  document.getElementById("promoTitleLink").tabIndex = "0";
   document.getElementById("promoExit").tabIndex = "0";
   var transformValue = ((sessionStorage.level - 1) * 9);
   document.getElementById("promoCont").style.transform = "skew(" + (Math.ceil(Math.random() * transformValue) * ((Math.round(Math.random())) ? (1) : (-1))) + "deg) scale(1)";
@@ -10504,7 +10538,7 @@ function closePromo(event) {
   document.getElementById("promoCont").style.transform = "skew(" + (Math.ceil(Math.random() * transformValue) * ((Math.round(Math.random())) ? (1) : (-1))) + "deg) scale(0)";
   document.getElementById("promoCont").tabIndex = "-1";
   document.getElementById("promoCont").blur();
-  document.getElementById("promoTitle").tabIndex = "-1";
+  document.getElementById("promoTitleLink").tabIndex = "-1";
   document.getElementById("promoTitle").blur();
   document.getElementById("promoExit").tabIndex = "-1";
   document.getElementById("promoExit").blur();
@@ -10541,6 +10575,9 @@ function closePromo(event) {
     setTimeout(() => (
       document.getElementById("viewAccountToggle").tabIndex = "0"
     ), 1000);
+    setTimeout(() => (
+      document.getElementById("viewAccount").tabIndex = "0"
+    ), 1000);
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
       setTimeout(() => (
         document.getElementById("conductorTalkCont").tabIndex = "0"
@@ -10568,6 +10605,9 @@ function closePromo(event) {
     ), 500);
     setTimeout(() => (
       document.getElementById("viewAccountToggle").tabIndex = "0"
+    ), 500);
+    setTimeout(() => (
+      document.getElementById("viewAccount").tabIndex = "0"
     ), 500);
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
       setTimeout(() => (
@@ -10643,6 +10683,8 @@ function openAccount(event) {
     document.getElementById("conductorTalkCont").tabIndex = "-1";
     document.getElementById("conductorTalkCont").blur();
   }
+  document.getElementById("viewAccount").tabIndex = "-1";
+  document.getElementById("viewAccount").blur();
   document.getElementById("viewAccountToggle").style.pointerEvents = "none";
   document.getElementById("viewAccountToggle").tabIndex = "-1";
   document.getElementById("viewAccountToggle").blur();
@@ -10675,6 +10717,8 @@ function openAccount(event) {
       }
     }
   }
+  document.getElementById("info").tabIndex = "0";
+  document.getElementById("memoryToggle").tabIndex = "0";
   if (document.getElementById("infoDataMemoryCont").scrollHeight > document.getElementById("infoDataMemoryCont").offsetHeight) {
     document.getElementById("infoDataMemoryCont").tabIndex = "0";
     if (document.getElementById("infoDataMemoryCont").scrollTop > 0) {
@@ -10719,8 +10763,10 @@ function accountControls(event) {
       }
     }
     else if (keyboard.shift == false) {
-      if (sessionStorage.scope == "document") {
-        accountMessageEntrance();
+      if ((document.activeElement == document.body) || (document.activeElement.tabIndex == "-1")) {
+        if (sessionStorage.scope == "document") {
+          accountMessageEntrance();
+        }
       }
     }
   }
@@ -10829,7 +10875,7 @@ function accountTyping(field) {
     document.getElementsByClassName("enterInfoButton")[sessionStorage.field - 1].disabled = true;
     document.getElementsByClassName("enterInfoButton")[sessionStorage.field - 1].blur();
   }
-  if ((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value == "") || ((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value != "") && (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].checkValidity()))) {
+  if ((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value == "") || (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].checkValidity())) {
     if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].classList.contains("invalidInfoInput")) {
       document.getElementsByClassName("infoInput")[sessionStorage.field - 1].classList.replace("invalidInfoInput", "validInfoInput");
       document.getElementsByClassName("infoInput")[sessionStorage.field - 1].style.accentColor = "var(--clarksonGreen)";
@@ -11228,6 +11274,8 @@ function accountUpdate(field, method) {
       document.getElementById("clearAll").tabIndex = "-1";
       document.getElementById("clearAll").blur();
       document.getElementById("data").style.display = "none";
+      document.getElementById("data").tabIndex = "-1";
+      document.getElementById("data").blur();
     }
     else if (document.getElementsByClassName("definedInfoInput").length > 0) {
       document.getElementById("accountSubheading").innerHTML = "Keep filling out these fields to update your account";
@@ -11237,6 +11285,7 @@ function accountUpdate(field, method) {
       document.getElementById("clearAll").style.display = "inline-block";
       document.getElementById("clearAll").tabIndex = "0";
       document.getElementById("data").style.display = "table";
+      document.getElementById("data").tabIndex = "0";
     }
     if (document.getElementsByClassName("definedInfoInput").length < document.getElementsByClassName("infoInput").length) {
       document.getElementById("accountSubheading").style.display = "block";
@@ -11298,6 +11347,7 @@ function accountUpdate(field, method) {
           document.getElementById("clearAll").style.display = "inline-block";
           document.getElementById("clearAll").tabIndex = "0";
           document.getElementById("data").style.display = "table";
+          document.getElementById("data").tabIndex = "0";
         }
         if (document.getElementsByClassName("definedInfoInput").length == document.getElementsByClassName("infoInput").length) {
           document.getElementById("accountSubheading").style.display = "none";
@@ -11360,6 +11410,8 @@ function accountUpdate(field, method) {
           document.getElementById("clearAll").tabIndex = "-1";
           document.getElementById("clearAll").blur();
           document.getElementById("data").style.display = "none";
+          document.getElementById("data").tabIndex = "-1";
+          document.getElementById("data").blur();
         }
         if (document.getElementsByClassName("definedInfoInput").length < document.getElementsByClassName("infoInput").length) {
           document.getElementById("accountSubheading").style.display = "block";
@@ -11403,7 +11455,7 @@ function remember(event) {
 function rememberGameTime() {
   localStorage.gameTime = Math.floor(performance.now() / 1000);
   here.gameTime = localStorage.gameTime;
-  document.getElementById("memoryGameTimeData").innerHTML = ((localStorage.gameTime < 3600) ? ("") : (Math.floor(localStorage.gameTime / 3600) + ":" + (((localStorage.gameTime % 3600) < 600) ? ("0") : ("")))) + ((localStorage.gameTime < 60) ? ("") : (Math.floor((localStorage.gameTime % 3600) / 60) + ":" + ((((localStorage.gameTime % 3600) % 60) < 10) ? ("0") : ("")))) + ((localStorage.gameTime % 3600) % 60);
+  document.getElementById("gameTimeOutput").innerHTML = ((localStorage.gameTime < 3600) ? ("") : (Math.floor(localStorage.gameTime / 3600) + ":" + (((localStorage.gameTime % 3600) < 600) ? ("0") : ("")))) + ((localStorage.gameTime < 60) ? ("") : (Math.floor((localStorage.gameTime % 3600) / 60) + ":" + ((((localStorage.gameTime % 3600) % 60) < 10) ? ("0") : ("")))) + ((localStorage.gameTime % 3600) % 60);
   if (localStorage.firstGame == String(true)) {
     localStorage.totalGameTime = localStorage.gameTime;
   }
@@ -11411,7 +11463,7 @@ function rememberGameTime() {
     localStorage.totalGameTime++;
   }
   here.totalGameTime = localStorage.totalGameTime;
-  document.getElementById("memoryTotalGameTimeData").innerHTML = ((localStorage.totalGameTime < 3600) ? ("") : (Math.floor(localStorage.totalGameTime / 3600) + ":" + (((localStorage.totalGameTime % 3600) < 600) ? ("0") : ("")))) + ((localStorage.totalGameTime < 60) ? ("") : (Math.floor((localStorage.totalGameTime % 3600) / 60) + ":" + ((((localStorage.totalGameTime % 3600) % 60) < 10) ? ("0") : ("")))) + ((localStorage.totalGameTime % 3600) % 60);
+  document.getElementById("totalGameTimeOutput").innerHTML = ((localStorage.totalGameTime < 3600) ? ("") : (Math.floor(localStorage.totalGameTime / 3600) + ":" + (((localStorage.totalGameTime % 3600) < 600) ? ("0") : ("")))) + ((localStorage.totalGameTime < 60) ? ("") : (Math.floor((localStorage.totalGameTime % 3600) / 60) + ":" + ((((localStorage.totalGameTime % 3600) % 60) < 10) ? ("0") : ("")))) + ((localStorage.totalGameTime % 3600) % 60);
 }
 
 function showMemory() {
@@ -11444,6 +11496,8 @@ function closeAccount() {
     document.getElementById("infoDataMemoryCont").tabIndex = "-1";
     document.getElementById("infoDataMemoryCont").blur();
   }
+  document.getElementById("info").tabIndex = "-1";
+  document.getElementById("memoryToggle").tabIndex = "-1";
   for (var i = 0; i < document.getElementsByClassName("infoButton").length; i++) {
     if (document.getElementsByClassName("infoButton")[i].classList.contains("enterInfoButton")) {
       document.getElementsByClassName("infoButton")[i].style.background = "var(--lightGray)";
@@ -11491,6 +11545,9 @@ function closeAccount() {
   setTimeout(() => (
     document.getElementById("viewAccountToggle").tabIndex = "0"
   ), 250);
+  setTimeout(() => (
+    document.getElementById("viewAccount").tabIndex = "0"
+  ), 250);
   setTimeout(viewAccountToggleClose, 250);
   if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
     setTimeout(() => (
@@ -11513,6 +11570,8 @@ function gameOver(event) {
     document.getElementById("conductorTalkCont").tabIndex = "-1";
     document.getElementById("conductorTalkCont").blur();
   }
+  document.getElementById("viewAccount").tabIndex = "-1";
+  document.getElementById("viewAccount").blur();
   document.getElementById("viewAccountToggle").style.pointerEvents = "none";
   document.getElementById("viewAccountToggle").tabIndex = "-1";
   document.getElementById("viewAccountToggle").blur();
@@ -11646,7 +11705,7 @@ function audioNewSong() {
 }
 
 function warning(element) {
-  if ((element == "") || ((element != "") && ((document.getElementById(element).tagName != "a") && (element != "playAgain")))) {
+  if ((element.tagName != "a") && (element != document.getElementById("playAgain"))) {
     return "Woah there, are you sure you want to do that? If you leave this page now, all your progress in this game will be lost!";
   }
 }
@@ -11679,6 +11738,8 @@ function showPassword(event) {
       document.getElementById("conductorTalkCont").tabIndex = "-1";
       document.getElementById("conductorTalkCont").blur();
     }
+    document.getElementById("viewAccount").tabIndex = "-1";
+    document.getElementById("viewAccount").blur();
     document.getElementById("viewAccountToggle").style.pointerEvents = "none";
     document.getElementById("viewAccountToggle").tabIndex = "-1";
     document.getElementById("viewAccountToggle").blur();
@@ -11898,6 +11959,7 @@ function hidePassword() {
   if (document.getElementById("secret") == undefined) {
     document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
     document.getElementById("viewAccountToggle").tabIndex = "0";
+    document.getElementById("viewAccount").tabIndex = "0";
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
       document.getElementById("conductorTalkCont").tabIndex = "0";
     }
@@ -11993,6 +12055,9 @@ function hideSecret(event) {
     ), 250);
     setTimeout(() => (
       document.getElementById("viewAccountToggle").tabIndex = "0"
+    ), 250);
+    setTimeout(() => (
+      document.getElementById("viewAccount").tabIndex = "0"
     ), 250);
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
       setTimeout(() => (

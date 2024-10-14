@@ -7091,10 +7091,10 @@ function openYoutubeSong() {
     document.getElementById("youtubeFullTime").innerHTML = sessionStorage.fullTime;
     document.getElementById("youtubeFullTime").datetime = "PT" + ((sessionStorage.fullTime).substring(0, 2)).replace(/(?<=^)0/sm, "") + "M" + ((sessionStorage.fullTime).substring(3)).replace(/(?<=^)0/sm, "") + "S";
     document.getElementById("youtubeTimer").title = "Has not started";
-    document.getElementById("youtubeRestart").style.pointerEvents = "auto";
-    document.getElementById("youtubeRestart").tabIndex = "0";
-    document.getElementById("youtubeSkip").style.pointerEvents = "auto";
-    document.getElementById("youtubeSkip").tabIndex = "0";
+    for (var i = 0; i < document.getElementsByClassName("youtubeJump").length; i++) {
+      document.getElementsByClassName("youtubeJump")[i].style.pointerEvents = "auto";
+      document.getElementsByClassName("youtubeJump")[i].tabIndex = "0";
+    }
     document.getElementById("youtubeToolbar").tabIndex = "0";
     document.getElementById("youtubeExit").style.pointerEvents = "auto";
     document.getElementById("youtubeExit").tabIndex = "0";
@@ -7798,12 +7798,11 @@ function closeYoutubeSong(event) {
   document.getElementById("youtubePlayPauseButton").tabIndex = "-1";
   document.getElementById("youtubePlayPauseButton").blur();
   document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\">" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\">" + (sessionStorage.countingTime).substring(3) + "</span>";
-  document.getElementById("youtubeRestart").style.pointerEvents = "none";
-  document.getElementById("youtubeRestart").tabIndex = "-1";
-  document.getElementById("youtubeRestart").blur();
-  document.getElementById("youtubeSkip").style.pointerEvents = "none";
-  document.getElementById("youtubeSkip").tabIndex = "-1";
-  document.getElementById("youtubeSkip").blur();
+  for (var i = 0; i < document.getElementsByClassName("youtubeJump").length; i++) {
+    document.getElementsByClassName("youtubeJump")[i].style.pointerEvents = "none";
+    document.getElementsByClassName("youtubeJump")[i].tabIndex = "-1";
+    document.getElementsByClassName("youtubeJump")[i].blur();
+  }
   document.getElementById("youtubeExit").style.pointerEvents = "none";
   document.getElementById("youtubeExit").tabIndex = "-1";
   document.getElementById("youtubeExit").blur();

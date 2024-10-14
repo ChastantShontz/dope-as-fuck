@@ -11653,7 +11653,7 @@ function playAgain(event) {
 }
 
 function warning(element) {
-  if ((element == "") || ((document.getElementById(element).tagName != "a") && (element != "playAgain"))) {
+  if ((element == "") || ((element != "") && ((document.getElementById(element).tagName != "a") && (element != "playAgain")))) {
     return "Woah there, are you sure you want to do that? If you leave this page now, all your progress in this game will be lost!";
   }
 }

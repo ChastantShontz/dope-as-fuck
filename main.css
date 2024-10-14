@@ -2706,7 +2706,7 @@ main {
   pointer-events: none;
 }
 
-.socialMedia {
+.socialMediaLogo {
   visibility: hidden;
   position: relative;
   border-radius: .5em;
@@ -2716,24 +2716,24 @@ main {
   pointer-events: auto;
 }
 
-#youtube {
+#youtubeLogo {
   background: url("img/youtube.png") center / cover;
   cursor: pointer;
 }
 
-#tiktok {
+#tiktokLogo {
   background: url("img/tiktok.png") center / cover;
 }
 
-#x {
+#xLogo {
   background: url("img/x.png") center / cover;
 }
 
-#instagram {
+#instagramLogo {
   background: url("img/instagram.png") center / cover;
 }
 
-#facebook {
+#facebookLogo {
   background: url("img/facebook.png") center / cover;
 }
 

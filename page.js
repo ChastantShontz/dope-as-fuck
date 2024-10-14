@@ -9135,14 +9135,14 @@ function gotIt27() {
   document.getElementById("partyActivities").style.visibility = "visible";
   document.getElementById("partyActivities").style.opacity = "100%";
   document.getElementById("partyActivities").style.transition = "all 0s ease 1.5s";
-  for (var i = 0; i < document.getElementsByClassName("socialMedia").length; i++) {
+  for (var i = 0; i < document.getElementsByClassName("socialMediaLogo").length; i++) {
     var transitionDelay = ((i * .25) + 2.75);
-    document.getElementsByClassName("socialMedia")[i].style.visibility = "visible";
-    document.getElementsByClassName("socialMedia")[i].style.opacity = "100%";
-    document.getElementsByClassName("socialMedia")[i].style.transition = "all .25s ease " + transitionDelay + "s";
+    document.getElementsByClassName("socialMediaLogo")[i].style.visibility = "visible";
+    document.getElementsByClassName("socialMediaLogo")[i].style.opacity = "100%";
+    document.getElementsByClassName("socialMediaLogo")[i].style.transition = "all .25s ease " + transitionDelay + "s";
     const activate = (x, y) => {
       setTimeout(() => (
-        document.getElementsByClassName("socialMedia")[x].tabIndex = "0"
+        document.getElementsByClassName("socialMediaLogo")[x].tabIndex = "0"
       ), y);
     }
     activate(i, (transitionDelay * 1000));

@@ -2703,6 +2703,7 @@ function gameBegins(event) {
     document.getElementById("urlButton").tabIndex = "0";
     document.getElementById("mobileButton").tabIndex = "0";
     document.getElementById("mobileImgCont").tabIndex = "0";
+    document.getElementById("mobile").tabIndex = "0";
     document.onclick = unselectUrl;
   }
   else if ((window.innerHeight > 600) && (window.innerWidth > 1200)) {

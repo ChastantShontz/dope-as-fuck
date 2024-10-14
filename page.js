@@ -11645,6 +11645,12 @@ function audioNewSong() {
   sessionStorage.oldAudio = sessionStorage.newAudio;
 }
 
+function warning(element) {
+  if ((element == "") || ((element != "") && ((document.getElementById(element).tagName != "a") && (element != "playAgain")))) {
+    return "Woah there, are you sure you want to do that? If you leave this page now, all your progress in this game will be lost!";
+  }
+}
+
 function playAgain(event) {
   event.preventDefault();
   compileSound("sawtooth", ["exponential", 240, 540, .5], ["exponential", .5, 1, .5], .5);
@@ -11652,10 +11658,10 @@ function playAgain(event) {
   location.reload();
 }
 
-function warning(element) {
-  if ((element == "") || ((element != "") && ((document.getElementById(element).tagName != "a") && (element != "playAgain")))) {
-    return "Woah there, are you sure you want to do that? If you leave this page now, all your progress in this game will be lost!";
-  }
+function forceQuit() {
+  localStorage.clear();
+  document.body.onbeforeunload = null;
+  window.close();
 }
 
 function gameComplete() {

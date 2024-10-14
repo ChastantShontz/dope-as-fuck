@@ -3564,9 +3564,9 @@ function gotIt6(event) {
   document.getElementById("crappleton").blur();
   if (sessionStorage.gender == 1) {
     for (var i = 0; i < document.getElementsByClassName("menGoalie").length; i++) {
-      document.getElementsByClassName("menGoalie")[x].style.visibility = "visible";
-      document.getElementsByClassName("menGoalie")[x].style.opacity = "100%";
-      document.getElementsByClassName("menGoalie")[x].style.transition = "all 0s ease 1s";
+      document.getElementsByClassName("menGoalie")[i].style.visibility = "visible";
+      document.getElementsByClassName("menGoalie")[i].style.opacity = "100%";
+      document.getElementsByClassName("menGoalie")[i].style.transition = "all 0s ease 1s";
       const activate = (x) => {
         setTimeout(() => (
           document.getElementsByClassName("menGoalie")[x].style.pointerEvents = "auto"
@@ -3580,9 +3580,9 @@ function gotIt6(event) {
   }
   else if (sessionStorage.gender == 2) {
     for (var i = 0; i < document.getElementsByClassName("womenGoalie").length; i++) {
-      document.getElementsByClassName("womenGoalie")[x].style.visibility = "visible";
-      document.getElementsByClassName("womenGoalie")[x].style.opacity = "100%";
-      document.getElementsByClassName("womenGoalie")[x].style.transition = "all 0s ease 1s";
+      document.getElementsByClassName("womenGoalie")[i].style.visibility = "visible";
+      document.getElementsByClassName("womenGoalie")[i].style.opacity = "100%";
+      document.getElementsByClassName("womenGoalie")[i].style.transition = "all 0s ease 1s";
       const activate = (x) => {
         setTimeout(() => (
           document.getElementsByClassName("womenGoalie")[x].style.pointerEvents = "auto"

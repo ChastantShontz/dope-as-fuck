@@ -509,7 +509,7 @@ main {
 #discordToolbar {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   border-bottom-left-radius: .5em;
   border-bottom-right-radius: .5em;
   padding: .25em;
@@ -842,7 +842,7 @@ main {
 #scoreboardSides {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
   padding: .25em;
   align-items: center;
@@ -1055,13 +1055,13 @@ main {
 }
 
 .rinkSectionMiddle {
-  justify-content: space-around;
+  justify-content: space-evenly;
   position: relative;
   align-items: center;
 }
 
 .rinkSectionInner {
-  justify-content: space-around;
+  justify-content: space-evenly;
   position: relative;
 }
 
@@ -2469,7 +2469,7 @@ main {
 .drinkingSongLinesContCont {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   visibility: hidden;
   position: absolute;
   left: 0;
@@ -2694,7 +2694,7 @@ main {
 #socialMedias {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-around;
+  justify-content: space-evenly;
   visibility: hidden;
   position: fixed;
   left: 40%;
@@ -3017,7 +3017,7 @@ main {
 #gameOver {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   visibility: hidden;
   left: 25%;
   right: 25%;
@@ -4166,7 +4166,7 @@ main {
 #confirmButtons {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
   align-items: center;
 }
@@ -4223,7 +4223,7 @@ main {
 #passwordInputCont {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
   align-items: center;
 }
@@ -4515,7 +4515,7 @@ footer {
 #mobileButtonContCont {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
   align-items: flex-start;
 }

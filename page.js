@@ -12046,6 +12046,7 @@ function mobileShrink() {
   document.getElementById("urlButton").tabIndex = "0";
   document.getElementById("mobileButton").tabIndex = "0";
   document.getElementById("mobileImgCont").tabIndex = "0";
+  document.getElementById("mobile").tabIndex = "0";
   document.onclick = unselectUrl;
   if (document.ondblclick != null) {
     document.ondblclick = null;
@@ -12064,6 +12065,7 @@ function mobileShrink() {
 }
 
 function mobileGrow() {
+  document.getElementById("mobile").tabIndex = "-1";
   if (document.getElementById("mobile").scrollHeight > document.getElementById("mobile").offsetHeight) {
     if (document.getElementById("mobile").scrollTop > 0) {
       document.getElementById("mobile").scrollTop = 0;

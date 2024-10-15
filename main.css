@@ -3863,6 +3863,10 @@ main {
   font-weight: normal;
 }
 
+#accountSubInstructions {
+  display: none;
+}
+
 .infoButton {
   border-radius: .1em;
   padding-left: .1em;
@@ -3889,6 +3893,7 @@ main {
 }
 
 #clearAll {
+  display: none;
   margin-right: 0;
   margin-bottom: 0;
   font-size: 1.1em;

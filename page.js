@@ -2704,10 +2704,16 @@ function gameBegins(event) {
     document.getElementById("mobileButton").tabIndex = "0";
     document.getElementById("mobileImgCont").tabIndex = "0";
     document.getElementById("mobile").tabIndex = "0";
+    document.getElementById("mobile").role = "article";
+    document.getElementById("mobile").ariaDescription = "An alternative interface that is displayed when the screen size is too small";
+    document.getElementById("mobile").ariaHidden = false;
     document.onclick = unselectUrl;
   }
   else if ((window.innerHeight > 600) && (window.innerWidth > 1200)) {
     document.getElementById("mobile").tabIndex = "-1";
+    document.getElementById("mobile").removeAttribute("role");
+    document.getElementById("mobile").removeAttribute("aria-description");
+    document.getElementById("mobile").ariaHidden = true;
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
       if (document.getElementById("conductorTalkCont").scrollTop > 0) {
         document.getElementById("conductorTalkCont").scrollTop = 0;
@@ -2779,121 +2785,121 @@ function collapse(event) {
 }
 
 function changeName(event) {
-  if ((event.target.innerHTML).match(/Aileen/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Aileen/gsm, "Mars");
+  if (((event.target).innerHTML).match(/Aileen/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Aileen/gsm, "Mars");
   }
-  if ((event.target.innerHTML).match(/Chawgo/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Chawgo/gsm, "Sgt. Lord");
+  if (((event.target).innerHTML).match(/Chawgo/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Chawgo/gsm, "Sgt. Lord");
   }
-  if ((event.target.innerHTML).match(/Chestnut(?!\s2\.0)/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Chestnut(?!\s2\.0)/gsm, "Charlie Day");
+  if (((event.target).innerHTML).match(/Chestnut(?!\s2\.0)/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Chestnut(?!\s2\.0)/gsm, "Charlie Day");
   }
-  if ((event.target.innerHTML).match(/Chris Treutlein/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/(?<!(((^|(\.|\?|\!)\s+)\(?)|((\.|\,|\;|\:|\?|\!)\s+|\'|\"|\()(\'|\")))Chris Treutlein/gsm, "the Honorable Dr. Mayor Treutlein, Jr.");
-    event.target.innerHTML = (event.target.innerHTML).replace(/(?<=(((^|(\.|\?|\!)\s+)\(?)|((\.|\,|\;|\:|\?|\!)\s+|\'|\"|\()(\'|\")))Chris Treutlein/gsm, "The Honorable Dr. Mayor Treutlein, Jr.");
+  if (((event.target).innerHTML).match(/Chris Treutlein/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<!(((^|(\.|\?|\!)\s+)\(?)|((\.|\,|\;|\:|\?|\!)\s+|\'|\"|\()(\'|\")))Chris Treutlein/gsm, "the Honorable Dr. Mayor Treutlein, Jr.");
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<=(((^|(\.|\?|\!)\s+)\(?)|((\.|\,|\;|\:|\?|\!)\s+|\'|\"|\()(\'|\")))Chris Treutlein/gsm, "The Honorable Dr. Mayor Treutlein, Jr.");
   }
-  if ((event.target.innerHTML).match(/Colin Whitesell/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Colin Whitesell/gsm, "Coin");
+  if (((event.target).innerHTML).match(/Colin Whitesell/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Colin Whitesell/gsm, "Coin");
   }
-  if ((event.target.innerHTML).match(/Devin Mullen/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Devin Mullen/gsm, "Kevin Miller");
+  if (((event.target).innerHTML).match(/Devin Mullen/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Devin Mullen/gsm, "Kevin Miller");
   }
-  if ((event.target.innerHTML).match(/Emma Fish/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Emma Fish/gsm, "Chestnut 2.0");
+  if (((event.target).innerHTML).match(/Emma Fish/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Emma Fish/gsm, "Chestnut 2.0");
   }
-  if ((event.target.innerHTML).match(/Garrett/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/(?<!(((^|(\.|\?|\!)\s+)\(?)|((\.|\,|\;|\:|\?|\!)\s+|\'|\"|\()(\'|\")))Garrett/gsm, "the whore");
-    event.target.innerHTML = (event.target.innerHTML).replace(/(?<=(((^|(\.|\?|\!)\s+)\(?)|((\.|\,|\;|\:|\?|\!)\s+|\'|\"|\()(\'|\")))Garrett/gsm, "The whore");
+  if (((event.target).innerHTML).match(/Garrett/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<!(((^|(\.|\?|\!)\s+)\(?)|((\.|\,|\;|\:|\?|\!)\s+|\'|\"|\()(\'|\")))Garrett/gsm, "the whore");
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<=(((^|(\.|\?|\!)\s+)\(?)|((\.|\,|\;|\:|\?|\!)\s+|\'|\"|\()(\'|\")))Garrett/gsm, "The whore");
   }
-  if ((event.target.innerHTML).match(/Joe Franco/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Joe Franco/gsm, "Buddy");
+  if (((event.target).innerHTML).match(/Joe Franco/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Joe Franco/gsm, "Buddy");
   }
-  if ((event.target.innerHTML).match(/Kyle/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Kyle/gsm, "Sexy Leader");
+  if (((event.target).innerHTML).match(/Kyle/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Kyle/gsm, "Sexy Leader");
   }
-  if ((event.target.innerHTML).match(/\bLeo\b/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/\bLeo\b/gsm, "Mr. Hands");
+  if (((event.target).innerHTML).match(/\bLeo\b/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/\bLeo\b/gsm, "Mr. Hands");
   }
-  if ((event.target.innerHTML).match(/MacKenzie McCarthy/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/MacKenzie McCarthy/gsm, "MacKenzie Uhl");
+  if (((event.target).innerHTML).match(/MacKenzie McCarthy/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/MacKenzie McCarthy/gsm, "MacKenzie Uhl");
   }
-  if ((event.target.innerHTML).match(/Marc Christensen/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Marc Christensen/gsm, "Peter Griffin");
+  if (((event.target).innerHTML).match(/Marc Christensen/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Marc Christensen/gsm, "Peter Griffin");
   }
-  if ((event.target.innerHTML).match(/Oliver Queen/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/(?<!(((^|(\.|\?|\!)\s+)\(?)|((\.|\,|\;|\:|\?|\!)\s+|\'|\"|\()(\'|\")))Oliver Queen/gsm, "the Arrow");
-    event.target.innerHTML = (event.target.innerHTML).replace(/(?<=(((^|(\.|\?|\!)\s+)\(?)|((\.|\,|\;|\:|\?|\!)\s+|\'|\"|\()(\'|\")))Oliver Queen/gsm, "The Arrow");
+  if (((event.target).innerHTML).match(/Oliver Queen/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<!(((^|(\.|\?|\!)\s+)\(?)|((\.|\,|\;|\:|\?|\!)\s+|\'|\"|\()(\'|\")))Oliver Queen/gsm, "the Arrow");
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<=(((^|(\.|\?|\!)\s+)\(?)|((\.|\,|\;|\:|\?|\!)\s+|\'|\"|\()(\'|\")))Oliver Queen/gsm, "The Arrow");
   }
-  if ((event.target.innerHTML).match(/Ryan McCarthy/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Ryan McCarthy/gsm, "SheRyan");
+  if (((event.target).innerHTML).match(/Ryan McCarthy/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Ryan McCarthy/gsm, "SheRyan");
   }
-  if ((event.target.innerHTML).match(/Ryan O\'Rourke/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Ryan O\'Rourke/gsm, "ThreeRyan");
+  if (((event.target).innerHTML).match(/Ryan O\'Rourke/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Ryan O\'Rourke/gsm, "ThreeRyan");
   }
-  if ((event.target.innerHTML).match(/secretary/gism)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/(?<=^.*(Marc|Christensen).*)secretary(?=.*(Marc|Christensen).*$)/gsm, "mistress");
-    event.target.innerHTML = (event.target.innerHTML).replace(/(?<=^.*(Marc|Christensen).*)Secretary(?=.*(Marc|Christensen).*$)/gsm, "Mistress");
+  if (((event.target).innerHTML).match(/secretary/gism)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<=^.*(Marc|Christensen).*)secretary(?=.*(Marc|Christensen).*$)/gsm, "mistress");
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<=^.*(Marc|Christensen).*)Secretary(?=.*(Marc|Christensen).*$)/gsm, "Mistress");
   }
-  if ((event.target.innerHTML).match(/Weston/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Weston/gsm, "Easton");
+  if (((event.target).innerHTML).match(/Weston/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Weston/gsm, "Easton");
   }
 }
 
 function changeNameBack(event) {
-  if ((event.target.innerHTML).match(/\bMars\b/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/\bMars\b/gsm, "Aileen");
+  if (((event.target).innerHTML).match(/\bMars\b/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/\bMars\b/gsm, "Aileen");
   }
-  if ((event.target.innerHTML).match(/Sgt\. Lord/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Sgt\. Lord/gsm, "Chawgo");
+  if (((event.target).innerHTML).match(/Sgt\. Lord/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Sgt\. Lord/gsm, "Chawgo");
   }
-  if ((event.target.innerHTML).match(/Charlie Day/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Charlie Day/gsm, "Chestnut");
+  if (((event.target).innerHTML).match(/Charlie Day/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Charlie Day/gsm, "Chestnut");
   }
-  if ((event.target.innerHTML).match(/the Honorable Dr\. Mayor Treutlein\, Jr\./gism)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/the Honorable Dr\. Mayor Treutlein\, Jr\./gism, "Chris Treutlein");
+  if (((event.target).innerHTML).match(/the Honorable Dr\. Mayor Treutlein\, Jr\./gism)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/the Honorable Dr\. Mayor Treutlein\, Jr\./gism, "Chris Treutlein");
   }
-  if ((event.target.innerHTML).match(/\bCoin\b/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/\bCoin\b/gsm, "Colin Whitesell");
+  if (((event.target).innerHTML).match(/\bCoin\b/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/\bCoin\b/gsm, "Colin Whitesell");
   }
-  if ((event.target.innerHTML).match(/Kevin Miller/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Kevin Miller/gsm, "Devin Mullen");
+  if (((event.target).innerHTML).match(/Kevin Miller/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Kevin Miller/gsm, "Devin Mullen");
   }
-  if ((event.target.innerHTML).match(/Chestnut 2\.0/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Chestnut 2\.0/gsm, "Emma Fish");
+  if (((event.target).innerHTML).match(/Chestnut 2\.0/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Chestnut 2\.0/gsm, "Emma Fish");
   }
-  if ((event.target.innerHTML).match(/the whore/gism)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/the whore/gism, "Garrett");
+  if (((event.target).innerHTML).match(/the whore/gism)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/the whore/gism, "Garrett");
   }
-  if ((event.target.innerHTML).match(/Buddy/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Buddy/gsm, "Joe Franco");
+  if (((event.target).innerHTML).match(/Buddy/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Buddy/gsm, "Joe Franco");
   }
-  if ((event.target.innerHTML).match(/Sexy Leader/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Sexy Leader/gsm, "Kyle");
+  if (((event.target).innerHTML).match(/Sexy Leader/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Sexy Leader/gsm, "Kyle");
   }
-  if ((event.target.innerHTML).match(/Mr\. Hands/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Mr\. Hands/gsm, "Leo");
+  if (((event.target).innerHTML).match(/Mr\. Hands/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Mr\. Hands/gsm, "Leo");
   }
-  if ((event.target.innerHTML).match(/MacKenzie Uhl/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/MacKenzie Uhl/gsm, "MacKenzie McCarthy");
+  if (((event.target).innerHTML).match(/MacKenzie Uhl/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/MacKenzie Uhl/gsm, "MacKenzie McCarthy");
   }
-  if ((event.target.innerHTML).match(/Peter Griffin/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Peter Griffin/gsm, "Marc Christensen");
+  if (((event.target).innerHTML).match(/Peter Griffin/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Peter Griffin/gsm, "Marc Christensen");
   }
-  if ((event.target.innerHTML).match(/the Arrow(?!\skey)/gism)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/the Arrow(?!\skey)/gism, "Oliver Queen");
+  if (((event.target).innerHTML).match(/the Arrow(?!\skey)/gism)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/the Arrow(?!\skey)/gism, "Oliver Queen");
   }
-  if ((event.target.innerHTML).match(/SheRyan/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/SheRyan/gsm, "Ryan McCarthy");
+  if (((event.target).innerHTML).match(/SheRyan/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/SheRyan/gsm, "Ryan McCarthy");
   }
-  if ((event.target.innerHTML).match(/ThreeRyan/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/ThreeRyan/gsm, "Ryan O'Rourke");
+  if (((event.target).innerHTML).match(/ThreeRyan/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/ThreeRyan/gsm, "Ryan O'Rourke");
   }
-  if ((event.target.innerHTML).match(/mistress/gism)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/(?<=^.*(Marc|Christensen).*)mistress(?=.*(Marc|Christensen).*$)/gsm, "secretary");
-    event.target.innerHTML = (event.target.innerHTML).replace(/(?<=^.*(Marc|Christensen).*)Mistress(?=.*(Marc|Christensen).*$)/gsm, "Secretary");
+  if (((event.target).innerHTML).match(/mistress/gism)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<=^.*(Marc|Christensen).*)mistress(?=.*(Marc|Christensen).*$)/gsm, "secretary");
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<=^.*(Marc|Christensen).*)Mistress(?=.*(Marc|Christensen).*$)/gsm, "Secretary");
   }
-  if ((event.target.innerHTML).match(/Easton/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/Easton/gsm, "Weston");
+  if (((event.target).innerHTML).match(/Easton/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Easton/gsm, "Weston");
   }
 }
 
@@ -4146,20 +4152,20 @@ function closeSelection(event) {
 }
 
 function changeSong(event) {
-  if (event.target.innerHTML == "<i>Tijuana</i>") {
-    event.target.innerHTML = "Gangbang Song";
+  if ((event.target).innerHTML == "<i>Tijuana</i>") {
+    (event.target).innerHTML = "Gangbang Song";
   }
-  else if (event.target.innerHTML == "<i>Tijuana</i><br>(with lyrics!)") {
-    event.target.innerHTML = "Gangbang Song<br>(with lyrics!)";
+  else if ((event.target).innerHTML == "<i>Tijuana</i><br>(with lyrics!)") {
+    (event.target).innerHTML = "Gangbang Song<br>(with lyrics!)";
   }
 }
 
 function changeSongBack(event) {
-  if (event.target.innerHTML == "Gangbang Song") {
-    event.target.innerHTML = "<i>Tijuana</i>";
+  if ((event.target).innerHTML == "Gangbang Song") {
+    (event.target).innerHTML = "<i>Tijuana</i>";
   }
-  else if (event.target.innerHTML == "Gangbang Song<br>(with lyrics!)") {
-    event.target.innerHTML = "<i>Tijuana</i><br>(with lyrics!)";
+  else if ((event.target).innerHTML == "Gangbang Song<br>(with lyrics!)") {
+    (event.target).innerHTML = "<i>Tijuana</i><br>(with lyrics!)";
   }
 }
 
@@ -7098,12 +7104,13 @@ function openYoutubeSong() {
     sessionStorage.progress = 100;
     document.getElementById("youtubeDuration").style.right = sessionStorage.progress + "%";
     document.getElementById("youtubeDuration").style.transition = "right 0s linear 0s";
+    document.getElementById("youtubeDurationCont").tabIndex = "0";
     sessionStorage.duration = songs[sessionStorage.youtube].duration;
     sessionStorage.durationDecrement = (100 / sessionStorage.duration);
     document.getElementById("youtubePlayPauseButton").style.pointerEvents = "auto";
     document.getElementById("youtubePlayPauseButton").tabIndex = "0";
     sessionStorage.countingTime = "00:00";
-    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
+    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
     document.getElementById("youtubeCountingTime").datetime = "PT0M0S";
     sessionStorage.fullTime = String(Math.floor(sessionStorage.duration / 60)).padStart(2, "0") + ":" + String(sessionStorage.duration % 60).padStart(2, "0");
     document.getElementById("youtubeFullTime").innerHTML = sessionStorage.fullTime;
@@ -7405,7 +7412,7 @@ function youtubePause(method, event) {
 function youtubeTimer() {
   if (!(document.activeElement.classList.contains("youtubeCountingTimeUnits"))) {
     sessionStorage.countingTime = String(Math.floor(document.getElementsByClassName("audio")[sessionStorage.youtube].currentTime / 60)).padStart(2, "0") + ":" + String(Math.floor(document.getElementsByClassName("audio")[sessionStorage.youtube].currentTime) % 60).padStart(2, "0");
-    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
+    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
     document.getElementById("youtubeCountingTime").datetime = "PT" + ((sessionStorage.countingTime).substring(0, 2)).replace(/(?<=^)0/sm, "") + "M" + ((sessionStorage.countingTime).substring(3)).replace(/(?<=^)0/sm, "") + "S";
     if (document.getElementsByClassName("audio")[sessionStorage.youtube].currentTime == 0) {
       document.getElementById("youtubeTimer").title = "Has not started";
@@ -7425,8 +7432,8 @@ function youtubeTimer() {
 function arriveEditor(event) {
   let editor = new Range();
   editor.selectNodeContents(event.target);
-  document.getSelection().removeAllRanges();
-  document.getSelection().addRange(editor);
+  (document.getSelection()).removeAllRanges();
+  (document.getSelection()).addRange(editor);
   if (sessionStorage.scopeTimeout != undefined) {
     clearTimeout(sessionStorage.scopeTimeout);
     sessionStorage.removeItem("scopeTimeout");
@@ -7437,57 +7444,60 @@ function arriveEditor(event) {
 function leaveEditor(event) {
   let editor = new Range();
   editor.selectNodeContents(event.target);
-  document.getSelection().removeAllRanges();
+  (document.getSelection()).removeAllRanges();
   sessionStorage.scopeTimeout = setTimeout(() => (
     sessionStorage.scope = "document"
   ), 250);
 }
 
 function youtubeEdit(event) {
-  if ((event.target.innerHTML).match(/\<br\>/gism)) {
-    if ((event.target.innerHTML).match(/(?<=^)\<br\>(?=$)/ism)) {
-      event.target.innerHTML = (event.target.innerHTML).replace(/(?<=^)\<br\>(?=$)/ism, "*");
+  if (((event.target).innerHTML).match(/\<br\>/gism)) {
+    if (((event.target).innerHTML).match(/(?<=^)\<br\>(?=$)/ism)) {
+      (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<=^)\<br\>(?=$)/ism, "*");
     }
-    else if ((event.target.innerHTML).match(/(?<!^)\<br\>(?!$)/gism)) {
-      event.target.innerHTML = (event.target.innerHTML).replace(/(?<!^)\<br\>(?!$)/gism, "");
+    else if (((event.target).innerHTML).match(/(?<!^)\<br\>(?!$)/gism)) {
+      (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<!^)\<br\>(?!$)/gism, "");
     }
   }
-  if ((event.target.innerHTML).match(/[a-zA-Z]|\.|\,|\'|\"|\`|\~|\`|\_|\+|\^|\%|\=|\>|\<|\&|\#|\$|\@|\;|\:|\?|\!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+|\n+|\r+|\t+|\v+|\f+/gsm)) {
-    event.target.innerHTML = (event.target.innerHTML).replace(/[a-zA-Z]|\.|\,|\'|\"|\`|\~|\`|\_|\+|\^|\%|\=|\>|\<|\&|\#|\$|\@|\;|\:|\?|\!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+|\n+|\r+|\t+|\v+|\f+/gsm, "");
+  if (((event.target).innerHTML).match(/[a-zA-Z]|\.|\,|\'|\"|\`|\~|\`|\_|\+|\^|\%|\=|\>|\<|\&|\#|\$|\@|\;|\:|\?|\!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+|\n+|\r+|\t+|\v+|\f+/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/[a-zA-Z]|\.|\,|\'|\"|\`|\~|\`|\_|\+|\^|\%|\=|\>|\<|\&|\#|\$|\@|\;|\:|\?|\!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+|\n+|\r+|\t+|\v+|\f+/gsm, "");
   }
-  if ((event.target.innerHTML).length > 2) {
-    event.target.innerHTML = (event.target.innerHTML).substring(0, 2);
+  if (((event.target).innerHTML).length > 2) {
+    (event.target).innerHTML = ((event.target).innerHTML).substring(0, 2);
   }
-  if ((event.target.innerHTML == "") || (((event.target.innerHTML).length == 1) && (event.target.innerHTML == "*"))) {
+  if (((event.target).innerHTML == "") || ((((event.target).innerHTML).length == 1) && ((event.target).innerHTML == "*"))) {
     if (sessionStorage.oldCaret == undefined) {
       sessionStorage.oldCaret = 1;
     }
     sessionStorage.newCaret = 0;
-    event.target.innerHTML = ((event.target.innerHTML).replace(/\*/sm, "0")).padStart(2, "0");
+    (event.target).innerHTML = (((event.target).innerHTML).replace(/\*/sm, "0")).padStart(2, "0");
   }
-  else if (((event.target.innerHTML).length == 1) && (event.target.innerHTML != "*")) {
+  else if ((((event.target).innerHTML).length == 1) && ((event.target).innerHTML != "*")) {
     if (sessionStorage.oldCaret == undefined) {
       sessionStorage.oldCaret = 2;
     }
     sessionStorage.newCaret = 1;
   }
-  else if ((event.target.innerHTML).length > 1) {
+  else if (((event.target).innerHTML).length > 1) {
     if (sessionStorage.oldCaret == undefined) {
-      sessionStorage.oldCaret = ((event.target.innerHTML).length - 1);
+      sessionStorage.oldCaret = (((event.target).innerHTML).length - 1);
     }
-    sessionStorage.newCaret = (event.target.innerHTML).length;
+    sessionStorage.newCaret = ((event.target).innerHTML).length;
   }
   let caret = new Range();
-  caret.setStart(event.target.childNodes[0], sessionStorage.newCaret);
+  caret.setStart((event.target).childNodes[0], sessionStorage.newCaret);
   caret.collapse(true);
-  document.getSelection().removeAllRanges();
-  document.getSelection().addRange(caret);
+  (document.getSelection()).removeAllRanges();
+  (document.getSelection()).addRange(caret);
   sessionStorage.oldCaret = sessionStorage.newCaret;
 }
 
 function youtubeSet(event) {
+  (event.target).blur();
+  if (event.key == "Tab") {
+    document.getElementById("youtubeRestart").focus();
+  }
   for (var i = 0; i < document.getElementsByClassName("youtubeCountingTimeUnits").length; i++) {
-    document.getElementsByClassName("youtubeCountingTimeUnits")[i].blur();
     if ((document.getElementsByClassName("youtubeCountingTimeUnits")[i].innerHTML).length < 2) {
       document.getElementsByClassName("youtubeCountingTimeUnits")[i].innerHTML = (document.getElementsByClassName("youtubeCountingTimeUnits")[i].innerHTML).padStart(2, "0");
     }
@@ -7562,7 +7572,7 @@ function youtubeJump(event) {
   if (sessionStorage.mousePressed == undefined) {
     sessionStorage.mousePressed = false;
   }
-  sessionStorage.progressSeek = (100 - (((event.clientX - event.target.getBoundingClientRect().left) / (event.target.getBoundingClientRect().right - event.target.getBoundingClientRect().left)) * 100));
+  sessionStorage.progressSeek = (100 - (((event.clientX - (event.target).getBoundingClientRect().left) / ((event.target).getBoundingClientRect().right - (event.target).getBoundingClientRect().left)) * 100));
   document.getElementById("youtubeSeek").style.right = sessionStorage.progressSeek + "%";
   if ((sessionStorage.progress < sessionStorage.progressSeek) && (sessionStorage.progress != 100)) {
     if (sessionStorage.mousePressed == String(false)) {
@@ -7578,9 +7588,9 @@ function youtubeJump(event) {
   }
   document.getElementById("youtubeSeek").style.transition = "all 0s ease 0s";
   if ((event.type == "mousedown") || (event.type == "mousemove")) {
-    sessionStorage.seekTime = String(Math.floor((((event.clientX - event.target.getBoundingClientRect().left) / (event.target.getBoundingClientRect().right - event.target.getBoundingClientRect().left)) * sessionStorage.duration) / 60)).padStart(2, "0") + ":" + String(Math.floor((((event.clientX - event.target.getBoundingClientRect().left) / (event.target.getBoundingClientRect().right - event.target.getBoundingClientRect().left)) * sessionStorage.duration) % 60)).padStart(2, "0");
+    sessionStorage.seekTime = String(Math.floor((((event.clientX - (event.target).getBoundingClientRect().left) / ((event.target).getBoundingClientRect().right - (event.target).getBoundingClientRect().left)) * sessionStorage.duration) / 60)).padStart(2, "0") + ":" + String(Math.floor((((event.clientX - (event.target).getBoundingClientRect().left) / ((event.target).getBoundingClientRect().right - (event.target).getBoundingClientRect().left)) * sessionStorage.duration) % 60)).padStart(2, "0");
     if (sessionStorage.mousePressed == String(true)) {
-      sessionStorage.progress = (100 - (((event.clientX - event.target.getBoundingClientRect().left) / (event.target.getBoundingClientRect().right - event.target.getBoundingClientRect().left)) * 100));
+      sessionStorage.progress = (100 - (((event.clientX - (event.target).getBoundingClientRect().left) / ((event.target).getBoundingClientRect().right - (event.target).getBoundingClientRect().left)) * 100));
     }
   }
   else if (event.type == "keydown") {
@@ -7678,7 +7688,7 @@ function youtubeJump(event) {
     document.getElementById("youtubeDuration").style.right = sessionStorage.progress + "%";
     document.getElementById("youtubeDuration").style.transition = "right 0s linear 0s";
     sessionStorage.countingTime = sessionStorage.seekTime;
-    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
+    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
     document.getElementById("youtubeCountingTime").datetime = "PT" + ((sessionStorage.countingTime).substring(0, 2)).replace(/(?<=^)0/sm, "") + "M" + ((sessionStorage.countingTime).substring(3)).replace(/(?<=^)0/sm, "") + "S";
     if (document.getElementsByClassName("audio")[sessionStorage.youtube].currentTime == 0) {
       document.getElementById("youtubeTimer").title = "Has not started";
@@ -7704,7 +7714,7 @@ function youtubeRestart(event) {
     document.getElementById("youtubeDuration").style.transition = "right " + transitionDuration + "s linear 0s";
     document.getElementById("youtubePlayPauseButton").style.pointerEvents = "none";
     sessionStorage.countingTime = "00:00";
-    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
+    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
     document.getElementById("youtubeCountingTime").datetime = "PT0M0S";
     document.getElementById("youtubeTimer").title = "Has not started";
     document.getElementById("youtubeRestart").blur();
@@ -7812,10 +7822,12 @@ function closeYoutubeSong(event) {
   document.getElementById("youtubeSongs").blur();
   document.getElementById("youtubeToolbar").tabIndex = "-1";
   document.getElementById("youtubeToolbar").blur();
+  document.getElementById("youtubeDurationCont").tabIndex = "-1";
+  document.getElementById("youtubeDurationCont").blur();
   document.getElementById("youtubePlayPauseButton").style.pointerEvents = "none";
   document.getElementById("youtubePlayPauseButton").tabIndex = "-1";
   document.getElementById("youtubePlayPauseButton").blur();
-  document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\">" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\">" + (sessionStorage.countingTime).substring(3) + "</span>";
+  document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\">" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\">" + (sessionStorage.countingTime).substring(3) + "</span>";
   for (var i = 0; i < document.getElementsByClassName("youtubeJump").length; i++) {
     document.getElementsByClassName("youtubeJump")[i].style.pointerEvents = "none";
     document.getElementsByClassName("youtubeJump")[i].tabIndex = "-1";
@@ -10403,6 +10415,7 @@ function openPromo() {
   if (document.getElementById("viewAccountToggle").onclick == viewAccountToggleClose) {
     viewAccountToggleClose();
   }
+  document.getElementById("promo").tabIndex = "0";
   document.getElementById("promoTitleLink").tabIndex = "0";
   document.getElementById("promoExit").tabIndex = "0";
   var transformValue = ((sessionStorage.level - 1) * 9);
@@ -10538,8 +10551,10 @@ function closePromo(event) {
   document.getElementById("promoCont").style.transform = "skew(" + (Math.ceil(Math.random() * transformValue) * ((Math.round(Math.random())) ? (1) : (-1))) + "deg) scale(0)";
   document.getElementById("promoCont").tabIndex = "-1";
   document.getElementById("promoCont").blur();
+  document.getElementById("promo").tabIndex = "-1";
+  document.getElementById("promo").blur();
   document.getElementById("promoTitleLink").tabIndex = "-1";
-  document.getElementById("promoTitle").blur();
+  document.getElementById("promoTitleLink").blur();
   document.getElementById("promoExit").tabIndex = "-1";
   document.getElementById("promoExit").blur();
   if ((sessionStorage.promo == 0) && (document.getElementById("promo").currentTime > 0)) {
@@ -11267,25 +11282,31 @@ function accountUpdate(field, method) {
     }
     if (document.getElementsByClassName("definedInfoInput").length == 0) {
       document.getElementById("accountSubheading").innerHTML = "Start filling out the fields below to add your personal info to your account";
-      document.getElementById("accountInstructions").style.marginBottom = "0";
-      document.getElementById("accountInstructions").style.transition = "margin-bottom 0s ease 0s";
       document.getElementById("accountInstruction2").style.display = "none";
-      document.getElementById("clearAll").style.display = "none";
-      document.getElementById("clearAll").tabIndex = "-1";
-      document.getElementById("clearAll").blur();
       document.getElementById("data").style.display = "none";
       document.getElementById("data").tabIndex = "-1";
       document.getElementById("data").blur();
     }
     else if (document.getElementsByClassName("definedInfoInput").length > 0) {
       document.getElementById("accountSubheading").innerHTML = "Keep filling out these fields to update your account";
-      document.getElementById("accountInstructions").style.marginBottom = "1em";
-      document.getElementById("accountInstructions").style.transition = "margin-bottom 0s ease 0s";
       document.getElementById("accountInstruction2").style.display = "block";
-      document.getElementById("clearAll").style.display = "inline-block";
-      document.getElementById("clearAll").tabIndex = "0";
       document.getElementById("data").style.display = "table";
       document.getElementById("data").tabIndex = "0";
+    }
+    if (document.getElementsByClassName("definedInfoInput").length <= 1) {
+      document.getElementById("accountInstructions").style.marginBottom = "0";
+      document.getElementById("accountInstructions").style.transition = "margin-bottom 0s ease 0s";
+      document.getElementById("accountSubInstructions").style.display = "none";
+      document.getElementById("clearAll").style.display = "none";
+      document.getElementById("clearAll").tabIndex = "-1";
+      document.getElementById("clearAll").blur();
+    }
+    else if (document.getElementsByClassName("definedInfoInput").length > 1) {
+      document.getElementById("accountInstructions").style.marginBottom = "1em";
+      document.getElementById("accountInstructions").style.transition = "margin-bottom 0s ease 0s";
+      document.getElementById("accountSubInstructions").style.display = "inline";
+      document.getElementById("clearAll").style.display = "inline-block";
+      document.getElementById("clearAll").tabIndex = "0";
     }
     if (document.getElementsByClassName("definedInfoInput").length < document.getElementsByClassName("infoInput").length) {
       document.getElementById("accountSubheading").style.display = "block";
@@ -11341,13 +11362,16 @@ function accountUpdate(field, method) {
         }
         if (document.getElementsByClassName("definedInfoInput").length > 0) {
           document.getElementById("accountSubheading").innerHTML = "Keep filling out these fields to update your account";
-          document.getElementById("accountInstructions").style.marginBottom = "1em";
-          document.getElementById("accountInstructions").style.transition = "margin-bottom 0s ease 0s";
           document.getElementById("accountInstruction2").style.display = "block";
-          document.getElementById("clearAll").style.display = "inline-block";
-          document.getElementById("clearAll").tabIndex = "0";
           document.getElementById("data").style.display = "table";
           document.getElementById("data").tabIndex = "0";
+        }
+        if (document.getElementsByClassName("definedInfoInput").length > 1) {
+          document.getElementById("accountInstructions").style.marginBottom = "1em";
+          document.getElementById("accountInstructions").style.transition = "margin-bottom 0s ease 0s";
+          document.getElementById("accountSubInstructions").style.display = "inline";
+          document.getElementById("clearAll").style.display = "inline-block";
+          document.getElementById("clearAll").tabIndex = "0";
         }
         if (document.getElementsByClassName("definedInfoInput").length == document.getElementsByClassName("infoInput").length) {
           document.getElementById("accountSubheading").style.display = "none";
@@ -11403,15 +11427,18 @@ function accountUpdate(field, method) {
         }
         if (document.getElementsByClassName("definedInfoInput").length == 0) {
           document.getElementById("accountSubheading").innerHTML = "Start filling out the fields below to add your personal info to your account";
-          document.getElementById("accountInstructions").style.marginBottom = "0";
-          document.getElementById("accountInstructions").style.transition = "margin-bottom 0s ease 0s";
           document.getElementById("accountInstruction2").style.display = "none";
-          document.getElementById("clearAll").style.display = "none";
-          document.getElementById("clearAll").tabIndex = "-1";
-          document.getElementById("clearAll").blur();
           document.getElementById("data").style.display = "none";
           document.getElementById("data").tabIndex = "-1";
           document.getElementById("data").blur();
+        }
+        if (document.getElementsByClassName("definedInfoInput").length <= 1) {
+          document.getElementById("accountInstructions").style.marginBottom = "0";
+          document.getElementById("accountInstructions").style.transition = "margin-bottom 0s ease 0s";
+          document.getElementById("accountSubInstructions").style.display = "none";
+          document.getElementById("clearAll").style.display = "none";
+          document.getElementById("clearAll").tabIndex = "-1";
+          document.getElementById("clearAll").blur();
         }
         if (document.getElementsByClassName("definedInfoInput").length < document.getElementsByClassName("infoInput").length) {
           document.getElementById("accountSubheading").style.display = "block";
@@ -11437,7 +11464,7 @@ function remember(event) {
           }
           else if (document.getElementsByClassName("memoryOutput")[i].name == "totalGameTime") {
             here.totalGameTime = localStorage.totalGameTime;
-            document.getElementById("memoryTotalGameTimeData").innerHTML = localStorage.totalGameTime;
+            document.getElementById("totalGameTimeOutput").innerHTML = localStorage.totalGameTime;
           }
         }
       }
@@ -12112,6 +12139,9 @@ function mobileShrink() {
   document.getElementById("mobileButton").tabIndex = "0";
   document.getElementById("mobileImgCont").tabIndex = "0";
   document.getElementById("mobile").tabIndex = "0";
+  document.getElementById("mobile").role = "article";
+  document.getElementById("mobile").ariaDescription = "An alternative interface that is displayed when the screen size is too small";
+  document.getElementById("mobile").ariaHidden = false;
   document.onclick = unselectUrl;
   if (document.ondblclick != null) {
     document.ondblclick = null;
@@ -12131,6 +12161,9 @@ function mobileShrink() {
 
 function mobileGrow() {
   document.getElementById("mobile").tabIndex = "-1";
+  document.getElementById("mobile").removeAttribute("role");
+  document.getElementById("mobile").removeAttribute("aria-description");
+  document.getElementById("mobile").ariaHidden = true;
   if (document.getElementById("mobile").scrollHeight > document.getElementById("mobile").offsetHeight) {
     if (document.getElementById("mobile").scrollTop > 0) {
       document.getElementById("mobile").scrollTop = 0;
@@ -12246,8 +12279,8 @@ function mobileGrow() {
 function selectUrl() {
   let url = new Range();
   url.selectNodeContents(document.getElementById("urlText"));
-  document.getSelection().removeAllRanges();
-  document.getSelection().addRange(url);
+  (document.getSelection()).removeAllRanges();
+  (document.getSelection()).addRange(url);
   sessionStorage.urlSelected = true;
 }
 

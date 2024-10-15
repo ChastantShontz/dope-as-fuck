@@ -1,6 +1,6 @@
 <!-- Welcome to Conductor Simulator! -->
 <!DOCTYPE html>
-<html lang="en-us" translate="no" dir="ltr" xmlns="http://www.w3.org/1999/xhtml" prefix="og:http://ogp.me/ns#" profile="http://www.w3.org/2007/11/powder-profile" itemscope itemtype="http://schema.org/VideoGame">
+<html lang="en-us" translate="no" dir="ltr" id="conductorSimulatorConductTheClarksonUniversityPepBand" xmlns="http://www.w3.org/1999/xhtml" prefix="og:http://ogp.me/ns#" profile="http://www.w3.org/2007/11/powder-profile" itemscope itemtype="http://schema.org/VideoGame">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="content-language" content="en-us">
@@ -316,9 +316,9 @@
     <link href="main.css" hreflang="en-us" charset="utf-8" rel="preload stylesheet" as="style" fetchpriority="high" type="text/css" id="mainStylesheet">
   </head>
   <body tabindex="0" onload="if (localStorage.firstGame == undefined) {localStorage.firstGame = true}; loadSucceeded(); gameBegins(event)" onbeforeunload="return warning(document.activeElement)" onunload="gameComplete()" onresize="mobile()" ononline="connected()" onoffline="disconnected()">
-    <header>
+    <header role="banner">
     </header>
-    <main>
+    <main role="main">
       <div id="loading">
         <p id="loadingMessage">Loading gameplay<span id="loadingMessageDots"><span class="loadingMessageDot" id="loadingMessageDot1">.</span><span class="loadingMessageDot" id="loadingMessageDot2">.</span><span class="loadingMessageDot" id="loadingMessageDot3">.</span></span></p>
         <div id="loadingBarContCont">
@@ -361,7 +361,7 @@
             <source src="video/dancing.mp4" type="video/mp4">
           </video>
         </section>
-        <div id="subliminalMessageCont">
+        <div id="subliminalMessageCont" aria-hidden="true">
           <p id="subliminalMessage">Vote Chestnut for Historian Spring 2023</p>
         </div>
         <div id="notices">
@@ -414,7 +414,7 @@
           </div>
         </div>
       </div>
-      <img src="img/knightmobile.png" alt="The KnightMobile driving to SLU" fetchpriority="low" decoding="async" loading="lazy" class="load" id="knightmobile" role="img" aria-description="The KnightMobile driving to SLU" onload="load(event)">
+      <img src="img/knightmobile.png" alt="The KnightMobile driving to SLU" fetchpriority="low" decoding="async" loading="lazy" class="load" id="knightmobile" role="img" aria-description="The KnightMobile driving to SLU" aria-keyshortcuts="ArrowRight ArrowUp" onload="load(event)">
       <div id="crappleton" role="img" aria-description="Crappleton Arena at SLU">
       </div>
       <article id="game">
@@ -431,7 +431,7 @@
               <div class="life" id="socialMediaChairLife">
               </div>
               <p class="die" id="socialMediaChairDie">&times;</p>
-              <a href="https://www.mdpi.com/1424-8220/22/9/3163/htm" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" id="publishedPaper" tabindex="-1"></a>
+              <a href="https://www.mdpi.com/1424-8220/22/9/3163/htm" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" id="publishedPaper" tabindex="-1" aria-hidden="true"></a>
             </div>
           </div>
           <div class="lifeContCont" id="historianLifeContCont">
@@ -477,317 +477,317 @@
               </div>
             </div>
           </div>
-          <div class="gameActivity" id="cheersContContCont" role="menu" aria-description="A list of cheers to yell at the SLUzers">
+          <div class="gameActivity" id="cheersContContCont" role="list" aria-description="A list of cheers to yell at the SLUzers">
             <p id="cheerHeading">Cheer Score: <span id="cheerScore"></span></p>
             <div id="cheersContCont">
               <div id="cheersCont">
                 <ul id="cheers" tabindex="-1" role="scrollbar" onscroll="awayFromTop()">
-                  <li class="cheer midCheer incorrectCheer unusedCheer firstCheer" id="cheer1" role="menuitem">
+                  <li class="cheer midCheer incorrectCheer unusedCheer firstCheer" id="cheer1" role="listitem">
                     <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage1"><span id="goals"></span> more goals!</p>
                     <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover1" onclick="cheer(1, 2, event)">
                     </div>
                   </li>
-                  <li class="cheer midCheer incorrectCheer unusedCheer genderedCheer maleCheer" id="cheer2" role="menuitem">
+                  <li class="cheer midCheer incorrectCheer unusedCheer genderedCheer maleCheer" id="cheer2" role="listitem">
                     <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage2">Allin, you're ugly! BOOM ROASTED!</p>
                     <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover2" onclick="cheer(2, 2, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer3" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer3" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage3">Assisted by the refs!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover3" onclick="cheer(3, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer4" role="menuitem">
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer4" role="listitem">
                     <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage4">Bend over!</p>
                     <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover4" onclick="cheer(4, 2, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer5" role="menuitem" onmouseenter="changeCheer(5)" onmouseleave="changeCheerBack(5)">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer5" role="listitem" onmouseenter="changeCheer(5)" onmouseleave="changeCheerBack(5)">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage5">Boat...ship!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover5" onclick="cheer(5, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer6" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer6" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage6">Check the tapes!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover6" onclick="cheer(6, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer7" role="menuitem">
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer7" role="listitem">
                     <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage7">Clarkson rejects!</p>
                     <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover7" onclick="cheer(7, 1, event)">
                     </div>
                   </li>
-                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer8" role="menuitem">
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer8" role="listitem">
                     <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage8">Daddy <span id="roast"></span>!</p>
                     <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover8" onclick="cheer(8, 1, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer9" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer9" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage9">Feed the sieve!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover9" onclick="cheer(9, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer10" role="menuitem">
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer10" role="listitem">
                     <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage10">Flip our burgers!</p>
                     <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover10" onclick="cheer(10, 1, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer11" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer11" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage11">Free <span id="offenderName">our Golden Knights</span>!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover11" onclick="cheer(11, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer12" role="menuitem">
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer12" role="listitem">
                     <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage12">Gary Dake hates you!</p>
                     <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover12" onclick="cheer(12, 1, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer13" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer13" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage13">Get your eyes checked!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover13" onclick="cheer(13, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer14" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer14" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage14">Give me a "beer"!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover14" onclick="cheer(14, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer15" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer15" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage15">Give <span class="pronoun pronounThem pronounLower">them</span> five!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover15" onclick="cheer(15, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer16" role="menuitem">
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer16" role="listitem">
                     <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage16">Halftime!</p>
                     <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover16" onclick="cheer(16, 2, event)">
                     </div>
                   </li>
-                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer17" role="menuitem">
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer17" role="listitem">
                     <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage17">Here we go, Clarkson, here we go! Let's go tech!</p>
                     <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover17" onclick="cheer(17, 1, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer18" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer18" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage18">Hey...you suck!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover18" onclick="cheer(18, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer midCheer incorrectCheer unusedCheer genderedCheer femaleCheer" id="cheer19" role="menuitem">
+                  <li class="cheer midCheer incorrectCheer unusedCheer genderedCheer femaleCheer" id="cheer19" role="listitem">
                     <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage19">Hope needs soap! BOOM ROASTED!</p>
                     <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover19" onclick="cheer(19, 2, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer20" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer20" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage20">I disagree!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover20" onclick="cheer(20, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer21" role="menuitem" onmouseenter="changeCheer(21)" onmouseleave="changeCheerBack(21)">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer21" role="listitem" onmouseenter="changeCheer(21)" onmouseleave="changeCheerBack(21)">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage21">I'm blind, I'm deaf, I wanna be a ref!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover21" onclick="cheer(21, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer22" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer22" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage22">It's all your fault, sieve!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover22" onclick="cheer(22, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer23" role="menuitem">
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer23" role="listitem">
                     <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage23">It's <span id="day"></span> knight and you can't score!</p>
                     <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover23" onclick="cheer(23, 2, event)">
                     </div>
                   </li>
-                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer24" role="menuitem">
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer24" role="listitem">
                     <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage24">Kick <span class="pronoun pronounThem pronounLower">them</span> out!</p>
                     <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover24" onclick="cheer(24, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer25" role="menuitem">
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer25" role="listitem">
                     <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage25">Let's go...Clarkson! Let's go...techers!</p>
                     <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover25" onclick="cheer(25, 1, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer26" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer26" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage26">Nice shot...NOT!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover26" onclick="cheer(26, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer27" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer27" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage27">Now it's even!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover27" onclick="cheer(27, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer28" role="menuitem">
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer28" role="listitem">
                     <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage28">Number one is number one!</p>
                     <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover28" onclick="cheer(28, 2, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer29" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer29" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage29">Okay...and SLU still sucks!<span id="swallow"> (And they swallow, too!)</span></p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover29" onclick="cheer(29, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer30" role="menuitem">
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer30" role="listitem">
                     <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage30">P-O-O-P, that spells "SLU"!</p>
                     <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover30" onclick="cheer(30, 1, event)">
                     </div>
                   </li>
-                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer31" role="menuitem">
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer31" role="listitem">
                     <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage31">Put the biscuit in the basket! Put the triscuit in the trash can!</p>
                     <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover31" onclick="cheer(31, 2, event)">
                     </div>
                   </li>
-                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer32" role="menuitem" onmouseenter="changeCheer(32)" onmouseleave="changeCheerBack(32)">
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer32" role="listitem" onmouseenter="changeCheer(32)" onmouseleave="changeCheerBack(32)">
                     <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage32">Ra ra ree! Hit <span class="pronoun pronounThem pronounLower">them</span> in the knee! Ra ra rass! Hit <span class="pronoun pronounThem pronounLower">them</span> in the other knee!</p>
                     <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover32" onclick="cheer(32, 2, event)">
                     </div>
                   </li>
-                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer33" role="menuitem">
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer33" role="listitem">
                     <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage33">Safety school!</p>
                     <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover33" onclick="cheer(33, 1, event)">
                     </div>
                   </li>
-                  <li class="cheer lowCheer incorrectCheer unusedCheer" id="cheer34" role="menuitem">
+                  <li class="cheer lowCheer incorrectCheer unusedCheer" id="cheer34" role="listitem">
                     <p class="cheerMessage lowCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage34">Santa isn't real!</p>
                     <div class="cheerCover lowCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover34" onclick="cheer(34, 1, event)">
                     </div>
                   </li>
-                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer35" role="menuitem">
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer35" role="listitem">
                     <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage35">Sexy goalie!</p>
                     <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover35" onclick="cheer(35, 2, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer36" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer36" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage36">Skate, shoot, score, tech!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover36" onclick="cheer(36, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer37" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer37" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage37">Sloppy sieve!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover37" onclick="cheer(37, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer38" role="menuitem">
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer38" role="listitem">
                     <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage38">SLU is from New Jersey!</p>
                     <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover38" onclick="cheer(38, 1, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer39" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer39" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage39">SLU school of acting!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover39" onclick="cheer(39, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer40" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer40" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage40">SLUzer...you're a big <del class="pussWuss" id="puss">puss</del> <ins class="pussWuss" id="wuss">wuss</ins>!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover40" onclick="cheer(40, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer41" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer41" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage41">Start the bus!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover41" onclick="cheer(41, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer42" role="menuitem">
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer42" role="listitem">
                     <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage42">Stop beating your stick, you'll go blind!</p>
                     <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover42" onclick="cheer(42, 2, event)">
                     </div>
                   </li>
-                  <li class="cheer lowCheer incorrectCheer unusedCheer" id="cheer43" role="menuitem" onmouseenter="changeCheer(43)" onmouseleave="changeCheerBack(43)">
+                  <li class="cheer lowCheer incorrectCheer unusedCheer" id="cheer43" role="listitem" onmouseenter="changeCheer(43)" onmouseleave="changeCheerBack(43)">
                     <p class="cheerMessage lowCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage43">Suck flu!</p>
                     <div class="cheerCover lowCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover43" onclick="cheer(43, 1, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer44" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer44" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage44">Thank you, Tony!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover44" onclick="cheer(44, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer45" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer45" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage45">That's a shot!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover45" onclick="cheer(45, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer46" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer46" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage46">The refs need to get some gl<strong>asses</strong>!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover46" onclick="cheer(46, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer47" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer47" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage47">The refs went to SLU!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover47" onclick="cheer(47, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer48" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer48" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage48">The refs were <span id="verb"></span> off!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover48" onclick="cheer(48, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer49" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer49" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage49">They were framed!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover49" onclick="cheer(49, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer50" role="menuitem">
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer50" role="listitem">
                     <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage50">Ugly jerseys!</p>
                     <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover50" onclick="cheer(50, 1, event)">
                     </div>
                   </li>
-                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer51" role="menuitem">
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer51" role="listitem">
                     <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage51">Use your hockey! Use all your hockey!</p>
                     <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover51" onclick="cheer(51, 2, event)">
                     </div>
                   </li>
-                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer52" role="menuitem">
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer52" role="listitem">
                     <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage52">We are CU!</p>
                     <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover52" onclick="cheer(52, 1, event)">
                     </div>
                   </li>
-                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer53" role="menuitem">
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer53" role="listitem">
                     <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage53">We hate SLU, we hate SLU, we hate SLU, and so do you!</p>
                     <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover53" onclick="cheer(53, 1, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer54" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer54" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage54">We miss you, <span class="goalieName">goalie</span>! But not enough to call!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover54" onclick="cheer(54, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer55" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer55" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage55">You can't do that!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover55" onclick="cheer(55, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer56" role="menuitem">
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer56" role="listitem">
                     <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage56">You can't skate!</p>
                     <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover56" onclick="cheer(56, 2, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer57" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer57" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage57">You did nothing, <span class="goalieName">goalie</span>!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover57" onclick="cheer(57, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer58" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer58" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage58">You're a hooker!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover58" onclick="cheer(58, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer59" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer" id="cheer59" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage59">You're bad, you're bad, you're bad, you're bad, you're baaad, you're baaaaaad...</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover59" onclick="cheer(59, 3, event)">
                     </div>
                   </li>
-                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer60" role="menuitem">
+                  <li class="cheer midCheer incorrectCheer unusedCheer" id="cheer60" role="listitem">
                     <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage60">You're not a sieve, you're a vacuum! You're not a vacuum, you're a black hole! You're not a black hole, you just suck!</p>
                     <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover60" onclick="cheer(60, 2, event)">
                     </div>
                   </li>
-                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer61" role="menuitem">
+                  <li class="cheer lowCheer correctCheer unusedCheer" id="cheer61" role="listitem">
                     <p class="cheerMessage lowCheerMessage correctCheerMessage unusedCheerMessage" id="cheerMessage61">Your degrees are worthless!</p>
                     <div class="cheerCover lowCheerCover correctCheerCover unusedCheerCover" id="cheerCover61" onclick="cheer(61, 1, event)">
                     </div>
                   </li>
-                  <li class="cheer highCheer incorrectCheer unusedCheer lastCheer" id="cheer62" role="menuitem">
+                  <li class="cheer highCheer incorrectCheer unusedCheer lastCheer" id="cheer62" role="listitem">
                     <p class="cheerMessage highCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage62">Zebras!</p>
                     <div class="cheerCover highCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover62" onclick="cheer(62, 3, event)">
                     </div>
@@ -1975,12 +1975,12 @@
                 <img src="img/carloDesena.png" alt="Not Carlos, you racist" title="Carlo DeSena" fetchpriority="low" decoding="async" loading="lazy" class="bandie bandieRow2 bandieRow2Left load" id="carloDesena" onload="load(event)">
                 <img src="img/bellaDesena.png" alt="No, who told you?" title="Bella DeSena" fetchpriority="low" decoding="async" loading="lazy" class="bandie bandieRow2 bandieRow2Left load" id="bellaDesena" onload="load(event)">
                 <div class="bandieCont" id="knightguardCont">
-                  <a href="img/knightguardBusinessCard.png" rel="download" type="image/png" class="bandieLink" id="knightguardLink" tabindex="-1" download="Chast & Chaz KnightGuard Security"></a>
+                  <a href="img/knightguardBusinessCard.png" rel="download" type="image/png" class="bandieLink" id="knightguardLink" tabindex="-1" aria-hidden="true" download="Chast & Chaz KnightGuard Security"></a>
                   <img src="img/knightguard.png" alt="Chast & Chaz KnightGuard Security" title="Chast & Chaz KnightGuard Security" fetchpriority="low" decoding="async" loading="lazy" class="bandie bandieRow2 bandieRow2Right load" id="knightguard" onload="load(event)" onclick="clickLink('knightguardLink')" onmouseenter="showKnightguardBusinessCard()" onmouseleave="hideKnightguardBusinessCard()">
                   <img src="img/knightguardBusinessCard.png" alt="A business card for Chast & Chaz KnightGuard Security" fetchpriority="low" decoding="async" loading="lazy" class="load" id="knightguardBusinessCard" onload="load(event)">
                 </div>
                 <div class="bandieCont" id="bensCont">
-                  <a href="https://starwars.fandom.com/wiki/Ben_Solo" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" class="bandieLink" id="benLink" tabindex="-1"></a>
+                  <a href="https://starwars.fandom.com/wiki/Ben_Solo" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" class="bandieLink" id="benLink" tabindex="-1" aria-hidden="true"></a>
                   <div id="bens">
                     <img src="img/benVincens.png" alt="Ben Solo" title="Ben Vincens" fetchpriority="low" decoding="async" loading="lazy" class="bandie bandieRow2 bandieRow2Right ben load" id="benVincens" onload="load(event)">
                     <img src="img/benSolo.png" alt="The real Ben Solo" title="Ben Vincens" fetchpriority="low" decoding="async" loading="lazy" class="bandie bandieRow2 bandieRow2Right ben load" id="benSolo" onload="load(event)" onclick="clickLink('benLink')">
@@ -1994,7 +1994,7 @@
                 <img src="img/tomRobinson.png" alt="Token redhead" title="Tom Robinson" fetchpriority="low" decoding="async" loading="lazy" class="bandie bandieRow3 load" id="tomRobinson" onload="load(event)">
                 <img src="img/lindseyPenet.png" alt="Not Cindy" title="Lindsey Penet" fetchpriority="low" decoding="async" loading="lazy" class="bandie bandieRow3 load" id="lindseyPenet" onload="load(event)">
                 <div class="bandieCont" id="ryanMccarthyCont">
-                  <a href="https://www.mdpi.com/1424-8220/22/9/3163/htm" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" class="bandieLink" id="ryanMccarthyLink" tabindex="-1"></a>
+                  <a href="https://www.mdpi.com/1424-8220/22/9/3163/htm" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" class="bandieLink" id="ryanMccarthyLink" tabindex="-1" aria-hidden="true"></a>
                   <img src="img/ryanMccarthy.png" alt="Dope as fuck because she published a paper about energy and fatigue" title="Ryan McCarthy, Social Media Chair" fetchpriority="low" decoding="async" loading="lazy" class="bandie bandieRow3 eboard load" id="ryanMccarthy" onload="load(event)" onclick="clickLink('ryanMccarthyLink')">
                 </div>
                 <img src="img/davidVanill.png" alt="David Vanill Ice" title="David Vanill" fetchpriority="low" decoding="async" loading="lazy" class="bandie bandieRow3 load" id="davidVanill" onload="load(event)">
@@ -2764,12 +2764,12 @@
                 <p id="cuntEmpireAdvertisement"><a href="https://www.cuntempire.com" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="https://www.cuntempire.com" id="cuntEmpireAdvertisementLink" tabindex="-1" role="link" aria-label="Play Cunt Empire">Its perfect fora daily bonner when you got back from work</a></p>
               </div>
             </div>
-            <button type="button" id="cuntEmpireExit" tabindex="-1" onclick="cuntEmpireExit()">&times;</button>
+            <button type="button" id="cuntEmpireExit" tabindex="-1" aria-hidden="true" onclick="cuntEmpireExit()">&times;</button>
           </div>
-          <a href="https://www.cuntempire.com" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="https://www.cuntempire.com" id="cuntEmpireCover" tabindex="-1" onclick="cuntEmpireUncover()"></a>
+          <a href="https://www.cuntempire.com" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="https://www.cuntempire.com" id="cuntEmpireCover" tabindex="-1" aria-hidden="true" onclick="cuntEmpireUncover()"></a>
         </div>
       </article>
-      <div id="raffle" onclick="raffle(event)">
+      <div id="raffle" aria-hidden="true" onclick="raffle(event)">
       </div>
       <article id="cover" role="article" aria-description="A cover that contains several smaller modals">
         <div class="modal" id="poem" role="region" aria-description="Jake McNamara's Thanksgiving poem">
@@ -2923,19 +2923,19 @@
             <br>
             <cite id="poemAuthors">Jake McNamara, Class of 2016 <span id="poemAdapters">(adapted by Aria Stephan, Class of 2022; Kami Miller, Class of 2023; Ryan McCarthy, Class of 2024)</span></cite>
           </div>
-          <button type="button" id="poemExit" tabindex="-1" role="button" aria-label="Close the poem" onclick="closePoem(event)">&times;</button>
+          <button type="button" id="poemExit" tabindex="-1" role="button" aria-label="Close the poem" aria-keyshortcuts="Escape" onclick="closePoem(event)">&times;</button>
         </div>
-        <div class="modal drunkCont" id="promoCont" role="region" aria-description="A promo to show what life is like as part of the Clarkson University pep band">
-          <video poster="img/promo.png" preload="metadata" class="smallScreenPromo" id="promo" tabindex="-1" onmouseenter="showPromoControls()" onmouseleave="hidePromoControls()" onfullscreenchange="fullscreenEnter()" onended="closePromo(event)" controls>
+        <div class="modal drunkCont" id="promoCont" role="region" aria-description="A video to welcome you into the Clarkson University pep band">
+          <video poster="img/promo.png" preload="metadata" class="smallScreenPromo" id="promo" tabindex="-1" role="application" aria-label="Watch the welcome video" aria-keyshortcuts="Space f ArrowUp ArrowDown m c" onmouseenter="showPromoControls()" onmouseleave="hidePromoControls()" onfullscreenchange="fullscreenEnter()" onended="closePromo(event)" controls>
             <source src="video/promo.mp4" type="video/mp4">
             <track src="captions.vtt" srclang="en-us" kind="captions" label="Closed captions" default>
           </video>
           <p class="drunkText" id="promoTitle" onmouseenter="showPromoControls()"><a href="https://www.youtube.com/watch?v=HGeQ0Afg2A0" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Pep Band Welcome Video" class="drunkText" id="promoTitleLink" tabindex="-1" role="link" aria-label="Learn more about the Clarkson University pep band">Pep Band Welcome Video</a></p>
-          <button type="button" class="drunkText" id="promoExit" tabindex="-1" role="button" aria-label="Close the welcome video" onclick="closePromo(event)" onmouseenter="showPromoControls()">&times;</button>
+          <button type="button" class="drunkText" id="promoExit" tabindex="-1" role="button" aria-label="Close the welcome video" aria-keyshortcuts="Escape" onclick="closePromo(event)" onmouseenter="showPromoControls()">&times;</button>
         </div>
-        <div class="modal" id="youtubeSongsContCont" role="region" aria-description="A video player for various YouTube songs">
+        <div class="modal" id="youtubeSongsContCont" role="region" aria-description="A player for various YouTube songs">
           <div id="youtubeSongsCont">
-            <div id="youtubeSongs" role="switch" aria-label="Play the YouTube song" onclick="youtubeToggle('click', event)" onmouseenter="emphasizeYoutubePlayPause()" onmouseleave="deEmphasizeYoutubePlayPause()" onmousemove="showCursor()">
+            <div id="youtubeSongs" role="switch" aria-label="Play the YouTube song" aria-keyshortcuts="Space" onclick="youtubeToggle('click', event)" onmouseenter="emphasizeYoutubePlayPause()" onmouseleave="deEmphasizeYoutubePlayPause()" onmousemove="showCursor()">
               <p id="danceInstructions"></p>
               <p id="fuckSluMessage">Fuck SLU!</p>
               <p id="youtubeTitle"></p>
@@ -2944,8 +2944,8 @@
                 </div>
               </div>
             </div>
-            <div id="youtubeToolbar" role="region" onmouseenter="emphasizeYoutubeDuration()" onmouseleave="unemphasizeYoutubeDuration()">
-              <div id="youtubeDurationCont" onmousedown="pressMouse(event)" onmouseup="liftMouse(event)" onmouseenter="youtubeSeek()" onmouseleave="youtubeUnseek()" onmousemove="youtubeJump(event)">
+            <div id="youtubeToolbar" role="toolbar" onmouseenter="emphasizeYoutubeDuration()" onmouseleave="unemphasizeYoutubeDuration()">
+              <div id="youtubeDurationCont" role="progressbar" aria-label="Skip forward or back through the YouTube song" aria-keyshortcuts="ArrowRight ArrowLeft PageUp PageDown Home End" onmousedown="pressMouse(event)" onmouseup="liftMouse(event)" onmouseenter="youtubeSeek()" onmouseleave="youtubeUnseek()" onmousemove="youtubeJump(event)">
                 <div id="youtubeSeek">
                 </div>
                 <div id="youtubeDuration">
@@ -2953,12 +2953,12 @@
               </div>
               <div id="youtubeControls">
                 <div class="youtubeControl" id="youtubeControl1">
-                  <button type="button" title="Play (space)" id="youtubePlayPauseButton" tabindex="-1" role="switch" aria-label="Play the YouTube song" onclick="youtubeToggle('click', event)"><span id="youtubePlayPauseButtonShape"></span></button>
-                  <p title="Has not started" id="youtubeTimer"><time class="youtubeTime" id="youtubeCountingTime"><span class="youtubeCountingTimeUnits" id="youtubeCountingTimeMinutes" aria-label="Enter the minutes of the timestamp that you want to jump to" onkeydown="youtubeControls(event)" onfocus="arriveEditor(event)" onblur="leaveEditor(event)" oninput="youtubeEdit(event)"></span>:<span class="youtubeCountingTimeUnits" id="youtubeCountingTimeSeconds" aria-label="Enter the seconds of the timestamp that you want to jump to" onkeydown="youtubeControls(event)" onfocus="arriveEditor(event)" onblur="leaveEditor(event)" oninput="youtubeEdit(event)"></span></time> / <time class="youtubeTime" id="youtubeFullTime">:</time></p>
+                  <button type="button" title="Play (space)" id="youtubePlayPauseButton" tabindex="-1" role="switch" aria-label="Play the YouTube song" aria-keyshortcuts="Space" onclick="youtubeToggle('click', event)"><span id="youtubePlayPauseButtonShape"></span></button>
+                  <p title="Has not started" id="youtubeTimer"><time class="youtubeTime" id="youtubeCountingTime"><span class="youtubeCountingTimeUnits" id="youtubeCountingTimeMinutes" tabindex="-1" role="timer" aria-label="Enter the minutes of the timestamp that you want to jump to" aria-keyshortcuts="Enter Tab" onkeydown="youtubeControls(event)" onfocus="arriveEditor(event)" onblur="leaveEditor(event)" oninput="youtubeEdit(event)"></span>:<span class="youtubeCountingTimeUnits" id="youtubeCountingTimeSeconds" tabindex="-1" role="timer" aria-label="Enter the seconds of the timestamp that you want to jump to" aria-keyshortcuts="Enter Tab" onkeydown="youtubeControls(event)" onfocus="arriveEditor(event)" onblur="leaveEditor(event)" oninput="youtubeEdit(event)"></span></time> / <time class="youtubeTime" id="youtubeFullTime">:</time></p>
                 </div>
                 <div class="youtubeControl" id="youtubeControl2">
-                  <button type="button" title="Restart (backspace)" class="youtubeJump defaultButton" id="youtubeRestart" tabindex="-1" role="button" aria-label="Restart the YouTube song" onclick="youtubeRestart(event)">&laquo; Restart</button>
-                  <button type="button" title="Skip (escape)" class="youtubeJump defaultButton" id="youtubeSkip" tabindex="-1" role="button" aria-label="Skip past the YouTube song" onclick="closeYoutubeSong(event)">Skip &raquo;</button>
+                  <button type="button" title="Restart (backspace)" class="youtubeJump defaultButton" id="youtubeRestart" tabindex="-1" role="button" aria-label="Restart the YouTube song" aria-keyshortcuts="Backspace" onclick="youtubeRestart(event)">&laquo; Restart</button>
+                  <button type="button" title="Skip (escape)" class="youtubeJump defaultButton" id="youtubeSkip" tabindex="-1" role="button" aria-label="Skip past the YouTube song" aria-keyshortcuts="Escape" onclick="closeYoutubeSong(event)">Skip &raquo;</button>
                 </div>
               </div>
               <div id="fuckSluButtonCont">
@@ -2966,7 +2966,7 @@
               </div>
             </div>
           </div>
-          <button type="button" title="Exit (escape)" id="youtubeExit" tabindex="-1" role="button" aria-label="Close the YouTube video player" onclick="closeYoutubeSong(event)">&times;</button>
+          <button type="button" title="Exit (escape)" id="youtubeExit" tabindex="-1" role="button" aria-label="Close the YouTube song player" aria-keyshortcuts="Escape" onclick="closeYoutubeSong(event)">&times;</button>
         </div>
         <div class="modal drunkCont" id="iceContContCont" role="region" aria-description="A Smirnoff Ice that you are now forced to drink or you'll be a bitch">
           <div id="iceContCont">
@@ -3000,10 +3000,10 @@
         <div class="modal" id="choicesContCont" role="menu" aria-description="Four options of songs for the pep band to play">
           <div id="choicesCont">
             <div id="choices">
-              <button type="button" class="choice" id="choice1" tabindex="-1" role="menuitem" onclick="selectAnswer(1, event)" onmouseenter="changeSong(event)" onmouseleave="changeSongBack(event)"></button>
-              <button type="button" class="choice" id="choice2" tabindex="-1" role="menuitem" onclick="selectAnswer(2, event)" onmouseenter="changeSong(event)" onmouseleave="changeSongBack(event)"></button>
-              <button type="button" class="choice" id="choice3" tabindex="-1" role="menuitem" onclick="selectAnswer(3, event)" onmouseenter="changeSong(event)" onmouseleave="changeSongBack(event)"></button>
-              <button type="button" class="choice" id="choice4" tabindex="-1" role="menuitem" onclick="selectAnswer(4, event)" onmouseenter="changeSong(event)" onmouseleave="changeSongBack(event)"></button>
+              <button type="button" class="choice" id="choice1" tabindex="-1" role="menuitem" aria-label="Select the first song to play" onclick="selectAnswer(1, event)" onmouseenter="changeSong(event)" onmouseleave="changeSongBack(event)"></button>
+              <button type="button" class="choice" id="choice2" tabindex="-1" role="menuitem" aria-label="Select the second song to play" onclick="selectAnswer(2, event)" onmouseenter="changeSong(event)" onmouseleave="changeSongBack(event)"></button>
+              <button type="button" class="choice" id="choice3" tabindex="-1" role="menuitem" aria-label="Select the third song to play" onclick="selectAnswer(3, event)" onmouseenter="changeSong(event)" onmouseleave="changeSongBack(event)"></button>
+              <button type="button" class="choice" id="choice4" tabindex="-1" role="menuitem" aria-label="Select the fourth song to play" onclick="selectAnswer(4, event)" onmouseenter="changeSong(event)" onmouseleave="changeSongBack(event)"></button>
             </div>
             <div id="chooseCont">
               <button type="submit" name="song" class="defaultButton disabled" id="choose" tabindex="-1" role="button" aria-label="Lock in your song of choice" onclick="chooseAnswer(event)" disabled>Choose</button>
@@ -3040,9 +3040,9 @@
               <p id="accountSubheading">Start filling out the fields below to add your personal info to your account</p>
               <div id="accountInstructions">
                 <p class="accountInstruction" id="accountInstruction1">Click the buttons to the right of the text fields or press the <kbd class="key" id="enterEnter">Enter</kbd> key to lock in your info</p>
-                <p class="accountInstruction" id="accountInstruction2">To clear your info, click the buttons above the text fields or press <kbd class="key" id="enterClear">Enter</kbd> + <kbd class="key" id="shift">Shift</kbd> (+ <kbd class="key" id="control">Control</kbd> to clear all)</p>
+                <p class="accountInstruction" id="accountInstruction2">To clear your info, click the buttons above the text fields or press <kbd class="key" id="enterClear">Enter</kbd> + <kbd class="key" id="shift">Shift</kbd><span id="accountSubInstructions"> (+ <kbd class="key" id="control">Control</kbd> to clear all)</span></p>
               </div>
-              <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearAll" tabindex="-1" role="button" aria-label="Clear away all your personal info" onclick="accountRemove(0, event)">Clear All</button>
+              <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearAll" tabindex="-1" role="button" aria-label="Clear away all your personal info" aria-keyshortcuts="Enter+Shift+Control" onclick="accountRemove(0, event)">Clear All</button>
             </div>
             <div id="infoDataMemory">
               <div id="infoData">
@@ -3056,11 +3056,11 @@
                             <div class="infoInputContCont" id="nameInputContCont">
                               <div class="infoLabelCont" id="nameLabelCont">
                                 <label form="info" for="nameInput" class="infoLabel" id="nameLabel">Name:</label>
-                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearName" tabindex="-1" role="button" aria-label="Clear the info on your name" onclick="accountRemove(1, event)">Clear</button>
+                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearName" tabindex="-1" role="button" aria-label="Clear the info on your name" aria-keyshortcuts="Enter+Shift Enter+Shift+Control" onclick="accountRemove(1, event)">Clear</button>
                               </div>
                               <div class="infoInputCont" id="nameInputCont">
-                                <input form="info" list="namesList" type="text" name="name" placeholder="Name..." pattern=".*[a-zA-Z0-9]+.*" size="25" minlength="1" maxlength="50" title="Enter your name here" class="infoInput undefinedInfoInput validInfoInput" id="nameInput" tabindex="-1" role="combobox" aria-label="Enter your name here" onkeydown="accountProcess(1, event)" onkeyup="accountTyping(1)" onchange="accountTyping(1)" onfocus="arriveInput(1)" onblur="leaveInput(1)" autocomplete="section-info name" autocapitalize="words" autofocus>
-                                <button type="submit" name="name" class="infoButton enterInfoButton defaultButton disabled" id="enterName" tabindex="-1" role="button" aria-label="Enter your name" onclick="accountProcess(1, event)" disabled>&#9166;</button>
+                                <input form="info" list="namesList" type="text" name="name" placeholder="Name..." pattern=".*[a-zA-Z0-9]+.*" size="25" minlength="1" maxlength="50" title="Enter your name here" class="infoInput undefinedInfoInput validInfoInput" id="nameInput" tabindex="-1" role="combobox" aria-label="Enter your name here" aria-keyshortcuts="/ 1 Enter" onkeydown="accountProcess(1, event)" onkeyup="accountTyping(1)" onchange="accountTyping(1)" onfocus="arriveInput(1)" onblur="leaveInput(1)" autocomplete="section-info name" autocapitalize="words" autofocus>
+                                <button type="submit" name="name" class="infoButton enterInfoButton defaultButton disabled" id="enterName" tabindex="-1" role="button" aria-label="Enter your name" aria-keyshortcuts="Enter" onclick="accountProcess(1, event)" disabled>&#9166;</button>
                               </div>
                             </div>
                             <p class="invalidInfoMessage" id="invalidName">*Invalid entry</p>
@@ -3380,11 +3380,11 @@
                             <div class="infoInputContCont" id="yearInputContCont">
                               <div class="infoLabelCont" id="yearLabelCont">
                                 <label form="info" for="yearInput" class="infoLabel" id="yearLabel">Year:</label>
-                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearYear" tabindex="-1" role="button" aria-label="Clear the info on your year" onclick="accountRemove(2, event)">Clear</button>
+                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearYear" tabindex="-1" role="button" aria-label="Clear the info on your year" aria-keyshortcuts="Enter+Shift Enter+Shift+Control" onclick="accountRemove(2, event)">Clear</button>
                               </div>
                               <div class="infoInputCont" id="yearInputCont">
-                                <input form="info" list="yearsList" type="text" name="year" placeholder="Year..." pattern=".*[a-zA-Z0-9]+.*" size="25" minlength="1" maxlength="50" title="Enter your year here" class="infoInput undefinedInfoInput validInfoInput" id="yearInput" tabindex="-1" role="combobox" aria-label="Enter your year here" onkeydown="accountProcess(2, event)" onkeyup="accountTyping(2)" onchange="accountTyping(2)" onfocus="arriveInput(2)" onblur="leaveInput(2)" autocomplete="section-info year" autocapitalize="sentences" spellcheck>
-                                <button type="submit" name="year" class="infoButton enterInfoButton defaultButton disabled" id="enterYear" tabindex="-1" role="button" aria-label="Enter your year" onclick="accountProcess(2, event)" disabled>&#9166;</button>
+                                <input form="info" list="yearsList" type="text" name="year" placeholder="Year..." pattern=".*[a-zA-Z0-9]+.*" size="25" minlength="1" maxlength="50" title="Enter your year here" class="infoInput undefinedInfoInput validInfoInput" id="yearInput" tabindex="-1" role="combobox" aria-label="Enter your year here" aria-keyshortcuts="/ 2 Enter" onkeydown="accountProcess(2, event)" onkeyup="accountTyping(2)" onchange="accountTyping(2)" onfocus="arriveInput(2)" onblur="leaveInput(2)" autocomplete="section-info year" autocapitalize="sentences" spellcheck>
+                                <button type="submit" name="year" class="infoButton enterInfoButton defaultButton disabled" id="enterYear" tabindex="-1" role="button" aria-label="Enter your year" aria-keyshortcuts="Enter" onclick="accountProcess(2, event)" disabled>&#9166;</button>
                               </div>
                             </div>
                             <p class="invalidInfoMessage" id="invalidYear">*Invalid entry</p>
@@ -3407,11 +3407,11 @@
                             <div class="infoInputContCont" id="majorInputContCont">
                               <div class="infoLabelCont" id="majorLabelCont">
                                 <label form="info" for="majorInput" class="infoLabel" id="majorLabel">Major:</label>
-                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearMajor" tabindex="-1" role="button" aria-label="Clear the info on your major" onclick="accountRemove(3, event)">Clear</button>
+                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearMajor" tabindex="-1" role="button" aria-label="Clear the info on your major" aria-keyshortcuts="Enter+Shift Enter+Shift+Control" onclick="accountRemove(3, event)">Clear</button>
                               </div>
                               <div class="infoInputCont" id="majorInputCont">
-                                <input form="info" list="majorsList" type="text" name="major" placeholder="Major..." pattern=".*[a-zA-Z0-9]+.*" size="25" minlength="1" maxlength="50" title="Enter your major here" class="infoInput undefinedInfoInput validInfoInput" id="majorInput" tabindex="-1" role="combobox" aria-label="Enter your major here" onkeydown="accountProcess(3, event)" onkeyup="accountTyping(3)" onchange="accountTyping(3)" onfocus="arriveInput(3)" onblur="leaveInput(3)" autocomplete="section-info major" autocapitalize="sentences" spellcheck>
-                                <button type="submit" name="major" class="infoButton enterInfoButton defaultButton disabled" id="enterMajor" tabindex="-1" role="button" aria-label="Enter your major" onclick="accountProcess(3, event)" disabled>&#9166;</button>
+                                <input form="info" list="majorsList" type="text" name="major" placeholder="Major..." pattern=".*[a-zA-Z0-9]+.*" size="25" minlength="1" maxlength="50" title="Enter your major here" class="infoInput undefinedInfoInput validInfoInput" id="majorInput" tabindex="-1" role="combobox" aria-label="Enter your major here" aria-keyshortcuts="/ 3 Enter" onkeydown="accountProcess(3, event)" onkeyup="accountTyping(3)" onchange="accountTyping(3)" onfocus="arriveInput(3)" onblur="leaveInput(3)" autocomplete="section-info major" autocapitalize="sentences" spellcheck>
+                                <button type="submit" name="major" class="infoButton enterInfoButton defaultButton disabled" id="enterMajor" tabindex="-1" role="button" aria-label="Enter your major" aria-keyshortcuts="Enter" onclick="accountProcess(3, event)" disabled>&#9166;</button>
                               </div>
                             </div>
                             <p class="invalidInfoMessage" id="invalidMajor">*Invalid entry</p>
@@ -3672,11 +3672,11 @@
                             <div class="infoInputContCont" id="hometownInputContCont">
                               <div class="infoLabelCont" id="hometownLabelCont">
                                 <label form="info" for="hometownInput" class="infoLabel" id="hometownLabel">Hometown:</label>
-                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearHometown" tabindex="-1" role="button" aria-label="Clear the info on your hometown" onclick="accountRemove(4, event)">Clear</button>
+                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearHometown" tabindex="-1" role="button" aria-label="Clear the info on your hometown" aria-keyshortcuts="Enter+Shift Enter+Shift+Control" onclick="accountRemove(4, event)">Clear</button>
                               </div>
                               <div class="infoInputCont" id="hometownInputCont">
-                                <input form="info" list="hometownsList" type="text" name="hometown" placeholder="Hometown..." pattern=".*[a-zA-Z0-9]+.*" size="25" minlength="1" maxlength="50" title="Enter your hometown here" class="infoInput undefinedInfoInput validInfoInput" id="hometownInput" tabindex="-1" role="combobox" aria-label="Enter your hometown here" onkeydown="accountProcess(4, event)" onkeyup="accountTyping(4)" onchange="accountTyping(4)" onfocus="arriveInput(4)" onblur="leaveInput(4)" autocomplete="section-info hometown" autocapitalize="words" spellcheck>
-                                <button type="submit" name="hometown" class="infoButton enterInfoButton defaultButton disabled" id="enterHometown" tabindex="-1" role="button" aria-label="Enter your hometown" onclick="accountProcess(4, event)" disabled>&#9166;</button>
+                                <input form="info" list="hometownsList" type="text" name="hometown" placeholder="Hometown..." pattern=".*[a-zA-Z0-9]+.*" size="25" minlength="1" maxlength="50" title="Enter your hometown here" class="infoInput undefinedInfoInput validInfoInput" id="hometownInput" tabindex="-1" role="combobox" aria-label="Enter your hometown here" aria-keyshortcuts="/ 4 Enter" onkeydown="accountProcess(4, event)" onkeyup="accountTyping(4)" onchange="accountTyping(4)" onfocus="arriveInput(4)" onblur="leaveInput(4)" autocomplete="section-info hometown" autocapitalize="words" spellcheck>
+                                <button type="submit" name="hometown" class="infoButton enterInfoButton defaultButton disabled" id="enterHometown" tabindex="-1" role="button" aria-label="Enter your hometown" aria-keyshortcuts="Enter" onclick="accountProcess(4, event)" disabled>&#9166;</button>
                               </div>
                             </div>
                             <p class="invalidInfoMessage" id="invalidHometown">*Invalid entry</p>
@@ -3973,11 +3973,11 @@
                             <div class="infoInputContCont" id="instrumentInputContCont">
                               <div class="infoLabelCont" id="instrumentLabelCont">
                                 <label form="info" for="instrumentInput" class="infoLabel" id="instrumentLabel">Instrument:</label>
-                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearInstrument" tabindex="-1" role="button" aria-label="Clear the info on your instrument" onclick="accountRemove(5, event)">Clear</button>
+                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearInstrument" tabindex="-1" role="button" aria-label="Clear the info on your instrument" aria-keyshortcuts="Enter+Shift Enter+Shift+Control" onclick="accountRemove(5, event)">Clear</button>
                               </div>
                               <div class="infoInputCont" id="instrumentInputCont">
-                                <input form="info" list="instrumentsList" type="text" name="instrument" placeholder="Instrument..." pattern=".*[a-zA-Z0-9]+.*" size="25" minlength="1" maxlength="50" title="Enter your instrument here" class="infoInput undefinedInfoInput validInfoInput" id="instrumentInput" tabindex="-1" role="combobox" aria-label="Enter your instrument here" onkeydown="accountProcess(5, event)" onkeyup="accountTyping(5)" onchange="accountTyping(5)" onfocus="arriveInput(5)" onblur="leaveInput(5)" autocomplete="section-info instrument" autocapitalize="sentences" spellcheck>
-                                <button type="submit" name="instrument" class="infoButton enterInfoButton defaultButton disabled" id="enterInstrument" tabindex="-1" role="button" aria-label="Enter your instrument" onclick="accountProcess(5, event)" disabled>&#9166;</button>
+                                <input form="info" list="instrumentsList" type="text" name="instrument" placeholder="Instrument..." pattern=".*[a-zA-Z0-9]+.*" size="25" minlength="1" maxlength="50" title="Enter your instrument here" class="infoInput undefinedInfoInput validInfoInput" id="instrumentInput" tabindex="-1" role="combobox" aria-label="Enter your instrument here" aria-keyshortcuts="/ 5 Enter" onkeydown="accountProcess(5, event)" onkeyup="accountTyping(5)" onchange="accountTyping(5)" onfocus="arriveInput(5)" onblur="leaveInput(5)" autocomplete="section-info instrument" autocapitalize="sentences" spellcheck>
+                                <button type="submit" name="instrument" class="infoButton enterInfoButton defaultButton disabled" id="enterInstrument" tabindex="-1" role="button" aria-label="Enter your instrument" aria-keyshortcuts="Enter" onclick="accountProcess(5, event)" disabled>&#9166;</button>
                               </div>
                             </div>
                             <p class="invalidInfoMessage" id="invalidInstrument">*Invalid entry</p>
@@ -4059,11 +4059,11 @@
                             <div class="infoInputContCont" id="socialSecurityNumberInputContCont">
                               <div class="infoLabelCont" id="socialSecurityNumberLabelCont">
                                 <label form="info" for="socialSecurityNumberInput" class="infoLabel" id="socialSecurityNumberLabel">Social Security<br>Number:</label>
-                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearSocialSecurityNumber" tabindex="-1" role="button" aria-label="Clear the info on your Social Security number" onclick="accountRemove(6, event)">Clear</button>
+                                <button type="reset" class="infoButton clearInfoButton defaultButton" id="clearSocialSecurityNumber" tabindex="-1" role="button" aria-label="Clear the info on your Social Security number" aria-keyshortcuts="Enter+Shift Enter+Shift+Control" onclick="accountRemove(6, event)">Clear</button>
                               </div>
                               <div class="infoInputCont" id="socialSecurityNumberInputCont">
-                                <input form="info" type="number" name="socialSecurityNumber" placeholder="No spaces (ex. 123456789)" min="1" max="999999999" step="1" title="Enter your Social Security number here" class="infoInput undefinedInfoInput validInfoInput" id="socialSecurityNumberInput" tabindex="-1" role="combobox" aria-label="Enter your Social Security number here" onkeydown="accountProcess(6, event)" onkeyup="accountTyping(6)" onchange="accountTyping(6)" onfocus="arriveInput(6)" onblur="leaveInput(6)" autocomplete="off">
-                                <button type="submit" name="socialSecurityNumber" class="infoButton enterInfoButton defaultButton disabled" id="enterSocialSecurityNumber" tabindex="-1" role="button" aria-label="Enter your Social Security number" onclick="accountProcess(6, event)" disabled>&#9166;</button>
+                                <input form="info" type="number" name="socialSecurityNumber" placeholder="No spaces (ex. 123456789)" min="1" max="999999999" step="1" title="Enter your Social Security number here" class="infoInput undefinedInfoInput validInfoInput" id="socialSecurityNumberInput" tabindex="-1" role="combobox" aria-label="Enter your Social Security number here" aria-keyshortcuts="/ 6 Enter" onkeydown="accountProcess(6, event)" onkeyup="accountTyping(6)" onchange="accountTyping(6)" onfocus="arriveInput(6)" onblur="leaveInput(6)" autocomplete="off">
+                                <button type="submit" name="socialSecurityNumber" class="infoButton enterInfoButton defaultButton disabled" id="enterSocialSecurityNumber" tabindex="-1" role="button" aria-label="Enter your Social Security number" aria-keyshortcuts="Enter" onclick="accountProcess(6, event)" disabled>&#9166;</button>
                               </div>
                             </div>
                             <p class="invalidInfoMessage" id="invalidSocialSecurityNumber">*Invalid entry</p>
@@ -4212,7 +4212,7 @@
               </details>
             </div>
           </div>
-          <button type="button" id="accountExit" tabindex="-1" role="button" aria-label="Close your account page" onclick="closeAccount()">&times;</button>
+          <button type="button" id="accountExit" tabindex="-1" role="button" aria-label="Close your account page" aria-keyshortcuts="Escape" onclick="closeAccount()">&times;</button>
           <p id="accountMessage">Press <kbd class="key" id="slash">/</kbd> to jump to the text fields</p>
         </section>
         <dialog id="confirm" role="dialog" aria-description="A pop-up that prompts you with the terms of service for the bonus level">
@@ -4227,7 +4227,7 @@
           </div>
         </dialog>
       </article>
-      <article id="assets">
+      <article id="assets" aria-hidden="true">
         <section class="asset" id="audios">
           <audio preload="metadata" class="audio" id="7NationArmy">
             <source src="audio/7NationArmy.mp3" type="audio/mp3">
@@ -4541,12 +4541,12 @@
       </article>
       <dialog id="password" role="dialog" aria-description="A field where you can try to input the top-secret password">
         <div id="passwordInputCont">
-          <input type="password" name="password" placeholder="Password..." size="25" minlength="1" maxlength="50" title="Enter the password here" id="passwordInput" tabindex="-1" role="combobox" aria-label="Enter the password here" onkeydown="passwordProcess(event)" onkeyup="passwordTyping()" onchange="passwordTyping()" autocomplete="off" autocapitalize="off">
-          <button type="submit" name="password" class="defaultButton disabled" id="enterPassword" tabindex="-1" role="button" aria-label="Enter the password" onclick="passwordProcess(event)" disabled>Enter</button>
+          <input type="password" name="password" placeholder="Password..." size="25" minlength="1" maxlength="50" title="Enter the password here" id="passwordInput" tabindex="-1" role="combobox" aria-label="Enter the password here" aria-keyshortcuts="Enter" onkeydown="passwordProcess(event)" onkeyup="passwordTyping()" onchange="passwordTyping()" autocomplete="off" autocapitalize="off">
+          <button type="submit" name="password" class="defaultButton disabled" id="enterPassword" tabindex="-1" role="button" aria-label="Enter the password" aria-keyshortcuts="Enter" onclick="passwordProcess(event)" disabled>Enter</button>
         </div>
         <p id="passwordMessage"></p>
       </dialog>
-      <template lang="en-us" translate="no" dir="ltr" id="secretTemplate">
+      <template lang="en-us" translate="no" dir="ltr" id="secretTemplate" aria-hidden="true">
         <head>
           <meta charset="utf-8">
           <title>Alison Isko - the One That Got Away</title>
@@ -4585,7 +4585,7 @@
                   </div>
                 </div>
               </div>
-              <button type="button" id="secretExit" tabindex="-1" role="button" aria-label="Kiss Alison Isko goodbye" onclick="hideSecret(event)">&times;</button>
+              <button type="button" id="secretExit" tabindex="-1" role="button" aria-label="Kiss Alison Isko goodbye" aria-keyshortcuts="Escape" onclick="hideSecret(event)">&times;</button>
             </div>
             <audio preload="metadata" id="theOneThatGotAway" loop>
               <source src="audio/theOneThatGotAway.mp3" type="audio/mp3">
@@ -4676,12 +4676,12 @@
           </script>
         </body>
       </template>
-      <template id="virusTemplate">
+      <template id="virusTemplate" aria-hidden="true">
       </template>
     </main>
-    <footer>
+    <footer role="contentinfo">
     </footer>
-    <article id="mobile" role="article" aria-description="An alternative interface that is displayed when the screen size is too small">
+    <article id="mobile" aria-hidden="true">
       <div id="mobileMessagesContCont">
         <p id="mobileHeading">Whoops, too small!</p>
         <div id="mobileMessagesCont">
@@ -5022,12 +5022,12 @@
         </div>
         <br>
         <ul id="noscriptEnable">
-          <li class="noscriptEnableBrowserLinkCont" id="noscriptEnableGoogleChromeLinkCont"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/chrome" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Google Chrome docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableGoogleChromeLink" aria-label="Learn how to enable JavaScript on Google Chrome">Enable JavaScript on <span class="noscriptEnableBrowser" id="noscriptEnableGoogleChrome">Google Chrome<span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableGoogleChromeOpenInNew">open_in_new</span></span></a></li>
-          <li class="noscriptEnableBrowserLinkCont" id="noscriptEnableMozillaFirefoxLinkCont"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/firefox" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Mozilla Firefox docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableMozillaFirefoxLink" aria-label="Learn how to enable JavaScript on Mozilla Firefox">Enable JavaScript on <span class="noscriptEnableBrowser" id="noscriptEnableMozillaFirefox">Mozilla Firefox<span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableMozillaFirefoxOpenInNew">open_in_new</span></span></a></li>
-          <li class="noscriptEnableBrowserLinkCont" id="noscriptEnableMicrosoftEdgeLinkCont"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/edge" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Microsoft Edge docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableMicrosoftEdgeLink" aria-label="Learn how to enable JavaScript on Microsoft Edge">Enable JavaScript on <span class="noscriptEnableBrowser" id="noscriptEnableMicrosoftEdge">Microsoft Edge<span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableMicrosoftEdgeOpenInNew">open_in_new</span></span></a></li>
-          <li class="noscriptEnableBrowserLinkCont" id="noscriptEnableSafariLinkCont"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/safari" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Safari docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableSafariLink" aria-label="Learn how to enable JavaScript on Safari">Enable JavaScript on <span class="noscriptEnableBrowser" id="noscriptEnableSafari">Safari<span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableSafariOpenInNew">open_in_new</span></span></a></li>
-          <li class="noscriptEnableBrowserLinkCont" id="noscriptEnableOperaLinkCont"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/opera" hreflang="en-us" charset="utf-8" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Opera docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableOperaLink" aria-label="Learn how to enable JavaScript on Opera">Enable JavaScript on <span class="noscriptEnableBrowser" id="noscriptEnableOpera">Opera<span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableOperaOpenInNew">open_in_new</span></span></a></li>
-          <li class="noscriptEnableBrowserLinkCont" id="noscriptEnableInternetExplorerLinkCont"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/internet-explorer" charset="utf-8" hreflang="en-us" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Internet Explorer docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableInternetExplorerLink" aria-label="Learn how to enable JavaScript on Internet Explorer">Enable JavaScript on <span class="noscriptEnableBrowser" id="noscriptEnableInternetExplorer">Internet Explorer<span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableInternetExplorerOpenInNew">open_in_new</span></span></a></li>
+          <li class="noscriptEnableBrowserLinkCont" id="noscriptEnableGoogleChromeLinkCont"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/chrome" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Google Chrome docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableGoogleChromeLink" role="link" aria-label="Learn how to enable JavaScript on Google Chrome">Enable JavaScript on <span class="noscriptEnableBrowser" id="noscriptEnableGoogleChrome">Google Chrome<span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableGoogleChromeOpenInNew">open_in_new</span></span></a></li>
+          <li class="noscriptEnableBrowserLinkCont" id="noscriptEnableMozillaFirefoxLinkCont"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/firefox" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Mozilla Firefox docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableMozillaFirefoxLink" role="link" aria-label="Learn how to enable JavaScript on Mozilla Firefox">Enable JavaScript on <span class="noscriptEnableBrowser" id="noscriptEnableMozillaFirefox">Mozilla Firefox<span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableMozillaFirefoxOpenInNew">open_in_new</span></span></a></li>
+          <li class="noscriptEnableBrowserLinkCont" id="noscriptEnableMicrosoftEdgeLinkCont"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/edge" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Microsoft Edge docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableMicrosoftEdgeLink" role="link" aria-label="Learn how to enable JavaScript on Microsoft Edge">Enable JavaScript on <span class="noscriptEnableBrowser" id="noscriptEnableMicrosoftEdge">Microsoft Edge<span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableMicrosoftEdgeOpenInNew">open_in_new</span></span></a></li>
+          <li class="noscriptEnableBrowserLinkCont" id="noscriptEnableSafariLinkCont"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/safari" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Safari docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableSafariLink" role="link" aria-label="Learn how to enable JavaScript on Safari">Enable JavaScript on <span class="noscriptEnableBrowser" id="noscriptEnableSafari">Safari<span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableSafariOpenInNew">open_in_new</span></span></a></li>
+          <li class="noscriptEnableBrowserLinkCont" id="noscriptEnableOperaLinkCont"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/opera" hreflang="en-us" charset="utf-8" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Opera docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableOperaLink" role="link" aria-label="Learn how to enable JavaScript on Opera">Enable JavaScript on <span class="noscriptEnableBrowser" id="noscriptEnableOpera">Opera<span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableOperaOpenInNew">open_in_new</span></span></a></li>
+          <li class="noscriptEnableBrowserLinkCont" id="noscriptEnableInternetExplorerLinkCont"><a href="https://www.whatismybrowser.com/guides/how-to-enable-javascript/internet-explorer" charset="utf-8" hreflang="en-us" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Internet Explorer docs" class="noscriptEnableBrowserLink defaultLink" id="noscriptEnableInternetExplorerLink" role="link" aria-label="Learn how to enable JavaScript on Internet Explorer">Enable JavaScript on <span class="noscriptEnableBrowser" id="noscriptEnableInternetExplorer">Internet Explorer<span class="material-symbols-outlined noscriptEnableBrowserOpenInNew" id="noscriptEnableInternetExplorerOpenInNew">open_in_new</span></span></a></li>
         </ul>
       </article>
     </noscript>

@@ -319,7 +319,7 @@
     <header role="banner">
     </header>
     <main role="main">
-      <div id="loading">
+      <section id="loading">
         <p id="loadingMessage">Loading gameplay<span id="loadingMessageDots"><span class="loadingMessageDot" id="loadingMessageDot1">.</span><span class="loadingMessageDot" id="loadingMessageDot2">.</span><span class="loadingMessageDot" id="loadingMessageDot3">.</span></span></p>
         <div id="loadingBarContCont">
           <p id="loadingBarPercent">0%</p>
@@ -330,7 +330,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <aside class="drunkCont" id="conductorCont" tabindex="0" role="complementary" aria-description="The conductor who guides you through this game">
         <div title="Joe DeSena, Conductor" id="conductor" onclick="pillow()">
         </div>
@@ -353,26 +353,26 @@
         </div>
       </aside>
       <article id="background">
-        <section id="screensavers">
+        <div id="screensavers">
           <video poster="img/rap.png" preload="metadata" class="screensaver" id="rap" tabindex="-1" onended="audioNewSong()">
             <source src="video/rap.mp4" type="video/mp4">
           </video>
           <video poster="img/pepBand.png" preload="metadata" class="screensaver" id="dancing" tabindex="-1" muted loop>
             <source src="video/dancing.mp4" type="video/mp4">
           </video>
-        </section>
+        </div>
         <div id="subliminalMessageCont" aria-hidden="true">
           <p id="subliminalMessage">Vote Chestnut for Historian Spring 2023</p>
         </div>
-        <div id="notices">
+        <section id="notices">
           <p class="notice" id="disclaimer">*For legal reasons, we must "claim" that this video game is not authorized, sponsored, endorsed, or maintained by, partnered, associated, affiliated, or officially connected in any way with the real Clarkson University pep band, or any of its members, committees, or affiliates.</p>
           <p class="notice" id="copyright">Copyright &copy; 2022 Clarkson University pep band, all rights reserved.</p>
-        </div>
+        </section>
       </article>
-      <div id="discordLogo" role="switch" aria-label="Open the Discord server" onclick="openDiscord()">
+      <div id="discordLogo" role="switch" aria-label="Open the Discord server" aria-hidden="true" onclick="openDiscord()">
         <p id="discordNotification">1</p>
       </div>
-      <div id="discord" role="region" aria-description="A Discord interface">
+      <div id="discord" role="region" aria-description="A Discord interface" aria-hidden="true">
         <div id="discordHeading">
           <p id="discordMenu">&#9776;</p>
           <p id="discordAnnouncements"># announcements</p>
@@ -392,17 +392,19 @@
           <p id="discordBubble">Message #announcements</p>
         </div>
       </div>
-      <div class="genderCont" id="menCont" role="button" aria-label="Select the men's game" onclick="selectGender(1)">
-        <div class="gender" id="men">
+      <section id="genders" aria-hidden="true">
+        <div class="gender" id="men" role="button" aria-label="Select the men's game" onclick="selectGender(1)">
+          <div class="genderImg" id="menImg">
+          </div>
+          <p class="genderLabel" id="menLabel">Men</p>
         </div>
-        <p class="genderLabel" id="menLabel">Men</p>
-      </div>
-      <div class="genderCont" id="womenCont" role="button" aria-label="Select the women's game" onclick="selectGender(2)">
-        <div class="gender" id="women">
+        <div class="gender" id="women" role="button" aria-label="Select the women's game" onclick="selectGender(2)">
+          <div class="genderImg" id="womenImg">
+          </div>
+          <p class="genderLabel" id="womenLabel">Women</p>
         </div>
-        <p class="genderLabel" id="womenLabel">Women</p>
-      </div>
-      <div id="map" role="img" aria-description="A map of St. Lawrence County">
+      </section>
+      <div id="map" role="img" aria-description="A map of St. Lawrence County" aria-hidden="true">
         <img src="img/clarkson.png" alt="Clarkson University on the map" fetchpriority="low" decoding="async" loading="lazy" class="college load" id="clarkson" onload="load(event)">
         <img src="img/slu.png" alt="St. Lawrence University on the map" fetchpriority="low" decoding="async" loading="lazy" class="college load" id="slu" onload="load(event)">
         <div class="arrowIcon" id="rightArrowIcon">
@@ -414,10 +416,10 @@
           </div>
         </div>
       </div>
-      <img src="img/knightmobile.png" alt="The KnightMobile driving to SLU" fetchpriority="low" decoding="async" loading="lazy" class="load" id="knightmobile" role="img" aria-description="The KnightMobile driving to SLU" aria-keyshortcuts="ArrowRight ArrowUp" onload="load(event)">
-      <div id="crappleton" role="img" aria-description="Crappleton Arena at SLU">
+      <img src="img/knightmobile.png" alt="The KnightMobile driving to SLU" fetchpriority="low" decoding="async" loading="lazy" class="load" id="knightmobile" role="img" aria-description="The KnightMobile driving to SLU" aria-keyshortcuts="ArrowRight ArrowUp" aria-hidden="true" onload="load(event)">
+      <div id="crappleton" role="img" aria-description="Crappleton Arena at SLU" aria-hidden="true">
       </div>
-      <article id="game">
+      <article id="game" aria-hidden="true">
         <section class="disappearExt" id="lives">
           <div class="lifeContCont" id="freshmanRepresentativeLifeContCont">
             <div title="Nick Corsner, Freshman Representative" class="lifeCont" id="freshmanRepresentativeLifeCont" role="img" aria-description="A picture of the freshman representative that represents one of your lives" onclick="speedrun(0)">
@@ -2023,7 +2025,7 @@
           <img src="img/plane.png" alt="A plane flying with a banner to celebrate hitting Tijuana" fetchpriority="low" decoding="async" loading="lazy" class="load" id="planePrime" onload="load(event)">
         </div>
       </article>
-      <article id="party">
+      <article id="party" aria-hidden="true">
         <div class="drunkCont" id="houseCont" role="img" aria-description="King and Mahogany's house">
           <div id="house">
             <img src="img/mahogany.png" alt="Mahogany welcoming you into his house" fetchpriority="low" decoding="async" loading="lazy" class="bandieHome load" id="mahoganyHome" onload="load(event)">
@@ -2752,12 +2754,12 @@
         <div id="triangleFaceCont">
           <img src="img/triangleFace.png" alt="Charlie with a face shaped like a triangle" fetchpriority="low" decoding="async" loading="lazy" class="load" id="triangleFace" onload="load(event)">
         </div>
-        <div id="cuntEmpireContContCont">
-          <div id="cuntEmpireContCont">
-            <div id="cuntEmpireCont">
-              <div id="cuntEmpire">
+        <div id="cuntEmpireContCont">
+          <div id="cuntEmpireCont">
+            <div id="cuntEmpire">
+              <div id="cuntEmpireImg">
                 <img src="img/cuntEmpireLogo.png" alt="Cunt Empire" fetchpriority="low" decoding="async" loading="lazy" class="load" id="cuntEmpireLogo" onload="load(event)">
-                <a href="https://www.cuntempire.com" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="https://www.cuntempire.com" id="cuntEmpireLink" tabindex="-1" role="link" aria-label="Play Cunt Empire"></a>
+                <a href="https://www.cuntempire.com" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="https://www.cuntempire.com" id="cuntEmpireImgLink" tabindex="-1" role="link" aria-label="Play Cunt Empire"></a>
               </div>
               <div id="cuntEmpireAdvertisementCont">
                 <p id="cuntEmpireHeading"><a href="https://www.cuntempire.com" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="https://www.cuntempire.com" id="cuntEmpireHeadingLink" tabindex="-1" role="link" aria-label="Play Cunt Empire">TRY THIS EROTIC NEW ADULT GAME!!!</a></p>
@@ -2771,7 +2773,7 @@
       </article>
       <div id="raffle" aria-hidden="true" onclick="raffle(event)">
       </div>
-      <article id="cover" role="article" aria-description="A cover that contains several smaller modals">
+      <article id="cover" role="article" aria-description="A cover that contains several smaller modals" aria-hidden="true">
         <div class="modal" id="poem" role="region" aria-description="Jake McNamara's Thanksgiving poem">
           <div id="poemTextCont" tabindex="-1" role="scrollbar">
             <div id="poemText">
@@ -4681,7 +4683,7 @@
     </main>
     <footer role="contentinfo">
     </footer>
-    <article id="mobile" aria-hidden="true">
+    <article id="mobile" tabindex="-1" role="article" aria-description="An alternative interface that is displayed when the screen size is too small" aria-hidden="true">
       <div id="mobileMessagesContCont">
         <p id="mobileHeading">Whoops, too small!</p>
         <div id="mobileMessagesCont">

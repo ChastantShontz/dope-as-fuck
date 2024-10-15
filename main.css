@@ -540,34 +540,34 @@ main {
   user-select: none;
 }
 
-.genderCont {
+.gender {
   position: fixed;
   bottom: 40%;
   width: 15em;
   cursor: pointer;
 }
 
-#menCont {
+#men {
   left: -15em;
 }
 
-#womenCont {
+#women {
   right: -15em;
 }
 
-.gender {
+.genderImg {
   border-radius: .5em;
   height: 15em;
   width: 100%;
   margin-bottom: .25em;
 }
 
-#men {
+#menImg {
   background: url("img/danielAllinBG.png") top / cover;
   transform: scaleX(-1);
 }
 
-#women {
+#womenImg {
   background: url("img/hopeCrisafiBG.png") top / cover;
 }
 
@@ -2803,7 +2803,7 @@ main {
   height: 150%;
 }
 
-#cuntEmpireContContCont {
+#cuntEmpireContCont {
   z-index: 94;
   display: flex;
   flex-direction: row;
@@ -2819,7 +2819,7 @@ main {
   align-items: center;
 }
 
-#cuntEmpireContCont {
+#cuntEmpireCont {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -2828,7 +2828,7 @@ main {
   align-items: center;
 }
 
-#cuntEmpireCont {
+#cuntEmpire {
   display: grid;
   grid-template-columns: repeat(2, calc(50% - .25em));
   grid-column-gap: .5em;
@@ -2837,7 +2837,7 @@ main {
   width: 100%;
 }
 
-#cuntEmpire {
+#cuntEmpireImg {
   position: relative;
   background: url("img/cuntEmpire.png") left / cover;
 }
@@ -2849,7 +2849,7 @@ main {
   width: 40%;
 }
 
-#cuntEmpireLink {
+#cuntEmpireImgLink {
   position: absolute;
   left: 0;
   right: 0;

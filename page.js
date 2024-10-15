@@ -2704,16 +2704,18 @@ function gameBegins(event) {
     document.getElementById("mobileButton").tabIndex = "0";
     document.getElementById("mobileImgCont").tabIndex = "0";
     document.getElementById("mobile").tabIndex = "0";
-    document.getElementById("mobile").role = "article";
-    document.getElementById("mobile").ariaDescription = "An alternative interface that is displayed when the screen size is too small";
     document.getElementById("mobile").ariaHidden = false;
+    if (document.getElementById("mobile").scrollHeight > document.getElementById("mobile").offsetHeight) {
+      if (document.getElementById("mobile").scrollTop > 0) {
+        document.getElementById("mobile").scrollTop = 0;
+      }
+    }
     document.onclick = unselectUrl;
   }
   else if ((window.innerHeight > 600) && (window.innerWidth > 1200)) {
     document.getElementById("mobile").tabIndex = "-1";
-    document.getElementById("mobile").removeAttribute("role");
-    document.getElementById("mobile").removeAttribute("aria-description");
     document.getElementById("mobile").ariaHidden = true;
+    document.getElementById("mobile").blur();
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
       if (document.getElementById("conductorTalkCont").scrollTop > 0) {
         document.getElementById("conductorTalkCont").scrollTop = 0;
@@ -3065,6 +3067,7 @@ function gotIt1() {
   document.getElementById("discordLogo").style.bottom = "2em";
   document.getElementById("discordLogo").style.transition = "bottom 1s ease 0s";
   document.getElementById("discordLogo").tabIndex = "0";
+  document.getElementById("discordLogo").ariaHidden = false;
 }
 
 function openDiscord() {
@@ -3076,6 +3079,7 @@ function openDiscord() {
   document.getElementById("discord").style.transform = "scale(1)";
   document.getElementById("discord").style.transition = "all .5s ease 0s";
   document.getElementById("discord").tabIndex = "0";
+  document.getElementById("discord").ariaHidden = false;
   if (document.getElementById("ok").onclick != gotIt2) {
     document.getElementById("discordNotification").style.transform = "scale(0)";
     document.getElementById("discordNotification").style.transition = "transform .1s ease 0s";
@@ -3092,6 +3096,7 @@ function closeDiscord() {
   document.getElementById("discord").style.transform = "scale(0)";
   document.getElementById("discord").style.transition = "all .5s ease 0s";
   document.getElementById("discord").tabIndex = "-1";
+  document.getElementById("discord").ariaHidden = true;
   document.getElementById("discord").blur();
   document.getElementById("discordLogo").style.boxShadow = "none";
   document.getElementById("discordLogo").style.transition = "bottom 1s ease 0s, box-shadow .25s ease .25s";
@@ -3120,72 +3125,74 @@ function gotIt2() {
   }
   document.getElementById("discordLogo").style.pointerEvents = "none";
   document.getElementById("discordLogo").tabIndex = "-1";
+  document.getElementById("discordLogo").ariaHidden = true;
   document.getElementById("discordLogo").blur();
-  for (var i = 0; i < document.getElementsByClassName("genderCont").length; i++) {
+  for (var i = 0; i < document.getElementsByClassName("gender").length; i++) {
     if (i == 0) {
-      document.getElementById("menCont").style.left = "25%";
+      document.getElementById("men").style.left = "25%";
       if (document.getElementById("discordLogo").onclick == openDiscord) {
-        document.getElementById("menCont").style.transition = "left 2s ease .5s";
+        document.getElementById("men").style.transition = "left 2s ease .5s";
         setTimeout(() => (
-          document.getElementById("menCont").tabIndex = "0"
+          document.getElementById("men").tabIndex = "0"
         ), 500);
       }
       else if (document.getElementById("discordLogo").onclick == closeDiscord) {
-        document.getElementById("menCont").style.transition = "left 2s ease 1s";
+        document.getElementById("men").style.transition = "left 2s ease 1s";
         setTimeout(() => (
-          document.getElementById("menCont").tabIndex = "0"
+          document.getElementById("men").tabIndex = "0"
         ), 1000);
       }
     }
     else if (i == 1) {
-      document.getElementById("womenCont").style.right = "25%";
+      document.getElementById("women").style.right = "25%";
       if (document.getElementById("discordLogo").onclick == openDiscord) {
-        document.getElementById("womenCont").style.transition = "right 2s ease .5s";
+        document.getElementById("women").style.transition = "right 2s ease .5s";
         setTimeout(() => (
-          document.getElementById("womenCont").tabIndex = "0"
+          document.getElementById("women").tabIndex = "0"
         ), 500);
       }
       else if (document.getElementById("discordLogo").onclick == closeDiscord) {
-        document.getElementById("womenCont").style.transition = "right 2s ease 1s";
+        document.getElementById("women").style.transition = "right 2s ease 1s";
         setTimeout(() => (
-          document.getElementById("womenCont").tabIndex = "0"
+          document.getElementById("women").tabIndex = "0"
         ), 1000);
       }
     }
   }
+  document.getElementById("genders").ariaHidden = false;
 }
 
 function selectGender(gender) {
   sessionStorage.gender = gender;
-  for (var i = 0; i < document.getElementsByClassName("genderCont").length; i++) {
+  for (var i = 0; i < document.getElementsByClassName("gender").length; i++) {
     if (i == (sessionStorage.gender - 1)) {
-      document.getElementsByClassName("genderCont")[i].style.transform = "scale(1.1)";
-      document.getElementsByClassName("gender")[i].style.boxShadow = "0 0 .5em .5em var(--clarksonGold)";
-      document.getElementsByClassName("gender")[i].style.transition = "box-shadow .25s ease 0s";
+      document.getElementsByClassName("gender")[i].style.transform = "scale(1.1)";
+      document.getElementsByClassName("genderImg")[i].style.boxShadow = "0 0 .5em .5em var(--clarksonGold)";
+      document.getElementsByClassName("genderImg")[i].style.transition = "box-shadow .25s ease 0s";
       document.getElementsByClassName("genderLabel")[i].style.boxShadow = "0 0 .5em .5em var(--clarksonGold)";
       document.getElementsByClassName("genderLabel")[i].style.transition = "box-shadow .25s ease 0s";
     }
     else {
-      document.getElementsByClassName("genderCont")[i].style.transform = "scale(1)";
-      document.getElementsByClassName("gender")[i].style.boxShadow = "none";
-      document.getElementsByClassName("gender")[i].style.transition = "box-shadow .25s ease 0s";
+      document.getElementsByClassName("gender")[i].style.transform = "scale(1)";
+      document.getElementsByClassName("genderImg")[i].style.boxShadow = "none";
+      document.getElementsByClassName("genderImg")[i].style.transition = "box-shadow .25s ease 0s";
       document.getElementsByClassName("genderLabel")[i].style.boxShadow = "none";
       document.getElementsByClassName("genderLabel")[i].style.transition = "box-shadow .25s ease 0s";
     }
     if (i == 0) {
       if (document.getElementById("discordLogo").onclick == openDiscord) {
-        document.getElementById("menCont").style.transition = "left 2s ease .5s, transform .25s ease 0s";
+        document.getElementById("men").style.transition = "left 2s ease .5s, transform .25s ease 0s";
       }
       else if (document.getElementById("discordLogo").onclick == closeDiscord) {
-        document.getElementById("menCont").style.transition = "left 2s ease 1s, transform .25s ease 0s";
+        document.getElementById("men").style.transition = "left 2s ease 1s, transform .25s ease 0s";
       }
     }
     else if (i == 1) {
       if (document.getElementById("discordLogo").onclick == openDiscord) {
-        document.getElementById("womenCont").style.transition = "right 2s ease .5s, transform .25s ease 0s";
+        document.getElementById("women").style.transition = "right 2s ease .5s, transform .25s ease 0s";
       }
       else if (document.getElementById("discordLogo").onclick == closeDiscord) {
-        document.getElementById("womenCont").style.transition = "right 2s ease 1s, transform .25s ease 0s";
+        document.getElementById("women").style.transition = "right 2s ease 1s, transform .25s ease 0s";
       }
     }
   }
@@ -3209,52 +3216,53 @@ function gotIt3() {
     sessionStorage.backup = "";
   }
   disableButton();
-  for (var i = 0; i < document.getElementsByClassName("genderCont").length; i++) {
+  document.getElementById("genders").ariaHidden = true;
+  for (var i = 0; i < document.getElementsByClassName("gender").length; i++) {
     if (i == 0) {
       if (i == (sessionStorage.gender - 1)) {
-        document.getElementById("menCont").style.bottom = "105%";
+        document.getElementById("men").style.bottom = "105%";
         if (document.getElementById("discordLogo").onclick == openDiscord) {
-          document.getElementById("menCont").style.transition = "left 2s ease .5s, bottom 1s ease .25s";
+          document.getElementById("men").style.transition = "left 2s ease .5s, bottom 1s ease .25s";
         }
         else if (document.getElementById("discordLogo").onclick == closeDiscord) {
-          document.getElementById("menCont").style.transition = "left 2s ease 1s, bottom 1s ease .25s";
+          document.getElementById("men").style.transition = "left 2s ease 1s, bottom 1s ease .25s";
         }
       }
       else {
-        document.getElementById("menCont").style.transform = "scale(0)";
+        document.getElementById("men").style.transform = "scale(0)";
         if (document.getElementById("discordLogo").onclick == openDiscord) {
-          document.getElementById("menCont").style.transition = "left 2s ease .5s, transform .5s ease 0s";
+          document.getElementById("men").style.transition = "left 2s ease .5s, transform .5s ease 0s";
         }
         else if (document.getElementById("discordLogo").onclick == closeDiscord) {
-          document.getElementById("menCont").style.transition = "left 2s ease 1s, transform .5s ease 0s";
+          document.getElementById("men").style.transition = "left 2s ease 1s, transform .5s ease 0s";
         }
       }
-      document.getElementById("menCont").style.pointerEvents = "none";
-      document.getElementById("menCont").tabIndex = "-1";
-      document.getElementById("menCont").blur();
+      document.getElementById("men").style.pointerEvents = "none";
+      document.getElementById("men").tabIndex = "-1";
+      document.getElementById("men").blur();
     }
     else if (i == 1) {
       if (i == (sessionStorage.gender - 1)) {
-        document.getElementById("womenCont").style.bottom = "-51%";
+        document.getElementById("women").style.bottom = "-51%";
         if (document.getElementById("discordLogo").onclick == openDiscord) {
-          document.getElementById("womenCont").style.transition = "right 2s ease .5s, bottom 1s ease .25s";
+          document.getElementById("women").style.transition = "right 2s ease .5s, bottom 1s ease .25s";
         }
         else if (document.getElementById("discordLogo").onclick == closeDiscord) {
-          document.getElementById("womenCont").style.transition = "right 2s ease 1s, bottom 1s ease .25s";
+          document.getElementById("women").style.transition = "right 2s ease 1s, bottom 1s ease .25s";
         }
       }
       else {
-        document.getElementById("womenCont").style.transform = "scale(0)";
+        document.getElementById("women").style.transform = "scale(0)";
         if (document.getElementById("discordLogo").onclick == openDiscord) {
-          document.getElementById("womenCont").style.transition = "right 2s ease .5s, transform .5s ease 0s";
+          document.getElementById("women").style.transition = "right 2s ease .5s, transform .5s ease 0s";
         }
         else if (document.getElementById("discordLogo").onclick == closeDiscord) {
-          document.getElementById("womenCont").style.transition = "right 2s ease 1s, transform .5s ease 0s";
+          document.getElementById("women").style.transition = "right 2s ease 1s, transform .5s ease 0s";
         }
       }
-      document.getElementById("womenCont").style.pointerEvents = "none";
-      document.getElementById("womenCont").tabIndex = "-1";
-      document.getElementById("womenCont").blur();
+      document.getElementById("women").style.pointerEvents = "none";
+      document.getElementById("women").tabIndex = "-1";
+      document.getElementById("women").blur();
     }
   }
   if (sessionStorage.gender == 1) {
@@ -3314,6 +3322,9 @@ function gotIt3() {
   document.getElementById("knightmobile").style.transition = "left 2s ease 1.25s";
   setTimeout(() => (
     document.getElementById("knightmobile").tabIndex = "0"
+  ), 1250);
+  setTimeout(() => (
+    document.getElementById("knightmobile").ariaHidden = false
   ), 1250);
   setTimeout(enableButton, 3250);
   document.getElementById("ok").onclick = function() {
@@ -3386,6 +3397,7 @@ function gotIt4() {
   document.getElementById("map").style.opacity = "100%";
   document.getElementById("map").style.transition = "all 1s ease 0s";
   document.getElementById("map").tabIndex = "0";
+  document.getElementById("map").ariaHidden = false;
   document.getElementById("knightmobile").style.bottom = "35%";
   document.getElementById("knightmobile").style.transform = "scale(1)";
   document.getElementById("knightmobile").style.transition = "all .5s ease .5s";
@@ -3538,15 +3550,20 @@ function gotIt5() {
   document.getElementById("knightmobile").style.left = "100%";
   document.getElementById("knightmobile").style.transition = "left 1s ease 0s";
   document.getElementById("knightmobile").tabIndex = "-1";
+  document.getElementById("knightmobile").ariaHidden = true;
   document.getElementById("knightmobile").blur();
   document.getElementById("map").style.transform = "scale(0)";
   document.getElementById("map").style.transition = "transform 1s ease .5s";
   document.getElementById("map").tabIndex = "-1";
+  document.getElementById("map").ariaHidden = true;
   document.getElementById("map").blur();
   document.getElementById("crappleton").style.transform = "scale(1)";
   document.getElementById("crappleton").style.transition = "transform 1s ease .5s";
   setTimeout(() => (
     document.getElementById("crappleton").tabIndex = "0"
+  ), 500);
+  setTimeout(() => (
+    document.getElementById("crappleton").ariaHidden = false
   ), 500);
   setTimeout(enableButton, 1500);
   document.getElementById("ok").onclick = function(event) {
@@ -3569,6 +3586,7 @@ function gotIt6(event) {
   document.getElementById("crappleton").style.bottom = "100%";
   document.getElementById("crappleton").style.transition = "bottom 1s ease 0s";
   document.getElementById("crappleton").tabIndex = "-1";
+  document.getElementById("crappleton").ariaHidden = true;
   document.getElementById("crappleton").blur();
   if (sessionStorage.gender == 1) {
     for (var i = 0; i < document.getElementsByClassName("menGoalie").length; i++) {
@@ -3656,6 +3674,7 @@ function gotIt6(event) {
   document.getElementById("gameActivities").style.right = "80%";
   document.getElementById("gameActivities").style.opacity = "100%";
   document.getElementById("gameActivities").style.transition = "visibility 0s ease 2s, left 1s ease 2s, right 1s ease 2s, opacity 0s ease 2s";
+  document.getElementById("game").ariaHidden = false;
   document.getElementById("raffle").style.display = "block";
   for (var i = 0; i < document.getElementsByClassName("lifeCont").length; i++) {
     var transitionDelay = ((i / 2) + 3);
@@ -3840,6 +3859,7 @@ function openSelection() {
   document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "all .25s ease 0s";
   document.getElementById("cover").tabIndex = "0";
+  document.getElementById("cover").ariaHidden = false;
 }
 
 function selectAnswer(answer, event) {
@@ -4126,6 +4146,7 @@ function closeSelection(event) {
   document.getElementById("cover").style.opacity = "0%";
   document.getElementById("cover").style.transition = "all .25s ease .25s";
   document.getElementById("cover").tabIndex = "-1";
+  document.getElementById("cover").ariaHidden = true;
   document.getElementById("cover").blur();
   document.getElementById("choicesContCont").style.visibility = "hidden";
   document.getElementById("choicesContCont").style.opacity = "0%";
@@ -4755,6 +4776,7 @@ function troyLassialEntrance() {
   document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "all .25s ease 0s";
   document.getElementById("cover").tabIndex = "0";
+  document.getElementById("cover").ariaHidden = false;
   console.log("FUCK YOU TROY!!!");
 }
 
@@ -4765,6 +4787,7 @@ function troyLassialExit(event) {
       document.getElementById("cover").style.opacity = "0%";
       document.getElementById("cover").style.transition = "all .25s ease .25s";
       document.getElementById("cover").tabIndex = "-1";
+      document.getElementById("cover").ariaHidden = true;
       document.getElementById("cover").blur();
       document.getElementById("troyLassialCont").style.transform = "scale(0)";
       document.getElementById("troyLassialCont").style.transition = "transform .5s ease 0s";
@@ -4813,6 +4836,7 @@ function troyLassialExit(event) {
     document.getElementById("cover").style.opacity = "0%";
     document.getElementById("cover").style.transition = "all .25s ease .25s";
     document.getElementById("cover").tabIndex = "-1";
+    document.getElementById("cover").ariaHidden = true;
     document.getElementById("cover").blur();
     document.getElementById("troyLassialCont").style.transform = "scale(0)";
     document.getElementById("troyLassialCont").style.transition = "transform .5s ease 0s";
@@ -7142,6 +7166,7 @@ function openYoutubeSong() {
     document.getElementById("cover").style.opacity = "100%";
     document.getElementById("cover").style.transition = "all .25s ease 0s";
     document.getElementById("cover").tabIndex = "0";
+    document.getElementById("cover").ariaHidden = false;
     sessionStorage.scope = "document";
     document.onclick = youtubeControls;
     document.ondblclick = null;
@@ -7811,6 +7836,7 @@ function closeYoutubeSong(event) {
     document.getElementById("cover").style.opacity = "0%";
     document.getElementById("cover").style.transition = "all .25s ease .25s";
     document.getElementById("cover").tabIndex = "-1";
+    document.getElementById("cover").ariaHidden = true;
     document.getElementById("cover").blur();
   }
   document.getElementById("youtubeSongsContCont").style.transform = "scale(0)";
@@ -8881,6 +8907,7 @@ function openPoem() {
   document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "all .25s ease 0s";
   document.getElementById("cover").tabIndex = "0";
+  document.getElementById("cover").ariaHidden = false;
   document.onclick = null;
   document.ondblclick = null;
   document.onkeydown = shortcut;
@@ -8894,6 +8921,7 @@ function closePoem(event) {
     document.getElementById("cover").style.visibility = "hidden";
     document.getElementById("cover").style.opacity = "0%";
     document.getElementById("cover").style.transition = "all .25s ease 0s";
+    document.getElementById("cover").ariaHidden = true;
     document.getElementById("cover").tabIndex = "-1";
     document.getElementById("cover").blur();
     document.getElementById("poem").style.visibility = "hidden";
@@ -9040,10 +9068,6 @@ function gotIt26() {
 }
 
 function firewall() {
-  document.getElementById("cover").style.visibility = "visible";
-  document.getElementById("cover").style.opacity = "100%";
-  document.getElementById("cover").style.transition = "all .25s ease 0s";
-  document.getElementById("cover").tabIndex = "0";
   for (var i = 0; i < document.getElementsByClassName("confirmButton").length; i++) {
     document.getElementsByClassName("confirmButton")[i].tabIndex = "0";
   }
@@ -9051,11 +9075,22 @@ function firewall() {
   setTimeout(() => (
     document.getElementById("confirm").open = true
   ), 250);
+  document.getElementById("cover").style.visibility = "visible";
+  document.getElementById("cover").style.opacity = "100%";
+  document.getElementById("cover").style.transition = "all .25s ease 0s";
+  document.getElementById("cover").tabIndex = "0";
+  document.getElementById("cover").ariaHidden = false;
   console.log("Also included in the terms of service is Chestnut gets to fuck you in the ass anytime he wants");
 }
 
 function acceptTerms(event) {
   event.preventDefault();
+  document.getElementById("cover").style.visibility = "hidden";
+  document.getElementById("cover").style.opacity = "0%";
+  document.getElementById("cover").style.transition = "all .25s ease 0s";
+  document.getElementById("cover").tabIndex = "-1";
+  document.getElementById("cover").ariaHidden = true;
+  document.getElementById("cover").blur();
   document.getElementById("confirm").tabIndex = "-1";
   document.getElementById("confirm").open = false;
   document.getElementById("confirm").blur();
@@ -9063,11 +9098,6 @@ function acceptTerms(event) {
     document.getElementsByClassName("confirmButton")[i].tabIndex = "-1";
     document.getElementsByClassName("confirmButton")[i].blur();
   }
-  document.getElementById("cover").style.visibility = "hidden";
-  document.getElementById("cover").style.opacity = "0%";
-  document.getElementById("cover").style.transition = "all .25s ease 0s";
-  document.getElementById("cover").tabIndex = "-1";
-  document.getElementById("cover").blur();
   setTimeout(gotIt27, 500);
 }
 
@@ -9084,6 +9114,14 @@ function declineTerms(event) {
   if ((sessionStorage.backup != undefined) && (sessionStorage.backup != "")) {
     sessionStorage.backup = "";
   }
+  document.getElementById("cover").style.visibility = "hidden";
+  document.getElementById("cover").style.opacity = "0%";
+  document.getElementById("cover").style.transition = "all .25s ease 0s";
+  document.getElementById("cover").tabIndex = "-1";
+  document.getElementById("cover").ariaHidden = true;
+  document.getElementById("cover").blur();
+  document.getElementById("gameOverHeading").style.color = "var(--clarksonGreen)";
+  document.getElementById("gameOverHeading").style.transition = "color 0s ease 0s";
   document.getElementById("confirm").open = false;
   document.getElementById("confirm").tabIndex = "-1";
   document.getElementById("confirm").blur();
@@ -9091,13 +9129,6 @@ function declineTerms(event) {
     document.getElementsByClassName("confirmButton")[i].tabIndex = "-1";
     document.getElementsByClassName("confirmButton")[i].blur();
   }
-  document.getElementById("cover").style.visibility = "hidden";
-  document.getElementById("cover").style.opacity = "0%";
-  document.getElementById("cover").style.transition = "all .25s ease 0s";
-  document.getElementById("cover").tabIndex = "-1";
-  document.getElementById("cover").blur();
-  document.getElementById("gameOverHeading").style.color = "var(--clarksonGreen)";
-  document.getElementById("gameOverHeading").style.transition = "color 0s ease 0s";
   document.getElementById("ok").onclick = function(event) {
     gameOver(event);
     compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
@@ -9116,6 +9147,7 @@ function gotIt27() {
   }
   disableButton();
   sessionStorage.removeItem("collapse");
+  document.getElementById("game").ariaHidden = true;
   document.getElementById("rink").style.bottom = "100%";
   document.getElementById("rink").style.transition = "bottom 1s ease 0s";
   document.getElementById("rink").tabIndex = "-1";
@@ -9223,6 +9255,7 @@ function gotIt27() {
     document.getElementById("websiteCont").tabIndex = "0"
   ), 4000);
   setTimeout(cuntEmpireEntrance, 600000);
+  document.getElementById("party").ariaHidden = false;
   console.log("Oh, you're here? I'll drink to that!");
 }
 
@@ -9999,6 +10032,7 @@ function singIce(event) {
   document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "visibility 0s ease 0s, background .25s ease .75s, opacity 0s ease 0s";
   document.getElementById("cover").tabIndex = "0";
+  document.getElementById("cover").ariaHidden = false;
   document.getElementById("iceSong").style.visibility = "visible";
   document.getElementById("iceSong").style.opacity = "100%";
   document.getElementById("iceSong").style.transition = "all 0s ease 1.5s";
@@ -10227,6 +10261,7 @@ function finishIce(event) {
     document.getElementById("cover").style.opacity = "0%";
     document.getElementById("cover").style.transition = "all .25s ease 0s";
     document.getElementById("cover").tabIndex = "-1";
+    document.getElementById("cover").ariaHidden = true;
     document.getElementById("cover").blur();
   }
   var transformValue = ((sessionStorage.level - 1) * 9);
@@ -10442,6 +10477,7 @@ function openPromo() {
   document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "all .25s ease 0s";
   document.getElementById("cover").tabIndex = "0";
+  document.getElementById("cover").ariaHidden = false;
   document.onclick = null;
   document.ondblclick = null;
   document.onkeydown = shortcut;
@@ -10562,6 +10598,7 @@ function closePromo(event) {
   document.getElementById("cover").style.visibility = "hidden";
   document.getElementById("cover").style.opacity = "0%";
   document.getElementById("cover").tabIndex = "-1";
+  document.getElementById("cover").ariaHidden = true;
   document.getElementById("cover").blur();
   var transformValue = ((sessionStorage.level - 1) * 9);
   document.getElementById("promoCont").style.transform = "skew(" + (Math.ceil(Math.random() * transformValue) * ((Math.round(Math.random())) ? (1) : (-1))) + "deg) scale(0)";
@@ -10652,11 +10689,11 @@ function closePromo(event) {
 }
 
 function cuntEmpireEntrance() {
-  document.getElementById("cuntEmpireLink").tabIndex = "0";
+  document.getElementById("cuntEmpireImgLink").tabIndex = "0";
   document.getElementById("cuntEmpireHeadingLink").tabIndex = "0";
   document.getElementById("cuntEmpireAdvertisementLink").tabIndex = "0";
-  document.getElementById("cuntEmpireContContCont").style.top = "1em";
-  document.getElementById("cuntEmpireContContCont").style.transition = "top 1s ease 0s";
+  document.getElementById("cuntEmpireContCont").style.top = "1em";
+  document.getElementById("cuntEmpireContCont").style.transition = "top 1s ease 0s";
   console.log("My cock is even bigger than my charisma, it'll tear a whole in the space-time continuum!");
 }
 
@@ -10665,10 +10702,10 @@ function cuntEmpireUncover() {
 }
 
 function cuntEmpireExit() {
-  document.getElementById("cuntEmpireContContCont").style.top = "-10em";
-  document.getElementById("cuntEmpireContContCont").style.transition = "top 1s ease 0s";
-  document.getElementById("cuntEmpireLink").tabIndex = "-1";
-  document.getElementById("cuntEmpireLink").blur();
+  document.getElementById("cuntEmpireContCont").style.top = "-10em";
+  document.getElementById("cuntEmpireContCont").style.transition = "top 1s ease 0s";
+  document.getElementById("cuntEmpireImgLink").tabIndex = "-1";
+  document.getElementById("cuntEmpireImgLink").blur();
   document.getElementById("cuntEmpireHeadingLink").tabIndex = "-1";
   document.getElementById("cuntEmpireHeadingLink").blur();
   document.getElementById("cuntEmpireAdvertisementLink").tabIndex = "-1";
@@ -10767,6 +10804,7 @@ function openAccount(event) {
   document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "visibility .25s ease 0s, background 0s ease 0s, opacity .25s ease 0s";
   document.getElementById("cover").tabIndex = "0";
+  document.getElementById("cover").ariaHidden = false;
   if (sessionStorage.drinks != undefined) {
     document.getElementById("triangleFaceCont").style.zIndex = "92";
   }
@@ -11529,6 +11567,7 @@ function closeAccount() {
   document.getElementById("cover").style.opacity = "0%";
   document.getElementById("cover").style.transition = "visibility .25s ease 0s, background 0s ease .25s, opacity .25s ease 0s";
   document.getElementById("cover").tabIndex = "-1";
+  document.getElementById("cover").ariaHidden = true;
   document.getElementById("cover").blur();
   document.getElementById("account").style.visibility = "hidden";
   document.getElementById("account").style.opacity = "0%";
@@ -11657,6 +11696,7 @@ function gameOver(event) {
   document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "all .25s ease 0s";
   document.getElementById("cover").tabIndex = "0";
+  document.getElementById("cover").ariaHidden = false;
   document.getElementById("screensavers").style.visibility = "visible";
   document.getElementById("screensavers").style.opacity = "100%";
   document.getElementById("screensavers").style.transition = "all .25s ease 0s";
@@ -12155,9 +12195,12 @@ function mobileShrink() {
   document.getElementById("mobileButton").tabIndex = "0";
   document.getElementById("mobileImgCont").tabIndex = "0";
   document.getElementById("mobile").tabIndex = "0";
-  document.getElementById("mobile").role = "article";
-  document.getElementById("mobile").ariaDescription = "An alternative interface that is displayed when the screen size is too small";
   document.getElementById("mobile").ariaHidden = false;
+  if (document.getElementById("mobile").scrollHeight > document.getElementById("mobile").offsetHeight) {
+    if (document.getElementById("mobile").scrollTop > 0) {
+      document.getElementById("mobile").scrollTop = 0;
+    }
+  }
   document.onclick = unselectUrl;
   if (document.ondblclick != null) {
     document.ondblclick = null;
@@ -12177,14 +12220,8 @@ function mobileShrink() {
 
 function mobileGrow() {
   document.getElementById("mobile").tabIndex = "-1";
-  document.getElementById("mobile").removeAttribute("role");
-  document.getElementById("mobile").removeAttribute("aria-description");
   document.getElementById("mobile").ariaHidden = true;
-  if (document.getElementById("mobile").scrollHeight > document.getElementById("mobile").offsetHeight) {
-    if (document.getElementById("mobile").scrollTop > 0) {
-      document.getElementById("mobile").scrollTop = 0;
-    }
-  }
+  document.getElementById("mobile").blur();
   document.getElementById("urlButton").tabIndex = "-1";
   document.getElementById("urlButton").blur();
   document.getElementById("mobileButtonContCont").style.marginBottom = "0";

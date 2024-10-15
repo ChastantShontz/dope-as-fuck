@@ -4862,7 +4862,11 @@
       }
 
       function key() {
-        var token = "neosoNonyuvjdeXeseTsivtyDaipfaTvyujsivtUammEfaumMemmiCvfsejdyjdTaipfaToltsuloTeseTivpemeHafeDvvippiCitomIyeiwiFeppiKunupuCpeaSajvseDdNemmiCepiTiFputomEultOeppeiSmejvpituSesfpezimEissoyhEbvisCiowemGpuauFepeosfEputxeMennIpoqejD";
+        for (var i = 0; i < document.getElementsByTagName("meta").length; i++) {
+          if (document.getElementsByTagName("meta")[i].name == "csrf-token") {
+            var token = document.getElementsByTagName("meta")[i].content;
+          }
+        }
         var key = "";
         var limit = (Math.ceil(Math.random() * 26) + 24);
         for (var i = 0; i < limit; i++) {

@@ -1948,19 +1948,12 @@ main {
   font-size: 5em;
 }
 
-#saints {
+.sluWord {
   display: inline-block;
   transform-origin: top left;
 }
 
-#victorySlu {
-  display: inline-block;
-  transform-origin: top left;
-}
-
-#golden,
-#knight,
-#victoryClarkson {
+.clarksonWord {
   visibility: hidden;
   opacity: 0%;
 }

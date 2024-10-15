@@ -8290,21 +8290,18 @@ function win() {
       }
     }
   }
+  for (var i = 0; i < document.getElementsByClassName("clarksonWord").length; i++) {
+    var transitionDelay = (((i * 3) * .25) + 1);
+    document.getElementsByClassName("clarksonWord")[i].style.visibility = "visible";
+    document.getElementsByClassName("clarksonWord")[i].style.opacity = "100%";
+    document.getElementsByClassName("clarksonWord")[i].style.transition = "all .25s ease " + transitionDelay + "s";
+  }
   document.getElementById("clarksonVictoryMessageCont").style.visibility = "visible";
   document.getElementById("clarksonVictoryMessageCont").style.opacity = "100%";
   document.getElementById("clarksonVictoryMessageCont").style.transition = "all 0s ease 1s";
   document.getElementById("victoryMessages").style.visibility = "visible";
   document.getElementById("victoryMessages").style.opacity = "100%";
   document.getElementById("victoryMessages").style.transition = "all 0s ease 1s";
-  document.getElementById("golden").style.visibility = "visible";
-  document.getElementById("golden").style.opacity = "100%";
-  document.getElementById("golden").style.transition = "all .25s ease 1s";
-  document.getElementById("knight").style.visibility = "visible";
-  document.getElementById("knight").style.opacity = "100%";
-  document.getElementById("knight").style.transition = "all .25s ease 1.75s";
-  document.getElementById("victoryClarkson").style.visibility = "visible";
-  document.getElementById("victoryClarkson").style.opacity = "100%";
-  document.getElementById("victoryClarkson").style.transition = "all .25s ease 2.5s";
   setTimeout(enableButton, 2750);
   document.getElementById("ok").onclick = function() {
     gotIt22();
@@ -8433,24 +8430,29 @@ function lose() {
       }
     }
   }
+  for (var i = 0; i < document.getElementsByClassName("sluWord").length; i++) {
+    if (i == 0) {
+      document.getElementById("saints").style.transform = "rotate(20deg)";
+      document.getElementById("saints").style.animation = "saintsHang .25s ease 3.75s 1 forwards";
+      setTimeout(() => (
+        document.getElementById("saints").style.animation = "none"
+      ), 4000);
+    }
+    else if (i == 1) {
+      document.getElementById("victorySlu").style.transform = "rotate(80deg)";
+      document.getElementById("victorySlu").style.animation = "victoryHang 1.75s ease 2.25s 1 forwards";
+      setTimeout(() => (
+        document.getElementById("victorySlu").style.animation = "victoryFlicker 10s ease 0s infinite forwards"
+      ), 4000);
+    }
+    document.getElementsByClassName("sluWord")[i].style.transition = "transform 0s ease 4s";
+  }
   document.getElementById("sluVictoryMessageCont").style.visibility = "visible";
   document.getElementById("sluVictoryMessageCont").style.opacity = "100%";
   document.getElementById("sluVictoryMessageCont").style.transition = "all 0s ease 1s";
   document.getElementById("victoryMessages").style.visibility = "visible";
   document.getElementById("victoryMessages").style.opacity = "100%";
   document.getElementById("victoryMessages").style.transition = "all .25s ease 1s";
-  document.getElementById("saints").style.transform = "rotate(20deg)";
-  document.getElementById("saints").style.transition = "transform 0s ease 4s";
-  document.getElementById("saints").style.animation = "saintsHang .25s ease 3.75s 1 forwards";
-  setTimeout(() => (
-    document.getElementById("saints").style.animation = "none"
-  ), 4000);
-  document.getElementById("victorySlu").style.transform = "rotate(80deg)";
-  document.getElementById("victorySlu").style.transition = "transform 0s ease 4s";
-  document.getElementById("victorySlu").style.animation = "victoryHang 1.75s ease 2.25s 1 forwards";
-  setTimeout(() => (
-    document.getElementById("victorySlu").style.animation = "victoryFlicker 10s ease 0s infinite forwards"
-  ), 4000);
   setTimeout(enableButton, 4000);
   document.getElementById("ok").onclick = function() {
     gotIt23();
@@ -8474,15 +8476,6 @@ function gotIt22() {
   document.getElementById("clarksonVictoryMessageCont").style.visibility = "hidden";
   document.getElementById("clarksonVictoryMessageCont").style.opacity = "0%";
   document.getElementById("clarksonVictoryMessageCont").style.transition = "all 0s ease .25s";
-  document.getElementById("golden").style.visibility = "hidden";
-  document.getElementById("golden").style.opacity = "0%";
-  document.getElementById("golden").style.transition = "all 0s ease .25s";
-  document.getElementById("knight").style.visibility = "hidden";
-  document.getElementById("knight").style.opacity = "0%";
-  document.getElementById("knight").style.transition = "all 0s ease .25s";
-  document.getElementById("victoryClarkson").style.visibility = "hidden";
-  document.getElementById("victoryClarkson").style.opacity = "0%";
-  document.getElementById("victoryClarkson").style.transition = "all 0s ease .25s";
   document.getElementById("handCont").style.visibility = "visible";
   document.getElementById("handCont").style.opacity = "100%";
   document.getElementById("handCont").style.transition = "all .25s ease .25s";
@@ -9168,9 +9161,10 @@ function gotIt27() {
   sessionStorage.emphasizeBeerInterval = setInterval(emphasizeBeer, 60000);
   sessionStorage.iceDecrement = 10;
   for (var i = 0; i < document.getElementsByClassName("partyActivity").length; i++) {
+    var transitionDelay = ((i * .5) + 1.5);
     document.getElementsByClassName("partyActivity")[i].style.visibility = "visible";
     document.getElementsByClassName("partyActivity")[i].style.opacity = "100%";
-    document.getElementsByClassName("partyActivity")[i].style.transition = "all .25s ease " + ((i * .5) + 1.5) + "s";
+    document.getElementsByClassName("partyActivity")[i].style.transition = "all .25s ease " + transitionDelay + "s";
   }
   document.getElementById("partyActivities").style.visibility = "visible";
   document.getElementById("partyActivities").style.opacity = "100%";
@@ -12238,10 +12232,12 @@ function mobileGrow() {
   if (sessionStorage.drinks != undefined) {
     globalThis.knightCurrent = Date.now();
     if (Math.floor((globalThis.knightCurrent - globalThis.knightStart) / 1000) < 900) {
-      document.getElementById("house").style.setProperty("--filterValue", (100 - Math.floor(((globalThis.knightCurrent - globalThis.knightStart) / 1000) / 10)) + "%");
+      var filterValue = (100 - Math.floor(((globalThis.knightCurrent - globalThis.knightStart) / 1000) / 10));
+      var animationDuration = (900 - Math.floor((globalThis.knightCurrent - globalThis.knightStart) / 1000));
+      document.getElementById("house").style.setProperty("--filterValue", filterValue + "%");
       document.getElementById("house").style.removeProperty("filter");
       document.getElementById("house").style.removeProperty("transition");
-      document.getElementById("house").style.animation = "sunset " + (900 - Math.floor((globalThis.knightCurrent - globalThis.knightStart) / 1000)) + "s linear 0s 1 forwards";
+      document.getElementById("house").style.animation = "sunset " + animationDuration + "s linear 0s 1 forwards";
     }
   }
   if (document.getElementById("account").style.visibility == "visible") {

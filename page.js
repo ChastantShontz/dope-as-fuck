@@ -3159,7 +3159,16 @@ function gotIt2() {
       }
     }
   }
-  document.getElementById("genders").ariaHidden = false;
+  if (document.getElementById("discordLogo").onclick == openDiscord) {
+    setTimeout(() => (
+      document.getElementById("genders").ariaHidden = false
+    ), 500);
+  }
+  else if (document.getElementById("discordLogo").onclick == closeDiscord) {
+    setTimeout(() => (
+      document.getElementById("genders").ariaHidden = false
+    ), 1000);
+  }
 }
 
 function selectGender(gender) {
@@ -3674,8 +3683,6 @@ function gotIt6(event) {
   document.getElementById("gameActivities").style.right = "80%";
   document.getElementById("gameActivities").style.opacity = "100%";
   document.getElementById("gameActivities").style.transition = "visibility 0s ease 2s, left 1s ease 2s, right 1s ease 2s, opacity 0s ease 2s";
-  document.getElementById("game").ariaHidden = false;
-  document.getElementById("raffle").style.display = "block";
   for (var i = 0; i < document.getElementsByClassName("lifeCont").length; i++) {
     var transitionDelay = ((i / 2) + 3);
     document.getElementsByClassName("lifeCont")[i].style.top = "0";
@@ -3695,6 +3702,8 @@ function gotIt6(event) {
   document.getElementById("lives").style.transition = "all 0s ease 3s";
   sessionStorage.lives = 6;
   sessionStorage.redo = 0;
+  document.getElementById("game").ariaHidden = false;
+  document.getElementById("raffle").style.display = "block";
   sessionStorage.collapse = "stats";
   sessionStorage.selection = 1;
   setTimeout(enableButton, 6500);
@@ -8921,8 +8930,8 @@ function closePoem(event) {
     document.getElementById("cover").style.visibility = "hidden";
     document.getElementById("cover").style.opacity = "0%";
     document.getElementById("cover").style.transition = "all .25s ease 0s";
-    document.getElementById("cover").ariaHidden = true;
     document.getElementById("cover").tabIndex = "-1";
+    document.getElementById("cover").ariaHidden = true;
     document.getElementById("cover").blur();
     document.getElementById("poem").style.visibility = "hidden";
     document.getElementById("poem").style.opacity = "0%";

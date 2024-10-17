@@ -1216,7 +1216,7 @@ let quotes = [
     author: "<b>Garrett</b>"
   },
   {
-    line: "I've got the <q id=\"quoteLineNested\">not allowed within five hundred feet of a school zone</q> look.",
+    line: "I've got the <q class=\"quoteLineNested\">not allowed within five hundred feet of a school zone</q> look.",
     author: "<b>Kronk</b>"
   },
   {
@@ -1460,7 +1460,7 @@ let quotes = [
     author: "<b>Savannah</b>"
   },
   {
-    line: "Oh, you think you can cheat on my mans like that and still be like <q id=\"quoteLineNested\">Oh, you wanna eat my ass?</q>",
+    line: "Oh, you think you can cheat on my mans like that and still be like <q class=\"quoteLineNested\">Oh, you wanna eat my ass?</q>",
     author: "<b>Savannah</b>"
   },
   {
@@ -1552,7 +1552,7 @@ let quotes = [
     author: "<b>Ryan McCarthy</b>"
   },
   {
-    line: "That's daddy to you, son.",
+    line: "That's <q class=\"quoteLineNested\">Daddy</q> to you, son.",
     author: "<b>Lyle</b>"
   },
   {
@@ -1610,6 +1610,10 @@ let quotes = [
   {
     line: "Tom, it's gotta go on your balls.",
     author: "<b>Jonas</b>"
+  },
+  {
+    line: "<span class=\"quoteLine\" id=\"quoteLine1\">Tom, will you be my dad?</span><br><span class=\"quoteLine\" id=\"quoteLine2\">Only if you call me <q class=\"quoteLineNested\">Daddy.</q></span>",
+    author: "<b>Kyle</b> and <b>Tom Uhl</b>"
   },
   {
     line: "Trombones are more expensive than the average freshman.",
@@ -1696,7 +1700,7 @@ let quotes = [
     author: "<b>Chestnut</b>"
   },
   {
-    line: "You know what the Lord said? He said <q id=\"quoteLineNested\">Let there be Busch Light!</q>",
+    line: "You know what the Lord said? He said <q class=\"quoteLineNested\">Let there be Busch Light!</q>",
     author: "<b>Liam</b>"
   },
   {

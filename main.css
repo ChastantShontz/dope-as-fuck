@@ -139,7 +139,7 @@ main {
   animation: loadingBarShimmer 5s ease 0s infinite backwards;
 }
 
-#conductorCont {
+#conductor {
   z-index: 91;
   display: grid;
   grid-template-columns: calc(33% - .1em) calc(67% - .1em);
@@ -155,7 +155,7 @@ main {
   border: .2em solid var(--clarksonGreen);
 }
 
-#conductor {
+#conductorImg {
   border-top-left-radius: .3em;
   border-bottom-left-radius: .3em;
   background: url("img/joeDesenaBG.png") center / cover;
@@ -735,6 +735,7 @@ main {
   height: 8em;
   width: 8em;
   align-items: center;
+  pointer-events: auto;
 }
 
 .life {
@@ -2803,7 +2804,7 @@ main {
   height: 150%;
 }
 
-#cuntEmpireContCont {
+#cuntEmpire {
   z-index: 94;
   display: flex;
   flex-direction: row;
@@ -2819,7 +2820,7 @@ main {
   align-items: center;
 }
 
-#cuntEmpireCont {
+#cuntEmpireImgContCont {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -2828,7 +2829,7 @@ main {
   align-items: center;
 }
 
-#cuntEmpire {
+#cuntEmpireImgCont {
   display: grid;
   grid-template-columns: repeat(2, calc(50% - .25em));
   grid-column-gap: .5em;

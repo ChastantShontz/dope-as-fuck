@@ -2706,7 +2706,7 @@ function gameBegins(event) {
   if ((window.innerHeight <= 600) || (window.innerWidth <= 1200)) {
     document.getElementById("urlButton").tabIndex = "0";
     document.getElementById("mobileButton").tabIndex = "0";
-    document.getElementById("mobileImgCont").tabIndex = "0";
+    document.getElementById("mobileImgContCont").tabIndex = "0";
     document.getElementById("mobile").tabIndex = "0";
     document.getElementById("mobile").ariaHidden = false;
     if (document.getElementById("mobile").scrollHeight > document.getElementById("mobile").offsetHeight) {
@@ -2725,8 +2725,8 @@ function gameBegins(event) {
         document.getElementById("conductorTalkCont").scrollTop = 0;
       }
     }
-    document.getElementById("conductorCont").style.left = "2em";
-    document.getElementById("conductorCont").style.transition = "left 2s ease .5s";
+    document.getElementById("conductor").style.left = "2em";
+    document.getElementById("conductor").style.transition = "left 2s ease .5s";
     sessionStorage.emphasizeConductorInterval = setInterval(emphasizeConductor, 30000);
     setTimeout(enableButton, 500);
     document.onclick = collapse;
@@ -2970,9 +2970,9 @@ function endSound(effect) {
 }
 
 function emphasizeConductor() {
-  document.getElementById("conductorCont").style.animation = "emphasizeCont 1.5s ease 0s 1 forwards";
+  document.getElementById("conductor").style.animation = "emphasizeCont 1.5s ease 0s 1 forwards";
   setTimeout(() => (
-    document.getElementById("conductorCont").style.animation = "none"
+    document.getElementById("conductor").style.animation = "none"
   ), 1500);
 }
 
@@ -3028,9 +3028,9 @@ function pillow() {
     }
     console.log("Charlie was SOOO drunk when he said that");
   }
-  document.getElementById("conductor").title = "Mmm...";
-  document.getElementById("conductor").style.background = "url(\"img/pillow.png\") center / cover";
-  document.getElementById("conductor").onclick = pillowUndo;
+  document.getElementByid("conductorImg").title = "Mmm...";
+  document.getElementByid("conductorImg").style.background = "url(\"img/pillow.png\") center / cover";
+  document.getElementByid("conductorImg").onclick = pillowUndo;
 }
 
 function pillowUndo() {
@@ -3048,9 +3048,9 @@ function pillowUndo() {
     }
     sessionStorage.backup = "";
   }
-  document.getElementById("conductor").title = "Joe DeSena, Conductor";
-  document.getElementById("conductor").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
-  document.getElementById("conductor").onclick = pillow;
+  document.getElementByid("conductorImg").title = "Joe DeSena, Conductor";
+  document.getElementByid("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
+  document.getElementByid("conductorImg").onclick = pillow;
 }
 
 function gotIt1() {
@@ -3136,42 +3136,42 @@ function gotIt2() {
       document.getElementById("men").style.left = "25%";
       if (document.getElementById("discordLogo").onclick == openDiscord) {
         document.getElementById("men").style.transition = "left 2s ease .5s";
-        setTimeout(() => (
-          document.getElementById("men").tabIndex = "0"
-        ), 500);
       }
       else if (document.getElementById("discordLogo").onclick == closeDiscord) {
         document.getElementById("men").style.transition = "left 2s ease 1s";
-        setTimeout(() => (
-          document.getElementById("men").tabIndex = "0"
-        ), 1000);
       }
     }
     else if (i == 1) {
       document.getElementById("women").style.right = "25%";
       if (document.getElementById("discordLogo").onclick == openDiscord) {
         document.getElementById("women").style.transition = "right 2s ease .5s";
-        setTimeout(() => (
-          document.getElementById("women").tabIndex = "0"
-        ), 500);
       }
       else if (document.getElementById("discordLogo").onclick == closeDiscord) {
         document.getElementById("women").style.transition = "right 2s ease 1s";
-        setTimeout(() => (
-          document.getElementById("women").tabIndex = "0"
-        ), 1000);
       }
     }
-  }
-  if (document.getElementById("discordLogo").onclick == openDiscord) {
-    setTimeout(() => (
-      document.getElementById("genders").ariaHidden = false
-    ), 500);
-  }
-  else if (document.getElementById("discordLogo").onclick == closeDiscord) {
-    setTimeout(() => (
-      document.getElementById("genders").ariaHidden = false
-    ), 1000);
+    if (document.getElementById("discordLogo").onclick == openDiscord) {
+      const activate = (x) => {
+        setTimeout(() => (
+          document.getElementsByClassName("gender")[x].tabIndex = "0"
+        ), 500);
+        setTimeout(() => (
+          document.getElementsByClassName("gender")[x].ariaHidden = false
+        ), 500);
+      }
+      activate(i);
+    }
+    else if (document.getElementById("discordLogo").onclick == closeDiscord) {
+      const activate = (x) => {
+        setTimeout(() => (
+          document.getElementsByClassName("gender")[x].tabIndex = "0"
+        ), 1000);
+        setTimeout(() => (
+          document.getElementsByClassName("gender")[x].ariaHidden = false
+        ), 1000);
+      }
+      activate(i);
+    }
   }
 }
 
@@ -3229,7 +3229,6 @@ function gotIt3() {
     sessionStorage.backup = "";
   }
   disableButton();
-  document.getElementById("genders").ariaHidden = true;
   for (var i = 0; i < document.getElementsByClassName("gender").length; i++) {
     if (i == 0) {
       if (i == (sessionStorage.gender - 1)) {
@@ -3250,9 +3249,6 @@ function gotIt3() {
           document.getElementById("men").style.transition = "left 2s ease 1s, transform .5s ease 0s";
         }
       }
-      document.getElementById("men").style.pointerEvents = "none";
-      document.getElementById("men").tabIndex = "-1";
-      document.getElementById("men").blur();
     }
     else if (i == 1) {
       if (i == (sessionStorage.gender - 1)) {
@@ -3273,10 +3269,11 @@ function gotIt3() {
           document.getElementById("women").style.transition = "right 2s ease 1s, transform .5s ease 0s";
         }
       }
-      document.getElementById("women").style.pointerEvents = "none";
-      document.getElementById("women").tabIndex = "-1";
-      document.getElementById("women").blur();
     }
+    document.getElementsByClassName("gender")[i].style.pointerEvents = "none";
+    document.getElementsByClassName("gender")[i].tabIndex = "-1";
+    document.getElementsByClassName("gender")[i].ariaHidden = true;
+    document.getElementsByClassName("gender")[i].blur();
   }
   if (sessionStorage.gender == 1) {
     sessionStorage.goalieName = ((globalThis.players).men.slu[0].name).substring(((globalThis.players).men.slu[0].name).search(/\s/sm) + 1);
@@ -3693,10 +3690,10 @@ function gotIt6(event) {
     document.getElementsByClassName("lifeCont")[i].style.transition = "top 1s ease " + transitionDelay + "s";
     const activate = (x, y) => {
       setTimeout(() => (
-        document.getElementsByClassName("lifeCont")[x].style.pointerEvents = "auto"
+        document.getElementsByClassName("lifeCont")[x].tabIndex = "0"
       ), y);
       setTimeout(() => (
-        document.getElementsByClassName("lifeCont")[x].tabIndex = "0"
+        document.getElementsByClassName("lifeCont")[x].ariaHidden = false
       ), y);
     }
     activate(i, (transitionDelay * 1000));
@@ -3706,7 +3703,6 @@ function gotIt6(event) {
   document.getElementById("lives").style.transition = "all 0s ease 3s";
   sessionStorage.lives = 6;
   sessionStorage.redo = 0;
-  document.getElementById("game").ariaHidden = false;
   document.getElementById("raffle").style.display = "block";
   sessionStorage.collapse = "stats";
   sessionStorage.selection = 1;
@@ -3788,8 +3784,8 @@ function speedrun(stage) {
 
 function openSelection() {
   disableButton();
-  document.getElementById("conductorCont").tabIndex = "-1";
-  document.getElementById("conductorCont").blur();
+  document.getElementById("conductor").tabIndex = "-1";
+  document.getElementById("conductor").blur();
   if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
     document.getElementById("conductorTalkCont").tabIndex = "-1";
     document.getElementById("conductorTalkCont").blur();
@@ -4181,7 +4177,7 @@ function closeSelection(event) {
     ), 500);
   }
   setTimeout(() => (
-    document.getElementById("conductorCont").tabIndex = "0"
+    document.getElementById("conductor").tabIndex = "0"
   ), 500);
 }
 
@@ -4770,8 +4766,8 @@ function raffleIncrement(event) {
 
 function troyLassialEntrance() {
   disableButton();
-  document.getElementById("conductorCont").tabIndex = "-1";
-  document.getElementById("conductorCont").blur();
+  document.getElementById("conductor").tabIndex = "-1";
+  document.getElementById("conductor").blur();
   if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
     document.getElementById("conductorTalkCont").tabIndex = "-1";
     document.getElementById("conductorTalkCont").blur();
@@ -4824,7 +4820,7 @@ function troyLassialExit(event) {
         ), 500);
       }
       setTimeout(() => (
-        document.getElementById("conductorCont").tabIndex = "0"
+        document.getElementById("conductor").tabIndex = "0"
       ), 500);
       setTimeout(enableButton, 750);
     }
@@ -4930,7 +4926,7 @@ function troyLassialExit(event) {
       ), 500);
     }
     setTimeout(() => (
-      document.getElementById("conductorCont").tabIndex = "0"
+      document.getElementById("conductor").tabIndex = "0"
     ), 500);
   }
 }
@@ -7116,8 +7112,8 @@ function gotIt19() {
 function openYoutubeSong() {
   if (songs[sessionStorage.youtube].duration < 3600) {
     disableButton();
-    document.getElementById("conductorCont").tabIndex = "-1";
-    document.getElementById("conductorCont").blur();
+    document.getElementById("conductor").tabIndex = "-1";
+    document.getElementById("conductor").blur();
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
       document.getElementById("conductorTalkCont").tabIndex = "-1";
       document.getElementById("conductorTalkCont").blur();
@@ -7912,7 +7908,7 @@ function closeYoutubeSong(event) {
     ), 500);
   }
   setTimeout(() => (
-    document.getElementById("conductorCont").tabIndex = "0"
+    document.getElementById("conductor").tabIndex = "0"
   ), 500);
   setTimeout(enableButton, 500);
   newFunction();
@@ -8817,8 +8813,12 @@ function gotIt24() {
     document.getElementById("cheers").tabIndex = "-1";
     document.getElementById("cheers").blur();
   }
+  document.getElementById("lives").style.visibility = "hidden";
+  document.getElementById("lives").style.opacity = "0%";
+  document.getElementById("lives").style.transition = "all 0s ease 3s";
   for (var i = 0; i < document.getElementsByClassName("lifeCont").length; i++) {
     document.getElementsByClassName("lifeCont")[i].tabIndex = "-1";
+    document.getElementsByClassName("lifeCont")[i].ariaHidden = true;
     document.getElementsByClassName("lifeCont")[i].blur();
   }
   document.getElementById("raffle").style.display = "none";
@@ -8891,8 +8891,8 @@ function gotIt24() {
 
 function openPoem() {
   disableButton();
-  document.getElementById("conductorCont").tabIndex = "-1";
-  document.getElementById("conductorCont").blur();
+  document.getElementById("conductor").tabIndex = "-1";
+  document.getElementById("conductor").blur();
   if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
     document.getElementById("conductorTalkCont").tabIndex = "-1";
     document.getElementById("conductorTalkCont").blur();
@@ -8979,7 +8979,7 @@ function closePoem(event) {
       ), 500);
     }
     setTimeout(() => (
-      document.getElementById("conductorCont").tabIndex = "0"
+      document.getElementById("conductor").tabIndex = "0"
     ), 250);
     setTimeout(enableButton, 250);
   }
@@ -9160,7 +9160,6 @@ function gotIt27() {
   }
   disableButton();
   sessionStorage.removeItem("collapse");
-  document.getElementById("game").ariaHidden = true;
   document.getElementById("rink").style.bottom = "100%";
   document.getElementById("rink").style.transition = "bottom 1s ease 0s";
   document.getElementById("rink").tabIndex = "-1";
@@ -9268,7 +9267,6 @@ function gotIt27() {
     document.getElementById("websiteCont").tabIndex = "0"
   ), 4000);
   setTimeout(cuntEmpireEntrance, 600000);
-  document.getElementById("party").ariaHidden = false;
   console.log("Oh, you're here? I'll drink to that!");
 }
 
@@ -9381,10 +9379,10 @@ function drinkingSongSetup() {
       sessionStorage.backup = "";
     }
   }
-  if (document.getElementById("conductor").onclick == null) {
-    document.getElementById("conductor").title = "Joe DeSena, Conductor";
-    document.getElementById("conductor").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
-    document.getElementById("conductor").onclick = pillow;
+  if (document.getElementByid("conductorImg").onclick == null) {
+    document.getElementByid("conductorImg").title = "Joe DeSena, Conductor";
+    document.getElementByid("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
+    document.getElementByid("conductorImg").onclick = pillow;
   }
   document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
   document.getElementById("viewAccountToggle").tabIndex = "0";
@@ -9474,10 +9472,10 @@ function drinkingSongSetup() {
 }
 
 function drinkingSongVerse(event) {
-  if (document.getElementById("conductor").onclick == null) {
-    document.getElementById("conductor").title = "Joe DeSena, Conductor";
-    document.getElementById("conductor").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
-    document.getElementById("conductor").onclick = pillow;
+  if (document.getElementByid("conductorImg").onclick == null) {
+    document.getElementByid("conductorImg").title = "Joe DeSena, Conductor";
+    document.getElementByid("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
+    document.getElementByid("conductorImg").onclick = pillow;
   }
   document.getElementById("viewAccountToggle").style.pointerEvents = "none";
   document.getElementById("viewAccountToggle").tabIndex = "-1";
@@ -9547,10 +9545,10 @@ function drinkingSongVerse(event) {
 }
 
 function drinkingSongFirstResponse(event) {
-  if (document.getElementById("conductor").onclick == null) {
-    document.getElementById("conductor").title = "Joe DeSena, Conductor";
-    document.getElementById("conductor").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
-    document.getElementById("conductor").onclick = pillow;
+  if (document.getElementByid("conductorImg").onclick == null) {
+    document.getElementByid("conductorImg").title = "Joe DeSena, Conductor";
+    document.getElementByid("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
+    document.getElementByid("conductorImg").onclick = pillow;
   }
   if ((sessionStorage.singing == 1) || (sessionStorage.singing == 4)) {
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Response" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).classList.replace("drinkingSongUnusedLine", "drinkingSongUsedLine");
@@ -9647,10 +9645,10 @@ function drinkingSongFirstResponse(event) {
 }
 
 function drinkingSongSecondResponse(event) {
-  if (document.getElementById("conductor").onclick == null) {
-    document.getElementById("conductor").title = "Joe DeSena, Conductor";
-    document.getElementById("conductor").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
-    document.getElementById("conductor").onclick = pillow;
+  if (document.getElementByid("conductorImg").onclick == null) {
+    document.getElementByid("conductorImg").title = "Joe DeSena, Conductor";
+    document.getElementByid("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
+    document.getElementByid("conductorImg").onclick = pillow;
   }
   document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponse" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).classList.replace("drinkingSongUnusedLine", "drinkingSongUsedLine");
   document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponse" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).style.transition = "opacity 0s ease 0s";
@@ -9812,10 +9810,10 @@ function dafCounterCount(event) {
   else if (sessionStorage.dafCount >= 212) {
     dafCounterError();
   }
-  if (document.getElementById("conductor").onclick == null) {
-    document.getElementById("conductor").title = "Joe DeSena, Conductor";
-    document.getElementById("conductor").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
-    document.getElementById("conductor").onclick = pillow;
+  if (document.getElementByid("conductorImg").onclick == null) {
+    document.getElementByid("conductorImg").title = "Joe DeSena, Conductor";
+    document.getElementByid("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
+    document.getElementByid("conductorImg").onclick = pillow;
   }
 }
 
@@ -9948,9 +9946,9 @@ function drinkBeer(event) {
     if ((sessionStorage.backup != undefined) && (sessionStorage.backup != "")) {
       sessionStorage.backup = "";
     }
-    document.getElementById("conductor").title = "Prochnost (it's Russian for \"strength\")";
-    document.getElementById("conductor").style.background = "url(\"img/prochnost.gif\") center / cover";
-    document.getElementById("conductor").onclick = null;
+    document.getElementByid("conductorImg").title = "Prochnost (it's Russian for \"strength\")";
+    document.getElementByid("conductorImg").style.background = "url(\"img/prochnost.gif\") center / cover";
+    document.getElementByid("conductorImg").onclick = null;
     sessionStorage.drinksIncrement = 1;
     drunk(sessionStorage.drinksIncrement, event);
     console.log("Eto chertovski kruto!");
@@ -9984,10 +9982,10 @@ function drinkBeer(event) {
           sessionStorage.backup = "";
         }
       }
-      if (document.getElementById("conductor").onclick == null) {
-        document.getElementById("conductor").title = "Joe DeSena, Conductor";
-        document.getElementById("conductor").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
-        document.getElementById("conductor").onclick = pillow;
+      if (document.getElementByid("conductorImg").onclick == null) {
+        document.getElementByid("conductorImg").title = "Joe DeSena, Conductor";
+        document.getElementByid("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
+        document.getElementByid("conductorImg").onclick = pillow;
       }
       sessionStorage.drinksIncrement = 1;
       drunk(sessionStorage.drinksIncrement, event);
@@ -10011,12 +10009,12 @@ function singIce(event) {
   if ((sessionStorage.backup != undefined) && (sessionStorage.backup != "")) {
     sessionStorage.backup = "";
   }
-  if (document.getElementById("conductor").onclick == null) {
-    document.getElementById("conductor").title = "Joe DeSena, Conductor";
-    document.getElementById("conductor").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
-    document.getElementById("conductor").onclick = pillow;
+  if (document.getElementByid("conductorImg").onclick == null) {
+    document.getElementByid("conductorImg").title = "Joe DeSena, Conductor";
+    document.getElementByid("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
+    document.getElementByid("conductorImg").onclick = pillow;
   }
-  document.getElementById("conductorCont").style.zIndex = "92";
+  document.getElementById("conductor").style.zIndex = "92";
   document.getElementById("viewAccountToggle").style.pointerEvents = "none";
   document.getElementById("viewAccountToggle").tabIndex = "-1";
   document.getElementById("viewAccountToggle").blur();
@@ -10140,10 +10138,10 @@ function bitchIce(event) {
       sessionStorage.drinks++;
       localStorage.totalDrinks++;
     }
-    document.getElementById("conductorCont").style.zIndex = "93";
-    document.getElementById("conductorCont").style.filter = "blur(0)";
-    document.getElementById("conductorCont").style.transform = "skew(0)";
-    document.getElementById("conductorCont").style.transition = "all 0s ease 0s";
+    document.getElementById("conductor").style.zIndex = "93";
+    document.getElementById("conductor").style.filter = "blur(0)";
+    document.getElementById("conductor").style.transform = "skew(0)";
+    document.getElementById("conductor").style.transition = "all 0s ease 0s";
     document.getElementById("conductorName").style.fontFamily = "\"Russo One\", fantasy";
     document.getElementById("ok").style.fontFamily = "\"Archivo Black\", \"Roboto\", \"Arial\", sans-serif";
     document.getElementById("conductorTalk").innerHTML = "Woah, it looks like you've had a little too much to drink toknight. I think it's time to call it a knight and sleep off the alcohol. You'll wake up tomorrow with one nasty hangover!";
@@ -10205,7 +10203,7 @@ function bitchIce(event) {
 }
 
 function failIce(event) {
-  document.getElementById("conductorCont").style.zIndex = "92";
+  document.getElementById("conductor").style.zIndex = "92";
   document.getElementById("cover").style.zIndex = "93";
   document.getElementById("iceContContCont").style.visibility = "hidden";
   document.getElementById("iceContContCont").style.opacity = "0%";
@@ -10267,7 +10265,7 @@ function finishIce(event) {
   if ((sessionStorage.backup != undefined) && (sessionStorage.backup != "")) {
     sessionStorage.backup = "";
   }
-  document.getElementById("conductorCont").style.zIndex = "91";
+  document.getElementById("conductor").style.zIndex = "91";
   document.getElementById("cover").style.zIndex = "92";
   if (sessionStorage.drinks < 50) {
     document.getElementById("cover").style.visibility = "hidden";
@@ -10402,7 +10400,7 @@ function drunk(drinksIncrement, event) {
       sessionStorage.level = 6;
       sessionStorage.dafCountIncrement = 10;
       sessionStorage.iceDecrement = 1;
-      if (document.getElementById("conductor").onclick == pillow) {
+      if (document.getElementByid("conductorImg").onclick == pillow) {
         if (sessionStorage.backup == undefined) {
           document.getElementById("conductorTalk").innerHTML = "That's weird, I just turned into a pillow. I bet you really want to \"mmm\" me now...";
           if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
@@ -10416,10 +10414,10 @@ function drunk(drinksIncrement, event) {
             sessionStorage.backup = "";
           }
         }
-        document.getElementById("conductor").title = "Mmm...";
-        document.getElementById("conductor").style.background = "url(\"img/pillow.png\") center / cover";
+        document.getElementByid("conductorImg").title = "Mmm...";
+        document.getElementByid("conductorImg").style.background = "url(\"img/pillow.png\") center / cover";
       }
-      document.getElementById("conductor").onclick = null;
+      document.getElementByid("conductorImg").onclick = null;
       document.getElementById("triangleFaceCont").style.opacity = "75%";
       document.getElementById("triangleFaceCont").style.transition = "opacity 0s ease 0s";
       for (var i = 1; i < document.getElementsByClassName("speakerSong").length; i++) {
@@ -10444,7 +10442,7 @@ function drunk(drinksIncrement, event) {
   }
   else if (sessionStorage.drinks >= 53) {
     sessionStorage.level = 7;
-    document.getElementById("conductorCont").style.zIndex = "92";
+    document.getElementById("conductor").style.zIndex = "92";
     document.getElementById("cover").style.zIndex = "93";
     document.getElementById("triangleFaceCont").style.zIndex = "91";
     document.getElementById("triangleFaceCont").style.opacity = "100%";
@@ -10465,8 +10463,8 @@ function drunk(drinksIncrement, event) {
 }
 
 function openPromo() {
-  document.getElementById("conductorCont").tabIndex = "-1";
-  document.getElementById("conductorCont").blur();
+  document.getElementById("conductor").tabIndex = "-1";
+  document.getElementById("conductor").blur();
   if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
     document.getElementById("conductorTalkCont").tabIndex = "-1";
     document.getElementById("conductorTalkCont").blur();
@@ -10665,7 +10663,7 @@ function closePromo(event) {
       ), 1000);
     }
     setTimeout(() => (
-      document.getElementById("conductorCont").tabIndex = "0"
+      document.getElementById("conductor").tabIndex = "0"
     ), 1000);
   }
   else if ((document.fullscreenElement != document.getElementById("promo")) && ((event.type == "click") || ((event.type == "keydown") && (event.key == "Escape")) || (event.type == "ended"))) {
@@ -10696,7 +10694,7 @@ function closePromo(event) {
       ), 500);
     }
     setTimeout(() => (
-      document.getElementById("conductorCont").tabIndex = "0"
+      document.getElementById("conductor").tabIndex = "0"
     ), 500);
   }
 }
@@ -10705,8 +10703,8 @@ function cuntEmpireEntrance() {
   document.getElementById("cuntEmpireImgLink").tabIndex = "0";
   document.getElementById("cuntEmpireHeadingLink").tabIndex = "0";
   document.getElementById("cuntEmpireAdvertisementLink").tabIndex = "0";
-  document.getElementById("cuntEmpireContCont").style.top = "1em";
-  document.getElementById("cuntEmpireContCont").style.transition = "top 1s ease 0s";
+  document.getElementById("cuntEmpire").style.top = "1em";
+  document.getElementById("cuntEmpire").style.transition = "top 1s ease 0s";
   console.log("My cock is even bigger than my charisma, it'll tear a whole in the space-time continuum!");
 }
 
@@ -10715,8 +10713,8 @@ function cuntEmpireUncover() {
 }
 
 function cuntEmpireExit() {
-  document.getElementById("cuntEmpireContCont").style.top = "-10em";
-  document.getElementById("cuntEmpireContCont").style.transition = "top 1s ease 0s";
+  document.getElementById("cuntEmpire").style.top = "-10em";
+  document.getElementById("cuntEmpire").style.transition = "top 1s ease 0s";
   document.getElementById("cuntEmpireImgLink").tabIndex = "-1";
   document.getElementById("cuntEmpireImgLink").blur();
   document.getElementById("cuntEmpireHeadingLink").tabIndex = "-1";
@@ -10758,8 +10756,8 @@ function openAccount(event) {
     sessionStorage.button = "enabled";
     disableButton();
   }
-  document.getElementById("conductorCont").tabIndex = "-1";
-  document.getElementById("conductorCont").blur();
+  document.getElementById("conductor").tabIndex = "-1";
+  document.getElementById("conductor").blur();
   if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
     document.getElementById("conductorTalkCont").tabIndex = "-1";
     document.getElementById("conductorTalkCont").blur();
@@ -11650,7 +11648,7 @@ function closeAccount() {
     ), 500);
   }
   setTimeout(() => (
-    document.getElementById("conductorCont").tabIndex = "0"
+    document.getElementById("conductor").tabIndex = "0"
   ), 250);
   if (sessionStorage.button == "enabled") {
     setTimeout(enableButton, 250);
@@ -11659,8 +11657,8 @@ function closeAccount() {
 
 function gameOver(event) {
   disableButton();
-  document.getElementById("conductorCont").tabIndex = "-1";
-  document.getElementById("conductorCont").blur();
+  document.getElementById("conductor").tabIndex = "-1";
+  document.getElementById("conductor").blur();
   if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
     document.getElementById("conductorTalkCont").tabIndex = "-1";
     document.getElementById("conductorTalkCont").blur();
@@ -11828,8 +11826,8 @@ function gameComplete() {
 function showPassword(event) {
   if (document.elementsFromPoint(event.clientX, event.clientY).length == 3) {
     disableButton();
-    document.getElementById("conductorCont").tabIndex = "-1";
-    document.getElementById("conductorCont").blur();
+    document.getElementById("conductor").tabIndex = "-1";
+    document.getElementById("conductor").blur();
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
       document.getElementById("conductorTalkCont").tabIndex = "-1";
       document.getElementById("conductorTalkCont").blur();
@@ -12059,7 +12057,7 @@ function hidePassword() {
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
       document.getElementById("conductorTalkCont").tabIndex = "0";
     }
-    document.getElementById("conductorCont").tabIndex = "0";
+    document.getElementById("conductor").tabIndex = "0";
     enableButton();
   }
 }
@@ -12161,7 +12159,7 @@ function hideSecret(event) {
       ), 500);
     }
     setTimeout(() => (
-      document.getElementById("conductorCont").tabIndex = "0"
+      document.getElementById("conductor").tabIndex = "0"
     ), 250);
     setTimeout(enableButton, 250);
     console.clear();
@@ -12206,7 +12204,7 @@ function mobileShrink() {
   }
   document.getElementById("urlButton").tabIndex = "0";
   document.getElementById("mobileButton").tabIndex = "0";
-  document.getElementById("mobileImgCont").tabIndex = "0";
+  document.getElementById("mobileImgContCont").tabIndex = "0";
   document.getElementById("mobile").tabIndex = "0";
   document.getElementById("mobile").ariaHidden = false;
   if (document.getElementById("mobile").scrollHeight > document.getElementById("mobile").offsetHeight) {
@@ -12241,8 +12239,8 @@ function mobileGrow() {
   document.getElementById("mobileButtonContCont").style.transition = "margin-bottom 0s ease 0s";
   document.getElementById("mobileButton").tabIndex = "-1";
   document.getElementById("mobileButton").blur();
-  document.getElementById("mobileImgCont").tabIndex = "-1";
-  document.getElementById("mobileImgCont").blur();
+  document.getElementById("mobileImgContCont").tabIndex = "-1";
+  document.getElementById("mobileImgContCont").blur();
   document.getElementById("mobileImg").style.background = "rgba(0, 61, 124, 50%) url(\"img/mystery.png\") center / cover";
   document.getElementById("mobileImg").style.filter = "blur(1em)";
   document.getElementById("mobileImg").style.transition = "all 0s ease 0s";
@@ -12255,17 +12253,17 @@ function mobileGrow() {
   document.getElementById("mobileBio").style.display = "none";
   sessionStorage.removeItem("oldSlide");
   sessionStorage.removeItem("newSlide");
-  if ((document.getElementById("conductorCont").style.left != "2em") && (document.body.style.cursor == "auto")) {
+  if ((document.getElementById("conductor").style.left != "2em") && (document.body.style.cursor == "auto")) {
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
       if (document.getElementById("conductorTalkCont").scrollTop > 0) {
         document.getElementById("conductorTalkCont").scrollTop = 0;
       }
     }
     setTimeout(() => (
-      document.getElementById("conductorCont").style.left = "2em"
+      document.getElementById("conductor").style.left = "2em"
     ), 500);
     setTimeout(() => (
-      document.getElementById("conductorCont").style.transition = "left 2s ease 0s"
+      document.getElementById("conductor").style.transition = "left 2s ease 0s"
     ), 500);
     sessionStorage.emphasizeConductorInterval = setInterval(emphasizeConductor, 30000);
     setTimeout(enableButton, 500);

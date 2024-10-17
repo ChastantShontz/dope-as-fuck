@@ -331,8 +331,8 @@
           </div>
         </div>
       </section>
-      <aside class="drunkCont" id="conductorCont" tabindex="0" role="complementary" aria-description="The conductor who guides you through this game">
-        <div title="Joe DeSena, Conductor" id="conductor" onclick="pillow()">
+      <aside class="drunkCont" id="conductor" tabindex="0" role="complementary" aria-description="The conductor who guides you through this game">
+        <div title="Joe DeSena, Conductor" id="conductorImg" onclick="pillow()">
         </div>
         <div id="conductorTalkContCont">
           <p class="drunkText" id="conductorName">Joe DeSena</p>
@@ -392,13 +392,13 @@
           <p id="discordBubble">Message #announcements</p>
         </div>
       </div>
-      <section id="genders" aria-hidden="true">
-        <div class="gender" id="men" role="button" aria-label="Select the men's game" onclick="selectGender(1)">
+      <section id="genders">
+        <div class="gender" id="men" role="button" aria-label="Select the men's game" aria-hidden="true" onclick="selectGender(1)">
           <div class="genderImg" id="menImg">
           </div>
           <p class="genderLabel" id="menLabel">Men</p>
         </div>
-        <div class="gender" id="women" role="button" aria-label="Select the women's game" onclick="selectGender(2)">
+        <div class="gender" id="women" role="button" aria-label="Select the women's game" aria-hidden="true" onclick="selectGender(2)">
           <div class="genderImg" id="womenImg">
           </div>
           <p class="genderLabel" id="womenLabel">Women</p>
@@ -419,17 +419,17 @@
       <img src="img/knightmobile.png" alt="The KnightMobile driving to SLU" fetchpriority="low" decoding="async" loading="lazy" class="load" id="knightmobile" role="img" aria-description="The KnightMobile driving to SLU" aria-keyshortcuts="ArrowRight ArrowUp" aria-hidden="true" onload="load(event)">
       <div id="crappleton" role="img" aria-description="Crappleton Arena at SLU" aria-hidden="true">
       </div>
-      <article id="game" aria-hidden="true">
+      <article id="game">
         <section class="disappearExt" id="lives">
           <div class="lifeContCont" id="freshmanRepresentativeLifeContCont">
-            <div title="Nick Corsner, Freshman Representative" class="lifeCont" id="freshmanRepresentativeLifeCont" role="img" aria-description="A picture of the freshman representative that represents one of your lives" onclick="speedrun(0)">
+            <div title="Nick Corsner, Freshman Representative" class="lifeCont" id="freshmanRepresentativeLifeCont" role="img" aria-description="A picture of the freshman representative that represents one of your lives" aria-hidden="true" onclick="speedrun(0)">
               <div class="life" id="freshmanRepresentativeLife">
               </div>
               <p class="die" id="freshmanRepresentativeDie">&times;</p>
             </div>
           </div>
           <div class="lifeContCont" id="socialMediaChairLifeContCont">
-            <div title="Ryan McCarthy, Social Media Chair" class="lifeCont" id="socialMediaChairLifeCont" role="img" aria-description="A picture of the social media chair that represents one of your lives" onclick="speedrun(0)">
+            <div title="Ryan McCarthy, Social Media Chair" class="lifeCont" id="socialMediaChairLifeCont" role="img" aria-description="A picture of the social media chair that represents one of your lives" aria-hidden="true" onclick="speedrun(0)">
               <div class="life" id="socialMediaChairLife">
               </div>
               <p class="die" id="socialMediaChairDie">&times;</p>
@@ -437,28 +437,28 @@
             </div>
           </div>
           <div class="lifeContCont" id="historianLifeContCont">
-            <div title="Garrett Willard, Historian" class="lifeCont" id="historianLifeCont" role="img" aria-description="A picture of historian that represents one of your lives" onclick="speedrun(0)">
+            <div title="Garrett Willard, Historian" class="lifeCont" id="historianLifeCont" role="img" aria-description="A picture of historian that represents one of your lives" aria-hidden="true" onclick="speedrun(0)">
               <div class="life" id="historianLife">
               </div>
               <p class="die" id="historianDie">&times;</p>
             </div>
           </div>
           <div class="lifeContCont" id="businessManagerLifeContCont">
-            <div title="Kami Miller, Business Manager" class="lifeCont" id="businessManagerLifeCont" role="img" aria-description="A picture of the business manager that represents one of your lives" onclick="speedrun(0)">
+            <div title="Kami Miller, Business Manager" class="lifeCont" id="businessManagerLifeCont" role="img" aria-description="A picture of the business manager that represents one of your lives" aria-hidden="true" onclick="speedrun(0)">
               <div class="life" id="businessManagerLife">
               </div>
               <p class="die" id="businessManagerDie">&times;</p>
             </div>
           </div>
           <div class="lifeContCont" id="vicePresidentLifeContCont">
-            <div title="Liam Durkin, Vice President" class="lifeCont" id="vicePresidentLifeCont" role="img" aria-description="A picture of the vice president that represents one of your lives" onclick="speedrun(0)">
+            <div title="Liam Durkin, Vice President" class="lifeCont" id="vicePresidentLifeCont" role="img" aria-description="A picture of the vice president that represents one of your lives" aria-hidden="true" onclick="speedrun(0)">
               <div class="life" id="vicePresidentLife">
               </div>
               <p class="die" id="vicePresidentDie">&times;</p>
             </div>
           </div>
           <div class="lifeContCont" id="presidentLifeContCont">
-            <div title="Caroline Moreau, President" class="lifeCont" id="presidentLifeCont" role="img" aria-description="A picture of the president that represents one of your lives" onclick="speedrun(1)">
+            <div title="Caroline Moreau, President" class="lifeCont" id="presidentLifeCont" role="img" aria-description="A picture of the president that represents one of your lives" aria-hidden="true" onclick="speedrun(1)">
               <div class="life" id="presidentLife">
               </div>
               <p class="die" id="presidentDie">&times;</p>
@@ -466,7 +466,7 @@
           </div>
         </section>
         <section class="disappearExt" id="gameActivities">
-          <div class="gameActivity" id="scoreboard" role="region" aria-description="A scoreboard for the hockey game">
+          <div class="gameActivity" id="scoreboard" role="region" aria-description="A scoreboard for the hockey game" aria-hidden="true">
             <p id="scoreboardHeading">Period: <span id="scoreboardPeriod"></span></p>
             <div id="scoreboardSides">
               <div class="scoreboardCollegeSide" id="scoreboardClarksonSide">
@@ -479,7 +479,7 @@
               </div>
             </div>
           </div>
-          <div class="gameActivity" id="cheersContContCont" role="list" aria-description="A list of cheers to yell at the SLUzers">
+          <div class="gameActivity" id="cheersContContCont" role="list" aria-description="A list of cheers to yell at the SLUzers" aria-hidden="true">
             <p id="cheerHeading">Cheer Score: <span id="cheerScore"></span></p>
             <div id="cheersContCont">
               <div id="cheersCont">
@@ -2027,7 +2027,7 @@
           </div>
         </section>
       </article>
-      <article id="party" aria-hidden="true">
+      <article id="party">
         <div class="drunkCont" id="houseCont" role="img" aria-description="King and Mahogany's house">
           <div id="house">
             <img src="img/mahogany.png" alt="Mahogany welcoming you into his house" fetchpriority="low" decoding="async" loading="lazy" class="bandieHome load" id="mahoganyHome" onload="load(event)">
@@ -2756,9 +2756,9 @@
         <div id="triangleFaceCont">
           <img src="img/triangleFace.png" alt="Charlie with a face shaped like a triangle" fetchpriority="low" decoding="async" loading="lazy" class="load" id="triangleFace" onload="load(event)">
         </div>
-        <div id="cuntEmpireContCont">
-          <div id="cuntEmpireCont">
-            <div id="cuntEmpire">
+        <div id="cuntEmpire">
+          <div id="cuntEmpireImgContCont">
+            <div id="cuntEmpireImgCont">
               <div id="cuntEmpireImg">
                 <img src="img/cuntEmpireLogo.png" alt="Cunt Empire" fetchpriority="low" decoding="async" loading="lazy" class="load" id="cuntEmpireLogo" onload="load(event)">
                 <a href="https://www.cuntempire.com" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="https://www.cuntempire.com" id="cuntEmpireImgLink" tabindex="-1" role="link" aria-label="Play Cunt Empire"></a>
@@ -4701,8 +4701,8 @@
         <div id="mobileButtonCont">
           <button type="button" class="defaultButton" id="mobileButton" tabindex="-1" role="button" aria-label="Cycle through the Star Wars characters" onclick="slideshow()">Click Me!</button>
         </div>
-        <figure id="mobileImgContCont">
-          <div id="mobileImgCont" role="img" aria-description="A display that shows pictures of various Star Wars characters">
+        <figure id="mobileImgContCont" role="figure" aria-description="A display that shows pictures of various Star Wars characters">
+          <div id="mobileImgCont">
             <div id="mobileImg">
             </div>
           </div>

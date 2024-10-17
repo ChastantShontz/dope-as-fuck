@@ -12074,20 +12074,16 @@ function showSecret() {
     document.getElementsByClassName("secretAuthorHeart")[i].style.animation = "pulse 1s ease " + animationDelay + "s infinite forwards";
   }
   if (document.getElementById("secretMessageContContCont").scrollHeight > document.getElementById("secretMessageContContCont").offsetHeight) {
-    document.getElementById("secretMessageContContCont").tabIndex = "0";
     if (document.getElementById("secretMessageContContCont").scrollTop > 0) {
       document.getElementById("secretMessageContContCont").scrollTop = 0;
     }
   }
-  document.getElementById("secretExit").tabIndex = "0";
   document.getElementById("secretModal").style.visibility = "visible";
   document.getElementById("secretModal").style.opacity = "100%";
   document.getElementById("secretModal").style.transition = "all 0s ease .25s";
-  document.getElementById("secretModal").tabIndex = "0";
   document.getElementById("secret").style.visibility = "visible";
   document.getElementById("secret").style.opacity = "100%";
   document.getElementById("secret").style.transition = "all .25s ease .25s";
-  document.getElementById("secret").tabIndex = "0";
   if (document.getElementById("theOneThatGotAway").currentTime > 0) {
     document.getElementById("theOneThatGotAway").currentTime = 0;
   }
@@ -12111,17 +12107,9 @@ function hideSecret(event) {
     document.getElementById("secret").style.visibility = "hidden";
     document.getElementById("secret").style.opacity = "0%";
     document.getElementById("secret").style.transition = "all .25s ease 0s";
-    document.getElementById("secret").tabIndex = "-1";
-    document.getElementById("secret").blur();
     document.getElementById("secretModal").style.visibility = "hidden";
     document.getElementById("secretModal").style.opacity = "0%";
     document.getElementById("secretModal").style.transition = "all 0s ease .25s";
-    document.getElementById("secretModal").tabIndex = "-1";
-    document.getElementById("secretModal").blur();
-    if (document.getElementById("secretMessageContContCont").scrollHeight > document.getElementById("secretMessageContContCont").offsetHeight) {
-      document.getElementById("secretMessageContContCont").tabIndex = "-1";
-      document.getElementById("secretMessageContContCont").blur();
-    }
     for (var i = 0; i < document.getElementsByClassName("secretAuthorHeart").length; i++) {
       document.getElementsByClassName("secretAuthorHeart")[i].style.animation = "none";
     }
@@ -12131,8 +12119,6 @@ function hideSecret(event) {
         document.getElementById("secretExit").style.animation = "none"
       ), 250);
     }
-    document.getElementById("secretExit").tabIndex = "-1";
-    document.getElementById("secretExit").blur();
     setTimeout(destroySecret, 250);
     document.onclick = collapse;
     document.ondblclick = showPassword;

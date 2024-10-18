@@ -3684,6 +3684,7 @@ function gotIt6(event) {
   document.getElementById("gameActivities").style.right = "80%";
   document.getElementById("gameActivities").style.opacity = "100%";
   document.getElementById("gameActivities").style.transition = "visibility 0s ease 2s, left 1s ease 2s, right 1s ease 2s, opacity 0s ease 2s";
+  document.getElementById("gameActivities").ariaHidden = false;
   for (var i = 0; i < document.getElementsByClassName("lifeCont").length; i++) {
     var transitionDelay = ((i / 2) + 3);
     document.getElementsByClassName("lifeCont")[i].style.top = "0";
@@ -8798,10 +8799,11 @@ function gotIt24() {
     document.getElementsByClassName("disappearExt")[i].style.opacity = "0%";
     document.getElementsByClassName("disappearExt")[i].style.transition = "all 1s ease 0s";
   }
-  document.getElementById("scoreboard").tabIndex = "-1";
-  document.getElementById("scoreboard").blur();
-  document.getElementById("cheersContContCont").tabIndex = "-1";
-  document.getElementById("cheersContContCont").blur();
+  document.getElementById("gameActivities").ariaHidden = true;
+  for (var i = 0; i < document.getElementsByClassName("gameActivity").length; i++) {
+    document.getElementsByClassName("gameActivity")[i].tabIndex = "-1";
+    document.getElementsByClassName("gameActivity")[i].blur();
+  }
   if (document.getElementById("cheers").scrollHeight > document.getElementById("cheers").offsetHeight) {
     if (document.getElementById("cheers").scrollTop > 0) {
       document.getElementById("backToTop").style.pointerEvents = "none";
@@ -8811,9 +8813,6 @@ function gotIt24() {
     document.getElementById("cheers").tabIndex = "-1";
     document.getElementById("cheers").blur();
   }
-  document.getElementById("lives").style.visibility = "hidden";
-  document.getElementById("lives").style.opacity = "0%";
-  document.getElementById("lives").style.transition = "all 0s ease 3s";
   document.getElementById("lives").ariaHidden = true;
   for (var i = 0; i < document.getElementsByClassName("lifeCont").length; i++) {
     document.getElementsByClassName("lifeCont")[i].style.pointerEvents = "none";

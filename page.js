@@ -8803,13 +8803,11 @@ function gotIt24() {
     document.getElementsByClassName("gameActivity")[i].blur();
   }
   if (document.getElementById("cheers").scrollHeight > document.getElementById("cheers").offsetHeight) {
-    if (document.getElementById("cheers").scrollTop > 0) {
-      document.getElementById("backToTop").style.pointerEvents = "none";
-      document.getElementById("backToTop").tabIndex = "-1";
-    }
-    document.getElementById("backToTop").blur();
     document.getElementById("cheers").tabIndex = "-1";
     document.getElementById("cheers").blur();
+    document.getElementById("backToTop").style.pointerEvents = "none";
+    document.getElementById("backToTop").tabIndex = "-1";
+    document.getElementById("backToTop").blur();
   }
   for (var i = 0; i < document.getElementsByClassName("cheer").length; i++) {
     document.getElementsByClassName("cheer")[i].style.pointerEvents = "none";
@@ -12119,11 +12117,6 @@ function showSecret() {
   for (var i = 0; i < document.getElementsByClassName("secretAuthorHeart").length; i++) {
     var animationDelay = ((Math.round((i * (1 / 3)) * 100) / 100) + .25);
     document.getElementsByClassName("secretAuthorHeart")[i].style.animation = "pulse 1s ease " + animationDelay + "s infinite forwards";
-  }
-  if (document.getElementById("secretMessageContContCont").scrollHeight > document.getElementById("secretMessageContContCont").offsetHeight) {
-    if (document.getElementById("secretMessageContContCont").scrollTop > 0) {
-      document.getElementById("secretMessageContContCont").scrollTop = 0;
-    }
   }
   document.getElementById("secretModal").style.visibility = "visible";
   document.getElementById("secretModal").style.opacity = "100%";

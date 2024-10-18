@@ -10181,10 +10181,10 @@ function bitchIce(event) {
     document.getElementById("iceButton").tabIndex = "-1";
     document.getElementById("iceButton").disabled = true;
     document.getElementById("iceButton").blur();
-    document.getElementById("triangleFaceCont").style.zIndex = "92";
     if ((sessionStorage.newSong != undefined) && (document.getElementById("speakerSong" + sessionStorage.newSong).paused == false)) {
       speakerPause();
     }
+    document.getElementById("triangleFaceCont").style.zIndex = "92";
     sessionStorage.lives = 0;
     enableButton();
     document.getElementById("ok").onclick = function(event) {

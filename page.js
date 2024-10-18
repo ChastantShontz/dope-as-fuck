@@ -3028,9 +3028,9 @@ function pillow() {
     }
     console.log("Charlie was SOOO drunk when he said that");
   }
-  document.getElementByid("conductorImg").title = "Mmm...";
-  document.getElementByid("conductorImg").style.background = "url(\"img/pillow.png\") center / cover";
-  document.getElementByid("conductorImg").onclick = pillowUndo;
+  document.getElementById("conductorImg").title = "Mmm...";
+  document.getElementById("conductorImg").style.background = "url(\"img/pillow.png\") center / cover";
+  document.getElementById("conductorImg").onclick = pillowUndo;
 }
 
 function pillowUndo() {
@@ -3048,9 +3048,9 @@ function pillowUndo() {
     }
     sessionStorage.backup = "";
   }
-  document.getElementByid("conductorImg").title = "Joe DeSena, Conductor";
-  document.getElementByid("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
-  document.getElementByid("conductorImg").onclick = pillow;
+  document.getElementById("conductorImg").title = "Joe DeSena, Conductor";
+  document.getElementById("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
+  document.getElementById("conductorImg").onclick = pillow;
 }
 
 function gotIt1() {
@@ -9406,10 +9406,10 @@ function drinkingSongSetup() {
       sessionStorage.backup = "";
     }
   }
-  if (document.getElementByid("conductorImg").onclick == null) {
-    document.getElementByid("conductorImg").title = "Joe DeSena, Conductor";
-    document.getElementByid("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
-    document.getElementByid("conductorImg").onclick = pillow;
+  if (document.getElementById("conductorImg").onclick == null) {
+    document.getElementById("conductorImg").title = "Joe DeSena, Conductor";
+    document.getElementById("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
+    document.getElementById("conductorImg").onclick = pillow;
   }
   document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
   document.getElementById("viewAccountToggle").tabIndex = "0";
@@ -9499,10 +9499,10 @@ function drinkingSongSetup() {
 }
 
 function drinkingSongVerse(event) {
-  if (document.getElementByid("conductorImg").onclick == null) {
-    document.getElementByid("conductorImg").title = "Joe DeSena, Conductor";
-    document.getElementByid("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
-    document.getElementByid("conductorImg").onclick = pillow;
+  if (document.getElementById("conductorImg").onclick == null) {
+    document.getElementById("conductorImg").title = "Joe DeSena, Conductor";
+    document.getElementById("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
+    document.getElementById("conductorImg").onclick = pillow;
   }
   document.getElementById("viewAccountToggle").style.pointerEvents = "none";
   document.getElementById("viewAccountToggle").tabIndex = "-1";
@@ -9572,10 +9572,10 @@ function drinkingSongVerse(event) {
 }
 
 function drinkingSongFirstResponse(event) {
-  if (document.getElementByid("conductorImg").onclick == null) {
-    document.getElementByid("conductorImg").title = "Joe DeSena, Conductor";
-    document.getElementByid("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
-    document.getElementByid("conductorImg").onclick = pillow;
+  if (document.getElementById("conductorImg").onclick == null) {
+    document.getElementById("conductorImg").title = "Joe DeSena, Conductor";
+    document.getElementById("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
+    document.getElementById("conductorImg").onclick = pillow;
   }
   if ((sessionStorage.singing == 1) || (sessionStorage.singing == 4)) {
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Response" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).classList.replace("drinkingSongUnusedLine", "drinkingSongUsedLine");
@@ -9672,10 +9672,10 @@ function drinkingSongFirstResponse(event) {
 }
 
 function drinkingSongSecondResponse(event) {
-  if (document.getElementByid("conductorImg").onclick == null) {
-    document.getElementByid("conductorImg").title = "Joe DeSena, Conductor";
-    document.getElementByid("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
-    document.getElementByid("conductorImg").onclick = pillow;
+  if (document.getElementById("conductorImg").onclick == null) {
+    document.getElementById("conductorImg").title = "Joe DeSena, Conductor";
+    document.getElementById("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
+    document.getElementById("conductorImg").onclick = pillow;
   }
   document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponse" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).classList.replace("drinkingSongUnusedLine", "drinkingSongUsedLine");
   document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponse" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).style.transition = "opacity 0s ease 0s";
@@ -9837,10 +9837,10 @@ function dafCounterCount(event) {
   else if (sessionStorage.dafCount >= 212) {
     dafCounterError();
   }
-  if (document.getElementByid("conductorImg").onclick == null) {
-    document.getElementByid("conductorImg").title = "Joe DeSena, Conductor";
-    document.getElementByid("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
-    document.getElementByid("conductorImg").onclick = pillow;
+  if (document.getElementById("conductorImg").onclick == null) {
+    document.getElementById("conductorImg").title = "Joe DeSena, Conductor";
+    document.getElementById("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
+    document.getElementById("conductorImg").onclick = pillow;
   }
 }
 
@@ -9973,9 +9973,9 @@ function drinkBeer(event) {
     if ((sessionStorage.backup != undefined) && (sessionStorage.backup != "")) {
       sessionStorage.backup = "";
     }
-    document.getElementByid("conductorImg").title = "Prochnost (it's Russian for \"strength\")";
-    document.getElementByid("conductorImg").style.background = "url(\"img/prochnost.gif\") center / cover";
-    document.getElementByid("conductorImg").onclick = null;
+    document.getElementById("conductorImg").title = "Prochnost (it's Russian for \"strength\")";
+    document.getElementById("conductorImg").style.background = "url(\"img/prochnost.gif\") center / cover";
+    document.getElementById("conductorImg").onclick = null;
     sessionStorage.drinksIncrement = 1;
     drunk(sessionStorage.drinksIncrement, event);
     console.log("Eto chertovski kruto!");
@@ -10009,10 +10009,10 @@ function drinkBeer(event) {
           sessionStorage.backup = "";
         }
       }
-      if (document.getElementByid("conductorImg").onclick == null) {
-        document.getElementByid("conductorImg").title = "Joe DeSena, Conductor";
-        document.getElementByid("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
-        document.getElementByid("conductorImg").onclick = pillow;
+      if (document.getElementById("conductorImg").onclick == null) {
+        document.getElementById("conductorImg").title = "Joe DeSena, Conductor";
+        document.getElementById("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
+        document.getElementById("conductorImg").onclick = pillow;
       }
       sessionStorage.drinksIncrement = 1;
       drunk(sessionStorage.drinksIncrement, event);
@@ -10036,10 +10036,10 @@ function singIce(event) {
   if ((sessionStorage.backup != undefined) && (sessionStorage.backup != "")) {
     sessionStorage.backup = "";
   }
-  if (document.getElementByid("conductorImg").onclick == null) {
-    document.getElementByid("conductorImg").title = "Joe DeSena, Conductor";
-    document.getElementByid("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
-    document.getElementByid("conductorImg").onclick = pillow;
+  if (document.getElementById("conductorImg").onclick == null) {
+    document.getElementById("conductorImg").title = "Joe DeSena, Conductor";
+    document.getElementById("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
+    document.getElementById("conductorImg").onclick = pillow;
   }
   document.getElementById("conductor").style.zIndex = "92";
   document.getElementById("viewAccountToggle").style.pointerEvents = "none";
@@ -10427,7 +10427,7 @@ function drunk(drinksIncrement, event) {
       sessionStorage.level = 6;
       sessionStorage.dafCountIncrement = 10;
       sessionStorage.iceDecrement = 1;
-      if (document.getElementByid("conductorImg").onclick == pillow) {
+      if (document.getElementById("conductorImg").onclick == pillow) {
         if (sessionStorage.backup == undefined) {
           document.getElementById("conductorTalk").innerHTML = "That's weird, I just turned into a pillow. I bet you really want to \"mmm\" me now...";
           if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
@@ -10441,10 +10441,10 @@ function drunk(drinksIncrement, event) {
             sessionStorage.backup = "";
           }
         }
-        document.getElementByid("conductorImg").title = "Mmm...";
-        document.getElementByid("conductorImg").style.background = "url(\"img/pillow.png\") center / cover";
+        document.getElementById("conductorImg").title = "Mmm...";
+        document.getElementById("conductorImg").style.background = "url(\"img/pillow.png\") center / cover";
       }
-      document.getElementByid("conductorImg").onclick = null;
+      document.getElementById("conductorImg").onclick = null;
       document.getElementById("triangleFaceCont").style.opacity = "75%";
       document.getElementById("triangleFaceCont").style.transition = "opacity 0s ease 0s";
       for (var i = 1; i < document.getElementsByClassName("speakerSong").length; i++) {

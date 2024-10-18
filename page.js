@@ -10391,9 +10391,9 @@ function drunk(drinksIncrement, event) {
       for (var i = 0; i < document.getElementsByClassName("drunkText").length; i++) {
         document.getElementsByClassName("drunkText")[i].style.fontFamily = "\"Slackey\", fantasy";
       }
+      document.getElementById("websiteCont").style.setProperty("--leftValue", "-38em");
       document.getElementById("triangleFaceCont").style.opacity = "25%";
       document.getElementById("triangleFaceCont").style.transition = "opacity 0s ease 0s";
-      document.getElementById("websiteCont").style.setProperty("--leftValue", "-38em");
     }
     else if ((sessionStorage.drinks >= 18) && (sessionStorage.drinks < 27)) {
       sessionStorage.level = 3;
@@ -10438,13 +10438,13 @@ function drunk(drinksIncrement, event) {
         document.getElementById("conductorImg").style.background = "url(\"img/pillow.png\") center / cover";
       }
       document.getElementById("conductorImg").onclick = null;
-      document.getElementById("triangleFaceCont").style.opacity = "75%";
-      document.getElementById("triangleFaceCont").style.transition = "opacity 0s ease 0s";
       for (var i = 1; i < document.getElementsByClassName("speakerSong").length; i++) {
         document.getElementsByClassName("speakerSong")[i].innerHTML = "Tijuana";
         document.getElementsByClassName("speakerSong")[i].value = "tijuana";
       }
       document.getElementById("websiteLink").href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+      document.getElementById("triangleFaceCont").style.opacity = "75%";
+      document.getElementById("triangleFaceCont").style.transition = "opacity 0s ease 0s";
     }
     var filterValue = ((sessionStorage.level - 1) * .1);
     var transformValue = ((sessionStorage.level - 1) * 9);
@@ -10464,16 +10464,16 @@ function drunk(drinksIncrement, event) {
     sessionStorage.level = 7;
     document.getElementById("conductor").style.zIndex = "92";
     document.getElementById("cover").style.zIndex = "93";
-    document.getElementById("triangleFaceCont").style.zIndex = "91";
-    document.getElementById("triangleFaceCont").style.opacity = "100%";
-    document.getElementById("triangleFaceCont").style.transition = "opacity 0s ease 0s";
+    speakerPause();
     if (sessionStorage.beer == 1) {
       document.getElementById("busch").style.pointerEvents = "none";
     }
     else if (sessionStorage.beer == 2) {
       document.getElementById("bapple").style.pointerEvents = "none";
     }
-    speakerPause();
+    document.getElementById("triangleFaceCont").style.zIndex = "91";
+    document.getElementById("triangleFaceCont").style.opacity = "100%";
+    document.getElementById("triangleFaceCont").style.transition = "opacity 0s ease 0s";
     sessionStorage.lives = 0;
     document.getElementById("troyLassialTalk").innerHTML = "It seems last knight you blacked out from excessive alcohol comsumption and had to be taken to the hospital. To ensure this doesn't happen again, I'm going to have to ban you from playing this game anymore.";
     troyLassialEntrance();

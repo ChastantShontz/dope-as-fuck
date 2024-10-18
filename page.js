@@ -3643,6 +3643,9 @@ function gotIt6(event) {
   setTimeout(() => (
     document.getElementById("rink").tabIndex = "0"
   ), 1000);
+  setTimeout(() => (
+    document.getElementById("rink").ariaHidden = false
+  ), 1000);
   sessionStorage.period = 1;
   document.getElementById("scoreboardPeriod").innerHTML = sessionStorage.period;
   sessionStorage.clarksonScore = 0;
@@ -9161,6 +9164,7 @@ function gotIt27() {
   document.getElementById("rink").style.bottom = "100%";
   document.getElementById("rink").style.transition = "bottom 1s ease 0s";
   document.getElementById("rink").tabIndex = "-1";
+  document.getElementById("rink").ariaHidden = true;
   document.getElementById("rink").blur();
   sessionStorage.level = 1;
   document.getElementById("house").style.filter = "brightness(10%)";

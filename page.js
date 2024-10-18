@@ -10234,7 +10234,6 @@ function failIce(event) {
   document.getElementById("iceContContCont").blur();
   document.getElementById("iceButton").tabIndex = "-1";
   document.getElementById("iceButton").blur();
-  document.getElementById("triangleFaceCont").style.zIndex = "91";
   if (sessionStorage.beer == 1) {
     document.getElementById("busch").style.transform = "scale(1)";
     document.getElementById("busch").style.transition = "transform .25s ease 0s";
@@ -10243,6 +10242,7 @@ function failIce(event) {
     document.getElementById("bapple").style.transform = "scale(1)";
     document.getElementById("bapple").style.transition = "transform .25s ease 0s";
   }
+  document.getElementById("triangleFaceCont").style.zIndex = "91";
   document.getElementById("gameOverHeading").style.color = "var(--sluRed)";
   document.getElementById("gameOverHeading").style.transition = "color 0s ease 0s";
   gameOver(event);
@@ -10465,7 +10465,6 @@ function drunk(drinksIncrement, event) {
   else if (sessionStorage.drinks >= 53) {
     sessionStorage.level = 7;
     document.getElementById("conductor").style.zIndex = "92";
-    document.getElementById("cover").style.zIndex = "93";
     if ((sessionStorage.newSong != undefined) && (document.getElementById("speakerSong" + sessionStorage.newSong).paused == false)) {
       speakerPause();
     }
@@ -10478,6 +10477,7 @@ function drunk(drinksIncrement, event) {
     document.getElementById("triangleFaceCont").style.zIndex = "91";
     document.getElementById("triangleFaceCont").style.opacity = "100%";
     document.getElementById("triangleFaceCont").style.transition = "opacity 0s ease 0s";
+    document.getElementById("cover").style.zIndex = "93";
     sessionStorage.lives = 0;
     document.getElementById("troyLassialTalk").innerHTML = "It seems last knight you blacked out from excessive alcohol comsumption and had to be taken to the hospital. To ensure this doesn't happen again, I'm going to have to ban you from playing this game anymore.";
     troyLassialEntrance();

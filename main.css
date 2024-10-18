@@ -2888,6 +2888,7 @@ main {
 }
 
 #cuntEmpireCover {
+  display: inline-block;
   position: absolute;
   left: 0;
   right: 0;

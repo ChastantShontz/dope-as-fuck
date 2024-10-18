@@ -10712,9 +10712,13 @@ function closePromo(event) {
 }
 
 function cuntEmpireEntrance() {
+  document.getElementById("cuntEmpireImgLink").style.pointerEvents = "auto";
   document.getElementById("cuntEmpireImgLink").tabIndex = "0";
+  document.getElementById("cuntEmpireHeadingLink").style.pointerEvents = "auto";
   document.getElementById("cuntEmpireHeadingLink").tabIndex = "0";
+  document.getElementById("cuntEmpireAdvertisementLink").style.pointerEvents = "auto";
   document.getElementById("cuntEmpireAdvertisementLink").tabIndex = "0";
+  document.getElementById("cuntEmpireCover").style.pointerEvents = "auto";
   document.getElementById("cuntEmpire").style.top = "1em";
   document.getElementById("cuntEmpire").style.transition = "top 1s ease 0s";
   document.getElementById("cuntEmpire").tabIndex = "0";
@@ -10732,12 +10736,26 @@ function cuntEmpireExit() {
   document.getElementById("cuntEmpire").tabIndex = "-1";
   document.getElementById("cuntEmpire").ariaHidden = true;
   document.getElementById("cuntEmpire").blur();
+  document.getElementById("cuntEmpireImgLink").style.pointerEvents = "none";
   document.getElementById("cuntEmpireImgLink").tabIndex = "-1";
   document.getElementById("cuntEmpireImgLink").blur();
+  document.getElementById("cuntEmpireHeadingLink").style.pointerEvents = "none";
   document.getElementById("cuntEmpireHeadingLink").tabIndex = "-1";
   document.getElementById("cuntEmpireHeadingLink").blur();
+  document.getElementById("cuntEmpireAdvertisementLink").style.pointerEvents = "none";
   document.getElementById("cuntEmpireAdvertisementLink").tabIndex = "-1";
   document.getElementById("cuntEmpireAdvertisementLink").blur();
+  if (document.getElementById("cuntEmpireCover").style.display == "none") {
+    setTimeout(() => (
+      document.getElementById("cuntEmpireCover").style.display = "inline-block"
+    ), 1000);
+    setTimeout(() => (
+      document.getElementById("cuntEmpireCover").style.pointerEvents = "none"
+    ), 1000);
+  }
+  else {
+    document.getElementById("cuntEmpireCover").style.pointerEvents = "none";
+  }
   setTimeout(cuntEmpireEntrance, 600000);
   console.log("Not horny enough? Maybe later...");
 }

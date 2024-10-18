@@ -3728,13 +3728,8 @@ function speedrun(stage) {
           document.getElementsByClassName("lifeCont")[i].onclick = speedrun.bind(null, 0);
         }
         if (i == 1) {
-          if (!(document.getElementById("publishedPaper").hasAttribute("href"))) {
-            if (sessionStorage.lives < 2) {
-              document.getElementById("publishedPaper").href = "https://www.nytimes.com/1986/09/05/nyregion/rape-and-murder-scar-innocence-of-potsdam.html";
-            }
-            else if (sessionStorage.lives >= 2) {
-              document.getElementById("publishedPaper").href = "https://www.mdpi.com/1424-8220/22/9/3163/htm";
-            }
+          if (document.getElementById("publishedPaper").style.pointerEvents == "none") {
+            document.getElementById("publishedPaper").style.pointerEvents = "auto";
           }
         }
       }
@@ -3756,7 +3751,7 @@ function speedrun(stage) {
     else if (sessionStorage.stage == 5) {
       document.getElementById("historianLifeCont").onclick = speedrun.bind(null, 0);
       document.getElementById("socialMediaChairLifeCont").onclick = speedrun.bind(null, 6);
-      document.getElementById("publishedPaper").removeAttribute("href");
+      document.getElementById("publishedPaper").style.pointerEvents = "none";
     }
   }
   else if (sessionStorage.stage == 6) {

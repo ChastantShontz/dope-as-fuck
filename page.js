@@ -9875,8 +9875,8 @@ function speakerPlay() {
     }
   }
   for (var i = 1; i < document.getElementsByClassName("speakerSong").length; i++) {
-    if (i == document.getElementById("speakerSongs").selectedIndex) {
-      document.getElementsByClassName("speakerSong")[i].style.fontWeight = "bold";
+    if (i == (+sessionStorage.newSong + 1)) {
+      document.getElementById("speakerSong" + sessionStorage.newSong).style.fontWeight = "bold";
     }
     else {
       document.getElementsByClassName("speakerSong")[i].style.fontWeight = "normal";

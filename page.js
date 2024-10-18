@@ -9234,7 +9234,7 @@ function gotIt27() {
     document.getElementsByClassName("partyActivity")[i].style.visibility = "visible";
     document.getElementsByClassName("partyActivity")[i].style.opacity = "100%";
     document.getElementsByClassName("partyActivity")[i].style.transition = "all .25s ease " + transitionDelay + "s";
-    if (document.getElementsByClassName("partyActivity")[i].id != "beers") {
+    if (document.getElementsByClassName("partyActivity")[i] != document.getElementById("beers")) {
       const activate = (x, y) => {
         setTimeout(() => (
           document.getElementsByClassName("partyActivity")[x].tabIndex = "0"
@@ -9261,7 +9261,7 @@ function gotIt27() {
     document.getElementsByClassName("socialMediaLogo")[i].style.visibility = "visible";
     document.getElementsByClassName("socialMediaLogo")[i].style.opacity = "100%";
     document.getElementsByClassName("socialMediaLogo")[i].style.transition = "all .25s ease " + transitionDelay + "s";
-    if (document.getElementsByClassName("socialMediaLogo")[i].id == "youtubeLogo") {
+    if (document.getElementsByClassName("socialMediaLogo")[i] == document.getElementById("youtubeLogo")) {
       const activate = (x) => {
         setTimeout(() => (
           document.getElementById("youtubeLogo").tabIndex = "0"

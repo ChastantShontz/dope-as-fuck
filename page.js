@@ -9863,15 +9863,15 @@ function speakerPlay() {
     document.getElementById("speakerSongDefault").style.display = "none";
   }
   if (sessionStorage.newSong == undefined) {
-    sessionStorage.newSong = document.getElementById("speakerSongs").value;
+    sessionStorage.newSong = (document.getElementById("speakerSongs").selectedIndex - 1);
   }
   else {
-    if (document.getElementById(sessionStorage.newSong).ended == true) {
-      sessionStorage.newSong = document.getElementById("speakerSong" + sessionStorage.randomSong).value;
-      document.getElementById("speakerSongs").selectedIndex = sessionStorage.randomSong;
+    if (document.getElementsByClassName("audio")[sessionStorage.newSong].ended == true) {
+      sessionStorage.newSong = sessionStorage.randomSong;
+      document.getElementById("speakerSongs").selectedIndex = (+sessionStorage.newSong + 1);
     }
-    else if (document.getElementById(sessionStorage.newSong).ended == false) {
-      sessionStorage.newSong = document.getElementById("speakerSongs").value;
+    else if (document.getElementsByClassName("audio")[sessionStorage.newSong].ended == false) {
+      sessionStorage.newSong = (document.getElementById("speakerSongs").selectedIndex - 1);
     }
   }
   for (var i = 1; i < document.getElementsByClassName("speakerSong").length; i++) {
@@ -9885,11 +9885,11 @@ function speakerPlay() {
   }
   if ((sessionStorage.oldSong != undefined) && (sessionStorage.newSong != sessionStorage.oldSong)) {
     speakerPause();
-    if (document.getElementById(sessionStorage.newSong).currentTime > 0) {
-      document.getElementById(sessionStorage.newSong).currentTime = 0;
+    if (document.getElementsByClassName("audio")[sessionStorage.newSong].currentTime > 0) {
+      document.getElementsByClassName("audio")[sessionStorage.newSong].currentTime = 0;
     }
   }
-  document.getElementById(sessionStorage.newSong).play();
+  document.getElementsByClassName("audio")[sessionStorage.newSong].play();
   sessionStorage.oldSong = sessionStorage.newSong;
   document.getElementById("speaker").style.animation = "vibrate 5s ease 0s infinite forwards";
   for (var i = 0; i < document.getElementsByClassName("speakerControl").length; i++) {
@@ -9909,7 +9909,7 @@ function speakerPlay() {
 
 function speakerPause() {
   if (sessionStorage.oldSong != undefined) {
-    document.getElementById(sessionStorage.oldSong).pause();
+    document.getElementsByClassName("audio")[sessionStorage.oldSong].pause();
     document.getElementById("speaker").style.animation = "none";
     for (var i = 0; i < document.getElementsByClassName("speakerControl").length; i++) {
       if (i == 0) {
@@ -9928,11 +9928,11 @@ function speakerPause() {
 }
 
 function speakerNewSong() {
-  sessionStorage.randomSong = Math.ceil(Math.random() * songs.length);
+  sessionStorage.randomSong = Math.floor(Math.random() * songs.length);
   if (sessionStorage.randomSong == sessionStorage.oldSong) {
     sessionStorage.randomSong++;
-    if (sessionStorage.randomSong > songs.length) {
-      sessionStorage.randomSong = 1;
+    if (sessionStorage.randomSong == songs.length) {
+      sessionStorage.randomSong = 0;
     }
   }
   speakerPlay();

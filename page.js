@@ -10181,6 +10181,47 @@ function bitchIce(event) {
     document.getElementById("iceButton").tabIndex = "-1";
     document.getElementById("iceButton").disabled = true;
     document.getElementById("iceButton").blur();
+    document.getElementById("drinkingSongsContContCont").tabIndex = "-1";
+    document.getElementById("drinkingSongsContContCont").ariaHidden = true;
+    document.getElementById("drinkingSongsContContCont").blur();
+    document.getElementById("drinkingSongChoices").style.pointerEvents = "none";
+    document.getElementById("drinkingSongChoices").tabIndex = "-1";
+    document.getElementById("drinkingSongChoices").blur();
+    if (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Button").style.visibility != "hidden") {
+      document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Button").style.pointerEvents = "none";
+      document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Button").tabIndex = "-1";
+      document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Button").blur();
+    }
+    else if (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").style.visibility == "visible") {
+      document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").style.pointerEvents = "none";
+      document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").tabIndex = "-1";
+      document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").blur();
+    }
+    else if ((((sessionStorage.singing == 1) || (sessionStorage.singing == 4)) && (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").style.visibility == "visible")) || (((sessionStorage.singing == 2) || (sessionStorage.singing == 3)) && ((document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").style.visibility == "visible") || (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").style.visibility == "visible")))) {
+      if (((sessionStorage.singing == 1) || (sessionStorage.singing == 4)) && (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").style.visibility == "visible")) {
+        document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").style.pointerEvents = "none";
+        document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").tabIndex = "-1";
+        document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").blur();
+      }
+      else if (((sessionStorage.singing == 2) || (sessionStorage.singing == 3)) && ((document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").style.visibility == "visible") || (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").style.visibility == "visible"))) {
+        if (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").style.visibility == "visible") {
+          document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").style.pointerEvents = "none";
+          document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").tabIndex = "-1";
+          document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").blur();
+        }
+        else if (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").style.visibility == "visible") {
+          document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").style.pointerEvents = "none";
+          document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").tabIndex = "-1";
+          document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").blur();
+        }
+      }
+    }
+    else if (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Song").style.visibility == "visible") {
+      for (var i = 0; i < document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word").length; i++) {
+        document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word")[i].style.visibility = window.getComputedStyle(document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word")[i]).getPropertyValue("visibility");
+        document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word")[i].style.transition = "visibility 0s ease 0s";
+      }
+    }
     if ((sessionStorage.newSong != undefined) && (document.getElementById("speakerSong" + sessionStorage.newSong).paused == false)) {
       speakerPause();
     }
@@ -10465,6 +10506,47 @@ function drunk(drinksIncrement, event) {
   else if (sessionStorage.drinks >= 53) {
     sessionStorage.level = 7;
     document.getElementById("conductor").style.zIndex = "92";
+    document.getElementById("drinkingSongsContContCont").tabIndex = "-1";
+    document.getElementById("drinkingSongsContContCont").ariaHidden = true;
+    document.getElementById("drinkingSongsContContCont").blur();
+    document.getElementById("drinkingSongChoices").style.pointerEvents = "none";
+    document.getElementById("drinkingSongChoices").tabIndex = "-1";
+    document.getElementById("drinkingSongChoices").blur();
+    if (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Button").style.visibility != "hidden") {
+      document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Button").style.pointerEvents = "none";
+      document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Button").tabIndex = "-1";
+      document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Button").blur();
+    }
+    else if (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").style.visibility == "visible") {
+      document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").style.pointerEvents = "none";
+      document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").tabIndex = "-1";
+      document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").blur();
+    }
+    else if ((((sessionStorage.singing == 1) || (sessionStorage.singing == 4)) && (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").style.visibility == "visible")) || (((sessionStorage.singing == 2) || (sessionStorage.singing == 3)) && ((document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").style.visibility == "visible") || (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").style.visibility == "visible")))) {
+      if (((sessionStorage.singing == 1) || (sessionStorage.singing == 4)) && (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").style.visibility == "visible")) {
+        document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").style.pointerEvents = "none";
+        document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").tabIndex = "-1";
+        document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Responses").blur();
+      }
+      else if (((sessionStorage.singing == 2) || (sessionStorage.singing == 3)) && ((document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").style.visibility == "visible") || (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").style.visibility == "visible"))) {
+        if (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").style.visibility == "visible") {
+          document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").style.pointerEvents = "none";
+          document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").tabIndex = "-1";
+          document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponses").blur();
+        }
+        else if (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").style.visibility == "visible") {
+          document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").style.pointerEvents = "none";
+          document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").tabIndex = "-1";
+          document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponses").blur();
+        }
+      }
+    }
+    else if (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Song").style.visibility == "visible") {
+      for (var i = 0; i < document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word").length; i++) {
+        document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word")[i].style.visibility = window.getComputedStyle(document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word")[i]).getPropertyValue("visibility");
+        document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word")[i].style.transition = "visibility 0s ease 0s";
+      }
+    }
     if ((sessionStorage.newSong != undefined) && (document.getElementById("speakerSong" + sessionStorage.newSong).paused == false)) {
       speakerPause();
     }

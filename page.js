@@ -8816,6 +8816,9 @@ function gotIt24() {
     document.getElementById("cheers").tabIndex = "-1";
     document.getElementById("cheers").blur();
   }
+  for (var i = 0; i < document.getElementsByClassName("cheer").length; i++) {
+    document.getElementsByClassName("cheer")[i].style.pointerEvents = "none";
+  }
   document.getElementById("lives").ariaHidden = true;
   for (var i = 0; i < document.getElementsByClassName("lifeCont").length; i++) {
     document.getElementsByClassName("lifeCont")[i].style.pointerEvents = "none";

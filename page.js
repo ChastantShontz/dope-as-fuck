@@ -10182,7 +10182,9 @@ function bitchIce(event) {
     document.getElementById("iceButton").disabled = true;
     document.getElementById("iceButton").blur();
     document.getElementById("triangleFaceCont").style.zIndex = "92";
-    speakerPause();
+    if ((sessionStorage.newSong != undefined) && (document.getElementById("speakerSong" + sessionStorage.newSong).paused == false)) {
+      speakerPause();
+    }
     sessionStorage.lives = 0;
     enableButton();
     document.getElementById("ok").onclick = function(event) {
@@ -10464,7 +10466,9 @@ function drunk(drinksIncrement, event) {
     sessionStorage.level = 7;
     document.getElementById("conductor").style.zIndex = "92";
     document.getElementById("cover").style.zIndex = "93";
-    speakerPause();
+    if ((sessionStorage.newSong != undefined) && (document.getElementById("speakerSong" + sessionStorage.newSong).paused == false)) {
+      speakerPause();
+    }
     if (sessionStorage.beer == 1) {
       document.getElementById("busch").style.pointerEvents = "none";
     }

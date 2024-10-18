@@ -9201,15 +9201,9 @@ function gotIt27() {
   setTimeout(() => (
     document.getElementById("dafCounterButton").tabIndex = "0"
   ), 1500);
-  setTimeout(() => (
-    document.getElementById("dafCounterCont").tabIndex = "0"
-  ), 1500);
   sessionStorage.dafCountIncrement = 1;
   setTimeout(() => (
     document.getElementById("speakerSongs").tabIndex = "0"
-  ), 2000);
-  setTimeout(() => (
-    document.getElementById("speakerCont").tabIndex = "0"
   ), 2000);
   for (var i = 0; i < document.getElementsByClassName("audio").length; i++) {
     document.getElementsByClassName("audio")[i].onended = speakerNewSong;
@@ -9240,6 +9234,14 @@ function gotIt27() {
     document.getElementsByClassName("partyActivity")[i].style.visibility = "visible";
     document.getElementsByClassName("partyActivity")[i].style.opacity = "100%";
     document.getElementsByClassName("partyActivity")[i].style.transition = "all .25s ease " + transitionDelay + "s";
+    if (document.getElementsByClassName("partyActivity")[i].id != "beers") {
+      const activate = (x, y) => {
+        setTimeout(() => (
+          document.getElementsByClassName("partyActivity")[x].tabIndex = "0"
+        ), y);
+      }
+      activate(i, (transitionDelay * 1000));
+    }
   }
   document.getElementById("partyActivities").style.visibility = "visible";
   document.getElementById("partyActivities").style.opacity = "100%";
@@ -9259,6 +9261,14 @@ function gotIt27() {
     document.getElementsByClassName("socialMediaLogo")[i].style.visibility = "visible";
     document.getElementsByClassName("socialMediaLogo")[i].style.opacity = "100%";
     document.getElementsByClassName("socialMediaLogo")[i].style.transition = "all .25s ease " + transitionDelay + "s";
+    if (document.getElementsByClassName("socialMediaLogo")[i].id == "youtubeLogo") {
+      const activate = (x) => {
+        setTimeout(() => (
+          document.getElementById("youtubeLogo").tabIndex = "0"
+        ), x);
+      }
+      activate(transitionDelay * 1000);
+    }
   }
   document.getElementById("socialMedias").style.visibility = "visible";
   document.getElementById("socialMedias").style.opacity = "100%";

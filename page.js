@@ -11856,6 +11856,7 @@ function showPassword(event) {
       ), 100);
     }
     document.getElementById("password").tabIndex = "0";
+    document.getElementById("password").ariaHidden = false;
     document.getElementById("password").open = true;
     document.ondblclick = null;
     if (document.onkeydown == startDrive) {
@@ -12020,8 +12021,9 @@ function hidePassword() {
     clearTimeout(sessionStorage.hidePasswordTimeout);
     sessionStorage.removeItem("hidePasswordTimeout");
   }
-  document.getElementById("password").open = false;
   document.getElementById("password").tabIndex = "-1";
+  document.getElementById("password").ariaHidden = true;
+  document.getElementById("password").open = false;
   document.getElementById("password").blur();
   if (document.getElementById("passwordInput").value != "") {
     document.getElementById("passwordInput").value = "";

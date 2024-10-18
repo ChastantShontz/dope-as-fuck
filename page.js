@@ -9244,21 +9244,26 @@ function gotIt27() {
   document.getElementById("partyActivities").style.visibility = "visible";
   document.getElementById("partyActivities").style.opacity = "100%";
   document.getElementById("partyActivities").style.transition = "all 0s ease 1.5s";
+  document.getElementById("partyActivities").ariaHidden = false;
+  for (var i = 0; i < document.getElementsByClassName("socialMediaLink").length; i++) {
+    var transitionDelay = ((i * .25) + 2.75);
+    const activate = (x, y) => {
+      setTimeout(() => (
+        document.getElementsByClassName("socialMediaLink")[x].tabIndex = "0"
+      ), y);
+    }
+    activate(i, (transitionDelay * 1000));
+  }
   for (var i = 0; i < document.getElementsByClassName("socialMediaLogo").length; i++) {
     var transitionDelay = ((i * .25) + 2.75);
     document.getElementsByClassName("socialMediaLogo")[i].style.visibility = "visible";
     document.getElementsByClassName("socialMediaLogo")[i].style.opacity = "100%";
     document.getElementsByClassName("socialMediaLogo")[i].style.transition = "all .25s ease " + transitionDelay + "s";
-    const activate = (x, y) => {
-      setTimeout(() => (
-        document.getElementsByClassName("socialMediaLogo")[x].tabIndex = "0"
-      ), y);
-    }
-    activate(i, (transitionDelay * 1000));
   }
   document.getElementById("socialMedias").style.visibility = "visible";
   document.getElementById("socialMedias").style.opacity = "100%";
   document.getElementById("socialMedias").style.transition = "all 0s ease 2.75s";
+  document.getElementById("socialMedias").ariaHidden = false;
   sessionStorage.promo = 0;
   if (sessionStorage.clarksonScore <= sessionStorage.sluScore) {
     document.getElementById("drumstick").style.display = "inline-block";

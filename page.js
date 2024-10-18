@@ -9175,6 +9175,7 @@ function gotIt27() {
   document.getElementById("houseCont").style.top = "10%";
   document.getElementById("houseCont").style.transition = "top 1s ease 0s";
   document.getElementById("houseCont").tabIndex = "0";
+  document.getElementById("houseCont").ariaHidden = false;
   globalThis.knightStart = Date.now();
   setTimeout(() => (
     document.getElementById("drinkingSongChoices").tabIndex = "0"
@@ -9186,6 +9187,9 @@ function gotIt27() {
   document.getElementById("drinkingSongsContContCont").style.transition = "right 1s ease .5s";
   setTimeout(() => (
     document.getElementById("drinkingSongsContContCont").tabIndex = "0"
+  ), 500);
+  setTimeout(() => (
+    document.getElementById("drinkingSongsContContCont").ariaHidden = false
   ), 500);
   sessionStorage.singing = 1;
   for (var i = 0; i < document.getElementsByClassName("drinkingSongChoice").length; i++) {
@@ -9270,6 +9274,9 @@ function gotIt27() {
   document.getElementById("websiteCont").style.animation = "loop 30s linear 4s infinite forwards";
   setTimeout(() => (
     document.getElementById("websiteCont").tabIndex = "0"
+  ), 4000);
+  setTimeout(() => (
+    document.getElementById("websiteCont").ariaHidden = false
   ), 4000);
   setTimeout(cuntEmpireEntrance, 600000);
   console.log("Oh, you're here? I'll drink to that!");
@@ -10710,6 +10717,8 @@ function cuntEmpireEntrance() {
   document.getElementById("cuntEmpireAdvertisementLink").tabIndex = "0";
   document.getElementById("cuntEmpire").style.top = "1em";
   document.getElementById("cuntEmpire").style.transition = "top 1s ease 0s";
+  document.getElementById("cuntEmpire").tabIndex = "0";
+  document.getElementById("cuntEmpire").ariaHidden = false;
   console.log("My cock is even bigger than my charisma, it'll tear a whole in the space-time continuum!");
 }
 
@@ -10720,6 +10729,9 @@ function cuntEmpireUncover() {
 function cuntEmpireExit() {
   document.getElementById("cuntEmpire").style.top = "-10em";
   document.getElementById("cuntEmpire").style.transition = "top 1s ease 0s";
+  document.getElementById("cuntEmpire").tabIndex = "-1";
+  document.getElementById("cuntEmpire").ariaHidden = true;
+  document.getElementById("cuntEmpire").blur();
   document.getElementById("cuntEmpireImgLink").tabIndex = "-1";
   document.getElementById("cuntEmpireImgLink").blur();
   document.getElementById("cuntEmpireHeadingLink").tabIndex = "-1";

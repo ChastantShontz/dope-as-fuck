@@ -3692,15 +3692,13 @@ function gotIt6(event) {
       setTimeout(() => (
         document.getElementsByClassName("lifeCont")[x].tabIndex = "0"
       ), y);
-      setTimeout(() => (
-        document.getElementsByClassName("lifeCont")[x].ariaHidden = false
-      ), y);
     }
     activate(i, (transitionDelay * 1000));
   }
   document.getElementById("lives").style.visibility = "visible";
   document.getElementById("lives").style.opacity = "100%";
   document.getElementById("lives").style.transition = "all 0s ease 3s";
+  document.getElementById("lives").ariaHidden = false;
   sessionStorage.lives = 6;
   sessionStorage.redo = 0;
   document.getElementById("raffle").style.display = "block";
@@ -8816,9 +8814,10 @@ function gotIt24() {
   document.getElementById("lives").style.visibility = "hidden";
   document.getElementById("lives").style.opacity = "0%";
   document.getElementById("lives").style.transition = "all 0s ease 3s";
+  document.getElementById("lives").ariaHidden = true;
   for (var i = 0; i < document.getElementsByClassName("lifeCont").length; i++) {
+    document.getElementsByClassName("lifeCont")[i].style.pointerEvents = "none";
     document.getElementsByClassName("lifeCont")[i].tabIndex = "-1";
-    document.getElementsByClassName("lifeCont")[i].ariaHidden = true;
     document.getElementsByClassName("lifeCont")[i].blur();
   }
   document.getElementById("raffle").style.display = "none";

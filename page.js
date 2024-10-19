@@ -10222,8 +10222,43 @@ function bitchIce(event) {
         document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word")[i].style.transition = "visibility 0s ease 0s";
       }
     }
+    document.getElementById("partyActivities").ariaHidden = true;
+    for (var i = 0; i < document.getElementsByClassName("partyActivity").length; i++) {
+      if (document.getElementsByClassName("partyActivity")[i] != document.getElementById("beers")) {
+        document.getElementsByClassName("partyActivity")[i].tabIndex = "-1";
+        document.getElementsByClassName("partyActivity")[i].blur();
+      }
+    }
+    document.getElementById("dafCounterButton").style.pointerEvents = "none";
+    document.getElementById("dafCounterButton").tabIndex = "-1";
+    document.getElementById("dafCounterButton").blur();
     if ((sessionStorage.newSong != undefined) && (document.getElementById("speakerSong" + sessionStorage.newSong).paused == false)) {
       speakerPause();
+    }
+    document.getElementById("speakerSongs").style.pointerEvents = "none";
+    document.getElementById("speakerSongs").tabIndex = "-1";
+    document.getElementById("speakerSongs").blur();
+    if (sessionStorage.beer == 1) {
+      document.getElementById("busch").style.pointerEvents = "none";
+      document.getElementById("busch").tabIndex = "-1";
+      document.getElementById("busch").blur();
+    }
+    else if (sessionStorage.beer == 2) {
+      document.getElementById("bapple").style.pointerEvents = "none";
+      document.getElementById("bapple").tabIndex = "-1";
+      document.getElementById("bapple").blur();
+    }
+    document.getElementById("socialMedias").ariaHidden = true;
+    for (var i = 0; i < document.getElementsByClassName("socialMediaLogo").length; i++) {
+      document.getElementsByClassName("socialMediaLogo")[i].style.pointerEvents = "none";
+      if (document.getElementsByClassName("socialMediaLogo")[i] == document.getElementById("youtubeLogo")) {
+        document.getElementById("youtubeLogo").tabIndex = "-1";
+        document.getElementById("youtubeLogo").blur();
+      }
+    }
+    for (var i = 0; i < document.getElementsByClassName("socialMediaLink").length; i++) {
+      document.getElementsByClassName("socialMediaLink")[i].tabIndex = "-1";
+      document.getElementsByClassName("socialMediaLink")[i].blur();
     }
     document.getElementById("triangleFaceCont").style.zIndex = "92";
     sessionStorage.lives = 0;

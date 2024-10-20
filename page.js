@@ -10260,6 +10260,19 @@ function bitchIce(event) {
       document.getElementsByClassName("socialMediaLink")[i].tabIndex = "-1";
       document.getElementsByClassName("socialMediaLink")[i].blur();
     }
+    document.getElementById("websiteCont").style.animationPlayState = "paused";
+    document.getElementById("websiteCont").tabIndex = "-1";
+    document.getElementById("websiteCont").ariaHidden = true;
+    document.getElementById("websiteCont").blur();
+    if (sessionStorage.clarksonScore <= sessionStorage.sluScore) {
+      document.getElementById("drumstick").style.animationPlayState = "paused";
+    }
+    else if (sessionStorage.clarksonScore > sessionStorage.sluScore) {
+      document.getElementById("spatula").style.animationPlayState = "paused";
+    }
+    document.getElementById("website").style.pointerEvents = "none";
+    document.getElementById("website").tabIndex = "-1";
+    document.getElementById("website").blur();
     document.getElementById("triangleFaceCont").style.zIndex = "92";
     sessionStorage.lives = 0;
     enableButton();

@@ -3763,14 +3763,14 @@ function speedrun(stage) {
         hideStats((i + 1), "click");
       }
     }
-    for (var i = 0; i < document.getElementsByClassName("disappearInt").length; i++) {
-      if (document.getElementsByClassName("disappearInt")[i].style.visibility == "visible") {
-        document.getElementsByClassName("disappearInt")[i].style.visibility = "hidden";
-        document.getElementsByClassName("disappearInt")[i].style.opacity = "0%";
-        document.getElementsByClassName("disappearInt")[i].style.transition = "all .25s ease 0s";
-        if (document.getElementsByClassName("disappearInt")[i].tabIndex == "0") {
-          document.getElementsByClassName("disappearInt")[i].tabIndex = "-1";
-          document.getElementsByClassName("disappearInt")[i].blur();
+    for (var i = 0; i < document.getElementsByClassName("disappearGameInt").length; i++) {
+      if (document.getElementsByClassName("disappearGameInt")[i].style.visibility == "visible") {
+        document.getElementsByClassName("disappearGameInt")[i].style.visibility = "hidden";
+        document.getElementsByClassName("disappearGameInt")[i].style.opacity = "0%";
+        document.getElementsByClassName("disappearGameInt")[i].style.transition = "all .25s ease 0s";
+        if (document.getElementsByClassName("disappearGameInt")[i].tabIndex == "0") {
+          document.getElementsByClassName("disappearGameInt")[i].tabIndex = "-1";
+          document.getElementsByClassName("disappearGameInt")[i].blur();
         }
       }
     }
@@ -8792,10 +8792,10 @@ function gotIt24() {
     "(j == 27) && (sessionStorage.clarksonScore > sessionStorage.sluScore)"
   ];
   disableCheers(disableClassLists, disableStyles);
-  for (var i = 0; i < document.getElementsByClassName("disappearExt").length; i++) {
-    document.getElementsByClassName("disappearExt")[i].style.visibility = "hidden";
-    document.getElementsByClassName("disappearExt")[i].style.opacity = "0%";
-    document.getElementsByClassName("disappearExt")[i].style.transition = "all 1s ease 0s";
+  for (var i = 0; i < document.getElementsByClassName("disappearGameExt").length; i++) {
+    document.getElementsByClassName("disappearGameExt")[i].style.visibility = "hidden";
+    document.getElementsByClassName("disappearGameExt")[i].style.opacity = "0%";
+    document.getElementsByClassName("disappearGameExt")[i].style.transition = "all 1s ease 0s";
   }
   document.getElementById("gameActivities").ariaHidden = true;
   for (var i = 0; i < document.getElementsByClassName("gameActivity").length; i++) {

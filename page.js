@@ -9286,7 +9286,7 @@ function gotIt27() {
   setTimeout(() => (
     document.getElementById("websiteCont").ariaHidden = false
   ), 4000);
-  setTimeout(cuntEmpireEntrance, 600000);
+  sessionStorage.cuntEmpireEntranceTimeout = setTimeout(cuntEmpireEntrance, 600000);
   console.log("Oh, you're here? I'll drink to that!");
 }
 
@@ -10273,6 +10273,28 @@ function bitchIce(event) {
     document.getElementById("website").style.pointerEvents = "none";
     document.getElementById("website").tabIndex = "-1";
     document.getElementById("website").blur();
+    if (document.getElementById("cuntEmpire").style.top == "1em") {
+      document.getElementById("cuntEmpire").tabIndex = "-1";
+      document.getElementById("cuntEmpire").ariaHidden = true;
+      document.getElementById("cuntEmpire").blur();
+      document.getElementById("cuntEmpireImgLink").style.pointerEvents = "none";
+      document.getElementById("cuntEmpireImgLink").tabIndex = "-1";
+      document.getElementById("cuntEmpireImgLink").blur();
+      document.getElementById("cuntEmpireHeadingLink").style.pointerEvents = "none";
+      document.getElementById("cuntEmpireHeadingLink").tabIndex = "-1";
+      document.getElementById("cuntEmpireHeadingLink").blur();
+      document.getElementById("cuntEmpireAdvertisementLink").style.pointerEvents = "none";
+      document.getElementById("cuntEmpireAdvertisementLink").tabIndex = "-1";
+      document.getElementById("cuntEmpireAdvertisementLink").blur();
+      document.getElementById("cuntEmpireExit").style.pointerEvents = "none";
+      if (document.getElementById("cuntEmpireCover").style.display != "none") {
+        document.getElementById("cuntEmpireCover").style.pointerEvents = "none";
+      }
+    }
+    else {
+      clearTimeout(sessionStorage.cuntEmpireEntranceTimeout);
+      sessionStorage.removeItem("cuntEmpireEntranceTimeout");
+    }
     document.getElementById("triangleFaceCont").style.zIndex = "92";
     sessionStorage.lives = 0;
     enableButton();
@@ -10854,6 +10876,7 @@ function closePromo(event) {
 }
 
 function cuntEmpireEntrance() {
+  sessionStorage.removeItem("cuntEmpireEntranceTimeout");
   document.getElementById("cuntEmpireImgLink").style.pointerEvents = "auto";
   document.getElementById("cuntEmpireImgLink").tabIndex = "0";
   document.getElementById("cuntEmpireHeadingLink").style.pointerEvents = "auto";
@@ -10898,7 +10921,7 @@ function cuntEmpireExit() {
   else {
     document.getElementById("cuntEmpireCover").style.pointerEvents = "none";
   }
-  setTimeout(cuntEmpireEntrance, 600000);
+  sessionStorage.cuntEmpireEntranceTimeout = setTimeout(cuntEmpireEntrance, 600000);
   console.log("Not horny enough? Maybe later...");
 }
 

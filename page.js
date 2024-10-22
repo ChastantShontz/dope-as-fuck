@@ -8793,9 +8793,15 @@ function gotIt24() {
   ];
   disableCheers(disableClassLists, disableStyles);
   for (var i = 0; i < document.getElementsByClassName("disappearGameExt").length; i++) {
-    document.getElementsByClassName("disappearGameExt")[i].style.visibility = "hidden";
-    document.getElementsByClassName("disappearGameExt")[i].style.opacity = "0%";
-    document.getElementsByClassName("disappearGameExt")[i].style.transition = "all 1s ease 0s";
+    if (document.getElementsByClassName("disappearGameExt")[i].style.visibility == "visible") {
+      document.getElementsByClassName("disappearGameExt")[i].style.visibility = "hidden";
+      document.getElementsByClassName("disappearGameExt")[i].style.opacity = "0%";
+      document.getElementsByClassName("disappearGameExt")[i].style.transition = "all 1s ease 0s";
+      if (document.getElementsByClassName("disappearGameExt")[i].tabIndex == "0") {
+        document.getElementsByClassName("disappearGameExt")[i].tabIndex = "-1";
+        document.getElementsByClassName("disappearGameExt")[i].blur();
+      }
+    }
   }
   document.getElementById("gameActivities").ariaHidden = true;
   for (var i = 0; i < document.getElementsByClassName("gameActivity").length; i++) {

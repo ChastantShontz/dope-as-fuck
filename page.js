@@ -11938,6 +11938,17 @@ function gameOver(event) {
   document.getElementById("viewAccountToggle").style.pointerEvents = "none";
   document.getElementById("viewAccountToggle").tabIndex = "-1";
   document.getElementById("viewAccountToggle").blur();
+  for (var i = 0; i < document.getElementsByClassName("disappearParty").length; i++) {
+    if (document.getElementsByClassName("disappearParty")[i].style.visibility == "visible") {
+      document.getElementsByClassName("disappearParty")[i].style.visibility = "hidden";
+      document.getElementsByClassName("disappearParty")[i].style.opacity = "0%";
+      document.getElementsByClassName("disappearParty")[i].style.transition = "all .25s ease 0s";
+      if (document.getElementsByClassName("disappearParty")[i].tabIndex == "0") {
+        document.getElementsByClassName("disappearParty")[i].tabIndex = "-1";
+        document.getElementsByClassName("disappearParty")[i].blur();
+      }
+    }
+  }
   for (var i = 0; i < document.getElementsByClassName("audio").length; i++) {
     document.getElementsByClassName("audio")[i].onended = null;
   }

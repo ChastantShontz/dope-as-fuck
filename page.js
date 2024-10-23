@@ -748,6 +748,10 @@ let quotes = [
     author: "<b>Tom Uhl</b>"
   },
   {
+    line: "Are you guys going to be appropriate? Or are you guys going to say some inappropriate things?",
+    author: "some drunk lady at UVM"
+  },
+  {
     line: "Are you kidding me? This is the time I shotgun sometimes.",
     author: "<b>Schalago</b> at 8:53 AM on a Monday"
   },

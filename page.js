@@ -10265,9 +10265,9 @@ function bitchIce(event) {
     else if (sessionStorage.clarksonScore > sessionStorage.sluScore) {
       document.getElementById("spatula").style.animationPlayState = "paused";
     }
-    document.getElementById("website").style.pointerEvents = "none";
-    document.getElementById("website").tabIndex = "-1";
-    document.getElementById("website").blur();
+    document.getElementById("websiteLink").style.pointerEvents = "none";
+    document.getElementById("websiteLink").tabIndex = "-1";
+    document.getElementById("websiteLink").blur();
     if (document.getElementById("cuntEmpire").style.top == "1em") {
       document.getElementById("cuntEmpire").tabIndex = "-1";
       document.getElementById("cuntEmpire").ariaHidden = true;
@@ -10661,9 +10661,9 @@ function drunk(drinksIncrement, event) {
     else if (sessionStorage.clarksonScore > sessionStorage.sluScore) {
       document.getElementById("spatula").style.animationPlayState = "paused";
     }
-    document.getElementById("website").style.pointerEvents = "none";
-    document.getElementById("website").tabIndex = "-1";
-    document.getElementById("website").blur();
+    document.getElementById("websiteLink").style.pointerEvents = "none";
+    document.getElementById("websiteLink").tabIndex = "-1";
+    document.getElementById("websiteLink").blur();
     if (document.getElementById("cuntEmpire").style.top == "1em") {
       document.getElementById("cuntEmpire").tabIndex = "-1";
       document.getElementById("cuntEmpire").ariaHidden = true;

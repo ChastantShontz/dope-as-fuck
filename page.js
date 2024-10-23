@@ -10181,6 +10181,9 @@ function bitchIce(event) {
     document.getElementById("iceButton").tabIndex = "-1";
     document.getElementById("iceButton").disabled = true;
     document.getElementById("iceButton").blur();
+    document.getElementById("houseCont").tabIndex = "-1";
+    document.getElementById("houseCont").ariaHidden = true;
+    document.getElementById("houseCont").blur();
     document.getElementById("drinkingSongsContContCont").tabIndex = "-1";
     document.getElementById("drinkingSongsContContCont").ariaHidden = true;
     document.getElementById("drinkingSongsContContCont").blur();
@@ -10576,6 +10579,9 @@ function drunk(drinksIncrement, event) {
   else if (sessionStorage.drinks >= 53) {
     sessionStorage.level = 7;
     document.getElementById("conductor").style.zIndex = "92";
+    document.getElementById("houseCont").tabIndex = "-1";
+    document.getElementById("houseCont").ariaHidden = true;
+    document.getElementById("houseCont").blur();
     document.getElementById("drinkingSongsContContCont").tabIndex = "-1";
     document.getElementById("drinkingSongsContContCont").ariaHidden = true;
     document.getElementById("drinkingSongsContContCont").blur();

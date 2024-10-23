@@ -8286,12 +8286,12 @@ function win() {
       document.getElementsByClassName("sluMenPlayer")[i].style.visibility = "hidden";
       document.getElementsByClassName("sluMenPlayer")[i].style.opacity = "0%";
       document.getElementsByClassName("sluMenPlayer")[i].style.transition = "all 1s ease 0s";
+      document.getElementsByClassName("sluMenPlayer")[i].style.pointerEvents = "none";
       document.getElementsByClassName("sluMenPlayer")[i].tabIndex = "-1";
       document.getElementsByClassName("sluMenPlayer")[i].blur();
     }
     for (var i = 0; i < document.getElementsByClassName("clarksonMenPlayer").length; i++) {
       document.getElementsByClassName("clarksonMenPlayer")[i].style.transform = "scale(1.5)";
-      document.getElementsByClassName("clarksonMenPlayer")[i].style.pointerEvents = "none";
       if (i == 0) {
         document.getElementById("ethanHaider").style.borderBottomRightRadius = ".8em";
         document.getElementById("ethanHaider").style.transition = "all 1s ease 0s";
@@ -8299,6 +8299,13 @@ function win() {
       else if (i > 0) {
         document.getElementsByClassName("clarksonMenPlayer")[i].style.transition = "transform 1s ease 0s";
       }
+      document.getElementsByClassName("clarksonMenPlayer")[i].style.cursor = "default";
+      document.getElementsByClassName("clarksonMenPlayer")[i].role = "img";
+      document.getElementsByClassName("clarksonMenPlayer")[i].removeAttribute("aria-label");
+      document.getElementsByClassName("clarksonMenPlayer")[i].ariaDescription = document.getElementsByClassName("clarksonMenPlayer")[i].alt;
+      document.getElementsByClassName("clarksonMenPlayer")[i].onclick = null;
+      document.getElementsByClassName("clarksonMenPlayer")[i].onmouseenter = null;
+      document.getElementsByClassName("clarksonMenPlayer")[i].onmouseleave = null;
     }
   }
   else if (sessionStorage.gender == 2) {
@@ -8311,12 +8318,12 @@ function win() {
       document.getElementsByClassName("sluWomenPlayer")[i].style.visibility = "hidden";
       document.getElementsByClassName("sluWomenPlayer")[i].style.opacity = "0%";
       document.getElementsByClassName("sluWomenPlayer")[i].style.transition = "all 1s ease 0s";
+      document.getElementsByClassName("sluWomenPlayer")[i].style.pointerEvents = "none";
       document.getElementsByClassName("sluWomenPlayer")[i].tabIndex = "-1";
       document.getElementsByClassName("sluWomenPlayer")[i].blur();
     }
     for (var i = 0; i < document.getElementsByClassName("clarksonWomenPlayer").length; i++) {
       document.getElementsByClassName("clarksonWomenPlayer")[i].style.transform = "scale(1.5)";
-      document.getElementsByClassName("clarksonWomenPlayer")[i].style.pointerEvents = "none";
       if (i == 0) {
         document.getElementById("michellePasiechnyk").style.borderBottomRightRadius = ".8em";
         document.getElementById("michellePasiechnyk").style.transition = "all 1s ease 0s";
@@ -8324,6 +8331,13 @@ function win() {
       else if (i > 0) {
         document.getElementsByClassName("clarksonWomenPlayer")[i].style.transition = "transform 1s ease 0s";
       }
+      document.getElementsByClassName("clarksonWomenPlayer")[i].style.cursor = "default";
+      document.getElementsByClassName("clarksonWomenPlayer")[i].role = "img";
+      document.getElementsByClassName("clarksonWomenPlayer")[i].removeAttribute("aria-label");
+      document.getElementsByClassName("clarksonWomenPlayer")[i].ariaDescription = document.getElementsByClassName("clarksonWomenPlayer")[i].alt;
+      document.getElementsByClassName("clarksonWomenPlayer")[i].onclick = null;
+      document.getElementsByClassName("clarksonWomenPlayer")[i].onmouseenter = null;
+      document.getElementsByClassName("clarksonWomenPlayer")[i].onmouseleave = null;
     }
   }
   for (var i = 0; i < document.getElementsByClassName("clarksonWord").length; i++) {
@@ -8437,12 +8451,12 @@ function lose() {
       document.getElementsByClassName("clarksonMenPlayer")[i].style.visibility = "hidden";
       document.getElementsByClassName("clarksonMenPlayer")[i].style.opacity = "0%";
       document.getElementsByClassName("clarksonMenPlayer")[i].style.transition = "all 1s ease 0s";
+      document.getElementsByClassName("clarksonMenPlayer")[i].style.pointerEvents = "none";
       document.getElementsByClassName("clarksonMenPlayer")[i].tabIndex = "-1";
       document.getElementsByClassName("clarksonMenPlayer")[i].blur();
     }
     for (var i = 0; i < document.getElementsByClassName("sluMenPlayer").length; i++) {
       document.getElementsByClassName("sluMenPlayer")[i].style.transform = "scale(1.5)";
-      document.getElementsByClassName("sluMenPlayer")[i].style.pointerEvents = "none";
       if (i == 5) {
         document.getElementById("danielAllin").style.borderBottomLeftRadius = ".8em";
         document.getElementById("danielAllin").style.transition = "all 1s ease 0s";
@@ -8450,6 +8464,13 @@ function lose() {
       else if (i < 5) {
         document.getElementsByClassName("sluMenPlayer")[i].style.transition = "transform 1s ease 0s";
       }
+      document.getElementsByClassName("sluMenPlayer")[i].style.cursor = "default";
+      document.getElementsByClassName("sluMenPlayer")[i].role = "img";
+      document.getElementsByClassName("sluMenPlayer")[i].removeAttribute("aria-label");
+      document.getElementsByClassName("sluMenPlayer")[i].ariaDescription = document.getElementsByClassName("sluMenPlayer")[i].alt;
+      document.getElementsByClassName("sluMenPlayer")[i].onclick = null;
+      document.getElementsByClassName("sluMenPlayer")[i].onmouseenter = null;
+      document.getElementsByClassName("sluMenPlayer")[i].onmouseleave = null;
     }
   }
   else if (sessionStorage.gender == 2) {
@@ -8462,12 +8483,12 @@ function lose() {
       document.getElementsByClassName("clarksonWomenPlayer")[i].style.visibility = "hidden";
       document.getElementsByClassName("clarksonWomenPlayer")[i].style.opacity = "0%";
       document.getElementsByClassName("clarksonWomenPlayer")[i].style.transition = "all 1s ease 0s";
+      document.getElementsByClassName("clarksonWomenPlayer")[i].style.pointerEvents = "none";
       document.getElementsByClassName("clarksonWomenPlayer")[i].tabIndex = "-1";
       document.getElementsByClassName("clarksonWomenPlayer")[i].blur();
     }
     for (var i = 0; i < document.getElementsByClassName("sluWomenPlayer").length; i++) {
       document.getElementsByClassName("sluWomenPlayer")[i].style.transform = "scale(1.5)";
-      document.getElementsByClassName("sluWomenPlayer")[i].style.pointerEvents = "none";
       if (i == 5) {
         document.getElementById("hopeCrisafi").style.borderBottomLeftRadius = ".8em";
         document.getElementById("hopeCrisafi").style.transition = "all 1s ease 0s";
@@ -8475,6 +8496,13 @@ function lose() {
       else if (i < 5) {
         document.getElementsByClassName("sluWomenPlayer")[i].style.transition = "transform 1s ease 0s";
       }
+      document.getElementsByClassName("sluWomenPlayer")[i].style.cursor = "default";
+      document.getElementsByClassName("sluWomenPlayer")[i].role = "img";
+      document.getElementsByClassName("sluWomenPlayer")[i].removeAttribute("aria-label");
+      document.getElementsByClassName("sluWomenPlayer")[i].ariaDescription = document.getElementsByClassName("sluwomenPlayer")[i].alt;
+      document.getElementsByClassName("sluWomenPlayer")[i].onclick = null;
+      document.getElementsByClassName("sluWomenPlayer")[i].onmouseenter = null;
+      document.getElementsByClassName("sluWomenPlayer")[i].onmouseleave = null;
     }
   }
   for (var i = 0; i < document.getElementsByClassName("sluWord").length; i++) {
@@ -8608,6 +8636,9 @@ function gotIt23() {
             document.getElementsByClassName("sluMenPlayer")[x].style.animation = "none"
           ), y);
           setTimeout(() => (
+            document.getElementsByClassName("sluMenPlayer")[x].style.pointerEvents = "none"
+          ), y);
+          setTimeout(() => (
             document.getElementsByClassName("sluMenPlayer")[x].tabIndex = "-1"
           ), y);
           setTimeout(() => (
@@ -8650,6 +8681,9 @@ function gotIt23() {
         const reset = (x, y) => {
           setTimeout(() => (
             document.getElementsByClassName("sluWomenPlayer")[x].style.animation = "none"
+          ), y);
+          setTimeout(() => (
+            document.getElementsByClassName("sluWomenPlayer")[x].style.pointerEvents = "none"
           ), y);
           setTimeout(() => (
             document.getElementsByClassName("sluWomenPlayer")[x].tabIndex = "-1"
@@ -8697,6 +8731,9 @@ function gotIt23() {
             document.getElementsByClassName("clarksonMenPlayer")[x].style.animation = "none"
           ), y);
           setTimeout(() => (
+            document.getElementsByClassName("clarksonMenPlayer")[x].style.pointerEvents = "none"
+          ), y);
+          setTimeout(() => (
             document.getElementsByClassName("clarksonMenPlayer")[x].tabIndex = "-1"
           ), y);
           setTimeout(() => (
@@ -8735,6 +8772,9 @@ function gotIt23() {
         const reset = (x, y) => {
           setTimeout(() => (
             document.getElementsByClassName("clarksonWomenPlayer")[x].style.animation = "none"
+          ), y);
+          setTimeout(() => (
+            document.getElementsByClassName("clarksonWomenPlayer")[x].style.pointerEvents = "none"
           ), y);
           setTimeout(() => (
             document.getElementsByClassName("clarksonWomenPlayer")[x].tabIndex = "-1"

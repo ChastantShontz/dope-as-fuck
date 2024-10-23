@@ -9980,11 +9980,15 @@ function drinkBeer(event) {
         document.getElementById("busch").style.transform = "scale(1.1)";
         document.getElementById("busch").style.transition = "transform .25s ease 0s";
         document.getElementById("busch").style.pointerEvents = "none";
+        document.getElementById("busch").tabIndex = "-1";
+        document.getElementById("busch").blur();
       }
       else if (sessionStorage.beer == 2) {
         document.getElementById("bapple").style.transform = "scale(1.1)";
         document.getElementById("bapple").style.transition = "transform .25s ease 0s";
         document.getElementById("bapple").style.pointerEvents = "none";
+        document.getElementById("bapple").tabIndex = "-1";
+        document.getElementById("bapple").blur();
       }
       document.getElementById("cover").style.background = "transparent";
       document.getElementById("cover").style.transition = "background 0s ease 0s";
@@ -10241,16 +10245,6 @@ function bitchIce(event) {
     document.getElementById("speakerSongs").style.pointerEvents = "none";
     document.getElementById("speakerSongs").tabIndex = "-1";
     document.getElementById("speakerSongs").blur();
-    if (sessionStorage.beer == 1) {
-      document.getElementById("busch").style.pointerEvents = "none";
-      document.getElementById("busch").tabIndex = "-1";
-      document.getElementById("busch").blur();
-    }
-    else if (sessionStorage.beer == 2) {
-      document.getElementById("bapple").style.pointerEvents = "none";
-      document.getElementById("bapple").tabIndex = "-1";
-      document.getElementById("bapple").blur();
-    }
     document.getElementById("socialMedias").ariaHidden = true;
     for (var i = 0; i < document.getElementsByClassName("socialMediaLogo").length; i++) {
       document.getElementsByClassName("socialMediaLogo")[i].style.pointerEvents = "none";
@@ -10446,11 +10440,13 @@ function finishIce(event) {
     document.getElementById("busch").style.transform = "scale(1)";
     document.getElementById("busch").style.transition = "transform .25s ease 0s";
     document.getElementById("busch").style.pointerEvents = "auto";
+    document.getElementById("busch").tabIndex = "0";
   }
   else if (sessionStorage.beer == 2) {
     document.getElementById("bapple").style.transform = "scale(1)";
     document.getElementById("bapple").style.transition = "transform .25s ease 0s";
     document.getElementById("bapple").style.pointerEvents = "auto";
+    document.getElementById("bapple").tabIndex = "0";
   }
   sessionStorage.drinksIncrement = 3;
   drunk(sessionStorage.drinksIncrement, event);

@@ -9978,14 +9978,12 @@ function drinkBeer(event) {
     if (sessionStorage.ice == 1) {
       if (sessionStorage.beer == 1) {
         document.getElementById("busch").style.transform = "scale(1.1)";
-        document.getElementById("busch").style.transition = "transform .25s ease 0s";
         document.getElementById("busch").style.pointerEvents = "none";
         document.getElementById("busch").tabIndex = "-1";
         document.getElementById("busch").blur();
       }
       else if (sessionStorage.beer == 2) {
         document.getElementById("bapple").style.transform = "scale(1.1)";
-        document.getElementById("bapple").style.transition = "transform .25s ease 0s";
         document.getElementById("bapple").style.pointerEvents = "none";
         document.getElementById("bapple").tabIndex = "-1";
         document.getElementById("bapple").blur();
@@ -10344,11 +10342,9 @@ function failIce(event) {
   document.getElementById("iceButton").blur();
   if (sessionStorage.beer == 1) {
     document.getElementById("busch").style.transform = "scale(1)";
-    document.getElementById("busch").style.transition = "transform .25s ease 0s";
   }
   else if (sessionStorage.beer == 2) {
     document.getElementById("bapple").style.transform = "scale(1)";
-    document.getElementById("bapple").style.transition = "transform .25s ease 0s";
   }
   document.getElementById("triangleFaceCont").style.zIndex = "91";
   document.getElementById("gameOverHeading").style.color = "var(--sluRed)";
@@ -10438,13 +10434,11 @@ function finishIce(event) {
   document.getElementById("iceCounter").style.animation = "none";
   if (sessionStorage.beer == 1) {
     document.getElementById("busch").style.transform = "scale(1)";
-    document.getElementById("busch").style.transition = "transform .25s ease 0s";
     document.getElementById("busch").style.pointerEvents = "auto";
     document.getElementById("busch").tabIndex = "0";
   }
   else if (sessionStorage.beer == 2) {
     document.getElementById("bapple").style.transform = "scale(1)";
-    document.getElementById("bapple").style.transition = "transform .25s ease 0s";
     document.getElementById("bapple").style.pointerEvents = "auto";
     document.getElementById("bapple").tabIndex = "0";
   }

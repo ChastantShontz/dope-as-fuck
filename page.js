@@ -10948,6 +10948,7 @@ function cuntEmpireEntrance() {
   document.getElementById("cuntEmpireAdvertisementLink").style.pointerEvents = "auto";
   document.getElementById("cuntEmpireAdvertisementLink").tabIndex = "0";
   document.getElementById("cuntEmpireCover").style.pointerEvents = "auto";
+  document.getElementById("cuntEmpire").classList.add("disappearParty");
   document.getElementById("cuntEmpire").style.top = "1em";
   document.getElementById("cuntEmpire").style.transition = "top 1s ease 0s";
   document.getElementById("cuntEmpire").tabIndex = "0";
@@ -10960,6 +10961,7 @@ function cuntEmpireUncover() {
 }
 
 function cuntEmpireExit() {
+  document.getElementById("cuntEmpire").classList.remove("disappearParty");
   document.getElementById("cuntEmpire").style.top = "-10em";
   document.getElementById("cuntEmpire").style.transition = "top 1s ease 0s";
   document.getElementById("cuntEmpire").tabIndex = "-1";

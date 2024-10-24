@@ -2614,9 +2614,7 @@ function gameBegins(event) {
     sessionStorage.clear();
     for (var i = 0; i < document.getElementsByClassName("scrollbar").length; i++) {
       if (document.getElementsByClassName("scrollbar")[i].scrollHeight > document.getElementsByClassName("scrollbar")[i].offsetHeight) {
-        if (document.getElementsByClassName("scrollbar")[i].scrollTop > 0) {
-          document.getElementsByClassName("scrollbar")[i].scrollTop = 0;
-        }
+        document.getElementsByClassName("scrollbar")[i].scrollTop = 0;
       }
     }
     for (var i = 0; i < document.getElementsByTagName("button").length; i++) {

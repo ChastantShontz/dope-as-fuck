@@ -7212,16 +7212,20 @@ function openYoutubeSong() {
     document.getElementById("youtubeTitle").innerHTML = (songs[sessionStorage.youtube].title).replace(/\<\/*(b|strong|i|em|u|s|br)\>/gism, "");
     document.getElementById("youtubeTitle").title = (songs[sessionStorage.youtube].title).replace(/\<\/*(b|strong|i|em|u|s|br)\>/gism, "") + " by " + songs[sessionStorage.youtube].artist;
     document.getElementById("youtubeSongs").style.background = "url(\"" + songs[sessionStorage.youtube].image + "\") center / cover";
-    document.getElementById("youtubeSongs").style.pointerEvents = "auto";
-    document.getElementById("youtubeSongs").tabIndex = "0";
+    if (document.getElementById("youtubeSongs").style.pointerEvents == "none") {
+      document.getElementById("youtubeSongs").style.pointerEvents = "auto";
+      document.getElementById("youtubeSongs").tabIndex = "0";
+    }
     sessionStorage.progress = 100;
     document.getElementById("youtubeDuration").style.right = sessionStorage.progress + "%";
     document.getElementById("youtubeDuration").style.transition = "right 0s linear 0s";
     document.getElementById("youtubeDurationCont").tabIndex = "0";
     sessionStorage.duration = songs[sessionStorage.youtube].duration;
     sessionStorage.durationDecrement = (100 / sessionStorage.duration);
-    document.getElementById("youtubePlayPauseButton").style.pointerEvents = "auto";
-    document.getElementById("youtubePlayPauseButton").tabIndex = "0";
+    if (document.getElementById("youtubePlayPauseButton").style.pointerEvents == "none") {
+      document.getElementById("youtubePlayPauseButton").style.pointerEvents = "auto";
+      document.getElementById("youtubePlayPauseButton").tabIndex = "0";
+    }
     sessionStorage.countingTime = "00:00";
     document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
     document.getElementById("youtubeCountingTime").datetime = "PT0M0S";
@@ -7230,12 +7234,16 @@ function openYoutubeSong() {
     document.getElementById("youtubeFullTime").datetime = "PT" + ((sessionStorage.fullTime).substring(0, 2)).replace(/(?<=^)0/sm, "") + "M" + ((sessionStorage.fullTime).substring(3)).replace(/(?<=^)0/sm, "") + "S";
     document.getElementById("youtubeTimer").title = "Has not started";
     for (var i = 0; i < document.getElementsByClassName("youtubeJump").length; i++) {
-      document.getElementsByClassName("youtubeJump")[i].style.pointerEvents = "auto";
-      document.getElementsByClassName("youtubeJump")[i].tabIndex = "0";
+      if (document.getElementsByClassName("youtubeJump")[i].style.pointerEvents == "none") {
+        document.getElementsByClassName("youtubeJump")[i].style.pointerEvents = "auto";
+        document.getElementsByClassName("youtubeJump")[i].tabIndex = "0";
+      }
     }
     document.getElementById("youtubeToolbar").tabIndex = "0";
-    document.getElementById("youtubeExit").style.pointerEvents = "auto";
-    document.getElementById("youtubeExit").tabIndex = "0";
+    if (document.getElementById("youtubeExit").style.pointerEvents == "none") {
+      document.getElementById("youtubeExit").style.pointerEvents = "auto";
+      document.getElementById("youtubeExit").tabIndex = "0";
+    }
     if (sessionStorage.youtube == 14) {
       document.getElementById("danceInstructions").style.visibility = "visible";
       document.getElementById("danceInstructions").style.opacity = "100%";

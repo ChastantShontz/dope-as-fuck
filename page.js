@@ -8673,12 +8673,12 @@ function gotIt22() {
   document.getElementById("clarksonVictoryMessageCont").style.visibility = "hidden";
   document.getElementById("clarksonVictoryMessageCont").style.opacity = "0%";
   document.getElementById("clarksonVictoryMessageCont").style.transition = "all 0s ease .25s";
-  document.getElementById("handCont").style.visibility = "visible";
-  document.getElementById("handCont").style.opacity = "100%";
-  document.getElementById("handCont").style.transition = "all .25s ease .25s";
   document.getElementById("hand").style.transform = "rotate(30deg)";
   document.getElementById("hand").style.transition = "transform .5s ease .75s";
   document.getElementById("hand").style.animation = "wave 2.5s ease 1.25s infinite forwards";
+  document.getElementById("handCont").style.visibility = "visible";
+  document.getElementById("handCont").style.opacity = "100%";
+  document.getElementById("handCont").style.transition = "all .25s ease .25s";
   sessionStorage.songPrime = 31;
   document.getElementById("ok").onclick = function() {
     openSelection();
@@ -8712,6 +8712,9 @@ function gotIt23() {
     document.getElementById("sluVictoryMessageCont").style.visibility = "hidden";
     document.getElementById("sluVictoryMessageCont").style.opacity = "0%";
     document.getElementById("sluVictoryMessageCont").style.transition = "all 0s ease .25s";
+    setTimeout(() => (
+      document.getElementById("victorySlu").style.animation = "none"
+    ), 250);
     if (sessionStorage.gender == 1) {
       for (var i = 0; i < document.getElementsByClassName("sluMenPlayer").length; i++) {
         if (i == 5) {
@@ -8811,6 +8814,9 @@ function gotIt23() {
     document.getElementById("handCont").style.visibility = "hidden";
     document.getElementById("handCont").style.opacity = "0%";
     document.getElementById("handCont").style.transition = "all .25s ease 0s";
+    setTimeout(() => (
+      document.getElementById("hand").style.animation = "none"
+    ), 250);
     if (sessionStorage.gender == 1) {
       for (var i = 0; i < document.getElementsByClassName("clarksonMenPlayer").length; i++) {
         var animationName = (i + 1);
@@ -12089,6 +12095,24 @@ function gameOver(event) {
     document.getElementsByClassName("disappearParty")[i].style.visibility = "hidden";
     document.getElementsByClassName("disappearParty")[i].style.opacity = "0%";
     document.getElementsByClassName("disappearParty")[i].style.transition = "all .25s ease 0s";
+  }
+  if ((sessionStorage.newSong != undefined) && (document.getElementsByClassName("audio")[sessionStorage.newSong].paused == false)) {
+    setTimeout(() => (
+      document.getElementById("speaker").style.animation = "none"
+    ), 250);
+  }
+  setTimeout(() => (
+    document.getElementById("websiteCont").style.animation = "none"
+  ), 250);
+  if (sessionStorage.clarksonScore <= sessionStorage.sluScore) {
+    setTimeout(() => (
+      document.getElementById("drumstick").style.animation = "none"
+    ), 250);
+  }
+  else if (sessionStorage.clarksonScore > sessionStorage.sluScore) {
+    setTimeout(() => (
+      document.getElementById("spatula").style.animation = "none"
+    ), 250);
   }
   for (var i = 0; i < document.getElementsByClassName("audio").length; i++) {
     document.getElementsByClassName("audio")[i].onended = null;

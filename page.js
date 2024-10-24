@@ -7219,7 +7219,10 @@ function openYoutubeSong() {
     sessionStorage.progress = 100;
     document.getElementById("youtubeDuration").style.right = sessionStorage.progress + "%";
     document.getElementById("youtubeDuration").style.transition = "right 0s linear 0s";
-    document.getElementById("youtubeDurationCont").tabIndex = "0";
+    if (document.getElementById("youtubeDurationCont").style.pointerEvents == "none") {
+      document.getElementById("youtubeDurationCont").style.pointerEvents = "auto";
+      document.getElementById("youtubeDurationCont").tabIndex = "0";
+    }
     sessionStorage.duration = songs[sessionStorage.youtube].duration;
     sessionStorage.durationDecrement = (100 / sessionStorage.duration);
     if (document.getElementById("youtubePlayPauseButton").style.pointerEvents == "none") {
@@ -7945,6 +7948,7 @@ function closeYoutubeSong(event) {
   document.getElementById("youtubeSongs").blur();
   document.getElementById("youtubeToolbar").tabIndex = "-1";
   document.getElementById("youtubeToolbar").blur();
+  document.getElementById("youtubeDurationCont").style.pointerEvents = "none";
   document.getElementById("youtubeDurationCont").tabIndex = "-1";
   document.getElementById("youtubeDurationCont").blur();
   document.getElementById("youtubePlayPauseButton").style.pointerEvents = "none";

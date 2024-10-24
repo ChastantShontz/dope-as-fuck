@@ -4951,6 +4951,7 @@ function gotIt7() {
   setTimeout(() => (
     document.getElementById("goldenKnight").style.animation = "none"
   ), 6250);
+  document.getElementById("goldenKnight").tabIndex = "0";
   sessionStorage.songPrime = 41;
   setTimeout(enableButton, 6250);
   document.getElementById("ok").onclick = function() {
@@ -4981,6 +4982,7 @@ function gotIt8() {
   document.getElementById("goldenKnight").style.visibility = "hidden";
   document.getElementById("goldenKnight").style.opacity = "0%";
   document.getElementById("goldenKnight").style.transition = "all .25s ease 0s";
+  document.getElementById("goldenKnight").tabIndex = "-1";
   for (var i = 0; i < document.getElementsByClassName("zebra").length; i++) {
     var animationName = (i + 1);
     document.getElementsByClassName("zebra")[i].style.visibility = "visible";

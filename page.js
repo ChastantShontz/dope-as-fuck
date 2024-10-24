@@ -12649,6 +12649,7 @@ function mobileShrink() {
       viewAccountToggleClose();
     }
   }
+  document.getElementsByTagName("main")[0].ariaHidden = true;
   document.getElementById("urlButton").tabIndex = "0";
   document.getElementById("mobileButton").tabIndex = "0";
   document.getElementById("mobileImgContCont").tabIndex = "0";
@@ -12715,6 +12716,48 @@ function mobileGrow() {
     sessionStorage.emphasizeConductorInterval = setInterval(emphasizeConductor, 30000);
     setTimeout(enableButton, 500);
   }
+  if (document.getElementById("account").style.visibility == "visible") {
+    if (sessionStorage.field == 0) {
+      var fields = [];
+      for (var i = 0; i < document.getElementsByClassName("infoInput").length; i++) {
+        if (eval("localStorage." + document.getElementsByClassName("infoInput")[i].name) == undefined) {
+          fields.push(document.getElementsByClassName("infoInput")[i].name);
+        }
+      }
+      if (fields.length == 0) {
+        setTimeout(() => (
+          document.getElementById("nameInput").focus()
+        ), 250);
+      }
+      else if (fields.length > 0) {
+        for (var i = 0; i < document.getElementsByClassName("infoInput").length; i++) {
+          if (fields.includes(document.getElementsByClassName("infoInput")[i].name)) {
+            setTimeout(() => (
+              document.getElementsByClassName("infoInput")[i].focus()
+            ), 250);
+            break;
+          }
+        }
+      }
+    }
+    else if (sessionStorage.field > 0) {
+      setTimeout(() => (
+        document.getElementsByClassName("infoInput")[sessionStorage.field - 1].focus()
+      ), 250);
+    }
+  }
+  if (sessionStorage.drinks != undefined) {
+    globalThis.knightCurrent = Date.now();
+    if (Math.floor((globalThis.knightCurrent - globalThis.knightStart) / 1000) < 900) {
+      var filterValue = (100 - Math.floor(((globalThis.knightCurrent - globalThis.knightStart) / 1000) / 10));
+      var animationDuration = (900 - Math.floor((globalThis.knightCurrent - globalThis.knightStart) / 1000));
+      document.getElementById("house").style.setProperty("--filterValue", filterValue + "%");
+      document.getElementById("house").style.removeProperty("filter");
+      document.getElementById("house").style.removeProperty("transition");
+      document.getElementById("house").style.animation = "sunset " + animationDuration + "s linear 0s 1 forwards";
+    }
+  }
+  document.getElementsByTagName("main")[0].ariaHidden = false;
   if (document.getElementById("youtubeSongsContCont").style.transform == "scale(1)") {
     document.onclick = youtubeControls;
   }
@@ -12745,47 +12788,6 @@ function mobileGrow() {
   }
   if (sessionStorage.shortcut != undefined) {
     document.onkeyup = shortcutUndo;
-  }
-  if (sessionStorage.drinks != undefined) {
-    globalThis.knightCurrent = Date.now();
-    if (Math.floor((globalThis.knightCurrent - globalThis.knightStart) / 1000) < 900) {
-      var filterValue = (100 - Math.floor(((globalThis.knightCurrent - globalThis.knightStart) / 1000) / 10));
-      var animationDuration = (900 - Math.floor((globalThis.knightCurrent - globalThis.knightStart) / 1000));
-      document.getElementById("house").style.setProperty("--filterValue", filterValue + "%");
-      document.getElementById("house").style.removeProperty("filter");
-      document.getElementById("house").style.removeProperty("transition");
-      document.getElementById("house").style.animation = "sunset " + animationDuration + "s linear 0s 1 forwards";
-    }
-  }
-  if (document.getElementById("account").style.visibility == "visible") {
-    if (sessionStorage.field == 0) {
-      var fields = [];
-      for (var i = 0; i < document.getElementsByClassName("infoInput").length; i++) {
-        if (eval("localStorage." + document.getElementsByClassName("infoInput")[i].name) == undefined) {
-          fields.push(document.getElementsByClassName("infoInput")[i].name);
-        }
-      }
-      if (fields.length == 0) {
-        setTimeout(() => (
-          document.getElementById("nameInput").focus()
-        ), 250);
-      }
-      else if (fields.length > 0) {
-        for (var i = 0; i < document.getElementsByClassName("infoInput").length; i++) {
-          if (fields.includes(document.getElementsByClassName("infoInput")[i].name)) {
-            setTimeout(() => (
-              document.getElementsByClassName("infoInput")[i].focus()
-            ), 250);
-            break;
-          }
-        }
-      }
-    }
-    else if (sessionStorage.field > 0) {
-      setTimeout(() => (
-        document.getElementsByClassName("infoInput")[sessionStorage.field - 1].focus()
-      ), 250);
-    }
   }
 }
 

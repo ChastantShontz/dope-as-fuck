@@ -11110,13 +11110,21 @@ function closePromo(event) {
 
 function cuntEmpireEntrance() {
   sessionStorage.removeItem("cuntEmpireEntranceTimeout");
-  document.getElementById("cuntEmpireImgLink").style.pointerEvents = "auto";
-  document.getElementById("cuntEmpireImgLink").tabIndex = "0";
-  document.getElementById("cuntEmpireHeadingLink").style.pointerEvents = "auto";
-  document.getElementById("cuntEmpireHeadingLink").tabIndex = "0";
-  document.getElementById("cuntEmpireAdvertisementLink").style.pointerEvents = "auto";
-  document.getElementById("cuntEmpireAdvertisementLink").tabIndex = "0";
-  document.getElementById("cuntEmpireCover").style.pointerEvents = "auto";
+  if (document.getElementById("cuntEmpireImgLink").style.pointerEvents == "none") {
+    document.getElementById("cuntEmpireImgLink").style.pointerEvents = "auto";
+    document.getElementById("cuntEmpireImgLink").tabIndex = "0";
+  }
+  if (document.getElementById("cuntEmpireHeadingLink").style.pointerEvents == "none") {
+    document.getElementById("cuntEmpireHeadingLink").style.pointerEvents = "auto";
+    document.getElementById("cuntEmpireHeadingLink").tabIndex = "0";
+  }
+  if (document.getElementById("cuntEmpireAdvertisementLink").style.pointerEvents == "none") {
+    document.getElementById("cuntEmpireAdvertisementLink").style.pointerEvents = "auto";
+    document.getElementById("cuntEmpireAdvertisementLink").tabIndex = "0";
+  }
+  if (document.getElementById("cuntEmpireCover").style.pointerEvents == "none") {
+    document.getElementById("cuntEmpireCover").style.pointerEvents = "auto";
+  }
   document.getElementById("cuntEmpire").classList.add("disappearParty");
   document.getElementById("cuntEmpire").style.top = "1em";
   document.getElementById("cuntEmpire").style.transition = "top 1s ease 0s";

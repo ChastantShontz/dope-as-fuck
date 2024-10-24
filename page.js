@@ -2619,74 +2619,48 @@ function gameBegins(event) {
     }
     for (var i = 0; i < document.getElementsByTagName("button").length; i++) {
       if (document.getElementsByTagName("button")[i].classList.contains("disabled")) {
-        if (document.getElementsByTagName("button")[i].disabled == false) {
-          document.getElementsByTagName("button")[i].disabled = true;
-        }
+        document.getElementsByTagName("button")[i].disabled = true;
       }
       else {
-        if (document.getElementsByTagName("button")[i].disabled == true) {
-          document.getElementsByTagName("button")[i].disabled = false;
-        }
+        document.getElementsByTagName("button")[i].disabled = false;
       }
     }
     for (var i = 0; i < document.getElementsByTagName("select").length; i++) {
-      if (document.getElementsByTagName("select")[i].selectedIndex > 0) {
-        document.getElementsByTagName("select")[i].selectedIndex = 0;
-      }
+      document.getElementsByTagName("select")[i].selectedIndex = 0;
       if (document.getElementsByTagName("select")[i].classList.contains("disabled")) {
-        if (document.getElementsByTagName("select")[i].disabled == false) {
-          document.getElementsByTagName("select")[i].disabled = true;
-        }
+        document.getElementsByTagName("select")[i].disabled = true;
       }
       else {
-        if (document.getElementsByTagName("select")[i].disabled == true) {
-          document.getElementsByTagName("select")[i].disabled = false;
-        }
+        document.getElementsByTagName("select")[i].disabled = false;
       }
     }
     for (var i = 0; i < document.getElementsByTagName("input").length; i++) {
       if ((document.getElementsByTagName("input")[i].type == "text") || (document.getElementsByTagName("input")[i].type == "search") || (document.getElementsByTagName("input")[i].type == "url") || (document.getElementsByTagName("input")[i].type == "email") || (document.getElementsByTagName("input")[i].type == "tel") || (document.getElementsByTagName("input")[i].type == "password") || (document.getElementsByTagName("input")[i].type == "number") || (document.getElementsByTagName("input")[i].type == "week") || (document.getElementsByTagName("input")[i].type == "month") || (document.getElementsByTagName("input")[i].type == "time") || (document.getElementsByTagName("input")[i].type == "date") || (document.getElementsByTagName("input")[i].type == "datetime-local") || (document.getElementsByTagName("input")[i].type == "file") || (document.getElementsByTagName("input")[i].type == "color")) {
-        if (document.getElementsByTagName("input")[i].value != "") {
-          document.getElementsByTagName("input")[i].value = "";
-        }
+        document.getElementsByTagName("input")[i].value = "";
       }
       else if ((document.getElementsByTagName("input")[i].type == "checkbox") || (document.getElementsByTagName("input")[i].type == "radio")) {
         if (document.getElementsByTagName("input")[i].classList.contains("checked")) {
-          if (document.getElementsByTagName("input")[i].checked == false) {
-            document.getElementsByTagName("input")[i].checked = true;
-          }
+          document.getElementsByTagName("input")[i].checked = true;
         }
         else {
-          if (document.getElementsByTagName("input")[i].checked == true) {
-            document.getElementsByTagName("input")[i].checked = false;
-          }
+          document.getElementsByTagName("input")[i].checked = false;
         }
       }
       else if (document.getElementsByTagName("input")[i].type == "range") {
-        if (document.getElementsByTagName("input")[i].value != "50") {
-          document.getElementsByTagName("input")[i].value = "50";
-        }
+        document.getElementsByTagName("input")[i].value = "50";
       }
       if (document.getElementsByTagName("input")[i].classList.contains("disabled")) {
-        if (document.getElementsByTagName("input")[i].disabled == false) {
-          document.getElementsByTagName("input")[i].disabled = true;
-        }
+        document.getElementsByTagName("input")[i].disabled = true;
       }
       else {
-        if (document.getElementsByTagName("input")[i].disabled == true) {
-          document.getElementsByTagName("input")[i].disabled = false;
-        }
+        document.getElementsByTagName("input")[i].disabled = false;
       }
     }
     for (var i = 0; i < document.getElementsByTagName("video").length; i++) {
-      if (document.getElementsByTagName("video")[i].currentTime > 0) {
-        document.getElementsByTagName("video")[i].currentTime = 0;
-      }
+      document.getElementsByTagName("video")[i].currentTime = 0;
     }
     for (var i = 0; i < document.getElementsByTagName("audio").length; i++) {
-      if (document.getElementsByTagName("audio")[i].currentTime > 0) {
-        document.getElementsByTagName("audio")[i].currentTime = 0;
-      }
+      document.getElementsByTagName("audio")[i].currentTime = 0;
     }
   }
   accountUpdate(0, "check");

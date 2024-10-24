@@ -2612,6 +2612,13 @@ function gameBegins(event) {
     }
     answers = JSON.parse(localStorage.answers);
     sessionStorage.clear();
+    for (var i = 0; i < document.getElementsByClassName("scrollbar").length; i++) {
+      if (document.getElementsByClassName("scrollbar")[i].scrollHeight > document.getElementsByClassName("scrollbar")[i].offsetHeight) {
+        if (document.getElementsByClassName("scrollbar")[i].scrollTop > 0) {
+          document.getElementsByClassName("scrollbar")[i].scrollTop = 0;
+        }
+      }
+    }
     for (var i = 0; i < document.getElementsByTagName("button").length; i++) {
       if (document.getElementsByTagName("button")[i].classList.contains("disabled")) {
         if (document.getElementsByTagName("button")[i].disabled == false) {
@@ -2714,19 +2721,9 @@ function gameBegins(event) {
     document.getElementById("mobileImgContCont").tabIndex = "0";
     document.getElementById("mobile").tabIndex = "0";
     document.getElementById("mobile").ariaHidden = false;
-    if (document.getElementById("mobile").scrollHeight > document.getElementById("mobile").offsetHeight) {
-      if (document.getElementById("mobile").scrollTop > 0) {
-        document.getElementById("mobile").scrollTop = 0;
-      }
-    }
     document.onclick = unselectUrl;
   }
   else if ((window.innerHeight > 600) && (window.innerWidth > 1200)) {
-    if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
-      if (document.getElementById("conductorTalkCont").scrollTop > 0) {
-        document.getElementById("conductorTalkCont").scrollTop = 0;
-      }
-    }
     document.getElementById("conductor").style.left = "2em";
     document.getElementById("conductor").style.transition = "left 2s ease .5s";
     sessionStorage.emphasizeConductorInterval = setInterval(emphasizeConductor, 30000);

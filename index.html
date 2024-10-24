@@ -336,7 +336,7 @@
         </div>
         <div id="conductorTalkContCont">
           <p class="drunkText" id="conductorName">Joe DeSena</p>
-          <div id="conductorTalkCont" role="scrollbar" onscroll="resizeConductor()">
+          <div class="scrollbar" id="conductorTalkCont" role="scrollbar" onscroll="resizeConductor()">
             <div id="okCont">
               <div id="okSpacer">
               </div>
@@ -483,7 +483,7 @@
             <p id="cheerHeading">Cheer Score: <span id="cheerScore"></span></p>
             <div id="cheersContCont">
               <div id="cheersCont">
-                <ul id="cheers" tabindex="-1" role="scrollbar" onscroll="awayFromTop()">
+                <ul class="scrollbar" id="cheers" tabindex="-1" role="scrollbar" onscroll="awayFromTop()">
                   <li class="cheer midCheer incorrectCheer unusedCheer firstCheer" id="cheer1" role="listitem">
                     <p class="cheerMessage midCheerMessage incorrectCheerMessage unusedCheerMessage" id="cheerMessage1"><span id="goals"></span> more goals!</p>
                     <div class="cheerCover midCheerCover incorrectCheerCover unusedCheerCover" id="cheerCover1" onclick="cheer(1, 2, event)">
@@ -2777,7 +2777,7 @@
       </div>
       <article id="cover" role="article" aria-description="A cover that contains several smaller modals" aria-hidden="true">
         <div class="modal" id="poem" role="region" aria-description="Jake McNamara's Thanksgiving poem">
-          <div id="poemTextCont" tabindex="-1" role="scrollbar">
+          <div class="scrollbar" id="poemTextCont" tabindex="-1" role="scrollbar">
             <div id="poemText">
               <div class="poemStanza" id="poemStanza1">
                 <p class="poemLine poemStanza1Line poemLine1" id="poemStanza1Line1">I'm thankful that our paths have crossed,</p>
@@ -3038,7 +3038,7 @@
           <button type="reset" class="defaultButton" id="playAgain" tabindex="-1" role="button" aria-label="Play this game again" onclick="playAgain(event)">Play Again?</button>
         </div>
         <section id="account" role="region" aria-description="Your personal account with this game">
-          <div id="infoDataMemoryCont" tabindex="-1" role="scrollbar">
+          <div class="scrollbar" id="infoDataMemoryCont" tabindex="-1" role="scrollbar">
             <div id="accountHeadingCont">
               <p id="accountHeading">Welcome, <span class="username usernamePlayer usernameLower">player</span>!</p>
               <p id="accountSubheading">Start filling out the fields below to add your personal info to your account</p>
@@ -4559,7 +4559,7 @@
         <body>
           <article id="secret" tabindex="0" role="article" aria-description="The secret part of this game where my message to Alison Isko is stored">
             <div id="secretModal" tabindex="0" role="region" aria-description="My message to Alison Isko">
-              <div id="secretMessageContContCont" role="scrollbar">
+              <div class="scrollbar" id="secretMessageContContCont" role="scrollbar">
                 <p id="secretHeading">To Alison Isko...</p>
                 <div id="secretMessageContCont">
                   <div class="alisonIskoCont" id="alisonIskoHotelCont">
@@ -4685,7 +4685,7 @@
     </main>
     <footer role="contentinfo" aria-hidden="true">
     </footer>
-    <article id="mobile" tabindex="-1" role="article" aria-description="An alternative interface that is displayed when the screen size is too small" aria-hidden="true">
+    <article class="scrollbar" id="mobile" tabindex="-1" role="article" aria-description="An alternative interface that is displayed when the screen size is too small" aria-hidden="true">
       <div id="mobileMessagesContCont">
         <p id="mobileHeading">Whoops, too small!</p>
         <div id="mobileMessagesCont">

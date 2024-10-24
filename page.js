@@ -6915,6 +6915,7 @@ function gotIt15() {
   document.getElementById("tonyCollins").style.left = "20%";
   document.getElementById("tonyCollins").style.opacity = "100%";
   document.getElementById("tonyCollins").style.transition = "visibility .25s ease 0s, left 2s ease .25s, opacity .25s ease 0s";
+  document.getElementById("tonyCollins").tabIndex = "0";
   sessionStorage.songPrime = 8;
   setTimeout(enableButton, 2250);
   document.getElementById("ok").onclick = function() {
@@ -6991,6 +6992,8 @@ function gotIt16() {
   document.getElementById("tonyCollins").style.visibility = "hidden";
   document.getElementById("tonyCollins").style.opacity = "0%";
   document.getElementById("tonyCollins").style.transition = "all .25s ease 0s";
+  document.getElementById("tonyCollins").tabIndex = "-1";
+  document.getElementById("tonyCollins").blur();
   sessionStorage.period++;
   document.getElementById("scoreboardPeriod").innerHTML = sessionStorage.period;
   for (var i = 0; i < document.getElementsByClassName("flip").length; i++) {

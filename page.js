@@ -2634,6 +2634,14 @@ function gameBegins(event) {
         document.getElementsByTagName("select")[i].disabled = false;
       }
     }
+    for (var i = 0; i < document.getElementsByTagName("option").length; i++) {
+      if (document.getElementsByTagName("option")[i].classList.contains("disabled")) {
+        document.getElementsByTagName("option")[i].disabled = true;
+      }
+      else {
+        document.getElementsByTagName("option")[i].disabled = false;
+      }
+    }
     for (var i = 0; i < document.getElementsByTagName("input").length; i++) {
       if ((document.getElementsByTagName("input")[i].type == "text") || (document.getElementsByTagName("input")[i].type == "search") || (document.getElementsByTagName("input")[i].type == "url") || (document.getElementsByTagName("input")[i].type == "email") || (document.getElementsByTagName("input")[i].type == "tel") || (document.getElementsByTagName("input")[i].type == "password") || (document.getElementsByTagName("input")[i].type == "number") || (document.getElementsByTagName("input")[i].type == "week") || (document.getElementsByTagName("input")[i].type == "month") || (document.getElementsByTagName("input")[i].type == "time") || (document.getElementsByTagName("input")[i].type == "date") || (document.getElementsByTagName("input")[i].type == "datetime-local") || (document.getElementsByTagName("input")[i].type == "file") || (document.getElementsByTagName("input")[i].type == "color")) {
         document.getElementsByTagName("input")[i].value = "";

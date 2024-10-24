@@ -2708,6 +2708,7 @@ function gameBegins(event) {
   document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
   document.getElementById("viewAccountToggle").tabIndex = "0";
   if ((window.innerHeight <= 600) || (window.innerWidth <= 1200)) {
+    document.getElementsByTagName("main")[0].ariaHidden = true;
     document.getElementById("urlButton").tabIndex = "0";
     document.getElementById("mobileButton").tabIndex = "0";
     document.getElementById("mobileImgContCont").tabIndex = "0";
@@ -2721,9 +2722,6 @@ function gameBegins(event) {
     document.onclick = unselectUrl;
   }
   else if ((window.innerHeight > 600) && (window.innerWidth > 1200)) {
-    document.getElementById("mobile").tabIndex = "-1";
-    document.getElementById("mobile").ariaHidden = true;
-    document.getElementById("mobile").blur();
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
       if (document.getElementById("conductorTalkCont").scrollTop > 0) {
         document.getElementById("conductorTalkCont").scrollTop = 0;

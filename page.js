@@ -6277,6 +6277,14 @@ function block() {
       ];
       disableCheers(disableClassLists, disableStyles);
       document.getElementById("offenderName").innerHTML = "our Golden Knights";
+      if (sessionStorage.gender == 1) {
+        document.getElementsByClassName("clarksonMenPlayer")[sessionStorage.clarksonCage].style.pointerEvents = "auto";
+        document.getElementsByClassName("clarksonMenPlayer")[sessionStorage.clarksonCage].tabIndex = "0";
+      }
+      else if (sessionStorage.gender == 2) {
+        document.getElementsByClassName("clarksonWomenPlayer")[sessionStorage.clarksonCage].style.pointerEvents = "auto";
+        document.getElementsByClassName("clarksonWomenPlayer")[sessionStorage.clarksonCage].tabIndex = "0";
+      }
       document.getElementById("cage" + sessionStorage.clarksonCage).style.visibility = "hidden";
       document.getElementById("cage" + sessionStorage.clarksonCage).style.opacity = "0%";
       document.getElementById("cage" + sessionStorage.clarksonCage).style.transition = "all .25s ease 0s";
@@ -6286,6 +6294,14 @@ function block() {
   if ((sessionStorage.sluTimeout > 0) && (sessionStorage.sluTimeout != "ejection")) {
     sessionStorage.sluTimeout--;
     if (sessionStorage.sluTimeout == 0) {
+      if (sessionStorage.gender == 1) {
+        document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].style.pointerEvents = "auto";
+        document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].tabIndex = "0";
+      }
+      else if (sessionStorage.gender == 2) {
+        document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].style.pointerEvents = "auto";
+        document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].tabIndex = "0";
+      }
       document.getElementById("cage" + sessionStorage.sluCage).style.visibility = "hidden";
       document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "0%";
       document.getElementById("cage" + sessionStorage.sluCage).style.transition = "all .25s ease 0s";
@@ -6501,6 +6517,14 @@ function celebrate() {
       ];
       disableCheers(disableClassLists, disableStyles);
       document.getElementById("offenderName").innerHTML = "our Golden Knights";
+      if (sessionStorage.gender == 1) {
+        document.getElementsByClassName("clarksonMenPlayer")[sessionStorage.clarksonCage].style.pointerEvents = "auto";
+        document.getElementsByClassName("clarksonMenPlayer")[sessionStorage.clarksonCage].tabIndex = "0";
+      }
+      else if (sessionStorage.gender == 2) {
+        document.getElementsByClassName("clarksonWomenPlayer")[sessionStorage.clarksonCage].style.pointerEvents = "auto";
+        document.getElementsByClassName("clarksonWomenPlayer")[sessionStorage.clarksonCage].tabIndex = "0";
+      }
       document.getElementById("cage" + sessionStorage.clarksonCage).style.visibility = "hidden";
       document.getElementById("cage" + sessionStorage.clarksonCage).style.opacity = "0%";
       document.getElementById("cage" + sessionStorage.clarksonCage).style.transition = "all .25s ease 0s";
@@ -6510,6 +6534,14 @@ function celebrate() {
   if ((sessionStorage.sluTimeout > 0) && (sessionStorage.sluTimeout != "ejection")) {
     sessionStorage.sluTimeout--;
     if (sessionStorage.sluTimeout == 0) {
+      if (sessionStorage.gender == 1) {
+        document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].style.pointerEvents = "auto";
+        document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].tabIndex = "0";
+      }
+      else if (sessionStorage.gender == 2) {
+        document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].style.pointerEvents = "auto";
+        document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].tabIndex = "0";
+      }
       document.getElementById("cage" + sessionStorage.sluCage).style.visibility = "hidden";
       document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "0%";
       document.getElementById("cage" + sessionStorage.sluCage).style.transition = "all .25s ease 0s";
@@ -6642,9 +6674,27 @@ function penalty() {
     document.getElementById("cage" + sessionStorage.clarksonCage).style.visibility = "visible";
     document.getElementById("cage" + sessionStorage.clarksonCage).style.opacity = "100%";
     document.getElementById("cage" + sessionStorage.clarksonCage).style.transition = "all .25s ease 0s";
+    if (sessionStorage.gender == 1) {
+      document.getElementsByClassName("clarksonMenPlayer")[sessionStorage.clarksonCage].style.pointerEvents = "none";
+      document.getElementsByClassName("clarksonMenPlayer")[sessionStorage.clarksonCage].tabIndex = "-1";
+      document.getElementsByClassName("clarksonMenPlayer")[sessionStorage.clarksonCage].blur();
+    }
+    else if (sessionStorage.gender == 2) {
+      document.getElementsByClassName("clarksonWomenPlayer")[sessionStorage.clarksonCage].style.pointerEvents = "none";
+      document.getElementsByClassName("clarksonWomenPlayer")[sessionStorage.clarksonCage].tabIndex = "-1";
+      document.getElementsByClassName("clarksonWomenPlayer")[sessionStorage.clarksonCage].blur();
+    }
     if ((sessionStorage.sluTimeout > 0) && (sessionStorage.sluTimeout != "ejection")) {
       sessionStorage.sluTimeout--;
       if (sessionStorage.sluTimeout == 0) {
+        if (sessionStorage.gender == 1) {
+          document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].style.pointerEvents = "auto";
+          document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].tabIndex = "0";
+        }
+        else if (sessionStorage.gender == 2) {
+          document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].style.pointerEvents = "auto";
+          document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].tabIndex = "0";
+        }
         document.getElementById("cage" + sessionStorage.sluCage).style.visibility = "hidden";
         document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "0%";
         document.getElementById("cage" + sessionStorage.sluCage).style.transition = "all .25s ease 0s";
@@ -6688,6 +6738,16 @@ function penalty() {
     document.getElementById("cage" + sessionStorage.sluCage).style.visibility = "visible";
     document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "100%";
     document.getElementById("cage" + sessionStorage.sluCage).style.transition = "all .25s ease 0s";
+    if (sessionStorage.gender == 1) {
+      document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].style.pointerEvents = "none";
+      document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].tabIndex = "-1";
+      document.getElementsByClassName("clarksonMenPlayer")[sessionStorage.sluCage].blur();
+    }
+    else if (sessionStorage.gender == 2) {
+      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].style.pointerEvents = "none";
+      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].tabIndex = "-1";
+      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].blur();
+    }
     if ((sessionStorage.clarksonTimeout > 0) && (sessionStorage.clarksonTimeout != "ejection")) {
       sessionStorage.clarksonTimeout--;
       if (sessionStorage.clarksonTimeout == 0) {
@@ -6699,6 +6759,14 @@ function penalty() {
         ];
         disableCheers(disableClassLists, disableStyles);
         document.getElementById("offenderName").innerHTML = "our Golden Knights";
+        if (sessionStorage.gender == 1) {
+          document.getElementsByClassName("clarksonMenPlayer")[sessionStorage.clarksonCage].style.pointerEvents = "auto";
+          document.getElementsByClassName("clarksonMenPlayer")[sessionStorage.clarksonCage].tabIndex = "0";
+        }
+        else if (sessionStorage.gender == 2) {
+          document.getElementsByClassName("clarksonWomenPlayer")[sessionStorage.clarksonCage].style.pointerEvents = "auto";
+          document.getElementsByClassName("clarksonWomenPlayer")[sessionStorage.clarksonCage].tabIndex = "0";
+        }
         document.getElementById("cage" + sessionStorage.clarksonCage).style.visibility = "hidden";
         document.getElementById("cage" + sessionStorage.clarksonCage).style.opacity = "0%";
         document.getElementById("cage" + sessionStorage.clarksonCage).style.transition = "all .25s ease 0s";
@@ -8262,12 +8330,28 @@ function win() {
     ];
     disableCheers(disableClassLists, disableStyles);
     document.getElementById("offenderName").innerHTML = "our Golden Knights";
+    if (sessionStorage.gender == 1) {
+      document.getElementsByClassName("clarksonMenPlayer")[sessionStorage.clarksonCage].style.pointerEvents = "auto";
+      document.getElementsByClassName("clarksonMenPlayer")[sessionStorage.clarksonCage].tabIndex = "0";
+    }
+    else if (sessionStorage.gender == 2) {
+      document.getElementsByClassName("clarksonWomenPlayer")[sessionStorage.clarksonCage].style.pointerEvents = "auto";
+      document.getElementsByClassName("clarksonWomenPlayer")[sessionStorage.clarksonCage].tabIndex = "0";
+    }
     document.getElementById("cage" + sessionStorage.clarksonCage).style.visibility = "hidden";
     document.getElementById("cage" + sessionStorage.clarksonCage).style.opacity = "0%";
     document.getElementById("cage" + sessionStorage.clarksonCage).style.transition = "all .25s ease 0s";
     sessionStorage.removeItem("clarksonCage");
   }
   if ((sessionStorage.sluTimeout > 0) || (sessionStorage.sluTimeout == "ejection")) {
+    if (sessionStorage.gender == 1) {
+      document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].style.pointerEvents = "auto";
+      document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].tabIndex = "0";
+    }
+    else if (sessionStorage.gender == 2) {
+      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].style.pointerEvents = "auto";
+      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].tabIndex = "0";
+    }
     document.getElementById("cage" + sessionStorage.sluCage).style.visibility = "hidden";
     document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "0%";
     document.getElementById("cage" + sessionStorage.sluCage).style.transition = "all .25s ease 0s";
@@ -8427,12 +8511,28 @@ function lose() {
     ];
     disableCheers(disableClassLists, disableStyles);
     document.getElementById("offenderName").innerHTML = "our Golden Knights";
+    if (sessionStorage.gender == 1) {
+      document.getElementsByClassName("clarksonMenPlayer")[sessionStorage.clarksonCage].style.pointerEvents = "auto";
+      document.getElementsByClassName("clarksonMenPlayer")[sessionStorage.clarksonCage].tabIndex = "0";
+    }
+    else if (sessionStorage.gender == 2) {
+      document.getElementsByClassName("clarksonWomenPlayer")[sessionStorage.clarksonCage].style.pointerEvents = "auto";
+      document.getElementsByClassName("clarksonWomenPlayer")[sessionStorage.clarksonCage].tabIndex = "0";
+    }
     document.getElementById("cage" + sessionStorage.clarksonCage).style.visibility = "hidden";
     document.getElementById("cage" + sessionStorage.clarksonCage).style.opacity = "0%";
     document.getElementById("cage" + sessionStorage.clarksonCage).style.transition = "all .25s ease 0s";
     sessionStorage.removeItem("clarksonCage");
   }
   if ((sessionStorage.sluTimeout > 0) || (sessionStorage.sluTimeout == "ejection")) {
+    if (sessionStorage.gender == 1) {
+      document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].style.pointerEvents = "auto";
+      document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].tabIndex = "0";
+    }
+    else if (sessionStorage.gender == 2) {
+      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].style.pointerEvents = "auto";
+      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].tabIndex = "0";
+    }
     document.getElementById("cage" + sessionStorage.sluCage).style.visibility = "hidden";
     document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "0%";
     document.getElementById("cage" + sessionStorage.sluCage).style.transition = "all .25s ease 0s";

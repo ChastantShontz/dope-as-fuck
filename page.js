@@ -5000,6 +5000,9 @@ function gotIt8() {
       setTimeout(() => (
         document.getElementsByClassName("zebra")[x].style.animation = "none"
       ), 6500);
+      setTimeout(() => (
+        document.getElementsByClassName("zebra")[x].tabIndex = "0"
+      ), 250);
     }
     reset(i);
   }
@@ -5034,6 +5037,7 @@ function gotIt9() {
     document.getElementsByClassName("zebra")[i].style.visibility = "hidden";
     document.getElementsByClassName("zebra")[i].style.opacity = "0%";
     document.getElementsByClassName("zebra")[i].style.transition = "all .25s ease 0s";
+    document.getElementsByClassName("zebra")[i].tabIndex = "-1";
   }
   if (sessionStorage.gender == 1) {
     for (var i = 0; i < document.getElementsByClassName("clarksonMenPlayer").length; i++) {

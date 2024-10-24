@@ -4983,6 +4983,7 @@ function gotIt8() {
   document.getElementById("goldenKnight").style.opacity = "0%";
   document.getElementById("goldenKnight").style.transition = "all .25s ease 0s";
   document.getElementById("goldenKnight").tabIndex = "-1";
+  document.getElementById("goldenKnight").blur();
   for (var i = 0; i < document.getElementsByClassName("zebra").length; i++) {
     var animationName = (i + 1);
     document.getElementsByClassName("zebra")[i].style.visibility = "visible";
@@ -5038,6 +5039,7 @@ function gotIt9() {
     document.getElementsByClassName("zebra")[i].style.opacity = "0%";
     document.getElementsByClassName("zebra")[i].style.transition = "all .25s ease 0s";
     document.getElementsByClassName("zebra")[i].tabIndex = "-1";
+    document.getElementsByClassName("zebra")[i].blur();
   }
   if (sessionStorage.gender == 1) {
     for (var i = 0; i < document.getElementsByClassName("clarksonMenPlayer").length; i++) {

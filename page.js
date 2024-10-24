@@ -4946,11 +4946,11 @@ function gotIt7() {
   document.getElementById("goldenKnight").style.visibility = "visible";
   document.getElementById("goldenKnight").style.left = "52%";
   document.getElementById("goldenKnight").style.opacity = "100%";
-  document.getElementById("goldenKnight").style.transition = "visibility .25s ease .25s, left 0s ease 6.5s, opacity .25s ease .25s";
-  document.getElementById("goldenKnight").style.animation = "goldenKnightLap 6s ease .5s 1 forwards";
+  document.getElementById("goldenKnight").style.transition = "visibility .25s ease 0s, left 0s ease 6.25s, opacity .25s ease 0s";
+  document.getElementById("goldenKnight").style.animation = "goldenKnightLap 6s ease .25s 1 forwards";
   setTimeout(() => (
     document.getElementById("goldenKnight").style.animation = "none"
-  ), 6500);
+  ), 6250);
   sessionStorage.songPrime = 41;
   setTimeout(enableButton, 6250);
   document.getElementById("ok").onclick = function() {

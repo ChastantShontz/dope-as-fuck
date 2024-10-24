@@ -316,7 +316,7 @@
     <link href="main.css" hreflang="en-us" charset="utf-8" rel="preload stylesheet" as="style" fetchpriority="high" type="text/css" id="mainStylesheet">
   </head>
   <body tabindex="0" onload="if (localStorage.firstGame == undefined) {localStorage.firstGame = true}; loadSucceeded(); gameBegins(event)" onbeforeunload="return warning(document.activeElement)" onunload="gameComplete()" onresize="mobile()" ononline="connected()" onoffline="disconnected()">
-    <header role="banner">
+    <header role="banner" aria-hidden="true">
     </header>
     <main role="main">
       <section id="loading">
@@ -4683,7 +4683,7 @@
       <template id="virusTemplate" aria-hidden="true">
       </template>
     </main>
-    <footer role="contentinfo">
+    <footer role="contentinfo" aria-hidden="true">
     </footer>
     <article id="mobile" tabindex="-1" role="article" aria-description="An alternative interface that is displayed when the screen size is too small" aria-hidden="true">
       <div id="mobileMessagesContCont">

@@ -6970,12 +6970,7 @@ function gotIt16() {
   for (var i = 0; i < document.getElementsByClassName("flip").length; i++) {
     document.getElementById("sluVictoryMessageCont").style.gridColumnStart = "2";
     document.getElementById("clarksonVictoryMessageCont").style.gridColumnStart = "1";
-    if ((document.getElementsByClassName("flip")[i].classList.contains("playerProfile")) && (document.getElementsByClassName("flip")[i].classList.contains("unToggledProfile"))) {
-      document.getElementsByClassName("flip")[i].style.transform = "scale(0)";
-    }
-    else {
-      document.getElementsByClassName("flip")[i].style.transform = "scaleX(-1)";
-    }
+    document.getElementsByClassName("flip")[i].style.transform = "scaleX(-1)";
     if (document.getElementsByClassName("flip")[i] == document.getElementById("rink")) {
       document.getElementById("rink").style.transition = "transform 1s ease .25s";
     }
@@ -8035,12 +8030,7 @@ function gotIt20() {
   for (var i = 0; i < document.getElementsByClassName("flip").length; i++) {
     document.getElementById("sluVictoryMessageCont").style.gridColumnStart = "1";
     document.getElementById("clarksonVictoryMessageCont").style.gridColumnStart = "2";
-    if ((document.getElementsByClassName("flip")[i].classList.contains("playerProfile")) && (document.getElementsByClassName("flip")[i].classList.contains("unToggledProfile"))) {
-      document.getElementsByClassName("flip")[i].style.transform = "scale(0)";
-    }
-    else {
-      document.getElementsByClassName("flip")[i].style.transform = "scaleX(1)";
-    }
+    document.getElementsByClassName("flip")[i].style.transform = "scaleX(1)";
     if (document.getElementsByClassName("flip")[i] == document.getElementById("rink")) {
       document.getElementById("rink").style.transition = "transform 1s ease 0s";
     }
@@ -8088,12 +8078,7 @@ function gotIt21() {
     for (var i = 0; i < document.getElementsByClassName("flip").length; i++) {
       document.getElementById("sluVictoryMessageCont").style.gridColumnStart = "2";
       document.getElementById("clarksonVictoryMessageCont").style.gridColumnStart = "1";
-      if ((document.getElementsByClassName("flip")[i].classList.contains("playerProfile")) && (document.getElementsByClassName("flip")[i].classList.contains("unToggledProfile"))) {
-        document.getElementsByClassName("flip")[i].style.transform = "scale(0)";
-      }
-      else {
-        document.getElementsByClassName("flip")[i].style.transform = "scaleX(-1)";
-      }
+      document.getElementsByClassName("flip")[i].style.transform = "scaleX(-1)";
       if (document.getElementsByClassName("flip")[i] == document.getElementById("rink")) {
         document.getElementById("rink").style.transition = "transform 1s ease 0s";
       }

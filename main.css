@@ -1422,6 +1422,15 @@ main {
   width: 90%;
 }
 
+#playerProfiles {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
 .playerProfile {
   z-index: 3;
   display: none;
@@ -1432,7 +1441,6 @@ main {
   padding: .5em;
   box-shadow: .25em .25em .5em 0 var(--gray);
   transform: scale(0);
-  pointer-events: none;
 }
 
 .clarksonProfile {

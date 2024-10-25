@@ -2780,8 +2780,8 @@ function changeName(event) {
     (event.target).innerHTML = ((event.target).innerHTML).replace(/Chestnut(?!\s2\.0)/gsm, "Charlie Day");
   }
   if (((event.target).innerHTML).match(/Chris Treutlein/gsm)) {
-    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<!(((^|(\.|\?|\!)\s+)\(?)|((\.|\,|\;|\:|\?|\!)\s+|\'|\"|\()(\'|\")))Chris Treutlein/gsm, "the Honorable Dr. Mayor Treutlein, Jr.");
-    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<=(((^|(\.|\?|\!)\s+)\(?)|((\.|\,|\;|\:|\?|\!)\s+|\'|\"|\()(\'|\")))Chris Treutlein/gsm, "The Honorable Dr. Mayor Treutlein, Jr.");
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<!(((^|(\.|\?|!)\s+)\(?)|((\.|,|;|:|\?|!)\s+|'|"|\()('|")))Chris Treutlein/gsm, "the Honorable Dr. Mayor Treutlein, Jr.");
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<=(((^|(\.|\?|!)\s+)\(?)|((\.|,|;|:|\?|!)\s+|'|"|\()('|")))Chris Treutlein/gsm, "The Honorable Dr. Mayor Treutlein, Jr.");
   }
   if (((event.target).innerHTML).match(/Colin Whitesell/gsm)) {
     (event.target).innerHTML = ((event.target).innerHTML).replace(/Colin Whitesell/gsm, "Coin");
@@ -2793,8 +2793,8 @@ function changeName(event) {
     (event.target).innerHTML = ((event.target).innerHTML).replace(/Emma Fish/gsm, "Chestnut 2.0");
   }
   if (((event.target).innerHTML).match(/Garrett/gsm)) {
-    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<!(((^|(\.|\?|\!)\s+)\(?)|((\.|\,|\;|\:|\?|\!)\s+|\'|\"|\()(\'|\")))Garrett/gsm, "the whore");
-    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<=(((^|(\.|\?|\!)\s+)\(?)|((\.|\,|\;|\:|\?|\!)\s+|\'|\"|\()(\'|\")))Garrett/gsm, "The whore");
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<!(((^|(\.|\?|!)\s+)\(?)|((\.|,|;|:|\?|!)\s+|'|"|\()('|")))Garrett/gsm, "the whore");
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<=(((^|(\.|\?|!)\s+)\(?)|((\.|,|;|:|\?|!)\s+|'|"|\()('|")))Garrett/gsm, "The whore");
   }
   if (((event.target).innerHTML).match(/Joe Franco/gsm)) {
     (event.target).innerHTML = ((event.target).innerHTML).replace(/Joe Franco/gsm, "Buddy");
@@ -2812,14 +2812,14 @@ function changeName(event) {
     (event.target).innerHTML = ((event.target).innerHTML).replace(/Marc Christensen/gsm, "Peter Griffin");
   }
   if (((event.target).innerHTML).match(/Oliver Queen/gsm)) {
-    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<!(((^|(\.|\?|\!)\s+)\(?)|((\.|\,|\;|\:|\?|\!)\s+|\'|\"|\()(\'|\")))Oliver Queen/gsm, "the Arrow");
-    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<=(((^|(\.|\?|\!)\s+)\(?)|((\.|\,|\;|\:|\?|\!)\s+|\'|\"|\()(\'|\")))Oliver Queen/gsm, "The Arrow");
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<!(((^|(\.|\?|!)\s+)\(?)|((\.|,|;|:|\?|!)\s+|'|"|\()('|")))Oliver Queen/gsm, "the Arrow");
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<=(((^|(\.|\?|!)\s+)\(?)|((\.|,|;|:|\?|!)\s+|'|"|\()('|")))Oliver Queen/gsm, "The Arrow");
   }
   if (((event.target).innerHTML).match(/Ryan McCarthy/gsm)) {
     (event.target).innerHTML = ((event.target).innerHTML).replace(/Ryan McCarthy/gsm, "SheRyan");
   }
-  if (((event.target).innerHTML).match(/Ryan O\'Rourke/gsm)) {
-    (event.target).innerHTML = ((event.target).innerHTML).replace(/Ryan O\'Rourke/gsm, "ThreeRyan");
+  if (((event.target).innerHTML).match(/Ryan O'Rourke/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Ryan O'Rourke/gsm, "ThreeRyan");
   }
   if (((event.target).innerHTML).match(/secretary/gism)) {
     (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<=^.*(Marc|Christensen).*)secretary(?=.*(Marc|Christensen).*$)/gsm, "mistress");
@@ -2840,8 +2840,8 @@ function changeNameBack(event) {
   if (((event.target).innerHTML).match(/Charlie Day/gsm)) {
     (event.target).innerHTML = ((event.target).innerHTML).replace(/Charlie Day/gsm, "Chestnut");
   }
-  if (((event.target).innerHTML).match(/the Honorable Dr\. Mayor Treutlein\, Jr\./gism)) {
-    (event.target).innerHTML = ((event.target).innerHTML).replace(/the Honorable Dr\. Mayor Treutlein\, Jr\./gism, "Chris Treutlein");
+  if (((event.target).innerHTML).match(/the Honorable Dr\. Mayor Treutlein, Jr\./gism)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/the Honorable Dr\. Mayor Treutlein, Jr\./gism, "Chris Treutlein");
   }
   if (((event.target).innerHTML).match(/\bCoin\b/gsm)) {
     (event.target).innerHTML = ((event.target).innerHTML).replace(/\bCoin\b/gsm, "Colin Whitesell");
@@ -3328,8 +3328,8 @@ function pronoun() {
       if ((document.getElementsByClassName("pronoun")[i].innerHTML).match(/\bthey\b/gism)) {
         document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/\bthey\b/gsm, "he");
         document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/\bThey\b/gsm, "He");
-        if ((document.getElementsByClassName("pronoun")[i].innerHTML).match(/(?<=\bhe\b)\'re/gism)) {
-          document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/(?<=\bhe\b)\'re/gism, "'s");
+        if ((document.getElementsByClassName("pronoun")[i].innerHTML).match(/(?<=\bhe\b)'re/gism)) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/(?<=\bhe\b)'re/gism, "'s");
         }
       }
       else if ((document.getElementsByClassName("pronoun")[i].innerHTML).match(/\bthem\b/gism)) {
@@ -3351,8 +3351,8 @@ function pronoun() {
       if ((document.getElementsByClassName("pronoun")[i].innerHTML).match(/\bthey\b/gism)) {
         document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/\bthey\b/gsm, "she");
         document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/\bThey\b/gsm, "She");
-        if ((document.getElementsByClassName("pronoun")[i].innerHTML).match(/(?<=\bshe\b)\'re/gism)) {
-          document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/(?<=\bshe\b)\'re/gism, "'s");
+        if ((document.getElementsByClassName("pronoun")[i].innerHTML).match(/(?<=\bshe\b)'re/gism)) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/(?<=\bshe\b)'re/gism, "'s");
         }
       }
       else if ((document.getElementsByClassName("pronoun")[i].innerHTML).match(/\bthem\b|\btheir\b/gism)) {
@@ -3886,7 +3886,7 @@ function selectAnswer(answer, event) {
             this.value = (this.value).replace(/<br>(with lyrics!)/sm, "");
           }
         }
-        var camelCase = ((((((((this.value).replace(/\<\/*(b|strong|i|em|u|s|br)\>/gism, "")).replace(/\.|\,|\'|\"|\`|\~|\-|\_|\+|\*|\^|\%|\=|\>|\<|\&|\#|\$|\@|\;|\:|\?|\!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+/gsm, " ")).toLowerCase()).split(" ")).map((word) => ((word.charAt(0)).toUpperCase() + word.substring(1)))).join("")).charAt(0)).toLowerCase() + (((((((this.value).replace(/\<\/*(b|strong|i|em|u|s|br)\>/gism, "")).replace(/\.|\,|\'|\"|\`|\~|\-|\_|\+|\*|\^|\%|\=|\>|\<|\&|\#|\$|\@|\;|\:|\?|\!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+/gsm, " ")).toLowerCase()).split(" ")).map((word) => ((word.charAt(0)).toUpperCase() + word.substring(1)))).join("")).substring(1);
+        var camelCase = ((((((((this.value).replace(/<\/*(b|strong|i|em|u|s|br)>/gism, "")).replace(/\.|,|'|"|`|~|-|_|\+|\*|\^|%|=|>|<|&|#|\$|@|;|:|\?|!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+/gsm, " ")).toLowerCase()).split(" ")).map((word) => ((word.charAt(0)).toUpperCase() + word.substring(1)))).join("")).charAt(0)).toLowerCase() + (((((((this.value).replace(/<\/*(b|strong|i|em|u|s|br)>/gism, "")).replace(/\.|,|'|"|`|~|-|_|\+|\*|\^|%|=|>|<|&|#|\$|@|;|:|\?|!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+/gsm, " ")).toLowerCase()).split(" ")).map((word) => ((word.charAt(0)).toUpperCase() + word.substring(1)))).join("")).substring(1);
         return camelCase;
       }
     }
@@ -4001,7 +4001,7 @@ function chooseAnswer(event) {
         localStorage.guessedOnFirstAttempt = 100;
       }
       else {
-        localStorage.guessedOnFirstAttempt = (((+(((localStorage.guessedOnFirstAttempt).replace(/\%/sm, "") / 100) * (localStorage.totalGuesses - 1)) + 1) / localStorage.totalGuesses) * 100);
+        localStorage.guessedOnFirstAttempt = (((+(((localStorage.guessedOnFirstAttempt).replace(/%/sm, "") / 100) * (localStorage.totalGuesses - 1)) + 1) / localStorage.totalGuesses) * 100);
       }
     }
     else {
@@ -4009,24 +4009,24 @@ function chooseAnswer(event) {
         localStorage.guessedOnFirstAttempt = 0;
       }
       else {
-        localStorage.guessedOnFirstAttempt = (((((localStorage.guessedOnFirstAttempt).replace(/\%/sm, "") / 100) * (localStorage.totalGuesses - 1)) / localStorage.totalGuesses) * 100);
+        localStorage.guessedOnFirstAttempt = (((((localStorage.guessedOnFirstAttempt).replace(/%/sm, "") / 100) * (localStorage.totalGuesses - 1)) / localStorage.totalGuesses) * 100);
       }
     }
     round.setValue(localStorage.guessedOnFirstAttempt);
     localStorage.guessedOnFirstAttempt = round.getValue() + "%";
-    if ((localStorage.correctGuessRate).replace(/\%/sm, "") == 0) {
+    if ((localStorage.correctGuessRate).replace(/%/sm, "") == 0) {
       localStorage.proficiency = "Ignoramus";
     }
-    else if (((localStorage.correctGuessRate).replace(/\%/sm, "") > 0) && ((localStorage.correctGuessRate).replace(/\%/sm, "") < 40)) {
+    else if (((localStorage.correctGuessRate).replace(/%/sm, "") > 0) && ((localStorage.correctGuessRate).replace(/%/sm, "") < 40)) {
       localStorage.proficiency = "Moron";
     }
-    else if (((localStorage.correctGuessRate).replace(/\%/sm, "") >= 40) && ((localStorage.correctGuessRate).replace(/\%/sm, "") < 70)) {
+    else if (((localStorage.correctGuessRate).replace(/%/sm, "") >= 40) && ((localStorage.correctGuessRate).replace(/%/sm, "") < 70)) {
       localStorage.proficiency = "Amateur";
     }
-    else if (((localStorage.correctGuessRate).replace(/\%/sm, "") >= 70) && ((localStorage.correctGuessRate).replace(/\%/sm, "") < 90)) {
+    else if (((localStorage.correctGuessRate).replace(/%/sm, "") >= 70) && ((localStorage.correctGuessRate).replace(/%/sm, "") < 90)) {
       localStorage.proficiency = "Expert";
     }
-    else if ((localStorage.correctGuessRate).replace(/\%/sm, "") == 100) {
+    else if ((localStorage.correctGuessRate).replace(/%/sm, "") == 100) {
       localStorage.proficiency = "GOAT";
     }
     remember(event);
@@ -7197,8 +7197,8 @@ function openYoutubeSong() {
     if (document.getElementsByClassName("audio")[sessionStorage.youtube].currentTime > 0) {
       document.getElementsByClassName("audio")[sessionStorage.youtube].currentTime = 0;
     }
-    document.getElementById("youtubeTitle").innerHTML = (songs[sessionStorage.youtube].title).replace(/\<\/*(b|strong|i|em|u|s|br)\>/gism, "");
-    document.getElementById("youtubeTitle").title = (songs[sessionStorage.youtube].title).replace(/\<\/*(b|strong|i|em|u|s|br)\>/gism, "") + " by " + songs[sessionStorage.youtube].artist;
+    document.getElementById("youtubeTitle").innerHTML = (songs[sessionStorage.youtube].title).replace(/<\/*(b|strong|i|em|u|s|br)>/gism, "");
+    document.getElementById("youtubeTitle").title = (songs[sessionStorage.youtube].title).replace(/<\/*(b|strong|i|em|u|s|br)>/gism, "") + " by " + songs[sessionStorage.youtube].artist;
     document.getElementById("youtubeSongs").style.background = "url(\"" + songs[sessionStorage.youtube].image + "\") center / cover";
     if (document.getElementById("youtubeSongs").style.pointerEvents == "none") {
       document.getElementById("youtubeSongs").style.pointerEvents = "auto";
@@ -7270,7 +7270,7 @@ function openYoutubeSong() {
 }
 
 function error() {
-  let duration = new RangeError("YouTube song " + (songs[sessionStorage.youtube].title).replace(/\<\/*(b|strong|i|em|u|s|br)\>/gism, "") + " duration of " + Math.floor(songs[sessionStorage.youtube].duration / 3600) + ((Math.floor(songs[sessionStorage.youtube].duration / 3600) == 1) ? (" hour, ") : (" hours, ")) + Math.floor((songs[sessionStorage.youtube].duration % 3600) / 60) + ((Math.floor((songs[sessionStorage.youtube].duration % 3600) / 60) == 1) ? (" minute, ") : (" minutes, ")) + Math.floor((songs[sessionStorage.youtube].duration % 3600) % 60) + ((Math.floor((songs[sessionStorage.youtube].duration % 3600) % 60) == 1) ? (" second") : (" seconds")) + " is greater than the 1 hour max limit.");
+  let duration = new RangeError("YouTube song " + (songs[sessionStorage.youtube].title).replace(/<\/*(b|strong|i|em|u|s|br)>/gism, "") + " duration of " + Math.floor(songs[sessionStorage.youtube].duration / 3600) + ((Math.floor(songs[sessionStorage.youtube].duration / 3600) == 1) ? (" hour, ") : (" hours, ")) + Math.floor((songs[sessionStorage.youtube].duration % 3600) / 60) + ((Math.floor((songs[sessionStorage.youtube].duration % 3600) / 60) == 1) ? (" minute, ") : (" minutes, ")) + Math.floor((songs[sessionStorage.youtube].duration % 3600) % 60) + ((Math.floor((songs[sessionStorage.youtube].duration % 3600) % 60) == 1) ? (" second") : (" seconds")) + " is greater than the 1 hour max limit.");
   duration.fileName = "https://chastantshontz.github.io/dope-as-fuck/page.js";
   duration.lineNumber = ((duration.lineNumber == undefined) ? (null) : (duration.lineNumber - 5));
   duration.columnNumber = ((duration.lineNumber == undefined) ? (null) : (5));
@@ -7565,16 +7565,16 @@ function leaveEditor(event) {
 }
 
 function youtubeEdit(event) {
-  if (((event.target).innerHTML).match(/\<br\>/gism)) {
-    if (((event.target).innerHTML).match(/(?<=^)\<br\>(?=$)/ism)) {
-      (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<=^)\<br\>(?=$)/ism, "*");
+  if (((event.target).innerHTML).match(/<br>/gism)) {
+    if (((event.target).innerHTML).match(/(?<=^)<br>(?=$)/ism)) {
+      (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<=^)<br>(?=$)/ism, "*");
     }
-    else if (((event.target).innerHTML).match(/(?<!^)\<br\>(?!$)/gism)) {
-      (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<!^)\<br\>(?!$)/gism, "");
+    else if (((event.target).innerHTML).match(/(?<!^)<br>(?!$)/gism)) {
+      (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<!^)<br>(?!$)/gism, "");
     }
   }
-  if (((event.target).innerHTML).match(/[a-zA-Z]|\.|\,|\'|\"|\`|\~|\`|\_|\+|\^|\%|\=|\>|\<|\&|\#|\$|\@|\;|\:|\?|\!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+|\n+|\r+|\t+|\v+|\f+/gsm)) {
-    (event.target).innerHTML = ((event.target).innerHTML).replace(/[a-zA-Z]|\.|\,|\'|\"|\`|\~|\`|\_|\+|\^|\%|\=|\>|\<|\&|\#|\$|\@|\;|\:|\?|\!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+|\n+|\r+|\t+|\v+|\f+/gsm, "");
+  if (((event.target).innerHTML).match(/[a-zA-Z]|\.|,|'|"|`|~|`|_|\+|\^|%|=|>|<|&|#|\$|@|;|:|\?|!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+|\n+|\r+|\t+|\v+|\f+/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/[a-zA-Z]|\.|,|'|"|`|~|`|_|\+|\^|%|=|>|<|&|#|\$|@|;|:|\?|!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+|\n+|\r+|\t+|\v+|\f+/gsm, "");
   }
   if (((event.target).innerHTML).length > 2) {
     (event.target).innerHTML = ((event.target).innerHTML).substring(0, 2);
@@ -7822,7 +7822,7 @@ function youtubeRestart(event) {
     youtubePause("restart", event);
     document.getElementsByClassName("audio")[sessionStorage.youtube].currentTime = 0;
     document.getElementById("youtubeSongs").style.pointerEvents = "none";
-    var transitionDuration = ((100 - (document.getElementById("youtubeDuration").style.right).replace(/\%/sm, "")) / 100);
+    var transitionDuration = ((100 - (document.getElementById("youtubeDuration").style.right).replace(/%/sm, "")) / 100);
     sessionStorage.progress = 100;
     document.getElementById("youtubeDuration").style.right = "100%";
     document.getElementById("youtubeDuration").style.transition = "right " + transitionDuration + "s linear 0s";
@@ -9696,7 +9696,7 @@ function drinkingSongVerse(event) {
       document.getElementById("tijuanaResponseDefault").innerHTML = document.getElementById("tijuanaVerse" + sessionStorage.tijuanaLine).innerHTML + " who?";
     }
     else if (sessionStorage.singing == 4) {
-      document.getElementById("weLikeItHereResponseDefault").innerHTML = (document.getElementById("weLikeItHereVerse" + sessionStorage.weLikeItHereLine).innerHTML).replace(/\!/sm, "") + "...";
+      document.getElementById("weLikeItHereResponseDefault").innerHTML = (document.getElementById("weLikeItHereVerse" + sessionStorage.weLikeItHereLine).innerHTML).replace(/!/sm, "") + "...";
     }
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Response" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).style.transition = "opacity 0s ease 0s";
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Response" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).disabled = false;
@@ -9715,7 +9715,7 @@ function drinkingSongVerse(event) {
       document.getElementById("theSMManLyrics").style.transition = "font-size 0s ease 0s";
     }
     else if (sessionStorage.singing == 3) {
-      document.getElementById("highAboveCayugasWatersFirstResponseDefault").innerHTML = (document.getElementById("highAboveCayugasWatersVerse" + sessionStorage.highAboveCayugasWatersLine).innerHTML).replace(/\!/sm, "") + "...";
+      document.getElementById("highAboveCayugasWatersFirstResponseDefault").innerHTML = (document.getElementById("highAboveCayugasWatersVerse" + sessionStorage.highAboveCayugasWatersLine).innerHTML).replace(/!/sm, "") + "...";
     }
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponse" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).style.transition = "opacity 0s ease 0s";
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "FirstResponse" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).disabled = false;
@@ -9815,7 +9815,7 @@ function drinkingSongFirstResponse(event) {
       document.getElementById("theSMManLyrics").style.transition = "font-size 0s ease 0s";
     }
     else if (sessionStorage.singing == 3) {
-      document.getElementById("highAboveCayugasWatersSecondResponseDefault").innerHTML = (document.getElementById("highAboveCayugasWatersFirstResponse" + sessionStorage.highAboveCayugasWatersLine).innerHTML).replace(/\!/sm, "") + "...";
+      document.getElementById("highAboveCayugasWatersSecondResponseDefault").innerHTML = (document.getElementById("highAboveCayugasWatersFirstResponse" + sessionStorage.highAboveCayugasWatersLine).innerHTML).replace(/!/sm, "") + "...";
     }
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponse" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).style.transition = "opacity 0s ease 0s";
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "SecondResponse" + eval("sessionStorage." + document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Line")).disabled = false;
@@ -11316,7 +11316,7 @@ function accountControls(event) {
       closeAccount();
     }
   }
-  else if ((event.key).match(/\b[a-zA-Z]\b|\b0\b|\.|\,|\'|\"|\`|\~|\-|\_|\+|\*|\^|\%|\=|\>|\<|\&|\#|\$|\@|\;|\:|\?|\!|\\|\||\(|\)|\[|\]|\{|\}|\s|Backspace|Delete/sm)) {
+  else if ((event.key).match(/\b[a-zA-Z]\b|\b0\b|\.|,|'|"|`|~|-|_|\+|\*|\^|%|=|>|<|&|#|\$|@|;|:|\?|!|\\|\||\(|\)|\[|\]|\{|\}|\s|Backspace|Delete/sm)) {
     if ((keyboard.control == false) && (keyboard.alt == false) && (keyboard.meta == false) && (keyboard.fn == false)) {
       if (sessionStorage.scope == "document") {
         accountMessageEntrance();
@@ -11493,10 +11493,10 @@ function accountStore(field) {
       }
     }
     else if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "major") {
-      if ((localStorage.major).match(/(\bcomm|\bc\,?\s*m\,?\s*(and|\&)?\s*d\b)|(digital arts|\bd\s*a(\s*(and|\&)?\s*s)?\b)|humanities|(\blit\b|literature)|history|social|(politic|poly.?sci)|anthropology|liberal/ism)) {
+      if ((localStorage.major).match(/(\bcomm|\bc,?\s*m,?\s*(and|&)?\s*d\b)|(digital arts|\bd\s*a(\s*(and|&)?\s*s)?\b)|humanities|(\blit\b|literature)|history|social|(politic|poly.?sci)|anthropology|liberal/ism)) {
         console.log("Hahaha, no you're not");
       }
-      else if ((localStorage.major).match(/business|(engineering\s*(and|\&)?\s*management|\be\s*(and|\&)?\s*m\b)|(innovation\s*(and|\&)?\s*entrepreneurship|\bi\s*(and|\&)?\s*e\b)|supply chain|econ|financ|bank|account/ism)) {
+      else if ((localStorage.major).match(/business|(engineering\s*(and|&)?\s*management|\be\s*(and|&)?\s*m\b)|(innovation\s*(and|&)?\s*entrepreneurship|\bi\s*(and|&)?\s*e\b)|supply chain|econ|financ|bank|account/ism)) {
         console.log("Well then you're totally useless");
       }
       else if ((localStorage.major).match(/civ(il|.e)/ism)) {
@@ -11693,7 +11693,7 @@ function accountUpdate(field, method) {
   if (sessionStorage.field == 0) {
     for (var i = 0; i < document.getElementsByClassName("infoInput").length; i++) {
       if (eval("localStorage." + document.getElementsByClassName("infoInput")[i].name) == undefined) {
-        if (((document.getElementsByClassName("infoInput")[i].name == "socialSecurityNumber") && ((String(you.socialSecurityNumber)).replace(/\-/gsm, "") > 0)) || ((document.getElementsByClassName("infoInput")[i].name != "socialSecurityNumber") && (eval("you." + document.getElementsByClassName("infoInput")[i].name) != ""))) {
+        if (((document.getElementsByClassName("infoInput")[i].name == "socialSecurityNumber") && ((String(you.socialSecurityNumber)).replace(/-/gsm, "") > 0)) || ((document.getElementsByClassName("infoInput")[i].name != "socialSecurityNumber") && (eval("you." + document.getElementsByClassName("infoInput")[i].name) != ""))) {
           if (document.getElementsByClassName("infoInput")[i].name == "socialSecurityNumber") {
             you.socialSecurityNumber = 0;
           }
@@ -11885,7 +11885,7 @@ function accountUpdate(field, method) {
       }
     }
     else if (method == "remove") {
-      if (((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "socialSecurityNumber") && ((String(you.socialSecurityNumber)).replace(/\-/gsm, "") > 0)) || ((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name != "socialSecurityNumber") && (eval("you." + document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name) != ""))) {
+      if (((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "socialSecurityNumber") && ((String(you.socialSecurityNumber)).replace(/-/gsm, "") > 0)) || ((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name != "socialSecurityNumber") && (eval("you." + document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name) != ""))) {
         if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "socialSecurityNumber") {
           you.socialSecurityNumber = 0;
         }
@@ -12152,7 +12152,7 @@ function gameOver(event) {
   }
   sessionStorage.quote = Math.floor(Math.random() * quotes.length);
   document.getElementById("quoteLine").innerHTML = quotes[sessionStorage.quote].line;
-  document.getElementById("quoteLine").cite = (quotes[sessionStorage.quote].author).replace(/\<\/*(b|strong|i|em|u|s|br)\>/gism, "");
+  document.getElementById("quoteLine").cite = (quotes[sessionStorage.quote].author).replace(/<\/*(b|strong|i|em|u|s|br)>/gism, "");
   document.getElementById("quoteAuthor").innerHTML = quotes[sessionStorage.quote].author;
   if (quotes[sessionStorage.quote].line == "<q id=\"quoteLineLine\"><span lang=\"ru-ru\" translate=\"no\" dir=\"ltr\" class=\"russian\">Prochnost</span>!</q><br><cite id=\"quoteLineAuthor\"><b>Oliver Queen</b>.</cite>") {
     document.getElementById("quoteAuthor").style.marginLeft = "48px";
@@ -12809,7 +12809,7 @@ function copyUrl(event) {
   if (sessionStorage.urlSelected == String(true)) {
     selectUrl();
   }
-  navigator.clipboard.writeText((document.getElementById("urlText").innerHTML).replace(/\<wbr\>/gism, ""));
+  navigator.clipboard.writeText((document.getElementById("urlText").innerHTML).replace(/<wbr>/gism, ""));
   if (sessionStorage.urlMessageExitTimeout != undefined) {
     clearTimeout(sessionStorage.urlMessageExitTimeout);
     sessionStorage.removeItem("urlMessageExitTimeout");

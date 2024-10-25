@@ -2776,7 +2776,7 @@
       <div id="raffle" aria-hidden="true" onclick="raffle(event)">
       </div>
       <article id="cover" role="article" aria-description="A cover that contains several smaller modals" aria-hidden="true">
-        <div class="modal" id="poem" role="region" aria-description="Jake McNamara's Thanksgiving poem">
+        <div class="modal" id="poem" role="region" aria-description="Jake McNamara's Thanksgiving poem" aria-hidden="true">
           <div class="scrollbar" id="poemTextCont" tabindex="-1" role="scrollbar">
             <div id="poemText">
               <div class="poemStanza" id="poemStanza1">
@@ -2929,7 +2929,7 @@
           </div>
           <button type="button" id="poemExit" tabindex="-1" role="button" aria-label="Close the poem" aria-keyshortcuts="Escape" onclick="closePoem(event)">&times;</button>
         </div>
-        <div class="modal drunkCont" id="promoCont" role="region" aria-description="A video to welcome you into the Clarkson University pep band">
+        <div class="modal drunkCont" id="promoCont" role="region" aria-description="A video to welcome you into the Clarkson University pep band" aria-hidden="true">
           <video poster="img/promo.png" preload="metadata" class="smallScreenPromo" id="promo" tabindex="-1" role="application" aria-label="Watch the welcome video" aria-keyshortcuts="Space f ArrowUp ArrowDown m c" onmouseenter="showPromoControls()" onmouseleave="hidePromoControls()" onfullscreenchange="fullscreenEnter()" onended="closePromo(event)" controls>
             <source src="video/promo.mp4" type="video/mp4">
             <track src="captions.vtt" srclang="en-us" kind="captions" label="Closed captions" default>
@@ -2937,7 +2937,7 @@
           <p class="drunkText" id="promoTitle" onmouseenter="showPromoControls()"><a href="https://www.youtube.com/watch?v=HGeQ0Afg2A0" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Pep Band Welcome Video" class="drunkText" id="promoTitleLink" tabindex="-1" role="link" aria-label="Learn more about the Clarkson University pep band">Pep Band Welcome Video</a></p>
           <button type="button" class="drunkText" id="promoExit" tabindex="-1" role="button" aria-label="Close the welcome video" aria-keyshortcuts="Escape" onclick="closePromo(event)" onmouseenter="showPromoControls()">&times;</button>
         </div>
-        <div class="modal" id="youtubeSongsContCont" role="region" aria-description="A player for various YouTube songs">
+        <div class="modal" id="youtubeSongsContCont" role="region" aria-description="A player for various YouTube songs" aria-hidden="true">
           <div id="youtubeSongsCont">
             <div id="youtubeSongs" role="switch" aria-label="Play the YouTube song" aria-keyshortcuts="Space" onclick="youtubeToggle('click', event)" onmouseenter="emphasizeYoutubePlayPause()" onmouseleave="deEmphasizeYoutubePlayPause()" onmousemove="showCursor()">
               <p id="danceInstructions"></p>
@@ -2972,7 +2972,7 @@
           </div>
           <button type="button" title="Exit (escape)" id="youtubeExit" tabindex="-1" role="button" aria-label="Close the YouTube song player" aria-keyshortcuts="Escape" onclick="closeYoutubeSong(event)">&times;</button>
         </div>
-        <div class="modal drunkCont" id="iceContContCont" role="region" aria-description="A Smirnoff Ice that you are now forced to drink or you'll be a bitch">
+        <div class="modal drunkCont" id="iceContContCont" role="region" aria-description="A Smirnoff Ice that you are now forced to drink or you'll be a bitch" aria-hidden="true">
           <div id="iceContCont">
             <div id="iceCont">
               <img src="img/ice.png" alt="A Smirnoff Ice that you are now forced to drink or you'll be a bitch" fetchpriority="low" decoding="async" loading="lazy" class="load" id="ice" onload="load(event)">
@@ -2988,7 +2988,7 @@
             <p class="drunkText" id="iceCounter"></p>
           </div>
         </div>
-        <div class="modal" id="troyLassialCont" role="region" aria-description="Troy Lassial showing up to reprimand you">
+        <div class="modal" id="troyLassialCont" role="region" aria-description="Troy Lassial showing up to reprimand you" aria-hidden="true">
           <div id="troyLassials">
             <img src="img/troyLassialSanta.png" alt="Troy Lassial with a Santa hat" fetchpriority="low" decoding="async" loading="lazy" class="troyLassial load" id="troyLassialSanta" onload="load(event)">
             <img src="img/troyLassial.png" alt="Troy Lassial in his natural habitat of hell" fetchpriority="low" decoding="async" loading="lazy" class="troyLassial load" id="troyLassial" onload="load(event)">
@@ -3001,7 +3001,7 @@
             <button type="button" class="defaultButton" id="troyLassialButton" tabindex="-1" role="button" aria-label="Dismiss Troy Lassial" onclick="troyLassialExit(event)">1, 2, 3...Fuck<br>That Guy!</button>
           </div>
         </div>
-        <div class="modal" id="choicesContCont" role="menu" aria-description="Four options of songs for the pep band to play">
+        <div class="modal" id="choicesContCont" role="menu" aria-description="Four options of songs for the pep band to play" aria-hidden="true">
           <div id="choicesCont">
             <div id="choices">
               <button type="button" class="choice" id="choice1" tabindex="-1" role="menuitem" aria-label="Select the first song to play" onclick="selectAnswer(1, event)" onmouseenter="changeSong(event)" onmouseleave="changeSongBack(event)"></button>
@@ -3022,7 +3022,7 @@
             </div>
           </div>
         </div>
-        <div class="modal" id="gameOver" role="region" aria-description="The game over screen">
+        <div class="modal" id="gameOver" role="region" aria-description="The game over screen" aria-hidden="true">
           <p id="gameOverHeading">Game Over!</p>
           <div id="gameOverScores">
             <p class="gameOverScore" id="gameOverYourScore">Your Score: <span class="gameOverScoreNum" id="gameOverYourScoreNum"></span></p>

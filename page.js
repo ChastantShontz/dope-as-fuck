@@ -3840,6 +3840,7 @@ function openSelection() {
   document.getElementById("choicesContCont").style.opacity = "100%";
   document.getElementById("choicesContCont").style.transition = "all 0s ease 0s";
   document.getElementById("choicesContCont").tabIndex = "0";
+  document.getElementById("choicesContCont").ariaHidden = false;
   document.getElementById("cover").style.visibility = "visible";
   document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "all .25s ease 0s";
@@ -4137,6 +4138,7 @@ function closeSelection(event) {
   document.getElementById("choicesContCont").style.opacity = "0%";
   document.getElementById("choicesContCont").style.transition = "all 0s ease .5s";
   document.getElementById("choicesContCont").tabIndex = "-1";
+  document.getElementById("choicesContCont").ariaHidden = true;
   document.getElementById("choicesContCont").blur();
   setTimeout(() => (
     document.getElementById("viewAccountToggle").style.pointerEvents = "auto"
@@ -4757,6 +4759,7 @@ function troyLassialEntrance() {
   document.getElementById("troyLassialCont").style.transform = "scale(1)";
   document.getElementById("troyLassialCont").style.transition = "transform .5s ease 0s";
   document.getElementById("troyLassialCont").tabIndex = "0";
+  document.getElementById("troyLassialCont").ariaHidden = false;
   document.getElementById("cover").style.visibility = "visible";
   document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "all .25s ease 0s";
@@ -4777,6 +4780,7 @@ function troyLassialExit(event) {
       document.getElementById("troyLassialCont").style.transform = "scale(0)";
       document.getElementById("troyLassialCont").style.transition = "transform .5s ease 0s";
       document.getElementById("troyLassialCont").tabIndex = "-1";
+      document.getElementById("troyLassialCont").ariaHidden = true;
       document.getElementById("troyLassialCont").blur();
       document.getElementById("troyLassialButton").tabIndex = "-1";
       document.getElementById("troyLassialButton").blur();
@@ -4805,6 +4809,7 @@ function troyLassialExit(event) {
       document.getElementById("troyLassialCont").style.opacity = "0%";
       document.getElementById("troyLassialCont").style.transition = "all .25s ease 0s";
       document.getElementById("troyLassialCont").tabIndex = "-1";
+      document.getElementById("troyLassialCont").ariaHidden = true;
       document.getElementById("troyLassialCont").blur();
       document.getElementById("troyLassialButton").tabIndex = "-1";
       document.getElementById("troyLassialButton").blur();
@@ -4826,6 +4831,7 @@ function troyLassialExit(event) {
     document.getElementById("troyLassialCont").style.transform = "scale(0)";
     document.getElementById("troyLassialCont").style.transition = "transform .5s ease 0s";
     document.getElementById("troyLassialCont").tabIndex = "-1";
+    document.getElementById("troyLassialCont").ariaHidden = true;
     document.getElementById("troyLassialCont").blur();
     document.getElementById("troyLassialButton").tabIndex = "-1";
     document.getElementById("troyLassialButton").blur();
@@ -7237,6 +7243,7 @@ function openYoutubeSong() {
     document.getElementById("youtubeSongsContCont").style.transform = "scale(1)";
     document.getElementById("youtubeSongsContCont").style.transition = "transform .5s ease 0s";
     document.getElementById("youtubeSongsContCont").tabIndex = "0";
+    document.getElementById("youtubeSongsContCont").ariaHidden = false;
     document.getElementById("cover").style.visibility = "visible";
     document.getElementById("cover").style.opacity = "100%";
     document.getElementById("cover").style.transition = "all .25s ease 0s";
@@ -7917,6 +7924,7 @@ function closeYoutubeSong(event) {
   document.getElementById("youtubeSongsContCont").style.transform = "scale(0)";
   document.getElementById("youtubeSongsContCont").style.transition = "transform .5s ease 0s";
   document.getElementById("youtubeSongsContCont").tabIndex = "-1";
+  document.getElementById("youtubeSongsContCont").ariaHidden = true;
   document.getElementById("youtubeSongsContCont").blur();
   document.getElementById("youtubeSongs").style.pointerEvents = "none";
   document.getElementById("youtubeSongs").tabIndex = "-1";
@@ -9061,6 +9069,7 @@ function openPoem() {
   document.getElementById("poem").style.opacity = "100%";
   document.getElementById("poem").style.transition = "all 0s ease 0s";
   document.getElementById("poem").tabIndex = "0";
+  document.getElementById("poem").ariaHidden = false;
   document.getElementById("cover").style.visibility = "visible";
   document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "all .25s ease 0s";
@@ -9086,6 +9095,7 @@ function closePoem(event) {
     document.getElementById("poem").style.opacity = "0%";
     document.getElementById("poem").style.transition = "all 0s ease .25s";
     document.getElementById("poem").tabIndex = "-1";
+    document.getElementById("poem").ariaHidden = true;
     document.getElementById("poem").blur();
     if (document.getElementById("poemTextCont").scrollHeight > document.getElementById("poemTextCont").offsetHeight) {
       document.getElementById("poemTextCont").tabIndex = "-1";
@@ -10207,6 +10217,7 @@ function singIce(event) {
   document.getElementById("iceContContCont").style.transform = "skew(" + (Math.ceil(Math.random() * transformValue) * ((Math.round(Math.random())) ? (1) : (-1))) + "deg) scale(1)";
   document.getElementById("iceContContCont").style.transition = "visibility 0s ease 0s, left 1s ease 0s, right 1s ease 0s, top 1s ease 0s, bottom 1s ease 0s, background .25s ease .75s, opacity 0s ease 0s, border .25s ease .75s, transform 1s ease 0s";
   document.getElementById("iceContContCont").tabIndex = "0";
+  document.getElementById("iceContContCont").ariaHidden = false;
   document.getElementById("cover").style.zIndex = "91";
   document.getElementById("cover").style.visibility = "visible";
   document.getElementById("cover").style.background = "rgba(153, 153, 153, 75%)";
@@ -10485,6 +10496,7 @@ function failIce(event) {
   document.getElementById("iceContContCont").style.opacity = "0%";
   document.getElementById("iceContContCont").style.transition = "all .25s ease 0s";
   document.getElementById("iceContContCont").tabIndex = "-1";
+  document.getElementById("iceContContCont").ariaHidden = true;
   document.getElementById("iceContContCont").blur();
   document.getElementById("iceButton").tabIndex = "-1";
   document.getElementById("iceButton").blur();
@@ -10561,6 +10573,7 @@ function finishIce(event) {
   document.getElementById("iceContContCont").style.transform = "skew(" + (Math.ceil(Math.random() * transformValue) * ((Math.round(Math.random())) ? (1) : (-1))) + "deg) scale(0)";
   document.getElementById("iceContContCont").style.transition = "visibility .25s ease 0s, left 0s ease .25s, right 0s ease .25s, top 0s ease .25s, bottom 0s ease .25s, background 0s ease .25s, opacity .25s ease 0s, border 0s ease .25s, transform 0s ease .25s";
   document.getElementById("iceContContCont").tabIndex = "-1";
+  document.getElementById("iceContContCont").ariaHidden = true;
   document.getElementById("iceContContCont").blur();
   document.getElementById("iceCover").style.bottom = "100%";
   document.getElementById("iceCover").style.transition = "bottom 0s ease .25s";
@@ -10868,6 +10881,7 @@ function openPromo() {
   document.getElementById("promoCont").style.transform = "skew(" + (Math.ceil(Math.random() * transformValue) * ((Math.round(Math.random())) ? (1) : (-1))) + "deg) scale(1)";
   document.getElementById("promoCont").style.transition = "transform .5s ease 0s";
   document.getElementById("promoCont").tabIndex = "0";
+  document.getElementById("promoCont").ariaHidden = false;
   document.getElementById("cover").style.visibility = "visible";
   document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "all .25s ease 0s";
@@ -10998,6 +11012,7 @@ function closePromo(event) {
   var transformValue = ((sessionStorage.level - 1) * 9);
   document.getElementById("promoCont").style.transform = "skew(" + (Math.ceil(Math.random() * transformValue) * ((Math.round(Math.random())) ? (1) : (-1))) + "deg) scale(0)";
   document.getElementById("promoCont").tabIndex = "-1";
+  document.getElementById("promoCont").ariaHidden = true;
   document.getElementById("promoCont").blur();
   document.getElementById("promo").tabIndex = "-1";
   document.getElementById("promo").blur();
@@ -12144,6 +12159,7 @@ function gameOver(event) {
   document.getElementById("gameOver").style.opacity = "100%";
   document.getElementById("gameOver").style.transition = "all 0s ease 0s";
   document.getElementById("gameOver").tabIndex = "0";
+  document.getElementById("gameOver").ariaHidden = false;
   document.getElementById("cover").style.visibility = "visible";
   document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "all .25s ease 0s";

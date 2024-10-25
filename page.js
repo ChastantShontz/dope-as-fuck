@@ -4779,11 +4779,6 @@ function troyLassialExit(event) {
       document.getElementById("cover").blur();
       document.getElementById("troyLassialCont").style.transform = "scale(0)";
       document.getElementById("troyLassialCont").style.transition = "transform .5s ease 0s";
-      document.getElementById("troyLassialCont").tabIndex = "-1";
-      document.getElementById("troyLassialCont").ariaHidden = true;
-      document.getElementById("troyLassialCont").blur();
-      document.getElementById("troyLassialButton").tabIndex = "-1";
-      document.getElementById("troyLassialButton").blur();
       setTimeout(newLife, 750);
       setTimeout(() => (
         document.getElementById("viewAccountToggle").style.pointerEvents = "auto"
@@ -4808,11 +4803,6 @@ function troyLassialExit(event) {
       document.getElementById("troyLassialCont").style.visibility = "hidden";
       document.getElementById("troyLassialCont").style.opacity = "0%";
       document.getElementById("troyLassialCont").style.transition = "all .25s ease 0s";
-      document.getElementById("troyLassialCont").tabIndex = "-1";
-      document.getElementById("troyLassialCont").ariaHidden = true;
-      document.getElementById("troyLassialCont").blur();
-      document.getElementById("troyLassialButton").tabIndex = "-1";
-      document.getElementById("troyLassialButton").blur();
       document.getElementById("gameOverHeading").style.color = "var(--sluRed)";
       document.getElementById("gameOverHeading").style.transition = "color 0s ease 0s";
       gameOver(event);
@@ -4830,11 +4820,6 @@ function troyLassialExit(event) {
     document.getElementById("cover").blur();
     document.getElementById("troyLassialCont").style.transform = "scale(0)";
     document.getElementById("troyLassialCont").style.transition = "transform .5s ease 0s";
-    document.getElementById("troyLassialCont").tabIndex = "-1";
-    document.getElementById("troyLassialCont").ariaHidden = true;
-    document.getElementById("troyLassialCont").blur();
-    document.getElementById("troyLassialButton").tabIndex = "-1";
-    document.getElementById("troyLassialButton").blur();
     if ((document.getElementById("troyLassialTalk").innerHTML == "It's funny, that sounded an awful lot like the \"bullshit\" word. Maybe that was intentional of you? I suppose that technically, you've done nothing wrong. I'll be watching you like a hawk, though, so beware!") || (document.getElementById("troyLassialTalk").innerHTML == "Suck flu? What on Earth does that mean? Are you sure you weren't trying to say something else? Unfortunately, I can't eject you just for wanting to suck the flu. But please reconsider how you are representing Clarkson.")) {
       document.getElementById("cheer" + sessionStorage.cheer).classList.replace("incorrectCheer", "correctCheer");
       document.getElementById("cheer" + sessionStorage.cheer).style.background = "var(--clarksonGreen)";
@@ -4911,6 +4896,11 @@ function troyLassialExit(event) {
       document.getElementById("conductor").tabIndex = "0"
     ), 500);
   }
+  document.getElementById("troyLassialCont").tabIndex = "-1";
+  document.getElementById("troyLassialCont").ariaHidden = true;
+  document.getElementById("troyLassialCont").blur();
+  document.getElementById("troyLassialButton").tabIndex = "-1";
+  document.getElementById("troyLassialButton").blur();
 }
 
 function gotIt7() {

@@ -6549,16 +6549,33 @@ function tijuana() {
   if ((sessionStorage.backup != undefined) && (sessionStorage.backup != "")) {
     sessionStorage.backup = "";
   }
+  document.getElementById("planes").ariaHidden = false;
   for (var i = 0; i < document.getElementsByClassName("plane").length; i++) {
     document.getElementsByClassName("plane")[i].style.left = "100%";
-    document.getElementsByClassName("plane")[i].style.transition = "left 3s ease " + i + "s";
+    if (i < 4) {
+      document.getElementsByClassName("plane")[i].style.transition = "left 3s ease " + i + "s";
+    }
+    else if (i == 4) {
+      document.getElementById("planePrimeCont").style.transition = "left 0s ease 5.5s";
+      document.getElementById("planePrimeCont").style.animation = "fly 5s linear .5s 1 forwards";
+      setTimeout(() => (
+        document.getElementById("planePrimeCont").style.animation = "none"
+      ), 5500);
+    }
+    document.getElementsByClassName("plane")[i].tabIndex = "0";
+    const reset = (x) => {
+      setTimeout(() => (
+        document.getElementsByClassName("plane")[x].tabIndex = "-1"
+      ), 6000);
+      setTimeout(() => (
+        document.getElementsByClassName("plane")[x].blur()
+      ), 6000);
+    }
+    reset(i);
   }
-  document.getElementById("planePrimeCont").style.left = "100%";
-  document.getElementById("planePrimeCont").style.transition = "left 0s ease 5.5s";
-  document.getElementById("planePrimeCont").style.animation = "fly 5s linear .5s 1 forwards";
   setTimeout(() => (
-    document.getElementById("planePrimeCont").style.animation = "none"
-  ), 5500);
+    document.getElementById("planes").ariaHidden = true
+  ), 6000);
   songs[69].title = "<i>Tijuana</i><br>(with lyrics!)";
   console.log("AT THE GANGBANG, OH YES, YOU DO! IT'S BEEN A LONG TIME SINCE SHE'S BEEN SCREWED! WHEN SHE WAS YOUNGER, AND IN HER PRIME, SHE USED TO GANGBANG ALL THE TIMEEE... NOW THAT SHE'S OLDER, AND TURNING GRAY, SHE ONLY GANGBANGS ONCE A DAYYY... KNOCK, KNOCK...");
 }

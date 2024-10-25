@@ -2695,7 +2695,7 @@ function gameBegins(event) {
   document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
   document.getElementById("viewAccountToggle").tabIndex = "0";
   if ((window.innerHeight <= 600) || (window.innerWidth <= 1200)) {
-    document.getElementsByTagName("main")[0].ariaHidden = true;
+    document.querySelector("main").ariaHidden = true;
     document.getElementById("urlButton").tabIndex = "0";
     document.getElementById("mobileButton").tabIndex = "0";
     document.getElementById("mobileImgContCont").tabIndex = "0";
@@ -12649,7 +12649,7 @@ function mobileShrink() {
       viewAccountToggleClose();
     }
   }
-  document.getElementsByTagName("main")[0].ariaHidden = true;
+  document.querySelector("main").ariaHidden = true;
   document.getElementById("urlButton").tabIndex = "0";
   document.getElementById("mobileButton").tabIndex = "0";
   document.getElementById("mobileImgContCont").tabIndex = "0";
@@ -12757,7 +12757,7 @@ function mobileGrow() {
       document.getElementById("house").style.animation = "sunset " + animationDuration + "s linear 0s 1 forwards";
     }
   }
-  document.getElementsByTagName("main")[0].ariaHidden = false;
+  document.querySelector("main").ariaHidden = false;
   if (document.getElementById("youtubeSongsContCont").style.transform == "scale(1)") {
     document.onclick = youtubeControls;
   }

@@ -6967,6 +6967,11 @@ function gotIt16() {
   document.getElementById("tonyCollins").blur();
   sessionStorage.period++;
   document.getElementById("scoreboardPeriod").innerHTML = sessionStorage.period;
+  for (var i = 0; i < document.getElementsByClassName("playerProfile").length; i++) {
+    if (document.getElementsByClassName("playerProfile")[i].classList.contains("toggledProfile")) {
+      hideStats((i + 1), "click");
+    }
+  }
   for (var i = 0; i < document.getElementsByClassName("flip").length; i++) {
     document.getElementById("sluVictoryMessageCont").style.gridColumnStart = "2";
     document.getElementById("clarksonVictoryMessageCont").style.gridColumnStart = "1";
@@ -8027,6 +8032,11 @@ function gotIt20() {
   enableCheers(enableClassLists, enableStyles);
   sessionStorage.period++;
   document.getElementById("scoreboardPeriod").innerHTML = sessionStorage.period;
+  for (var i = 0; i < document.getElementsByClassName("playerProfile").length; i++) {
+    if (document.getElementsByClassName("playerProfile")[i].classList.contains("toggledProfile")) {
+      hideStats((i + 1), "click");
+    }
+  }
   for (var i = 0; i < document.getElementsByClassName("flip").length; i++) {
     document.getElementById("sluVictoryMessageCont").style.gridColumnStart = "1";
     document.getElementById("clarksonVictoryMessageCont").style.gridColumnStart = "2";
@@ -8075,6 +8085,11 @@ function gotIt21() {
     disableButton();
     sessionStorage.period = "OT";
     document.getElementById("scoreboardPeriod").innerHTML = sessionStorage.period;
+    for (var i = 0; i < document.getElementsByClassName("playerProfile").length; i++) {
+      if (document.getElementsByClassName("playerProfile")[i].classList.contains("toggledProfile")) {
+        hideStats((i + 1), "click");
+      }
+    }
     for (var i = 0; i < document.getElementsByClassName("flip").length; i++) {
       document.getElementById("sluVictoryMessageCont").style.gridColumnStart = "2";
       document.getElementById("clarksonVictoryMessageCont").style.gridColumnStart = "1";

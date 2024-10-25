@@ -1422,7 +1422,7 @@ main {
   width: 90%;
 }
 
-.playerStatsCont {
+.playerProfile {
   z-index: 3;
   display: none;
   position: absolute;
@@ -1435,70 +1435,70 @@ main {
   pointer-events: none;
 }
 
-.clarksonStatsCont {
+.clarksonProfile {
   border: .2em solid var(--clarksonGreen);
 }
 
-.playerLeftPosition0StatsCont {
+.playerLeftPosition0Profile {
   left: -4%;
   top: 23%;
 }
 
-.playerLeftPosition1StatsCont {
+.playerLeftPosition1Profile {
   left: 18%;
   top: 1%;
 }
 
-.playerLeftPosition2StatsCont {
+.playerLeftPosition2Profile {
   left: 18%;
   bottom: -3%;
 }
 
-.playerLeftPosition3StatsCont {
+.playerLeftPosition3Profile {
   left: 35%;
   bottom: -17%;
 }
 
-.playerLeftPosition4StatsCont {
+.playerLeftPosition4Profile {
   right: 41%;
   top: 21%;
 }
 
-.playerLeftPosition5StatsCont {
+.playerLeftPosition5Profile {
   left: 35%;
   top: -13%;
 }
 
-.sluStatsCont {
+.sluProfile {
   border: .2em solid var(--sluRed);
 }
 
-.playerRightPosition1StatsCont {
+.playerRightPosition1Profile {
   right: 18%;
   top: 1%;
 }
 
-.playerRightPosition2StatsCont {
+.playerRightPosition2Profile {
   right: 18%;
   bottom: -3%;
 }
 
-.playerRightPosition3StatsCont {
+.playerRightPosition3Profile {
   right: 35%;
   bottom: -17%;
 }
 
-.playerRightPosition4StatsCont {
+.playerRightPosition4Profile {
   left: 41%;
   top: 21%;
 }
 
-.playerRightPosition5StatsCont {
+.playerRightPosition5Profile {
   right: 35%;
   top: -13%;
 }
 
-.playerRightPosition0StatsCont {
+.playerRightPosition0Profile {
   right: -4%;
   top: 23%;
 }

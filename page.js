@@ -2424,17 +2424,17 @@ fetch("data.json")
   .then((response) => (response.json()))
   .then((data) => {
     globalThis.players = data;
-    for (var i = 0; i < document.getElementsByClassName("playerStatsCont").length; i++) {
-      if (document.getElementsByClassName("playerStatsCont")[i].classList.contains("menStatsCont")) {
+    for (var i = 0; i < document.getElementsByClassName("playerProfile").length; i++) {
+      if (document.getElementsByClassName("playerProfile")[i].classList.contains("menProfile")) {
         var gender = 1;
       }
-      else if (document.getElementsByClassName("playerStatsCont")[i].classList.contains("womenStatsCont")) {
+      else if (document.getElementsByClassName("playerProfile")[i].classList.contains("womenProfile")) {
         var gender = 2;
       }
-      if (document.getElementsByClassName("playerStatsCont")[i].classList.contains("clarksonStatsCont")) {
+      if (document.getElementsByClassName("playerProfile")[i].classList.contains("clarksonProfile")) {
         var college = 1;
       }
-      else if (document.getElementsByClassName("playerStatsCont")[i].classList.contains("sluStatsCont")) {
+      else if (document.getElementsByClassName("playerProfile")[i].classList.contains("sluProfile")) {
         var college = 2;
       }
       if (gender == 1) {
@@ -2751,9 +2751,9 @@ function collapse(event) {
       }
     }
     if (sessionStorage.collapse == "stats") {
-      if (((event.type == "click") && ((!(document.elementsFromPoint(event.clientX, event.clientY).some((element) => (element.classList.contains("player"))))) && (!(document.elementsFromPoint(event.clientX, event.clientY).some((element) => (element.classList.contains("playerStatsCont"))))))) || (event.type == "keydown")) {
-        for (var i = 0; i < document.getElementsByClassName("playerStatsCont").length; i++) {
-          if (document.getElementsByClassName("playerStatsCont")[i].classList.contains("toggledStatsCont")) {
+      if (((event.type == "click") && ((!(document.elementsFromPoint(event.clientX, event.clientY).some((element) => (element.classList.contains("player"))))) && (!(document.elementsFromPoint(event.clientX, event.clientY).some((element) => (element.classList.contains("playerProfile"))))))) || (event.type == "keydown")) {
+        for (var i = 0; i < document.getElementsByClassName("playerProfile").length; i++) {
+          if (document.getElementsByClassName("playerProfile")[i].classList.contains("toggledProfile")) {
             hideStats((i + 1), "click");
           }
         }
@@ -3259,8 +3259,8 @@ function gotIt3() {
     for (var i = 0; i < document.getElementsByClassName("menPlayer").length; i++) {
       document.getElementsByClassName("menPlayer")[i].style.display = "block";
     }
-    for (var i = 0; i < document.getElementsByClassName("menStatsCont").length; i++) {
-      document.getElementsByClassName("menStatsCont")[i].style.display = "block";
+    for (var i = 0; i < document.getElementsByClassName("menProfile").length; i++) {
+      document.getElementsByClassName("menProfile")[i].style.display = "block";
     }
     for (var i = 0; i < document.getElementsByClassName("clarksonCage").length; i++) {
       document.getElementsByClassName("clarksonCage")[i].alt = (globalThis.players).men.clarkson[i + 1].name + "'s penalty cage";
@@ -3284,8 +3284,8 @@ function gotIt3() {
     for (var i = 0; i < document.getElementsByClassName("womenPlayer").length; i++) {
       document.getElementsByClassName("womenPlayer")[i].style.display = "block";
     }
-    for (var i = 0; i < document.getElementsByClassName("womenStatsCont").length; i++) {
-      document.getElementsByClassName("womenStatsCont")[i].style.display = "block";
+    for (var i = 0; i < document.getElementsByClassName("womenProfile").length; i++) {
+      document.getElementsByClassName("womenProfile")[i].style.display = "block";
     }
     for (var i = 0; i < document.getElementsByClassName("clarksonCage").length; i++) {
       document.getElementsByClassName("clarksonCage")[i].alt = (globalThis.players).women.clarkson[i + 1].name + "'s penalty cage";
@@ -3737,8 +3737,8 @@ function speedrun(stage) {
     for (var i = 0; i < document.getElementsByClassName("lifeCont").length; i++) {
       document.getElementsByClassName("lifeCont")[i].style.pointerEvents = "none";
     }
-    for (var i = 0; i < document.getElementsByClassName("playerStatsCont").length; i++) {
-      if (document.getElementsByClassName("playerStatsCont")[i].classList.contains("toggledStatsCont")) {
+    for (var i = 0; i < document.getElementsByClassName("playerProfile").length; i++) {
+      if (document.getElementsByClassName("playerProfile")[i].classList.contains("toggledProfile")) {
         hideStats((i + 1), "click");
       }
     }
@@ -5202,10 +5202,10 @@ function gotIt10() {
 
 function toggleStats(newStats, method) {
   sessionStorage.newStats = newStats;
-  if (document.getElementsByClassName("playerStatsCont")[sessionStorage.newStats - 1].classList.contains("toggledStatsCont")) {
+  if (document.getElementsByClassName("playerProfile")[sessionStorage.newStats - 1].classList.contains("toggledProfile")) {
     hideStats(sessionStorage.newStats, method);
   }
-  else if (document.getElementsByClassName("playerStatsCont")[sessionStorage.newStats - 1].classList.contains("unToggledStatsCont")) {
+  else if (document.getElementsByClassName("playerProfile")[sessionStorage.newStats - 1].classList.contains("unToggledProfile")) {
     if (sessionStorage.oldStats != undefined) {
       hideStats(sessionStorage.oldStats, method);
     }
@@ -5216,88 +5216,88 @@ function toggleStats(newStats, method) {
 
 function showStats(stats, method) {
   sessionStorage.stats = stats;
-  if ((method == "click") || ((method == "enter") && (document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].classList.contains("unToggledStatsCont")))) {
+  if ((method == "click") || ((method == "enter") && (document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].classList.contains("unToggledProfile")))) {
     if (method == "click") {
       document.getElementsByClassName("player")[sessionStorage.stats - 1].ariaLabel = "Minimize " + ((document.getElementsByClassName("player")[sessionStorage.stats - 1].classList.contains("goalie")) ? ((document.getElementsByClassName("player")[sessionStorage.stats - 1].alt).substring(0, (document.getElementsByClassName("player")[sessionStorage.stats - 1].alt).search(/ in the goal/sm))) : (document.getElementsByClassName("player")[sessionStorage.stats - 1].alt)) + "'s stats";
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].classList.replace("unToggledStatsCont", "toggledStatsCont");
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].classList.replace("unToggledProfile", "toggledProfile");
     }
-    document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].classList.replace("hiddenStatsCont", "shownStatsCont");
-    document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.zIndex = "4";
+    document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].classList.replace("hiddenProfile", "shownProfile");
+    document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.zIndex = "4";
     if ((sessionStorage.stats == 1) || (sessionStorage.stats == 2)) {
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.left = "12%";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.left = "12%";
     }
     else if ((sessionStorage.stats == 3) || (sessionStorage.stats == 8) || (sessionStorage.stats == 13) || (sessionStorage.stats == 18)) {
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.top = "34%";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.top = "34%";
     }
     else if ((sessionStorage.stats == 4) || (sessionStorage.stats == 9) || (sessionStorage.stats == 14) || (sessionStorage.stats == 19)) {
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.bottom = "34%";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.bottom = "34%";
     }
     else if ((sessionStorage.stats == 5) || (sessionStorage.stats == 10) || (sessionStorage.stats == 15) || (sessionStorage.stats == 20)) {
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.bottom = "21%";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.bottom = "21%";
     }
     else if ((sessionStorage.stats == 6) || (sessionStorage.stats == 11)) {
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.right = "57%";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.right = "57%";
     }
     else if ((sessionStorage.stats == 7) || (sessionStorage.stats == 12) || (sessionStorage.stats == 17) || (sessionStorage.stats == 22)) {
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.top = "22%";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.top = "22%";
     }
     else if ((sessionStorage.stats == 16) || (sessionStorage.stats == 21)) {
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.left = "57%";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.left = "57%";
     }
     else if ((sessionStorage.stats == 23) || (sessionStorage.stats == 24)) {
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.right = "12%";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.right = "12%";
     }
     if ((sessionStorage.period == 1) || (sessionStorage.period == 3)) {
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.transform = "scale(1)";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.transform = "scale(1)";
     }
     else if ((sessionStorage.period == 2) || (sessionStorage.period == "OT")) {
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.transform = "scaleX(-1) scaleY(1)";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.transform = "scaleX(-1) scaleY(1)";
     }
-    document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.transition = "all .25s ease 0s";
+    document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.transition = "all .25s ease 0s";
     setTimeout(() => (
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.pointerEvents = "auto"
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.pointerEvents = "auto"
     ), 250);
   }
 }
 
 function hideStats(stats, method) {
   sessionStorage.stats = stats;
-  if ((method == "click") || ((method == "leave") && (document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].classList.contains("unToggledStatsCont")))) {
+  if ((method == "click") || ((method == "leave") && (document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].classList.contains("unToggledProfile")))) {
     if (method == "click") {
       document.getElementsByClassName("player")[sessionStorage.stats - 1].ariaLabel = "Pull up " + ((document.getElementsByClassName("player")[sessionStorage.stats - 1].classList.contains("goalie")) ? ((document.getElementsByClassName("player")[sessionStorage.stats - 1].alt).substring(0, (document.getElementsByClassName("player")[sessionStorage.stats - 1].alt).search(/ in the goal/sm))) : (document.getElementsByClassName("player")[sessionStorage.stats - 1].alt)) + "'s stats";
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].classList.replace("toggledStatsCont", "unToggledStatsCont")
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].classList.replace("toggledProfile", "unToggledProfile")
     }
-    document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].classList.replace("shownStatsCont", "hiddenStatsCont")
+    document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].classList.replace("shownProfile", "hiddenProfile")
     setTimeout(() => (
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.zIndex = "3"
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.zIndex = "3"
     ), 250);
     if ((sessionStorage.stats == 1) || (sessionStorage.stats == 2)) {
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.left = "-4%";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.left = "-4%";
     }
     else if ((sessionStorage.stats == 3) || (sessionStorage.stats == 8) || (sessionStorage.stats == 13) || (sessionStorage.stats == 18)) {
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.top = "1%";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.top = "1%";
     }
     else if ((sessionStorage.stats == 4) || (sessionStorage.stats == 9) || (sessionStorage.stats == 14) || (sessionStorage.stats == 19)) {
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.bottom = "-3%";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.bottom = "-3%";
     }
     else if ((sessionStorage.stats == 5) || (sessionStorage.stats == 10) || (sessionStorage.stats == 15) || (sessionStorage.stats == 20)) {
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.bottom = "-17%";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.bottom = "-17%";
     }
     else if ((sessionStorage.stats == 6) || (sessionStorage.stats == 11)) {
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.right = "41%";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.right = "41%";
     }
     else if ((sessionStorage.stats == 7) || (sessionStorage.stats == 12) || (sessionStorage.stats == 17) || (sessionStorage.stats == 22)) {
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.top = "-13%";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.top = "-13%";
     }
     else if ((sessionStorage.stats == 16) || (sessionStorage.stats == 21)) {
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.left = "41%";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.left = "41%";
     }
     else if ((sessionStorage.stats == 23) || (sessionStorage.stats == 24)) {
-      document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.right = "-4%";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.right = "-4%";
     }
-    document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.transform = "scale(0)";
-    document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.transition = "all .25s ease 0s";
-    document.getElementsByClassName("playerStatsCont")[sessionStorage.stats - 1].style.pointerEvents = "none";
+    document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.transform = "scale(0)";
+    document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.transition = "all .25s ease 0s";
+    document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.pointerEvents = "none";
   }
 }
 
@@ -6970,7 +6970,7 @@ function gotIt16() {
   for (var i = 0; i < document.getElementsByClassName("flip").length; i++) {
     document.getElementById("sluVictoryMessageCont").style.gridColumnStart = "2";
     document.getElementById("clarksonVictoryMessageCont").style.gridColumnStart = "1";
-    if ((document.getElementsByClassName("flip")[i].classList.contains("playerStatsCont")) && (document.getElementsByClassName("flip")[i].classList.contains("unToggledStatsCont"))) {
+    if ((document.getElementsByClassName("flip")[i].classList.contains("playerProfile")) && (document.getElementsByClassName("flip")[i].classList.contains("unToggledProfile"))) {
       document.getElementsByClassName("flip")[i].style.transform = "scale(0)";
     }
     else {
@@ -8035,7 +8035,7 @@ function gotIt20() {
   for (var i = 0; i < document.getElementsByClassName("flip").length; i++) {
     document.getElementById("sluVictoryMessageCont").style.gridColumnStart = "1";
     document.getElementById("clarksonVictoryMessageCont").style.gridColumnStart = "2";
-    if ((document.getElementsByClassName("flip")[i].classList.contains("playerStatsCont")) && (document.getElementsByClassName("flip")[i].classList.contains("unToggledStatsCont"))) {
+    if ((document.getElementsByClassName("flip")[i].classList.contains("playerProfile")) && (document.getElementsByClassName("flip")[i].classList.contains("unToggledProfile"))) {
       document.getElementsByClassName("flip")[i].style.transform = "scale(0)";
     }
     else {
@@ -8088,7 +8088,7 @@ function gotIt21() {
     for (var i = 0; i < document.getElementsByClassName("flip").length; i++) {
       document.getElementById("sluVictoryMessageCont").style.gridColumnStart = "2";
       document.getElementById("clarksonVictoryMessageCont").style.gridColumnStart = "1";
-      if ((document.getElementsByClassName("flip")[i].classList.contains("playerStatsCont")) && (document.getElementsByClassName("flip")[i].classList.contains("unToggledStatsCont"))) {
+      if ((document.getElementsByClassName("flip")[i].classList.contains("playerProfile")) && (document.getElementsByClassName("flip")[i].classList.contains("unToggledProfile"))) {
         document.getElementsByClassName("flip")[i].style.transform = "scale(0)";
       }
       else {
@@ -8357,8 +8357,8 @@ function win() {
   document.getElementById("puck").style.opacity = "0%";
   document.getElementById("puck").style.transition = "all .25s ease 0s";
   if (sessionStorage.gender == 1) {
-    for (var i = 0; i < document.getElementsByClassName("menStatsCont").length; i++) {
-      if (document.getElementsByClassName("menStatsCont")[i].classList.contains("toggledStatsCont")) {
+    for (var i = 0; i < document.getElementsByClassName("menProfile").length; i++) {
+      if (document.getElementsByClassName("menProfile")[i].classList.contains("toggledProfile")) {
         hideStats((i + 1), "click");
       }
     }
@@ -8389,8 +8389,8 @@ function win() {
     }
   }
   else if (sessionStorage.gender == 2) {
-    for (var i = 0; i < document.getElementsByClassName("womenStatsCont").length; i++) {
-      if (document.getElementsByClassName("womenStatsCont")[i].classList.contains("toggledStatsCont")) {
+    for (var i = 0; i < document.getElementsByClassName("womenProfile").length; i++) {
+      if (document.getElementsByClassName("womenProfile")[i].classList.contains("toggledProfile")) {
         hideStats((i + 1), "click");
       }
     }
@@ -8538,8 +8538,8 @@ function lose() {
   document.getElementById("puck").style.opacity = "0%";
   document.getElementById("puck").style.transition = "all .25s ease 0s";
   if (sessionStorage.gender == 1) {
-    for (var i = 0; i < document.getElementsByClassName("menStatsCont").length; i++) {
-      if (document.getElementsByClassName("menStatsCont")[i].classList.contains("toggledStatsCont")) {
+    for (var i = 0; i < document.getElementsByClassName("menProfile").length; i++) {
+      if (document.getElementsByClassName("menProfile")[i].classList.contains("toggledProfile")) {
         hideStats((i + 1), "click");
       }
     }
@@ -8570,8 +8570,8 @@ function lose() {
     }
   }
   else if (sessionStorage.gender == 2) {
-    for (var i = 0; i < document.getElementsByClassName("womenStatsCont").length; i++) {
-      if (document.getElementsByClassName("womenStatsCont")[i].classList.contains("toggledStatsCont")) {
+    for (var i = 0; i < document.getElementsByClassName("womenProfile").length; i++) {
+      if (document.getElementsByClassName("womenProfile")[i].classList.contains("toggledProfile")) {
         hideStats((i + 1), "click");
       }
     }

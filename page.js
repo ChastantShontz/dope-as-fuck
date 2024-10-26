@@ -11427,8 +11427,8 @@ function accountStore(field) {
   }
   if ((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value != "") && (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].checkValidity())) {
     if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "socialSecurityNumber") {
-      if ((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value).length < 9) {
-        document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value = (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value).padStart(9, "0");
+      if ((document.getElementById("socialSecurityNumberInput").value).length < 9) {
+        document.getElementById("socialSecurityNumberInput").value = (document.getElementById("socialSecurityNumberInput").value).padStart(9, "0");
       }
       localStorage.socialSecurityNumber = (document.getElementById("socialSecurityNumberInput").value).substring(0, 3) + "-" + (document.getElementById("socialSecurityNumberInput").value).substring(3, 5) + "-" + (document.getElementById("socialSecurityNumberInput").value).substring(5);
     }

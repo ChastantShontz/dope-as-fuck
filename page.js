@@ -11425,6 +11425,22 @@ function accountStore(field) {
     document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value = (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value).trim();
     document.getElementsByClassName("enterInfoButton")[sessionStorage.field - 1].value = document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value;
   }
+  if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "socialSecurityNumber") {
+    if ((document.getElementById("socialSecurityNumberInput").value).match(/\+|-|\.|e/gism)) {
+      if ((document.getElementById("socialSecurityNumberInput").value).match(/\+/sm)) {
+        document.getElementById("socialSecurityNumberInput").value = (document.getElementById("socialSecurityNumberInput").value).replace(/\+/sm, "");
+      }
+      if ((document.getElementById("socialSecurityNumberInput").value).match(/-/sm)) {
+        document.getElementById("socialSecurityNumberInput").value = 1;
+      }
+      if ((document.getElementById("socialSecurityNumberInput").value).match(/\./sm)) {
+        document.getElementById("socialSecurityNumberInput").value = Math.floor(document.getElementById("socialSecurityNumberInput").value);
+      }
+      if ((document.getElementById("socialSecurityNumberInput").value).match(/e/ism)) {
+        document.getElementById("socialSecurityNumberInput").value = ((document.getElementById("socialSecurityNumberInput").value).substring(0, (document.getElementById("socialSecurityNumberInput").value).search(/e/ism)) * Math.pow(10, (document.getElementById("socialSecurityNumberInput").value).substring((document.getElementById("socialSecurityNumberInput").value).search(/e/ism) + 1)));
+      }
+    }
+  }
   if ((document.getElementsByClassName("infoInput")[sessionStorage.field - 1].value != "") && (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].checkValidity())) {
     if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "socialSecurityNumber") {
       if ((document.getElementById("socialSecurityNumberInput").value).length < 9) {

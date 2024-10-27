@@ -4737,7 +4737,7 @@
         }
 
         message() {
-          var message = "<!-- \"" + this.title + "\" successfully served at \"" + this.url + "\"; " + this.time + "s; " + this.day + ((this.browser == undefined) ? ("") : ("; " + this.browser)) + ((this.network == undefined) ? ("") : ("; " + this.network)) + "; " + this.language + "; " + this.type + "; " + this.copyright + "; " + this.size + "; initialized " + this.objects + " objects {folders: [" + (((this.directory).folders).map((folder) => ((folder.padStart((folder.length + 1), "\""))).padEnd((folder.length + 1), "\""))).join(", ") + "], files: [\"" + ((this.directory).files).join("\", \"") + "\"]}; SSH key: \"" + this.key + "\" -->";
+          var message = "<!-- \"" + this.title + "\" successfully served at \"" + this.url + "\"; " + this.time + "s; " + this.day + ((this.browser == undefined) ? ("") : ("; " + this.browser)) + ((this.network == undefined) ? ("") : ("; " + this.network)) + "; " + this.language + "; " + this.type + "; " + this.copyright + "; " + this.size + "; initialized " + this.objects + " objects {folders: [" + (((this.directory).folders).map((folder) => ("\"" + folder + "\""))).join(", ") + "], files: [" + (((this.directory).files).map((file) => ("\"" + file + "\""))).join(", ") + "]}; SSH key: \"" + this.key + "\" -->";
           return message;
         }
       };

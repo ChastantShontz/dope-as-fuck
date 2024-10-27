@@ -3969,7 +3969,7 @@ function chooseAnswer(event) {
     for (var i = 0; i < answers.length; i++) {
       occurrences.push((answers.filter((song) => (song == answers[i]))).length);
     }
-    localStorage.commonAnswer = answers[occurrences.indexOf(Math.max.apply(Math, occurrences))];
+    localStorage.commonAnswer = answers[occurrences.indexOf((Math.max).apply(Math, occurrences))];
     document.getElementById("choose").value = "";
     const round = new function() {
       this.setValue = function(x) {

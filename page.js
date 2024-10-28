@@ -7277,7 +7277,11 @@ function error() {
   duration.options = {
     cause: {
       function: openYoutubeSong,
-      code: "\telse if (songs[sessionStorage.youtube].duration >= 3600) {\n\t\terror();\n\t}",
+      code: `
+\telse if (songs[sessionStorage.youtube].duration >= 3600) {\n
+\t\terror();\n
+\t}
+      `,
       value: songs[sessionStorage.youtube].duration,
       fileName: duration.fileName,
       lineNumber: duration.lineNumber,

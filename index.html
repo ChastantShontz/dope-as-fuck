@@ -4738,7 +4738,7 @@
         }
 
         message() {
-          var message = "<!-- \"" + this.title + "\" successfully served at \"" + this.url + "\"; " + this.time + "s; " + this.day + ((this.browser == undefined) ? ("") : ("; " + this.browser)) + ((this.network == undefined) ? ("") : ("; " + this.network)) + "; " + this.language + "; " + this.type + "; " + this.copyright + "; " + this.size + "; initialized " + this.objects + " objects { folders: [ " + (((this.directory).folders).map((folder) => ("\"" + folder + "\""))).join(", ") + " ], files: [ " + (((this.directory).files).map((file) => ("\"" + file + "\""))).join(", ") + " ] }; SSH key: \"" + this.key + "\" -->";
+          var message = "<!-- \"" + this.title + "\" successfully served at \"" + this.url + "\"; " + this.time + "s; " + this.day + "; " + this.browser + ((this.network == undefined) ? ("") : ("; " + this.network)) + "; " + this.language + "; " + this.type + "; " + this.copyright + "; " + this.size + "; initialized " + this.objects + " objects { folders: [ " + (((this.directory).folders).map((folder) => ("\"" + folder + "\""))).join(", ") + " ], files: [ " + (((this.directory).files).map((file) => ("\"" + file + "\""))).join(", ") + " ] }; SSH key: \"" + this.key + "\" -->";
           return message;
         }
       };
@@ -4765,7 +4765,7 @@
       }
 
       function browser() {
-        var browser = navigator.userAgent;
+        var browser = (navigator.userAgent ?? "");
         return browser;
       }
 

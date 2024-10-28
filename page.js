@@ -11320,7 +11320,7 @@ function accountControls(event) {
       closeAccount();
     }
   }
-  else if ((event.key).match(/\b[a-zA-Z]\b|\b0\b|\.|,|'|"|`|~|-|_|\+|\*|\^|%|=|>|<|&|#|\$|@|;|:|\?|!|\\|\||\(|\)|\[|\]|\{|\}|\s|Backspace|Delete/sm)) {
+  else if ((event.key).match(/\b[a-zA-Z]\b|\b0\b|[^a-zA-Z0-9\/]|Backspace|Delete/sm)) {
     if ((keyboard.control == false) && (keyboard.alt == false) && (keyboard.meta == false) && (keyboard.fn == false)) {
       if (sessionStorage.scope == "document") {
         accountMessageEntrance();

@@ -12792,9 +12792,6 @@ function mobileGrow() {
   if (sessionStorage.shortcut == undefined) {
     document.ondblclick = showPassword;
   }
-  else {
-    document.ondblclick = null;
-  }
   if (((document.getElementById("knightmobile").style.left == "13%") || (document.getElementById("knightmobile").style.bottom == "35%")) && ((document.getElementById("account").style.visibility != "visible") && (document.getElementById("secret") == undefined))) {
     document.onkeydown = startDrive;
   }

@@ -3794,7 +3794,7 @@ function openSelection() {
     sessionStorage.attempts = 0;
   }
   else if (sessionStorage.selection == 2) {
-    sessionStorage.foodPrime = 5;
+    sessionStorage.foodPrime = 6;
     options.push(sessionStorage.foodPrime);
     sessionStorage.correct = Math.ceil(Math.random() * document.getElementsByClassName("choice").length);
     for (var i = 0; i < document.getElementsByClassName("choice").length; i++) {

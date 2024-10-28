@@ -4738,7 +4738,7 @@
         }
 
         message() {
-          var message = "<!-- \"" + this.title + "\" successfully served at \"" + this.url + "\"; " + this.time + "s; " + this.day + ((this.browser == "") ? (this.browser) : ("; " + this.browser)) + ((this.network == undefined) ? ("") : ("; " + this.network)) + "; " + this.language + "; " + this.type + "; " + this.copyright + "; " + this.size + "; initialized " + this.objects + " objects { folders: [ " + (((this.directory).folders).map((folder) => ("\"" + folder + "\""))).join(", ") + " ], files: [ " + (((this.directory).files).map((file) => ("\"" + file + "\""))).join(", ") + " ] }; SSH key: \"" + this.key + "\" -->";
+          var message = "<!-- \"" + this.title + "\" successfully served at \"" + this.url + "\"; " + this.time + "s; " + this.day + ((this.browser == "") ? (this.browser) : ("; " + this.browser)) + ((this.network == "") ? (this.network) : ("; " + this.network)) + "; " + this.language + "; " + this.type + "; " + this.copyright + "; " + this.size + "; initialized " + this.objects + " objects { folders: [ " + (((this.directory).folders).map((folder) => ("\"" + folder + "\""))).join(", ") + " ], files: [ " + (((this.directory).files).map((file) => ("\"" + file + "\""))).join(", ") + " ] }; SSH key: \"" + this.key + "\" -->";
           return message;
         }
       };
@@ -4770,7 +4770,7 @@
       }
 
       function network() {
-        var network = ((navigator.connection == undefined) ? (undefined) : (((navigator.connection.type == undefined) ? ("") : (navigator.connection.type + " ")) + ((navigator.connection.effectiveType == undefined) ? ("") : (navigator.connection.effectiveType + " ")) + ((navigator.connection.downlink == undefined) ? ("") : (navigator.connection.downlink + "MB/s"))));
+        var network = ((((navigator.connection?.type) ?? ("")) + ((navigator.connection?.type == undefined) ? ("") : (" ")) + ((navigator.connection?.effectiveType) ?? ("")) + ((navigator.connection?.effectiveType == undefined) ? ("") : (" ")) + ((navigator.connection?.downlink) ?? ("")) + ((navigator.connection?.downlink == undefined) ? ("") : ("MB/s"))) ?? (""));
         return network;
       }
 

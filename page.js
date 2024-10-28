@@ -2717,7 +2717,7 @@ function gameBegins(event) {
     console.log("Hey, you seem dope as fuck! :)");
   }
   else if (localStorage.firstGame == String(false)) {
-    console.log("Welcome back" + ((localStorage.name == undefined) ? ("") : (", " + localStorage.name)) + "!");
+    console.log("Welcome back" + ((localStorage.name == undefined) ? ("") : (", ")) + ((localStorage.name) ?? ("")) + "!");
   }
 }
 
@@ -4198,7 +4198,7 @@ function loseLife(event) {
     document.getElementById("presidentDie").style.visibility = "visible";
     document.getElementById("presidentDie").style.opacity = "100%";
     document.getElementById("presidentDie").style.transition = "all .25s ease 0s";
-    console.group("Caroline: Shit! " + ((localStorage.name == undefined) ? ("This guy") : (localStorage.name)) + " killed me!");
+    console.group("Caroline: Shit! " + ((localStorage.name) ?? ("This guy")) + " killed me!");
     console.log("Kami: Oh no!");
     console.log("Liam: Haha, now I'm in control of the band!");
     console.log("Kami: Liam!");
@@ -4304,7 +4304,7 @@ function loseLife(event) {
     document.getElementById("socialMediaChairDie").style.transition = "all .25s ease 0s";
     document.getElementById("publishedPaper").href = "https://www.nytimes.com/1986/09/05/nyregion/rape-and-murder-scar-innocence-of-potsdam.html";
     document.getElementById("publishedPaper").style.borderRadius = "0";
-    console.group("Ryan: Oh, come on! " + ((localStorage.name == undefined) ? ("This guy") : (localStorage.name)) + " sucks, how many more times are they gonna mess up?");
+    console.group("Ryan: Oh, come on! " + ((localStorage.name) ?? ("This guy")) + " sucks, how many more times are they gonna mess up?");
     console.log("Corsner: Ryan! Don't leave me!");
     console.log("Ryan: You're in charge of the band now, Corsner. You must carry on!");
     console.log("Corsner: How? I'm just the floozy!");
@@ -12196,7 +12196,7 @@ function gameOver(event) {
     if (localStorage.gamesWon == "N/A") {
       localStorage.gamesWon = 0;
     }
-    console.error("Hey, " + ((localStorage.name == undefined) ? ("") : (localStorage.name + ", ")) + "you suck! :(");
+    console.error("Hey, " + ((localStorage.name) ?? ("")) + ((localStorage.name == undefined) ? ("") : (", ")) + "you suck! :(");
   }
   else {
     if (localStorage.gamesWon == "N/A") {
@@ -12205,7 +12205,7 @@ function gameOver(event) {
     else {
       localStorage.gamesWon++;
     }
-    console.log("Great job" + ((localStorage.name == undefined) ? ("") : (", " + localStorage.name)) + "!");
+    console.log("Great job" + ((localStorage.name == undefined) ? ("") : (", ")) + ((localStorage.name) ?? ("")) + "!");
   }
   const round = new function() {
     this.setValue = function(x) {

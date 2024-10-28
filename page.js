@@ -3886,7 +3886,7 @@ function selectAnswer(answer, event) {
             this.value = (this.value).replace(/<br>(with lyrics!)/sm, "");
           }
         }
-        var camelCase = ((((((((this.value).replace(/<\/*(b|strong|i|em|u|s|br)>/gism, "")).replace(/\.|,|'|"|`|~|-|_|\+|\*|\^|%|=|>|<|&|#|\$|@|;|:|\?|!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+/gsm, " ")).toLowerCase()).split(" ")).map((word) => ((word.charAt(0)).toUpperCase() + word.substring(1)))).join("")).charAt(0)).toLowerCase() + (((((((this.value).replace(/<\/*(b|strong|i|em|u|s|br)>/gism, "")).replace(/\.|,|'|"|`|~|-|_|\+|\*|\^|%|=|>|<|&|#|\$|@|;|:|\?|!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+/gsm, " ")).toLowerCase()).split(" ")).map((word) => ((word.charAt(0)).toUpperCase() + word.substring(1)))).join("")).substring(1);
+        var camelCase = ((((((((this.value).replace(/<\/*(b|strong|i|em|u|s|br)>/gism, "")).replace(/[^a-zA-Z0-9]/gsm, " ")).toLowerCase()).split(" ")).map((word) => ((word.charAt(0)).toUpperCase() + word.substring(1)))).join("")).charAt(0)).toLowerCase() + (((((((this.value).replace(/<\/*(b|strong|i|em|u|s|br)>/gism, "")).replace(/[^a-zA-Z0-9]/gsm, " ")).toLowerCase()).split(" ")).map((word) => ((word.charAt(0)).toUpperCase() + word.substring(1)))).join("")).substring(1);
         return camelCase;
       }
     }
@@ -7577,8 +7577,8 @@ function youtubeEdit(event) {
       (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<!^)<br>(?!$)/gism, "");
     }
   }
-  if (((event.target).innerHTML).match(/[a-zA-Z]|\.|,|'|"|`|~|`|_|\+|\^|%|=|>|<|&|#|\$|@|;|:|\?|!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+|\n+|\r+|\t+|\v+|\f+/gsm)) {
-    (event.target).innerHTML = ((event.target).innerHTML).replace(/[a-zA-Z]|\.|,|'|"|`|~|`|_|\+|\^|%|=|>|<|&|#|\$|@|;|:|\?|!|\/|\\|\||\(|\)|\[|\]|\{|\}|\s+|\n+|\r+|\t+|\v+|\f+/gsm, "");
+  if (((event.target).innerHTML).match(/[^0-9]/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/[^0-9]/gsm, "");
   }
   if (((event.target).innerHTML).length > 2) {
     (event.target).innerHTML = ((event.target).innerHTML).substring(0, 2);

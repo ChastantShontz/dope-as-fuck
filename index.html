@@ -4790,7 +4790,7 @@
           timeout: Infinity,
           enableHighAccuracy: true
         };
-        navigator.geolocation.getCurrentPosition(positionThen, positionCatch, options);
+        (navigator.geolocation).getCurrentPosition(positionThen, positionCatch, options);
       }
 
       function language() {

@@ -7145,7 +7145,7 @@ function gotIt18() {
 }
 
 function microphone() {
-  navigator.mediaDevices.getUserMedia({audio: true})
+  (navigator.mediaDevices).getUserMedia({audio: true})
     .then(() => {
       setTimeout(() => (
         alert("Make sure your computer is unmuted for this next part.")

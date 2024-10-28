@@ -38,6 +38,8 @@ Hope you enjoy it!
 
     10. Update the instructions in this file if any of previous changes affect the operation or maintenance of the game. Be especially careful to update the text fragment in the URL if you linked to a specific step.
 
+    11. After sizable chunks of edits, play the game through as a user would and test out all the major features to make sure that nothing has been in advertently broken.
+
 2. Save any changes that you have made in VS Code. To commit them in GitHub Desktop, write a brief summary and description of these changes in the designated text fields and click the `Commit to main` button underneath. Then `Push to origin` \(`Control + P`\) so they can take effect on the actual website \(it may take a few minutes for this to update\).
 
 3. Open a path to the game's source folder, `C:\Users\chast\OneDrive\Documents\GitHub\dope-as-fuck`, in your file explorer \(`Control + Shift + F`\). Right/double-click on it and select `Compress to ZIP file`. This will create a zipped folder called `dope-as-fuck.zip`. Then email it to yourself \(if you are using Gmail, it will have to be sent as a Google Drive link due to its size\). This will guard against the possibility of your computer getting physically damaged during the following process and losing all its data.

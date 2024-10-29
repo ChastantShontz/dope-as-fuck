@@ -3969,11 +3969,7 @@ function chooseAnswer(event) {
     document.getElementById("choicesCont").style.transition = "all 0s ease 2.5s";
     answers.push(document.getElementById("choose").value);
     localStorage.answers = JSON.stringify(answers);
-    var occurrences = [];
-    for (var i = 0; i < answers.length; i++) {
-      occurrences.push((answers.filter((song) => (song == answers[i]))).length);
-    }
-    localStorage.commonAnswer = answers[occurrences.indexOf((Math.max).apply(Math, occurrences))];
+    localStorage.commonAnswer = ((answers.slice()).sort((x, y) => (((answers.filter((answer) => (answer == x))).length) - ((answers.filter((answer) => (answer == y))).length)))).pop();
     document.getElementById("choose").value = "";
     const round = new function() {
       this.setValue = function(x) {

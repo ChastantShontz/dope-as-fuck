@@ -7933,7 +7933,7 @@ function closeYoutubeSong(event) {
   document.onkeydown = collapse;
   document.onkeyup = null;
   sessionStorage.removeItem("shortcut");
-  Object.keys(keyboard).forEach((key) => {
+  (Object.keys(keyboard)).forEach((key) => {
     if (keyboard[key] == true) {
       keyboard[key] = false;
     }
@@ -9058,7 +9058,7 @@ function closePoem(event) {
     document.onkeydown = collapse;
     document.onkeyup = null;
     sessionStorage.removeItem("shortcut");
-    Object.keys(keyboard).forEach((key) => {
+    (Object.keys(keyboard)).forEach((key) => {
       if (keyboard[key] == true) {
         keyboard[key] = false;
       }
@@ -10964,7 +10964,7 @@ function closePromo(event) {
   document.onkeydown = collapse;
   document.onkeyup = null;
   sessionStorage.removeItem("shortcut");
-  Object.keys(keyboard).forEach((key) => {
+  (Object.keys(keyboard)).forEach((key) => {
     if (keyboard[key] == true) {
       keyboard[key] = false;
     }
@@ -12006,7 +12006,7 @@ function closeAccount() {
   }
   document.onkeyup = null;
   sessionStorage.removeItem("shortcut");
-  Object.keys(keyboard).forEach((key) => {
+  (Object.keys(keyboard)).forEach((key) => {
     if (keyboard[key] == true) {
       keyboard[key] = false;
     }
@@ -12605,7 +12605,7 @@ function mobileShrink() {
   if (document.onkeyup != null) {
     document.onkeyup = null;
   }
-  Object.keys(keyboard).forEach((key) => {
+  (Object.keys(keyboard)).forEach((key) => {
     if (keyboard[key] == true) {
       keyboard[key] = false;
     }

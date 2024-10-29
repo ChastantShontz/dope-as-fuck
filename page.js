@@ -7152,12 +7152,12 @@ function microphone() {
   (navigator.mediaDevices).getUserMedia({audio: true})
     .then(() => {
       setTimeout(() => (
-        alert("Make sure your computer is unmuted for this next part.")
+        window.alert("Make sure your computer is unmuted for this next part.")
       ), 100);
     })
     .catch(() => {
       setTimeout(() => (
-        alert("Are you sure? You won't get the full experience if you do not allow access to your microphone.")
+        window.alert("Are you sure? You won't get the full experience if you do not allow access to your microphone.")
       ), 100);
     });
 }
@@ -12907,11 +12907,11 @@ function slideshow() {
 }
 
 function connected() {
-  alert("Your browser is now connected to the internet.");
+  window.alert("Your browser is now connected to the internet.");
 }
 
 function disconnected() {
-  alert("You are now playing this game offline. Be wary of refreshing it.");
+  window.alert("You are now playing this game offline. Be wary of refreshing it.");
 }
 
 // End of script

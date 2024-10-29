@@ -12290,7 +12290,7 @@ function passwordProcess(event) {
 }
 
 function passwordStore() {
-  const encryption = Function(document.getElementById("secretTemplate").content.getElementById("inlineScript").textContent);
+  const encryption = Function(document.getElementById("secretTemplate").content.getElementById("passwordScript").textContent);
   if ((document.getElementById("passwordInput").value).match(/(?<=^)\s+|\s+(?=$)/gsm)) {
     document.getElementById("passwordInput").value = (document.getElementById("passwordInput").value).trim();
     document.getElementById("enterPassword").value = document.getElementById("passwordInput").value;

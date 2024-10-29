@@ -136,9 +136,9 @@ namespace user {
         return all;
       }
 
-      bool matchName(const string& m) const {
+      bool matchName(const string& n) const {
         bool match;
-        if (m == getName()) {
+        if (n == getName()) {
           match = true;
         }
         else {
@@ -147,9 +147,9 @@ namespace user {
         return match;
       }
 
-      bool matchYear(const string& m) const {
+      bool matchYear(const string& y) const {
         bool match;
-        if (m == getYear()) {
+        if (y == getYear()) {
           match = true;
         }
         else {
@@ -180,9 +180,9 @@ namespace user {
         return match;
       }
 
-      bool matchInstrument(const string& m) const {
+      bool matchInstrument(const string& i) const {
         bool match;
-        if (m == getInstrument()) {
+        if (i == getInstrument()) {
           match = true;
         }
         else {
@@ -191,9 +191,20 @@ namespace user {
         return match;
       }
 
-      bool matchSocialSecurityNumber(const int& m) const {
+      bool matchSocialSecurityNumber(const int& ssn) const {
         bool match;
-        if (m == getSocialSecurityNumber()) {
+        if (ssn == getSocialSecurityNumber()) {
+          match = true;
+        }
+        else {
+          match = false;
+        }
+        return match;
+      }
+
+      bool matchAll(const string& n, const string& y, const string& m, const string& h, const string& i, const int& ssn) const {
+        bool match;
+        if ((matchName(n) == true) && (matchYear(y) == true) && (matchMajor(m) == true) && (matchHometown(h) == true) && (matchInstrument(i) == true) && (matchSocialSecurityNumber(ssn) == true)) {
           match = true;
         }
         else {

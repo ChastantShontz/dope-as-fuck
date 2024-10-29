@@ -10397,7 +10397,7 @@ function bitchIce(event) {
     }
     else if (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Song").style.visibility == "visible") {
       for (var i = 0; i < document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word").length; i++) {
-        document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word")[i].style.visibility = window.getComputedStyle(document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word")[i]).getPropertyValue("visibility");
+        document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word")[i].style.visibility = getComputedStyle(document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word")[i]).getPropertyValue("visibility");
         document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word")[i].style.transition = "visibility 0s ease 0s";
       }
     }
@@ -10785,7 +10785,7 @@ function drunk(drinksIncrement, event) {
     }
     else if (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Song").style.visibility == "visible") {
       for (var i = 0; i < document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word").length; i++) {
-        document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word")[i].style.visibility = window.getComputedStyle(document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word")[i]).getPropertyValue("visibility");
+        document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word")[i].style.visibility = getComputedStyle(document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word")[i]).getPropertyValue("visibility");
         document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Word")[i].style.transition = "visibility 0s ease 0s";
       }
     }

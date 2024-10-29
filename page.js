@@ -2954,9 +2954,9 @@ function endSound(effect) {
 
 function emphasizeConductor() {
   document.getElementById("conductor").style.animation = "emphasizeCont 1.5s ease 0s 1 forwards";
-  setTimeout(() => (
-    document.getElementById("conductor").style.animation = "none"
-  ), 1500);
+  setTimeout(() => {
+    document.getElementById("conductor").style.animation = "none";
+  }, 1500);
 }
 
 function enableButton() {
@@ -2989,9 +2989,9 @@ function endButton() {
 function emphasizeButton() {
   if (document.getElementById("ok").disabled == false) {
     document.getElementById("okShimmer").style.animation = "okShimmer 1s ease 0s 1 backwards";
-    setTimeout(() => (
-      document.getElementById("okShimmer").style.animation = "none"
-    ), 1000);
+    setTimeout(() => {
+      document.getElementById("okShimmer").style.animation = "none";
+    }, 1000);
   }
 }
 
@@ -3135,23 +3135,19 @@ function gotIt2() {
     }
     if (document.getElementById("discordLogo").onclick == openDiscord) {
       const activate = (x) => {
-        setTimeout(() => (
-          document.getElementsByClassName("gender")[x].tabIndex = "0"
-        ), 500);
-        setTimeout(() => (
-          document.getElementsByClassName("gender")[x].ariaHidden = false
-        ), 500);
+        setTimeout(() => {
+          document.getElementsByClassName("gender")[x].tabIndex = "0";
+          document.getElementsByClassName("gender")[x].ariaHidden = false;
+        }, 500);
       }
       activate(i);
     }
     else if (document.getElementById("discordLogo").onclick == closeDiscord) {
       const activate = (x) => {
-        setTimeout(() => (
-          document.getElementsByClassName("gender")[x].tabIndex = "0"
-        ), 1000);
-        setTimeout(() => (
-          document.getElementsByClassName("gender")[x].ariaHidden = false
-        ), 1000);
+        setTimeout(() => {
+          document.getElementsByClassName("gender")[x].tabIndex = "0";
+          document.getElementsByClassName("gender")[x].ariaHidden = false;
+        }, 1000);
       }
       activate(i);
     }
@@ -3313,12 +3309,10 @@ function gotIt3() {
   pronoun();
   document.getElementById("knightmobile").style.left = "13%";
   document.getElementById("knightmobile").style.transition = "left 2s ease 1.25s";
-  setTimeout(() => (
-    document.getElementById("knightmobile").tabIndex = "0"
-  ), 1250);
-  setTimeout(() => (
-    document.getElementById("knightmobile").ariaHidden = false
-  ), 1250);
+  setTimeout(() => {
+    document.getElementById("knightmobile").tabIndex = "0";
+    document.getElementById("knightmobile").ariaHidden = false;
+  }, 1250);
   setTimeout(enableButton, 3250);
   document.getElementById("ok").onclick = function() {
     gotIt4();
@@ -3395,9 +3389,9 @@ function gotIt4() {
   document.getElementById("knightmobile").style.transform = "scale(1)";
   document.getElementById("knightmobile").style.transition = "all .5s ease .5s";
   sessionStorage.arrowBlinkInterval = setInterval(arrowBlink, 60000);
-  setTimeout(() => (
-    document.onkeydown = startDrive
-  ), 1000);
+  setTimeout(() => {
+    document.onkeydown = startDrive;
+  }, 1000);
   console.log("This car can fit 6 people plus a tree, don't ask how we know");
 }
 
@@ -3412,16 +3406,16 @@ function arrowBlink() {
 
 function rightArrowBlink() {
   document.getElementById("rightArrowIcon").style.animation = "arrowBlink 2s ease 0s 2 forwards";
-  setTimeout(() => (
-    document.getElementById("rightArrowIcon").style.animation = "none"
-  ), 4000);
+  setTimeout(() => {
+    document.getElementById("rightArrowIcon").style.animation = "none";
+  }, 4000);
 }
 
 function upArrowBlink() {
   document.getElementById("upArrowIcon").style.animation = "arrowBlink 2s ease 0s 2 forwards";
-  setTimeout(() => (
-    document.getElementById("upArrowIcon").style.animation = "none"
-  ), 4000);
+  setTimeout(() => {
+    document.getElementById("upArrowIcon").style.animation = "none";
+  }, 4000);
 }
 
 function startDrive(event) {
@@ -3552,12 +3546,10 @@ function gotIt5() {
   document.getElementById("map").blur();
   document.getElementById("crappleton").style.transform = "scale(1)";
   document.getElementById("crappleton").style.transition = "transform 1s ease .5s";
-  setTimeout(() => (
-    document.getElementById("crappleton").tabIndex = "0"
-  ), 500);
-  setTimeout(() => (
-    document.getElementById("crappleton").ariaHidden = false
-  ), 500);
+  setTimeout(() => {
+    document.getElementById("crappleton").tabIndex = "0";
+    document.getElementById("crappleton").ariaHidden = false;
+  }, 500);
   setTimeout(enableButton, 1500);
   document.getElementById("ok").onclick = function(event) {
     gotIt6(event);
@@ -3587,12 +3579,10 @@ function gotIt6(event) {
       document.getElementsByClassName("menGoalie")[i].style.opacity = "100%";
       document.getElementsByClassName("menGoalie")[i].style.transition = "all 0s ease 1s";
       const activate = (x) => {
-        setTimeout(() => (
-          document.getElementsByClassName("menGoalie")[x].style.pointerEvents = "auto"
-        ), 3000);
-        setTimeout(() => (
-          document.getElementsByClassName("menGoalie")[x].tabIndex = "0"
-        ), 3000);
+        setTimeout(() => {
+          document.getElementsByClassName("menGoalie")[x].style.pointerEvents = "auto";
+          document.getElementsByClassName("menGoalie")[x].tabIndex = "0";
+        }, 3000);
       }
       activate(i);
     }
@@ -3603,12 +3593,10 @@ function gotIt6(event) {
       document.getElementsByClassName("womenGoalie")[i].style.opacity = "100%";
       document.getElementsByClassName("womenGoalie")[i].style.transition = "all 0s ease 1s";
       const activate = (x) => {
-        setTimeout(() => (
-          document.getElementsByClassName("womenGoalie")[x].style.pointerEvents = "auto"
-        ), 3000);
-        setTimeout(() => (
-          document.getElementsByClassName("womenGoalie")[x].tabIndex = "0"
-        ), 3000);
+        setTimeout(() => {
+          document.getElementsByClassName("womenGoalie")[x].style.pointerEvents = "auto";
+          document.getElementsByClassName("womenGoalie")[x].tabIndex = "0";
+        }, 3000);
       }
       activate(i);
     }
@@ -3620,15 +3608,13 @@ function gotIt6(event) {
   document.getElementById("rink").style.transform = "scale(1)";
   document.getElementById("rink").style.transition = "all 0s ease 3s";
   document.getElementById("rink").style.animation = "expand 2s ease 1s 1 forwards";
-  setTimeout(() => (
-    document.getElementById("rink").style.animation = "none"
-  ), 3000);
-  setTimeout(() => (
-    document.getElementById("rink").tabIndex = "0"
-  ), 1000);
-  setTimeout(() => (
-    document.getElementById("rink").ariaHidden = false
-  ), 1000);
+  setTimeout(() => {
+    document.getElementById("rink").style.animation = "none";
+  }, 3000);
+  setTimeout(() => {
+    document.getElementById("rink").tabIndex = "0";
+    document.getElementById("rink").ariaHidden = false;
+  }, 1000);
   sessionStorage.period = 1;
   document.getElementById("scoreboardPeriod").innerHTML = sessionStorage.period;
   sessionStorage.clarksonScore = 0;
@@ -3648,9 +3634,9 @@ function gotIt6(event) {
     document.getElementById("backToTop").style.flexDirection = "row";
     document.getElementById("backToTop").style.justifyContent = "center";
     document.getElementById("backToTop").style.alignItems = "center";
-    setTimeout(() => (
-      document.getElementById("cheers").tabIndex = "0"
-    ), 2000);
+    setTimeout(() => {
+      document.getElementById("cheers").tabIndex = "0";
+    }, 2000);
     if (document.getElementById("cheers").scrollTop > 0) {
       document.getElementById("cheers").scrollTop = 0;
     }
@@ -3659,9 +3645,9 @@ function gotIt6(event) {
     document.getElementsByClassName("gameActivity")[i].style.transform = "scale(1)";
     document.getElementsByClassName("gameActivity")[i].style.transition = "transform 0s ease 2s";
     const activate = (x) => {
-      setTimeout(() => (
-        document.getElementsByClassName("gameActivity")[x].tabIndex = "0"
-      ), 2000);
+      setTimeout(() => {
+        document.getElementsByClassName("gameActivity")[x].tabIndex = "0";
+      }, 2000);
     }
     activate(i);
   }
@@ -3676,9 +3662,9 @@ function gotIt6(event) {
     document.getElementsByClassName("lifeCont")[i].style.top = "0";
     document.getElementsByClassName("lifeCont")[i].style.transition = "top 1s ease " + transitionDelay + "s";
     const activate = (x, y) => {
-      setTimeout(() => (
-        document.getElementsByClassName("lifeCont")[x].tabIndex = "0"
-      ), y);
+      setTimeout(() => {
+        document.getElementsByClassName("lifeCont")[x].tabIndex = "0";
+      }, y);
     }
     activate(i, (transitionDelay * 1000));
   }
@@ -4107,9 +4093,9 @@ function closeSelection(event) {
       setTimeout(loseLife.bind(null, event), 750);
     }
     if (songs[69].title == "<i>Tijuana</i><br>(with lyrics!)") {
-      setTimeout(() => (
-        songs[69].title = "<i>Tijuana</i>"
-      ), 500);
+      setTimeout(() => {
+        songs[69].title = "<i>Tijuana</i>";
+      }, 500);
     }
     newFunction();
   }
@@ -4140,23 +4126,21 @@ function closeSelection(event) {
   document.getElementById("choicesContCont").tabIndex = "-1";
   document.getElementById("choicesContCont").ariaHidden = true;
   document.getElementById("choicesContCont").blur();
-  setTimeout(() => (
-    document.getElementById("viewAccountToggle").style.pointerEvents = "auto"
-  ), 500);
-  setTimeout(() => (
-    document.getElementById("viewAccountToggle").tabIndex = "0"
-  ), 500);
-  setTimeout(() => (
-    document.getElementById("viewAccount").tabIndex = "0"
-  ), 500);
+  setTimeout(() => {
+    document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
+    document.getElementById("viewAccountToggle").tabIndex = "0";
+  }, 500);
+  setTimeout(() => {
+    document.getElementById("viewAccount").tabIndex = "0";
+  }, 500);
   if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
-    setTimeout(() => (
-      document.getElementById("conductorTalkCont").tabIndex = "0"
-    ), 500);
+    setTimeout(() => {
+      document.getElementById("conductorTalkCont").tabIndex = "0";
+    }, 500);
   }
-  setTimeout(() => (
+  setTimeout(() => {
     document.getElementById("conductor").tabIndex = "0"
-  ), 500);
+  }, 500);
 }
 
 function changeSong(event) {
@@ -4579,9 +4563,9 @@ function correctCheer() {
   document.getElementById("cheer" + sessionStorage.cheer).style.background = "var(--clarksonGreen)";
   document.getElementById("cheer" + sessionStorage.cheer).style.borderBottom = ".05em solid var(--clarksonGreen)";
   document.getElementById("cheerMessage" + sessionStorage.cheer).style.animation = "selectCheer .5s ease 0s 1 forwards";
-  setTimeout(() => (
-    document.getElementById("cheerMessage" + sessionStorage.cheer).style.animation = "none"
-  ), 500);
+  setTimeout(() => {
+    document.getElementById("cheerMessage" + sessionStorage.cheer).style.animation = "none";
+  }, 500);
   if (localStorage.totalCorrectCheers == "N/A") {
     localStorage.totalCorrectCheers = 1;
   }
@@ -4618,14 +4602,14 @@ function semiCorrectCheer() {
       document.getElementById("cheer" + sessionStorage.cheer).style.borderBottom = ".05em solid var(--clarksonGreen)";
       document.getElementById("cheerMessage" + sessionStorage.cheer).classList.replace("semiCorrectCheerMessage", "correctCheerMessage");
       document.getElementById("cheerMessage" + sessionStorage.cheer).style.animation = "selectCheer .5s ease 0s 1 forwards";
-      setTimeout(() => (
-        document.getElementById("cheerMessage" + sessionStorage.cheer).style.animation = "none"
-      ), 500);
+      setTimeout(() => {
+        document.getElementById("cheerMessage" + sessionStorage.cheer).style.animation = "none";
+      }, 500);
       document.getElementById("cheerCover" + sessionStorage.cheer).classList.replace("semiCorrectCheerCover", "correctCheerCover");
       document.getElementById("danielAllin").style.animation = "bendOver 1.25s ease 0s 1 forwards";
-      setTimeout(() => (
-        document.getElementById("danielAllin").style.animation = "none"
-      ), 1250);
+      setTimeout(() => {
+        document.getElementById("danielAllin").style.animation = "none";
+      }, 1250);
       if (localStorage.totalCorrectCheers == "N/A") {
         localStorage.totalCorrectCheers = 1;
       }
@@ -4663,9 +4647,9 @@ function semiCorrectCheer() {
         localStorage.totalCorrectCheers = 0;
       }
       document.getElementById("hopeCrisafi").style.animation = "bendOver 1.25s ease 0s 1 forwards";
-      setTimeout(() => (
-        document.getElementById("hopeCrisafi").style.animation = "none"
-      ), 1250);
+      setTimeout(() => {
+        document.getElementById("hopeCrisafi").style.animation = "none";
+      }, 1250);
       document.getElementById("troyLassialTalk").innerHTML = "Woah, you can't yell at a bunch of college girls to bend over! I'm afraid I'm going to have to write you up for a Title 69 sexual harassment violation, and take one of your lives away.";
       setTimeout(troyLassialEntrance, 1250);
       compileSound("sawtooth", ["exponential", 140, 90, .25], ["none", 1, null, 0], .25);
@@ -4780,23 +4764,21 @@ function troyLassialExit(event) {
       document.getElementById("troyLassialCont").style.transform = "scale(0)";
       document.getElementById("troyLassialCont").style.transition = "transform .5s ease 0s";
       setTimeout(newLife, 750);
-      setTimeout(() => (
-        document.getElementById("viewAccountToggle").style.pointerEvents = "auto"
-      ), 500);
-      setTimeout(() => (
-        document.getElementById("viewAccountToggle").tabIndex = "0"
-      ), 500);
-      setTimeout(() => (
-        document.getElementById("viewAccount").tabIndex = "0"
-      ), 500);
+      setTimeout(() => {
+        document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
+        document.getElementById("viewAccountToggle").tabIndex = "0";
+      }, 500);
+      setTimeout(() => {
+        document.getElementById("viewAccount").tabIndex = "0";
+      }, 500);
       if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
-        setTimeout(() => (
-          document.getElementById("conductorTalkCont").tabIndex = "0"
-        ), 500);
+        setTimeout(() => {
+          document.getElementById("conductorTalkCont").tabIndex = "0";
+        }, 500);
       }
-      setTimeout(() => (
-        document.getElementById("conductor").tabIndex = "0"
-      ), 500);
+      setTimeout(() => {
+        document.getElementById("conductor").tabIndex = "0";
+      }, 500);
       setTimeout(enableButton, 750);
     }
     else {
@@ -4827,9 +4809,9 @@ function troyLassialExit(event) {
       document.getElementById("cheer" + sessionStorage.cheer).style.transition = "all 0s ease .75s";
       document.getElementById("cheerMessage" + sessionStorage.cheer).classList.replace("incorrectCheerMessage", "correctCheerMessage");
       document.getElementById("cheerMessage" + sessionStorage.cheer).style.animation = "selectCheer .5s ease .75s 1 forwards";
-      setTimeout(() => (
-        document.getElementById("cheerMessage" + sessionStorage.cheer).style.animation = "none"
-      ), 1250);
+      setTimeout(() => {
+        document.getElementById("cheerMessage" + sessionStorage.cheer).style.animation = "none";
+      }, 1250);
       document.getElementById("cheerCover" + sessionStorage.cheer).classList.replace("incorrectCheerCover", "correctCheerCover");
       localStorage.totalCorrectCheers++;
       for (var i = 1; i <= sessionStorage.pointsIncrement; i++) {
@@ -4839,14 +4821,14 @@ function troyLassialExit(event) {
       if ((localStorage.highScore == "N/A") || ((((sessionStorage.points).length == (localStorage.highScore).length) && (sessionStorage.points > localStorage.highScore)) || ((sessionStorage.points).length > (localStorage.highScore).length))) {
         localStorage.highScore = sessionStorage.points;
       }
-      setTimeout(() => (
-        document.getElementById("cheerScore").innerHTML = sessionStorage.points
-      ), 750);
+      setTimeout(() => {
+        document.getElementById("cheerScore").innerHTML = sessionStorage.points;
+      }, 750);
       remember(event);
       if (sessionStorage.points == 36) {
-        setTimeout(() => (
-          document.getElementById("conductorTalk").innerHTML = "dIrTy SeX?!?!"
-        ), 750);
+        setTimeout(() => {
+          document.getElementById("conductorTalk").innerHTML = "dIrTy SeX?!?!";
+        }, 750);
         if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
           if (document.getElementById("conductorTalkCont").scrollTop > 0) {
             document.getElementById("conductorTalkCont").scrollTop = 0;
@@ -4861,12 +4843,12 @@ function troyLassialExit(event) {
     }
     else {
       if (document.getElementById("troyLassialTalk").innerHTML == "How dare you say that! Congratulations, you've just ruined the magic of Christmas for an innocent SLU child! Not only will you have to write a formal apology letter to her, but I'll be taking one of your lives away.") {
-        setTimeout(() => (
-          document.getElementById("troyLassial").style.display = "inline-block"
-        ), 500);
-        setTimeout(() => (
-          document.getElementById("troyLassialSanta").style.display = "none"
-        ), 500);
+        setTimeout(() => {
+          document.getElementById("troyLassial").style.display = "inline-block";
+        }, 500);
+        setTimeout(() => {
+          document.getElementById("troyLassialSanta").style.display = "none";
+        }, 500);
         if (sessionStorage.lives > 1) {
           setTimeout(enableButton, 1000);
         }
@@ -4878,23 +4860,21 @@ function troyLassialExit(event) {
       }
       setTimeout(loseLife.bind(null, event), 750);
     }
-    setTimeout(() => (
-      document.getElementById("viewAccountToggle").style.pointerEvents = "auto"
-    ), 500);
-    setTimeout(() => (
-      document.getElementById("viewAccountToggle").tabIndex = "0"
-    ), 500);
-    setTimeout(() => (
-      document.getElementById("viewAccount").tabIndex = "0"
-    ), 500);
+    setTimeout(() => {
+      document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
+      document.getElementById("viewAccountToggle").tabIndex = "0";
+    }, 500);
+    setTimeout(() => {
+      document.getElementById("viewAccount").tabIndex = "0";
+    }, 500);
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
-      setTimeout(() => (
-        document.getElementById("conductorTalkCont").tabIndex = "0"
-      ), 500);
+      setTimeout(() => {
+        document.getElementById("conductorTalkCont").tabIndex = "0";
+      }, 500);
     }
-    setTimeout(() => (
-      document.getElementById("conductor").tabIndex = "0"
-    ), 500);
+    setTimeout(() => {
+      document.getElementById("conductor").tabIndex = "0";
+    }, 500);
   }
   document.getElementById("troyLassialCont").tabIndex = "-1";
   document.getElementById("troyLassialCont").ariaHidden = true;
@@ -4919,9 +4899,9 @@ function gotIt7() {
   document.getElementById("goldenKnight").style.opacity = "100%";
   document.getElementById("goldenKnight").style.transition = "visibility .25s ease 0s, left 0s ease 6.25s, opacity .25s ease 0s";
   document.getElementById("goldenKnight").style.animation = "goldenKnightLap 6s ease .25s 1 forwards";
-  setTimeout(() => (
-    document.getElementById("goldenKnight").style.animation = "none"
-  ), 6250);
+  setTimeout(() => {
+    document.getElementById("goldenKnight").style.animation = "none";
+  }, 6250);
   document.getElementById("goldenKnight").tabIndex = "0";
   sessionStorage.songPrime = 41;
   setTimeout(enableButton, 6250);
@@ -4969,12 +4949,12 @@ function gotIt8() {
     }
     document.getElementsByClassName("zebra")[i].style.animation = "zebra" + animationName + "Lap 6s ease .5s 1 forwards";
     const reset = (x) => {
-      setTimeout(() => (
-        document.getElementsByClassName("zebra")[x].style.animation = "none"
-      ), 6500);
-      setTimeout(() => (
-        document.getElementsByClassName("zebra")[x].tabIndex = "0"
-      ), 250);
+      setTimeout(() => {
+        document.getElementsByClassName("zebra")[x].style.animation = "none";
+      }, 6500);
+      setTimeout(() => {
+        document.getElementsByClassName("zebra")[x].tabIndex = "0";
+      }, 250);
     }
     reset(i);
   }
@@ -5039,12 +5019,10 @@ function gotIt9() {
         document.getElementsByClassName("clarksonMenPlayer")[i].style.opacity = "100%";
         document.getElementsByClassName("clarksonMenPlayer")[i].style.transition = "visibility .25s ease .25s, left 2s ease .5s, bottom 2s ease .5s, opacity .25s ease .25s";
         const activate = (x) => {
-          setTimeout(() => (
-            document.getElementsByClassName("clarksonMenPlayer")[x].style.pointerEvents = "auto"
-          ), 2500);
-          setTimeout(() => (
-            document.getElementsByClassName("clarksonMenPlayer")[x].tabIndex = "0"
-          ), 2500);
+          setTimeout(() => {
+            document.getElementsByClassName("clarksonMenPlayer")[x].style.pointerEvents = "auto";
+            document.getElementsByClassName("clarksonMenPlayer")[x].tabIndex = "0";
+          }, 2500);
         }
         activate(i);
       }
@@ -5077,12 +5055,10 @@ function gotIt9() {
         document.getElementsByClassName("clarksonWomenPlayer")[i].style.opacity = "100%";
         document.getElementsByClassName("clarksonWomenPlayer")[i].style.transition = "visibility .25s ease .25s, left 2s ease .5s, bottom 2s ease .5s, opacity .25s ease .25s";
         const activate = (x) => {
-          setTimeout(() => (
-            document.getElementsByClassName("clarksonWomenPlayer")[x].style.pointerEvents = "auto"
-          ), 2500);
-          setTimeout(() => (
-            document.getElementsByClassName("clarksonWomenPlayer")[x].tabIndex = "0"
-          ), 2500);
+          setTimeout(() => {
+            document.getElementsByClassName("clarksonWomenPlayer")[x].style.pointerEvents = "auto";
+            document.getElementsByClassName("clarksonWomenPlayer")[x].tabIndex = "0";
+          }, 2500);
         }
         activate(i);
       }
@@ -5142,12 +5118,10 @@ function gotIt10() {
         document.getElementsByClassName("sluMenPlayer")[i].style.opacity = "100%";
         document.getElementsByClassName("sluMenPlayer")[i].style.transition = "visibility .25s ease .25s, right 2s ease .5s, bottom 2s ease .5s, opacity .25s ease .25s";
         const activate = (x) => {
-          setTimeout(() => (
-            document.getElementsByClassName("sluMenPlayer")[x].style.pointerEvents = "auto"
-          ), 2500);
-          setTimeout(() => (
-            document.getElementsByClassName("sluMenPlayer")[x].tabIndex = "0"
-          ), 2500);
+          setTimeout(() => {
+            document.getElementsByClassName("sluMenPlayer")[x].style.pointerEvents = "auto";
+            document.getElementsByClassName("sluMenPlayer")[x].tabIndex = "0";
+          }, 2500);
         }
         activate(i);
       }
@@ -5180,12 +5154,10 @@ function gotIt10() {
         document.getElementsByClassName("sluWomenPlayer")[i].style.opacity = "100%";
         document.getElementsByClassName("sluWomenPlayer")[i].style.transition = "visibility .25s ease .25s, right 2s ease .5s, bottom 2s ease .5s, opacity .25s ease .25s";
         const activate = (x) => {
-          setTimeout(() => (
-            document.getElementsByClassName("sluWomenPlayer")[x].style.pointerEvents = "auto"
-          ), 2500);
-          setTimeout(() => (
-            document.getElementsByClassName("sluWomenPlayer")[x].tabIndex = "0"
-          ), 2500);
+          setTimeout(() => {
+            document.getElementsByClassName("sluWomenPlayer")[x].style.pointerEvents = "auto";
+            document.getElementsByClassName("sluWomenPlayer")[x].tabIndex = "0";
+          }, 2500);
         }
         activate(i);
       }
@@ -5254,9 +5226,9 @@ function showStats(stats, method) {
       document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.transform = "scaleX(-1) scaleY(1)";
     }
     document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.transition = "all .25s ease 0s";
-    setTimeout(() => (
-      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.pointerEvents = "auto"
-    ), 250);
+    setTimeout(() => {
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.pointerEvents = "auto";
+    }, 250);
   }
 }
 
@@ -5268,9 +5240,9 @@ function hideStats(stats, method) {
       document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].classList.replace("toggledProfile", "unToggledProfile")
     }
     document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].classList.replace("shownProfile", "hiddenProfile")
-    setTimeout(() => (
-      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.zIndex = "3"
-    ), 250);
+    setTimeout(() => {
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.zIndex = "3";
+    }, 250);
     if ((sessionStorage.stats == 1) || (sessionStorage.stats == 2)) {
       document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.left = "-4%";
     }
@@ -5365,9 +5337,9 @@ function gotIt12() {
   enableCheers(enableClassLists, enableStyles);
   if (sessionStorage.points == 0) {
     document.getElementById("cheersContContCont").style.animation = "emphasizeCont 1.5s ease 0s 1 forwards";
-    setTimeout(() => (
-      document.getElementById("cheersContContCont").style.animation = "none"
-    ), 1500);
+    setTimeout(() => {
+      document.getElementById("cheersContContCont").style.animation = "none";
+    }, 1500);
   }
   document.getElementById("flagCont").style.visibility = "hidden";
   document.getElementById("flagCont").style.opacity = "0%";
@@ -5669,15 +5641,15 @@ function goal() {
           setTimeout(puck.bind(null, 1), 1250);
           if (sessionStorage.gender == 1) {
             document.getElementById("ethanHaider").style.animation = "block .625s ease 1.6875s 1 forwards";
-            setTimeout(() => (
-              document.getElementById("ethanHaider").style.animation = "none"
-            ), 2312.5);
+            setTimeout(() => {
+              document.getElementById("ethanHaider").style.animation = "none";
+            }, 2312.5);
           }
           else if (sessionStorage.gender == 2) {
             document.getElementById("michellePasiechnyk").style.animation = "block .625s ease 1.6875s 1 forwards";
-            setTimeout(() => (
-              document.getElementById("michellePasiechnyk").style.animation = "none"
-            ), 2312.5);
+            setTimeout(() => {
+              document.getElementById("michellePasiechnyk").style.animation = "none";
+            }, 2312.5);
           }
           setTimeout(shoot, 2000);
           setTimeout(celebrate, 3000);
@@ -5698,15 +5670,15 @@ function goal() {
           setTimeout(puck.bind(null, 1), 500);
           if (sessionStorage.gender == 1) {
             document.getElementById("ethanHaider").style.animation = "block .625s ease .9375s 1 forwards";
-            setTimeout(() => (
-              document.getElementById("ethanHaider").style.animation = "none"
-            ), 1562.5);
+            setTimeout(() => {
+              document.getElementById("ethanHaider").style.animation = "none";
+            }, 1562.5);
           }
           else if (sessionStorage.gender == 2) {
             document.getElementById("michellePasiechnyk").style.animation = "block .625s ease .9375s 1 forwards";
-            setTimeout(() => (
-              document.getElementById("michellePasiechnyk").style.animation = "none"
-            ), 1562.5);
+            setTimeout(() => {
+              document.getElementById("michellePasiechnyk").style.animation = "none";
+            }, 1562.5);
           }
           setTimeout(shoot, 1250);
           setTimeout(celebrate, 2250);
@@ -5730,15 +5702,15 @@ function goal() {
           setTimeout(puck.bind(null, 1), 1250);
           if (sessionStorage.gender == 1) {
             document.getElementById("ethanHaider").style.animation = "block .625s ease 1.6875s 1 forwards";
-            setTimeout(() => (
-              document.getElementById("ethanHaider").style.animation = "none"
-            ), 2312.5);
+            setTimeout(() => {
+              document.getElementById("ethanHaider").style.animation = "none";
+            }, 2312.5);
           }
           else if (sessionStorage.gender == 2) {
             document.getElementById("michellePasiechnyk").style.animation = "block .625s ease 1.6875s 1 forwards";
-            setTimeout(() => (
-              document.getElementById("michellePasiechnyk").style.animation = "none"
-            ), 2312.5);
+            setTimeout(() => {
+              document.getElementById("michellePasiechnyk").style.animation = "none";
+            }, 2312.5);
           }
           setTimeout(shoot, 2000);
           setTimeout(celebrate, 3000);
@@ -5818,15 +5790,15 @@ function goal() {
           setTimeout(puck.bind(null, 9), 500);
           if (sessionStorage.gender == 1) {
             document.getElementById("danielAllin").style.animation = "block .625s ease .9375s 1 forwards";
-            setTimeout(() => (
-              document.getElementById("danielAllin").style.animation = "none"
-            ), 1562.5);
+            setTimeout(() => {
+              document.getElementById("danielAllin").style.animation = "none";
+            }, 1562.5);
           }
           else if (sessionStorage.gender == 2) {
             document.getElementById("hopeCrisafi").style.animation = "block .625s ease .9375s 1 forwards";
-            setTimeout(() => (
-              document.getElementById("hopeCrisafi").style.animation = "none"
-            ), 1562.5);
+            setTimeout(() => {
+              document.getElementById("hopeCrisafi").style.animation = "none";
+            }, 1562.5);
           }
           setTimeout(shoot, 1250);
           setTimeout(celebrate, 2250);
@@ -5845,15 +5817,15 @@ function goal() {
           setTimeout(puck.bind(null, 9), 1250);
           if (sessionStorage.gender == 1) {
             document.getElementById("danielAllin").style.animation = "block .625s ease 1.6875s 1 forwards";
-            setTimeout(() => (
-              document.getElementById("danielAllin").style.animation = "none"
-            ), 2312.5);
+            setTimeout(() => {
+              document.getElementById("danielAllin").style.animation = "none";
+            }, 2312.5);
           }
           else if (sessionStorage.gender == 2) {
             document.getElementById("hopeCrisafi").style.animation = "block .625s ease 1.6875s 1 forwards";
-            setTimeout(() => (
-              document.getElementById("hopeCrisafi").style.animation = "none"
-            ), 2312.5);
+            setTimeout(() => {
+              document.getElementById("hopeCrisafi").style.animation = "none";
+            }, 2312.5);
           }
           setTimeout(shoot, 2000);
           setTimeout(celebrate, 3000);
@@ -5870,15 +5842,15 @@ function goal() {
           setTimeout(puck.bind(null, 9), 1250);
           if (sessionStorage.gender == 1) {
             document.getElementById("danielAllin").style.animation = "block .625s ease 1.6875s 1 forwards";
-            setTimeout(() => (
-              document.getElementById("danielAllin").style.animation = "none"
-            ), 2312.5);
+            setTimeout(() => {
+              document.getElementById("danielAllin").style.animation = "none";
+            }, 2312.5);
           }
           else if (sessionStorage.gender == 2) {
             document.getElementById("hopeCrisafi").style.animation = "block .625s ease 1.6875s 1 forwards";
-            setTimeout(() => (
-              document.getElementById("hopeCrisafi").style.animation = "none"
-            ), 2312.5);
+            setTimeout(() => {
+              document.getElementById("hopeCrisafi").style.animation = "none";
+            }, 2312.5);
           }
           setTimeout(shoot, 2000);
           setTimeout(celebrate, 3000);
@@ -6087,9 +6059,9 @@ function shoot() {
 function block() {
   if (sessionStorage.goal == 1) {
     if ((sessionStorage.position == 1) || ((sessionStorage.clarksonCage != undefined) && (((sessionStorage.position == 4) && ((sessionStorage.clarksonCage - sessionStorage.position) == 1)) || ((sessionStorage.position == 6) && ((sessionStorage.position - sessionStorage.clarksonCage) == 3)) || (((sessionStorage.position != 4) && (sessionStorage.position != 6)) && ((sessionStorage.position - sessionStorage.clarksonCage) == 1)))) || (sessionStorage.position == 9)) {
-      setTimeout(() => (
-        document.getElementById("conductorTalk").innerHTML = "Well, I guess even a SLUzer sieve gets lucky sometimes. Doesn't change how ugly " + sessionStorage.goalieName + " is!"
-      ), 1500);
+      setTimeout(() => {
+        document.getElementById("conductorTalk").innerHTML = "Well, I guess even a SLUzer sieve gets lucky sometimes. Doesn't change how ugly " + sessionStorage.goalieName + " is!";
+      }, 1500);
       puckFadeOut();
       setTimeout(move, 250);
       setTimeout(puckFadeIn, 500);
@@ -6097,58 +6069,58 @@ function block() {
       setTimeout(shoot, 1250);
       if (sessionStorage.gender == 1) {
         document.getElementById("danielAllin").style.animation = "block .625s ease 1.6875s 1 forwards";
-        setTimeout(() => (
-          document.getElementById("danielAllin").style.animation = "none"
-        ), 2312.5);
+        setTimeout(() => {
+          document.getElementById("danielAllin").style.animation = "none";
+        }, 2312.5);
       }
       else if (sessionStorage.gender == 2) {
         document.getElementById("hopeCrisafi").style.animation = "block .625s ease 1.6875s 1 forwards";
-        setTimeout(() => (
-          document.getElementById("hopeCrisafi").style.animation = "none"
-        ), 2312.5);
+        setTimeout(() => {
+          document.getElementById("hopeCrisafi").style.animation = "none";
+        }, 2312.5);
       }
       setTimeout(pass, 2000);
       setTimeout(enableButton, 3000);
     }
     else if ((sessionStorage.position >= 2) && (sessionStorage.position <= 6)) {
-      setTimeout(() => (
-        document.getElementById("conductorTalk").innerHTML = "Well, I guess even a SLUzer sieve gets lucky sometimes. Doesn't change how ugly " + sessionStorage.goalieName + " is!"
-      ), 750);
+      setTimeout(() => {
+        document.getElementById("conductorTalk").innerHTML = "Well, I guess even a SLUzer sieve gets lucky sometimes. Doesn't change how ugly " + sessionStorage.goalieName + " is!";
+      }, 750);
       pass();
       setTimeout(shoot, 500);
       if (sessionStorage.gender == 1) {
         document.getElementById("danielAllin").style.animation = "block .625s ease .9375s 1 forwards";
-        setTimeout(() => (
-          document.getElementById("danielAllin").style.animation = "none"
-        ), 1562.5);
+        setTimeout(() => {
+          document.getElementById("danielAllin").style.animation = "none";
+        }, 1562.5);
       }
       else if (sessionStorage.gender == 2) {
         document.getElementById("hopeCrisafi").style.animation = "block .625s ease .9375s 1 forwards";
-        setTimeout(() => (
-          document.getElementById("hopeCrisafi").style.animation = "none"
-        ), 1562.5);
+        setTimeout(() => {
+          document.getElementById("hopeCrisafi").style.animation = "none";
+        }, 1562.5);
       }
       setTimeout(pass, 1250);
       setTimeout(enableButton, 2250);
     }
     else if ((sessionStorage.position == 7) || (sessionStorage.position == 8)) {
-      setTimeout(() => (
-        document.getElementById("conductorTalk").innerHTML = "Well, I guess even a SLUzer sieve gets lucky sometimes. Doesn't change how ugly " + sessionStorage.goalieName + " is!"
-      ), 1500);
+      setTimeout(() => {
+        document.getElementById("conductorTalk").innerHTML = "Well, I guess even a SLUzer sieve gets lucky sometimes. Doesn't change how ugly " + sessionStorage.goalieName + " is!";
+      }, 1500);
       pass();
       setTimeout(pass, 750);
       setTimeout(shoot, 1250);
       if (sessionStorage.gender == 1) {
         document.getElementById("danielAllin").style.animation = "block .625s ease 1.6875s 1 forwards";
-        setTimeout(() => (
-          document.getElementById("danielAllin").style.animation = "none"
-        ), 2312.5);
+        setTimeout(() => {
+          document.getElementById("danielAllin").style.animation = "none";
+        }, 2312.5);
       }
       else if (sessionStorage.gender == 2) {
         document.getElementById("hopeCrisafi").style.animation = "block .625s ease 1.6875s 1 forwards";
-        setTimeout(() => (
-          document.getElementById("hopeCrisafi").style.animation = "none"
-        ), 2312.5);
+        setTimeout(() => {
+          document.getElementById("hopeCrisafi").style.animation = "none";
+        }, 2312.5);
       }
       setTimeout(pass, 2000);
       setTimeout(enableButton, 3000);
@@ -6163,9 +6135,9 @@ function block() {
   }
   else if (sessionStorage.goal == 2) {
     if ((sessionStorage.position == 1) || ((sessionStorage.sluCage != undefined) && (((sessionStorage.position == 4) && ((sessionStorage.sluCage - sessionStorage.position) == 6)) || ((sessionStorage.position == 5) && ((sessionStorage.sluCage - sessionStorage.position) == 4)) || ((sessionStorage.position == 6) && ((sessionStorage.sluCage - sessionStorage.position) == 2)) || (((sessionStorage.position > 6) && (sessionStorage.position <= 8)) && ((sessionStorage.position - sessionStorage.sluCage) == 1)))) || (sessionStorage.position == 9)) {
-      setTimeout(() => (
-        document.getElementById("conductorTalk").innerHTML = "That's our goalie! SLU hasn't got anything on us!"
-      ), 1500);
+      setTimeout(() => {
+        document.getElementById("conductorTalk").innerHTML = "That's our goalie! SLU hasn't got anything on us!";
+      }, 1500);
       puckFadeOut();
       setTimeout(move, 250);
       setTimeout(puckFadeIn, 500);
@@ -6173,58 +6145,58 @@ function block() {
       setTimeout(shoot, 1250);
       if (sessionStorage.gender == 1) {
         document.getElementById("ethanHaider").style.animation = "block .625s ease 1.6875s 1 forwards";
-        setTimeout(() => (
-          document.getElementById("ethanHaider").style.animation = "none"
-        ), 2312.5);
+        setTimeout(() => {
+          document.getElementById("ethanHaider").style.animation = "none";
+        }, 2312.5);
       }
       else if (sessionStorage.gender == 2) {
         document.getElementById("michellePasiechnyk").style.animation = "block .625s ease 1.6875s 1 forwards";
-        setTimeout(() => (
-          document.getElementById("michellePasiechnyk").style.animation = "none"
-        ), 2312.5);
+        setTimeout(() => {
+          document.getElementById("michellePasiechnyk").style.animation = "none";
+        }, 2312.5);
       }
       setTimeout(pass, 2000);
       setTimeout(enableButton, 3000);
     }
     else if ((sessionStorage.position == 2) || (sessionStorage.position == 3)) {
-      setTimeout(() => (
-        document.getElementById("conductorTalk").innerHTML = "That's our goalie! SLU hasn't got anything on us!"
-      ), 1500);
+      setTimeout(() => {
+        document.getElementById("conductorTalk").innerHTML = "That's our goalie! SLU hasn't got anything on us!";
+      }, 1500);
       pass();
       setTimeout(pass, 750);
       setTimeout(shoot, 1250);
       if (sessionStorage.gender == 1) {
         document.getElementById("ethanHaider").style.animation = "block .625s ease 1.6875s 1 forwards";
-        setTimeout(() => (
-          document.getElementById("ethanHaider").style.animation = "none"
-        ), 2312.5);
+        setTimeout(() => {
+          document.getElementById("ethanHaider").style.animation = "none";
+        }, 2312.5);
       }
       else if (sessionStorage.gender == 2) {
         document.getElementById("michellePasiechnyk").style.animation = "block .625s ease 1.6875s 1 forwards";
-        setTimeout(() => (
-          document.getElementById("michellePasiechnyk").style.animation = "none"
-        ), 2312.5);
+        setTimeout(() => {
+          document.getElementById("michellePasiechnyk").style.animation = "none";
+        }, 2312.5);
       }
       setTimeout(pass, 2000);
       setTimeout(enableButton, 3000);
     }
     else if ((sessionStorage.position >= 4) && (sessionStorage.position <= 8)) {
-      setTimeout(() => (
-        document.getElementById("conductorTalk").innerHTML = "That's our goalie! SLU hasn't got anything on us!"
-      ), 750);
+      setTimeout(() => {
+        document.getElementById("conductorTalk").innerHTML = "That's our goalie! SLU hasn't got anything on us!";
+      }, 750);
       pass();
       setTimeout(shoot, 500);
       if (sessionStorage.gender == 1) {
         document.getElementById("ethanHaider").style.animation = "block .625s ease .9375s 1 forwards";
-        setTimeout(() => (
-          document.getElementById("ethanHaider").style.animation = "none"
-        ), 1562.5);
+        setTimeout(() => {
+          document.getElementById("ethanHaider").style.animation = "none";
+        }, 1562.5);
       }
       else if (sessionStorage.gender == 2) {
         document.getElementById("michellePasiechnyk").style.animation = "block .625s ease .9375s 1 forwards";
-        setTimeout(() => (
-          document.getElementById("michellePasiechnyk").style.animation = "none"
-        ), 1562.5);
+        setTimeout(() => {
+          document.getElementById("michellePasiechnyk").style.animation = "none";
+        }, 1562.5);
       }
       setTimeout(pass, 1250);
       setTimeout(enableButton, 2250);
@@ -6372,9 +6344,9 @@ function celebrate() {
         }
       }
       document.getElementById("clarksonGoalMessage").style.animation = "clarksonGoalMessage 2.5s ease 0s 1 forwards";
-      setTimeout(() => (
-        document.getElementById("clarksonGoalMessage").style.animation = "none"
-      ), 2500);
+      setTimeout(() => {
+        document.getElementById("clarksonGoalMessage").style.animation = "none";
+      }, 2500);
     }
     else if (sessionStorage.clarksonScore == 10) {
       tijuana();
@@ -6452,9 +6424,9 @@ function celebrate() {
       }
     }
     document.getElementById("sluGoalMessage").style.animation = "sluGoalMessage 3s ease 0s 1 backwards";
-    setTimeout(() => (
-      document.getElementById("sluGoalMessage").style.animation = "none"
-    ), 3000);
+    setTimeout(() => {
+      document.getElementById("sluGoalMessage").style.animation = "none";
+    }, 3000);
     document.getElementById("scoreboardSluScore").innerHTML = sessionStorage.sluScore;
     var disableClassLists = [
       "(j == 22) && (sessionStorage.sluScore == 1)",
@@ -6558,24 +6530,22 @@ function tijuana() {
     else if (i == 4) {
       document.getElementById("planePrimeCont").style.transition = "left 0s ease 5.5s";
       document.getElementById("planePrimeCont").style.animation = "fly 5s linear .5s 1 forwards";
-      setTimeout(() => (
-        document.getElementById("planePrimeCont").style.animation = "none"
-      ), 5500);
+      setTimeout(() => {
+        document.getElementById("planePrimeCont").style.animation = "none";
+      }, 5500);
     }
     document.getElementsByClassName("plane")[i].tabIndex = "0";
     const reset = (x) => {
-      setTimeout(() => (
-        document.getElementsByClassName("plane")[x].tabIndex = "-1"
-      ), 6000);
-      setTimeout(() => (
-        document.getElementsByClassName("plane")[x].blur()
-      ), 6000);
+      setTimeout(() => {
+        document.getElementsByClassName("plane")[x].tabIndex = "-1";
+        document.getElementsByClassName("plane")[x].blur();
+      }, 6000);
     }
     reset(i);
   }
-  setTimeout(() => (
-    document.getElementById("planes").ariaHidden = true
-  ), 6000);
+  setTimeout(() => {
+    document.getElementById("planes").ariaHidden = true;
+  }, 6000);
   songs[69].title = "<i>Tijuana</i><br>(with lyrics!)";
   console.log("AT THE GANGBANG, OH YES, YOU DO! IT'S BEEN A LONG TIME SINCE SHE'S BEEN SCREWED! WHEN SHE WAS YOUNGER, AND IN HER PRIME, SHE USED TO GANGBANG ALL THE TIMEEE... NOW THAT SHE'S OLDER, AND TURNING GRAY, SHE ONLY GANGBANGS ONCE A DAYYY... KNOCK, KNOCK...");
 }
@@ -6837,9 +6807,9 @@ function gotIt14() {
   enableCheers(enableClassLists, enableStyles);
   if (sessionStorage.points == 0) {
     document.getElementById("cheersContContCont").style.animation = "emphasizeCont 1.5s ease 0s 1 forwards";
-    setTimeout(() => (
-      document.getElementById("cheersContContCont").style.animation = "none"
-    ), 1500);
+    setTimeout(() => {
+      document.getElementById("cheersContContCont").style.animation = "none";
+    }, 1500);
   }
   document.getElementById("puck").style.visibility = "hidden";
   document.getElementById("puck").style.left = "calc(50% - .5em)";
@@ -6973,9 +6943,9 @@ function gotIt16() {
   sessionStorage.yell = 0;
   if (sessionStorage.points == 0) {
     document.getElementById("cheersContContCont").style.animation = "emphasizeCont 1.5s ease 0s 1 forwards";
-    setTimeout(() => (
-      document.getElementById("cheersContContCont").style.animation = "none"
-    ), 1500);
+    setTimeout(() => {
+      document.getElementById("cheersContContCont").style.animation = "none";
+    }, 1500);
   }
   document.getElementById("tonyCollins").style.visibility = "hidden";
   document.getElementById("tonyCollins").style.opacity = "0%";
@@ -7071,9 +7041,9 @@ function gotIt17() {
   enableCheers(enableClassLists, enableStyles);
   if (sessionStorage.points == 0) {
     document.getElementById("cheersContContCont").style.animation = "emphasizeCont 1.5s ease 0s 1 forwards";
-    setTimeout(() => (
-      document.getElementById("cheersContContCont").style.animation = "none"
-    ), 1500);
+    setTimeout(() => {
+      document.getElementById("cheersContContCont").style.animation = "none";
+    }, 1500);
   }
   document.getElementById("puck").style.visibility = "hidden";
   document.getElementById("puck").style.left = "calc(50% - .5em)";
@@ -7147,14 +7117,14 @@ function gotIt18() {
 function microphone() {
   (navigator.mediaDevices).getUserMedia({audio: true})
     .then(() => {
-      setTimeout(() => (
+      setTimeout(() => {
         window.alert("Make sure your computer is unmuted for this next part.")
-      ), 100);
+      }, 100);
     })
     .catch(() => {
-      setTimeout(() => (
+      setTimeout(() => {
         window.alert("Are you sure? You won't get the full experience if you do not allow access to your microphone.")
-      ), 100);
+      }, 100);
     });
 }
 
@@ -7333,9 +7303,9 @@ function youtubeControls(event) {
       }
       else if (event.key == "Escape") {
         document.getElementById("youtubeExit").style.animation = "youtubeExit .5s ease 0s 1 forwards";
-        setTimeout(() => (
-          document.getElementById("youtubeExit").style.animation = "none"
-        ), 500);
+        setTimeout(() => {
+          document.getElementById("youtubeExit").style.animation = "none";
+        }, 500);
         closeYoutubeSong(event);
       }
       else if (event.key == "Backspace") {
@@ -7419,27 +7389,19 @@ function youtubePlay(method, event) {
             document.getElementById("fuckSluMessage").style.setProperty("visibility", "hidden", "important");
             document.getElementById("fuckSluMessage").style.setProperty("opacity", "0", "important");
             document.getElementById("fuckSluMessage").style.setProperty("transition", "all .25s ease 0s", "important");
-            setTimeout(() => (
-              document.getElementById("fuckSluMessage").style.visibility = "hidden"
-            ), 250);
-            setTimeout(() => (
-              document.getElementById("fuckSluMessage").style.opacity = "0%"
-            ), 250);
-            setTimeout(() => (
-              document.getElementById("fuckSluMessage").style.transition = "all 0s ease 0s"
-            ), 250);
-            setTimeout(() => (
-              document.getElementById("fuckSluMessage").style.animation = "none"
-            ), 250);
+            setTimeout(() => {
+              document.getElementById("fuckSluMessage").style.visibility = "hidden";
+              document.getElementById("fuckSluMessage").style.opacity = "0%";
+              document.getElementById("fuckSluMessage").style.transition = "all 0s ease 0s";
+              document.getElementById("fuckSluMessage").style.animation = "none";
+            }, 250);
           }
         }
       }
-      setTimeout(() => (
-        document.getElementById("youtubeSongs").onmouseenter = emphasizeYoutubePlayPause
-      ), 500);
-      setTimeout(() => (
-        document.getElementById("youtubeSongs").onmouseleave = deEmphasizeYoutubePlayPause
-      ), 500);
+      setTimeout(() => {
+        document.getElementById("youtubeSongs").onmouseenter = emphasizeYoutubePlayPause;
+        document.getElementById("youtubeSongs").onmouseleave = deEmphasizeYoutubePlayPause;
+      }, 500);
     }
     sessionStorage.youtubeTimerInterval = setInterval(youtubeTimer, 1000);
     sessionStorage.durationInterval = setInterval(youtubeDuration, 1000);
@@ -7517,12 +7479,10 @@ function youtubePause(method, event) {
           }
         }
       }
-      setTimeout(() => (
-        document.getElementById("youtubeSongs").onmouseenter = emphasizeYoutubePlayPause
-      ), 500);
-      setTimeout(() => (
-        document.getElementById("youtubeSongs").onmouseleave = deEmphasizeYoutubePlayPause
-      ), 500);
+      setTimeout(() => {
+        document.getElementById("youtubeSongs").onmouseenter = emphasizeYoutubePlayPause;
+        document.getElementById("youtubeSongs").onmouseleave = deEmphasizeYoutubePlayPause;
+      }, 500);
     }
   }
 }
@@ -7563,9 +7523,9 @@ function leaveEditor(event) {
   let editor = new Range();
   editor.selectNodeContents(event.target);
   (document.getSelection()).removeAllRanges();
-  sessionStorage.scopeTimeout = setTimeout(() => (
-    sessionStorage.scope = "document"
-  ), 250);
+  sessionStorage.scopeTimeout = setTimeout(() => {
+    sessionStorage.scope = "document";
+  }, 250);
 }
 
 function youtubeEdit(event) {
@@ -7621,9 +7581,9 @@ function youtubeSet(event) {
     }
     document.getElementsByClassName("youtubeCountingTimeUnits")[i].style.animation = "set .25s ease 0s 1 forwards";
     const reset = (x) => {
-      setTimeout(() => (
-        document.getElementsByClassName("youtubeCountingTimeUnits")[x].style.animation = "none"
-      ), 250);
+      setTimeout(() => {
+        document.getElementsByClassName("youtubeCountingTimeUnits")[x].style.animation = "none";
+      }, 250);
     }
     reset(i);
   }
@@ -7837,12 +7797,12 @@ function youtubeRestart(event) {
     document.getElementById("youtubeTimer").title = "Has not started";
     document.getElementById("youtubeRestart").blur();
     const reset = (x) => {
-      setTimeout(() => (
-        document.getElementById("youtubeSongs").style.pointerEvents = "auto"
-      ), (x * 1000));
-      setTimeout(() => (
-        document.getElementById("youtubePlayPauseButton").style.pointerEvents = "auto"
-      ), (x * 1000));
+      setTimeout(() => {
+        document.getElementById("youtubeSongs").style.pointerEvents = "auto";
+      }, (x * 1000));
+      setTimeout(() => {
+        document.getElementById("youtubePlayPauseButton").style.pointerEvents = "auto";
+      }, (x * 1000));
     }
     reset(transitionDuration);
   }
@@ -7979,23 +7939,21 @@ function closeYoutubeSong(event) {
       keyboard[key] = false;
     }
   });
-  setTimeout(() => (
-    document.getElementById("viewAccountToggle").style.pointerEvents = "auto"
-  ), 500);
-  setTimeout(() => (
-    document.getElementById("viewAccountToggle").tabIndex = "0"
-  ), 500);
-  setTimeout(() => (
-    document.getElementById("viewAccount").tabIndex = "0"
-  ), 500);
+  setTimeout(() => {
+    document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
+    document.getElementById("viewAccountToggle").tabIndex = "0";
+  }, 500);
+  setTimeout(() => {
+    document.getElementById("viewAccount").tabIndex = "0";
+  }, 500);
   if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
-    setTimeout(() => (
-      document.getElementById("conductorTalkCont").tabIndex = "0"
-    ), 500);
+    setTimeout(() => {
+      document.getElementById("conductorTalkCont").tabIndex = "0";
+    }, 500);
   }
-  setTimeout(() => (
-    document.getElementById("conductor").tabIndex = "0"
-  ), 500);
+  setTimeout(() => {
+    document.getElementById("conductor").tabIndex = "0";
+  }, 500);
   setTimeout(enableButton, 500);
   newFunction();
 }
@@ -8626,16 +8584,16 @@ function lose() {
     if (i == 0) {
       document.getElementById("saints").style.transform = "rotate(20deg)";
       document.getElementById("saints").style.animation = "saintsHang .25s ease 3.75s 1 forwards";
-      setTimeout(() => (
-        document.getElementById("saints").style.animation = "none"
-      ), 4000);
+      setTimeout(() => {
+        document.getElementById("saints").style.animation = "none";
+      }, 4000);
     }
     else if (i == 1) {
       document.getElementById("victorySlu").style.transform = "rotate(80deg)";
       document.getElementById("victorySlu").style.animation = "victoryHang 1.75s ease 2.25s 1 forwards";
-      setTimeout(() => (
-        document.getElementById("victorySlu").style.animation = "victoryFlicker 10s ease 0s infinite forwards"
-      ), 4000);
+      setTimeout(() => {
+        document.getElementById("victorySlu").style.animation = "victoryFlicker 10s ease 0s infinite forwards";
+      }, 4000);
     }
     document.getElementsByClassName("sluWord")[i].style.transition = "transform 0s ease 4s";
   }
@@ -8718,9 +8676,9 @@ function gotIt23() {
     document.getElementById("sluVictoryMessageCont").style.visibility = "hidden";
     document.getElementById("sluVictoryMessageCont").style.opacity = "0%";
     document.getElementById("sluVictoryMessageCont").style.transition = "all 0s ease .25s";
-    setTimeout(() => (
-      document.getElementById("victorySlu").style.animation = "none"
-    ), 250);
+    setTimeout(() => {
+      document.getElementById("victorySlu").style.animation = "none";
+    }, 250);
     if (sessionStorage.gender == 1) {
       for (var i = 0; i < document.getElementsByClassName("sluMenPlayer").length; i++) {
         if (i == 5) {
@@ -8752,18 +8710,12 @@ function gotIt23() {
         document.getElementsByClassName("sluMenPlayer")[i].style.transition = "all 0s ease " + transitionDelay + "s";
         document.getElementsByClassName("sluMenPlayer")[i].style.animation = "sluPlayer" + animationName + "Exit " + animationDuration + "s linear " + animationDelay + "s 1 forwards";
         const reset = (x, y) => {
-          setTimeout(() => (
-            document.getElementsByClassName("sluMenPlayer")[x].style.animation = "none"
-          ), y);
-          setTimeout(() => (
-            document.getElementsByClassName("sluMenPlayer")[x].style.pointerEvents = "none"
-          ), y);
-          setTimeout(() => (
-            document.getElementsByClassName("sluMenPlayer")[x].tabIndex = "-1"
-          ), y);
-          setTimeout(() => (
-            document.getElementsByClassName("sluMenPlayer")[x].blur()
-          ), y);
+          setTimeout(() => {
+            document.getElementsByClassName("sluMenPlayer")[x].style.animation = "none";
+            document.getElementsByClassName("sluMenPlayer")[x].style.pointerEvents = "none";
+            document.getElementsByClassName("sluMenPlayer")[x].tabIndex = "-1";
+            document.getElementsByClassName("sluMenPlayer")[x].blur();
+          }, y);
         }
         reset(i, (transitionDelay * 1000));
       }
@@ -8799,18 +8751,12 @@ function gotIt23() {
         document.getElementsByClassName("sluWomenPlayer")[i].style.transition = "all 0s ease " + transitionDelay + "s";
         document.getElementsByClassName("sluWomenPlayer")[i].style.animation = "sluPlayer" + animationName + "Exit " + animationDuration + "s linear " + animationDelay + "s 1 forwards";
         const reset = (x, y) => {
-          setTimeout(() => (
-            document.getElementsByClassName("sluWomenPlayer")[x].style.animation = "none"
-          ), y);
-          setTimeout(() => (
-            document.getElementsByClassName("sluWomenPlayer")[x].style.pointerEvents = "none"
-          ), y);
-          setTimeout(() => (
-            document.getElementsByClassName("sluWomenPlayer")[x].tabIndex = "-1"
-          ), y);
-          setTimeout(() => (
-            document.getElementsByClassName("sluWomenPlayer")[x].blur()
-          ), y);
+          setTimeout(() => {
+            document.getElementsByClassName("sluWomenPlayer")[x].style.animation = "none";
+            document.getElementsByClassName("sluWomenPlayer")[x].style.pointerEvents = "none";
+            document.getElementsByClassName("sluWomenPlayer")[x].tabIndex = "-1";
+            document.getElementsByClassName("sluWomenPlayer")[x].blur();
+          }, y);
         }
         reset(i, (transitionDelay * 1000));
       }
@@ -8820,9 +8766,9 @@ function gotIt23() {
     document.getElementById("handCont").style.visibility = "hidden";
     document.getElementById("handCont").style.opacity = "0%";
     document.getElementById("handCont").style.transition = "all .25s ease 0s";
-    setTimeout(() => (
-      document.getElementById("hand").style.animation = "none"
-    ), 250);
+    setTimeout(() => {
+      document.getElementById("hand").style.animation = "none";
+    }, 250);
     if (sessionStorage.gender == 1) {
       for (var i = 0; i < document.getElementsByClassName("clarksonMenPlayer").length; i++) {
         var animationName = (i + 1);
@@ -8850,18 +8796,12 @@ function gotIt23() {
         document.getElementsByClassName("clarksonMenPlayer")[i].style.transition = "all 0s ease " + transitionDelay + "s";
         document.getElementsByClassName("clarksonMenPlayer")[i].style.animation = "clarksonPlayer" + animationName + "Exit " + animationDuration + "s linear " + animationDelay + "s 1 forwards";
         const reset = (x, y) => {
-          setTimeout(() => (
-            document.getElementsByClassName("clarksonMenPlayer")[x].style.animation = "none"
-          ), y);
-          setTimeout(() => (
-            document.getElementsByClassName("clarksonMenPlayer")[x].style.pointerEvents = "none"
-          ), y);
-          setTimeout(() => (
-            document.getElementsByClassName("clarksonMenPlayer")[x].tabIndex = "-1"
-          ), y);
-          setTimeout(() => (
-            document.getElementsByClassName("clarksonMenPlayer")[x].blur()
-          ), y);
+          setTimeout(() => {
+            document.getElementsByClassName("clarksonMenPlayer")[x].style.animation = "none";
+            document.getElementsByClassName("clarksonMenPlayer")[x].style.pointerEvents = "none";
+            document.getElementsByClassName("clarksonMenPlayer")[x].tabIndex = "-1";
+            document.getElementsByClassName("clarksonMenPlayer")[x].blur();
+          }, y);
         }
         reset(i, (transitionDelay * 1000));
       }
@@ -8893,18 +8833,12 @@ function gotIt23() {
         document.getElementsByClassName("clarksonWomenPlayer")[i].style.transition = "all 0s ease " + transitionDelay + "s";
         document.getElementsByClassName("clarksonWomenPlayer")[i].style.animation = "clarksonPlayer" + animationName + "Exit " + animationDuration + "s linear " + animationDelay + "s 1 forwards";
         const reset = (x, y) => {
-          setTimeout(() => (
-            document.getElementsByClassName("clarksonWomenPlayer")[x].style.animation = "none"
-          ), y);
-          setTimeout(() => (
-            document.getElementsByClassName("clarksonWomenPlayer")[x].style.pointerEvents = "none"
-          ), y);
-          setTimeout(() => (
-            document.getElementsByClassName("clarksonWomenPlayer")[x].tabIndex = "-1"
-          ), y);
-          setTimeout(() => (
-            document.getElementsByClassName("clarksonWomenPlayer")[x].blur()
-          ), y);
+          setTimeout(() => {
+            document.getElementsByClassName("clarksonWomenPlayer")[x].style.animation = "none";
+            document.getElementsByClassName("clarksonWomenPlayer")[x].style.pointerEvents = "none";
+            document.getElementsByClassName("clarksonWomenPlayer")[x].tabIndex = "-1";
+            document.getElementsByClassName("clarksonWomenPlayer")[x].blur();
+          }, y);
         }
         reset(i, (transitionDelay * 1000));
       }
@@ -9114,9 +9048,9 @@ function closePoem(event) {
     }
     if (event.type == "keydown") {
       document.getElementById("poemExit").style.animation = "buttonExit .25s ease 0s 1 forwards";
-      setTimeout(() => (
-        document.getElementById("poemExit").style.animation = "none"
-      ), 250);
+      setTimeout(() => {
+        document.getElementById("poemExit").style.animation = "none";
+      }, 250);
     }
     document.getElementById("poemExit").tabIndex = "-1";
     document.getElementById("poemExit").blur();
@@ -9130,23 +9064,21 @@ function closePoem(event) {
         keyboard[key] = false;
       }
     });
-    setTimeout(() => (
-      document.getElementById("viewAccountToggle").style.pointerEvents = "auto"
-    ), 250);
-    setTimeout(() => (
-      document.getElementById("viewAccountToggle").tabIndex = "0"
-    ), 250);
-    setTimeout(() => (
-      document.getElementById("viewAccount").tabIndex = "0"
-    ), 250);
+    setTimeout(() => {
+      document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
+      document.getElementById("viewAccountToggle").tabIndex = "0";
+    }, 250);
+    setTimeout(() => {
+      document.getElementById("viewAccount").tabIndex = "0";
+    }, 250);
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
-      setTimeout(() => (
-        document.getElementById("conductorTalkCont").tabIndex = "0"
-      ), 500);
+      setTimeout(() => {
+        document.getElementById("conductorTalkCont").tabIndex = "0";
+      }, 500);
     }
-    setTimeout(() => (
-      document.getElementById("conductor").tabIndex = "0"
-    ), 250);
+    setTimeout(() => {
+      document.getElementById("conductor").tabIndex = "0";
+    }, 250);
     setTimeout(enableButton, 250);
   }
 }
@@ -9155,9 +9087,9 @@ function showDedication() {
   document.getElementById("dedicationCont").style.left = "25em";
   document.getElementById("dedicationCont").style.transform = "scale(1)";
   document.getElementById("dedicationCont").style.transition = "all .25s ease 0s";
-  setTimeout(() => (
-    document.getElementById("dedicationCont").style.pointerEvents = "auto"
-  ), 250);
+  setTimeout(() => {
+    document.getElementById("dedicationCont").style.pointerEvents = "auto";
+  }, 250);
   document.getElementById("nickSchalago").onclick = hideDedication;
 }
 
@@ -9251,9 +9183,9 @@ function firewall() {
     document.getElementsByClassName("confirmButton")[i].tabIndex = "0";
   }
   document.getElementById("confirm").tabIndex = "0";
-  setTimeout(() => (
-    document.getElementById("confirm").open = true
-  ), 250);
+  setTimeout(() => {
+    document.getElementById("confirm").open = true;
+  }, 250);
   document.getElementById("cover").style.visibility = "visible";
   document.getElementById("cover").style.opacity = "100%";
   document.getElementById("cover").style.transition = "all .25s ease 0s";
@@ -9282,9 +9214,9 @@ function acceptTerms(event) {
 
 function declineTerms(event) {
   event.preventDefault();
-  setTimeout(() => (
-    document.getElementById("conductorTalk").innerHTML = "That's okay, milk and cookies isn't for everyone. Go home and get some rest. I'll see you at practice on Tuesday!"
-  ), 500);
+  setTimeout(() => {
+    document.getElementById("conductorTalk").innerHTML = "That's okay, milk and cookies isn't for everyone. Go home and get some rest. I'll see you at practice on Tuesday!";
+  }, 500);
   if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
     if (document.getElementById("conductorTalkCont").scrollTop > 0) {
       document.getElementById("conductorTalkCont").scrollTop = 0;
@@ -9339,20 +9271,18 @@ function gotIt27() {
   document.getElementById("houseCont").tabIndex = "0";
   document.getElementById("houseCont").ariaHidden = false;
   globalThis.knightStart = Date.now();
-  setTimeout(() => (
-    document.getElementById("drinkingSongChoices").tabIndex = "0"
-  ), 500);
-  setTimeout(() => (
-    document.getElementById("tijuanaButton").tabIndex = "0"
-  ), 500);
+  setTimeout(() => {
+    document.getElementById("drinkingSongChoices").tabIndex = "0";
+  }, 500);
+  setTimeout(() => {
+    document.getElementById("tijuanaButton").tabIndex = "0";
+  }, 500);
   document.getElementById("drinkingSongsContContCont").style.right = "65%";
   document.getElementById("drinkingSongsContContCont").style.transition = "right 1s ease .5s";
-  setTimeout(() => (
-    document.getElementById("drinkingSongsContContCont").tabIndex = "0"
-  ), 500);
-  setTimeout(() => (
-    document.getElementById("drinkingSongsContContCont").ariaHidden = false
-  ), 500);
+  setTimeout(() => {
+    document.getElementById("drinkingSongsContContCont").tabIndex = "0";
+    document.getElementById("drinkingSongsContContCont").ariaHidden = false;
+  }, 500);
   sessionStorage.singing = 1;
   for (var i = 0; i < document.getElementsByClassName("drinkingSongChoice").length; i++) {
     eval("sessionStorage." + document.getElementsByClassName("drinkingSongChoice")[i].value + "Chorus = 0");
@@ -9360,13 +9290,13 @@ function gotIt27() {
   }
   sessionStorage.dafCount = 0;
   document.getElementById("dafCounterNum").innerHTML = sessionStorage.dafCount;
-  setTimeout(() => (
-    document.getElementById("dafCounterButton").tabIndex = "0"
-  ), 1500);
+  setTimeout(() => {
+    document.getElementById("dafCounterButton").tabIndex = "0";
+  }, 1500);
   sessionStorage.dafCountIncrement = 1;
-  setTimeout(() => (
-    document.getElementById("speakerSongs").tabIndex = "0"
-  ), 2000);
+  setTimeout(() => {
+    document.getElementById("speakerSongs").tabIndex = "0";
+  }, 2000);
   for (var i = 0; i < document.getElementsByClassName("audio").length; i++) {
     document.getElementsByClassName("audio")[i].onended = speakerNewSong;
   }
@@ -9378,15 +9308,15 @@ function gotIt27() {
   }
   if (sessionStorage.beer == 1) {
     document.getElementById("busch").style.display = "inline-block";
-    setTimeout(() => (
-      document.getElementById("busch").tabIndex = "0"
-    ), 2500);
+    setTimeout(() => {
+      document.getElementById("busch").tabIndex = "0";
+    }, 2500);
   }
   else if (sessionStorage.beer == 2) {
     document.getElementById("bapple").style.display = "inline-block";
-    setTimeout(() => (
-      document.getElementById("bapple").tabIndex = "0"
-    ), 2500);
+    setTimeout(() => {
+      document.getElementById("bapple").tabIndex = "0";
+    }, 2500);
   }
   sessionStorage.drinks = 0;
   sessionStorage.emphasizeBeerInterval = setInterval(emphasizeBeer, 60000);
@@ -9398,9 +9328,9 @@ function gotIt27() {
     document.getElementsByClassName("partyActivity")[i].style.transition = "all .25s ease " + transitionDelay + "s";
     if (document.getElementsByClassName("partyActivity")[i] != document.getElementById("beers")) {
       const activate = (x, y) => {
-        setTimeout(() => (
-          document.getElementsByClassName("partyActivity")[x].tabIndex = "0"
-        ), y);
+        setTimeout(() => {
+          document.getElementsByClassName("partyActivity")[x].tabIndex = "0";
+        }, y);
       }
       activate(i, (transitionDelay * 1000));
     }
@@ -9412,9 +9342,9 @@ function gotIt27() {
   for (var i = 0; i < document.getElementsByClassName("socialMediaLink").length; i++) {
     var transitionDelay = ((i * .25) + 2.75);
     const activate = (x, y) => {
-      setTimeout(() => (
-        document.getElementsByClassName("socialMediaLink")[x].tabIndex = "0"
-      ), y);
+      setTimeout(() => {
+        document.getElementsByClassName("socialMediaLink")[x].tabIndex = "0";
+      }, y);
     }
     activate(i, (transitionDelay * 1000));
   }
@@ -9425,9 +9355,9 @@ function gotIt27() {
     document.getElementsByClassName("socialMediaLogo")[i].style.transition = "all .25s ease " + transitionDelay + "s";
     if (document.getElementsByClassName("socialMediaLogo")[i] == document.getElementById("youtubeLogo")) {
       const activate = (x) => {
-        setTimeout(() => (
-          document.getElementById("youtubeLogo").tabIndex = "0"
-        ), x);
+        setTimeout(() => {
+          document.getElementById("youtubeLogo").tabIndex = "0";
+        }, x);
       }
       activate(transitionDelay * 1000);
     }
@@ -9445,16 +9375,14 @@ function gotIt27() {
     document.getElementById("spatula").style.display = "inline-block";
     document.getElementById("spatula").style.animation = "drum 1s ease-in 4s infinite forwards";
   }
-  setTimeout(() => (
-    document.getElementById("websiteLink").tabIndex = "0"
-  ), 4000);
+  setTimeout(() => {
+    document.getElementById("websiteLink").tabIndex = "0";
+  }, 4000);
   document.getElementById("websiteCont").style.animation = "loop 30s linear 4s infinite forwards";
-  setTimeout(() => (
-    document.getElementById("websiteCont").tabIndex = "0"
-  ), 4000);
-  setTimeout(() => (
-    document.getElementById("websiteCont").ariaHidden = false
-  ), 4000);
+  setTimeout(() => {
+    document.getElementById("websiteCont").tabIndex = "0";
+    document.getElementById("websiteCont").ariaHidden = false;
+  }, 4000);
   sessionStorage.cuntEmpireEntranceTimeout = setTimeout(cuntEmpireEntrance, 600000);
   console.log("Oh, you're here? I'll drink to that!");
 }
@@ -9478,15 +9406,15 @@ function social(element, event) {
     }
     if (sessionStorage.beer == 1) {
       document.getElementById("busch").style.animation = "emphasizeBeer 1.5s ease 0s 1 forwards";
-      setTimeout(() => (
-        document.getElementById("busch").style.animation = "none"
-      ), 1500);
+      setTimeout(() => {
+        document.getElementById("busch").style.animation = "none";
+      }, 1500);
     }
     else if (sessionStorage.beer == 2) {
       document.getElementById("bapple").style.animation = "emphasizeBeer 1.5s ease 0s 1 forwards";
-      setTimeout(() => (
-        document.getElementById("bapple").style.animation = "none"
-      ), 1500);
+      setTimeout(() => {
+        document.getElementById("bapple").style.animation = "none";
+      }, 1500);
     }
     sessionStorage.drinksIncrement = 3;
     drunk(sessionStorage.drinksIncrement, event);
@@ -9754,9 +9682,9 @@ function drinkingSongFirstResponse(event) {
       selectDrinkingSong();
       sessionStorage.tijuanaChorus++;
       drinkingSongSetup();
-      setTimeout(() => (
-        document.getElementById("tijuanaLyrics").innerHTML = "Knock, knock!"
-      ), 250);
+      setTimeout(() => {
+        document.getElementById("tijuanaLyrics").innerHTML = "Knock, knock!";
+      }, 250);
       document.getElementById("tijuanaVerses").style.visibility = "visible";
       document.getElementById("tijuanaVerses").style.opacity = "100%";
       document.getElementById("tijuanaVerses").style.transition = "all 0s ease .25s";
@@ -9881,9 +9809,9 @@ function drinkingSongSecondResponse(event) {
       sessionStorage.theSMManChorus++;
       drinkingSongSetup();
     }
-    setTimeout(() => (
-      document.getElementById("theSMManLyrics").innerHTML = "Who can...?"
-    ), 250);
+    setTimeout(() => {
+      document.getElementById("theSMManLyrics").innerHTML = "Who can...?";
+    }, 250);
     document.getElementById("theSMManLyrics").style.fontSize = "2em";
     document.getElementById("theSMManLyrics").style.transition = "font-size 0s ease .25s";
     document.getElementById("theSMManVerses").style.visibility = "visible";
@@ -9954,9 +9882,9 @@ function drinkingSongSecondResponse(event) {
       document.getElementById("theSMManWord20").innerHTML = "feel ";
       document.getElementById("theSMManWord23").innerHTML = "hurt ";
       document.getElementById("theSMManWord24").innerHTML = "feel ";
-      setTimeout(() => (
-        document.getElementById("theSMManCont").style.background = "url(\"img/theSMMan.png\") center / cover"
-      ), 250);
+      setTimeout(() => {
+        document.getElementById("theSMManCont").style.background = "url(\"img/theSMMan.png\") center / cover";
+      }, 250);
     }
   }
   localStorage.totalVersesSung++;
@@ -10110,15 +10038,15 @@ function speakerNewSong() {
 function emphasizeBeer() {
   if (sessionStorage.beer == 1) {
     document.getElementById("busch").style.animation = "emphasizeBeer 1.5s ease 0s 1 forwards";
-    setTimeout(() => (
-      document.getElementById("busch").style.animation = "none"
-    ), 1500);
+    setTimeout(() => {
+      document.getElementById("busch").style.animation = "none";
+    }, 1500);
   }
   else if (sessionStorage.beer == 2) {
     document.getElementById("bapple").style.animation = "emphasizeBeer 1.5s ease 0s 1 forwards";
-    setTimeout(() => (
-      document.getElementById("bapple").style.animation = "none"
-    ), 1500);
+    setTimeout(() => {
+      document.getElementById("bapple").style.animation = "none";
+    }, 1500);
   }
 }
 
@@ -10616,12 +10544,10 @@ function finishIce(event) {
   }
   sessionStorage.drinksIncrement = 3;
   drunk(sessionStorage.drinksIncrement, event);
-  setTimeout(() => (
-    document.getElementById("viewAccountToggle").style.pointerEvents = "auto"
-  ), 250);
-  setTimeout(() => (
-    document.getElementById("viewAccountToggle").tabIndex = "0"
-  ), 250);
+  setTimeout(() => {
+    document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
+    document.getElementById("viewAccountToggle").tabIndex = "0";
+  }, 250);
   const round = new function() {
     this.setValue = function(x) {
       this.value = x;
@@ -11049,63 +10975,59 @@ function closePromo(event) {
     document.getElementById("cover").style.transition = "all .25s ease .75s";
     document.getElementById("promoCont").style.transition = "transform .5s ease .5s";
     document.getElementById("promoExit").style.animation = "promoExit .5s ease .5s 1 forwards";
-    setTimeout(() => (
-      document.getElementById("promoExit").style.animation = "none"
-    ), 1000);
+    setTimeout(() => {
+      document.getElementById("promoExit").style.animation = "none";
+    }, 1000);
     if (document.getElementById("promo").ended == true) {
-      setTimeout(() => (
-        document.getElementById("promo").currentTime = 0
-      ), 1000);
+      setTimeout(() => {
+        document.getElementById("promo").currentTime = 0;
+      }, 1000);
       setTimeout(showPromoControls, 1000);
     }
-    setTimeout(() => (
-      document.getElementById("viewAccountToggle").style.pointerEvents = "auto"
-    ), 1000);
-    setTimeout(() => (
-      document.getElementById("viewAccountToggle").tabIndex = "0"
-    ), 1000);
-    setTimeout(() => (
-      document.getElementById("viewAccount").tabIndex = "0"
-    ), 1000);
+    setTimeout(() => {
+      document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
+      document.getElementById("viewAccountToggle").tabIndex = "0";
+    }, 1000);
+    setTimeout(() => {
+      document.getElementById("viewAccount").tabIndex = "0";
+    }, 1000);
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
-      setTimeout(() => (
-        document.getElementById("conductorTalkCont").tabIndex = "0"
-      ), 1000);
+      setTimeout(() => {
+        document.getElementById("conductorTalkCont").tabIndex = "0";
+      }, 1000);
     }
-    setTimeout(() => (
-      document.getElementById("conductor").tabIndex = "0"
-    ), 1000);
+    setTimeout(() => {
+      document.getElementById("conductor").tabIndex = "0";
+    }, 1000);
   }
   else if ((document.fullscreenElement != document.getElementById("promo")) && ((event.type == "click") || ((event.type == "keydown") && (event.key == "Escape")) || (event.type == "ended"))) {
     document.getElementById("cover").style.transition = "all .25s ease .25s";
     document.getElementById("promoCont").style.transition = "transform .5s ease 0s";
     document.getElementById("promoExit").style.animation = "promoExit .5s ease 0s 1 forwards";
-    setTimeout(() => (
-      document.getElementById("promoExit").style.animation = "none"
-    ), 500);
+    setTimeout(() => {
+      document.getElementById("promoExit").style.animation = "none";
+    }, 500);
     if (document.getElementById("promo").ended == true) {
-      setTimeout(() => (
-        document.getElementById("promo").currentTime = 0
-      ), 500);
+      setTimeout(() => {
+        document.getElementById("promo").currentTime = 0;
+      }, 500);
       setTimeout(showPromoControls, 500);
     }
-    setTimeout(() => (
-      document.getElementById("viewAccountToggle").style.pointerEvents = "auto"
-    ), 500);
-    setTimeout(() => (
-      document.getElementById("viewAccountToggle").tabIndex = "0"
-    ), 500);
-    setTimeout(() => (
-      document.getElementById("viewAccount").tabIndex = "0"
-    ), 500);
+    setTimeout(() => {
+      document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
+      document.getElementById("viewAccountToggle").tabIndex = "0";
+    }, 500);
+    setTimeout(() => {
+      document.getElementById("viewAccount").tabIndex = "0";
+    }, 500);
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
-      setTimeout(() => (
-        document.getElementById("conductorTalkCont").tabIndex = "0"
-      ), 500);
+      setTimeout(() => {
+        document.getElementById("conductorTalkCont").tabIndex = "0";
+      }, 500);
     }
-    setTimeout(() => (
-      document.getElementById("conductor").tabIndex = "0"
-    ), 500);
+    setTimeout(() => {
+      document.getElementById("conductor").tabIndex = "0";
+    }, 500);
   }
 }
 
@@ -11155,12 +11077,10 @@ function cuntEmpireExit() {
   document.getElementById("cuntEmpireAdvertisementLink").tabIndex = "-1";
   document.getElementById("cuntEmpireAdvertisementLink").blur();
   if (document.getElementById("cuntEmpireCover").style.display == "none") {
-    setTimeout(() => (
-      document.getElementById("cuntEmpireCover").style.display = "inline-block"
-    ), 1000);
-    setTimeout(() => (
-      document.getElementById("cuntEmpireCover").style.pointerEvents = "none"
-    ), 1000);
+    setTimeout(() => {
+      document.getElementById("cuntEmpireCover").style.display = "inline-block";
+      document.getElementById("cuntEmpireCover").style.pointerEvents = "none";
+    }, 1000);
   }
   else {
     document.getElementById("cuntEmpireCover").style.pointerEvents = "none";
@@ -11226,16 +11146,16 @@ function openAccount(event) {
     }
   }
   if (fields.length == 0) {
-    setTimeout(() => (
-      document.getElementById("nameInput").focus()
-    ), 250);
+    setTimeout(() => {
+      document.getElementById("nameInput").focus();
+    }, 250);
   }
   else if (fields.length > 0) {
     for (var i = 0; i < document.getElementsByClassName("infoInput").length; i++) {
       if (fields.includes(document.getElementsByClassName("infoInput")[i].name)) {
-        setTimeout(() => (
-          document.getElementsByClassName("infoInput")[i].focus()
-        ), 250);
+        setTimeout(() => {
+          document.getElementsByClassName("infoInput")[i].focus();
+        }, 250);
         break;
       }
     }
@@ -11314,9 +11234,9 @@ function accountControls(event) {
   else if (event.key == "Escape") {
     if (sessionStorage.scope == "document") {
       document.getElementById("accountExit").style.animation = "buttonExit .25s ease 0s 1 forwards";
-      setTimeout(() => (
-        document.getElementById("accountExit").style.animation = "none"
-      ), 250);
+      setTimeout(() => {
+        document.getElementById("accountExit").style.animation = "none";
+      }, 250);
       closeAccount();
     }
   }
@@ -11345,9 +11265,9 @@ function accountMessageEntrance() {
 }
 
 function accountMessageExit() {
-  sessionStorage.accountMessageExitDisplayTimeout = setTimeout(() => (
-    document.getElementById("accountMessage").style.display = "none"
-  ), 2000);
+  sessionStorage.accountMessageExitDisplayTimeout = setTimeout(() => {
+    document.getElementById("accountMessage").style.display = "none";
+  }, 2000);
   document.getElementById("accountMessage").style.opacity = "0%";
   document.getElementById("accountMessage").style.transition = "opacity 2s ease 0s";
 }
@@ -11376,9 +11296,9 @@ function leaveInput(field) {
       document.getElementsByClassName("invalidInfoMessage")[sessionStorage.field - 1].style.display = "none";
     }
   }
-  sessionStorage.scopeTimeout = setTimeout(() => (
-    sessionStorage.scope = "document"
-  ), 250);
+  sessionStorage.scopeTimeout = setTimeout(() => {
+    sessionStorage.scope = "document";
+  }, 250);
 }
 
 function accountTyping(field) {
@@ -11637,9 +11557,9 @@ function accountStore(field) {
     else {
       if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].classList.contains("invalidInfoInput")) {
         document.getElementsByClassName("invalidInfoMessage")[sessionStorage.field - 1].style.animation = "invalidBlink .375s ease 0s 1 forwards";
-        setTimeout(() => (
-          document.getElementsByClassName("invalidInfoMessage")[sessionStorage.field - 1].style.animation = "none"
-        ), 375);
+        setTimeout(() => {
+          document.getElementsByClassName("invalidInfoMessage")[sessionStorage.field - 1].style.animation = "none";
+        }, 375);
       }
       else {
         document.getElementsByClassName("infoInput")[sessionStorage.field - 1].classList.replace("validInfoInput", "invalidInfoInput");
@@ -12068,9 +11988,9 @@ function closeAccount() {
     document.getElementsByClassName("infoInput")[i].blur();
   }
   if (document.getElementById("memoryCont").open == true) {
-    setTimeout(() => (
-      document.getElementById("memoryCont").open = false
-    ), 250);
+    setTimeout(() => {
+      document.getElementById("memoryCont").open = false;
+    }, 250);
   }
   document.getElementById("accountExit").tabIndex = "-1";
   document.getElementById("accountExit").blur();
@@ -12092,24 +12012,22 @@ function closeAccount() {
       keyboard[key] = false;
     }
   });
-  setTimeout(() => (
-    document.getElementById("viewAccountToggle").style.pointerEvents = "auto"
-  ), 250);
-  setTimeout(() => (
-    document.getElementById("viewAccountToggle").tabIndex = "0"
-  ), 250);
-  setTimeout(() => (
-    document.getElementById("viewAccount").tabIndex = "0"
-  ), 250);
+  setTimeout(() => {
+    document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
+    document.getElementById("viewAccountToggle").tabIndex = "0";
+  }, 250);
+  setTimeout(() => {
+    document.getElementById("viewAccount").tabIndex = "0";
+  }, 250);
   setTimeout(viewAccountToggleClose, 250);
   if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
-    setTimeout(() => (
-      document.getElementById("conductorTalkCont").tabIndex = "0"
-    ), 500);
+    setTimeout(() => {
+      document.getElementById("conductorTalkCont").tabIndex = "0";
+    }, 500);
   }
-  setTimeout(() => (
-    document.getElementById("conductor").tabIndex = "0"
-  ), 250);
+  setTimeout(() => {
+    document.getElementById("conductor").tabIndex = "0";
+  }, 250);
   if (sessionStorage.button == "enabled") {
     setTimeout(enableButton, 250);
   }
@@ -12134,22 +12052,22 @@ function gameOver(event) {
     document.getElementsByClassName("disappearParty")[i].style.transition = "all .25s ease 0s";
   }
   if ((sessionStorage.newSong != undefined) && (document.getElementsByClassName("audio")[sessionStorage.newSong].paused == false)) {
-    setTimeout(() => (
-      document.getElementById("speaker").style.animation = "none"
-    ), 250);
+    setTimeout(() => {
+      document.getElementById("speaker").style.animation = "none";
+    }, 250);
   }
-  setTimeout(() => (
-    document.getElementById("websiteCont").style.animation = "none"
-  ), 250);
+  setTimeout(() => {
+    document.getElementById("websiteCont").style.animation = "none";
+  }, 250);
   if (sessionStorage.clarksonScore <= sessionStorage.sluScore) {
-    setTimeout(() => (
-      document.getElementById("drumstick").style.animation = "none"
-    ), 250);
+    setTimeout(() => {
+      document.getElementById("drumstick").style.animation = "none";
+    }, 250);
   }
   else if (sessionStorage.clarksonScore > sessionStorage.sluScore) {
-    setTimeout(() => (
-      document.getElementById("spatula").style.animation = "none"
-    ), 250);
+    setTimeout(() => {
+      document.getElementById("spatula").style.animation = "none";
+    }, 250);
   }
   for (var i = 0; i < document.getElementsByClassName("audio").length; i++) {
     document.getElementsByClassName("audio")[i].onended = null;
@@ -12330,9 +12248,9 @@ function showPassword(event) {
         document.getElementById("passwordInput").placeholder = "Password...";
         document.getElementById("passwordInput").disabled = false;
       }
-      setTimeout(() => (
-        document.getElementById("passwordInput").focus()
-      ), 100);
+      setTimeout(() => {
+        document.getElementById("passwordInput").focus();
+      }, 100);
     }
     document.getElementById("password").tabIndex = "0";
     document.getElementById("password").ariaHidden = false;
@@ -12429,9 +12347,9 @@ function passwordStore() {
   }
   if (document.getElementById("passwordMessage").style.visibility == "visible") {
     document.getElementById("passwordMessage").style.animation = "emphasizeMessage .5s ease 0s 1 forwards";
-    setTimeout(() => (
-      document.getElementById("passwordMessage").style.animation = "none"
-    ), 500);
+    setTimeout(() => {
+      document.getElementById("passwordMessage").style.animation = "none";
+    }, 500);
   }
   else {
     document.getElementById("passwordInputCont").style.marginBottom = "1em";
@@ -12441,9 +12359,9 @@ function passwordStore() {
     document.getElementById("passwordMessage").style.height = "auto";
     document.getElementById("passwordMessage").style.transition = "visibility .25s ease 0s, opacity .25s ease 0s, height 0s ease 0s";
     document.getElementById("passwordMessage").style.animation = "emphasizeMessage .5s ease .25s 1 forwards";
-    setTimeout(() => (
-      document.getElementById("passwordMessage").style.animation = "none"
-    ), 750);
+    setTimeout(() => {
+      document.getElementById("passwordMessage").style.animation = "none";
+    }, 750);
   }
   document.getElementById("passwordInput").value = "";
   document.getElementById("enterPassword").value = document.getElementById("passwordInput").value;
@@ -12485,9 +12403,9 @@ function passwordUnlock() {
       document.getElementById("passwordInput").placeholder = "Password...";
       document.getElementById("passwordInput").disabled = false;
     }
-    setTimeout(() => (
-      document.getElementById("passwordInput").focus()
-    ), 100);
+    setTimeout(() => {
+      document.getElementById("passwordInput").focus();
+    }, 100);
   }
   document.getElementById("passwordMessage").style.visibility = "hidden";
   document.getElementById("passwordMessage").style.opacity = "0%";
@@ -12529,9 +12447,9 @@ function hidePassword() {
     logins.consecutive = [];
   }
   if (document.onkeydown == collapse) {
-    setTimeout(() => (
-      document.ondblclick = showPassword
-    ), 250);
+    setTimeout(() => {
+      document.ondblclick = showPassword;
+    }, 250);
     if ((document.getElementById("knightmobile").style.left == "13%") || (document.getElementById("knightmobile").style.bottom == "35%")) {
       document.onkeydown = startDrive;
     }
@@ -12596,9 +12514,9 @@ function hideSecret(event) {
     }
     if (event.type == "keydown") {
       document.getElementById("secretExit").style.animation = "secretExit .25s ease 0s 1 forwards";
-      setTimeout(() => (
-        document.getElementById("secretExit").style.animation = "none"
-      ), 250);
+      setTimeout(() => {
+        document.getElementById("secretExit").style.animation = "none";
+      }, 250);
     }
     setTimeout(destroySecret, 250);
     document.onclick = collapse;
@@ -12611,23 +12529,21 @@ function hideSecret(event) {
     }
     document.onkeyup = null;
     sessionStorage.removeItem("shortcut");
-    setTimeout(() => (
-      document.getElementById("viewAccountToggle").style.pointerEvents = "auto"
-    ), 250);
-    setTimeout(() => (
-      document.getElementById("viewAccountToggle").tabIndex = "0"
-    ), 250);
-    setTimeout(() => (
-      document.getElementById("viewAccount").tabIndex = "0"
-    ), 250);
+    setTimeout(() => {
+      document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
+      document.getElementById("viewAccountToggle").tabIndex = "0";
+    }, 250);
+    setTimeout(() => {
+      document.getElementById("viewAccount").tabIndex = "0";
+    }, 250);
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
-      setTimeout(() => (
-        document.getElementById("conductorTalkCont").tabIndex = "0"
-      ), 500);
+      setTimeout(() => {
+        document.getElementById("conductorTalkCont").tabIndex = "0";
+      }, 500);
     }
-    setTimeout(() => (
-      document.getElementById("conductor").tabIndex = "0"
-    ), 250);
+    setTimeout(() => {
+      document.getElementById("conductor").tabIndex = "0";
+    }, 250);
     setTimeout(enableButton, 250);
     console.clear();
   }
@@ -12727,12 +12643,10 @@ function mobileGrow() {
         document.getElementById("conductorTalkCont").scrollTop = 0;
       }
     }
-    setTimeout(() => (
-      document.getElementById("conductor").style.left = "2em"
-    ), 500);
-    setTimeout(() => (
-      document.getElementById("conductor").style.transition = "left 2s ease 0s"
-    ), 500);
+    setTimeout(() => {
+      document.getElementById("conductor").style.left = "2em";
+      document.getElementById("conductor").style.transition = "left 2s ease 0s";
+    }, 500);
     sessionStorage.emphasizeConductorInterval = setInterval(emphasizeConductor, 30000);
     setTimeout(enableButton, 500);
   }
@@ -12745,25 +12659,25 @@ function mobileGrow() {
         }
       }
       if (fields.length == 0) {
-        setTimeout(() => (
-          document.getElementById("nameInput").focus()
-        ), 250);
+        setTimeout(() => {
+          document.getElementById("nameInput").focus();
+        }, 250);
       }
       else if (fields.length > 0) {
         for (var i = 0; i < document.getElementsByClassName("infoInput").length; i++) {
           if (fields.includes(document.getElementsByClassName("infoInput")[i].name)) {
-            setTimeout(() => (
-              document.getElementsByClassName("infoInput")[i].focus()
-            ), 250);
+            setTimeout(() => {
+              document.getElementsByClassName("infoInput")[i].focus();
+            }, 250);
             break;
           }
         }
       }
     }
     else if (sessionStorage.field > 0) {
-      setTimeout(() => (
-        document.getElementsByClassName("infoInput")[sessionStorage.field - 1].focus()
-      ), 250);
+      setTimeout(() => {
+        document.getElementsByClassName("infoInput")[sessionStorage.field - 1].focus();
+      }, 250);
     }
   }
   if (sessionStorage.drinks != undefined) {
@@ -12854,9 +12768,9 @@ function copyUrl(event) {
 }
 
 function urlMessageExit() {
-  sessionStorage.urlMessageExitDisplayTimeout = setTimeout(() => (
-    document.getElementById("urlMessage").style.display = "none"
-  ), 1000);
+  sessionStorage.urlMessageExitDisplayTimeout = setTimeout(() => {
+    document.getElementById("urlMessage").style.display = "none";
+  }, 1000);
   document.getElementById("urlMessage").style.left = "0";
   document.getElementById("urlMessage").style.top = "0";
   document.getElementById("urlMessage").style.opacity = "0%";

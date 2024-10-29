@@ -204,7 +204,7 @@ namespace user {
 
       bool matchAll(const string& n, const string& y, const string& m, const string& h, const string& i, const int& ssn) const {
         bool match;
-        if ((matchName(n) == true) && (matchYear(y) == true) && (matchMajor(m) == true) && (matchHometown(h) == true) && (matchInstrument(i) == true) && (matchSocialSecurityNumber(ssn) == true)) {
+        if ((matchName(n)) && (matchYear(y)) && (matchMajor(m)) && (matchHometown(h)) && (matchInstrument(i)) && (matchSocialSecurityNumber(ssn))) {
           match = true;
         }
         else {

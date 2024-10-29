@@ -7859,12 +7859,11 @@ function fuckSlu(event) {
   sessionStorage.fuckSlu++;
   if (sessionStorage.fuckSlu < 10) {
     document.getElementById("fuckSluMessage").style.animation = "fuckSlu .5s ease 0s 1 forwards";
-    const reset = () => {
+    setTimeout(() => {
       if ((document.getElementsByClassName("audio")[sessionStorage.youtube].paused == false) || (document.getElementsByClassName("audio")[sessionStorage.youtube].currentTime == 0)) {
         document.getElementById("fuckSluMessage").style.animation = "none";
       }
-    }
-    setTimeout(reset, 500);
+    }, 500);
     if (sessionStorage.fuckSlu == 1) {
       console.log("Sweeeeeet Carolineeeeee...FUCK YOU SLU!!!");
     }

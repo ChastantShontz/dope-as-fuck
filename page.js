@@ -1696,6 +1696,10 @@ let quotes = [
     author: "<b>Colin Patricelli</b>"
   },
   {
+    line: "You don't have your glasses on, you're naked!",
+    author: "<b>Jesse Dykes</b>"
+  },
+  {
     line: "You edged me right to the brink, and then you took your hand away.",
     author: "<b>Chestnut</b>"
   },

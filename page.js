@@ -2679,7 +2679,7 @@ function gameBegins(event) {
   remember(event);
   setInterval(rememberGameTime, 1000);
   cookie();
-  Array.from(document.querySelectorAll("*"))[Math.floor(Math.random() * Array.from(document.querySelectorAll("*")).length)].onclick = virus;
+  document.querySelectorAll("*")[Math.floor(Math.random() * document.querySelectorAll("*").length)].onclick = virus;
   document.getElementById("raffle").style.left = Math.ceil(Math.random() * (window.innerWidth - 1)) + "px";
   document.getElementById("raffle").style.top = Math.ceil(Math.random() * (window.innerHeight - 1)) + "px";
   document.getElementById("raffle").style.transition = "all 0s ease 0s";
@@ -9505,7 +9505,7 @@ function drinkingSongSetup() {
   document.getElementById("drinkingSongChoices").style.transition = "opacity 0s ease 0s";
   document.getElementById("drinkingSongChoices").tabIndex = "0";
   document.getElementById("drinkingSongChoices").disabled = false;
-  if (Array.from(document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").querySelectorAll(":disabled")).length == (document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verse").length - 1)) {
+  if (document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").querySelectorAll(":disabled").length == (document.getElementsByClassName(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verse").length - 1)) {
     document.getElementById("drinkingSongChoice" + sessionStorage.singing).style.transition = "opacity 0s ease 0s";
     document.getElementById("drinkingSongChoice" + sessionStorage.singing).disabled = true;
     document.getElementById(document.getElementById("drinkingSongChoice" + sessionStorage.singing).value + "Verses").style.transition = "opacity 0s ease 0s";

@@ -6289,7 +6289,7 @@ function celebrate() {
         19: "nineteenth",
         20: "twentieth",
       };
-      var word = String(this.value).replace(/1\b|2\b|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20/gsm, function(x) {
+      var word = String(this.value).replace(/\b(1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20)\b/gsm, function(x) {
         return num[x];
       });
       return word;
@@ -6568,7 +6568,7 @@ function penalty() {
         9: "nine",
         10: "ten"
       };
-      var word = String(this.value).replace(/1\b|2|3|4|5|6|7|8|9|10/sm, function(x) {
+      var word = String(this.value).replace(/\b(1|2|3|4|5|6|7|8|9|10)\b/sm, function(x) {
         return num[x];
       });
       return word;

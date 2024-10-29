@@ -3955,7 +3955,7 @@ function chooseAnswer(event) {
     document.getElementById("choicesCont").style.transition = "all 0s ease 2.5s";
     answers.push(document.getElementById("choose").value);
     localStorage.answers = JSON.stringify(answers);
-    localStorage.commonAnswer = ((answers.slice()).sort((x, y) => (((answers.filter((answer) => (answer == x))).length) - ((answers.filter((answer) => (answer == y))).length)))).pop();
+    localStorage.commonAnswer = (answers.toSorted((x, y) => (((answers.filter((answer) => (answer == x))).length) - ((answers.filter((answer) => (answer == y))).length)))).pop();
     document.getElementById("choose").value = "";
     const round = new function() {
       this.setValue = function(x) {

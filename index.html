@@ -4864,8 +4864,8 @@
 
       function directory(folders, files) {
         var directory = {};
-        directory.folders = folders.sort();
-        directory.files = files.sort();
+        directory.folders = folders.toSorted();
+        directory.files = files.toSorted();
         return directory;
       }
 

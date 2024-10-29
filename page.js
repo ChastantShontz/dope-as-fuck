@@ -4139,7 +4139,7 @@ function closeSelection(event) {
     }, 500);
   }
   setTimeout(() => {
-    document.getElementById("conductor").tabIndex = "0"
+    document.getElementById("conductor").tabIndex = "0";
   }, 500);
 }
 

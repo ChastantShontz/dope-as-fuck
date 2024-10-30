@@ -755,7 +755,7 @@ namespace user {
       }
 
       User copy() const {
-        User copy(getName(), getYear(), getMajor(), getHometown(), getInstrument(), getSocialSecurityNumber());
+        User copy = *this;
         return copy;
       }
 

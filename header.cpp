@@ -852,11 +852,12 @@ namespace user {
         }
         else {
           srand(time(0) * ((rand() % ((2 - 1) + 1)) + 1));
+          int random;
           if ((user1.getName() == user2.getName())) {
             average.setName(user1.getName());
           }
           else {
-            int random = ((rand() % ((2 - 1) + 1)) + 1);
+            random = ((rand() % ((2 - 1) + 1)) + 1);
             if (random == 1) {
               average.setName(user1.getName());
             }
@@ -868,7 +869,7 @@ namespace user {
             average.setYear(user1.getYear());
           }
           else {
-            int random = ((rand() % ((2 - 1) + 1)) + 1);
+            random = ((rand() % ((2 - 1) + 1)) + 1);
             if (random == 1) {
               average.setYear(user1.getYear());
             }
@@ -880,7 +881,7 @@ namespace user {
             average.setMajor(user1.getMajor());
           }
           else {
-            int random = ((rand() % ((2 - 1) + 1)) + 1);
+            random = ((rand() % ((2 - 1) + 1)) + 1);
             if (random == 1) {
               average.setMajor(user1.getMajor());
             }
@@ -892,7 +893,7 @@ namespace user {
             average.setHometown(user1.getHometown());
           }
           else {
-            int random = ((rand() % ((2 - 1) + 1)) + 1);
+            random = ((rand() % ((2 - 1) + 1)) + 1);
             if (random == 1) {
               average.setHometown(user1.getHometown());
             }
@@ -904,7 +905,7 @@ namespace user {
             average.setInstrument(user1.getInstrument());
           }
           else {
-            int random = ((rand() % ((2 - 1) + 1)) + 1);
+            random = ((rand() % ((2 - 1) + 1)) + 1);
             if (random == 1) {
               average.setInstrument(user1.getInstrument());
             }
@@ -916,7 +917,7 @@ namespace user {
             average.setSocialSecurityNumber(user1.getSocialSecurityNumber());
           }
           else {
-            int random = ((rand() % ((2 - 1) + 1)) + 1);
+            random = ((rand() % ((2 - 1) + 1)) + 1);
             if (random == 1) {
               average.setSocialSecurityNumber(user1.getSocialSecurityNumber());
             }

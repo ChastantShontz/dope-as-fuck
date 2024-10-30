@@ -632,7 +632,7 @@ namespace user {
                   cout << "  Instrument: " << getInstrument() << endl;
                 }
                 if ((printCommand == 's') || printCommand == 'a') {
-                  cout << "  Social Security Number: " << setw(9) << setfill('0') << getSocialSecurityNumber() << endl;
+                  cout << "  Social Security Number: " << setw(9) << setfill('0') << right << getSocialSecurityNumber() << endl;
                 }
                 cout << endl << "  ";
                 printCancel = false;

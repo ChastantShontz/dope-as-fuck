@@ -130,9 +130,8 @@ namespace user {
         return socialSecurityNumber;
       }
 
-      template <typename T = char>
-      string getAll(const T& joiner = ' ') const {
-        string all = getName() + joiner + getYear() + joiner + getMajor() + joiner + getHometown() + joiner + getInstrument() + joiner + to_string(getSocialSecurityNumber());
+      string getAll(const string& joiner = " ") const {
+        string all = getName() + joiner + getYear() + joiner + getMajor() + joiner + getHometown() + joiner + getInstrument() + joiner + ((to_string(getSocialSecurityNumber()).size() == 9) ? (to_string(getSocialSecurityNumber())) : (string(9 - (to_string(getSocialSecurityNumber()).size()), '0') + to_string(getSocialSecurityNumber())));
         return all;
       }
 

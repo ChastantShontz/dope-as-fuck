@@ -213,40 +213,81 @@ namespace user {
         return match;
       }
 
-      void replaceName(const string& r, const string& n) {
-        if (matchName(r)) {
-          setName(n);
+      User replaceName(const string& r, const string& n) const {
+        User replacement = *this;
+        if (replacement.matchName(r)) {
+          replacement.setName(n);
         }
+        return replacement;
       }
 
-      void replaceYear(const string& r, const string& y) {
-        if (matchYear(r)) {
-          setYear(y);
+      User replaceYear(const string& r, const string& y) const {
+        User replacement = *this;
+        if (replacement.matchYear(r)) {
+          replacement.setYear(y);
         }
+        return replacement;
       }
 
-      void replaceMajor(const string& r, const string& m) {
-        if (matchMajor(r)) {
-          setMajor(m);
+      User replaceMajor(const string& r, const string& m) const {
+        User replacement = *this;
+        if (replacement.matchMajor(r)) {
+          replacement.setMajor(m);
         }
+        return replacement;
       }
 
-      void replaceHometown(const string& r, const string& h) {
-        if (matchHometown(r)) {
-          setHometown(h);
+      User replaceHometown(const string& r, const string& h) const {
+        User replacement = *this;
+        if (replacement.matchHometown(r)) {
+          replacement.setHometown(h);
         }
+        return replacement;
       }
 
-      void replaceInstrument(const string& r, const string& i) {
-        if (matchInstrument(r)) {
-          setInstrument(i);
+      User replaceInstrument(const string& r, const string& i) const {
+        User replacement = *this;
+        if (replacement.matchInstrument(r)) {
+          replacement.setInstrument(i);
         }
+        return replacement;
       }
 
-      void replaceSocialSecurityNumber(const int& r, const int& ssn) {
-        if (matchSocialSecurityNumber(r)) {
-          setSocialSecurityNumber(ssn);
+      User replaceSocialSecurityNumber(const int& r, const int& ssn) const {
+        User replacement = *this;
+        if (replacement.matchSocialSecurityNumber(r)) {
+          replacement.setSocialSecurityNumber(ssn);
         }
+        return replacement;
+      }
+
+      User replaceAll(const string& r, const string& v) const {
+        User replacement = *this;
+        replacement = replacement.replaceName(r, v);
+        replacement = replacement.replaceYear(r, v);
+        replacement = replacement.replaceMajor(r, v);
+        replacement = replacement.replaceHometown(r, v);
+        replacement = replacement.replaceInstrument(r, v);
+        bool conversion = true;
+        for (int i = 0; i < r.size(); i++) {
+          if (isdigit(r[i]) == 0) {
+            conversion = false;
+            break;
+          }
+        }
+        for (int i = 0; i < v.size(); i++) {
+          if (isdigit(v[i]) == 0) {
+            conversion = false;
+            break;
+          }
+        }
+        if (conversion == true) {
+          replacement = replacement.replaceSocialSecurityNumber(stoi(r), stoi(v));
+        }
+        else if (conversion == false) {
+          replacement.clearSocialSecurityNumber();
+        }
+        return replacement;
       }
 
       void clearName() {

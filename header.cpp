@@ -1043,108 +1043,6 @@ namespace user {
         return notEquals;
       }
 
-      friend bool operator >= (const User& user1, const User& user2) {
-        bool greaterEquals;
-        if (((user1.getName() < user2.getName()) && (user2.getName() != "undefined")) || ((user1.getName() == "undefined") || (user2.getName() != "undefined"))) {
-          greaterEquals = false;
-        }
-        else if (user1.getName() == user2.getName()) {
-          int fields1 = 1;
-          int fields2 = 1;
-          if (user1.getYear() != "undefined") {
-            fields1++;
-          }
-          if (user1.getMajor() != "undefined") {
-            fields1++;
-          }
-          if (user1.getHometown() != "undefined") {
-            fields1++;
-          }
-          if (user1.getInstrument() != "undefined") {
-            fields1++;
-          }
-          if (user1.getSocialSecurityNumber() > 0) {
-            fields1++;
-          }
-          if (user2.getYear() != "undefined") {
-            fields2++;
-          }
-          if (user2.getMajor() != "undefined") {
-            fields2++;
-          }
-          if (user2.getHometown() != "undefined") {
-            fields2++;
-          }
-          if (user2.getInstrument() != "undefined") {
-            fields2++;
-          }
-          if (user2.getSocialSecurityNumber() > 0) {
-            fields2++;
-          }
-          if (fields1 < fields2) {
-            greaterEquals = false;
-          }
-          else if (fields1 >= fields2) {
-            greaterEquals = true;
-          }
-        }
-        else if (((user1.getName() > user2.getName()) && (user1.getName() != "undefined")) || ((user1.getName() != "undefined") && (user2.getName() == "undefined"))) {
-          greaterEquals = true;
-        }
-        return greaterEquals;
-      }
-
-      friend bool operator <= (const User& user1, const User& user2) {
-        bool lessEquals;
-        if (((user1.getName() < user2.getName()) && (user2.getName() != "undefined")) || ((user1.getName() == "undefined") && (user2.getName() != "undefined"))) {
-          lessEquals = true;
-        }
-        else if (user1.getName() == user2.getName()) {
-          int fields1 = 1;
-          int fields2 = 1;
-          if (user1.getYear() != "undefined") {
-            fields1++;
-          }
-          if (user1.getMajor() != "undefined") {
-            fields1++;
-          }
-          if (user1.getHometown() != "undefined") {
-            fields1++;
-          }
-          if (user1.getInstrument() != "undefined") {
-            fields1++;
-          }
-          if (user1.getSocialSecurityNumber() > 0) {
-            fields1++;
-          }
-          if (user2.getYear() != "undefined") {
-            fields2++;
-          }
-          if (user2.getMajor() != "undefined") {
-            fields2++;
-          }
-          if (user2.getHometown() != "undefined") {
-            fields2++;
-          }
-          if (user2.getInstrument() != "undefined") {
-            fields2++;
-          }
-          if (user2.getSocialSecurityNumber() > 0) {
-            fields2++;
-          }
-          if (fields1 <= fields2) {
-            lessEquals = true;
-          }
-          else if (fields1 > fields2) {
-            lessEquals = false;
-          }
-        }
-        else if (((user1.getName() > user2.getName()) && (user1.getName() != "undefined")) || ((user1.getName() != "undefined") || (user2.getName() == "undefined"))) {
-          lessEquals = false;
-        }
-        return lessEquals;
-      }
-
       friend bool operator > (const User& user1, const User& user2) {
         bool greater;
         if (((user1.getName() < user2.getName()) && (user2.getName() != "undefined")) || ((user1.getName() == "undefined") || (user2.getName() != "undefined"))) {
@@ -1245,6 +1143,108 @@ namespace user {
           less = false;
         }
         return less;
+      }
+
+      friend bool operator >= (const User& user1, const User& user2) {
+        bool greaterEquals;
+        if (((user1.getName() < user2.getName()) && (user2.getName() != "undefined")) || ((user1.getName() == "undefined") || (user2.getName() != "undefined"))) {
+          greaterEquals = false;
+        }
+        else if (user1.getName() == user2.getName()) {
+          int fields1 = 1;
+          int fields2 = 1;
+          if (user1.getYear() != "undefined") {
+            fields1++;
+          }
+          if (user1.getMajor() != "undefined") {
+            fields1++;
+          }
+          if (user1.getHometown() != "undefined") {
+            fields1++;
+          }
+          if (user1.getInstrument() != "undefined") {
+            fields1++;
+          }
+          if (user1.getSocialSecurityNumber() > 0) {
+            fields1++;
+          }
+          if (user2.getYear() != "undefined") {
+            fields2++;
+          }
+          if (user2.getMajor() != "undefined") {
+            fields2++;
+          }
+          if (user2.getHometown() != "undefined") {
+            fields2++;
+          }
+          if (user2.getInstrument() != "undefined") {
+            fields2++;
+          }
+          if (user2.getSocialSecurityNumber() > 0) {
+            fields2++;
+          }
+          if (fields1 < fields2) {
+            greaterEquals = false;
+          }
+          else if (fields1 >= fields2) {
+            greaterEquals = true;
+          }
+        }
+        else if (((user1.getName() > user2.getName()) && (user1.getName() != "undefined")) || ((user1.getName() != "undefined") && (user2.getName() == "undefined"))) {
+          greaterEquals = true;
+        }
+        return greaterEquals;
+      }
+
+      friend bool operator <= (const User& user1, const User& user2) {
+        bool lessEquals;
+        if (((user1.getName() < user2.getName()) && (user2.getName() != "undefined")) || ((user1.getName() == "undefined") && (user2.getName() != "undefined"))) {
+          lessEquals = true;
+        }
+        else if (user1.getName() == user2.getName()) {
+          int fields1 = 1;
+          int fields2 = 1;
+          if (user1.getYear() != "undefined") {
+            fields1++;
+          }
+          if (user1.getMajor() != "undefined") {
+            fields1++;
+          }
+          if (user1.getHometown() != "undefined") {
+            fields1++;
+          }
+          if (user1.getInstrument() != "undefined") {
+            fields1++;
+          }
+          if (user1.getSocialSecurityNumber() > 0) {
+            fields1++;
+          }
+          if (user2.getYear() != "undefined") {
+            fields2++;
+          }
+          if (user2.getMajor() != "undefined") {
+            fields2++;
+          }
+          if (user2.getHometown() != "undefined") {
+            fields2++;
+          }
+          if (user2.getInstrument() != "undefined") {
+            fields2++;
+          }
+          if (user2.getSocialSecurityNumber() > 0) {
+            fields2++;
+          }
+          if (fields1 <= fields2) {
+            lessEquals = true;
+          }
+          else if (fields1 > fields2) {
+            lessEquals = false;
+          }
+        }
+        else if (((user1.getName() > user2.getName()) && (user1.getName() != "undefined")) || ((user1.getName() != "undefined") || (user2.getName() == "undefined"))) {
+          lessEquals = false;
+        }
+        return lessEquals;
       }
 
       friend User operator + (const User& user1, const User& user2) {

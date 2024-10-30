@@ -202,17 +202,6 @@ namespace user {
         return match;
       }
 
-      bool matchAll(const string& n, const string& y, const string& m, const string& h, const string& i, const int& ssn) const {
-        bool match;
-        if ((matchName(n)) && (matchYear(y)) && (matchMajor(m)) && (matchHometown(h)) && (matchInstrument(i)) && (matchSocialSecurityNumber(ssn))) {
-          match = true;
-        }
-        else {
-          match = false;
-        }
-        return match;
-      }
-
       User replaceName(const string& r, const string& n) const {
         User replacement = *this;
         if (replacement.matchName(r)) {
@@ -257,35 +246,6 @@ namespace user {
         User replacement = *this;
         if (replacement.matchSocialSecurityNumber(r)) {
           replacement.setSocialSecurityNumber(ssn);
-        }
-        return replacement;
-      }
-
-      User replaceAll(const string& r, const string& v) const {
-        User replacement = *this;
-        replacement = replacement.replaceName(r, v);
-        replacement = replacement.replaceYear(r, v);
-        replacement = replacement.replaceMajor(r, v);
-        replacement = replacement.replaceHometown(r, v);
-        replacement = replacement.replaceInstrument(r, v);
-        bool conversion = true;
-        for (int i = 0; i < r.size(); i++) {
-          if (isdigit(r[i]) == 0) {
-            conversion = false;
-            break;
-          }
-        }
-        for (int i = 0; i < v.size(); i++) {
-          if (isdigit(v[i]) == 0) {
-            conversion = false;
-            break;
-          }
-        }
-        if (conversion == true) {
-          replacement = replacement.replaceSocialSecurityNumber(stoi(r), stoi(v));
-        }
-        else if (conversion == false) {
-          replacement.clearSocialSecurityNumber();
         }
         return replacement;
       }
@@ -835,22 +795,35 @@ namespace user {
         *this = (*this - subtrahend);
       }
 
-      friend void replace(User& user1, User& user2) {
-        user1  = user2;
+      friend bool match(const User& user1, const User& user2) {
+        bool match;
+        if (user1 == user2) {
+          match = true;
+        }
+        else {
+          match = false;
+        }
+        return match;
+      }
+
+      friend void replace(User& user1, const User& user2) {
+        if (user1 != user2) {
+          user1 = user2;
+        }
       }
 
       friend void swap(User& user1, User& user2) {
-        User temp(user1.getName(), user1.getYear(), user1.getMajor(), user1.getHometown(), user1.getInstrument(), user1.getSocialSecurityNumber());
+        User temp = user1;
         user1 = user2;
         user2 = temp;
       }
 
-      friend User concat(User& user1, User& user2) {
+      friend User concat(const User& user1, const User& user2) {
         User sum = (user1 + user2);
         return sum;
       }
 
-      friend User trim(User& user1, User& user2) {
+      friend User trim(const User& user1, const User& user2) {
         User difference = (user1 - user2);
         return difference;
       }

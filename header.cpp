@@ -764,7 +764,7 @@ namespace user {
         if (toBool() == true) {
           empty = false;
         }
-        else {
+        else if (toBool() == false) {
           empty = true;
         }
         return empty;
@@ -772,11 +772,11 @@ namespace user {
 
       bool filled() const {
         bool filled;
-        if ((getName() == "undefined") || (getYear() == "undefined") || (getMajor() == "undefined") || (getHometown() == "undefined") || (getInstrument() == "undefined") || (getSocialSecurityNumber() == 0)) {
-          filled = false;
-        }
-        else {
+        if (toBool() == true) {
           filled = true;
+        }
+        else if (toBool() == false) {
+          filled = false;
         }
         return filled;
       }

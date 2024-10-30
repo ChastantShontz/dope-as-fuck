@@ -5228,6 +5228,7 @@ function showStats(stats, method) {
     document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.transition = "all .25s ease 0s";
     setTimeout(() => {
       document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.pointerEvents = "auto";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].tabIndex = "0";
     }, 250);
   }
 }
@@ -5270,6 +5271,8 @@ function hideStats(stats, method) {
     document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.transform = "scale(0)";
     document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.transition = "all .25s ease 0s";
     document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.pointerEvents = "none";
+    document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].tabIndex = "-1";
+    document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].blur();
   }
 }
 

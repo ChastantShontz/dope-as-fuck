@@ -929,13 +929,6 @@ namespace user {
         return average;
       }
 
-      friend pair<User, User> toPair(const User& user1, const User& user2) {
-        pair<User, User> p;
-        p.first = user1;
-        p.second = user2;
-        return p;
-      }
-
       friend istream& operator >> (istream& in, User& user) {
         bool testName = false;
         while (testName == false) {

@@ -48,7 +48,7 @@ namespace user {
 
       User(string n, string y, string m, string h, string i, string ssn) : User(n, y, m, h, i, stoi(ssn)) {}
 
-      User(string a[]) : User(a[0], a[1], a[2], a[3], a[4], stoi(a[5])) {}
+      User(string a[6]) : User(a[0], a[1], a[2], a[3], a[4], stoi(a[5])) {}
 
       User(vector<string> v) : User(v[0], v[1], v[2], v[3], v[4], stoi(v[5])) {}
 
@@ -340,7 +340,7 @@ namespace user {
       }
 
       string* toArray() const {
-        static string a[5];
+        static string a[6];
         a[0] = getName();
         a[1] = getYear();
         a[2] = getMajor();
@@ -473,8 +473,8 @@ namespace user {
       }
 
       pair<User, User> toPair() const {
-        User user1(getName(), getYear(), getMajor(), getHometown(), getInstrument(), getSocialSecurityNumber());
-        User user2 = user1;
+        User user1 = *this;
+        User user2 = *this;
         pair<User, User> p;
         p.first = user1;
         p.second = user2;

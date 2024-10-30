@@ -1049,37 +1049,37 @@ namespace user {
           greater = false;
         }
         else if (user1.getName() == user2.getName()) {
-          int fields1 = 1;
-          int fields2 = 1;
-          if (user1.getYear() != "undefined") {
-            fields1++;
-          }
-          if (user1.getMajor() != "undefined") {
-            fields1++;
-          }
-          if (user1.getHometown() != "undefined") {
-            fields1++;
-          }
-          if (user1.getInstrument() != "undefined") {
-            fields1++;
-          }
-          if (user1.getSocialSecurityNumber() > 0) {
-            fields1++;
-          }
-          if (user2.getYear() != "undefined") {
+          int fields1 = 0;
+          int fields2 = 0;
+          if (((user1.getYear() < user2.getYear()) && (user2.getYear() != "undefined")) || ((user1.getYear() == "undefined") || (user2.getYear() != "undefined"))) {
             fields2++;
           }
-          if (user2.getMajor() != "undefined") {
+          else if (((user1.getYear() > user2.getYear()) && (user1.getYear() != "undefined")) || ((user1.getYear() != "undefined") && (user2.getYear() == "undefined"))) {
+            fields1++;
+          }
+          if (((user1.getMajor() < user2.getMajor()) && (user2.getMajor() != "undefined")) || ((user1.getMajor() == "undefined") || (user2.getMajor() != "undefined"))) {
             fields2++;
           }
-          if (user2.getHometown() != "undefined") {
+          else if (((user1.getMajor() > user2.getMajor()) && (user1.getMajor() != "undefined")) || ((user1.getMajor() != "undefined") && (user2.getMajor() == "undefined"))) {
+            fields1++;
+          }
+          if (((user1.getHometown() < user2.getHometown()) && (user2.getHometown() != "undefined")) || ((user1.getHometown() == "undefined") || (user2.getHometown() != "undefined"))) {
             fields2++;
           }
-          if (user2.getInstrument() != "undefined") {
+          else if (((user1.getHometown() > user2.getHometown()) && (user1.getHometown() != "undefined")) || ((user1.getHometown() != "undefined") && (user2.getHometown() == "undefined"))) {
+            fields1++;
+          }
+          if (((user1.getInstrument() < user2.getInstrument()) && (user2.getInstrument() != "undefined")) || ((user1.getInstrument() == "undefined") || (user2.getInstrument() != "undefined"))) {
             fields2++;
           }
-          if (user2.getSocialSecurityNumber() > 0) {
+          else if (((user1.getInstrument() > user2.getInstrument()) && (user1.getInstrument() != "undefined")) || ((user1.getInstrument() != "undefined") && (user2.getInstrument() == "undefined"))) {
+            fields1++;
+          }
+          if (user1.getSocialSecurityNumber() < user2.getSocialSecurityNumber()) {
             fields2++;
+          }
+          else if (user1.getSocialSecurityNumber() > user2.getSocialSecurityNumber()) {
+            fields1++;
           }
           if (fields1 <= fields2) {
             greater = false;
@@ -1100,37 +1100,37 @@ namespace user {
           less = true;
         }
         else if (user1.getName() == user2.getName()) {
-          int fields1 = 1;
-          int fields2 = 1;
-          if (user1.getYear() != "undefined") {
-            fields1++;
-          }
-          if (user1.getMajor() != "undefined") {
-            fields1++;
-          }
-          if (user1.getHometown() != "undefined") {
-            fields1++;
-          }
-          if (user1.getInstrument() != "undefined") {
-            fields1++;
-          }
-          if (user1.getSocialSecurityNumber() > 0) {
-            fields1++;
-          }
-          if (user2.getYear() != "undefined") {
+          int fields1 = 0;
+          int fields2 = 0;
+          if (((user1.getYear() < user2.getYear()) && (user2.getYear() != "undefined")) || ((user1.getYear() == "undefined") && (user2.getYear() != "undefined"))) {
             fields2++;
           }
-          if (user2.getMajor() != "undefined") {
+          else if (((user1.getYear() > user2.getYear()) && (user1.getYear() != "undefined")) || ((user1.getYear() != "undefined") || (user2.getYear() == "undefined"))) {
+            fields1++;
+          }
+          if (((user1.getMajor() < user2.getMajor()) && (user2.getMajor() != "undefined")) || ((user1.getMajor() == "undefined") && (user2.getMajor() != "undefined"))) {
             fields2++;
           }
-          if (user2.getHometown() != "undefined") {
+          else if (((user1.getMajor() > user2.getMajor()) && (user1.getMajor() != "undefined")) || ((user1.getMajor() != "undefined") || (user2.getMajor() == "undefined"))) {
+            fields1++;
+          }
+          if (((user1.getHometown() < user2.getHometown()) && (user2.getHometown() != "undefined")) || ((user1.getHometown() == "undefined") && (user2.getHometown() != "undefined"))) {
             fields2++;
           }
-          if (user2.getInstrument() != "undefined") {
+          else if (((user1.getHometown() > user2.getHometown()) && (user1.getHometown() != "undefined")) || ((user1.getHometown() != "undefined") || (user2.getHometown() == "undefined"))) {
+            fields1++;
+          }
+          if (((user1.getInstrument() < user2.getInstrument()) && (user2.getInstrument() != "undefined")) || ((user1.getInstrument() == "undefined") && (user2.getInstrument() != "undefined"))) {
             fields2++;
           }
-          if (user2.getSocialSecurityNumber() > 0) {
+          else if (((user1.getInstrument() > user2.getInstrument()) && (user1.getInstrument() != "undefined")) || ((user1.getInstrument() != "undefined") || (user2.getInstrument() == "undefined"))) {
+            fields1++;
+          }
+          if (user1.getSocialSecurityNumber() < user2.getSocialSecurityNumber()) {
             fields2++;
+          }
+          else if (user1.getSocialSecurityNumber() > user2.getSocialSecurityNumber()) {
+            fields1++;
           }
           if (fields1 < fields2) {
             less = true;
@@ -1151,37 +1151,37 @@ namespace user {
           greaterEquals = false;
         }
         else if (user1.getName() == user2.getName()) {
-          int fields1 = 1;
-          int fields2 = 1;
-          if (user1.getYear() != "undefined") {
-            fields1++;
-          }
-          if (user1.getMajor() != "undefined") {
-            fields1++;
-          }
-          if (user1.getHometown() != "undefined") {
-            fields1++;
-          }
-          if (user1.getInstrument() != "undefined") {
-            fields1++;
-          }
-          if (user1.getSocialSecurityNumber() > 0) {
-            fields1++;
-          }
-          if (user2.getYear() != "undefined") {
+          int fields1 = 0;
+          int fields2 = 0;
+          if (((user1.getYear() < user2.getYear()) && (user2.getYear() != "undefined")) || ((user1.getYear() == "undefined") || (user2.getYear() != "undefined"))) {
             fields2++;
           }
-          if (user2.getMajor() != "undefined") {
+          else if (((user1.getYear() > user2.getYear()) && (user1.getYear() != "undefined")) || ((user1.getYear() != "undefined") && (user2.getYear() == "undefined"))) {
+            fields1++;
+          }
+          if (((user1.getMajor() < user2.getMajor()) && (user2.getMajor() != "undefined")) || ((user1.getMajor() == "undefined") || (user2.getMajor() != "undefined"))) {
             fields2++;
           }
-          if (user2.getHometown() != "undefined") {
+          else if (((user1.getMajor() > user2.getMajor()) && (user1.getMajor() != "undefined")) || ((user1.getMajor() != "undefined") && (user2.getMajor() == "undefined"))) {
+            fields1++;
+          }
+          if (((user1.getHometown() < user2.getHometown()) && (user2.getHometown() != "undefined")) || ((user1.getHometown() == "undefined") || (user2.getHometown() != "undefined"))) {
             fields2++;
           }
-          if (user2.getInstrument() != "undefined") {
+          else if (((user1.getHometown() > user2.getHometown()) && (user1.getHometown() != "undefined")) || ((user1.getHometown() != "undefined") && (user2.getHometown() == "undefined"))) {
+            fields1++;
+          }
+          if (((user1.getInstrument() < user2.getInstrument()) && (user2.getInstrument() != "undefined")) || ((user1.getInstrument() == "undefined") || (user2.getInstrument() != "undefined"))) {
             fields2++;
           }
-          if (user2.getSocialSecurityNumber() > 0) {
+          else if (((user1.getInstrument() > user2.getInstrument()) && (user1.getInstrument() != "undefined")) || ((user1.getInstrument() != "undefined") && (user2.getInstrument() == "undefined"))) {
+            fields1++;
+          }
+          if (user1.getSocialSecurityNumber() < user2.getSocialSecurityNumber()) {
             fields2++;
+          }
+          else if (user1.getSocialSecurityNumber() > user2.getSocialSecurityNumber()) {
+            fields1++;
           }
           if (fields1 < fields2) {
             greaterEquals = false;
@@ -1202,37 +1202,37 @@ namespace user {
           lessEquals = true;
         }
         else if (user1.getName() == user2.getName()) {
-          int fields1 = 1;
-          int fields2 = 1;
-          if (user1.getYear() != "undefined") {
-            fields1++;
-          }
-          if (user1.getMajor() != "undefined") {
-            fields1++;
-          }
-          if (user1.getHometown() != "undefined") {
-            fields1++;
-          }
-          if (user1.getInstrument() != "undefined") {
-            fields1++;
-          }
-          if (user1.getSocialSecurityNumber() > 0) {
-            fields1++;
-          }
-          if (user2.getYear() != "undefined") {
+          int fields1 = 0;
+          int fields2 = 0;
+          if (((user1.getYear() < user2.getYear()) && (user2.getYear() != "undefined")) || ((user1.getYear() == "undefined") && (user2.getYear() != "undefined"))) {
             fields2++;
           }
-          if (user2.getMajor() != "undefined") {
+          else if (((user1.getYear() > user2.getYear()) && (user1.getYear() != "undefined")) || ((user1.getYear() != "undefined") || (user2.getYear() == "undefined"))) {
+            fields1++;
+          }
+          if (((user1.getMajor() < user2.getMajor()) && (user2.getMajor() != "undefined")) || ((user1.getMajor() == "undefined") && (user2.getMajor() != "undefined"))) {
             fields2++;
           }
-          if (user2.getHometown() != "undefined") {
+          else if (((user1.getMajor() > user2.getMajor()) && (user1.getMajor() != "undefined")) || ((user1.getMajor() != "undefined") || (user2.getMajor() == "undefined"))) {
+            fields1++;
+          }
+          if (((user1.getHometown() < user2.getHometown()) && (user2.getHometown() != "undefined")) || ((user1.getHometown() == "undefined") && (user2.getHometown() != "undefined"))) {
             fields2++;
           }
-          if (user2.getInstrument() != "undefined") {
+          else if (((user1.getHometown() > user2.getHometown()) && (user1.getHometown() != "undefined")) || ((user1.getHometown() != "undefined") || (user2.getHometown() == "undefined"))) {
+            fields1++;
+          }
+          if (((user1.getInstrument() < user2.getInstrument()) && (user2.getInstrument() != "undefined")) || ((user1.getInstrument() == "undefined") && (user2.getInstrument() != "undefined"))) {
             fields2++;
           }
-          if (user2.getSocialSecurityNumber() > 0) {
+          else if (((user1.getInstrument() > user2.getInstrument()) && (user1.getInstrument() != "undefined")) || ((user1.getInstrument() != "undefined") || (user2.getInstrument() == "undefined"))) {
+            fields1++;
+          }
+          if (user1.getSocialSecurityNumber() < user2.getSocialSecurityNumber()) {
             fields2++;
+          }
+          else if (user1.getSocialSecurityNumber() > user2.getSocialSecurityNumber()) {
+            fields1++;
           }
           if (fields1 <= fields2) {
             lessEquals = true;

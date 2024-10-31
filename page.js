@@ -12702,10 +12702,10 @@ function mobileGrow() {
       document.getElementById("conductor").style.left = "2em";
       document.getElementById("conductor").style.transition = "left 2s ease 0s";
     }, 500);
-    document.getElementById("conductor").tabIndex = "0";
     sessionStorage.emphasizeConductorInterval = setInterval(emphasizeConductor, 30000);
     setTimeout(enableButton, 500);
   }
+  document.getElementById("conductor").tabIndex = "0";
   if (document.getElementById("account").style.visibility == "visible") {
     if (sessionStorage.field == 0) {
       var fields = [];

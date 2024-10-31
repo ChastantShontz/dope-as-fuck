@@ -2695,10 +2695,16 @@ function gameBegins(event) {
   document.getElementById("raffle").style.left = Math.ceil(Math.random() * (window.innerWidth - 1)) + "px";
   document.getElementById("raffle").style.top = Math.ceil(Math.random() * (window.innerHeight - 1)) + "px";
   document.getElementById("raffle").style.transition = "all 0s ease 0s";
-  document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
-  document.getElementById("viewAccountToggle").tabIndex = "0";
   if ((window.innerHeight <= 600) || (window.innerWidth <= 1200)) {
     document.querySelector("main").ariaHidden = true;
+    document.getElementById("conductor").tabIndex = "-1";
+    document.getElementById("conductor").blur();
+    if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
+      document.getElementById("conductorTalkCont").tabIndex = "-1";
+      document.getElementById("conductorTalkCont").blur();
+    }
+    document.getElementById("viewAccount").tabIndex = "-1";
+    document.getElementById("viewAccount").blur();
     document.getElementById("urlButton").tabIndex = "0";
     document.getElementById("mobileButton").tabIndex = "0";
     document.getElementById("mobileImgContCont").tabIndex = "0";

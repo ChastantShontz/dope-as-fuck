@@ -12615,6 +12615,17 @@ function mobile() {
 }
 
 function mobileShrink() {
+  document.getElementById("conductor").tabIndex = "-1";
+  document.getElementById("conductor").blur();
+  if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
+    document.getElementById("conductorTalkCont").tabIndex = "-1";
+    document.getElementById("conductorTalkCont").blur();
+  }
+  document.getElementById("viewAccount").tabIndex = "-1";
+  document.getElementById("viewAccount").blur();
+  document.getElementById("viewAccountToggle").style.pointerEvents = "none";
+  document.getElementById("viewAccountToggle").tabIndex = "-1";
+  document.getElementById("viewAccountToggle").blur();
   if (document.getElementById("account").style.visibility != "visible") {
     if (document.getElementById("viewAccountToggle").onclick == viewAccountToggleClose) {
       viewAccountToggleClose();

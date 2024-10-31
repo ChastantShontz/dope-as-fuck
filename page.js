@@ -10135,6 +10135,7 @@ function drinkBeer(event) {
 
 function singIce(event) {
   sessionStorage.bandie = Math.floor(Math.random() * bandies.length);
+  document.getElementById("conductor").style.zIndex = "92";
   if (bandies[sessionStorage.bandie] == "Joe Mama") {
     document.getElementById("conductorTalk").innerHTML = "Oh no! You've just been iced by me! Better hurry up and finish it in 8, or you'll be a bitch!";
   }
@@ -10154,7 +10155,6 @@ function singIce(event) {
     document.getElementById("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
     document.getElementById("conductorImg").onclick = pillow;
   }
-  document.getElementById("conductor").style.zIndex = "92";
   document.getElementById("viewAccountToggle").style.pointerEvents = "none";
   document.getElementById("viewAccountToggle").tabIndex = "-1";
   document.getElementById("viewAccountToggle").blur();
@@ -10283,9 +10283,8 @@ function bitchIce(event) {
     document.getElementById("conductor").style.filter = "blur(0)";
     document.getElementById("conductor").style.transform = "skew(0)";
     document.getElementById("conductor").style.transition = "all 0s ease 0s";
-    document.getElementById("conductorName").style.fontFamily = "\"Russo One\", fantasy";
-    document.getElementById("ok").style.fontFamily = "\"Archivo Black\", \"Roboto\", \"Arial\", sans-serif";
     document.getElementById("conductorTalk").innerHTML = "Woah, it looks like you've had a little too much to drink toknight. I think it's time to call it a knight and sleep off the alcohol. You'll wake up tomorrow with one nasty hangover!";
+    document.getElementById("conductorTalk").style.fontFamily = "\"Merriweather\", \"Times New Roman\", serif";
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
       if (document.getElementById("conductorTalkCont").scrollTop > 0) {
         document.getElementById("conductorTalkCont").scrollTop = 0;
@@ -10294,7 +10293,7 @@ function bitchIce(event) {
     if ((sessionStorage.backup != undefined) && (sessionStorage.backup != "")) {
       sessionStorage.backup = "";
     }
-    document.getElementById("conductorTalk").style.fontFamily = "\"Merriweather\", \"Times New Roman\", serif";
+    document.getElementById("conductorName").style.fontFamily = "\"Russo One\", fantasy";
     document.getElementById("iceCounter").style.animation = "none";
     document.getElementById("iceButtonCont").style.background = "var(--white)";
     document.getElementById("iceButtonCont").style.transition = "background 0s ease 0s";
@@ -10412,6 +10411,7 @@ function bitchIce(event) {
     document.getElementById("triangleFaceCont").style.zIndex = "92";
     sessionStorage.lives = 0;
     enableButton();
+    document.getElementById("ok").style.fontFamily = "\"Archivo Black\", \"Roboto\", \"Arial\", sans-serif";
     document.getElementById("ok").onclick = function(event) {
       failIce(event);
       compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
@@ -10483,6 +10483,7 @@ function drinkIce(event) {
 }
 
 function finishIce(event) {
+  document.getElementById("conductor").style.zIndex = "91";
   if ((sessionStorage.countdown == undefined) && (sessionStorage.bitch == undefined)) {
     clearTimeout(sessionStorage.countdownIceTimeout);
     sessionStorage.removeItem("countdownIceTimeout");
@@ -10511,7 +10512,6 @@ function finishIce(event) {
   if ((sessionStorage.backup != undefined) && (sessionStorage.backup != "")) {
     sessionStorage.backup = "";
   }
-  document.getElementById("conductor").style.zIndex = "91";
   document.getElementById("cover").style.zIndex = "92";
   if (sessionStorage.drinks < 50) {
     document.getElementById("cover").style.visibility = "hidden";

@@ -2683,13 +2683,13 @@ function gameBegins(event) {
   document.getElementById("raffle").style.top = Math.ceil(Math.random() * (window.innerHeight - 1)) + "px";
   document.getElementById("raffle").style.transition = "all 0s ease 0s";
   document.body.style.cursor = "auto";
-  document.getElementById("loading").style.display = "none";
-  for (var i = 0; i < document.getElementsByClassName("loadingMessageDot").length; i++) {
-    document.getElementsByClassName("loadingMessageDot")[i].style.animation = "none";
-  }
   if (sessionStorage.loadIncrementInterval != undefined) {
     clearInterval(sessionStorage.loadIncrementInterval);
     sessionStorage.removeItem("loadIncrementInterval");
+  }
+  document.getElementById("loading").style.display = "none";
+  for (var i = 0; i < document.getElementsByClassName("loadingMessageDot").length; i++) {
+    document.getElementsByClassName("loadingMessageDot")[i].style.animation = "none";
   }
   document.getElementById("loadingBarPercent").innerHTML = "100%";
   document.getElementById("loadingBar").style.right = "0";

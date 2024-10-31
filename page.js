@@ -10161,10 +10161,8 @@ function singIce(event) {
     document.getElementById("conductorTalk").innerHTML = "Oh no! You've just been iced by " + bandies[sessionStorage.bandie] + "! Better hurry up and finish it in 8, or you'll be a bitch!";
   }
   if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
-    if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
-      document.getElementById("conductorTalkCont").tabIndex = "-1";
-      document.getElementById("conductorTalkCont").blur();
-    }
+    document.getElementById("conductorTalkCont").tabIndex = "-1";
+    document.getElementById("conductorTalkCont").blur();
     if (document.getElementById("conductorTalkCont").scrollTop > 0) {
       document.getElementById("conductorTalkCont").scrollTop = 0;
     }
@@ -10310,9 +10308,11 @@ function bitchIce(event) {
     document.getElementById("conductor").style.filter = "blur(0)";
     document.getElementById("conductor").style.transform = "skew(0)";
     document.getElementById("conductor").style.transition = "all 0s ease 0s";
+    document.getElementById("conductor").tabIndex = "0";
     document.getElementById("conductorTalk").innerHTML = "Woah, it looks like you've had a little too much to drink toknight. I think it's time to call it a knight and sleep off the alcohol. You'll wake up tomorrow with one nasty hangover!";
     document.getElementById("conductorTalk").style.fontFamily = "\"Merriweather\", \"Times New Roman\", serif";
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
+      document.getElementById("conductorTalkCont").tabIndex = "0";
       if (document.getElementById("conductorTalkCont").scrollTop > 0) {
         document.getElementById("conductorTalkCont").scrollTop = 0;
       }
@@ -10511,6 +10511,9 @@ function drinkIce(event) {
 
 function finishIce(event) {
   document.getElementById("conductor").style.zIndex = "91";
+  setTimeout(() => {
+    document.getElementById("conductor").tabIndex = "0";
+  }, 250);
   if ((sessionStorage.countdown == undefined) && (sessionStorage.bitch == undefined)) {
     clearTimeout(sessionStorage.countdownIceTimeout);
     sessionStorage.removeItem("countdownIceTimeout");
@@ -10532,6 +10535,9 @@ function finishIce(event) {
     document.getElementById("conductorTalk").innerHTML = "Well, well, well, if it isn't the little bitch. You should be ashamed of yourself!";
   }
   if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
+    setTimeout(() => {
+      document.getElementById("conductorTalkCont").tabIndex = "0";
+    }, 250);
     if (document.getElementById("conductorTalkCont").scrollTop > 0) {
       document.getElementById("conductorTalkCont").scrollTop = 0;
     }
@@ -10595,6 +10601,9 @@ function finishIce(event) {
   setTimeout(() => {
     document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
     document.getElementById("viewAccountToggle").tabIndex = "0";
+  }, 250);
+  setTimeout(() => {
+    document.getElementById("viewAccount").tabIndex = "0";
   }, 250);
   const round = new function() {
     this.setValue = function(x) {

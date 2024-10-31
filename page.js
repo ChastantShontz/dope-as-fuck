@@ -9080,7 +9080,7 @@ function closePoem(event) {
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
       setTimeout(() => {
         document.getElementById("conductorTalkCont").tabIndex = "0";
-      }, 500);
+      }, 250);
     }
     setTimeout(() => {
       document.getElementById("conductor").tabIndex = "0";
@@ -9230,6 +9230,14 @@ function acceptTerms(event) {
     document.getElementsByClassName("confirmButton")[i].tabIndex = "-1";
     document.getElementsByClassName("confirmButton")[i].blur();
   }
+  document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
+  document.getElementById("viewAccountToggle").tabIndex = "0";
+  document.getElementById("viewAccount").tabIndex = "0";
+  if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
+    document.getElementById("conductorTalkCont").tabIndex = "0";
+  }
+  document.getElementById("conductor").tabIndex = "0";
+  enableButton();
   setTimeout(gotIt27, 500);
 }
 
@@ -9261,6 +9269,14 @@ function declineTerms(event) {
     document.getElementsByClassName("confirmButton")[i].tabIndex = "-1";
     document.getElementsByClassName("confirmButton")[i].blur();
   }
+  document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
+  document.getElementById("viewAccountToggle").tabIndex = "0";
+  document.getElementById("viewAccount").tabIndex = "0";
+  if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
+    document.getElementById("conductorTalkCont").tabIndex = "0";
+  }
+  document.getElementById("conductor").tabIndex = "0";
+  enableButton();
   document.getElementById("ok").onclick = function(event) {
     gameOver(event);
     compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);

@@ -2568,7 +2568,7 @@ function load(event) {
         sessionStorage.newLoad = (((i + 1) / document.getElementsByClassName("load").length) * 100);
         if ((sessionStorage.oldLoad == undefined) || ((Math.round(sessionStorage.newLoad * 100) / 100) > (Math.round(sessionStorage.oldLoad * 100) / 100))) {
           if (((Math.round(sessionStorage.newLoad * 100) / 100) > 0) && ((Math.round(sessionStorage.newLoad * 100) / 100) < 100)) {
-            document.getElementById("loadingBarPercent").innerHTML = ((((Math.round(sessionStorage.newLoad * 100) / 100) % 1) == 0) ? (((Math.round(sessionStorage.newLoad * 100) / 100) < 10) ? (((Math.round(sessionStorage.newLoad * 100) / 100) + ".").padEnd(4, "0")) : (((Math.round(sessionStorage.newLoad * 100) / 100) + ".").padEnd(5, "0"))) : (((Math.round(sessionStorage.newLoad * 100) / 100) < 10) ? (String(Math.round(sessionStorage.newLoad * 100) / 100).padEnd(4, "0")) : (String(Math.round(sessionStorage.newLoad * 100) / 100).padEnd(5, "0")))) + "%";
+            document.getElementById("loadingBarPercent").innerHTML = (((Math.round(sessionStorage.newLoad * 100) / 100) < 10) ? (((Math.round(sessionStorage.newLoad * 100) / 100) + ((((Math.round(sessionStorage.newLoad * 100) / 100) % 1) == 0) ? (".") : (""))).padEnd(4, "0")) : (((Math.round(sessionStorage.newLoad * 100) / 100) + ((((Math.round(sessionStorage.newLoad * 100) / 100) % 1) == 0) ? (".") : (""))).padEnd(5, "0"))) + "%";
             document.getElementById("loadingBar").style.right = (100 - sessionStorage.newLoad) + "%";
             document.getElementById("loadingBar").style.transition = "right 0s ease 0s";
           }
@@ -2592,7 +2592,7 @@ function loadIncrement() {
       else if ((sessionStorage.newLoad > 99.5) && (sessionStorage.newLoad <= 99.86)) {
         sessionStorage.newLoad = (+sessionStorage.newLoad + (Math.ceil(Math.random() * 7) / 100));
       }
-      document.getElementById("loadingBarPercent").innerHTML = ((((Math.round(sessionStorage.newLoad * 100) / 100) % 1) == 0) ? (((Math.round(sessionStorage.newLoad * 100) / 100) < 10) ? (((Math.round(sessionStorage.newLoad * 100) / 100) + ".").padEnd(4, "0")) : (((Math.round(sessionStorage.newLoad * 100) / 100) + ".").padEnd(5, "0"))) : (((Math.round(sessionStorage.newLoad * 100) / 100) < 10) ? (String(Math.round(sessionStorage.newLoad * 100) / 100).padEnd(4, "0")) : (String(Math.round(sessionStorage.newLoad * 100) / 100).padEnd(5, "0")))) + "%";
+      document.getElementById("loadingBarPercent").innerHTML = (((Math.round(sessionStorage.newLoad * 100) / 100) < 10) ? (((Math.round(sessionStorage.newLoad * 100) / 100) + ((((Math.round(sessionStorage.newLoad * 100) / 100) % 1) == 0) ? (".") : (""))).padEnd(4, "0")) : (((Math.round(sessionStorage.newLoad * 100) / 100) + ((((Math.round(sessionStorage.newLoad * 100) / 100) % 1) == 0) ? (".") : (""))).padEnd(5, "0"))) + "%";
       document.getElementById("loadingBar").style.right = (100 - sessionStorage.newLoad) + "%";
       document.getElementById("loadingBar").style.transition = "right 0s ease 0s";
       sessionStorage.oldLoad = sessionStorage.newLoad;

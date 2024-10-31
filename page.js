@@ -3760,6 +3760,9 @@ function openSelection() {
   document.getElementById("viewAccountToggle").style.pointerEvents = "none";
   document.getElementById("viewAccountToggle").tabIndex = "-1";
   document.getElementById("viewAccountToggle").blur();
+  if (document.getElementById("viewAccountToggle").onclick == viewAccountToggleClose) {
+    viewAccountToggleClose();
+  }
   var options = [];
   if (sessionStorage.selection == 1) {
     options.push(sessionStorage.songPrime);
@@ -4738,6 +4741,9 @@ function troyLassialEntrance() {
   document.getElementById("viewAccountToggle").style.pointerEvents = "none";
   document.getElementById("viewAccountToggle").tabIndex = "-1";
   document.getElementById("viewAccountToggle").blur();
+  if (document.getElementById("viewAccountToggle").onclick == viewAccountToggleClose) {
+    viewAccountToggleClose();
+  }
   document.getElementById("troyLassialButton").tabIndex = "0";
   document.getElementById("troyLassialCont").style.transform = "scale(1)";
   document.getElementById("troyLassialCont").style.transition = "transform .5s ease 0s";
@@ -9180,6 +9186,20 @@ function gotIt26() {
 }
 
 function firewall() {
+  document.getElementById("conductor").tabIndex = "-1";
+  document.getElementById("conductor").blur();
+  if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
+    document.getElementById("conductorTalkCont").tabIndex = "-1";
+    document.getElementById("conductorTalkCont").blur();
+  }
+  document.getElementById("viewAccount").tabIndex = "-1";
+  document.getElementById("viewAccount").blur();
+  document.getElementById("viewAccountToggle").style.pointerEvents = "none";
+  document.getElementById("viewAccountToggle").tabIndex = "-1";
+  document.getElementById("viewAccountToggle").blur();
+  if (document.getElementById("viewAccountToggle").onclick == viewAccountToggleClose) {
+    viewAccountToggleClose();
+  }
   for (var i = 0; i < document.getElementsByClassName("confirmButton").length; i++) {
     document.getElementsByClassName("confirmButton")[i].tabIndex = "0";
   }
@@ -12047,6 +12067,9 @@ function gameOver(event) {
   document.getElementById("viewAccountToggle").style.pointerEvents = "none";
   document.getElementById("viewAccountToggle").tabIndex = "-1";
   document.getElementById("viewAccountToggle").blur();
+  if (document.getElementById("viewAccountToggle").onclick == viewAccountToggleClose) {
+    viewAccountToggleClose();
+  }
   for (var i = 0; i < document.getElementsByClassName("disappearParty").length; i++) {
     document.getElementsByClassName("disappearParty")[i].style.visibility = "hidden";
     document.getElementsByClassName("disappearParty")[i].style.opacity = "0%";

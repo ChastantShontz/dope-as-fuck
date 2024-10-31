@@ -2678,10 +2678,6 @@ function gameBegins(event) {
   remember(event);
   setInterval(rememberGameTime, 1000);
   cookie();
-  document.querySelectorAll("*")[Math.floor(Math.random() * document.querySelectorAll("*").length)].onclick = virus;
-  document.getElementById("raffle").style.left = Math.ceil(Math.random() * (window.innerWidth - 1)) + "px";
-  document.getElementById("raffle").style.top = Math.ceil(Math.random() * (window.innerHeight - 1)) + "px";
-  document.getElementById("raffle").style.transition = "all 0s ease 0s";
   document.body.style.cursor = "auto";
   if (sessionStorage.loadIncrementInterval != undefined) {
     clearInterval(sessionStorage.loadIncrementInterval);
@@ -2695,6 +2691,10 @@ function gameBegins(event) {
   document.getElementById("loadingBar").style.right = "0";
   document.getElementById("loadingBar").style.transition = "right 0s ease 0s";
   document.getElementById("loadingBarShimmer").style.animation = "none";
+  document.querySelectorAll("*")[Math.floor(Math.random() * document.querySelectorAll("*").length)].onclick = virus;
+  document.getElementById("raffle").style.left = Math.ceil(Math.random() * (window.innerWidth - 1)) + "px";
+  document.getElementById("raffle").style.top = Math.ceil(Math.random() * (window.innerHeight - 1)) + "px";
+  document.getElementById("raffle").style.transition = "all 0s ease 0s";
   document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
   document.getElementById("viewAccountToggle").tabIndex = "0";
   if ((window.innerHeight <= 600) || (window.innerWidth <= 1200)) {

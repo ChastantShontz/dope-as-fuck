@@ -10136,6 +10136,8 @@ function drinkBeer(event) {
 function singIce(event) {
   sessionStorage.bandie = Math.floor(Math.random() * bandies.length);
   document.getElementById("conductor").style.zIndex = "92";
+  document.getElementById("conductor").tabIndex = "-1";
+  document.getElementById("conductor").blur();
   if (bandies[sessionStorage.bandie] == "Joe Mama") {
     document.getElementById("conductorTalk").innerHTML = "Oh no! You've just been iced by me! Better hurry up and finish it in 8, or you'll be a bitch!";
   }
@@ -10143,6 +10145,10 @@ function singIce(event) {
     document.getElementById("conductorTalk").innerHTML = "Oh no! You've just been iced by " + bandies[sessionStorage.bandie] + "! Better hurry up and finish it in 8, or you'll be a bitch!";
   }
   if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
+    if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
+      document.getElementById("conductorTalkCont").tabIndex = "-1";
+      document.getElementById("conductorTalkCont").blur();
+    }
     if (document.getElementById("conductorTalkCont").scrollTop > 0) {
       document.getElementById("conductorTalkCont").scrollTop = 0;
     }
@@ -10155,9 +10161,14 @@ function singIce(event) {
     document.getElementById("conductorImg").style.background = "url(\"img/joeDesenaBG.png\") center / cover";
     document.getElementById("conductorImg").onclick = pillow;
   }
+  document.getElementById("viewAccount").tabIndex = "-1";
+  document.getElementById("viewAccount").blur();
   document.getElementById("viewAccountToggle").style.pointerEvents = "none";
   document.getElementById("viewAccountToggle").tabIndex = "-1";
   document.getElementById("viewAccountToggle").blur();
+  if (document.getElementById("viewAccountToggle").onclick == viewAccountToggleClose) {
+    viewAccountToggleClose();
+  }
   sessionStorage.finish = 100;
   sessionStorage.removeItem("countdown");
   sessionStorage.removeItem("bitch");

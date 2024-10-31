@@ -2994,7 +2994,15 @@ function emphasizeButton() {
 }
 
 function resizeConductor() {
-  document.getElementById("okSpacer").style.height = "calc(5.2em + " + document.getElementById("conductorTalkCont").scrollTop + "px)";
+  if (document.getElementById("conductorTalkCont").scrollTop == 0) {
+    document.getElementById("conductorTalk").style.bottom = "0";
+    document.getElementById("okSpacer").style.height = "4.95em";
+  }
+  else if (document.getElementById("conductorTalkCont").scrollTop > 0) {
+    document.getElementById("conductorTalk").style.bottom = "10px";
+    document.getElementById("okSpacer").style.height = "calc(5.2em + " + (document.getElementById("conductorTalkCont").scrollTop - 5) + "px)";
+  }
+  document.getElementById("conductorTalk").style.transition = "bottom 0s ease 0s";
   document.getElementById("okSpacer").style.transition = "height 0s ease 0s";
 }
 

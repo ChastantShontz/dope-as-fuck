@@ -12055,7 +12055,7 @@ function closeAccount() {
   if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
     setTimeout(() => {
       document.getElementById("conductorTalkCont").tabIndex = "0";
-    }, 500);
+    }, 250);
   }
   setTimeout(() => {
     document.getElementById("conductor").tabIndex = "0";
@@ -12574,7 +12574,7 @@ function hideSecret(event) {
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
       setTimeout(() => {
         document.getElementById("conductorTalkCont").tabIndex = "0";
-      }, 500);
+      }, 250);
     }
     setTimeout(() => {
       document.getElementById("conductor").tabIndex = "0";

@@ -12639,11 +12639,6 @@ function mobileGrow() {
   sessionStorage.removeItem("oldSlide");
   sessionStorage.removeItem("newSlide");
   if ((document.getElementById("conductor").style.left != "2em") && (document.body.style.cursor == "auto")) {
-    if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
-      if (document.getElementById("conductorTalkCont").scrollTop > 0) {
-        document.getElementById("conductorTalkCont").scrollTop = 0;
-      }
-    }
     setTimeout(() => {
       document.getElementById("conductor").style.left = "2em";
       document.getElementById("conductor").style.transition = "left 2s ease 0s";

@@ -2713,6 +2713,8 @@ function gameBegins(event) {
     document.onclick = unselectUrl;
   }
   else if ((window.innerHeight > 600) && (window.innerWidth > 1200)) {
+    document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
+    document.getElementById("viewAccountToggle").tabIndex = "0";
     document.getElementById("conductor").style.left = "2em";
     document.getElementById("conductor").style.transition = "left 2s ease .5s";
     sessionStorage.emphasizeConductorInterval = setInterval(emphasizeConductor, 30000);
@@ -12689,11 +12691,18 @@ function mobileGrow() {
   document.getElementById("mobileBio").style.display = "none";
   sessionStorage.removeItem("oldSlide");
   sessionStorage.removeItem("newSlide");
+  document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
+  document.getElementById("viewAccountToggle").tabIndex = "0";
+  document.getElementById("viewAccount").tabIndex = "0";
+  if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
+    document.getElementById("conductorTalkCont").tabIndex = "0";
+  }
   if ((document.getElementById("conductor").style.left != "2em") && (document.body.style.cursor == "auto")) {
     setTimeout(() => {
       document.getElementById("conductor").style.left = "2em";
       document.getElementById("conductor").style.transition = "left 2s ease 0s";
     }, 500);
+    document.getElementById("conductor").tabIndex = "0";
     sessionStorage.emphasizeConductorInterval = setInterval(emphasizeConductor, 30000);
     setTimeout(enableButton, 500);
   }

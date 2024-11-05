@@ -1433,6 +1433,7 @@ main {
 }
 
 #playerProfiles {
+  z-index: 3;
   position: absolute;
   left: 0;
   right: 0;
@@ -1442,7 +1443,6 @@ main {
 }
 
 .playerProfile {
-  z-index: 3;
   display: none;
   position: absolute;
   border-radius: .1em;

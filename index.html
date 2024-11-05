@@ -4620,11 +4620,12 @@
                 }
               }
             }
-            password = (password.substring(0, (capital1 + 1)) + " " + password.substring(capital1 + 1)).split(" ");
-            for (var i = 0; i < password.length; i++) {
+            password = password.substring(0, (capital1 + 1)) + " " + password.substring(capital1 + 1);
+            passwordSegments = password.split(" ");
+            for (var i = 0; i < passwordSegments.length; i++) {
               var segment = "";
-              for (var j = (password[i].length - 1); j >= 0; j--) {
-                segment = segment + (password[i])[j];
+              for (var j = (passwordSegments[i].length - 1); j >= 0; j--) {
+                segment = segment + (passwordSegments[i])[j];
               }
               for (var j = 0; j < segment.length; j++) {
                 if (String(segment.charCodeAt(j)).match(/\b65\b/sm)) {
@@ -4676,9 +4677,19 @@
                   segment = segment.replace(segment[j], String.fromCharCode(segment.charCodeAt(j) - 1));
                 }
               }
-              password[i] = segment;
+              passwordSegments[i] = segment;
             }
-            password = (password[0].charAt(0)).toLowerCase() + password[0].substring(1, (password[0].search((password[1])[0].toLowerCase()) + 1)) + password[1].substring(1);
+            for (var i = 0; i < passwordSegments.length; i++) {
+              if (i == 0) {
+                password = (passwordSegments[0].charAt(0)).toLowerCase() + passwordSegments[0].substring(1, (passwordSegments[0].search((passwordSegments[1])[0].toLowerCase()) + 1));
+              }
+              else if ((i > 9) && (i < (passwordSegments.length - 1))) {
+                password = password + passwordSegments[i].substring(1, (passwordSegments[i].search((passwordSegments[i + 1])[0].toLowerCase()) + 1));
+              }
+              else if (i == (passwordSegments.length - 1)) {
+                password = password + passwordSegments[passwordSegments.length - 1].substring(1);
+              }
+            }
             password = password + ((password.match(/\s/gsm)) ? ((password.match(/\s/gsm)).length + 1) : (1));
             return password;
           </script>

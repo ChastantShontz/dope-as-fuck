@@ -2562,7 +2562,7 @@ function shortcutUndo(event) {
 }
 
 function load(event) {
-  if (document.body.style.pointerEvents != "auto") {
+  if (document.body.style.cursor != "auto") {
     for (var i = 0; i < (document.getElementsByClassName("load").length - 1); i++) {
       if (document.getElementsByClassName("load")[i] == event.target) {
         if (sessionStorage.loadIncrementInterval != undefined) {
@@ -2585,7 +2585,7 @@ function load(event) {
 }
 
 function loadIncrement() {
-  if (document.body.style.pointerEvents != "auto") {
+  if (document.body.style.cursor != "auto") {
     if (sessionStorage.newLoad <= 99.86) {
       if (sessionStorage.newLoad <= 98.81) {
         sessionStorage.newLoad = (+sessionStorage.newLoad + (Math.ceil(Math.random() * 69) / 100));
@@ -2682,7 +2682,6 @@ function gameBegins(event) {
   remember(event);
   setInterval(rememberGameTime, 1000);
   cookie();
-  document.body.style.pointerEvents = "auto";
   document.body.style.cursor = "auto";
   if (sessionStorage.loadIncrementInterval != undefined) {
     clearInterval(sessionStorage.loadIncrementInterval);
@@ -2710,8 +2709,12 @@ function gameBegins(event) {
     document.onclick = unselectUrl;
   }
   else if ((window.innerHeight > 600) && (window.innerWidth > 1200)) {
+    document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
+    document.getElementById("viewAccountToggle").tabIndex = "0";
+    document.getElementById("viewAccount").tabIndex = "0";
     document.getElementById("conductor").style.left = "2em";
     document.getElementById("conductor").style.transition = "left 2s ease .5s";
+    document.getElementById("conductor").tabIndex = "0";
     sessionStorage.emphasizeConductorInterval = setInterval(emphasizeConductor, 30000);
     setTimeout(enableButton, 500);
     document.onclick = collapse;
@@ -12705,10 +12708,14 @@ function mobileGrow() {
   document.getElementById("mobileBio").style.display = "none";
   sessionStorage.removeItem("oldSlide");
   sessionStorage.removeItem("newSlide");
-  if ((document.getElementById("conductor").style.left != "2em") && (document.body.style.pointerEvents == "auto")) {
+  if ((document.getElementById("conductor").style.left != "2em") && (document.body.style.cursor == "auto")) {
     setTimeout(() => {
+      document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
+      document.getElementById("viewAccountToggle").tabIndex = "0";
+      document.getElementById("viewAccount").tabIndex = "0";
       document.getElementById("conductor").style.left = "2em";
       document.getElementById("conductor").style.transition = "left 2s ease 0s";
+      document.getElementById("conductor").tabIndex = "0";
     }, 500);
     sessionStorage.emphasizeConductorInterval = setInterval(emphasizeConductor, 30000);
     setTimeout(enableButton, 500);

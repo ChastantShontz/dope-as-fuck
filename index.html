@@ -331,7 +331,7 @@
           </div>
         </div>
       </section>
-      <aside class="drunkCont" id="conductor" tabindex="0" role="complementary" aria-description="The conductor who guides you through this game">
+      <aside class="drunkCont" id="conductor" role="complementary" aria-description="The conductor who guides you through this game">
         <div title="Joe DeSena, Conductor" id="conductorImg" onclick="pillow()">
         </div>
         <div id="conductorTalkContCont">
@@ -346,8 +346,8 @@
           </div>
         </div>
       </aside>
-      <aside id="viewAccount" tabindex="0" role="complementary" aria-description="The place to view your personal account with this game">
-        <button type="button" id="viewAccountToggle" role="switch" aria-label="Open the side panel to view your account" onclick="viewAccountToggleOpen()"><span id="viewAccountToggleShape"></span></button>
+      <aside id="viewAccount" role="complementary" aria-description="The place to view your personal account with this game">
+        <button type="button" id="viewAccountToggle" tabindex="-1" role="switch" aria-label="Open the side panel to view your account" onclick="viewAccountToggleOpen()"><span id="viewAccountToggleShape"></span></button>
         <div id="viewAccountButtonCont">
           <button type="button" class="defaultButton" id="viewAccountButton" tabindex="-1" role="button" aria-label="View your account page" onclick="openAccount(event)">View Account</button>
         </div>

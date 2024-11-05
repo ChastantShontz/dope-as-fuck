@@ -208,7 +208,7 @@ let bandies = [
   "Nao",
   "Natalie",
   "Nate",
-  "Nathan Stoner",
+  "Nathan \"False Chestnut\" Stoner",
   "Nick Adams",
   "Nick Campoli",
   "Nick Merola",

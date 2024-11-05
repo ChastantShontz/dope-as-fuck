@@ -1404,6 +1404,10 @@ let quotes = [
     author: "<b>Liam</b>"
   },
   {
+    line: "Man, this microwave is really interesting. I dig the way it spins.",
+    author: "<b>John</b> while watching a sex scene on TV"
+  },
+  {
     line: "Maybe I'm gonna be a big girl and not piss my pants.",
     author: "<b>Kami</b>"
   },

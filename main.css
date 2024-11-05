@@ -192,6 +192,7 @@ main {
 }
 
 #ok {
+  z-index: 1;
   position: relative;
   float: right;
   clear: right;

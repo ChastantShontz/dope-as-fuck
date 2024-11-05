@@ -185,6 +185,11 @@ main {
   overflow-y: auto;
 }
 
+#okCont {
+  z-index: 1;
+  position: relative;
+}
+
 #okSpacer {
   float: right;
   height: 4.95em;
@@ -192,7 +197,6 @@ main {
 }
 
 #ok {
-  z-index: 1;
   position: relative;
   float: right;
   clear: right;

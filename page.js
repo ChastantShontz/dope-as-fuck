@@ -10454,6 +10454,8 @@ function bitchIce(event) {
     sessionStorage.lives = 0;
     enableButton();
     document.getElementById("ok").style.fontFamily = "\"Archivo Black\", \"Roboto\", \"Arial\", sans-serif";
+    document.getElementById("ok").style.fontSize = "1.5em";
+    document.getElementById("ok").style.transition = "font-size 0s ease 0s, transform .1s ease 0s";
     document.getElementById("ok").onclick = function(event) {
       failIce(event);
       compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
@@ -10666,6 +10668,10 @@ function drunk(drinksIncrement, event) {
       sessionStorage.iceDecrement = 9;
       for (var i = 0; i < document.getElementsByClassName("drunkText").length; i++) {
         document.getElementsByClassName("drunkText")[i].style.fontFamily = "\"Slackey\", fantasy";
+        if (document.getElementsByClassName("drunkText")[i] == document.getElementById("ok")) {
+          document.getElementById("ok").style.fontSize = "1.25em";
+          document.getElementById("ok").style.transition = "font-size 0s ease 0s, transform .1s ease 0s";
+        }
       }
       document.getElementById("websiteCont").style.setProperty("--leftValue", "-38em");
       document.getElementById("triangleFaceCont").style.opacity = "25%";

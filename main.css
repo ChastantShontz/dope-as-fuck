@@ -1215,6 +1215,10 @@ main {
   position: relative;
 }
 
+.rinkCircleContInvisible {
+  pointer-events: none;
+}
+
 .rinkCircleLines {
   position: absolute;
   height: 9em;
@@ -1283,6 +1287,10 @@ main {
 
 .rinkCircleCenterContVisible {
   position: absolute;
+}
+
+.rinkCircleCenterContInvisible {
+  pointer-events: auto;
 }
 
 .rinkCircleCenter {

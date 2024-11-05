@@ -2269,7 +2269,7 @@ main {
   position: fixed;
 }
 
-.planeSecond {
+.planeBackup {
   left: -10em;
   width: 10em;
 }

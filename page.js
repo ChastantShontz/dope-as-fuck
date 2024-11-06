@@ -1765,6 +1765,11 @@ let quotes = [
   }
 ];
 
+let saved = {
+  1: {},
+  2: {}
+};
+
 let songs = [
   {
     title: "<i>7 Nation Army</i>",
@@ -2613,6 +2618,7 @@ function gameBegins(event) {
     localStorage.answers = JSON.stringify(answers);
   }
   else {
+    answers = JSON.parse(localStorage.answers);
     if (localStorage.checkpoint == undefined) {
       localStorage.gamesStarted++;
       if (!((localStorage.gamesFinished).match(/in progress/sm))) {
@@ -2620,8 +2626,8 @@ function gameBegins(event) {
       }
     }
     else {
+      saved = JSON.parse(localStorage.saved);
     }
-    answers = JSON.parse(localStorage.answers);
     sessionStorage.clear();
     for (var i = 0; i < document.getElementsByClassName("scrollbar").length; i++) {
       if (document.getElementsByClassName("scrollbar")[i].scrollHeight > document.getElementsByClassName("scrollbar")[i].offsetHeight) {
@@ -12223,6 +12229,7 @@ function gameOver(event) {
   document.getElementById("screensavers").style.transition = "all .25s ease 0s";
   audioNewSong();
   localStorage.removeItem("checkpoint");
+  localStorage.removeItem("saved");
   if ((sessionStorage.lives == 0) && (sessionStorage.drinks == undefined)) {
     if (localStorage.gamesWon == "N/A") {
       localStorage.gamesWon = 0;

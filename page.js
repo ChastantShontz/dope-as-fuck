@@ -12282,31 +12282,6 @@ function audioNewSong() {
   sessionStorage.oldAudio = sessionStorage.newAudio;
 }
 
-function warning(element) {
-  if ((element.tagName != "a") && (element != document.getElementById("playAgain"))) {
-    return "Woah there, are you sure you want to do that? If you leave this page now, all your progress in this game will be lost!";
-  }
-}
-
-function playAgain(event) {
-  event.preventDefault();
-  compileSound("sawtooth", ["exponential", 240, 540, .5], ["exponential", .5, 1, .5], .5);
-  console.log("Yay! See you as soon as this page refreshes!");
-  location.reload();
-}
-
-function forceQuit() {
-  localStorage.clear();
-  document.body.onbeforeunload = null;
-  window.close();
-}
-
-function gameComplete() {
-  if (localStorage.firstGame == String(true)) {
-    localStorage.firstGame = false;
-  }
-}
-
 function showPassword(event) {
   if (document.elementsFromPoint(event.clientX, event.clientY).length == 3) {
     disableButton();
@@ -12890,6 +12865,31 @@ function slideshow() {
   document.getElementById("mobileBio").innerHTML = characters[sessionStorage.newSlide].bio;
   sessionStorage.oldSlide = sessionStorage.newSlide;
   compileSound("sawtooth", ["none", 340, null, 0], ["none", .5, null, 0], .1);
+}
+
+function warning(element) {
+  if ((element.tagName != "a") && (element != document.getElementById("playAgain"))) {
+    return "Woah there, are you sure you want to do that? If you leave this page now, all your progress in this game will be lost!";
+  }
+}
+
+function playAgain(event) {
+  event.preventDefault();
+  compileSound("sawtooth", ["exponential", 240, 540, .5], ["exponential", .5, 1, .5], .5);
+  console.log("Yay! See you as soon as this page refreshes!");
+  location.reload();
+}
+
+function forceQuit() {
+  localStorage.clear();
+  document.body.onbeforeunload = null;
+  window.close();
+}
+
+function gameComplete() {
+  if (localStorage.firstGame == String(true)) {
+    localStorage.firstGame = false;
+  }
 }
 
 function connected() {

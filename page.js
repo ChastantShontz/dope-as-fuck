@@ -11804,7 +11804,7 @@ function accountUpdate(field, method) {
           }
           document.getElementsByClassName("infoInput")[i].classList.replace("definedInfoInput", "undefinedInfoInput");
           document.getElementsByClassName("dataOutput")[i].innerHTML = "";
-          document.getElementsByClassName("dataOutput")[i].value = eval("localStorage." + document.getElementsByClassName("dataOutput")[i].name);
+          document.getElementsByClassName("dataOutput")[i].value = "";
           document.getElementsByClassName("dataRow")[i + 1].style.display = "none";
           if (document.getElementsByClassName("infoInput")[i].name == "name") {
             for (var j = 0; j < document.getElementsByClassName("username").length; j++) {
@@ -11996,7 +11996,7 @@ function accountUpdate(field, method) {
         }
         document.getElementsByClassName("infoInput")[sessionStorage.field - 1].classList.replace("definedInfoInput", "undefinedInfoInput");
         document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].innerHTML = "";
-        document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].value = eval("localStorage." + document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].name);
+        document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].value = "";
         document.getElementsByClassName("dataRow")[sessionStorage.field].style.display = "none";
         if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "name") {
           for (var i = 0; i < document.getElementsByClassName("username").length; i++) {
@@ -12066,7 +12066,7 @@ function remember(event) {
             sessionStorage.oldTotalGameTime = localStorage.totalGameTime;
             here.totalGameTime = localStorage.totalGameTime;
             document.getElementById("totalGameTimeOutput").innerHTML = ((localStorage.totalGameTime < 3600) ? ("") : (Math.floor(localStorage.totalGameTime / 3600) + ":" + (((localStorage.totalGameTime % 3600) < 600) ? ("0") : ("")))) + ((localStorage.totalGameTime < 60) ? ("") : (Math.floor((localStorage.totalGameTime % 3600) / 60) + ":" + ((((localStorage.totalGameTime % 3600) % 60) < 10) ? ("0") : ("")))) + ((localStorage.totalGameTime % 3600) % 60);
-            document.getElementById("totalGameTimeOutput").value = localStorage.totalGameTime;
+            document.getElementById("totalGameTimeOutput").value = ((localStorage.totalGameTime < 3600) ? ("") : (Math.floor(localStorage.totalGameTime / 3600) + ":" + (((localStorage.totalGameTime % 3600) < 600) ? ("0") : ("")))) + ((localStorage.totalGameTime < 60) ? ("") : (Math.floor((localStorage.totalGameTime % 3600) / 60) + ":" + ((((localStorage.totalGameTime % 3600) % 60) < 10) ? ("0") : ("")))) + ((localStorage.totalGameTime % 3600) % 60);
           }
         }
       }
@@ -12085,7 +12085,7 @@ function rememberGameTime() {
   localStorage.gameTime = Math.floor(performance.now() / 1000);
   here.gameTime = localStorage.gameTime;
   document.getElementById("gameTimeOutput").innerHTML = ((localStorage.gameTime < 3600) ? ("") : (Math.floor(localStorage.gameTime / 3600) + ":" + (((localStorage.gameTime % 3600) < 600) ? ("0") : ("")))) + ((localStorage.gameTime < 60) ? ("") : (Math.floor((localStorage.gameTime % 3600) / 60) + ":" + ((((localStorage.gameTime % 3600) % 60) < 10) ? ("0") : ("")))) + ((localStorage.gameTime % 3600) % 60);
-  document.getElementById("gameTimeOutput").value = localStorage.gameTime;
+  document.getElementById("gameTimeOutput").value = ((localStorage.gameTime < 3600) ? ("") : (Math.floor(localStorage.gameTime / 3600) + ":" + (((localStorage.gameTime % 3600) < 600) ? ("0") : ("")))) + ((localStorage.gameTime < 60) ? ("") : (Math.floor((localStorage.gameTime % 3600) / 60) + ":" + ((((localStorage.gameTime % 3600) % 60) < 10) ? ("0") : ("")))) + ((localStorage.gameTime % 3600) % 60);
   if ((localStorage.firstGame == String(true)) && (localStorage.checkpoint == undefined)) {
     localStorage.totalGameTime = localStorage.gameTime;
   }
@@ -12094,7 +12094,7 @@ function rememberGameTime() {
   }
   here.totalGameTime = localStorage.totalGameTime;
   document.getElementById("totalGameTimeOutput").innerHTML = ((localStorage.totalGameTime < 3600) ? ("") : (Math.floor(localStorage.totalGameTime / 3600) + ":" + (((localStorage.totalGameTime % 3600) < 600) ? ("0") : ("")))) + ((localStorage.totalGameTime < 60) ? ("") : (Math.floor((localStorage.totalGameTime % 3600) / 60) + ":" + ((((localStorage.totalGameTime % 3600) % 60) < 10) ? ("0") : ("")))) + ((localStorage.totalGameTime % 3600) % 60);
-  document.getElementById("totalGameTimeOutput").value = localStorage.totalGameTime;
+  document.getElementById("totalGameTimeOutput").value = ((localStorage.totalGameTime < 3600) ? ("") : (Math.floor(localStorage.totalGameTime / 3600) + ":" + (((localStorage.totalGameTime % 3600) < 600) ? ("0") : ("")))) + ((localStorage.totalGameTime < 60) ? ("") : (Math.floor((localStorage.totalGameTime % 3600) / 60) + ":" + ((((localStorage.totalGameTime % 3600) % 60) < 10) ? ("0") : ("")))) + ((localStorage.totalGameTime % 3600) % 60);
 }
 
 function showMemory() {

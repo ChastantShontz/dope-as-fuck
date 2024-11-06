@@ -11059,14 +11059,14 @@ function promoVolumeIncrease() {
   if (document.getElementById("promo").muted == true) {
     promoUnmute();
   }
-  document.getElementById("promo").volume = document.getElementById("promo").volume + .05;
+  document.getElementById("promo").volume = (document.getElementById("promo").volume + .05);
   if (document.getElementById("promo").volume > 1) {
     document.getElementById("promo").volume = 1;
   }
 }
 
 function promoVolumeDecrease() {
-  document.getElementById("promo").volume = document.getElementById("promo").volume - .05;
+  document.getElementById("promo").volume = (document.getElementById("promo").volume - .05);
   if (document.getElementById("promo").volume < 0) {
     document.getElementById("promo").volume = 0;
   }

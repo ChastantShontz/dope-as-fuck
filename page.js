@@ -4660,7 +4660,7 @@ function correctCheer() {
     sessionStorage.points++;
     localStorage.totalPoints++;
   }
-  if ((localStorage.highScore == "N/A") || ((((sessionStorage.points).length == (localStorage.highScore).length) && (sessionStorage.points > localStorage.highScore)) || ((sessionStorage.points).length > (localStorage.highScore).length))) {
+  if ((localStorage.highScore == "N/A") || (Number(sessionStorage.points) > Number(localStorage.highScore))) {
     localStorage.highScore = sessionStorage.points;
   }
   document.getElementById("cheerScore").innerHTML = sessionStorage.points;
@@ -4704,7 +4704,7 @@ function semiCorrectCheer() {
         sessionStorage.points++;
         localStorage.totalPoints++;
       }
-      if ((localStorage.highScore == "N/A") || ((((sessionStorage.points).length == (localStorage.highScore).length) && (sessionStorage.points > localStorage.highScore)) || ((sessionStorage.points).length > (localStorage.highScore).length))) {
+      if ((localStorage.highScore == "N/A") || (Number(sessionStorage.points) > Number(localStorage.highScore))) {
         localStorage.highScore = sessionStorage.points;
       }
       document.getElementById("cheerScore").innerHTML = sessionStorage.points;
@@ -4796,7 +4796,7 @@ function raffle(event) {
 function raffleIncrement(event) {
   sessionStorage.points++
   localStorage.totalPoints++;
-  if ((localStorage.highScore == "N/A") || ((((sessionStorage.points).length == (localStorage.highScore).length) && (sessionStorage.points > localStorage.highScore)) || ((sessionStorage.points).length > (localStorage.highScore).length))) {
+  if ((localStorage.highScore == "N/A") || (Number(sessionStorage.points) > Number(localStorage.highScore))) {
     localStorage.highScore = sessionStorage.points;
   }
   document.getElementById("cheerScore").innerHTML = sessionStorage.points;
@@ -4905,7 +4905,7 @@ function troyLassialExit(event) {
         sessionStorage.points++;
         localStorage.totalPoints++;
       }
-      if ((localStorage.highScore == "N/A") || ((((sessionStorage.points).length == (localStorage.highScore).length) && (sessionStorage.points > localStorage.highScore)) || ((sessionStorage.points).length > (localStorage.highScore).length))) {
+      if ((localStorage.highScore == "N/A") || (Number(sessionStorage.points) > Number(localStorage.highScore))) {
         localStorage.highScore = sessionStorage.points;
       }
       setTimeout(() => {
@@ -12242,7 +12242,7 @@ function gameOver(event) {
     document.getElementById("gameOverYourScoreNum").innerHTML = sessionStorage.points;
   }
   if (localStorage.totalPoints > 0) {
-    if ((sessionStorage.oldHighScore == "N/A") || ((((localStorage.highScore).length == (sessionStorage.oldHighScore).length) && (localStorage.highScore > sessionStorage.oldHighScore)) || ((localStorage.highScore).length > (sessionStorage.oldHighScore).length))) {
+    if ((sessionStorage.oldHighScore == "N/A") || (Number(localStorage.highScore) > Number(sessionStorage.oldHighScore))) {
       document.getElementById("gameOverNewHighScore").style.display = "block";
     }
     else {

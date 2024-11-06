@@ -315,7 +315,7 @@
     <link href="normalize.css" hreflang="en-us" charset="utf-8" rel="preload stylesheet" as="style" fetchpriority="high" type="text/css" class="stylesheet" id="normalizeStylesheet">
     <link href="main.css" hreflang="en-us" charset="utf-8" rel="preload stylesheet" as="style" fetchpriority="high" type="text/css" class="stylesheet" id="mainStylesheet">
   </head>
-  <body tabindex="0" onload="if (localStorage.firstGame == undefined) {localStorage.firstGame = true}; loadSucceeded(); startGame(event)" onbeforeunload="return warning(document.activeElement)" onunload="endGame()" onresize="mobile()" ononline="connected()" onoffline="disconnected()">
+  <body tabindex="0" onload="if (localStorage.firstGame == undefined) {localStorage.firstGame = true}; loadSucceeded(); gameBegins(event)" onbeforeunload="return warning(document.activeElement)" onunload="gameComplete()" onresize="mobile()" ononline="connected()" onoffline="disconnected()">
     <header role="banner" aria-hidden="true">
     </header>
     <main role="main">

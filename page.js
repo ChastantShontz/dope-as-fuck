@@ -2608,7 +2608,7 @@ function loadIncrement() {
   }
 }
 
-function startGame(event) {
+function gameBegins(event) {
   if (localStorage.firstGame == String(true)) {
     localStorage.answers = JSON.stringify(answers);
   }
@@ -12886,7 +12886,7 @@ function forceQuit() {
   window.close();
 }
 
-function endGame() {
+function gameComplete() {
   if (localStorage.firstGame == String(true)) {
     localStorage.firstGame = false;
   }

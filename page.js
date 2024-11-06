@@ -7836,12 +7836,14 @@ function youtubeJump(event) {
     if (sessionStorage.progress <= 0) {
       if (sessionStorage.progress < 0) {
         sessionStorage.progress = 0;
+        sessionStorage.seekTime = sessionStorage.fullTime;
       }
       youtubePause("overflow", event);
     }
     else {
       if (sessionStorage.progress > 100) {
         sessionStorage.progress = 100;
+        sessionStorage.seekTime = "00:00";
       }
       if (document.getElementsByClassName("audio")[sessionStorage.youtube].paused == false) {
         youtubePause("seek", event);

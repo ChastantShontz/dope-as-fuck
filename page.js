@@ -3357,47 +3357,89 @@ function gotIt3() {
 function pronoun() {
   if (sessionStorage.gender == 1) {
     for (var i = 0; i < document.getElementsByClassName("pronoun").length; i++) {
-      if ((document.getElementsByClassName("pronoun")[i].innerHTML).match(/\bthey\b/gism)) {
-        document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/\bthey\b/gsm, "he");
-        document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/\bThey\b/gsm, "He");
-        if ((document.getElementsByClassName("pronoun")[i].innerHTML).match(/(?<=\bhe\b)'re/gism)) {
-          document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/(?<=\bhe\b)'re/gism, "'s");
+      if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounThey")) {
+        if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounLower")) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = "he";
+        }
+        else if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounUpper")) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = "He";
         }
       }
-      else if ((document.getElementsByClassName("pronoun")[i].innerHTML).match(/\bthem\b/gism)) {
-        document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/\bthem\b/gsm, "him");
-        document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/\bThem\b/gsm, "Him");
+      else if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounTheyre")) {
+        if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounLower")) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = "he's";
+        }
+        else if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounUpper")) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = "He's";
+        }
       }
-      else if ((document.getElementsByClassName("pronoun")[i].innerHTML).match(/\btheir\b|\btheirs\b/gism)) {
-        document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/\btheir\b|\btheirs\b/gsm, "his");
-        document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/\bTheir\b|\bTheirs\b/gsm, "His");
+      else if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounThem")) {
+        if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounLower")) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = "him";
+        }
+        else if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounUpper")) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = "Him";
+        }
       }
-      else if ((document.getElementsByClassName("pronoun")[i].innerHTML).match(/\bthemself\b|\btheirself\b/gism)) {
-        document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/\bthemself\b|\btheirself\b/gsm, "himself");
-        document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/\bThemself\b|\bTheirself\b/gsm, "Himself");
+      else if ((document.getElementsByClassName("pronoun")[i].classList.contains("pronounTheir")) || (document.getElementsByClassName("pronoun")[i].classList.contains("pronounTheirs"))) {
+        if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounLower")) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = "his";
+        }
+        else if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounUpper")) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = "His";
+        }
+      }
+      else if ((document.getElementsByClassName("pronoun")[i].classList.contains("pronounThemself")) || (document.getElementsByClassName("pronoun")[i].classList.contains("pronounTheirself"))) {
+        if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounLower")) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = "himself";
+        }
+        else if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounUpper")) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = "Himself";
+        }
       }
     }
   }
   else if (sessionStorage.gender == 2) {
     for (var i = 0; i < document.getElementsByClassName("pronoun").length; i++) {
-      if ((document.getElementsByClassName("pronoun")[i].innerHTML).match(/\bthey\b/gism)) {
-        document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/\bthey\b/gsm, "she");
-        document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/\bThey\b/gsm, "She");
-        if ((document.getElementsByClassName("pronoun")[i].innerHTML).match(/(?<=\bshe\b)'re/gism)) {
-          document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/(?<=\bshe\b)'re/gism, "'s");
+      if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounThey")) {
+        if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounLower")) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = "she";
+        }
+        else if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounUpper")) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = "She";
         }
       }
-      else if ((document.getElementsByClassName("pronoun")[i].innerHTML).match(/\bthem\b|\btheir\b/gism)) {
-        document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/\bthem\b|\btheir\b/gsm, "her");
-        document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/\bThem\b|\bTheir\b/gsm, "Her");
+      else if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounTheyre")) {
+        if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounLower")) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = "she's";
+        }
+        else if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounUpper")) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = "She's";
+        }
       }
-      else if ((document.getElementsByClassName("pronoun")[i].innerHTML).match(/\btheirs\b/gism)) {
-        document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/\btheirs\b/gsm, "hers");
-        document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/\bTheirs\b/gsm, "Hers");
+      else if ((document.getElementsByClassName("pronoun")[i].classList.contains("pronounThem")) || (document.getElementsByClassName("pronoun")[i].classList.contains("pronounTheir"))) {
+        if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounLower")) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = "her";
+        }
+        else if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounUpper")) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = "Her";
+        }
       }
-      else if ((document.getElementsByClassName("pronoun")[i].innerHTML).match(/\bthemself\b|\btheirself\b/gism)) {
-        document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/\bthemself\b|\btheirself\b/gsm, "herself");
-        document.getElementsByClassName("pronoun")[i].innerHTML = (document.getElementsByClassName("pronoun")[i].innerHTML).replace(/\bThemself\b|\bTheirself\b/gsm, "Herself");
+      else if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounTheirs")) {
+        if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounLower")) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = "hers";
+        }
+        else if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounUpper")) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = "Hers";
+        }
+      }
+      else if ((document.getElementsByClassName("pronoun")[i].classList.contains("pronounThemself")) || (document.getElementsByClassName("pronoun")[i].classList.contains("pronounTheirself"))) {
+        if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounLower")) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = "herself";
+        }
+        else if (document.getElementsByClassName("pronoun")[i].classList.contains("pronounUpper")) {
+          document.getElementsByClassName("pronoun")[i].innerHTML = "Herself";
+        }
       }
     }
   }

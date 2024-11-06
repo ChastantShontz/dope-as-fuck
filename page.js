@@ -2766,6 +2766,10 @@ function cookie() {
 
 function checkpoint(checkpoint) {
   localStorage.checkpoint = checkpoint;
+  if (localStorage.checkpoint == 1) {
+  }
+  else if (localStorage.checkpoint == 2) {
+  }
 }
 
 function collapse(event) {

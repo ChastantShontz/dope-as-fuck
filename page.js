@@ -3294,56 +3294,10 @@ function gotIt3() {
     document.getElementsByClassName("gender")[i].blur();
   }
   if (sessionStorage.gender == 1) {
-    sessionStorage.goalieName = ((globalThis.players).men.slu[0].name).substring(((globalThis.players).men.slu[0].name).search(/\s/sm) + 1);
-    for (var i = 0; i < document.getElementsByClassName("menPlayer").length; i++) {
-      document.getElementsByClassName("menPlayer")[i].style.display = "block";
-    }
-    for (var i = 0; i < document.getElementsByClassName("menProfile").length; i++) {
-      document.getElementsByClassName("menProfile")[i].style.display = "block";
-    }
-    for (var i = 0; i < document.getElementsByClassName("clarksonCage").length; i++) {
-      document.getElementsByClassName("clarksonCage")[i].alt = (globalThis.players).men.clarkson[i + 1].name + "'s penalty cage";
-    }
-    for (var i = 0; i < document.getElementsByClassName("sluCage").length; i++) {
-      document.getElementsByClassName("sluCage")[i].alt = (globalThis.players).men.slu[i + 1].name + "'s penalty cage";
-    }
-    document.getElementById("roast").innerHTML = "got a girl";
-    document.getElementById("swallow").style.display = "inline";
-    document.getElementById("verb").innerHTML = "paid";
-    for (var i = 0; i < document.getElementsByClassName("maleCheer").length; i++) {
-      document.getElementsByClassName("maleCheer")[i].style.display = "list-item";
-    }
-    for (var i = 0; i < document.getElementsByClassName("maleLine").length; i++) {
-      document.getElementsByClassName("maleLine")[i].style.display = "block";
-    }
-    console.log("Can't wait to get all turned on watching those hot, hunky men play...");
+    chooseMen();
   }
   else if (sessionStorage.gender == 2) {
-    sessionStorage.goalieName = ((globalThis.players).women.slu[0].name).substring(0, ((globalThis.players).women.slu[0].name).search(/\s/sm));
-    for (var i = 0; i < document.getElementsByClassName("womenPlayer").length; i++) {
-      document.getElementsByClassName("womenPlayer")[i].style.display = "block";
-    }
-    for (var i = 0; i < document.getElementsByClassName("womenProfile").length; i++) {
-      document.getElementsByClassName("womenProfile")[i].style.display = "block";
-    }
-    for (var i = 0; i < document.getElementsByClassName("clarksonCage").length; i++) {
-      document.getElementsByClassName("clarksonCage")[i].alt = (globalThis.players).women.clarkson[i + 1].name + "'s penalty cage";
-    }
-    for (var i = 0; i < document.getElementsByClassName("sluCage").length; i++) {
-      document.getElementsByClassName("sluCage")[i].alt = (globalThis.players).women.slu[i + 1].name + "'s penalty cage";
-    }
-    document.getElementById("roast").innerHTML = "wanted a boy";
-    document.getElementById("verb").innerHTML = "sucked";
-    for (var i = 0; i < document.getElementsByClassName("femaleCheer").length; i++) {
-      document.getElementsByClassName("femaleCheer")[i].style.display = "list-item";
-    }
-    for (var i = 0; i < document.getElementsByClassName("femaleLine").length; i++) {
-      document.getElementsByClassName("femaleLine")[i].style.display = "block";
-    }
-    console.log("Let's hear it for Michelle Pasiechnyk, GOALIE OF THE YEAR!!!");
-  }
-  for (var i = 0; i < document.getElementsByClassName("goalieName").length; i++) {
-    document.getElementsByClassName("goalieName")[i].innerHTML = sessionStorage.goalieName;
+    chooseWomen();
   }
   pronoun();
   document.getElementById("knightmobile").style.left = "13%";
@@ -3357,6 +3311,63 @@ function gotIt3() {
     gotIt4();
     compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
   };
+}
+
+function chooseMen() {
+  for (var i = 0; i < document.getElementsByClassName("menPlayer").length; i++) {
+    document.getElementsByClassName("menPlayer")[i].style.display = "block";
+  }
+  for (var i = 0; i < document.getElementsByClassName("menProfile").length; i++) {
+    document.getElementsByClassName("menProfile")[i].style.display = "block";
+  }
+  sessionStorage.goalieName = ((globalThis.players).men.slu[0].name).substring(((globalThis.players).men.slu[0].name).search(/\s/sm) + 1);
+  for (var i = 0; i < document.getElementsByClassName("goalieName").length; i++) {
+    document.getElementsByClassName("goalieName")[i].innerHTML = sessionStorage.goalieName;
+  }
+  for (var i = 0; i < document.getElementsByClassName("clarksonCage").length; i++) {
+    document.getElementsByClassName("clarksonCage")[i].alt = (globalThis.players).men.clarkson[i + 1].name + "'s penalty cage";
+  }
+  for (var i = 0; i < document.getElementsByClassName("sluCage").length; i++) {
+    document.getElementsByClassName("sluCage")[i].alt = (globalThis.players).men.slu[i + 1].name + "'s penalty cage";
+  }
+  document.getElementById("roast").innerHTML = "got a girl";
+  document.getElementById("swallow").style.display = "inline";
+  document.getElementById("verb").innerHTML = "paid";
+  for (var i = 0; i < document.getElementsByClassName("maleCheer").length; i++) {
+    document.getElementsByClassName("maleCheer")[i].style.display = "list-item";
+  }
+  for (var i = 0; i < document.getElementsByClassName("maleLine").length; i++) {
+    document.getElementsByClassName("maleLine")[i].style.display = "block";
+  }
+  console.log("Can't wait to get all turned on watching those hot, hunky men play...");
+}
+
+function chooseWomen() {
+  for (var i = 0; i < document.getElementsByClassName("womenPlayer").length; i++) {
+    document.getElementsByClassName("womenPlayer")[i].style.display = "block";
+  }
+  for (var i = 0; i < document.getElementsByClassName("womenProfile").length; i++) {
+    document.getElementsByClassName("womenProfile")[i].style.display = "block";
+  }
+  sessionStorage.goalieName = ((globalThis.players).women.slu[0].name).substring(0, ((globalThis.players).women.slu[0].name).search(/\s/sm));
+  for (var i = 0; i < document.getElementsByClassName("goalieName").length; i++) {
+    document.getElementsByClassName("goalieName")[i].innerHTML = sessionStorage.goalieName;
+  }
+  for (var i = 0; i < document.getElementsByClassName("clarksonCage").length; i++) {
+    document.getElementsByClassName("clarksonCage")[i].alt = (globalThis.players).women.clarkson[i + 1].name + "'s penalty cage";
+  }
+  for (var i = 0; i < document.getElementsByClassName("sluCage").length; i++) {
+    document.getElementsByClassName("sluCage")[i].alt = (globalThis.players).women.slu[i + 1].name + "'s penalty cage";
+  }
+  document.getElementById("roast").innerHTML = "wanted a boy";
+  document.getElementById("verb").innerHTML = "sucked";
+  for (var i = 0; i < document.getElementsByClassName("femaleCheer").length; i++) {
+    document.getElementsByClassName("femaleCheer")[i].style.display = "list-item";
+  }
+  for (var i = 0; i < document.getElementsByClassName("femaleLine").length; i++) {
+    document.getElementsByClassName("femaleLine")[i].style.display = "block";
+  }
+  console.log("Let's hear it for Michelle Pasiechnyk, GOALIE OF THE YEAR!!!");
 }
 
 function pronoun() {

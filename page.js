@@ -2616,19 +2616,18 @@ function loadIncrement() {
 function gameBegins(event) {
   if ((localStorage.firstGame == String(true)) && (localStorage.checkpoint == undefined)) {
     localStorage.answers = JSON.stringify(answers);
+    localStorage.saved = JSON.stringify(saved);
   }
   else {
     answers = JSON.parse(localStorage.answers);
+    saved = JSON.parse(localStorage.saved);
+    sessionStorage.clear();
     if (localStorage.checkpoint == undefined) {
       localStorage.gamesStarted++;
       if (!((localStorage.gamesFinished).match(/in progress/sm))) {
         localStorage.gamesFinished = localStorage.gamesFinished + " (" + (+localStorage.gamesFinished + 1) + " in progress)";
       }
     }
-    else {
-      saved = JSON.parse(localStorage.saved);
-    }
-    sessionStorage.clear();
     for (var i = 0; i < document.getElementsByClassName("scrollbar").length; i++) {
       if (document.getElementsByClassName("scrollbar")[i].scrollHeight > document.getElementsByClassName("scrollbar")[i].offsetHeight) {
         document.getElementsByClassName("scrollbar")[i].scrollTop = 0;
@@ -2719,6 +2718,12 @@ function gameBegins(event) {
     document.onclick = unselectUrl;
   }
   else if ((window.innerHeight > 600) && (window.innerWidth > 1200)) {
+    if ((localStorage.checkpoint != undefined) && (localStorage.checkpoint > 0)) {
+      if (localStorage.checkpoint == 1) {
+      }
+      else if (localStorage.checkpoint == 2) {
+      }
+    }
     document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
     document.getElementById("viewAccountToggle").tabIndex = "0";
     document.getElementById("viewAccount").tabIndex = "0";
@@ -12229,7 +12234,6 @@ function gameOver(event) {
   document.getElementById("screensavers").style.transition = "all .25s ease 0s";
   audioNewSong();
   localStorage.removeItem("checkpoint");
-  localStorage.removeItem("saved");
   if ((sessionStorage.lives == 0) && (sessionStorage.drinks == undefined)) {
     if (localStorage.gamesWon == "N/A") {
       localStorage.gamesWon = 0;

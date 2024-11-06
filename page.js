@@ -2750,7 +2750,7 @@ function cookie() {
     sessionStorage.cookie = Math.floor(Math.random() * cookies.length);
     let expiration = new Date();
     expiration.setDate(expiration.getDate() + 1);
-    document.cookie = "favorite=" + cookies[sessionStorage.cookie] + "; expires=" + String(expiration) + "; path=/";
+    document.cookie = "favorite=" + cookies[sessionStorage.cookie] + "; path=" + conductorSimulatorConductTheClarksonUniversityPepBand.url + "; samesite=strict; max-age=86400; expires=" + expiration + "; secure; partitioned";
   }
   for (var i = 0; i < document.getElementsByTagName("meta").length; i++) {
     if ((document.getElementsByTagName("meta")[i].hasAttribute("http-equiv")) && (document.getElementsByTagName("meta")[i].httpEquiv == "access-control-allow-origin")) {
@@ -12915,7 +12915,12 @@ function playAgain(event) {
 }
 
 function forceQuit() {
+  console.clear();
+  sessionStorage.clear();
   localStorage.clear();
+  let expiration = new Date();
+  expiration.setDate(expiration.getDate());
+  document.cookie = "favorite=; path=" + conductorSimulatorConductTheClarksonUniversityPepBand.url + "; samesite=strict; max-age=0; expires=" + expiration + "; secure; partitioned";
   document.body.onbeforeunload = null;
   document.body.onunload = null;
   window.close();

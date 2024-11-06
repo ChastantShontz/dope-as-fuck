@@ -2719,10 +2719,7 @@ function gameBegins(event) {
   }
   else if ((window.innerHeight > 600) && (window.innerWidth > 1200)) {
     if ((localStorage.checkpoint != undefined) && (localStorage.checkpoint > 0)) {
-      if (localStorage.checkpoint == 1) {
-      }
-      else if (localStorage.checkpoint == 2) {
-      }
+      checkpoint(localStorage.checkpoint);
     }
     document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
     document.getElementById("viewAccountToggle").tabIndex = "0";
@@ -2765,6 +2762,10 @@ function cookie() {
       break;
     }
   }
+}
+
+function checkpoint(checkpoint) {
+  localStorage.checkpoint = checkpoint;
 }
 
 function collapse(event) {

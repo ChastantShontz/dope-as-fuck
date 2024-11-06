@@ -4732,20 +4732,161 @@
     <script charset="utf-8" type="text/javascript" class="script inlineScript" id="itselfScript">
       class Itself {
         constructor() {
-          this.title = title();
-          this.url = url();
-          this.time = time();
-          this.day = day();
-          this.browser = browser();
-          this.network = network();
-          this.position = position();
-          this.language = language();
-          this.type = type();
-          this.copyright = copyright();
-          this.size = size(675);
-          this.objects = objects(507);
-          this.directory = directory(["fonts", "img", "video", "audio", ".vscode", ".git"], ["index.html", "main.css", "normalize.css", "page.js", "data.json", "captions.vtt", "README.md", "command.sh", "config.yaml", "songs.pdf", "header.cpp", "code.m", ".gitattributes"]);
-          this.key = key();
+          this.title = this.title();
+          this.url = this.url();
+          this.time = this.time();
+          this.day = this.day();
+          this.browser = this.browser();
+          this.network = this.network();
+          this.position = this.position();
+          this.language = this.language();
+          this.type = this.type();
+          this.copyright = this.copyright();
+          this.size = this.size(675);
+          this.objects = this.objects(507);
+          this.directory = this.directory(["fonts", "img", "video", "audio", ".vscode", ".git"], ["index.html", "main.css", "normalize.css", "page.js", "data.json", "captions.vtt", "README.md", "command.sh", "config.yaml", "songs.pdf", "header.cpp", "code.m", ".gitattributes"]);
+          this.key = this.key();
+        }
+
+        title() {
+          var title = document.title;
+          return title;
+        }
+
+        url() {
+          var url = (((document.location.href).endsWith("/")) ? ((document.location.href).substring(0, ((document.location.href).length - 1))) : (document.location.href));
+          return url;
+        }
+
+        time() {
+          var time = (Math.round(performance.now()) / 1000);
+          return time;
+        }
+
+        day() {
+          var day = new Date();
+          return day;
+        }
+
+        browser() {
+          var browser = ((navigator.userAgent) ?? (""));
+          return browser;
+        }
+
+        network() {
+          var network = ((((navigator.connection?.type) ?? ("")) + ((navigator.connection?.type == undefined) ? ("") : (" ")) + ((navigator.connection?.effectiveType) ?? ("")) + ((navigator.connection?.effectiveType == undefined) ? ("") : (" ")) + ((navigator.connection?.downlink) ?? ("")) + ((navigator.connection?.downlink == undefined) ? ("") : ("MB/s"))) ?? (""));
+          return network;
+        }
+
+        position() {
+          const positionThen = (response) => {
+            var position = {};
+            position.latitude = (Math.round(response.coords.latitude * 10000) / 10000);
+            position.longitude = (Math.round(response.coords.longitude * 10000) / 10000);
+            conductorSimulatorConductTheClarksonUniversityPepBand.position = position;
+            document.getElementById("itselfScript").nextSibling.textContent = (document.getElementById("itselfScript").nextSibling.textContent).substring(0, ((document.getElementById("itselfScript").nextSibling.textContent).search(conductorSimulatorConductTheClarksonUniversityPepBand.language) - 2)) + "; LAT: " + (conductorSimulatorConductTheClarksonUniversityPepBand.position).latitude + "deg, LONG: " + (conductorSimulatorConductTheClarksonUniversityPepBand.position).longitude + "deg" + (document.getElementById("itselfScript").nextSibling.textContent).substring((document.getElementById("itselfScript").nextSibling.textContent).search(conductorSimulatorConductTheClarksonUniversityPepBand.language) - 2);
+          }
+          const positionCatch = () => {
+            conductorSimulatorConductTheClarksonUniversityPepBand.position = "";
+          }
+          let options = {
+            maximumAge: 0,
+            timeout: Infinity,
+            enableHighAccuracy: true
+          };
+          (navigator.geolocation).getCurrentPosition(positionThen, positionCatch, options);
+        }
+
+        language() {
+          var language = (document.documentElement.lang).toLowerCase() + " " + (document.charset).toLowerCase();
+          return language;
+        }
+
+        type() {
+          var type = (document.contentType).toLowerCase() + " document";
+          return type;
+        }
+
+        copyright() {
+          var copyright = (((document.getElementById("copyright").innerHTML).endsWith(".")) ? ((document.getElementById("copyright").innerHTML).substring(0, ((document.getElementById("copyright").innerHTML).length - 1))) : (document.getElementById("copyright").innerHTML));
+          return copyright;
+        }
+
+        size(size) {
+          if (size < Math.pow(10, -6)) {
+            if (size < (1.25 * Math.pow(10, -7))) {
+              size = "0b";
+            }
+            else if ((size >= (1.25 * Math.pow(10, -7))) && (size < Math.pow(10, -6))) {
+              size = Math.round(size * (8 * Math.pow(10, 6))) + "b";
+            }
+          }
+          else if ((size >= Math.pow(10, -6)) && (size < .001)) {
+            size = Math.round(size * 1000000) + "B";
+          }
+          else if ((size >= .001) && (size < 1)) {
+            size = Math.round(size * 1000) + "KB";
+          }
+          else if ((size >= 1) && (size < 1000)) {
+            size = Math.round(size) + "MB";
+          }
+          else if ((size >= 1000) && (size < 1000000)) {
+            size = Math.round(size / 1000) + "GB";
+          }
+          else if ((size >= 1000000) && (size < Math.pow(10, 9))) {
+            size = Math.round(size / 1000000) + "TB";
+          }
+          else if ((size >= Math.pow(10, 9)) && (size < Math.pow(10, 12))) {
+            size = Math.round(size / Math.pow(10, 9)) + "PB";
+          }
+          else if ((size >= Math.pow(10, 12)) && (size < Math.pow(10, 15))) {
+            size = Math.round(size / Math.pow(10, 12)) + "EB";
+          }
+          else if ((BigInt(Math.round(size)) >= Math.pow(10, 15)) && (BigInt(Math.round(size)) < BigInt(Math.pow(10, 18)))) {
+            if (size <= Number.MAX_SAFE_INTEGER) {
+              size = Math.round(size / Math.pow(10, 15)) + "ZB";
+            }
+            else if (BigInt(Math.round(size)) > Number.MAX_SAFE_INTEGER) {
+              size = Number(BigInt(Math.round(size)) / BigInt(Math.pow(10, 15))) + "ZB";
+            }
+          }
+          else if ((BigInt(Math.round(size)) >= BigInt(Math.pow(10, 18))) && (BigInt(Math.round(size)) < BigInt(Math.pow(10, 21)))) {
+            size = Number(BigInt(Math.round(size)) / BigInt(Math.pow(10, 18))) + "YB";
+          }
+          else if ((BigInt(Math.round(size)) >= BigInt(Math.pow(10, 21))) && (BigInt(Math.round(size)) < BigInt(Math.pow(10, 24)))) {
+            size = Number(BigInt(Math.round(size)) / BigInt(Math.pow(10, 21))) + "RB";
+          }
+          else if (BigInt(Math.round(size)) >= BigInt(Math.pow(10, 24))) {
+            size = Number(BigInt(Math.round(size)) / BigInt(Math.pow(10, 24))) + "QB";
+          }
+          return size;
+        }
+
+        objects(objects) {
+          return objects;
+        }
+
+        directory(folders, files) {
+          var directory = {};
+          directory.folders = folders.toSorted();
+          directory.files = files.toSorted();
+          return directory;
+        }
+
+        key() {
+          for (var i = 0; i < document.getElementsByTagName("meta").length; i++) {
+            if (document.getElementsByTagName("meta")[i].name == "csrf-token") {
+              var token = document.getElementsByTagName("meta")[i].content;
+            }
+          }
+          var key = "";
+          var limit = (Math.ceil(Math.random() * 26) + 24);
+          for (var i = 0; i < limit; i++) {
+            var char = Math.floor(Math.random() * token.length);
+            key = key + token.charAt(char);
+            token.replace(token.charAt(char), "");
+          }
+          return key;
         }
 
         message() {
@@ -4754,148 +4895,6 @@
         }
       };
       let conductorSimulatorConductTheClarksonUniversityPepBand = new Itself();
-
-      function title() {
-        var title = document.title;
-        return title;
-      }
-
-      function url() {
-        var url = (((document.location.href).endsWith("/")) ? ((document.location.href).substring(0, ((document.location.href).length - 1))) : (document.location.href));
-        return url;
-      }
-
-      function time() {
-        var time = (Math.round(performance.now()) / 1000);
-        return time;
-      }
-
-      function day() {
-        var day = new Date();
-        return day;
-      }
-
-      function browser() {
-        var browser = ((navigator.userAgent) ?? (""));
-        return browser;
-      }
-
-      function network() {
-        var network = ((((navigator.connection?.type) ?? ("")) + ((navigator.connection?.type == undefined) ? ("") : (" ")) + ((navigator.connection?.effectiveType) ?? ("")) + ((navigator.connection?.effectiveType == undefined) ? ("") : (" ")) + ((navigator.connection?.downlink) ?? ("")) + ((navigator.connection?.downlink == undefined) ? ("") : ("MB/s"))) ?? (""));
-        return network;
-      }
-
-      function position() {
-        const positionThen = (response) => {
-          var position = {};
-          position.latitude = (Math.round(response.coords.latitude * 10000) / 10000);
-          position.longitude = (Math.round(response.coords.longitude * 10000) / 10000);
-          conductorSimulatorConductTheClarksonUniversityPepBand.position = position;
-          document.getElementById("itselfScript").nextSibling.textContent = (document.getElementById("itselfScript").nextSibling.textContent).substring(0, ((document.getElementById("itselfScript").nextSibling.textContent).search(conductorSimulatorConductTheClarksonUniversityPepBand.language) - 2)) + "; LAT: " + (conductorSimulatorConductTheClarksonUniversityPepBand.position).latitude + "deg, LONG: " + (conductorSimulatorConductTheClarksonUniversityPepBand.position).longitude + "deg" + (document.getElementById("itselfScript").nextSibling.textContent).substring((document.getElementById("itselfScript").nextSibling.textContent).search(conductorSimulatorConductTheClarksonUniversityPepBand.language) - 2);
-        }
-        const positionCatch = () => {
-          conductorSimulatorConductTheClarksonUniversityPepBand.position = "";
-        }
-        let options = {
-          maximumAge: 0,
-          timeout: Infinity,
-          enableHighAccuracy: true
-        };
-        (navigator.geolocation).getCurrentPosition(positionThen, positionCatch, options);
-      }
-
-      function language() {
-        var language = (document.documentElement.lang).toLowerCase() + " " + (document.charset).toLowerCase();
-        return language;
-      }
-
-      function type() {
-        var type = (document.contentType).toLowerCase() + " document";
-        return type;
-      }
-
-      function copyright() {
-        var copyright = (((document.getElementById("copyright").innerHTML).endsWith(".")) ? ((document.getElementById("copyright").innerHTML).substring(0, ((document.getElementById("copyright").innerHTML).length - 1))) : (document.getElementById("copyright").innerHTML));
-        return copyright;
-      }
-
-      function size(size) {
-        if (size < Math.pow(10, -6)) {
-          if (size < (1.25 * Math.pow(10, -7))) {
-            size = "0b";
-          }
-          else if ((size >= (1.25 * Math.pow(10, -7))) && (size < Math.pow(10, -6))) {
-            size = Math.round(size * (8 * Math.pow(10, 6))) + "b";
-          }
-        }
-        else if ((size >= Math.pow(10, -6)) && (size < .001)) {
-          size = Math.round(size * 1000000) + "B";
-        }
-        else if ((size >= .001) && (size < 1)) {
-          size = Math.round(size * 1000) + "KB";
-        }
-        else if ((size >= 1) && (size < 1000)) {
-          size = Math.round(size) + "MB";
-        }
-        else if ((size >= 1000) && (size < 1000000)) {
-          size = Math.round(size / 1000) + "GB";
-        }
-        else if ((size >= 1000000) && (size < Math.pow(10, 9))) {
-          size = Math.round(size / 1000000) + "TB";
-        }
-        else if ((size >= Math.pow(10, 9)) && (size < Math.pow(10, 12))) {
-          size = Math.round(size / Math.pow(10, 9)) + "PB";
-        }
-        else if ((size >= Math.pow(10, 12)) && (size < Math.pow(10, 15))) {
-          size = Math.round(size / Math.pow(10, 12)) + "EB";
-        }
-        else if ((BigInt(Math.round(size)) >= Math.pow(10, 15)) && (BigInt(Math.round(size)) < BigInt(Math.pow(10, 18)))) {
-          if (size <= Number.MAX_SAFE_INTEGER) {
-            size = Math.round(size / Math.pow(10, 15)) + "ZB";
-          }
-          else if (BigInt(Math.round(size)) > Number.MAX_SAFE_INTEGER) {
-            size = Number(BigInt(Math.round(size)) / BigInt(Math.pow(10, 15))) + "ZB";
-          }
-        }
-        else if ((BigInt(Math.round(size)) >= BigInt(Math.pow(10, 18))) && (BigInt(Math.round(size)) < BigInt(Math.pow(10, 21)))) {
-          size = Number(BigInt(Math.round(size)) / BigInt(Math.pow(10, 18))) + "YB";
-        }
-        else if ((BigInt(Math.round(size)) >= BigInt(Math.pow(10, 21))) && (BigInt(Math.round(size)) < BigInt(Math.pow(10, 24)))) {
-          size = Number(BigInt(Math.round(size)) / BigInt(Math.pow(10, 21))) + "RB";
-        }
-        else if (BigInt(Math.round(size)) >= BigInt(Math.pow(10, 24))) {
-          size = Number(BigInt(Math.round(size)) / BigInt(Math.pow(10, 24))) + "QB";
-        }
-        return size;
-      }
-
-      function objects(objects) {
-        return objects;
-      }
-
-      function directory(folders, files) {
-        var directory = {};
-        directory.folders = folders.toSorted();
-        directory.files = files.toSorted();
-        return directory;
-      }
-
-      function key() {
-        for (var i = 0; i < document.getElementsByTagName("meta").length; i++) {
-          if (document.getElementsByTagName("meta")[i].name == "csrf-token") {
-            var token = document.getElementsByTagName("meta")[i].content;
-          }
-        }
-        var key = "";
-        var limit = (Math.ceil(Math.random() * 26) + 24);
-        for (var i = 0; i < limit; i++) {
-          var char = Math.floor(Math.random() * token.length);
-          key = key + token.charAt(char);
-          token.replace(token.charAt(char), "");
-        }
-        return key;
-      }
-
       document.write(conductorSimulatorConductTheClarksonUniversityPepBand.message());
 
       var loadFailedTimeout = setTimeout(loadFailed, 60000);

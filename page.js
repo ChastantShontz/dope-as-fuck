@@ -2609,10 +2609,10 @@ function loadIncrement() {
 }
 
 function gameBegins(event) {
-  if (localStorage.firstGame == String(true)) {
+  if ((localStorage.firstGame == String(true)) && (localStorage.checkpoint == undefined)) {
     localStorage.answers = JSON.stringify(answers);
   }
-  else if (localStorage.firstGame == String(false)) {
+  else {
     localStorage.gamesStarted++;
     if (!((localStorage.gamesFinished).match(/in progress/sm))) {
       localStorage.gamesFinished = localStorage.gamesFinished + " (" + (+localStorage.gamesFinished + 1) + " in progress)";
@@ -2722,11 +2722,16 @@ function gameBegins(event) {
   }
   document.ondblclick = showPassword;
   console.clear();
-  if (localStorage.firstGame == String(true)) {
+  if ((localStorage.firstGame == String(true)) && (localStorage.checkpoint == undefined)) {
     console.log("Hey, you seem dope as fuck! :)");
   }
-  else if (localStorage.firstGame == String(false)) {
-    console.log("Welcome back" + ((localStorage.name == undefined) ? ("") : (", ")) + ((localStorage.name) ?? ("")) + "!");
+  else {
+    if (localStorage.checkpoint == undefined) {
+      console.log("Welcome back" + ((localStorage.name == undefined) ? ("") : (", ")) + ((localStorage.name) ?? ("")) + "!");
+    }
+    else {
+      console.log("I see you came back to finish the game" + ((localStorage.name == undefined) ? ("") : (", ")) + ((localStorage.name) ?? ("")) + "!");
+    }
   }
 }
 
@@ -3062,6 +3067,7 @@ function gotIt1() {
   disableButton();
   clearInterval(sessionStorage.emphasizeConductorInterval);
   sessionStorage.removeItem("emphasizeConductorInterval");
+  localStorage.checkpoint = 0;
   let time = new Date();
   document.getElementById("discordDate").datetime = time.getFullYear() + "-" + String(time.getMonth() + 1).padStart(2, "0") + "-" + String(time.getDate()).padStart(2, "0") + "T11:38:52.616" + ((time.getTimezoneOffset() == 0) ? ("Z") : (((time.getTimezoneOffset() > 0) ? ("-" + String(time.getTimezoneOffset() / 60).padStart(2, "0")) : ("+" + String(time.getTimezoneOffset() / -60).padStart(2, "0"))) + ":00"));
   document.getElementById("discordLogo").style.bottom = "2em";
@@ -3586,6 +3592,7 @@ function gotIt6(event) {
   document.getElementById("crappleton").tabIndex = "-1";
   document.getElementById("crappleton").ariaHidden = true;
   document.getElementById("crappleton").blur();
+  localStorage.checkpoint = 1;
   if (sessionStorage.gender == 1) {
     for (var i = 0; i < document.getElementsByClassName("menGoalie").length; i++) {
       document.getElementsByClassName("menGoalie")[i].style.visibility = "visible";
@@ -9315,6 +9322,7 @@ function gotIt27() {
   document.getElementById("rink").tabIndex = "-1";
   document.getElementById("rink").ariaHidden = true;
   document.getElementById("rink").blur();
+  localStorage.checkpoint = 2;
   sessionStorage.level = 1;
   document.getElementById("house").style.filter = "brightness(10%)";
   document.getElementById("house").style.transition = "filter 900s ease 0s";
@@ -11729,7 +11737,7 @@ function accountUpdate(field, method) {
           }
           document.getElementsByClassName("infoInput")[i].classList.replace("definedInfoInput", "undefinedInfoInput");
           document.getElementsByClassName("dataOutput")[i].innerHTML = "";
-          document.getElementsByClassName("dataOutput")[i].value = document.getElementsByClassName("dataOutput")[i].innerHTML;
+          document.getElementsByClassName("dataOutput")[i].value = eval("localStorage." + document.getElementsByClassName("dataOutput")[i].name);
           document.getElementsByClassName("dataRow")[i + 1].style.display = "none";
           if (document.getElementsByClassName("infoInput")[i].name == "name") {
             for (var j = 0; j < document.getElementsByClassName("username").length; j++) {
@@ -11768,7 +11776,7 @@ function accountUpdate(field, method) {
           document.getElementsByClassName("infoInput")[i].placeholder = eval("localStorage." + document.getElementsByClassName("infoInput")[i].name);
           document.getElementsByClassName("infoInput")[i].classList.replace("undefinedInfoInput", "definedInfoInput");
           document.getElementsByClassName("dataOutput")[i].innerHTML = eval("localStorage." + document.getElementsByClassName("infoInput")[i].name);
-          document.getElementsByClassName("dataOutput")[i].value = document.getElementsByClassName("dataOutput")[i].innerHTML;
+          document.getElementsByClassName("dataOutput")[i].value = eval("localStorage." + document.getElementsByClassName("dataOutput")[i].name);
           document.getElementsByClassName("dataRow")[i + 1].style.display = "table-row";
           if (document.getElementsByClassName("infoInput")[i].name == "name") {
             for (var j = 0; j < document.getElementsByClassName("username").length; j++) {
@@ -11851,7 +11859,7 @@ function accountUpdate(field, method) {
         document.getElementsByClassName("infoInput")[sessionStorage.field - 1].placeholder = eval("localStorage." + document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name);
         document.getElementsByClassName("infoInput")[sessionStorage.field - 1].classList.replace("undefinedInfoInput", "definedInfoInput");
         document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].innerHTML = eval("localStorage." + document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name);
-        document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].value = document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].innerHTML;
+        document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].value = eval("localStorage." + document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].name);
         document.getElementsByClassName("dataRow")[sessionStorage.field].style.display = "table-row";
         if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "name") {
           for (var i = 0; i < document.getElementsByClassName("username").length; i++) {
@@ -11921,7 +11929,7 @@ function accountUpdate(field, method) {
         }
         document.getElementsByClassName("infoInput")[sessionStorage.field - 1].classList.replace("definedInfoInput", "undefinedInfoInput");
         document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].innerHTML = "";
-        document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].value = document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].innerHTML;
+        document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].value = eval("localStorage." + document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].name);
         document.getElementsByClassName("dataRow")[sessionStorage.field].style.display = "none";
         if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "name") {
           for (var i = 0; i < document.getElementsByClassName("username").length; i++) {
@@ -11973,7 +11981,7 @@ function accountUpdate(field, method) {
 }
 
 function remember(event) {
-  if ((localStorage.firstGame == String(true)) && (event.type == "load")) {
+  if ((localStorage.firstGame == String(true)) && (localStorage.checkpoint == undefined) && (event.type == "load")) {
     for (var i = 0; i < document.getElementsByClassName("memoryOutput").length; i++) {
       eval("localStorage." + document.getElementsByClassName("memoryOutput")[i].name + " = here." + document.getElementsByClassName("memoryOutput")[i].name);
     }
@@ -11984,10 +11992,14 @@ function remember(event) {
         if (event.type == "load") {
           if (document.getElementsByClassName("memoryOutput")[i].name == "gameTime") {
             localStorage.gameTime = here.gameTime;
+            document.getElementById("gameTimeOutput").innerHTML = localStorage.gameTime;
+            document.getElementById("gameTimeOutput").value = localStorage.gameTime;
           }
           else if (document.getElementsByClassName("memoryOutput")[i].name == "totalGameTime") {
+            sessionStorage.oldTotalGameTime = localStorage.totalGameTime;
             here.totalGameTime = localStorage.totalGameTime;
-            document.getElementById("totalGameTimeOutput").innerHTML = localStorage.totalGameTime;
+            document.getElementById("totalGameTimeOutput").innerHTML = ((localStorage.totalGameTime < 3600) ? ("") : (Math.floor(localStorage.totalGameTime / 3600) + ":" + (((localStorage.totalGameTime % 3600) < 600) ? ("0") : ("")))) + ((localStorage.totalGameTime < 60) ? ("") : (Math.floor((localStorage.totalGameTime % 3600) / 60) + ":" + ((((localStorage.totalGameTime % 3600) % 60) < 10) ? ("0") : ("")))) + ((localStorage.totalGameTime % 3600) % 60);
+            document.getElementById("totalGameTimeOutput").value = localStorage.totalGameTime;
           }
         }
       }
@@ -11995,7 +12007,7 @@ function remember(event) {
         if (eval("here." + document.getElementsByClassName("memoryOutput")[i].name) != eval("localStorage." + document.getElementsByClassName("memoryOutput")[i].name)) {
           eval("here." + document.getElementsByClassName("memoryOutput")[i].name + " = localStorage." + document.getElementsByClassName("memoryOutput")[i].name);
           document.getElementsByClassName("memoryOutput")[i].innerHTML = eval("localStorage." + document.getElementsByClassName("memoryOutput")[i].name);
-          document.getElementsByClassName("memoryOutput")[i].value = document.getElementsByClassName("memoryOutput")[i].innerHTML;
+          document.getElementsByClassName("memoryOutput")[i].value = eval("localStorage." + document.getElementsByClassName("memoryOutput")[i].name);
         }
       }
     }
@@ -12006,14 +12018,16 @@ function rememberGameTime() {
   localStorage.gameTime = Math.floor(performance.now() / 1000);
   here.gameTime = localStorage.gameTime;
   document.getElementById("gameTimeOutput").innerHTML = ((localStorage.gameTime < 3600) ? ("") : (Math.floor(localStorage.gameTime / 3600) + ":" + (((localStorage.gameTime % 3600) < 600) ? ("0") : ("")))) + ((localStorage.gameTime < 60) ? ("") : (Math.floor((localStorage.gameTime % 3600) / 60) + ":" + ((((localStorage.gameTime % 3600) % 60) < 10) ? ("0") : ("")))) + ((localStorage.gameTime % 3600) % 60);
-  if (localStorage.firstGame == String(true)) {
+  document.getElementById("gameTimeOutput").value = localStorage.gameTime;
+  if ((localStorage.firstGame == String(true)) && (localStorage.checkpoint == undefined)) {
     localStorage.totalGameTime = localStorage.gameTime;
   }
-  else if (localStorage.firstGame == String(false)) {
-    localStorage.totalGameTime++;
+  else {
+    localStorage.totalGameTime = (+sessionStorage.oldTotalGameTime + +localStorage.gameTime);
   }
   here.totalGameTime = localStorage.totalGameTime;
   document.getElementById("totalGameTimeOutput").innerHTML = ((localStorage.totalGameTime < 3600) ? ("") : (Math.floor(localStorage.totalGameTime / 3600) + ":" + (((localStorage.totalGameTime % 3600) < 600) ? ("0") : ("")))) + ((localStorage.totalGameTime < 60) ? ("") : (Math.floor((localStorage.totalGameTime % 3600) / 60) + ":" + ((((localStorage.totalGameTime % 3600) % 60) < 10) ? ("0") : ("")))) + ((localStorage.totalGameTime % 3600) % 60);
+  document.getElementById("totalGameTimeOutput").value = localStorage.totalGameTime;
 }
 
 function showMemory() {
@@ -12196,6 +12210,7 @@ function gameOver(event) {
   document.getElementById("screensavers").style.opacity = "100%";
   document.getElementById("screensavers").style.transition = "all .25s ease 0s";
   audioNewSong();
+  localStorage.removeItem("checkpoint");
   if ((sessionStorage.lives == 0) && (sessionStorage.drinks == undefined)) {
     if (localStorage.gamesWon == "N/A") {
       localStorage.gamesWon = 0;
@@ -12883,12 +12898,15 @@ function playAgain(event) {
 function forceQuit() {
   localStorage.clear();
   document.body.onbeforeunload = null;
+  document.body.onunload = null;
   window.close();
 }
 
 function gameComplete() {
-  if (localStorage.firstGame == String(true)) {
-    localStorage.firstGame = false;
+  if (localStorage.checkpoint == undefined) {
+    if (localStorage.firstGame == String(true)) {
+      localStorage.firstGame = false;
+    }
   }
 }
 

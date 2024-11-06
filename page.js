@@ -7742,14 +7742,14 @@ function youtubeJump(event) {
   }
   sessionStorage.progressSeek = (100 - (((event.clientX - (event.target).getBoundingClientRect().left) / ((event.target).getBoundingClientRect().right - (event.target).getBoundingClientRect().left)) * 100));
   document.getElementById("youtubeSeek").style.right = sessionStorage.progressSeek + "%";
-  if ((sessionStorage.progress < sessionStorage.progressSeek) && (sessionStorage.progress != 100)) {
+  if (Number(sessionStorage.progress) < Number(sessionStorage.progressSeek)) {
     if (sessionStorage.mousePressed == String(false)) {
       document.getElementById("youtubeSeek").style.zIndex = "1";
       document.getElementById("youtubeSeek").style.background = "var(--youtubeDarkRed)";
       document.getElementById("youtubeDuration").style.zIndex = "0";
     }
   }
-  else if ((sessionStorage.progress >= sessionStorage.progressSeek) || (sessionStorage.progress == 100)) {
+  else if (Number(sessionStorage.progress) >= Number(sessionStorage.progressSeek)) {
     document.getElementById("youtubeSeek").style.zIndex = "0";
     document.getElementById("youtubeSeek").style.background = "var(--youtubeLightGray)";
     document.getElementById("youtubeDuration").style.zIndex = "1";

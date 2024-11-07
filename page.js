@@ -2732,12 +2732,7 @@ function gameBegins(event) {
   }
   else if ((window.innerHeight > 600) && (window.innerWidth > 1200)) {
     if ((localStorage.checkpoint != undefined) && (localStorage.checkpoint > 0)) {
-      if (localStorage.checkpoint == 1) {
-        firstCheckpoint(event);
-      }
-      else if (localStorage.checkpoint == 2) {
-        secondCheckpoint(event);
-      }
+      checkpoint(event);
     }
     document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
     document.getElementById("viewAccountToggle").tabIndex = "0";
@@ -2779,6 +2774,24 @@ function cookie() {
       document.getElementsByTagName("meta")[i + 1].content = document.cookie;
       break;
     }
+  }
+}
+
+function checkpoint(event) {
+  sessionStorage.resume = window.confirm("Your progress from last time has been saved. Do you want to continue that game?");
+  if (sessionStorage.resume == String(true)) {
+    if (localStorage.checkpoint == 1) {
+      firstCheckpoint(event);
+    }
+    else if (localStorage.checkpoint == 2) {
+      secondCheckpoint(event);
+    }
+  }
+  else if (sessionStorage.resume == String(false)) {
+    localStorage.removeItem("checkpoint");
+    saved.first = {};
+    saved.second = {};
+    localStorage.saved = JSON.stringify(saved);
   }
 }
 
@@ -12618,6 +12631,9 @@ function gameOver(event) {
   document.getElementById("screensavers").style.transition = "all .25s ease 0s";
   audioNewSong();
   localStorage.removeItem("checkpoint");
+  saved.first = {};
+  saved.second = {};
+  localStorage.saved = JSON.stringify(saved);
   if ((sessionStorage.lives == 0) && (sessionStorage.drinks == undefined)) {
     if (localStorage.gamesWon == "N/A") {
       localStorage.gamesWon = 0;
@@ -13118,12 +13134,7 @@ function mobileGrow(event) {
   sessionStorage.removeItem("newSlide");
   if ((document.getElementById("conductor").style.left != "2em") && (document.body.style.cursor == "auto")) {
     if ((localStorage.checkpoint != undefined) && (localStorage.checkpoint > 0)) {
-      if (localStorage.checkpoint == 1) {
-        firstCheckpoint(event);
-      }
-      else if (localStorage.checkpoint == 2) {
-        secondCheckpoint(event);
-      }
+      checkpoint(event);
     }
     document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
     document.getElementById("viewAccountToggle").tabIndex = "0";

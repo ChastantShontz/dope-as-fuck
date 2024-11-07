@@ -1766,8 +1766,12 @@ let quotes = [
 ];
 
 let saved = {
-  1: {},
-  2: {}
+  first: {
+    gender: null
+  },
+  second: {
+    gender: null
+  }
 };
 
 let songs = [
@@ -2719,7 +2723,7 @@ function gameBegins(event) {
   }
   else if ((window.innerHeight > 600) && (window.innerWidth > 1200)) {
     if ((localStorage.checkpoint != undefined) && (localStorage.checkpoint > 0)) {
-      checkpoint(localStorage.checkpoint);
+      checkpoint(localStorage.checkpoint, event);
     }
     document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
     document.getElementById("viewAccountToggle").tabIndex = "0";
@@ -2764,9 +2768,126 @@ function cookie() {
   }
 }
 
-function checkpoint(checkpoint) {
+function checkpoint(checkpoint, event) {
   localStorage.checkpoint = checkpoint;
   if (localStorage.checkpoint == 1) {
+    (Object.keys(saved.first)).forEach((key) => {
+      eval("sessionStorage." + key + " = saved.first." + key);
+    });
+    document.getElementById("conductorTalk").innerHTML = "Let the game begin! Just watch what's going on and select the right songs to do at each point. If you mess up six times, it's game over! And don't forget to click on the cheer list to the left to get points, they'll come in handy later on. Good luck!";
+    pronoun();
+    if (sessionStorage.gender == 1) {
+      chooseMen();
+      for (var i = 0; i < document.getElementsByClassName("menGoalie").length; i++) {
+        document.getElementsByClassName("menGoalie")[i].style.visibility = "visible";
+        document.getElementsByClassName("menGoalie")[i].style.opacity = "100%";
+        document.getElementsByClassName("menGoalie")[i].style.transition = "all 0s ease 1.75s";
+        const activate = (x) => {
+          setTimeout(() => {
+            document.getElementsByClassName("menGoalie")[x].style.pointerEvents = "auto";
+            document.getElementsByClassName("menGoalie")[x].tabIndex = "0";
+          }, 1750);
+        }
+        activate(i);
+      }
+    }
+    else if (sessionStorage.gender == 2) {
+      chooseWomen();
+      for (var i = 0; i < document.getElementsByClassName("womenGoalie").length; i++) {
+        document.getElementsByClassName("womenGoalie")[i].style.visibility = "visible";
+        document.getElementsByClassName("womenGoalie")[i].style.opacity = "100%";
+        document.getElementsByClassName("womenGoalie")[i].style.transition = "all 0s ease 1.75s";
+        const activate = (x) => {
+          setTimeout(() => {
+            document.getElementsByClassName("womenGoalie")[x].style.pointerEvents = "auto";
+            document.getElementsByClassName("womenGoalie")[x].tabIndex = "0";
+          }, 1750);
+        }
+        activate(i);
+      }
+    }
+    sessionStorage.clarksonTimeout = 0;
+    sessionStorage.sluTimeout = 0;
+    document.getElementById("rink").style.visibility = "hidden";
+    document.getElementById("rink").style.left = "25%";
+    document.getElementById("rink").style.right = "5%";
+    document.getElementById("rink").style.opacity = "0%";
+    document.getElementById("rink").style.transform = "scale(1)";
+    document.getElementById("rink").style.transition = "all 0s ease 0s";
+    setTimeout(() => {
+      document.getElementById("rink").style.visibility = "visible";
+      document.getElementById("rink").style.opacity = "100%";
+      document.getElementById("rink").style.transition = "all .25s ease 0s";
+      document.getElementById("rink").tabIndex = "0";
+      document.getElementById("rink").ariaHidden = false;
+    }, 1750);
+    sessionStorage.period = 1;
+    document.getElementById("scoreboardPeriod").innerHTML = sessionStorage.period;
+    sessionStorage.clarksonScore = 0;
+    document.getElementById("scoreboardClarksonScore").innerHTML = sessionStorage.clarksonScore;
+    sessionStorage.sluScore = 0;
+    document.getElementById("scoreboardSluScore").innerHTML = sessionStorage.sluScore;
+    sessionStorage.points = 0;
+    sessionStorage.oldHighScore = localStorage.highScore;
+    document.getElementById("cheerScore").innerHTML = sessionStorage.points;
+    remember(event);
+    sessionStorage.tijuana = 10;
+    document.getElementById("goals").innerHTML = sessionStorage.tijuana;
+    let day = new Date();
+    document.getElementById("day").innerHTML = calendar.weekdays[day.getDay()];
+    if (document.getElementById("cheers").scrollHeight > document.getElementById("cheers").offsetHeight) {
+      document.getElementById("backToTop").style.display = "flex";
+      document.getElementById("backToTop").style.flexDirection = "row";
+      document.getElementById("backToTop").style.justifyContent = "center";
+      document.getElementById("backToTop").style.alignItems = "center";
+      setTimeout(() => {
+        document.getElementById("cheers").tabIndex = "0";
+      }, 1750);
+    }
+    for (var i = 0; i < document.getElementsByClassName("gameActivity").length; i++) {
+      document.getElementsByClassName("gameActivity")[i].style.visibility = "hidden";
+      document.getElementsByClassName("gameActivity")[i].style.opacity = "0%";
+      document.getElementsByClassName("gameActivity")[i].style.transform = "scale(1)";
+      document.getElementsByClassName("gameActivity")[i].style.transition = "all 0s ease 0s";
+      const activate = (x) => {
+        setTimeout(() => {
+          document.getElementsByClassName("gameActivity")[x].style.visibility = "visible";
+          document.getElementsByClassName("gameActivity")[x].style.opacity = "100%";
+          document.getElementsByClassName("gameActivity")[x].style.transition = "all .25s ease 0s";
+          document.getElementsByClassName("gameActivity")[x].tabIndex = "0";
+        }, 1750);
+      }
+      activate(i);
+    }
+    document.getElementById("gameActivities").style.visibility = "visible";
+    document.getElementById("gameActivities").style.left = "5%";
+    document.getElementById("gameActivities").style.right = "80%";
+    document.getElementById("gameActivities").style.opacity = "100%";
+    document.getElementById("gameActivities").style.transition = "visibility .25s ease 1.75s, left 0s ease 0s, right 0s ease 0s, opacity .25s ease 1.75s";
+    document.getElementById("gameActivities").ariaHidden = false;
+    for (var i = 0; i < document.getElementsByClassName("lifeCont").length; i++) {
+      document.getElementsByClassName("lifeCont")[i].style.top = "0";
+      document.getElementsByClassName("lifeCont")[i].style.transition = "top 0s ease 0s";
+      const activate = (x) => {
+        setTimeout(() => {
+          document.getElementsByClassName("lifeCont")[x].tabIndex = "0";
+        }, 1750);
+      }
+      activate(i);
+    }
+    document.getElementById("lives").style.visibility = "visible";
+    document.getElementById("lives").style.opacity = "100%";
+    document.getElementById("lives").style.transition = "all .25s ease 1.75s";
+    document.getElementById("lives").ariaHidden = false;
+    sessionStorage.lives = 6;
+    sessionStorage.redo = 0;
+    document.getElementById("raffle").style.display = "block";
+    sessionStorage.collapse = "stats";
+    sessionStorage.selection = 1;
+    document.getElementById("ok").onclick = function() {
+      gotIt7();
+      compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
+    };
   }
   else if (localStorage.checkpoint == 2) {
   }
@@ -3195,6 +3316,9 @@ function gotIt2() {
 
 function selectGender(gender) {
   sessionStorage.gender = gender;
+  saved.first.gender = sessionStorage.gender;
+  saved.second.gender = sessionStorage.gender;
+  localStorage.saved = JSON.stringify(saved);
   for (var i = 0; i < document.getElementsByClassName("gender").length; i++) {
     if (i == (sessionStorage.gender - 1)) {
       document.getElementsByClassName("gender")[i].style.transform = "scale(1.1)";
@@ -3734,9 +3858,6 @@ function gotIt6(event) {
     setTimeout(() => {
       document.getElementById("cheers").tabIndex = "0";
     }, 2000);
-    if (document.getElementById("cheers").scrollTop > 0) {
-      document.getElementById("cheers").scrollTop = 0;
-    }
   }
   for (var i = 0; i < document.getElementsByClassName("gameActivity").length; i++) {
     document.getElementsByClassName("gameActivity")[i].style.transform = "scale(1)";
@@ -11303,8 +11424,6 @@ function openAccount(event) {
   document.getElementById("viewAccountButton").style.pointerEvents = "none";
   document.getElementById("viewAccountButton").tabIndex = "-1";
   document.getElementById("viewAccountButton").blur();
-  accountUpdate(0, "check");
-  remember(event);
   for (var i = 0; i < document.getElementsByClassName("infoInput").length; i++) {
     document.getElementsByClassName("infoInput")[i].tabIndex = "0";
   }

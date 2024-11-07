@@ -1066,6 +1066,9 @@ resources:
       relationship: "shortlink"
       fetchPriority: "low"
       type: "text/html"
+      classList:
+        - "link"
+        - "externalLink"
       id: "shortlink"
     - href: "https://chastantshontz.github.io/dope-as-fuck"
       language:
@@ -1075,6 +1078,9 @@ resources:
       relationship: "canonical"
       fetchPriority: "low"
       type: "text/html"
+      classList:
+        - "link"
+        - "externalLink"
       id: "canonical"
     - href: "https://256stuff.com/gray/docs/pics/icra.html"
       language:
@@ -1085,6 +1091,9 @@ resources:
       fetchPriority: "low"
       referrerPolicy: "strict origin when cross-origin"
       crossOrigin: "anonymous"
+      classList:
+        - "link"
+        - "externalLink"
       id: "picsIcra"
     - href: "https://256stuff.com/gray/docs/pics/safesurf.html"
       language:
@@ -1095,6 +1104,9 @@ resources:
       fetchPriority: "low"
       referrerPolicy: "strict origin when cross-origin"
       crossOrigin: "anonymous"
+      classList:
+        - "link"
+        - "externalLink"
       id: "picsSafeSurf"
     - href: "https://256stuff.com/gray/docs/pics/rsac.html"
       language:
@@ -1105,6 +1117,9 @@ resources:
       fetchPriority: "low"
       referrerPolicy: "strict origin when cross-origin"
       crossOrigin: "anonymous"
+      classList:
+        - "link"
+        - "externalLink"
       id: "picsRsac"
     - href: "https://256stuff.com/gray/docs/pics/safeforkids.html"
       language:
@@ -1115,6 +1130,9 @@ resources:
       fetchPriority: "low"
       referrerPolicy: "strict origin when cross-origin"
       crossOrigin: "anonymous"
+      classList:
+        - "link"
+        - "externalLink"
       id: "picsSafeForKids"
     - href: "http://www.w3.org/2007/11/powder-profile"
       language:
@@ -1125,6 +1143,9 @@ resources:
       fetchPriority: "low"
       referrerPolicy: "strict origin when cross-origin"
       crossOrigin: "anonymous"
+      classList:
+        - "link"
+        - "externalLink"
       id: "powder"
     - href: "http://purl.org/dc/elements/1.1"
       language:
@@ -1135,6 +1156,9 @@ resources:
       fetchPriority: "low"
       referrerPolicy: "strict origin when cross-origin"
       crossOrigin: "anonymous"
+      classList:
+        - "link"
+        - "externalLink"
       id: "dublinCore"
     - href: "http://purl.org/dc/terms"
       language:
@@ -1145,6 +1169,9 @@ resources:
       fetchPriority: "low"
       referrerPolicy: "strict origin when cross-origin"
       crossOrigin: "anonymous"
+      classList:
+        - "link"
+        - "externalLink"
       id: "dublinCoreTerms"
     - href: "http://ogp.me/ns#"
       language:
@@ -1155,6 +1182,9 @@ resources:
       fetchPriority: "low"
       referrerPolicy: "strict origin when cross-origin"
       crossOrigin: "anonymous"
+      classList:
+        - "link"
+        - "externalLink"
       id: "openGraphProtocol"
     - href: "http://schema.org"
       language:
@@ -1165,6 +1195,9 @@ resources:
       fetchPriority: "low"
       referrerPolicy: "strict origin when cross-origin"
       crossOrigin: "anonymous"
+      classList:
+        - "link"
+        - "externalLink"
       id: "itemprop"
     - href: "http://www.w3.org/1999/xhtml"
       language:
@@ -1175,6 +1208,9 @@ resources:
       fetchPriority: "low"
       referrerPolicy: "strict origin when cross-origin"
       crossOrigin: "anonymous"
+      classList:
+        - "link"
+        - "externalLink"
       id: "xhtml"
     - href: "https://www.tiktok.com/@clarksonpepband"
       language:
@@ -1190,6 +1226,9 @@ resources:
       referrerPolicy: "strict origin when cross-origin"
       crossOrigin: "anonymous"
       type: "text/html"
+      classList:
+        - "link"
+        - "externalLink"
       id: "tiktokAccount"
     - href: "https://x.com/ClarksonPepBand"
       language:
@@ -1205,6 +1244,9 @@ resources:
       referrerPolicy: "strict origin when cross-origin"
       crossOrigin: "anonymous"
       type: "text/html"
+      classList:
+        - "link"
+        - "externalLink"
       id: "xAccount"
     - href: "https://www.instagram.com/clarksonpepband"
       language:
@@ -1220,6 +1262,9 @@ resources:
       referrerPolicy: "strict origin when cross-origin"
       crossOrigin: "anonymous"
       type: "text/html"
+      classList:
+        - "link"
+        - "externalLink"
       id: "instagramAccount"
     - href: "https://www.facebook.com/clarksonpepband"
       language:
@@ -1235,6 +1280,9 @@ resources:
       referrerPolicy: "strict origin when cross-origin"
       crossOrigin: "anonymous"
       type: "text/html"
+      classList:
+        - "link"
+        - "externalLink"
       id: "facebookAccount"
     - href: "https://clarksonpepband.org"
       language:
@@ -1250,6 +1298,9 @@ resources:
       referrerPolicy: "strict origin when cross-origin"
       crossOrigin: "anonymous"
       type: "text/html"
+      classList:
+        - "link"
+        - "externalLink"
       id: "pepBandHomeWebsite"
     - href: "code.m"
       language:
@@ -1259,6 +1310,9 @@ resources:
       relationship: "exclusive"
       fetchPriority: "low"
       type: "text/x-objcsrc"
+      classList:
+        - "link"
+        - "internalLink"
       id: "codeMatlab"
     - href: "header.cpp"
       language:
@@ -1268,6 +1322,9 @@ resources:
       relationship: "header"
       fetchPriority: "low"
       type: "text/x-c"
+      classList:
+        - "link"
+        - "internalLink"
       id: "headerCPlusPlus"
     - href: "songs.pdf"
       language:
@@ -1277,6 +1334,9 @@ resources:
       relationship: "download"
       fetchPriority: "low"
       type: "application/pdf"
+      classList:
+        - "link"
+        - "internalLink"
       id: "songsPdf"
     - href: "command.sh"
       language:
@@ -1286,6 +1346,9 @@ resources:
       relationship: "shell"
       fetchPriority: "low"
       type: "text/x-sh"
+      classList:
+        - "link"
+        - "internalLink"
       id: "commandBashShellScript"
     - href: "README.md"
       language:
@@ -1295,6 +1358,9 @@ resources:
       relationship: "readme"
       fetchPriority: "low"
       type: "text/markdown"
+      classList:
+        - "link"
+        - "internalLink"
       id: "readmeMarkdown"
     - href: "img/clarksonUniversityPepBand.png"
       relationship: "apple touch startup image"
@@ -1303,6 +1369,9 @@ resources:
       size:
         height: "any"
         width: "any"
+      classList:
+        - "link"
+        - "internalLink"
       id: "startupImage"
     - href: "img/joeDesenaIcon1024.png"
       relationship: "apple touch icon precomposed"
@@ -1312,6 +1381,9 @@ resources:
         height: 1024
         width: 1024
       media: "only screen and (min-device-width: 320px) and (max-device-width: 1600px)"
+      classList:
+        - "link"
+        - "internalLink"
       id: "icon1024"
     - href: "img/joeDesenaIcon172.png"
       relationship: "apple touch icon precomposed"
@@ -1321,6 +1393,9 @@ resources:
         height: 172
         width: 172
       media: "only screen and (min-device-width: 218px) and (max-device-width: 281px)"
+      classList:
+        - "link"
+        - "internalLink"
       id: "icon172"
     - href: "img/joeDesenaIcon120.png"
       relationship: "apple touch icon precomposed"
@@ -1330,6 +1405,9 @@ resources:
         height: 120
         width: 120
       media: "only screen and (min-device-width: 320px) and (max-device-width: 1600px)"
+      classList:
+        - "link"
+        - "internalLink"
       id: "icon120"
     - href: "img/joeDesenaIcon86.png"
       relationship: "apple touch icon precomposed"
@@ -1339,6 +1417,9 @@ resources:
         height: 86
         width: 86
       media: "only screen and (min-device-width: 218px) and (max-device-width: 1600px)"
+      classList:
+        - "link"
+        - "internalLink"
       id: "icon86"
     - href: "img/joeDesenaIcon48.png"
       relationship: "apple touch icon precomposed"
@@ -1348,6 +1429,9 @@ resources:
         height: 48
         width: 48
       media: "only screen and (min-device-width: 218px) and (max-device-width: 281px)"
+      classList:
+        - "link"
+        - "internalLink"
       id: "icon48"
     - href: "img/joeDesenaIcon40.png"
       relationship: "apple touch icon precomposed"
@@ -1357,6 +1441,9 @@ resources:
         height: 40
         width: 40
       media: "only screen and (min-device-width: 320px) and (max-device-width: 1600px)"
+      classList:
+        - "link"
+        - "internalLink"
       id: "icon40"
     - href: "img/favicon.png"
       relationship: "mask icon"
@@ -1365,6 +1452,9 @@ resources:
       size:
         height: 64
         width: 64
+      classList:
+        - "link"
+        - "internalLink"
       id: "faviconPng"
     - href: "img/favicon.ico"
       relationship:
@@ -1375,6 +1465,9 @@ resources:
       size:
         height: 64
         width: 64
+      classList:
+        - "link"
+        - "internalLink"
       id: "faviconIco"
     - href: "captions.vtt"
       language:
@@ -1384,6 +1477,9 @@ resources:
       relationship: "captions"
       fetchPriority: "low"
       type: "text/vtt"
+      classList:
+        - "link"
+        - "internalLink"
       id: "captionsVideoTextTrack"
     - href: "data.json"
       language:
@@ -1393,6 +1489,9 @@ resources:
       relationship: "import"
       fetchPriority: "low"
       type: "application/json"
+      classList:
+        - "link"
+        - "internalLink"
       id: "dataJson"
     - href: "https://fonts.gstatic.com"
       language:
@@ -1403,6 +1502,9 @@ resources:
       fetchPriority: "high"
       referrerPolicy: "strict origin when cross-origin"
       crossOrigin: "anonymous"
+      classList:
+        - "link"
+        - "externalLink"
       id: "gStatic"
     - href: "https://fonts.googleapis.com/icon?family=Material+Icons|Material+Symbols+Outlined"
       language:
@@ -1414,6 +1516,9 @@ resources:
       referrerPolicy: "strict origin when cross-origin"
       crossOrigin: "anonymous"
       type: "text/css"
+      classList:
+        - "link"
+        - "externalLink"
       id: "googleIcons"
     - href: "https://fonts.googleapis.com/css?family=Acme|Aldrich|Anton|Archivo+Black|Bangers|Belanosima|Boogaloo|Bungee|Candal|Creepster|Dosis|EB+Garamond|Kalam|Kanit|Lekton|Libre+Barcode+128|Luckiest+Guy|Merienda|Merriweather|Monoton|Montserrat|Oswald|Palette+Mosaic|Patrick+Hand|Press+Start+2P|Roboto|Rubik+Mono+One|Russo+One|Satisfy|Shadows+Into+Light|Slackey|Source+Code+Pro|Titillium+Web|Wallpoet|Zilla+Slab"
       language:
@@ -1428,31 +1533,43 @@ resources:
       referrerPolicy: "strict origin when cross-origin"
       crossOrigin: "anonymous"
       type: "text/css"
+      classList:
+        - "link"
+        - "externalLink"
       id: "googleFonts"
-    - href: "normalize.css"
-      language:
-        dialect: "en"
-        country: "us"
-      charSet: "utf-8"
-      relationship:
-        - "preload"
-        - "stylesheet"
-      as: "style"
-      fetchPriority: "high"
-      type: "text/css"
-      id: "normalizeStylesheet"
-    - href: "main.css"
-      language:
-        dialect: "en"
-        country: "us"
-      charSet: "utf-8"
-      relationship:
-        - "preload"
-        - "stylesheet"
-      as: "style"
-      fetchPriority: "high"
-      type: "text/css"
-      id: "mainStylesheet"
+    - stylesheets:
+      - href: "normalize.css"
+        language:
+          dialect: "en"
+          country: "us"
+        charSet: "utf-8"
+        relationship:
+          - "preload"
+          - "stylesheet"
+        as: "style"
+        fetchPriority: "high"
+        type: "text/css"
+        classList:
+          - "link"
+          - "internalLink"
+          - "stylesheetLink"
+        id: "normalizeStylesheetLink"
+      - href: "main.css"
+        language:
+          dialect: "en"
+          country: "us"
+        charSet: "utf-8"
+        relationship:
+          - "preload"
+          - "stylesheet"
+        as: "style"
+        fetchPriority: "high"
+        type: "text/css"
+        classList:
+          - "link"
+          - "internalLink"
+          - "stylesheetLink"
+        id: "mainStylesheetLink"
   scripts:
     - src: ".vscode/jsconfig.json"
       charSet: "utf-8"
@@ -1461,7 +1578,10 @@ resources:
       loading:
         async: false
         defer: true
-      id: "vsCodeJsConfig"
+      classList:
+        - "script"
+        - "loadedScript"
+      id: "vsCodeJsConfigScript"
     - src: ".vscode/main.js"
       charSet: "utf-8"
       fetchPriority: "low"
@@ -1469,7 +1589,10 @@ resources:
       loading:
         async: false
         defer: true
-      id: "vsCodeMain"
+      classList:
+        - "script"
+        - "loadedScript"
+      id: "vsCodeMainScript"
     - src: "page.js"
       charSet: "utf-8"
       fetchPriority: "high"
@@ -1477,4 +1600,7 @@ resources:
       loading:
         async: true
         defer: false
+      classList:
+        - "script"
+        - "loadedScript"
       id: "pageScript"

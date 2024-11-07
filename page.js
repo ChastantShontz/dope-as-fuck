@@ -2791,11 +2791,9 @@ function checkpoint(event) {
     (Object.keys(saved.first)).forEach((key) => {
       saved.first[key] = null;      
     });
-    if (localStorage.checkpoint == 2) {
-      (Object.keys(saved.second)).forEach((key) => {
-        saved.second[key] = null;
-      });
-    }
+    (Object.keys(saved.second)).forEach((key) => {
+      saved.second[key] = null;
+    });
     localStorage.saved = JSON.stringify(saved);
     localStorage.removeItem("checkpoint");
   }

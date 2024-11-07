@@ -118,7 +118,6 @@ distribution: "global"
 rating: "restricted"
 keywords:
   - "alcoholic"
-  - "alcoholic"
   - "Arrow"
   - "assassin"
   - "bandie"
@@ -685,7 +684,6 @@ compatibility:
           icon: "img/favicon.ico"
         keywords:
           - "alcoholic"
-          - "alcoholic"
           - "Arrow"
           - "assassin"
           - "bandie"
@@ -937,7 +935,6 @@ compatibility:
     permissions: "no SLUzers"
     contentRating: "restricted"
     keywords:
-      - "alcoholic"
       - "alcoholic"
       - "Arrow"
       - "assassin"

@@ -12701,7 +12701,7 @@ function audioNewSong() {
   }
   if (sessionStorage.newAudio < document.getElementsByClassName("audio").length) {
     if ((sessionStorage.oldAudio != undefined) && (sessionStorage.oldAudio == document.getElementsByClassName("audio").length)) {
-      document.body.style.background = "fixed url(\"img/pepBand.png\") center / cover";
+      document.body.style.background = "fixed url(\"img/clarksonUniversityPepBand.png\") center / cover";
       document.getElementById("rap").style.display = "none";
     }
     document.getElementById("dancing").style.display = "inline-block";

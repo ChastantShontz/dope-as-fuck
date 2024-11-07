@@ -1299,7 +1299,7 @@ resources:
       fetchPriority: "low"
       type: "text/markdown"
       id: "readmeMarkdown"
-    - href: "img/pepBand.png"
+    - href: "img/clarksonUniversityPepBand.png"
       relationship: "apple touch startup image"
       fetchPriority: "high"
       type: "image/png"

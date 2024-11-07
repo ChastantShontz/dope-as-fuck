@@ -377,7 +377,6 @@ main {
   bottom: 0;
   opacity: 1%;
   align-items: center;
-  pointer-events: none;
 }
 
 #subliminalMessage {
@@ -394,7 +393,6 @@ main {
   font-family: "EB Garamond", "Merriweather", "Times New Roman", serif;
   font-size: .67em;
   user-select: none;
-  pointer-events: none;
 }
 
 #disclaimer {

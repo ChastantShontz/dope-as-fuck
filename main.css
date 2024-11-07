@@ -863,18 +863,18 @@ main {
   align-items: center;
 }
 
-.scoreboardCollegeSide {
+.scoreboardSide {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
 
-.scoreboardCollegeLogo {
+.scoreboardLogo {
   height: 3em;
 }
 
-.scoreboardCollegeScore {
+.scoreboardScore {
   font-family: "Oswald", fantasy;
   font-size: 2em;
   font-weight: bold;

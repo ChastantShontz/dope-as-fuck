@@ -2730,7 +2730,12 @@ function gameBegins(event) {
   }
   else if ((window.innerHeight > 600) && (window.innerWidth > 1200)) {
     if ((localStorage.checkpoint != undefined) && (localStorage.checkpoint > 0)) {
-      checkpoint(localStorage.checkpoint, event);
+      if (localStorage.checkpoint == 1) {
+        firstCheckpoint(event);
+      }
+      else if (localStorage.checkpoint == 2) {
+        secondCheckpoint(event);
+      }
     }
     document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
     document.getElementById("viewAccountToggle").tabIndex = "0";
@@ -2775,285 +2780,283 @@ function cookie() {
   }
 }
 
-function checkpoint(checkpoint, event) {
-  localStorage.checkpoint = checkpoint;
-  if (localStorage.checkpoint == 1) {
-    (Object.keys(saved.first)).forEach((key) => {
-      eval("sessionStorage." + key + " = saved.first." + key);
-    });
-    document.getElementById("conductorTalk").innerHTML = "Let the game begin! Just watch what's going on and select the right songs to do at each point. If you mess up six times, it's game over! And don't forget to click on the cheer list to the left to get points, they'll come in handy later on. Good luck!";
-    pronoun();
-    if (sessionStorage.gender == 1) {
-      chooseMen(event);
-      for (var i = 0; i < document.getElementsByClassName("menGoalie").length; i++) {
-        document.getElementsByClassName("menGoalie")[i].style.visibility = "visible";
-        document.getElementsByClassName("menGoalie")[i].style.opacity = "100%";
-        document.getElementsByClassName("menGoalie")[i].style.transition = "all 0s ease 1.75s";
-        const activate = (x) => {
-          setTimeout(() => {
-            document.getElementsByClassName("menGoalie")[x].style.pointerEvents = "auto";
-            document.getElementsByClassName("menGoalie")[x].tabIndex = "0";
-          }, 1750);
-        }
-        activate(i);
-      }
-    }
-    else if (sessionStorage.gender == 2) {
-      chooseWomen(event);
-      for (var i = 0; i < document.getElementsByClassName("womenGoalie").length; i++) {
-        document.getElementsByClassName("womenGoalie")[i].style.visibility = "visible";
-        document.getElementsByClassName("womenGoalie")[i].style.opacity = "100%";
-        document.getElementsByClassName("womenGoalie")[i].style.transition = "all 0s ease 1.75s";
-        const activate = (x) => {
-          setTimeout(() => {
-            document.getElementsByClassName("womenGoalie")[x].style.pointerEvents = "auto";
-            document.getElementsByClassName("womenGoalie")[x].tabIndex = "0";
-          }, 1750);
-        }
-        activate(i);
-      }
-    }
-    sessionStorage.clarksonTimeout = 0;
-    sessionStorage.sluTimeout = 0;
-    document.getElementById("rink").style.visibility = "hidden";
-    document.getElementById("rink").style.left = "25%";
-    document.getElementById("rink").style.right = "5%";
-    document.getElementById("rink").style.opacity = "0%";
-    document.getElementById("rink").style.transform = "scale(1)";
-    document.getElementById("rink").style.transition = "all 0s ease 0s";
-    setTimeout(() => {
-      document.getElementById("rink").style.visibility = "visible";
-      document.getElementById("rink").style.opacity = "100%";
-      document.getElementById("rink").style.transition = "all .25s ease 0s";
-      document.getElementById("rink").tabIndex = "0";
-      document.getElementById("rink").ariaHidden = false;
-    }, 1750);
-    sessionStorage.period = 1;
-    document.getElementById("scoreboardPeriod").innerHTML = sessionStorage.period;
-    sessionStorage.clarksonScore = 0;
-    saved.second.clarksonScore = sessionStorage.clarksonScore;
-    document.getElementById("scoreboardClarksonScore").innerHTML = sessionStorage.clarksonScore;
-    sessionStorage.sluScore = 0;
-    saved.second.sluScore = sessionStorage.sluScore;
-    document.getElementById("scoreboardSluScore").innerHTML = sessionStorage.sluScore;
-    sessionStorage.points = 0;
-    saved.second.points = sessionStorage.points;
-    sessionStorage.oldHighScore = localStorage.highScore;
-    saved.second.oldHighScore = sessionStorage.oldHighScore;
-    document.getElementById("cheerScore").innerHTML = sessionStorage.points;
-    sessionStorage.tijuana = 10;
-    document.getElementById("goals").innerHTML = sessionStorage.tijuana;
-    let day = new Date();
-    document.getElementById("day").innerHTML = calendar.weekdays[day.getDay()];
-    if (document.getElementById("cheers").scrollHeight > document.getElementById("cheers").offsetHeight) {
-      document.getElementById("backToTop").style.display = "flex";
-      document.getElementById("backToTop").style.flexDirection = "row";
-      document.getElementById("backToTop").style.justifyContent = "center";
-      document.getElementById("backToTop").style.alignItems = "center";
-      setTimeout(() => {
-        document.getElementById("cheers").tabIndex = "0";
-      }, 1750);
-    }
-    for (var i = 0; i < document.getElementsByClassName("gameActivity").length; i++) {
-      document.getElementsByClassName("gameActivity")[i].style.visibility = "hidden";
-      document.getElementsByClassName("gameActivity")[i].style.opacity = "0%";
-      document.getElementsByClassName("gameActivity")[i].style.transform = "scale(1)";
-      document.getElementsByClassName("gameActivity")[i].style.transition = "all 0s ease 0s";
+function firstCheckpoint(event) {
+  (Object.keys(saved.first)).forEach((key) => {
+    eval("sessionStorage." + key + " = saved.first." + key);
+  });
+  document.getElementById("conductorTalk").innerHTML = "Let the game begin! Just watch what's going on and select the right songs to do at each point. If you mess up six times, it's game over! And don't forget to click on the cheer list to the left to get points, they'll come in handy later on. Good luck!";
+  pronoun();
+  if (sessionStorage.gender == 1) {
+    chooseMen(event);
+    for (var i = 0; i < document.getElementsByClassName("menGoalie").length; i++) {
+      document.getElementsByClassName("menGoalie")[i].style.visibility = "visible";
+      document.getElementsByClassName("menGoalie")[i].style.opacity = "100%";
+      document.getElementsByClassName("menGoalie")[i].style.transition = "all 0s ease 1.75s";
       const activate = (x) => {
         setTimeout(() => {
-          document.getElementsByClassName("gameActivity")[x].style.visibility = "visible";
-          document.getElementsByClassName("gameActivity")[x].style.opacity = "100%";
-          document.getElementsByClassName("gameActivity")[x].style.transition = "all .25s ease 0s";
-          document.getElementsByClassName("gameActivity")[x].tabIndex = "0";
+          document.getElementsByClassName("menGoalie")[x].style.pointerEvents = "auto";
+          document.getElementsByClassName("menGoalie")[x].tabIndex = "0";
         }, 1750);
       }
       activate(i);
     }
-    document.getElementById("gameActivities").style.visibility = "visible";
-    document.getElementById("gameActivities").style.left = "5%";
-    document.getElementById("gameActivities").style.right = "80%";
-    document.getElementById("gameActivities").style.opacity = "100%";
-    document.getElementById("gameActivities").style.transition = "visibility .25s ease 1.75s, left 0s ease 0s, right 0s ease 0s, opacity .25s ease 1.75s";
-    setTimeout(() => {
-      document.getElementById("gameActivities").ariaHidden = false;
-    }, 1750);
-    for (var i = 0; i < document.getElementsByClassName("lifeCont").length; i++) {
-      document.getElementsByClassName("lifeCont")[i].style.top = "0";
-      document.getElementsByClassName("lifeCont")[i].style.transition = "top 0s ease 0s";
-      const activate = (x) => {
-        setTimeout(() => {
-          document.getElementsByClassName("lifeCont")[x].tabIndex = "0";
-        }, 1750);
-      }
-      activate(i);
-    }
-    document.getElementById("lives").style.visibility = "visible";
-    document.getElementById("lives").style.opacity = "100%";
-    document.getElementById("lives").style.transition = "all .25s ease 1.75s";
-    setTimeout(() => {
-      document.getElementById("lives").ariaHidden = false;
-    }, 1750);
-    sessionStorage.lives = 6;
-    saved.second.lives = sessionStorage.lives;
-    sessionStorage.redo = 1;
-    saved.second.redo = sessionStorage.redo;
-    document.getElementById("raffle").style.display = "block";
-    sessionStorage.collapse = "stats";
-    sessionStorage.selection = 1;
-    localStorage.saved = JSON.stringify(saved);
-    document.getElementById("ok").onclick = function() {
-      gotIt7();
-      compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
-    };
   }
-  else if (localStorage.checkpoint == 2) {
-    (Object.keys(saved.second)).forEach((key) => {
-      eval("sessionStorage." + key + " = saved.second." + key);
-    });
-    document.getElementById("conductorTalk").innerHTML = "Oh, you're here? I'll drink to that! What, were you expecting some other kind of \"milk and cookies\"? That's pep band for you! Now let's get drunk!";
-    if (sessionStorage.gender == 1) {
-      chooseMen(event);
-    }
-    else if (sessionStorage.gender == 2) {
-      chooseWomen(event);
-    }
-    pronoun();
-    sessionStorage.level = 1;
-    document.getElementById("house").style.filter = "brightness(10%)";
-    document.getElementById("house").style.transition = "filter 900s ease 1.75s";
-    document.getElementById("houseCont").style.visibility = "hidden";
-    document.getElementById("houseCont").style.opacity = "0%";
-    document.getElementById("houseCont").style.top = "10%";
-    document.getElementById("houseCont").style.transition = "all 0s ease 0s";
-    setTimeout(() => {
-      document.getElementById("houseCont").style.visibility = "visible";
-      document.getElementById("houseCont").style.opacity = "100%";
-      document.getElementById("houseCont").style.transition = "all .25s ease 0s";
-      document.getElementById("houseCont").tabIndex = "0";
-      document.getElementById("houseCont").ariaHidden = false;
-      globalThis.knightStart = Date.now();
-    }, 1750);
-    setTimeout(() => {
-      document.getElementById("drinkingSongChoices").tabIndex = "0";
-    }, 1750);
-    setTimeout(() => {
-      document.getElementById("tijuanaButton").tabIndex = "0";
-    }, 1750);
-    document.getElementById("drinkingSongsContContCont").style.visibility = "hidden";
-    document.getElementById("drinkingSongsContContCont").style.opacity = "0%";
-    document.getElementById("drinkingSongsContContCont").style.right = "65%";
-    document.getElementById("drinkingSongsContContCont").style.transition = "all 0s ease 0s";
-    setTimeout(() => {
-      document.getElementById("drinkingSongsContContCont").style.visibility = "visible";
-      document.getElementById("drinkingSongsContContCont").style.opacity = "100%";
-      document.getElementById("drinkingSongsContContCont").style.transition = "all .25s ease 0s";
-      document.getElementById("drinkingSongsContContCont").tabIndex = "0";
-      document.getElementById("drinkingSongsContContCont").ariaHidden = false;
-    }, 1750);
-    sessionStorage.singing = 1;
-    for (var i = 0; i < document.getElementsByClassName("drinkingSongChoice").length; i++) {
-      eval("sessionStorage." + document.getElementsByClassName("drinkingSongChoice")[i].value + "Chorus = 0");
-      eval("sessionStorage." + document.getElementsByClassName("drinkingSongChoice")[i].value + "Line = 0");
-    }
-    sessionStorage.dafCount = 0;
-    document.getElementById("dafCounterNum").innerHTML = sessionStorage.dafCount;
-    setTimeout(() => {
-      document.getElementById("dafCounterButton").tabIndex = "0";
-    }, 1750);
-    sessionStorage.dafCountIncrement = 1;
-    setTimeout(() => {
-      document.getElementById("speakerSongs").tabIndex = "0";
-    }, 1750);
-    for (var i = 0; i < document.getElementsByClassName("audio").length; i++) {
-      document.getElementsByClassName("audio")[i].onended = speakerNewSong;
-    }
-    if (sessionStorage.won == String(true)) {
-      sessionStorage.beer = 2;
-    }
-    else if (sessionStorage.won == String(false)) {
-      sessionStorage.beer = 1;
-    }
-    if (sessionStorage.beer == 1) {
-      document.getElementById("busch").style.display = "inline-block";
-      setTimeout(() => {
-        document.getElementById("busch").tabIndex = "0";
-      }, 1750);
-    }
-    else if (sessionStorage.beer == 2) {
-      document.getElementById("bapple").style.display = "inline-block";
-      setTimeout(() => {
-        document.getElementById("bapple").tabIndex = "0";
-      }, 1750);
-    }
-    sessionStorage.drinks = 0;
-    setTimeout(() => {
-      sessionStorage.emphasizeBeerInterval = setInterval(emphasizeBeer, 60000);
-    }, 1750);
-    sessionStorage.iceDecrement = 10;
-    for (var i = 0; i < document.getElementsByClassName("partyActivity").length; i++) {
-      document.getElementsByClassName("partyActivity")[i].style.visibility = "visible";
-      document.getElementsByClassName("partyActivity")[i].style.opacity = "100%";
-      document.getElementsByClassName("partyActivity")[i].style.transition = "all 0s ease 0s";
-      if (document.getElementsByClassName("partyActivity")[i] != document.getElementById("beers")) {
-        const activate = (x) => {
-          setTimeout(() => {
-            document.getElementsByClassName("partyActivity")[x].tabIndex = "0";
-          }, 1750);
-        }
-        activate(i);
-      }
-    }
-    document.getElementById("partyActivities").style.visibility = "visible";
-    document.getElementById("partyActivities").style.opacity = "100%";
-    document.getElementById("partyActivities").style.transition = "all .25s ease 1.75s";
-    setTimeout(() => {
-      document.getElementById("partyActivities").ariaHidden = false;
-    }, 1750);
-    for (var i = 0; i < document.getElementsByClassName("socialMediaLink").length; i++) {
+  else if (sessionStorage.gender == 2) {
+    chooseWomen(event);
+    for (var i = 0; i < document.getElementsByClassName("womenGoalie").length; i++) {
+      document.getElementsByClassName("womenGoalie")[i].style.visibility = "visible";
+      document.getElementsByClassName("womenGoalie")[i].style.opacity = "100%";
+      document.getElementsByClassName("womenGoalie")[i].style.transition = "all 0s ease 1.75s";
       const activate = (x) => {
         setTimeout(() => {
-          document.getElementsByClassName("socialMediaLink")[x].tabIndex = "0";
+          document.getElementsByClassName("womenGoalie")[x].style.pointerEvents = "auto";
+          document.getElementsByClassName("womenGoalie")[x].tabIndex = "0";
         }, 1750);
       }
       activate(i);
     }
-    for (var i = 0; i < document.getElementsByClassName("socialMediaLogo").length; i++) {
-      document.getElementsByClassName("socialMediaLogo")[i].style.visibility = "visible";
-      document.getElementsByClassName("socialMediaLogo")[i].style.opacity = "100%";
-      document.getElementsByClassName("socialMediaLogo")[i].style.transition = "all 0s ease 0s";
-      if (document.getElementsByClassName("socialMediaLogo")[i] == document.getElementById("youtubeLogo")) {
-        setTimeout(() => {
-          document.getElementById("youtubeLogo").tabIndex = "0";
-        }, 1750);
-      }
-    }
-    document.getElementById("socialMedias").style.visibility = "visible";
-    document.getElementById("socialMedias").style.opacity = "100%";
-    document.getElementById("socialMedias").style.transition = "all .25s ease 1.75s";
+  }
+  sessionStorage.clarksonTimeout = 0;
+  sessionStorage.sluTimeout = 0;
+  document.getElementById("rink").style.visibility = "hidden";
+  document.getElementById("rink").style.left = "25%";
+  document.getElementById("rink").style.right = "5%";
+  document.getElementById("rink").style.opacity = "0%";
+  document.getElementById("rink").style.transform = "scale(1)";
+  document.getElementById("rink").style.transition = "all 0s ease 0s";
+  setTimeout(() => {
+    document.getElementById("rink").style.visibility = "visible";
+    document.getElementById("rink").style.opacity = "100%";
+    document.getElementById("rink").style.transition = "all .25s ease 0s";
+    document.getElementById("rink").tabIndex = "0";
+    document.getElementById("rink").ariaHidden = false;
+  }, 1750);
+  sessionStorage.period = 1;
+  document.getElementById("scoreboardPeriod").innerHTML = sessionStorage.period;
+  sessionStorage.clarksonScore = 0;
+  saved.second.clarksonScore = sessionStorage.clarksonScore;
+  document.getElementById("scoreboardClarksonScore").innerHTML = sessionStorage.clarksonScore;
+  sessionStorage.sluScore = 0;
+  saved.second.sluScore = sessionStorage.sluScore;
+  document.getElementById("scoreboardSluScore").innerHTML = sessionStorage.sluScore;
+  sessionStorage.points = 0;
+  saved.second.points = sessionStorage.points;
+  sessionStorage.oldHighScore = localStorage.highScore;
+  saved.second.oldHighScore = sessionStorage.oldHighScore;
+  document.getElementById("cheerScore").innerHTML = sessionStorage.points;
+  sessionStorage.tijuana = 10;
+  document.getElementById("goals").innerHTML = sessionStorage.tijuana;
+  let day = new Date();
+  document.getElementById("day").innerHTML = calendar.weekdays[day.getDay()];
+  if (document.getElementById("cheers").scrollHeight > document.getElementById("cheers").offsetHeight) {
+    document.getElementById("backToTop").style.display = "flex";
+    document.getElementById("backToTop").style.flexDirection = "row";
+    document.getElementById("backToTop").style.justifyContent = "center";
+    document.getElementById("backToTop").style.alignItems = "center";
     setTimeout(() => {
-      document.getElementById("socialMedias").ariaHidden = false;
-    }, 1750);
-    sessionStorage.promo = 0;
-    if (sessionStorage.won == String(true)) {
-      document.getElementById("spatula").style.display = "inline-block";
-      document.getElementById("spatula").style.animation = "drum 1s ease-in 1.75s infinite forwards";
-    }
-    else if (sessionStorage.won == String(false)) {
-      document.getElementById("drumstick").style.display = "inline-block";
-      document.getElementById("drumstick").style.animation = "drum 1s ease-in 1.75s infinite forwards";
-    }
-    setTimeout(() => {
-      document.getElementById("websiteLink").tabIndex = "0";
-    }, 1750);
-    document.getElementById("websiteCont").style.animation = "loop 30s linear 1.75s infinite forwards";
-    setTimeout(() => {
-      document.getElementById("websiteCont").tabIndex = "0";
-      document.getElementById("websiteCont").ariaHidden = false;
-    }, 1750);
-    setTimeout(() => {
-      sessionStorage.cuntEmpireEntranceTimeout = setTimeout(cuntEmpireEntrance, 600000);
+      document.getElementById("cheers").tabIndex = "0";
     }, 1750);
   }
+  for (var i = 0; i < document.getElementsByClassName("gameActivity").length; i++) {
+    document.getElementsByClassName("gameActivity")[i].style.visibility = "hidden";
+    document.getElementsByClassName("gameActivity")[i].style.opacity = "0%";
+    document.getElementsByClassName("gameActivity")[i].style.transform = "scale(1)";
+    document.getElementsByClassName("gameActivity")[i].style.transition = "all 0s ease 0s";
+    const activate = (x) => {
+      setTimeout(() => {
+        document.getElementsByClassName("gameActivity")[x].style.visibility = "visible";
+        document.getElementsByClassName("gameActivity")[x].style.opacity = "100%";
+        document.getElementsByClassName("gameActivity")[x].style.transition = "all .25s ease 0s";
+        document.getElementsByClassName("gameActivity")[x].tabIndex = "0";
+      }, 1750);
+    }
+    activate(i);
+  }
+  document.getElementById("gameActivities").style.visibility = "visible";
+  document.getElementById("gameActivities").style.left = "5%";
+  document.getElementById("gameActivities").style.right = "80%";
+  document.getElementById("gameActivities").style.opacity = "100%";
+  document.getElementById("gameActivities").style.transition = "visibility .25s ease 1.75s, left 0s ease 0s, right 0s ease 0s, opacity .25s ease 1.75s";
+  setTimeout(() => {
+    document.getElementById("gameActivities").ariaHidden = false;
+  }, 1750);
+  for (var i = 0; i < document.getElementsByClassName("lifeCont").length; i++) {
+    document.getElementsByClassName("lifeCont")[i].style.top = "0";
+    document.getElementsByClassName("lifeCont")[i].style.transition = "top 0s ease 0s";
+    const activate = (x) => {
+      setTimeout(() => {
+        document.getElementsByClassName("lifeCont")[x].tabIndex = "0";
+      }, 1750);
+    }
+    activate(i);
+  }
+  document.getElementById("lives").style.visibility = "visible";
+  document.getElementById("lives").style.opacity = "100%";
+  document.getElementById("lives").style.transition = "all .25s ease 1.75s";
+  setTimeout(() => {
+    document.getElementById("lives").ariaHidden = false;
+  }, 1750);
+  sessionStorage.lives = 6;
+  saved.second.lives = sessionStorage.lives;
+  sessionStorage.redo = 1;
+  saved.second.redo = sessionStorage.redo;
+  document.getElementById("raffle").style.display = "block";
+  sessionStorage.collapse = "stats";
+  sessionStorage.selection = 1;
+  localStorage.saved = JSON.stringify(saved);
+  document.getElementById("ok").onclick = function() {
+    gotIt7();
+    compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
+  };
+}
+
+function secondCheckpoint(event) {
+  (Object.keys(saved.second)).forEach((key) => {
+    eval("sessionStorage." + key + " = saved.second." + key);
+  });
+  document.getElementById("conductorTalk").innerHTML = "Oh, you're here? I'll drink to that! What, were you expecting some other kind of \"milk and cookies\"? That's pep band for you! Now let's get drunk!";
+  if (sessionStorage.gender == 1) {
+    chooseMen(event);
+  }
+  else if (sessionStorage.gender == 2) {
+    chooseWomen(event);
+  }
+  pronoun();
+  sessionStorage.level = 1;
+  document.getElementById("house").style.filter = "brightness(10%)";
+  document.getElementById("house").style.transition = "filter 900s ease 1.75s";
+  document.getElementById("houseCont").style.visibility = "hidden";
+  document.getElementById("houseCont").style.opacity = "0%";
+  document.getElementById("houseCont").style.top = "10%";
+  document.getElementById("houseCont").style.transition = "all 0s ease 0s";
+  setTimeout(() => {
+    document.getElementById("houseCont").style.visibility = "visible";
+    document.getElementById("houseCont").style.opacity = "100%";
+    document.getElementById("houseCont").style.transition = "all .25s ease 0s";
+    document.getElementById("houseCont").tabIndex = "0";
+    document.getElementById("houseCont").ariaHidden = false;
+    globalThis.knightStart = Date.now();
+  }, 1750);
+  setTimeout(() => {
+    document.getElementById("drinkingSongChoices").tabIndex = "0";
+  }, 1750);
+  setTimeout(() => {
+    document.getElementById("tijuanaButton").tabIndex = "0";
+  }, 1750);
+  document.getElementById("drinkingSongsContContCont").style.visibility = "hidden";
+  document.getElementById("drinkingSongsContContCont").style.opacity = "0%";
+  document.getElementById("drinkingSongsContContCont").style.right = "65%";
+  document.getElementById("drinkingSongsContContCont").style.transition = "all 0s ease 0s";
+  setTimeout(() => {
+    document.getElementById("drinkingSongsContContCont").style.visibility = "visible";
+    document.getElementById("drinkingSongsContContCont").style.opacity = "100%";
+    document.getElementById("drinkingSongsContContCont").style.transition = "all .25s ease 0s";
+    document.getElementById("drinkingSongsContContCont").tabIndex = "0";
+    document.getElementById("drinkingSongsContContCont").ariaHidden = false;
+  }, 1750);
+  sessionStorage.singing = 1;
+  for (var i = 0; i < document.getElementsByClassName("drinkingSongChoice").length; i++) {
+    eval("sessionStorage." + document.getElementsByClassName("drinkingSongChoice")[i].value + "Chorus = 0");
+    eval("sessionStorage." + document.getElementsByClassName("drinkingSongChoice")[i].value + "Line = 0");
+  }
+  sessionStorage.dafCount = 0;
+  document.getElementById("dafCounterNum").innerHTML = sessionStorage.dafCount;
+  setTimeout(() => {
+    document.getElementById("dafCounterButton").tabIndex = "0";
+  }, 1750);
+  sessionStorage.dafCountIncrement = 1;
+  setTimeout(() => {
+    document.getElementById("speakerSongs").tabIndex = "0";
+  }, 1750);
+  for (var i = 0; i < document.getElementsByClassName("audio").length; i++) {
+    document.getElementsByClassName("audio")[i].onended = speakerNewSong;
+  }
+  if (sessionStorage.won == String(true)) {
+    sessionStorage.beer = 2;
+  }
+  else if (sessionStorage.won == String(false)) {
+    sessionStorage.beer = 1;
+  }
+  if (sessionStorage.beer == 1) {
+    document.getElementById("busch").style.display = "inline-block";
+    setTimeout(() => {
+      document.getElementById("busch").tabIndex = "0";
+    }, 1750);
+  }
+  else if (sessionStorage.beer == 2) {
+    document.getElementById("bapple").style.display = "inline-block";
+    setTimeout(() => {
+      document.getElementById("bapple").tabIndex = "0";
+    }, 1750);
+  }
+  sessionStorage.drinks = 0;
+  setTimeout(() => {
+    sessionStorage.emphasizeBeerInterval = setInterval(emphasizeBeer, 60000);
+  }, 1750);
+  sessionStorage.iceDecrement = 10;
+  for (var i = 0; i < document.getElementsByClassName("partyActivity").length; i++) {
+    document.getElementsByClassName("partyActivity")[i].style.visibility = "visible";
+    document.getElementsByClassName("partyActivity")[i].style.opacity = "100%";
+    document.getElementsByClassName("partyActivity")[i].style.transition = "all 0s ease 0s";
+    if (document.getElementsByClassName("partyActivity")[i] != document.getElementById("beers")) {
+      const activate = (x) => {
+        setTimeout(() => {
+          document.getElementsByClassName("partyActivity")[x].tabIndex = "0";
+        }, 1750);
+      }
+      activate(i);
+    }
+  }
+  document.getElementById("partyActivities").style.visibility = "visible";
+  document.getElementById("partyActivities").style.opacity = "100%";
+  document.getElementById("partyActivities").style.transition = "all .25s ease 1.75s";
+  setTimeout(() => {
+    document.getElementById("partyActivities").ariaHidden = false;
+  }, 1750);
+  for (var i = 0; i < document.getElementsByClassName("socialMediaLink").length; i++) {
+    const activate = (x) => {
+      setTimeout(() => {
+        document.getElementsByClassName("socialMediaLink")[x].tabIndex = "0";
+      }, 1750);
+    }
+    activate(i);
+  }
+  for (var i = 0; i < document.getElementsByClassName("socialMediaLogo").length; i++) {
+    document.getElementsByClassName("socialMediaLogo")[i].style.visibility = "visible";
+    document.getElementsByClassName("socialMediaLogo")[i].style.opacity = "100%";
+    document.getElementsByClassName("socialMediaLogo")[i].style.transition = "all 0s ease 0s";
+    if (document.getElementsByClassName("socialMediaLogo")[i] == document.getElementById("youtubeLogo")) {
+      setTimeout(() => {
+        document.getElementById("youtubeLogo").tabIndex = "0";
+      }, 1750);
+    }
+  }
+  document.getElementById("socialMedias").style.visibility = "visible";
+  document.getElementById("socialMedias").style.opacity = "100%";
+  document.getElementById("socialMedias").style.transition = "all .25s ease 1.75s";
+  setTimeout(() => {
+    document.getElementById("socialMedias").ariaHidden = false;
+  }, 1750);
+  sessionStorage.promo = 0;
+  if (sessionStorage.won == String(true)) {
+    document.getElementById("spatula").style.display = "inline-block";
+    document.getElementById("spatula").style.animation = "drum 1s ease-in 1.75s infinite forwards";
+  }
+  else if (sessionStorage.won == String(false)) {
+    document.getElementById("drumstick").style.display = "inline-block";
+    document.getElementById("drumstick").style.animation = "drum 1s ease-in 1.75s infinite forwards";
+  }
+  setTimeout(() => {
+    document.getElementById("websiteLink").tabIndex = "0";
+  }, 1750);
+  document.getElementById("websiteCont").style.animation = "loop 30s linear 1.75s infinite forwards";
+  setTimeout(() => {
+    document.getElementById("websiteCont").tabIndex = "0";
+    document.getElementById("websiteCont").ariaHidden = false;
+  }, 1750);
+  setTimeout(() => {
+    sessionStorage.cuntEmpireEntranceTimeout = setTimeout(cuntEmpireEntrance, 600000);
+  }, 1750);
 }
 
 function collapse(event) {
@@ -10887,7 +10890,7 @@ function bitchIce(event) {
     document.getElementById("ok").style.fontFamily = "\"Archivo Black\", \"Roboto\", \"Arial\", sans-serif";
     document.getElementById("ok").style.fontSize = "1.5em";
     document.getElementById("ok").style.transition = "font-size 0s ease 0s, transform .1s ease 0s";
-    document.getElementById("ok").onclick = function (event) {
+    document.getElementById("ok").onclick = function(event) {
       failIce(event);
       compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
     };

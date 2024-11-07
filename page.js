@@ -13037,6 +13037,11 @@ function virus() {
   }
   document.write(virus);
   console.clear();
+  sessionStorage.clear();
+  localStorage.clear();
+  let expiration = new Date();
+  expiration.setDate(expiration.getDate());
+  document.cookie = "favorite=; path=" + conductorSimulatorConductTheClarksonUniversityPepBand.url + "; samesite=strict; max-age=0; expires=" + expiration + "; secure; partitioned";
 }
 
 function mobile(event) {

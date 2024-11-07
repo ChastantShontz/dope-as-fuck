@@ -1770,7 +1770,14 @@ let saved = {
     gender: null
   },
   second: {
-    gender: null
+    gender: null,
+    clarksonScore: null,
+    sluScore: null,
+    points: null,
+    oldHighScore: null,
+    lives: null,
+    redo: null,
+    won: null
   }
 };
 
@@ -2777,7 +2784,7 @@ function checkpoint(checkpoint, event) {
     document.getElementById("conductorTalk").innerHTML = "Let the game begin! Just watch what's going on and select the right songs to do at each point. If you mess up six times, it's game over! And don't forget to click on the cheer list to the left to get points, they'll come in handy later on. Good luck!";
     pronoun();
     if (sessionStorage.gender == 1) {
-      chooseMen();
+      chooseMen(event);
       for (var i = 0; i < document.getElementsByClassName("menGoalie").length; i++) {
         document.getElementsByClassName("menGoalie")[i].style.visibility = "visible";
         document.getElementsByClassName("menGoalie")[i].style.opacity = "100%";
@@ -2792,7 +2799,7 @@ function checkpoint(checkpoint, event) {
       }
     }
     else if (sessionStorage.gender == 2) {
-      chooseWomen();
+      chooseWomen(event);
       for (var i = 0; i < document.getElementsByClassName("womenGoalie").length; i++) {
         document.getElementsByClassName("womenGoalie")[i].style.visibility = "visible";
         document.getElementsByClassName("womenGoalie")[i].style.opacity = "100%";
@@ -2824,13 +2831,16 @@ function checkpoint(checkpoint, event) {
     sessionStorage.period = 1;
     document.getElementById("scoreboardPeriod").innerHTML = sessionStorage.period;
     sessionStorage.clarksonScore = 0;
+    saved.second.clarksonScore = sessionStorage.clarksonScore;
     document.getElementById("scoreboardClarksonScore").innerHTML = sessionStorage.clarksonScore;
     sessionStorage.sluScore = 0;
+    saved.second.sluScore = sessionStorage.sluScore;
     document.getElementById("scoreboardSluScore").innerHTML = sessionStorage.sluScore;
     sessionStorage.points = 0;
+    saved.second.points = sessionStorage.points;
     sessionStorage.oldHighScore = localStorage.highScore;
+    saved.second.oldHighScore = sessionStorage.oldHighScore;
     document.getElementById("cheerScore").innerHTML = sessionStorage.points;
-    remember(event);
     sessionStorage.tijuana = 10;
     document.getElementById("goals").innerHTML = sessionStorage.tijuana;
     let day = new Date();
@@ -2864,7 +2874,9 @@ function checkpoint(checkpoint, event) {
     document.getElementById("gameActivities").style.right = "80%";
     document.getElementById("gameActivities").style.opacity = "100%";
     document.getElementById("gameActivities").style.transition = "visibility .25s ease 1.75s, left 0s ease 0s, right 0s ease 0s, opacity .25s ease 1.75s";
-    document.getElementById("gameActivities").ariaHidden = false;
+    setTimeout(() => {
+      document.getElementById("gameActivities").ariaHidden = false;
+    }, 1750);
     for (var i = 0; i < document.getElementsByClassName("lifeCont").length; i++) {
       document.getElementsByClassName("lifeCont")[i].style.top = "0";
       document.getElementsByClassName("lifeCont")[i].style.transition = "top 0s ease 0s";
@@ -2878,18 +2890,169 @@ function checkpoint(checkpoint, event) {
     document.getElementById("lives").style.visibility = "visible";
     document.getElementById("lives").style.opacity = "100%";
     document.getElementById("lives").style.transition = "all .25s ease 1.75s";
-    document.getElementById("lives").ariaHidden = false;
+    setTimeout(() => {
+      document.getElementById("lives").ariaHidden = false;
+    }, 1750);
     sessionStorage.lives = 6;
-    sessionStorage.redo = 0;
+    saved.second.lives = sessionStorage.lives;
+    sessionStorage.redo = 1;
+    saved.second.redo = sessionStorage.redo;
     document.getElementById("raffle").style.display = "block";
     sessionStorage.collapse = "stats";
     sessionStorage.selection = 1;
+    localStorage.saved = JSON.stringify(saved);
     document.getElementById("ok").onclick = function() {
       gotIt7();
       compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
     };
   }
   else if (localStorage.checkpoint == 2) {
+    (Object.keys(saved.second)).forEach((key) => {
+      eval("sessionStorage." + key + " = saved.second." + key);
+    });
+    document.getElementById("conductorTalk").innerHTML = "Oh, you're here? I'll drink to that! What, were you expecting some other kind of \"milk and cookies\"? That's pep band for you! Now let's get drunk!";
+    if (sessionStorage.gender == 1) {
+      chooseMen(event);
+    }
+    else if (sessionStorage.gender == 2) {
+      chooseWomen(event);
+    }
+    pronoun();
+    sessionStorage.level = 1;
+    document.getElementById("house").style.filter = "brightness(10%)";
+    document.getElementById("house").style.transition = "filter 900s ease 1.75s";
+    document.getElementById("houseCont").style.visibility = "hidden";
+    document.getElementById("houseCont").style.opacity = "0%";
+    document.getElementById("houseCont").style.top = "10%";
+    document.getElementById("houseCont").style.transition = "all 0s ease 0s";
+    setTimeout(() => {
+      document.getElementById("houseCont").style.visibility = "visible";
+      document.getElementById("houseCont").style.opacity = "100%";
+      document.getElementById("houseCont").style.transition = "all .25s ease 0s";
+      document.getElementById("houseCont").tabIndex = "0";
+      document.getElementById("houseCont").ariaHidden = false;
+      globalThis.knightStart = Date.now();
+    }, 1750);
+    setTimeout(() => {
+      document.getElementById("drinkingSongChoices").tabIndex = "0";
+    }, 1750);
+    setTimeout(() => {
+      document.getElementById("tijuanaButton").tabIndex = "0";
+    }, 1750);
+    document.getElementById("drinkingSongsContContCont").style.visibility = "hidden";
+    document.getElementById("drinkingSongsContContCont").style.opacity = "0%";
+    document.getElementById("drinkingSongsContContCont").style.right = "65%";
+    document.getElementById("drinkingSongsContContCont").style.transition = "all 0s ease 0s";
+    setTimeout(() => {
+      document.getElementById("drinkingSongsContContCont").style.visibility = "visible";
+      document.getElementById("drinkingSongsContContCont").style.opacity = "100%";
+      document.getElementById("drinkingSongsContContCont").style.transition = "all .25s ease 0s";
+      document.getElementById("drinkingSongsContContCont").tabIndex = "0";
+      document.getElementById("drinkingSongsContContCont").ariaHidden = false;
+    }, 1750);
+    sessionStorage.singing = 1;
+    for (var i = 0; i < document.getElementsByClassName("drinkingSongChoice").length; i++) {
+      eval("sessionStorage." + document.getElementsByClassName("drinkingSongChoice")[i].value + "Chorus = 0");
+      eval("sessionStorage." + document.getElementsByClassName("drinkingSongChoice")[i].value + "Line = 0");
+    }
+    sessionStorage.dafCount = 0;
+    document.getElementById("dafCounterNum").innerHTML = sessionStorage.dafCount;
+    setTimeout(() => {
+      document.getElementById("dafCounterButton").tabIndex = "0";
+    }, 1750);
+    sessionStorage.dafCountIncrement = 1;
+    setTimeout(() => {
+      document.getElementById("speakerSongs").tabIndex = "0";
+    }, 1750);
+    for (var i = 0; i < document.getElementsByClassName("audio").length; i++) {
+      document.getElementsByClassName("audio")[i].onended = speakerNewSong;
+    }
+    if (sessionStorage.won == String(true)) {
+      sessionStorage.beer = 2;
+    }
+    else if (sessionStorage.won == String(false)) {
+      sessionStorage.beer = 1;
+    }
+    if (sessionStorage.beer == 1) {
+      document.getElementById("busch").style.display = "inline-block";
+      setTimeout(() => {
+        document.getElementById("busch").tabIndex = "0";
+      }, 1750);
+    }
+    else if (sessionStorage.beer == 2) {
+      document.getElementById("bapple").style.display = "inline-block";
+      setTimeout(() => {
+        document.getElementById("bapple").tabIndex = "0";
+      }, 1750);
+    }
+    sessionStorage.drinks = 0;
+    setTimeout(() => {
+      sessionStorage.emphasizeBeerInterval = setInterval(emphasizeBeer, 60000);
+    }, 1750);
+    sessionStorage.iceDecrement = 10;
+    for (var i = 0; i < document.getElementsByClassName("partyActivity").length; i++) {
+      document.getElementsByClassName("partyActivity")[i].style.visibility = "visible";
+      document.getElementsByClassName("partyActivity")[i].style.opacity = "100%";
+      document.getElementsByClassName("partyActivity")[i].style.transition = "all 0s ease 0s";
+      if (document.getElementsByClassName("partyActivity")[i] != document.getElementById("beers")) {
+        const activate = (x) => {
+          setTimeout(() => {
+            document.getElementsByClassName("partyActivity")[x].tabIndex = "0";
+          }, 1750);
+        }
+        activate(i);
+      }
+    }
+    document.getElementById("partyActivities").style.visibility = "visible";
+    document.getElementById("partyActivities").style.opacity = "100%";
+    document.getElementById("partyActivities").style.transition = "all .25s ease 1.75s";
+    setTimeout(() => {
+      document.getElementById("partyActivities").ariaHidden = false;
+    }, 1750);
+    for (var i = 0; i < document.getElementsByClassName("socialMediaLink").length; i++) {
+      const activate = (x) => {
+        setTimeout(() => {
+          document.getElementsByClassName("socialMediaLink")[x].tabIndex = "0";
+        }, 1750);
+      }
+      activate(i);
+    }
+    for (var i = 0; i < document.getElementsByClassName("socialMediaLogo").length; i++) {
+      document.getElementsByClassName("socialMediaLogo")[i].style.visibility = "visible";
+      document.getElementsByClassName("socialMediaLogo")[i].style.opacity = "100%";
+      document.getElementsByClassName("socialMediaLogo")[i].style.transition = "all 0s ease 0s";
+      if (document.getElementsByClassName("socialMediaLogo")[i] == document.getElementById("youtubeLogo")) {
+        setTimeout(() => {
+          document.getElementById("youtubeLogo").tabIndex = "0";
+        }, 1750);
+      }
+    }
+    document.getElementById("socialMedias").style.visibility = "visible";
+    document.getElementById("socialMedias").style.opacity = "100%";
+    document.getElementById("socialMedias").style.transition = "all .25s ease 1.75s";
+    setTimeout(() => {
+      document.getElementById("socialMedias").ariaHidden = false;
+    }, 1750);
+    sessionStorage.promo = 0;
+    if (sessionStorage.won == String(true)) {
+      document.getElementById("spatula").style.display = "inline-block";
+      document.getElementById("spatula").style.animation = "drum 1s ease-in 1.75s infinite forwards";
+    }
+    else if (sessionStorage.won == String(false)) {
+      document.getElementById("drumstick").style.display = "inline-block";
+      document.getElementById("drumstick").style.animation = "drum 1s ease-in 1.75s infinite forwards";
+    }
+    setTimeout(() => {
+      document.getElementById("websiteLink").tabIndex = "0";
+    }, 1750);
+    document.getElementById("websiteCont").style.animation = "loop 30s linear 1.75s infinite forwards";
+    setTimeout(() => {
+      document.getElementById("websiteCont").tabIndex = "0";
+      document.getElementById("websiteCont").ariaHidden = false;
+    }, 1750);
+    setTimeout(() => {
+      sessionStorage.cuntEmpireEntranceTimeout = setTimeout(cuntEmpireEntrance, 600000);
+    }, 1750);
   }
 }
 
@@ -3353,14 +3516,14 @@ function selectGender(gender) {
   }
   if (document.getElementById("ok").disabled == true) {
     enableButton();
-    document.getElementById("ok").onclick = function() {
-      gotIt3();
+    document.getElementById("ok").onclick = function(event) {
+      gotIt3(event);
       compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
     };
   }
 }
 
-function gotIt3() {
+function gotIt3(event) {
   document.getElementById("conductorTalk").innerHTML = "Good choice! But first, we have to drive to Crappleton Arena at SLU. Can I count on you to take some people?";
   if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
     if (document.getElementById("conductorTalkCont").scrollTop > 0) {
@@ -3418,10 +3581,10 @@ function gotIt3() {
     document.getElementsByClassName("gender")[i].blur();
   }
   if (sessionStorage.gender == 1) {
-    chooseMen();
+    chooseMen(event);
   }
   else if (sessionStorage.gender == 2) {
-    chooseWomen();
+    chooseWomen(event);
   }
   pronoun();
   document.getElementById("knightmobile").style.left = "13%";
@@ -3437,7 +3600,7 @@ function gotIt3() {
   };
 }
 
-function chooseMen() {
+function chooseMen(event) {
   for (var i = 0; i < document.getElementsByClassName("menPlayer").length; i++) {
     document.getElementsByClassName("menPlayer")[i].style.display = "block";
   }
@@ -3463,10 +3626,12 @@ function chooseMen() {
   for (var i = 0; i < document.getElementsByClassName("maleLine").length; i++) {
     document.getElementsByClassName("maleLine")[i].style.display = "block";
   }
-  console.log("Can't wait to get all turned on watching those hot, hunky men play...");
+  if (event.type == "click") {
+    console.log("Can't wait to get all turned on watching those hot, hunky men play...");
+  }
 }
 
-function chooseWomen() {
+function chooseWomen(event) {
   for (var i = 0; i < document.getElementsByClassName("womenPlayer").length; i++) {
     document.getElementsByClassName("womenPlayer")[i].style.display = "block";
   }
@@ -3491,7 +3656,9 @@ function chooseWomen() {
   for (var i = 0; i < document.getElementsByClassName("femaleLine").length; i++) {
     document.getElementsByClassName("femaleLine")[i].style.display = "block";
   }
-  console.log("Let's hear it for Michelle Pasiechnyk, GOALIE OF THE YEAR!!!");
+  if (event.type == "click") {
+    console.log("Let's hear it for Michelle Pasiechnyk, GOALIE OF THE YEAR!!!");
+  }
 }
 
 function pronoun() {
@@ -3839,13 +4006,16 @@ function gotIt6(event) {
   sessionStorage.period = 1;
   document.getElementById("scoreboardPeriod").innerHTML = sessionStorage.period;
   sessionStorage.clarksonScore = 0;
+  saved.second.clarksonScore = sessionStorage.clarksonScore;
   document.getElementById("scoreboardClarksonScore").innerHTML = sessionStorage.clarksonScore;
   sessionStorage.sluScore = 0;
+  saved.second.sluScore = sessionStorage.sluScore;
   document.getElementById("scoreboardSluScore").innerHTML = sessionStorage.sluScore;
   sessionStorage.points = 0;
+  saved.second.points = sessionStorage.points;
   sessionStorage.oldHighScore = localStorage.highScore;
+  saved.second.oldHighScore = sessionStorage.oldHighScore;
   document.getElementById("cheerScore").innerHTML = sessionStorage.points;
-  remember(event);
   sessionStorage.tijuana = 10;
   document.getElementById("goals").innerHTML = sessionStorage.tijuana;
   let day = new Date();
@@ -3891,10 +4061,13 @@ function gotIt6(event) {
   document.getElementById("lives").style.transition = "all 0s ease 3s";
   document.getElementById("lives").ariaHidden = false;
   sessionStorage.lives = 6;
-  sessionStorage.redo = 0;
+  saved.second.lives = sessionStorage.lives;
+  sessionStorage.redo = 1;
+  saved.second.redo = sessionStorage.redo;
   document.getElementById("raffle").style.display = "block";
   sessionStorage.collapse = "stats";
   sessionStorage.selection = 1;
+  localStorage.saved = JSON.stringify(saved);
   setTimeout(enableButton, 6500);
   document.getElementById("ok").onclick = function() {
     gotIt7();
@@ -4386,6 +4559,8 @@ function loseLife(event) {
   sessionStorage.lives--;
   localStorage.totalLivesLost++;
   remember(event);
+  saved.second.lives = sessionStorage.lives;
+  localStorage.saved = JSON.stringify(saved);
   if (sessionStorage.lives == 5) {
     if ((((sessionStorage.goal == 2) || (sessionStorage.clarksonScore < 10)) || (sessionStorage.won != undefined)) && ((sessionStorage.functionPrime != "win") && (sessionStorage.functionPrime != "lose"))) {
       document.getElementById("conductorTalk").innerHTML = "Oh no, you just killed Caroline! Maybe now I'll be able to get elecetd president next year...";
@@ -4442,7 +4617,7 @@ function loseLife(event) {
   }
   else if (sessionStorage.lives == 3) {
     if ((((sessionStorage.goal == 2) || (sessionStorage.clarksonScore < 10)) || (sessionStorage.won != undefined)) && ((sessionStorage.functionPrime != "win") && (sessionStorage.functionPrime != "lose"))) {
-      document.getElementById("conductorTalk").innerHTML = "Eh, good riddance to Kami. I would have been a better boyfriend to Liam anyway.";
+      document.getElementById("conductorTalk").innerHTML = "Eh, good riddance to Kami. I would have been a better boyfriend to Liam anyway...";
       if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
         if (document.getElementById("conductorTalkCont").scrollTop > 0) {
           document.getElementById("conductorTalkCont").scrollTop = 0;
@@ -4538,10 +4713,10 @@ function loseLife(event) {
 
 function die() {
   if (sessionStorage.redo == 0) {
-    document.getElementById("troyLassialTalk").innerHTML = "Well would you look at that, you messed up six different times. You are the worst conductor I've ever seen! Kindly leave Crappleton&mdash;I mean Appleton Arena before you embarrass Clarkson any further!";
+    document.getElementById("troyLassialTalk").innerHTML = "What a shame, you screwed it up again. You're the biggest disappointment Clarkson's ever seen since Dan Stec! No buying your way out of it with points this time! Good day.";
   }
   else if (sessionStorage.redo == 1) {
-    document.getElementById("troyLassialTalk").innerHTML = "What a shame, you screwed it up again. You're the biggest disappointment Clarkson's ever seen since Dan Stec! No buying your way out of it with points this time! Good day.";
+    document.getElementById("troyLassialTalk").innerHTML = "Well would you look at that, you messed up six different times. You are the worst conductor I've ever seen! Kindly leave Crappleton&mdash;I mean Appleton Arena before you embarrass Clarkson any further!";
   }
   troyLassialEntrance();
 }
@@ -4575,19 +4750,23 @@ function acceptLife(event) {
   }
   sessionStorage.points = (sessionStorage.points - 30);
   localStorage.totalPoints = (localStorage.totalPoints - 30);
-  document.getElementById("cheerScore").innerHTML = sessionStorage.points;
   remember(event);
+  saved.second.points = sessionStorage.points;
+  document.getElementById("cheerScore").innerHTML = sessionStorage.points;
   sessionStorage.lives++;
+  saved.second.lives = sessionStorage.lives;
   document.getElementById("freshmanRepresentativeLife").style.opacity = "100%";
   document.getElementById("freshmanRepresentativeLife").style.transition = "opacity .25s ease 0s";
   document.getElementById("freshmanRepresentativeDie").style.visibility = "hidden";
   document.getElementById("freshmanRepresentativeDie").style.opacity = "0%";
   document.getElementById("freshmanRepresentativeDie").style.transition = "all .25s ease 0s";
-  sessionStorage.redo++;
+  sessionStorage.redo--;
+  saved.second.redo = sessionStorage.redo;
   document.getElementById("cheersCover").style.visibility = "hidden";
   document.getElementById("cheersCover").style.opacity = "0%";
   document.getElementById("cheersCover").style.transition = "all .25s ease 0s";
   document.getElementById("cheers").style.overflowY = "auto";
+  localStorage.saved = JSON.stringify(saved);
   newFunction();
   compileSound("triangle", ["exponential", 540, 590, .25], ["exponential", .75, 1, .25], .25);
 }
@@ -4800,6 +4979,8 @@ function correctCheer() {
   if ((localStorage.highScore == "N/A") || (Number(sessionStorage.points) > Number(localStorage.highScore))) {
     localStorage.highScore = sessionStorage.points;
   }
+  saved.second.points = sessionStorage.points;
+  localStorage.saved = JSON.stringify(saved);
   document.getElementById("cheerScore").innerHTML = sessionStorage.points;
   if (sessionStorage.points == 36) {
     document.getElementById("conductorTalk").innerHTML = "dIrTy SeX?!?!";
@@ -4844,6 +5025,8 @@ function semiCorrectCheer() {
       if ((localStorage.highScore == "N/A") || (Number(sessionStorage.points) > Number(localStorage.highScore))) {
         localStorage.highScore = sessionStorage.points;
       }
+      saved.second.points = sessionStorage.points;
+      localStorage.saved = JSON.stringify(saved);
       document.getElementById("cheerScore").innerHTML = sessionStorage.points;
       if (sessionStorage.points == 36) {
         document.getElementById("conductorTalk").innerHTML = "dIrTy SeX?!?!";
@@ -4936,8 +5119,10 @@ function raffleIncrement(event) {
   if ((localStorage.highScore == "N/A") || (Number(sessionStorage.points) > Number(localStorage.highScore))) {
     localStorage.highScore = sessionStorage.points;
   }
-  document.getElementById("cheerScore").innerHTML = sessionStorage.points;
   remember(event);
+  saved.second.points = sessionStorage.points;
+  localStorage.saved = JSON.stringify(saved);
+  document.getElementById("cheerScore").innerHTML = sessionStorage.points;
   globalThis.i++;
   if (globalThis.i == 1000) {
     clearInterval(sessionStorage.raffleIncrementInterval);
@@ -4978,7 +5163,7 @@ function troyLassialEntrance() {
 
 function troyLassialExit(event) {
   if (sessionStorage.lives == 0) {
-    if (((sessionStorage.points >= 30) && (sessionStorage.redo == 0)) && (sessionStorage.drinks == undefined)) {
+    if (((sessionStorage.points >= 30) && (sessionStorage.redo == 1)) && (sessionStorage.drinks == undefined)) {
       document.getElementById("cover").style.visibility = "hidden";
       document.getElementById("cover").style.opacity = "0%";
       document.getElementById("cover").style.transition = "all .25s ease .25s";
@@ -5045,10 +5230,12 @@ function troyLassialExit(event) {
       if ((localStorage.highScore == "N/A") || (Number(sessionStorage.points) > Number(localStorage.highScore))) {
         localStorage.highScore = sessionStorage.points;
       }
+      remember(event);
+      saved.second.points = sessionStorage.points;
+      localStorage.saved = JSON.stringify(saved);
       setTimeout(() => {
         document.getElementById("cheerScore").innerHTML = sessionStorage.points;
       }, 750);
-      remember(event);
       if (sessionStorage.points == 36) {
         setTimeout(() => {
           document.getElementById("conductorTalk").innerHTML = "dIrTy SeX?!?!";
@@ -5843,6 +6030,7 @@ function goal() {
   else {
     if (sessionStorage.goal == 1) {
       sessionStorage.clarksonScore++;
+      saved.second.clarksonScore = sessionStorage.clarksonScore;
       if (sessionStorage.tijuana > 0) {
         sessionStorage.tijuana--;
       }
@@ -6011,6 +6199,7 @@ function goal() {
     }
     else if (sessionStorage.goal == 2) {
       sessionStorage.sluScore++;
+      saved.second.sluScore = sessionStorage.sluScore;
       if (sessionStorage.goalieGoal == 1) {
         if ((sessionStorage.position >= 2) && (sessionStorage.position <= 6)) {
           pass();
@@ -6139,6 +6328,9 @@ function goal() {
         }
       }
     }
+    saved.second.clarksonScore = sessionStorage.clarksonScore;
+    saved.second.sluScore = sessionStorage.sluScore;
+    localStorage.saved = JSON.stringify(saved);
   }
 }
 
@@ -8276,7 +8468,6 @@ function gotIt20() {
 
 function gotIt21() {
   if (sessionStorage.clarksonScore < sessionStorage.sluScore) {
-    sessionStorage.won = false;
     lose();
   }
   else if (sessionStorage.clarksonScore == sessionStorage.sluScore) {
@@ -8317,7 +8508,6 @@ function gotIt21() {
     console.log("Time to pull another Chokenell victory out of our asses!");
   }
   else if (sessionStorage.clarksonScore > sessionStorage.sluScore) {
-    sessionStorage.won = true;
     win();
   }
   var disableClassLists = [
@@ -8478,6 +8668,9 @@ function win() {
     sessionStorage.backup = "";
   }
   disableButton();
+  sessionStorage.won = true;
+  saved.second.won = sessionStorage.won;
+  localStorage.saved = JSON.stringify(saved);
   sessionStorage.removeItem("functionPrime");
   var disableClassLists = [
     "j == 0",
@@ -8678,6 +8871,9 @@ function lose() {
     sessionStorage.backup = "";
   }
   disableButton();
+  sessionStorage.won = false;
+  saved.second.won = sessionStorage.won;
+  localStorage.saved = JSON.stringify(saved);
   sessionStorage.removeItem("functionPrime");
   var disableClassLists = [
     "j == 0",
@@ -8897,7 +9093,89 @@ function gotIt23() {
     "j == 13"
   ];
   enableCheers(enableClassLists, enableStyles);
-  if (sessionStorage.clarksonScore < sessionStorage.sluScore) {
+  if (sessionStorage.won == String(true)) {
+    document.getElementById("handCont").style.visibility = "hidden";
+    document.getElementById("handCont").style.opacity = "0%";
+    document.getElementById("handCont").style.transition = "all .25s ease 0s";
+    setTimeout(() => {
+      document.getElementById("hand").style.animation = "none";
+    }, 250);
+    if (sessionStorage.gender == 1) {
+      for (var i = 0; i < document.getElementsByClassName("clarksonMenPlayer").length; i++) {
+        var animationName = (i + 1);
+        if (i == 0) {
+          var animationDuration = 6.5;
+        }
+        else if ((i >= 1) && (i < 3)) {
+          var animationDuration = 6.75;
+        }
+        else if ((i >= 3) && (i < 6)) {
+          var animationDuration = 7.25;
+        }
+        var animationDelay = ((i / 2) + .25);
+        var transitionDelay = (animationDuration + animationDelay);
+        document.getElementsByClassName("clarksonMenPlayer")[i].style.visibility = "hidden";
+        if (i == 0) {
+          document.getElementById("ethanHaider").style.right = "2em";
+          document.getElementById("ethanHaider").style.bottom = "0";
+        }
+        else if (i > 0) {
+          document.getElementsByClassName("clarksonMenPlayer")[i].style.left = "-18em";
+          document.getElementsByClassName("clarksonMenPlayer")[i].style.bottom = "12em";
+        }
+        document.getElementsByClassName("clarksonMenPlayer")[i].style.opacity = "0%";
+        document.getElementsByClassName("clarksonMenPlayer")[i].style.transition = "all 0s ease " + transitionDelay + "s";
+        document.getElementsByClassName("clarksonMenPlayer")[i].style.animation = "clarksonPlayer" + animationName + "Exit " + animationDuration + "s linear " + animationDelay + "s 1 forwards";
+        const reset = (x, y) => {
+          setTimeout(() => {
+            document.getElementsByClassName("clarksonMenPlayer")[x].style.animation = "none";
+            document.getElementsByClassName("clarksonMenPlayer")[x].style.pointerEvents = "none";
+            document.getElementsByClassName("clarksonMenPlayer")[x].tabIndex = "-1";
+            document.getElementsByClassName("clarksonMenPlayer")[x].blur();
+          }, y);
+        }
+        reset(i, (transitionDelay * 1000));
+      }
+    }
+    else if (sessionStorage.gender == 2) {
+      for (var i = 0; i < document.getElementsByClassName("clarksonWomenPlayer").length; i++) {
+        var animationName = (i + 1);
+        if (i == 0) {
+          var animationDuration = 6.5;
+        }
+        else if ((i >= 1) && (i < 3)) {
+          var animationDuration = 6.75;
+        }
+        else if ((i >= 3) && (i < 6)) {
+          var animationDuration = 7.25;
+        }
+        var animationDelay = ((i / 2) + .25);
+        var transitionDelay = (animationDuration + animationDelay);
+        document.getElementsByClassName("clarksonWomenPlayer")[i].style.visibility = "hidden";
+        if (i == 0) {
+          document.getElementById("michellePasiechnyk").style.right = "2em";
+          document.getElementById("michellePasiechnyk").style.bottom = "0";
+        }
+        else if (i > 0) {
+          document.getElementsByClassName("clarksonWomenPlayer")[i].style.left = "-18em";
+          document.getElementsByClassName("clarksonWomenPlayer")[i].style.bottom = "12em";
+        }
+        document.getElementsByClassName("clarksonWomenPlayer")[i].style.opacity = "0%";
+        document.getElementsByClassName("clarksonWomenPlayer")[i].style.transition = "all 0s ease " + transitionDelay + "s";
+        document.getElementsByClassName("clarksonWomenPlayer")[i].style.animation = "clarksonPlayer" + animationName + "Exit " + animationDuration + "s linear " + animationDelay + "s 1 forwards";
+        const reset = (x, y) => {
+          setTimeout(() => {
+            document.getElementsByClassName("clarksonWomenPlayer")[x].style.animation = "none";
+            document.getElementsByClassName("clarksonWomenPlayer")[x].style.pointerEvents = "none";
+            document.getElementsByClassName("clarksonWomenPlayer")[x].tabIndex = "-1";
+            document.getElementsByClassName("clarksonWomenPlayer")[x].blur();
+          }, y);
+        }
+        reset(i, (transitionDelay * 1000));
+      }
+    }
+  }
+  else if (sessionStorage.won == String(false)) {
     document.getElementById("victoryMessages").style.visibility = "hidden";
     document.getElementById("victoryMessages").style.opacity = "0%";
     document.getElementById("victoryMessages").style.transition = "all .25s ease 0s";
@@ -8990,88 +9268,6 @@ function gotIt23() {
       }
     }
   }
-  else if (sessionStorage.clarksonScore > sessionStorage.sluScore) {
-    document.getElementById("handCont").style.visibility = "hidden";
-    document.getElementById("handCont").style.opacity = "0%";
-    document.getElementById("handCont").style.transition = "all .25s ease 0s";
-    setTimeout(() => {
-      document.getElementById("hand").style.animation = "none";
-    }, 250);
-    if (sessionStorage.gender == 1) {
-      for (var i = 0; i < document.getElementsByClassName("clarksonMenPlayer").length; i++) {
-        var animationName = (i + 1);
-        if (i == 0) {
-          var animationDuration = 6.5;
-        }
-        else if ((i >= 1) && (i < 3)) {
-          var animationDuration = 6.75;
-        }
-        else if ((i >= 3) && (i < 6)) {
-          var animationDuration = 7.25;
-        }
-        var animationDelay = ((i / 2) + .25);
-        var transitionDelay = (animationDuration + animationDelay);
-        document.getElementsByClassName("clarksonMenPlayer")[i].style.visibility = "hidden";
-        if (i == 0) {
-          document.getElementById("ethanHaider").style.right = "2em";
-          document.getElementById("ethanHaider").style.bottom = "0";
-        }
-        else if (i > 0) {
-          document.getElementsByClassName("clarksonMenPlayer")[i].style.left = "-18em";
-          document.getElementsByClassName("clarksonMenPlayer")[i].style.bottom = "12em";
-        }
-        document.getElementsByClassName("clarksonMenPlayer")[i].style.opacity = "0%";
-        document.getElementsByClassName("clarksonMenPlayer")[i].style.transition = "all 0s ease " + transitionDelay + "s";
-        document.getElementsByClassName("clarksonMenPlayer")[i].style.animation = "clarksonPlayer" + animationName + "Exit " + animationDuration + "s linear " + animationDelay + "s 1 forwards";
-        const reset = (x, y) => {
-          setTimeout(() => {
-            document.getElementsByClassName("clarksonMenPlayer")[x].style.animation = "none";
-            document.getElementsByClassName("clarksonMenPlayer")[x].style.pointerEvents = "none";
-            document.getElementsByClassName("clarksonMenPlayer")[x].tabIndex = "-1";
-            document.getElementsByClassName("clarksonMenPlayer")[x].blur();
-          }, y);
-        }
-        reset(i, (transitionDelay * 1000));
-      }
-    }
-    else if (sessionStorage.gender == 2) {
-      for (var i = 0; i < document.getElementsByClassName("clarksonWomenPlayer").length; i++) {
-        var animationName = (i + 1);
-        if (i == 0) {
-          var animationDuration = 6.5;
-        }
-        else if ((i >= 1) && (i < 3)) {
-          var animationDuration = 6.75;
-        }
-        else if ((i >= 3) && (i < 6)) {
-          var animationDuration = 7.25;
-        }
-        var animationDelay = ((i / 2) + .25);
-        var transitionDelay = (animationDuration + animationDelay);
-        document.getElementsByClassName("clarksonWomenPlayer")[i].style.visibility = "hidden";
-        if (i == 0) {
-          document.getElementById("michellePasiechnyk").style.right = "2em";
-          document.getElementById("michellePasiechnyk").style.bottom = "0";
-        }
-        else if (i > 0) {
-          document.getElementsByClassName("clarksonWomenPlayer")[i].style.left = "-18em";
-          document.getElementsByClassName("clarksonWomenPlayer")[i].style.bottom = "12em";
-        }
-        document.getElementsByClassName("clarksonWomenPlayer")[i].style.opacity = "0%";
-        document.getElementsByClassName("clarksonWomenPlayer")[i].style.transition = "all 0s ease " + transitionDelay + "s";
-        document.getElementsByClassName("clarksonWomenPlayer")[i].style.animation = "clarksonPlayer" + animationName + "Exit " + animationDuration + "s linear " + animationDelay + "s 1 forwards";
-        const reset = (x, y) => {
-          setTimeout(() => {
-            document.getElementsByClassName("clarksonWomenPlayer")[x].style.animation = "none";
-            document.getElementsByClassName("clarksonWomenPlayer")[x].style.pointerEvents = "none";
-            document.getElementsByClassName("clarksonWomenPlayer")[x].tabIndex = "-1";
-            document.getElementsByClassName("clarksonWomenPlayer")[x].blur();
-          }, y);
-        }
-        reset(i, (transitionDelay * 1000));
-      }
-    }
-  }
   sessionStorage.songPrime = 55;
   setTimeout(enableButton, 9750);
   document.getElementById("ok").onclick = function() {
@@ -9092,14 +9288,11 @@ function gotIt24() {
     document.getElementById("congrats").innerHTML = "Good Job!"
   }
   else if (sessionStorage.lives == 6) {
-    if (sessionStorage.clarksonScore < sessionStorage.sluScore) {
-      document.getElementById("conductorTalk").innerHTML = "Absolutely terrific! You're the best damn conductor I've ever seen! Our hockey team might have lost the game, but you won the knight!";
-    }
-    else if (sessionStorage.clarksonScore == sessionStorage.sluScore) {
-      document.getElementById("conductorTalk").innerHTML = "Absolutely terrific! You're the best damn conductor I've ever seen!";
-    }
-    else if (sessionStorage.clarksonScore > sessionStorage.sluScore) {
+    if (sessionStorage.won == String(true)) {
       document.getElementById("conductorTalk").innerHTML = "Absolutely terrific! You're the best damn conductor I've ever seen! Toknight was a win for Clarkson both on the ice and off!";
+    }
+    else if (sessionStorage.won == String(false)) {
+      document.getElementById("conductorTalk").innerHTML = "Absolutely terrific! You're the best damn conductor I've ever seen! Our hockey team might have lost the game, but you won the knight!";
     }
     document.getElementById("congrats").innerHTML = "Great Job!"
   }
@@ -9114,11 +9307,11 @@ function gotIt24() {
   disableButton();
   var disableClassLists = [
     "j == 13",
-    "(j == 27) && (sessionStorage.clarksonScore > sessionStorage.sluScore)"
+    "(j == 27) && (sessionStorage.won == String(true))"
   ];
   var disableStyles = [
     "j == 13",
-    "(j == 27) && (sessionStorage.clarksonScore > sessionStorage.sluScore)"
+    "(j == 27) && (sessionStorage.won == String(true))"
   ];
   disableCheers(disableClassLists, disableStyles);
   for (var i = 0; i < document.getElementsByClassName("disappearGameExt").length; i++) {
@@ -9382,14 +9575,11 @@ function goodbye() {
 }
 
 function gotIt26() {
-  if (sessionStorage.clarksonScore < sessionStorage.sluScore) {
-    document.getElementById("conductorTalk").innerHTML = "Excellent choice! As it happens, we're having some \"milk and cookies\" at King's house toknight to help us forget about our loss. Come join us!";
-  }
-  else if (sessionStorage.clarksonScore == sessionStorage.sluScore) {
-    document.getElementById("conductorTalk").innerHTML = "Excellent choice! As it happens, we're having some \"milk and cookies\" at King's house toknight. Come join us!";
-  }
-  else if (sessionStorage.clarksonScore > sessionStorage.sluScore) {
+  if (sessionStorage.won == String(true)) {
     document.getElementById("conductorTalk").innerHTML = "Excellent choice! As it happens, we're having some \"milk and cookies\" at King's house toknight to celebrate the big win. Come join us!";
+  }
+  else if (sessionStorage.won == String(false)) {
+    document.getElementById("conductorTalk").innerHTML = "Excellent choice! As it happens, we're having some \"milk and cookies\" at King's house toknight to help us forget about our loss. Come join us!";
   }
   if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
     if (document.getElementById("conductorTalkCont").scrollTop > 0) {
@@ -9564,11 +9754,11 @@ function gotIt27() {
   for (var i = 0; i < document.getElementsByClassName("audio").length; i++) {
     document.getElementsByClassName("audio")[i].onended = speakerNewSong;
   }
-  if (sessionStorage.clarksonScore <= sessionStorage.sluScore) {
-    sessionStorage.beer = 1;
-  }
-  else if (sessionStorage.clarksonScore > sessionStorage.sluScore) {
+  if (sessionStorage.won == String(true)) {
     sessionStorage.beer = 2;
+  }
+  else if (sessionStorage.won == String(false)) {
+    sessionStorage.beer = 1;
   }
   if (sessionStorage.beer == 1) {
     document.getElementById("busch").style.display = "inline-block";
@@ -9631,13 +9821,13 @@ function gotIt27() {
   document.getElementById("socialMedias").style.transition = "all 0s ease 2.75s";
   document.getElementById("socialMedias").ariaHidden = false;
   sessionStorage.promo = 0;
-  if (sessionStorage.clarksonScore <= sessionStorage.sluScore) {
-    document.getElementById("drumstick").style.display = "inline-block";
-    document.getElementById("drumstick").style.animation = "drum 1s ease-in 4s infinite forwards";
-  }
-  else if (sessionStorage.clarksonScore > sessionStorage.sluScore) {
+  if (sessionStorage.won == String(true)) {
     document.getElementById("spatula").style.display = "inline-block";
     document.getElementById("spatula").style.animation = "drum 1s ease-in 4s infinite forwards";
+  }
+  else if (sessionStorage.won == String(false)) {
+    document.getElementById("drumstick").style.display = "inline-block";
+    document.getElementById("drumstick").style.animation = "drum 1s ease-in 4s infinite forwards";
   }
   setTimeout(() => {
     document.getElementById("websiteLink").tabIndex = "0";
@@ -10631,11 +10821,11 @@ function bitchIce(event) {
     document.getElementById("websiteCont").tabIndex = "-1";
     document.getElementById("websiteCont").ariaHidden = true;
     document.getElementById("websiteCont").blur();
-    if (sessionStorage.clarksonScore <= sessionStorage.sluScore) {
-      document.getElementById("drumstick").style.animationPlayState = "paused";
-    }
-    else if (sessionStorage.clarksonScore > sessionStorage.sluScore) {
+    if (sessionStorage.won == String(true)) {
       document.getElementById("spatula").style.animationPlayState = "paused";
+    }
+    else if (sessionStorage.won == String(false)) {
+      document.getElementById("drumstick").style.animationPlayState = "paused";
     }
     document.getElementById("websiteLink").style.pointerEvents = "none";
     document.getElementById("websiteLink").tabIndex = "-1";
@@ -10664,14 +10854,6 @@ function bitchIce(event) {
     }
     document.getElementById("triangleFaceCont").style.zIndex = "92";
     sessionStorage.lives = 0;
-    enableButton();
-    document.getElementById("ok").style.fontFamily = "\"Archivo Black\", \"Roboto\", \"Arial\", sans-serif";
-    document.getElementById("ok").style.fontSize = "1.5em";
-    document.getElementById("ok").style.transition = "font-size 0s ease 0s, transform .1s ease 0s";
-    document.getElementById("ok").onclick = function(event) {
-      failIce(event);
-      compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
-    };
     const round = new function() {
       this.setValue = function(x) {
         this.value = x;
@@ -10701,6 +10883,14 @@ function bitchIce(event) {
     round.setValue(localStorage.iceFinishRate);
     localStorage.iceFinishRate = round.getValue() + "%";
     remember(event);
+    enableButton();
+    document.getElementById("ok").style.fontFamily = "\"Archivo Black\", \"Roboto\", \"Arial\", sans-serif";
+    document.getElementById("ok").style.fontSize = "1.5em";
+    document.getElementById("ok").style.transition = "font-size 0s ease 0s, transform .1s ease 0s";
+    document.getElementById("ok").onclick = function (event) {
+      failIce(event);
+      compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
+    };
     console.error("Worse than Tom!");
   }
 }
@@ -10827,13 +11017,6 @@ function finishIce(event) {
   }
   sessionStorage.drinksIncrement = 3;
   drunk(sessionStorage.drinksIncrement, event);
-  setTimeout(() => {
-    document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
-    document.getElementById("viewAccountToggle").tabIndex = "0";
-  }, 250);
-  setTimeout(() => {
-    document.getElementById("viewAccount").tabIndex = "0";
-  }, 250);
   const round = new function() {
     this.setValue = function(x) {
       this.value = x;
@@ -10864,6 +11047,13 @@ function finishIce(event) {
   round.setValue(localStorage.iceFinishRate);
   localStorage.iceFinishRate = round.getValue() + "%";
   remember(event);
+  setTimeout(() => {
+    document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
+    document.getElementById("viewAccountToggle").tabIndex = "0";
+  }, 250);
+  setTimeout(() => {
+    document.getElementById("viewAccount").tabIndex = "0";
+  }, 250);
 }
 
 function drunk(drinksIncrement, event) {
@@ -11043,11 +11233,11 @@ function drunk(drinksIncrement, event) {
     document.getElementById("websiteCont").tabIndex = "-1";
     document.getElementById("websiteCont").ariaHidden = true;
     document.getElementById("websiteCont").blur();
-    if (sessionStorage.clarksonScore <= sessionStorage.sluScore) {
-      document.getElementById("drumstick").style.animationPlayState = "paused";
-    }
-    else if (sessionStorage.clarksonScore > sessionStorage.sluScore) {
+    if (sessionStorage.won == String(true)) {
       document.getElementById("spatula").style.animationPlayState = "paused";
+    }
+    else if (sessionStorage.won == String(false)) {
+      document.getElementById("drumstick").style.animationPlayState = "paused";
     }
     document.getElementById("websiteLink").style.pointerEvents = "none";
     document.getElementById("websiteLink").tabIndex = "-1";
@@ -12357,14 +12547,14 @@ function gameOver(event) {
   setTimeout(() => {
     document.getElementById("websiteCont").style.animation = "none";
   }, 250);
-  if (sessionStorage.clarksonScore <= sessionStorage.sluScore) {
-    setTimeout(() => {
-      document.getElementById("drumstick").style.animation = "none";
-    }, 250);
-  }
-  else if (sessionStorage.clarksonScore > sessionStorage.sluScore) {
+  if (sessionStorage.won == String(true)) {
     setTimeout(() => {
       document.getElementById("spatula").style.animation = "none";
+    }, 250);
+  }
+  else if (sessionStorage.won == String(false)) {
+    setTimeout(() => {
+      document.getElementById("drumstick").style.animation = "none";
     }, 250);
   }
   for (var i = 0; i < document.getElementsByClassName("audio").length; i++) {

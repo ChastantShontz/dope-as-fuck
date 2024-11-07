@@ -358,6 +358,14 @@ main {
   object-fit: contain;
 }
 
+#pepBandLogo {
+  position: fixed;
+  right: .5em;
+  bottom: .5em;
+  height: 200px;
+  width: 200px;
+}
+
 #subliminalMessageCont {
   display: flex;
   flex-direction: row;

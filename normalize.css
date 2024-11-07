@@ -228,17 +228,17 @@ span.noDecoration {
   text-decoration: none;
 }
 
+/* Deals with stylizing the Material Icons and Material Symbols Outlined provided by Google Fonts */
+span.material-icons,
+span.material-symbols-outlined {
+  font-size: 1em;
+}
+
 /* Deals with stylizing the <ruby> annotations found in Asian text and the <rt> and <rp> that often accompany them. The <ruby> is placed above the body text, aligned with its starting position, and allowed to merge with overflowing characters */
 ruby {
   ruby-position: over;
   ruby-merge: merge;
   ruby-align: start;
-}
-
-/* Deals with stylizing the Material Icons and Material Symbols Outlined provided by Google Fonts */
-span.material-icons,
-span.material-symbols-outlined {
-  font-size: 1em;
 }
 
 /* Applies the custom "--blue" and "--violet" variables to the <a> instead of the browser defaults */

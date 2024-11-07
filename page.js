@@ -2635,7 +2635,7 @@ function gameBegins(event) {
     answers = JSON.parse(localStorage.answers);
     saved = JSON.parse(localStorage.saved);
     sessionStorage.clear();
-    if ((localStorage.checkpoint == undefined) || (localStorage.checkpoint == 1)) {
+    if (localStorage.checkpoint == undefined) {
       localStorage.gamesStarted++;
       if (!((localStorage.gamesFinished).match(/in progress/sm))) {
         localStorage.gamesFinished = localStorage.gamesFinished + " (#" + (+localStorage.gamesFinished + 1) + " in progress)";
@@ -2751,7 +2751,7 @@ function gameBegins(event) {
     console.log("Hey, you seem dope as fuck! :)");
   }
   else {
-    if ((localStorage.checkpoint == undefined) || (localStorage.checkpoint == 1)) {
+    if (localStorage.checkpoint == undefined) {
       console.log("Welcome back" + ((localStorage.name == undefined) ? ("") : (", ")) + ((localStorage.name) ?? ("")) + "!");
     }
     else {

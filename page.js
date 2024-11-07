@@ -2423,7 +2423,7 @@ class Session {
     this.totalDafCount = 0;
     this.totalVersesSung = 0;
     this.gamesStarted = 1;
-    this.gamesFinished = "0 (1 in progress)";
+    this.gamesFinished = "0 (#1 in progress)";
     this.gamesWon = "N/A";
     this.gameWinRate = "N/A";
     this.gameTime = 0;
@@ -2638,7 +2638,7 @@ function gameBegins(event) {
     if (localStorage.checkpoint == undefined) {
       localStorage.gamesStarted++;
       if (!((localStorage.gamesFinished).match(/in progress/sm))) {
-        localStorage.gamesFinished = localStorage.gamesFinished + " (" + (+localStorage.gamesFinished + 1) + " in progress)";
+        localStorage.gamesFinished = localStorage.gamesFinished + " (#" + (+localStorage.gamesFinished + 1) + " in progress)";
       }
     }
     for (var i = 0; i < document.getElementsByClassName("scrollbar").length; i++) {

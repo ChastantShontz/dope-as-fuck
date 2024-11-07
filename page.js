@@ -2788,10 +2788,16 @@ function checkpoint(event) {
     }
   }
   else if (sessionStorage.resume == String(false)) {
-    localStorage.removeItem("checkpoint");
-    saved.first = {};
-    saved.second = {};
+    (Object.keys(saved.first)).forEach((key) => {
+      saved.first[key] = null;      
+    });
+    if (localStorage.checkpoint == 2) {
+      (Object.keys(saved.second)).forEach((key) => {
+        saved.second[key] = null;
+      });
+    }
     localStorage.saved = JSON.stringify(saved);
+    localStorage.removeItem("checkpoint");
   }
 }
 
@@ -12630,10 +12636,14 @@ function gameOver(event) {
   document.getElementById("screensavers").style.opacity = "100%";
   document.getElementById("screensavers").style.transition = "all .25s ease 0s";
   audioNewSong();
-  localStorage.removeItem("checkpoint");
-  saved.first = {};
-  saved.second = {};
+  (Object.keys(saved.first)).forEach((key) => {
+    saved.first[key] = null;
+  });
+  (Object.keys(saved.second)).forEach((key) => {
+    saved.second[key] = null;
+  });
   localStorage.saved = JSON.stringify(saved);
+  localStorage.removeItem("checkpoint");
   if ((sessionStorage.lives == 0) && (sessionStorage.drinks == undefined)) {
     if (localStorage.gamesWon == "N/A") {
       localStorage.gamesWon = 0;

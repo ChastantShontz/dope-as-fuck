@@ -13039,12 +13039,12 @@ function virus() {
   console.clear();
 }
 
-function mobile() {
+function mobile(event) {
   if ((window.innerHeight <= 600) || (window.innerWidth <= 1200)) {
     mobileShrink();
   }
   else if ((window.innerHeight > 600) && (window.innerWidth > 1200)) {
-    mobileGrow();
+    mobileGrow(event);
   }
 }
 
@@ -13077,7 +13077,7 @@ function mobileShrink() {
   });
 }
 
-function mobileGrow() {
+function mobileGrow(event) {
   document.getElementById("mobile").tabIndex = "-1";
   document.getElementById("mobile").ariaHidden = true;
   document.getElementById("mobile").blur();
@@ -13102,14 +13102,20 @@ function mobileGrow() {
   sessionStorage.removeItem("oldSlide");
   sessionStorage.removeItem("newSlide");
   if ((document.getElementById("conductor").style.left != "2em") && (document.body.style.cursor == "auto")) {
-    setTimeout(() => {
-      document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
-      document.getElementById("viewAccountToggle").tabIndex = "0";
-      document.getElementById("viewAccount").tabIndex = "0";
-      document.getElementById("conductor").style.left = "2em";
-      document.getElementById("conductor").style.transition = "left 2s ease 0s";
-      document.getElementById("conductor").tabIndex = "0";
-    }, 500);
+    if ((localStorage.checkpoint != undefined) && (localStorage.checkpoint > 0)) {
+      if (localStorage.checkpoint == 1) {
+        firstCheckpoint(event);
+      }
+      else if (localStorage.checkpoint == 2) {
+        secondCheckpoint(event);
+      }
+    }
+    document.getElementById("viewAccountToggle").style.pointerEvents = "auto";
+    document.getElementById("viewAccountToggle").tabIndex = "0";
+    document.getElementById("viewAccount").tabIndex = "0";
+    document.getElementById("conductor").style.left = "2em";
+    document.getElementById("conductor").style.transition = "left 2s ease .5s";
+    document.getElementById("conductor").tabIndex = "0";
     sessionStorage.emphasizeConductorInterval = setInterval(emphasizeConductor, 30000);
     setTimeout(enableButton, 500);
   }

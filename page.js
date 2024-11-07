@@ -3066,12 +3066,12 @@ function secondCheckpoint(event) {
     document.getElementById("drumstick").style.animation = "drum 1s ease-in 1.75s infinite forwards";
   }
   setTimeout(() => {
-    document.getElementById("websiteLink").tabIndex = "0";
+    document.getElementById("pepBandWebsiteLink").tabIndex = "0";
   }, 1750);
-  document.getElementById("websiteCont").style.animation = "loop 30s linear 1.75s infinite forwards";
+  document.getElementById("pepBandWebsiteCont").style.animation = "loop 30s linear 1.75s infinite forwards";
   setTimeout(() => {
-    document.getElementById("websiteCont").tabIndex = "0";
-    document.getElementById("websiteCont").ariaHidden = false;
+    document.getElementById("pepBandWebsiteCont").tabIndex = "0";
+    document.getElementById("pepBandWebsiteCont").ariaHidden = false;
   }, 1750);
   setTimeout(() => {
     sessionStorage.cuntEmpireEntranceTimeout = setTimeout(cuntEmpireEntrance, 600000);
@@ -9862,12 +9862,12 @@ function gotIt27() {
     document.getElementById("drumstick").style.animation = "drum 1s ease-in 4s infinite forwards";
   }
   setTimeout(() => {
-    document.getElementById("websiteLink").tabIndex = "0";
+    document.getElementById("pepBandWebsiteLink").tabIndex = "0";
   }, 4000);
-  document.getElementById("websiteCont").style.animation = "loop 30s linear 4s infinite forwards";
+  document.getElementById("pepBandWebsiteCont").style.animation = "loop 30s linear 4s infinite forwards";
   setTimeout(() => {
-    document.getElementById("websiteCont").tabIndex = "0";
-    document.getElementById("websiteCont").ariaHidden = false;
+    document.getElementById("pepBandWebsiteCont").tabIndex = "0";
+    document.getElementById("pepBandWebsiteCont").ariaHidden = false;
   }, 4000);
   sessionStorage.cuntEmpireEntranceTimeout = setTimeout(cuntEmpireEntrance, 600000);
   console.log("Oh, you're here? I'll drink to that!");
@@ -10849,19 +10849,19 @@ function bitchIce(event) {
       document.getElementsByClassName("socialMediaLink")[i].tabIndex = "-1";
       document.getElementsByClassName("socialMediaLink")[i].blur();
     }
-    document.getElementById("websiteCont").style.animationPlayState = "paused";
-    document.getElementById("websiteCont").tabIndex = "-1";
-    document.getElementById("websiteCont").ariaHidden = true;
-    document.getElementById("websiteCont").blur();
+    document.getElementById("pepBandWebsiteCont").style.animationPlayState = "paused";
+    document.getElementById("pepBandWebsiteCont").tabIndex = "-1";
+    document.getElementById("pepBandWebsiteCont").ariaHidden = true;
+    document.getElementById("pepBandWebsiteCont").blur();
     if (sessionStorage.won == String(true)) {
       document.getElementById("spatula").style.animationPlayState = "paused";
     }
     else if (sessionStorage.won == String(false)) {
       document.getElementById("drumstick").style.animationPlayState = "paused";
     }
-    document.getElementById("websiteLink").style.pointerEvents = "none";
-    document.getElementById("websiteLink").tabIndex = "-1";
-    document.getElementById("websiteLink").blur();
+    document.getElementById("pepBandWebsiteLink").style.pointerEvents = "none";
+    document.getElementById("pepBandWebsiteLink").tabIndex = "-1";
+    document.getElementById("pepBandWebsiteLink").blur();
     if (document.getElementById("cuntEmpire").style.top == "1em") {
       document.getElementById("cuntEmpire").tabIndex = "-1";
       document.getElementById("cuntEmpire").ariaHidden = true;
@@ -11107,7 +11107,7 @@ function drunk(drinksIncrement, event) {
           document.getElementById("ok").style.transition = "font-size 0s ease 0s, transform .1s ease 0s";
         }
       }
-      document.getElementById("websiteCont").style.setProperty("--leftValue", "-38em");
+      document.getElementById("pepBandWebsiteCont").style.setProperty("--leftValue", "-38em");
       document.getElementById("triangleFaceCont").style.opacity = "25%";
       document.getElementById("triangleFaceCont").style.transition = "opacity 0s ease 0s";
     }
@@ -11158,7 +11158,7 @@ function drunk(drinksIncrement, event) {
         document.getElementsByClassName("speakerSong")[i].innerHTML = "Tijuana";
         document.getElementsByClassName("speakerSong")[i].value = "tijuana";
       }
-      document.getElementById("websiteLink").href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+      document.getElementById("pepBandWebsiteLink").href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
       document.getElementById("triangleFaceCont").style.opacity = "75%";
       document.getElementById("triangleFaceCont").style.transition = "opacity 0s ease 0s";
     }
@@ -11261,19 +11261,19 @@ function drunk(drinksIncrement, event) {
       document.getElementsByClassName("socialMediaLink")[i].tabIndex = "-1";
       document.getElementsByClassName("socialMediaLink")[i].blur();
     }
-    document.getElementById("websiteCont").style.animationPlayState = "paused";
-    document.getElementById("websiteCont").tabIndex = "-1";
-    document.getElementById("websiteCont").ariaHidden = true;
-    document.getElementById("websiteCont").blur();
+    document.getElementById("pepBandWebsiteCont").style.animationPlayState = "paused";
+    document.getElementById("pepBandWebsiteCont").tabIndex = "-1";
+    document.getElementById("pepBandWebsiteCont").ariaHidden = true;
+    document.getElementById("pepBandWebsiteCont").blur();
     if (sessionStorage.won == String(true)) {
       document.getElementById("spatula").style.animationPlayState = "paused";
     }
     else if (sessionStorage.won == String(false)) {
       document.getElementById("drumstick").style.animationPlayState = "paused";
     }
-    document.getElementById("websiteLink").style.pointerEvents = "none";
-    document.getElementById("websiteLink").tabIndex = "-1";
-    document.getElementById("websiteLink").blur();
+    document.getElementById("pepBandWebsiteLink").style.pointerEvents = "none";
+    document.getElementById("pepBandWebsiteLink").tabIndex = "-1";
+    document.getElementById("pepBandWebsiteLink").blur();
     if (document.getElementById("cuntEmpire").style.top == "1em") {
       document.getElementById("cuntEmpire").tabIndex = "-1";
       document.getElementById("cuntEmpire").ariaHidden = true;
@@ -12577,7 +12577,7 @@ function gameOver(event) {
     }, 250);
   }
   setTimeout(() => {
-    document.getElementById("websiteCont").style.animation = "none";
+    document.getElementById("pepBandWebsiteCont").style.animation = "none";
   }, 250);
   if (sessionStorage.won == String(true)) {
     setTimeout(() => {

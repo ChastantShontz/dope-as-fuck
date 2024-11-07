@@ -1253,7 +1253,7 @@ resources:
       referrerPolicy: "strict origin when cross-origin"
       crossOrigin: "anonymous"
       type: "text/html"
-      id: "externalWebsite"
+      id: "pepBandExternalWebsite"
     - href: "code.m"
       language:
         dialect: "en"

@@ -2762,7 +2762,7 @@ main {
   width: 100%;
 }
 
-#websiteCont {
+#pepBandWebsiteCont {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -2785,7 +2785,7 @@ main {
   transform-origin: bottom left;
 }
 
-#website {
+#pepBandWebsite {
   border-radius: .5em;
   background: var(--white);
   width: max-content;
@@ -2796,16 +2796,16 @@ main {
   font-weight: bold;
 }
 
-#websiteLink {
+#pepBandWebsiteLink {
   font-family: "Zilla Slab", "Merriweather", "Times New Roman", serif;
   font-size: 1.25rem;
 }
 
-#websiteLink:visited {
+#pepBandWebsiteLink:visited {
   color: var(--blue);
 }
 
-#websiteLink:active {
+#pepBandWebsiteLink:active {
   color: var(--violet);
 }
 

@@ -2754,7 +2754,7 @@ function gameBegins(event) {
     if ((localStorage.checkpoint == undefined) || (localStorage.checkpoint == 0)) {
       console.log("Welcome back" + ((localStorage.name == undefined) ? ("") : (", ")) + ((localStorage.name) ?? ("")) + "!");
     }
-    else {
+    else if (localStorage.checkpoint > 0) {
       console.log("I see you came back to finish the game" + ((localStorage.name == undefined) ? ("") : (", ")) + ((localStorage.name) ?? ("")) + "!");
     }
   }

@@ -2534,11 +2534,12 @@ fetch("data.json")
 
 function newFunction() {
   if (sessionStorage.functionPrime == undefined) {
-    if ((sessionStorage.function).match(/event/sm)) {
+    if ((sessionStorage.functionParameter != undefined) && (sessionStorage.functionParameter == "event")) {
       document.getElementById("ok").onclick = function(event) {
         eval("gotIt" + sessionStorage.function + "(event)");
         compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
       }
+      sessionStorage.removeItem("functionParameter");
     }
     else {
       document.getElementById("ok").onclick = function() {
@@ -2548,11 +2549,12 @@ function newFunction() {
     }
   }
   else {
-    if ((sessionStorage.functionPrime).match(/event/sm)) {
+    if ((sessionStorage.functionPrimeParameter != undefined) && (sessionStorage.functionPrimeParameter == "event")) {
       document.getElementById("ok").onclick = function(event) {
         eval(sessionStorage.functionPrime + "(event)");
         compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
       }
+      sessionStorage.removeItem("functionPrimeParameter");
     }
     else {
       document.getElementById("ok").onclick = function() {

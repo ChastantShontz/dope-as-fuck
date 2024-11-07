@@ -4081,67 +4081,76 @@ function gotIt6(event) {
   console.log("You should click on the Ryan life, it'll be dope as fuck");
 }
 
-function speedrun(stage) {
-  sessionStorage.stage = stage;
-  if (sessionStorage.stage <= 1) {
-    for (var i = 0; i < document.getElementsByClassName("lifeCont").length; i++) {
-      if (i != 5) {
-        if ((i == 1) && (sessionStorage.stage == 1)) {
-          document.getElementById("freshmanRepresentativeLifeCont").onclick = speedrun.bind(null, 2);
-        }
-        else {
-          document.getElementsByClassName("lifeCont")[i].onclick = speedrun.bind(null, 0);
-        }
-        if (i == 1) {
-          if (document.getElementById("publishedPaper").style.pointerEvents == "none") {
-            document.getElementById("publishedPaper").style.pointerEvents = "auto";
-          }
-        }
+function speedrun0() {
+  for (var i = 0; i < document.getElementsByClassName("lifeCont").length; i++) {
+    if (i != 5) {
+      document.getElementsByClassName("lifeCont")[i].onclick = speedrun0;
+    }
+  }
+  if (document.getElementById("publishedPaper").style.pointerEvents == "none") {
+    document.getElementById("publishedPaper").style.pointerEvents = "auto";
+  }
+}
+
+function speedrun1() {
+  for (var i = 0; i < document.getElementsByClassName("lifeCont").length; i++) {
+    if (i != 5) {
+      if (i == 0) {
+        document.getElementById("freshmanRepresentativeLifeCont").onclick = speedrun2;
+      }
+      else {
+        document.getElementsByClassName("lifeCont")[i].onclick = speedrun0;
       }
     }
   }
-  else if ((sessionStorage.stage > 1) && (sessionStorage.stage < 6)) {
-    if (sessionStorage.stage == 2) {
-      document.getElementById("freshmanRepresentativeLifeCont").onclick = speedrun.bind(null, 0);
-      document.getElementById("businessManagerLifeCont").onclick = speedrun.bind(null, 3);
-    }
-    else if (sessionStorage.stage == 3) {
-      document.getElementById("businessManagerLifeCont").onclick = speedrun.bind(null, 0);
-      document.getElementById("vicePresidentLifeCont").onclick = speedrun.bind(null, 4);
-    }
-    else if (sessionStorage.stage == 4) {
-      document.getElementById("vicePresidentLifeCont").onclick = speedrun.bind(null, 0);
-      document.getElementById("historianLifeCont").onclick = speedrun.bind(null, 5);
-    }
-    else if (sessionStorage.stage == 5) {
-      document.getElementById("historianLifeCont").onclick = speedrun.bind(null, 0);
-      document.getElementById("socialMediaChairLifeCont").onclick = speedrun.bind(null, 6);
-      document.getElementById("publishedPaper").style.pointerEvents = "none";
+  if (document.getElementById("publishedPaper").style.pointerEvents == "none") {
+    document.getElementById("publishedPaper").style.pointerEvents = "auto";
+  }
+}
+
+function speedrun2() {
+  document.getElementById("freshmanRepresentativeLifeCont").onclick = speedrun0;
+  document.getElementById("businessManagerLifeCont").onclick = speedrun3;
+}
+
+function speedrun3() {
+  document.getElementById("businessManagerLifeCont").onclick = speedrun0;
+  document.getElementById("vicePresidentLifeCont").onclick = speedrun4;
+}
+
+function speedrun4() {
+  document.getElementById("vicePresidentLifeCont").onclick = speedrun0;
+  document.getElementById("historianLifeCont").onclick = speedrun5;
+}
+
+function speedrun5() {
+  document.getElementById("historianLifeCont").onclick = speedrun0;
+  document.getElementById("socialMediaChairLifeCont").onclick = speedrun6;
+  document.getElementById("publishedPaper").style.pointerEvents = "none";
+}
+
+function speedrun6() {
+  for (var i = 0; i < document.getElementsByClassName("lifeCont").length; i++) {
+    document.getElementsByClassName("lifeCont")[i].style.pointerEvents = "none";
+  }
+  for (var i = 0; i < document.getElementsByClassName("playerProfile").length; i++) {
+    if (document.getElementsByClassName("playerProfile")[i].classList.contains("toggledProfile")) {
+      hideStats((i + 1), "click");
     }
   }
-  else if (sessionStorage.stage == 6) {
-    for (var i = 0; i < document.getElementsByClassName("lifeCont").length; i++) {
-      document.getElementsByClassName("lifeCont")[i].style.pointerEvents = "none";
-    }
-    for (var i = 0; i < document.getElementsByClassName("playerProfile").length; i++) {
-      if (document.getElementsByClassName("playerProfile")[i].classList.contains("toggledProfile")) {
-        hideStats((i + 1), "click");
+  for (var i = 0; i < document.getElementsByClassName("disappearGameInt").length; i++) {
+    if (document.getElementsByClassName("disappearGameInt")[i].style.visibility == "visible") {
+      document.getElementsByClassName("disappearGameInt")[i].style.visibility = "hidden";
+      document.getElementsByClassName("disappearGameInt")[i].style.opacity = "0%";
+      document.getElementsByClassName("disappearGameInt")[i].style.transition = "all .25s ease 0s";
+      if (document.getElementsByClassName("disappearGameInt")[i].tabIndex == "0") {
+        document.getElementsByClassName("disappearGameInt")[i].tabIndex = "-1";
+        document.getElementsByClassName("disappearGameInt")[i].blur();
       }
     }
-    for (var i = 0; i < document.getElementsByClassName("disappearGameInt").length; i++) {
-      if (document.getElementsByClassName("disappearGameInt")[i].style.visibility == "visible") {
-        document.getElementsByClassName("disappearGameInt")[i].style.visibility = "hidden";
-        document.getElementsByClassName("disappearGameInt")[i].style.opacity = "0%";
-        document.getElementsByClassName("disappearGameInt")[i].style.transition = "all .25s ease 0s";
-        if (document.getElementsByClassName("disappearGameInt")[i].tabIndex == "0") {
-          document.getElementsByClassName("disappearGameInt")[i].tabIndex = "-1";
-          document.getElementsByClassName("disappearGameInt")[i].blur();
-        }
-      }
-    }
-    gotIt24();
-    console.log("Skipping 90% of the game I see, LAME!");
   }
+  gotIt24();
+  console.log("Skipping 90% of the game I see, LAME!");
 }
 
 function openSelection() {
@@ -9345,6 +9354,7 @@ function gotIt24() {
     document.getElementsByClassName("lifeCont")[i].tabIndex = "-1";
     document.getElementsByClassName("lifeCont")[i].blur();
   }
+  document.getElementById("publishedPaper").style.pointerEvents = "none";
   document.getElementById("raffle").style.display = "none";
   for (var i = 0; i < document.getElementsByClassName("bandie").length; i++) {
     if ((document.getElementsByClassName("bandie")[i] == document.getElementById("knightguard")) || (document.getElementsByClassName("bandie")[i] == document.getElementById("benVincens")) || (document.getElementsByClassName("bandie")[i] == document.getElementById("benSolo"))) {

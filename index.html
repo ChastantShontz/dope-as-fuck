@@ -424,11 +424,15 @@
             }
           </style>
           <g>
-            <ellipse cx="100" cy="100" rx="100" ry="100" pathLength="100" fill="var(--clarksonGreen)"/>
-            <ellipse cx="100" cy="100" rx="99" ry="99" pathLength="100" stroke="var(--clarksonLightGreen)" stroke-width="2" fill="none"/>
+            <ellipse cx="100" cy="100" rx="100" ry="100" fill="var(--clarksonGreen)"/>
+            <ellipse cx="100" cy="100" rx="99" ry="99" stroke="var(--clarksonLightGreen)" stroke-width="2" fill="none"/>
             <g>
-              <path d="M 5 100 Q 100 -60, 195 100 Z" id="clarksonUniversityPath"/>
-              <text><textPath href="#clarksonUniversityPath" startOffset="125" text-anchor="middle">CLARKSON UNIVERSITY</textPath></text>
+              <path d="M 20 100 C 50 0, 150 0, 180 100 Z" fill="none" id="clarksonUniversityPath"/>
+              <text fill="var(--clarksonLightGreen)" font-family="Roboto" font-size="20" font-weight="bold" text-align="center" text-anchor="middle"><textPath href="#clarksonUniversityPath" side="left" startOffset="120">CLARKSON UNIVERSITY</textPath></text>
+            </g>
+            <g>
+              <path d="M 20 100 C 20 220, 180 220, 180 100 Z" fill="none" id="est1964Path"/>
+              <text fill="var(--clarksonLightGreen)" font-family="Montserrat" font-size="16" font-weight="bold" text-align="center" text-anchor="middle"><textPath href="#est1964Path" side="left" startOffset="135">~ Est. 1964 ~</textPath></text>
             </g>
           </g>
         </svg>

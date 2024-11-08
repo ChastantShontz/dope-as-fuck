@@ -228,7 +228,7 @@ span.noDecoration {
   text-decoration: none;
 }
 
-/* Deals with stylizing the Material Icons and Material Symbols Outlined provided by Google Fonts */
+/* Deals with styling the Material Icons and Material Symbols Outlined provided by Google Fonts */
 span.material-icons,
 span.material-symbols-outlined {
   font-size: 1em;
@@ -332,7 +332,7 @@ ol.outline > ol {
   list-style: upper-alpha;
 }
 
-/* The second nested <ol> in an outline gets Arabic numbers. This would be the default without any CSS styling */
+/* The second nested <ol> in an outline gets Arabic numbers. This would be the default without any CSS styles */
 ol.outline > ol > ol {
   list-style: decimal;
 }
@@ -553,7 +553,7 @@ iframe {
   display: inline-block;
 }
 
-/* Deals with stylizing the <ruby> annotations found in Asian text and the <rt> and <rp> that often accompany them. The <ruby> is placed above the body text, aligned with its starting position, and allowed to merge with overflowing characters */
+/* Deals with styling the <ruby> annotations found in Asian text and the <rt> and <rp> that often accompany them. The <ruby> is placed above the body text, aligned with its starting position, and allowed to merge with overflowing characters */
 ruby {
   ruby-position: over;
   ruby-merge: merge;

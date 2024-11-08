@@ -356,10 +356,10 @@
       <article id="background">
         <div id="screensavers">
           <video poster="img/rap.png" preload="metadata" class="screensaver" id="rap" tabindex="-1" onended="audioNewSong()">
-            <source src="video/rap.mp4" type="video/mp4">
+            <source src="video/rap.mp4" type="video/mp4" class="screensaverSource" id="rapSource">
           </video>
           <video poster="img/clarksonUniversityPepBand.png" preload="metadata" class="screensaver" id="dancing" tabindex="-1" muted loop>
-            <source src="video/dancing.mp4" type="video/mp4">
+            <source src="video/dancing.mp4" type="video/mp4" class="screensaverSource" id="dancingSource">
           </video>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" baseProfile="full" viewBox="0, 0, 200, 200" preserveAspectRatio="xMinYMin meet" id="pepBandLogo">
@@ -3026,8 +3026,8 @@
         </div>
         <div class="modal drunkCont" id="promoCont" role="region" aria-description="A video to welcome you into the Clarkson University pep band" aria-hidden="true">
           <video poster="img/promo.png" preload="metadata" class="smallScreenPromo" id="promo" tabindex="-1" role="application" aria-label="Watch the welcome video" aria-keyshortcuts="Space f ArrowUp ArrowDown m c" onmouseenter="showPromoControls()" onmouseleave="hidePromoControls()" onfullscreenchange="fullscreenEnter()" onended="closePromo(event)" controls>
-            <source src="video/promo.mp4" type="video/mp4">
-            <track src="captions.vtt" srclang="en-us" kind="captions" label="Closed captions" default>
+            <source src="video/promo.mp4" type="video/mp4" id="promoSource">
+            <track src="captions.vtt" srclang="en-us" kind="captions" label="Closed captions" id="promoTrack" default>
           </video>
           <p class="drunkText" id="promoTitle" onmouseenter="showPromoControls()"><a href="https://www.youtube.com/watch?v=HGeQ0Afg2A0" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" target="_blank" referrerpolicy="strict-origin-when-cross-origin" type="text/html" title="Pep Band Welcome Video" class="drunkText" id="promoTitleLink" tabindex="-1" role="link" aria-label="Learn more about the Clarkson University pep band">Pep Band Welcome Video</a></p>
           <button type="button" class="drunkText" id="promoExit" tabindex="-1" role="button" aria-label="Close the welcome video" aria-keyshortcuts="Escape" onclick="closePromo(event)" onmouseenter="showPromoControls()">&times;</button>
@@ -4331,311 +4331,311 @@
       <article id="assets" aria-hidden="true">
         <section class="asset" id="audios">
           <audio preload="metadata" class="audio" id="7NationArmy">
-            <source src="audio/7NationArmy.mp3" type="audio/mp3">
+            <source src="audio/7NationArmy.mp3" type="audio/mp3" class="audioSource" id="7NationArmySource">
             <data value="S00A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="25Or6To4">
-            <source src="audio/25Or6To4.mp3" type="audio/mp3">
+            <source src="audio/25Or6To4.mp3" type="audio/mp3" class="audioSource" id="25Or6To4Source">
             <data value="S01A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="anyWayYouWantIt">
-            <source src="audio/anyWayYouWantIt.mp3" type="audio/mp3">
+            <source src="audio/anyWayYouWantIt.mp3" type="audio/mp3" class="audioSource" id="anyWayYouWantItSource">
             <data value="S02A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="apache">
-            <source src="audio/apache.mp3" type="audio/mp3">
+            <source src="audio/apache.mp3" type="audio/mp3" class="audioSource" id="apacheSource">
             <data value="S03A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="caravan">
-            <source src="audio/caravan.mp3" type="audio/mp3">
+            <source src="audio/caravan.mp3" type="audio/mp3" class="audioSource" id="caravanSource">
             <data value="S04A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="carryOnWaywardSon">
-            <source src="audio/carryOnWaywardSon.mp3" type="audio/mp3">
+            <source src="audio/carryOnWaywardSon.mp3" type="audio/mp3" class="audioSource" id="carryOnWaywardSonSource">
             <data value="S05A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="centerfold">
-            <source src="audio/centerfold.mp3" type="audio/mp3">
+            <source src="audio/centerfold.mp3" type="audio/mp3" class="audioSource" id="centerfoldSource">
             <data value="S06A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="centuries">
-            <source src="audio/centuries.mp3" type="audio/mp3">
+            <source src="audio/centuries.mp3" type="audio/mp3" class="audioSource" id="centuriesSource">
             <data value="S07A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="clarksonUniversityAlmaMater">
-            <source src="audio/clarksonUniversityAlmaMater.mp3" type="audio/mp3">
+            <source src="audio/clarksonUniversityAlmaMater.mp3" type="audio/mp3" class="audioSource" id="clarksonUniversityAlmaMaterSource">
             <data value="C00N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="comeWithMeNow">
-            <source src="audio/comeWithMeNow.mp3" type="audio/mp3">
+            <source src="audio/comeWithMeNow.mp3" type="audio/mp3" class="audioSource" id="comeWithMeNowSource">
             <data value="S08A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="conga">
-            <source src="audio/conga.mp3" type="audio/mp3">
+            <source src="audio/conga.mp3" type="audio/mp3" class="audioSource" id="congaSource">
             <data value="S09A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="crazyTrain">
-            <source src="audio/crazyTrain.mp3" type="audio/mp3">
+            <source src="audio/crazyTrain.mp3" type="audio/mp3" class="audioSource" id="crazyTrainSource">
             <data value="S10A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="cupidShuffle">
-            <source src="audio/cupidShuffle.mp3" type="audio/mp3">
+            <source src="audio/cupidShuffle.mp3" type="audio/mp3" class="audioSource" id="cupidShuffleSource">
             <data value="S11A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="everybodyNeedsSomebodyToLove">
-            <source src="audio/everybodyNeedsSomebodyToLove.mp3" type="audio/mp3">
+            <source src="audio/everybodyNeedsSomebodyToLove.mp3" type="audio/mp3" class="audioSource" id="everybodyNeedsSomebodyToLoveSource">
             <data value="C01N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="everytimeWeTouch">
-            <source src="audio/everytimeWeTouch.mp3" type="audio/mp3">
+            <source src="audio/everytimeWeTouch.mp3" type="audio/mp3" class="audioSource" id="everytimeWeTouchSource">
             <data value="S12A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="eyeOfTheTiger">
-            <source src="audio/eyeOfTheTiger.mp3" type="audio/mp3">
+            <source src="audio/eyeOfTheTiger.mp3" type="audio/mp3" class="audioSource" id="eyeOfTheTigerSource">
             <data value="C02N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="footlooseTheme">
-            <source src="audio/footlooseTheme.mp3" type="audio/mp3">
+            <source src="audio/footlooseTheme.mp3" type="audio/mp3" class="audioSource" id="footlooseThemeSource">
             <data value="C03N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="gameOfThronesTheme">
-            <source src="audio/gameOfThronesTheme.mp3" type="audio/mp3">
+            <source src="audio/gameOfThronesTheme.mp3" type="audio/mp3" class="audioSource" id="gameOfThronesThemeSource">
             <data value="C04N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="giveUpTheFunk">
-            <source src="audio/giveUpTheFunk.mp3" type="audio/mp3">
+            <source src="audio/giveUpTheFunk.mp3" type="audio/mp3" class="audioSource" id="giveUpTheFunkSource">
             <data value="S13A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="gospelJohn">
-            <source src="audio/gospelJohn.mp3" type="audio/mp3">
+            <source src="audio/gospelJohn.mp3" type="audio/mp3" class="audioSource" id="gospelJohnSource">
             <data value="S14A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="hawaii5OTheme">
-            <source src="audio/hawaii5OTheme.mp3" type="audio/mp3">
+            <source src="audio/hawaii5OTheme.mp3" type="audio/mp3" class="audioSource" id="hawaii5OThemeSource">
             <data value="S15A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="heyPachuco">
-            <source src="audio/heyPachuco.mp3" type="audio/mp3">
+            <source src="audio/heyPachuco.mp3" type="audio/mp3" class="audioSource" id="heyPachucoSource">
             <data value="S16A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="holiday">
-            <source src="audio/holiday.mp3" type="audio/mp3">
+            <source src="audio/holiday.mp3" type="audio/mp3" class="audioSource" id="holidaySource">
             <data value="S17A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="hookedOnAFeeling">
-            <source src="audio/hookedOnAFeeling.mp3" type="audio/mp3">
+            <source src="audio/hookedOnAFeeling.mp3" type="audio/mp3" class="audioSource" id="hookedOnAFeelingSource">
             <data value="S18A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="illMakeAManOutOfYou">
-            <source src="audio/illMakeAManOutOfYou.mp3" type="audio/mp3">
+            <source src="audio/illMakeAManOutOfYou.mp3" type="audio/mp3" class="audioSource" id="illMakeAManOutOfYouSource">
             <data value="C05N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="imShippingUpToBoston">
-            <source src="audio/imShippingUpToBoston.mp3" type="audio/mp3">
+            <source src="audio/imShippingUpToBoston.mp3" type="audio/mp3" class="audioSource" id="imShippingUpToBostonSource">
             <data value="S19A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="indianaJonesTheme">
-            <source src="audio/indianaJonesTheme.mp3" type="audio/mp3">
+            <source src="audio/indianaJonesTheme.mp3" type="audio/mp3" class="audioSource" id="indianaJonesThemeSource">
             <data value="C06N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="jailhouseRock">
-            <source src="audio/jailhouseRock.mp3" type="audio/mp3">
+            <source src="audio/jailhouseRock.mp3" type="audio/mp3" class="audioSource" id="jailhouseRockSource">
             <data value="C07N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="jamesBondTheme">
-            <source src="audio/jamesBondTheme.mp3" type="audio/mp3">
+            <source src="audio/jamesBondTheme.mp3" type="audio/mp3" class="audioSource" id="jamesBondThemeSource">
             <data value="C08N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="joyToTheWorld">
-            <source src="audio/joyToTheWorld.mp3" type="audio/mp3">
+            <source src="audio/joyToTheWorld.mp3" type="audio/mp3" class="audioSource" id="joyToTheWorldSource">
             <data value="S20A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="killingInTheName">
-            <source src="audio/killingInTheName.mp3" type="audio/mp3">
+            <source src="audio/killingInTheName.mp3" type="audio/mp3" class="audioSource" id="killingInTheNameSource">
             <data value="S21A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="kissHimGoodbye">
-            <source src="audio/kissHimGoodbye.mp3" type="audio/mp3">
+            <source src="audio/kissHimGoodbye.mp3" type="audio/mp3" class="audioSource" id="kissHimGoodbyeSource">
             <data value="C09N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="letsGoBand">
-            <source src="audio/letsGoBand.mp3" type="audio/mp3">
+            <source src="audio/letsGoBand.mp3" type="audio/mp3" class="audioSource" id="letsGoBandSource">
             <data value="C10N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="louieLouie">
-            <source src="audio/louieLouie.mp3" type="audio/mp3">
+            <source src="audio/louieLouie.mp3" type="audio/mp3" class="audioSource" id="louieLouieSource">
             <data value="S22A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="mortalKombatTheme">
-            <source src="audio/mortalKombatTheme.mp3" type="audio/mp3">
+            <source src="audio/mortalKombatTheme.mp3" type="audio/mp3" class="audioSource" id="mortalKombatThemeSource">
             <data value="C11N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="mosEisleyCantinaSong">
-            <source src="audio/mosEisleyCantinaSong.mp3" type="audio/mp3">
+            <source src="audio/mosEisleyCantinaSong.mp3" type="audio/mp3" class="audioSource" id="mosEisleyCantinaSongSource">
             <data value="C12N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="mrBlueSky">
-            <source src="audio/mrBlueSky.mp3" type="audio/mp3">
+            <source src="audio/mrBlueSky.mp3" type="audio/mp3" class="audioSource" id="mrBlueSkySource">
             <data value="S23A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="mrBrightside">
-            <source src="audio/mrBrightside.mp3" type="audio/mp3">
+            <source src="audio/mrBrightside.mp3" type="audio/mp3" class="audioSource" id="mrBrightsideSource">
             <data value="S24A"></data>
           </audio>
           <audio preload="metadata" class="audio" id="newYorkNewYork">
-            <source src="audio/newYorkNewYork.mp3" type="audio/mp3">
+            <source src="audio/newYorkNewYork.mp3" type="audio/mp3" class="audioSource" id="newYorkNewYorkSource">
             <data value="S00B"></data>
           </audio>
           <audio preload="metadata" class="audio" id="oCanada">
-            <source src="audio/oCanada.mp3" type="audio/mp3">
+            <source src="audio/oCanada.mp3" type="audio/mp3" class="audioSource" id="oCanadaSource">
             <data value="C13N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="oompaLoompaSong">
-            <source src="audio/oompaLoompaSong.mp3" type="audio/mp3">
+            <source src="audio/oompaLoompaSong.mp3" type="audio/mp3" class="audioSource" id="oompaLoompaSongSource">
             <data value="C14N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="peterGunnTheme">
-            <source src="audio/peterGunnTheme.mp3" type="audio/mp3">
+            <source src="audio/peterGunnTheme.mp3" type="audio/mp3" class="audioSource" id="peterGunnThemeSource">
             <data value="C15N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="pfftYouWereGone">
-            <source src="audio/pfftYouWereGone.mp3" type="audio/mp3">
+            <source src="audio/pfftYouWereGone.mp3" type="audio/mp3" class="audioSource" id="pfftYouWereGoneSource">
             <data value="S01B"></data>
           </audio>
           <audio preload="metadata" class="audio" id="piratesOfTheCaribbeanTheme">
-            <source src="audio/piratesOfTheCaribbeanTheme.mp3" type="audio/mp3">
+            <source src="audio/piratesOfTheCaribbeanTheme.mp3" type="audio/mp3" class="audioSource" id="piratesOfTheCaribbeanThemeSource">
             <data value="C16N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="poison">
-            <source src="audio/poison.mp3" type="audio/mp3">
+            <source src="audio/poison.mp3" type="audio/mp3" class="audioSource" id="poisonSource">
             <data value="S02B"></data>
           </audio>
           <audio preload="metadata" class="audio" id="proudMary">
-            <source src="audio/proudMary.mp3" type="audio/mp3">
+            <source src="audio/proudMary.mp3" type="audio/mp3" class="audioSource" id="proudMarySource">
             <data value="S03B"></data>
           </audio>
           <audio preload="metadata" class="audio" id="radarLove">
-            <source src="audio/radarLove.mp3" type="audio/mp3">
+            <source src="audio/radarLove.mp3" type="audio/mp3" class="audioSource" id="radarLoveSource">
             <data value="S04B"></data>
           </audio>
           <audio preload="metadata" class="audio" id="rockyTheme">
-            <source src="audio/rockyTheme.mp3" type="audio/mp3">
+            <source src="audio/rockyTheme.mp3" type="audio/mp3" class="audioSource" id="rockyThemeSource">
             <data value="C17N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="september">
-            <source src="audio/september.mp3" type="audio/mp3">
+            <source src="audio/september.mp3" type="audio/mp3" class="audioSource" id="septemberSource">
             <data value="S05B"></data>
           </audio>
           <audio preload="metadata" class="audio" id="soulBossaNova">
-            <source src="audio/soulBossaNova.mp3" type="audio/mp3">
+            <source src="audio/soulBossaNova.mp3" type="audio/mp3" class="audioSource" id="soulBossaNovaSource">
             <data value="S06B"></data>
           </audio>
           <audio preload="metadata" class="audio" id="soulMan">
-            <source src="audio/soulMan.mp3" type="audio/mp3">
+            <source src="audio/soulMan.mp3" type="audio/mp3" class="audioSource" id="soulManSource">
             <data value="S07B"></data>
           </audio>
           <audio preload="metadata" class="audio" id="supermanTheme">
-            <source src="audio/supermanTheme.mp3" type="audio/mp3">
+            <source src="audio/supermanTheme.mp3" type="audio/mp3" class="audioSource" id="supermanThemeSource">
             <data value="C18N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="sweetCaroline">
-            <source src="audio/sweetCaroline.mp3" type="audio/mp3">
+            <source src="audio/sweetCaroline.mp3" type="audio/mp3" class="audioSource" id="sweetCarolineSource">
             <data value="S08B"></data>
           </audio>
           <audio preload="metadata" class="audio" id="sweetDreamsAreMadeOfThis">
-            <source src="audio/sweetDreamsAreMadeOfThis.mp3" type="audio/mp3">
+            <source src="audio/sweetDreamsAreMadeOfThis.mp3" type="audio/mp3" class="audioSource" id="sweetDreamsAreMadeOfThisSource">
             <data value="S09B"></data>
           </audio>
           <audio preload="metadata" class="audio" id="takeOnMe">
-            <source src="audio/takeOnMe.mp3" type="audio/mp3">
+            <source src="audio/takeOnMe.mp3" type="audio/mp3" class="audioSource" id="takeOnMeSource">
             <data value="S10B"></data>
           </audio>
           <audio preload="metadata" class="audio" id="tequila">
-            <source src="audio/tequila.mp3" type="audio/mp3">
+            <source src="audio/tequila.mp3" type="audio/mp3" class="audioSource" id="tequilaSource">
             <data value="C19N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="tetrisTheme">
-            <source src="audio/tetrisTheme.mp3" type="audio/mp3">
+            <source src="audio/tetrisTheme.mp3" type="audio/mp3" class="audioSource" id="tetrisThemeSource">
             <data value="C20N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="theBareNecessities">
-            <source src="audio/theBareNecessities.mp3" type="audio/mp3">
+            <source src="audio/theBareNecessities.mp3" type="audio/mp3" class="audioSource" id="theBareNecessitiesSource">
             <data value="C21N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="theBluesBrothersIntroSong">
-            <source src="audio/theBluesBrothersIntroSong.mp3" type="audio/mp3">
+            <source src="audio/theBluesBrothersIntroSong.mp3" type="audio/mp3" class="audioSource" id="theBluesBrothersIntroSongSource">
             <data value="C22N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="theFinalCountdown">
-            <source src="audio/theFinalCountdown.mp3" type="audio/mp3">
+            <source src="audio/theFinalCountdown.mp3" type="audio/mp3" class="audioSource" id="theFinalCountdownSource">
             <data value="C23N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="theFlintstonesTheme">
-            <source src="audio/theFlintstonesTheme.mp3" type="audio/mp3">
+            <source src="audio/theFlintstonesTheme.mp3" type="audio/mp3" class="audioSource" id="theFlintstonesThemeSource">
             <data value="C24N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="theHeySong">
-            <source src="audio/theHeySong.mp3" type="audio/mp3">
+            <source src="audio/theHeySong.mp3" type="audio/mp3" class="audioSource" id="theHeySongSource">
             <data value="C25N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="theImpressionThatIGet">
-            <source src="audio/theImpressionThatIGet.mp3" type="audio/mp3">
+            <source src="audio/theImpressionThatIGet.mp3" type="audio/mp3" class="audioSource" id="theImpressionThatIGetSource">
             <data value="S11B"></data>
           </audio>
           <audio preload="metadata" class="audio" id="theMuppetsTheme">
-            <source src="audio/theMuppetsTheme.mp3" type="audio/mp3">
+            <source src="audio/theMuppetsTheme.mp3" type="audio/mp3" class="audioSource" id="theMuppetsThemeSource">
             <data value="C26N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="thePinkPantherTheme">
-            <source src="audio/thePinkPantherTheme.mp3" type="audio/mp3">
+            <source src="audio/thePinkPantherTheme.mp3" type="audio/mp3" class="audioSource" id="thePinkPantherThemeSource">
             <data value="C27N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="theRace">
-            <source src="audio/theRace.mp3" type="audio/mp3">
+            <source src="audio/theRace.mp3" type="audio/mp3" class="audioSource" id="theRaceSource">
             <data value="S12B"></data>
           </audio>
           <audio preload="metadata" class="audio" id="theSMMan">
-            <source src="audio/theSMMan.mp3" type="audio/mp3">
+            <source src="audio/theSMMan.mp3" type="audio/mp3" class="audioSource" id="theSMManSource">
             <data value="C28N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="theStarSpangledBanner">
-            <source src="audio/theStarSpangledBanner.mp3" type="audio/mp3">
+            <source src="audio/theStarSpangledBanner.mp3" type="audio/mp3" class="audioSource" id="theStarSpangledBannerSource">
             <data value="C29N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="theStripper">
-            <source src="audio/theStripper.mp3" type="audio/mp3">
+            <source src="audio/theStripper.mp3" type="audio/mp3" class="audioSource" id="theStripperSource">
             <data value="S13B"></data>
           </audio>
           <audio preload="metadata" class="audio" id="tijuana">
-            <source src="audio/tijuana.mp3" type="audio/mp3">
+            <source src="audio/tijuana.mp3" type="audio/mp3" class="audioSource" id="tijuanaSource">
             <data value="C30N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="touchMe">
-            <source src="audio/touchMe.mp3" type="audio/mp3">
+            <source src="audio/touchMe.mp3" type="audio/mp3" class="audioSource" id="touchMeSource">
             <data value="S14B"></data>
           </audio>
           <audio preload="metadata" class="audio" id="uptownGirl">
-            <source src="audio/uptownGirl.mp3" type="audio/mp3">
+            <source src="audio/uptownGirl.mp3" type="audio/mp3" class="audioSource" id="uptownGirlSource">
             <data value="S15B"></data>
           </audio>
           <audio preload="metadata" class="audio" id="weAreNumberOne">
-            <source src="audio/weAreNumberOne.mp3" type="audio/mp3">
+            <source src="audio/weAreNumberOne.mp3" type="audio/mp3" class="audioSource" id="weAreNumberOneSource">
             <data value="C31N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="weWillRockYou">
-            <source src="audio/weWillRockYou.mp3" type="audio/mp3">
+            <source src="audio/weWillRockYou.mp3" type="audio/mp3" class="audioSource" id="weWillRockYouSource">
             <data value="C32N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="whenTheSaintsGoMarchingIn">
-            <source src="audio/whenTheSaintsGoMarchingIn.mp3" type="audio/mp3">
+            <source src="audio/whenTheSaintsGoMarchingIn.mp3" type="audio/mp3" class="audioSource" id="whenTheSaintsGoMarchingInSource">
             <data value="C33N"></data>
           </audio>
           <audio preload="metadata" class="audio" id="ymca">
-            <source src="audio/ymca.mp3" type="audio/mp3">
+            <source src="audio/ymca.mp3" type="audio/mp3" class="audioSource" id="ymcaSource">
             <data value="S16B"></data>
           </audio>
           <audio preload="metadata" class="audio" id="zootSuitRiot">
-            <source src="audio/zootSuitRiot.mp3" type="audio/mp3">
+            <source src="audio/zootSuitRiot.mp3" type="audio/mp3" class="audioSource" id="zootSuitRiotSource">
             <data value="S17B"></data>
           </audio>
         </section>
@@ -4689,7 +4689,7 @@
               <button type="button" id="secretExit" role="button" aria-label="Kiss Alison Isko goodbye" aria-keyshortcuts="Escape" onclick="hideSecret(event)">&times;</button>
             </div>
             <audio preload="metadata" id="theOneThatGotAway" loop>
-              <source src="audio/theOneThatGotAway.mp3" type="audio/mp3">
+              <source src="audio/theOneThatGotAway.mp3" type="audio/mp3" id="theOneThatGotAwaySource">
             </audio>
           </article>
           <script charset="utf-8" type="text/javascript" class="script inlineScript" id="passwordScript">

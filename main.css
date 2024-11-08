@@ -362,6 +362,7 @@ main {
   position: fixed;
   right: .5em;
   bottom: .5em;
+  opacity: 50%;
   height: 200px;
   width: 200px;
 }

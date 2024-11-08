@@ -530,6 +530,7 @@ picture {
 
 svg {
   display: inline-block;
+  user-select: none;
 }
 
 canvas {

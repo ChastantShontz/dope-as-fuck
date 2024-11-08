@@ -234,13 +234,6 @@ span.material-symbols-outlined {
   font-size: 1em;
 }
 
-/* Deals with stylizing the <ruby> annotations found in Asian text and the <rt> and <rp> that often accompany them. The <ruby> is placed above the body text, aligned with its starting position, and allowed to merge with overflowing characters */
-ruby {
-  ruby-position: over;
-  ruby-merge: merge;
-  ruby-align: start;
-}
-
 /* Applies the custom "--blue" and "--violet" variables to the <a> instead of the browser defaults */
 
 a {
@@ -558,6 +551,13 @@ object {
 
 iframe {
   display: inline-block;
+}
+
+/* Deals with stylizing the <ruby> annotations found in Asian text and the <rt> and <rp> that often accompany them. The <ruby> is placed above the body text, aligned with its starting position, and allowed to merge with overflowing characters */
+ruby {
+  ruby-position: over;
+  ruby-merge: merge;
+  ruby-align: start;
 }
 
 /* Provides a library of convenient variables for some of the most common colors. With the exceptions of "--black" and "--white", which are the purest versions of those colors, none of these are the same as the corresponding CSS keywords */

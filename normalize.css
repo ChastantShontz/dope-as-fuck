@@ -556,8 +556,8 @@ iframe {
 /* Deals with styling the <ruby> annotations found in Asian text and the <rt> and <rp> that often accompany them. The <ruby> is placed above the body text, aligned with its starting position, and allowed to merge with overflowing characters */
 ruby {
   ruby-position: over;
-  ruby-merge: merge;
   ruby-align: start;
+  ruby-merge: merge;
 }
 
 /* Provides a library of convenient variables for some of the most common colors. With the exceptions of "--black" and "--white", which are the purest versions of those colors, none of these are the same as the corresponding CSS keywords */

@@ -532,21 +532,6 @@ svg {
   display: inline-block;
 }
 
-/* Deals with styling various elements that can be found in the <svg> */
-path,
-line,
-polyline,
-rect,
-circle,
-ellipse,
-polygon {
-  /* Sets a default stroke with "--black" and rounds the corners where multiple lines meet */
-  stroke: var(--black);
-  stroke-linejoin: round;
-  /* Removes any default filling */
-  fill: none;
-}
-
 canvas {
   display: inline-block;
 }

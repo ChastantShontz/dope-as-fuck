@@ -38,6 +38,7 @@ cp -y ../dope-as-fuck/config.yaml config.yaml
 cp -y ../dope-as-fuck/songs.pdf songs.pdf
 cp -y ../dope-as-fuck/header.cpp header.cpp
 cp -y ../dope-as-fuck/code.m code.m
+cp -y ../dope-as-fuck/source.txt source.txt
 git add --all
 git status
 
@@ -51,7 +52,7 @@ rm -r backup
 
 clear
 echo GitHub repository "dope-as-fuck" successfully compiled
-echo Initialized 507 objects {
+echo Initialized 508 objects {
 echo     folders: [
 echo         ".git",
 echo         ".vscode",
@@ -73,6 +74,7 @@ echo         "index.html",
 echo         "main.css",
 echo         "normalize.css",
 echo         "page.js",
-echo         "songs.pdf"
+echo         "songs.pdf",
+echo         "source.txt"
 echo     ]
 echo }

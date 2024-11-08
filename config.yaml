@@ -1,7 +1,7 @@
 ---
 
 procotol:
-  path: "index.html"
+  directory: "https://chastantshontz.github.io/dope-as-fuck"
   relationship: "config"
   fetchPriority: "low"
   parties:
@@ -12,6 +12,7 @@ procotol:
         country: "us"
       charSet: "utf-8"
       type: "application/yaml"
+      path: "index.html"
     destination:
       name: "index.html"
       language:
@@ -19,6 +20,7 @@ procotol:
         country: "us"
       charSet: "utf-8"
       type: "text/html"
+      path: "config.yaml"
 docType: "html"
 language:
   dialect: "en"
@@ -822,6 +824,7 @@ compatibility:
           - "songs.pdf"
           - "header.cpp"
           - "code.m"
+          - "source.txt"
           - ".gitattributes"
       instrictionalMethod: "simulation"
   twitter:
@@ -1302,6 +1305,18 @@ resources:
         - "link"
         - "externalLink"
       id: "pepBandHomeWebsite"
+    - href: "source.txt"
+      language:
+        dialect: "en"
+        country: "us"
+      charSet: "utf-8"
+      relationship: "source"
+      fetchPriority: "low"
+      type: "text/plain"
+      classList:
+        - "link"
+        - "internalLink"
+      id: "sourceText"
     - href: "code.m"
       language:
         dialect: "en"

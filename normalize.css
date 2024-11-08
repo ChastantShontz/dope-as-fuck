@@ -109,7 +109,7 @@ ins {
 }
 
 mark {
-  /* Applies the custom "--yellow" variable to the <mark> instead of the browser default */
+  /* Applies the custom "--yellow" to the <mark> instead of the browser default */
   background: var(--yellow);
   padding-left: .1em;
   padding-right: .1em;
@@ -234,7 +234,7 @@ span.material-symbols-outlined {
   font-size: 1em;
 }
 
-/* Applies the custom "--blue" and "--violet" variables to the <a> instead of the browser defaults */
+/* Applies the custom "--blue" and "--violet" to the <a> instead of the browser defaults */
 
 a {
   color: var(--blue);
@@ -530,6 +530,21 @@ picture {
 
 svg {
   display: inline-block;
+}
+
+/* Deals with styling various elements that can be found in the <svg> */
+path,
+line,
+polyline,
+rect,
+circle,
+ellipse,
+polygon {
+  /* Sets a default stroke with "--black" and rounds the corners where multiple lines meet */
+  stroke: var(--black);
+  stroke-linejoin: round;
+  /* Removes any default filling */
+  fill: none;
 }
 
 canvas {

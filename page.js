@@ -208,7 +208,7 @@ let bandies = [
   "Nao",
   "Natalie",
   "Nate",
-  "Nathan \"False Chestnut\" Stoner",
+  "Nathan Stoner",
   "Nick Adams",
   "Nick Campoli",
   "Nick Merola",
@@ -3116,8 +3116,8 @@ function changeName(event) {
   if (((event.target).innerHTML).match(/Chawgo/gsm)) {
     (event.target).innerHTML = ((event.target).innerHTML).replace(/Chawgo/gsm, "Sgt. Lord");
   }
-  if (((event.target).innerHTML).match(/Chestnut(?!\s2\.0)/gsm)) {
-    (event.target).innerHTML = ((event.target).innerHTML).replace(/Chestnut(?!\s2\.0)/gsm, "Charlie Day");
+  if (((event.target).innerHTML).match(/(?<!false\s)Chestnut(?!\s2\.0)/gism)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<!false\s)Chestnut(?!\s2\.0)/gism, "Charlie Day");
   }
   if (((event.target).innerHTML).match(/Chris Treutlein/gsm)) {
     (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<!(((^|(\.|\?|!)\s+)\(?)|((\.|,|;|:|\?|!)\s+|'|"|\()('|")))Chris Treutlein/gsm, "the Honorable Dr. Mayor Treutlein, Jr.");
@@ -3150,6 +3150,10 @@ function changeName(event) {
   }
   if (((event.target).innerHTML).match(/Marc Christensen/gsm)) {
     (event.target).innerHTML = ((event.target).innerHTML).replace(/Marc Christensen/gsm, "Peter Griffin");
+  }
+  if (((event.target).innerHTML).match(/Nathan Stoner/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<!(((^|(\.|\?|!)\s+)\(?)|((\.|,|;|:|\?|!)\s+|'|"|\()('|")))Nathan Stoner/gsm, "false Chestnut");
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<=(((^|(\.|\?|!)\s+)\(?)|((\.|,|;|:|\?|!)\s+|'|"|\()('|")))Nathan Stoner/gsm, "False Chestnut");
   }
   if (((event.target).innerHTML).match(/Oliver Queen/gsm)) {
     (event.target).innerHTML = ((event.target).innerHTML).replace(/(?<!(((^|(\.|\?|!)\s+)\(?)|((\.|,|;|:|\?|!)\s+|'|"|\()('|")))Oliver Queen/gsm, "the Arrow");
@@ -3209,6 +3213,9 @@ function changeNameBack(event) {
   }
   if (((event.target).innerHTML).match(/Peter Griffin/gsm)) {
     (event.target).innerHTML = ((event.target).innerHTML).replace(/Peter Griffin/gsm, "Marc Christensen");
+  }
+  if (((event.target).innerHTML).match(/false Chestnut/gism)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/false Chestnut/gism, "Nathan Stoner");
   }
   if (((event.target).innerHTML).match(/the Arrow(?!\skey)/gism)) {
     (event.target).innerHTML = ((event.target).innerHTML).replace(/the Arrow(?!\skey)/gism, "Oliver Queen");

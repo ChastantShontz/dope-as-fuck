@@ -11994,36 +11994,36 @@ function accountStore(field) {
       else if ((localStorage.hometown).match(/saratoga|greenwich/ism)) {
         console.log("I'm from " + localStorage.hometown + " too, small world");
       }
-      else if ((localStorage.hometown).match(/ithaca/ism)) {
-        console.log("Jump for joy, Cornell!");
-      }
-      else if ((localStorage.hometown).match(/new haven/ism)) {
-        console.log("Eww, so that's why you smell");
-      }
-      else if ((localStorage.hometown).match(/los angeles|\bla\b/ism)) {
-        console.log("Lucky...");
-      }
-      else if ((localStorage.hometown).match(/rochester|buffalo/ism)) {
-        console.log("Josh Allen is honestly overrated");
-      }
-      else if ((localStorage.hometown).match(/\bdover\b/ism)) {
-        console.log("Ben-" + localStorage.hometown + "!");
-      }
-      else if ((localStorage.hometown).match(/(atlantic|jersey) city|newark|trenton/ism)) {
-        console.log("Pump our gas!");
-      }
-      else if ((localStorage.hometown).match(/amherst|boston|cambridge|peabody|(salem|springfield).+(\bmass|\bma\b)|worcester/ism)) {
-        console.log("Mass-hole!");
-      }
-      else if ((localStorage.hometown).match(/fort lauderdale|jacksonville|miami|orlando|sarasota|s.*t\.? augustine|tallahassee|tampa/ism)) {
-        console.log("Don't you have some women to assault with a cheeseburger or something?");
-      }
-      else if ((localStorage.hometown).match(/auburn|birmingham|montgomery/ism)) {
-        console.log("Sweeeet homeee Alabama...");
-      }
-      else if ((localStorage.hometown).match(/bismarck|fargo/ism)) {
-        console.log("So North Dakota really does exist?");
-      }
+      // else if ((localStorage.hometown).match(/ithaca/ism)) {
+      //   console.log("Jump for joy, Cornell!");
+      // }
+      // else if ((localStorage.hometown).match(/new haven/ism)) {
+      //   console.log("Eww, so that's why you smell");
+      // }
+      // else if ((localStorage.hometown).match(/los angeles|\bla\b/ism)) {
+      //   console.log("Lucky...");
+      // }
+      // else if ((localStorage.hometown).match(/rochester|buffalo/ism)) {
+      //   console.log("Josh Allen is honestly overrated");
+      // }
+      // else if ((localStorage.hometown).match(/\bdover\b/ism)) {
+      //   console.log("Ben-" + localStorage.hometown + "!");
+      // }
+      // else if ((localStorage.hometown).match(/(atlantic|jersey) city|newark|trenton/ism)) {
+      //   console.log("Pump our gas!");
+      // }
+      // else if ((localStorage.hometown).match(/amherst|boston|cambridge|peabody|(salem|springfield).+(\bmass|\bma\b)|worcester/ism)) {
+      //   console.log("Mass-hole!");
+      // }
+      // else if ((localStorage.hometown).match(/fort lauderdale|jacksonville|miami|orlando|sarasota|s.*t\.? augustine|tallahassee|tampa/ism)) {
+      //   console.log("Don't you have some women to assault with a cheeseburger or something?");
+      // }
+      // else if ((localStorage.hometown).match(/auburn|birmingham|montgomery/ism)) {
+      //   console.log("Sweeeet homeee Alabama...");
+      // }
+      // else if ((localStorage.hometown).match(/bismarck|fargo/ism)) {
+      //   console.log("So North Dakota really does exist?");
+      // }
       else if ((localStorage.hometown).match(/quebec|montreal|ottawa|toronto|winnipeg|calgary|edmonton|vancouver/ism)) {
         console.log("I see we have ourselves a Canadian, eh?");
       }

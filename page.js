@@ -921,7 +921,11 @@ let quotes = [
   },
   {
     line: "Goalie of the year!",
-    author: "<b>Ethan Laferriere</b> to the Yale sieve"
+    author: "<b>Ethan Laferriere</b> (sarcastically) to the Yale sieve"
+  },
+  {
+    line: "Goals for a Saturday knight.",
+    author: "<b>Emma Russell</b> about a Yale player shaking his ass"
   },
   {
     line: "<span class=\"quoteLine\" id=\"quoteLine1\">Good news, the girls are finishing first.</span><br><span class=\"quoteLine\" id=\"quoteLine2\">That's a first.</span>",
@@ -1084,7 +1088,7 @@ let quotes = [
     author: "<b>Chestnut</b>"
   },
   {
-    line: "I'll message Charlie on Bumble and then maybe it will lead to a threesome.",
+    line: "I'll message Charlie on Bumble, and then maybe it will lead to a threesome.",
     author: "<b>Chestnut</b>"
   },
   {
@@ -1448,6 +1452,10 @@ let quotes = [
     author: "<b>Ben Solo</b>"
   },
   {
+    line: "No edging at the dinner table.",
+    author: "<b>B</b>"
+  },
+  {
     line: "No one needs to be quivering in this day and age.",
     author: "<b>Quinton</b>"
   },
@@ -1546,6 +1554,10 @@ let quotes = [
   {
     line: "Spell \"Haider\": D-A-D-D-Y.",
     author: "<b>Brandon</b>"
+  },
+  {
+    line: "Stop edging the AC duct.",
+    author: "<b>Declan</b>"
   },
   {
     line: "Stop gurgling, just swallow, please.",

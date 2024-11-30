@@ -12003,8 +12003,8 @@ function accountStore(field) {
       else if ((localStorage.hometown).match(/los angeles|\bla\b/ism)) {
         console.log("Lucky...");
       }
-      else if ((localStorage.hometown).match(/toronto/ism)) {
-        console.log("Toronto, eh?");
+      else if ((localStorage.hometown).match(/quebec|montreal|ottawa|toronto|winnipeg|calgary|edmonton|vancouver/ism)) {
+        console.log("I see we have ourselves a Canadian, eh?");
       }
       else if ((localStorage.hometown).match(/rochester|buffalo/ism)) {
         console.log("Josh Allen is honestly overrated");

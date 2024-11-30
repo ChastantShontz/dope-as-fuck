@@ -12030,7 +12030,7 @@ function accountStore(field) {
       else if ((localStorage.hometown).match(/tijuana/ism)) {
         console.log("Tijuana go to the...");
       }
-      else if ((localStorage.hometown).match(/juneau|anchorage|honolulu|(mexico|ho chi minh) city|bogota|lima|rio de janeiro|sao paulo|santiago|buenos aires|casablanca|cairo|alexandria|timbuktu|lagos|kinshasa|nairobi|luanda|johannesburg|cape town|dublin|glasgow|manchester|liverpool|london|lisbon|madrid|barcelona|paris|brussels|amsterdam|hamburg|berlin|frankfurt|munich|copenhagen|geneva|zurich|vienna|prague|budapest|venice|florence|rome|naples|vatican|stockholm|petersburg|moscow|istanbul|jerusalem|baghdad|abu dhabi|tehran|karachi|beijing|tianjin|shanghai|wuhan|chongqing|guangzhou|hong kong|pyongyang|seoul|tokyo|yokohama|delhi|mumbai|dhaka|bangkok|singapore|jakarta|manila|melbourne|sydney/ism)) {
+      else if ((localStorage.hometown).match(/mexico city|sao paulo|buenos aires|casablanca|cairo|cape town|dublin|london|madrid|paris|berlin|rome|geneva|amsterdam|copenhagen|stockholm|moscow|istanbul|abu dhabi|baghdad|tehran|beijing|hong kong|seoul|tokyo|delhi|bangkok|singapore|jakarta|sydney|wellington/ism)) {
         console.log("Wow, you're a long way from home!");
       }
       else if ((localStorage.hometown).match(/atlantis/ism)) {

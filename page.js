@@ -12003,9 +12003,6 @@ function accountStore(field) {
       else if ((localStorage.hometown).match(/los angeles|\bla\b/ism)) {
         console.log("Lucky...");
       }
-      else if ((localStorage.hometown).match(/quebec|montreal|ottawa|toronto|winnipeg|calgary|edmonton|vancouver/ism)) {
-        console.log("I see we have ourselves a Canadian, eh?");
-      }
       else if ((localStorage.hometown).match(/rochester|buffalo/ism)) {
         console.log("Josh Allen is honestly overrated");
       }
@@ -12027,11 +12024,14 @@ function accountStore(field) {
       else if ((localStorage.hometown).match(/bismarck|fargo/ism)) {
         console.log("So North Dakota really does exist?");
       }
+      else if ((localStorage.hometown).match(/quebec|montreal|ottawa|toronto|winnipeg|calgary|edmonton|vancouver/ism)) {
+        console.log("I see we have ourselves a Canadian, eh?");
+      }
+      else if ((localStorage.hometown).match(/juneau|honolulu|mexico city|sao paulo|buenos aires|casablanca|cairo|cape town|dublin|london|madrid|paris|berlin|rome|geneva|amsterdam|copenhagen|stockholm|moscow|istanbul|abu dhabi|baghdad|tehran|beijing|hong kong|seoul|tokyo|delhi|bangkok|singapore|jakarta|sydney|wellington/ism)) {
+        console.log("Wow, you're a long way from home!");
+      }
       else if ((localStorage.hometown).match(/tijuana/ism)) {
         console.log("Tijuana go to the...");
-      }
-      else if ((localStorage.hometown).match(/mexico city|sao paulo|buenos aires|casablanca|cairo|cape town|dublin|london|madrid|paris|berlin|rome|geneva|amsterdam|copenhagen|stockholm|moscow|istanbul|abu dhabi|baghdad|tehran|beijing|hong kong|seoul|tokyo|delhi|bangkok|singapore|jakarta|sydney|wellington/ism)) {
-        console.log("Wow, you're a long way from home!");
       }
       else if ((localStorage.hometown).match(/atlantis/ism)) {
         console.log("Hi, Aquaman!");

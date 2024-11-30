@@ -11992,7 +11992,7 @@ function accountStore(field) {
         console.log("Sounds like a SLUzer to me");
       }
       else if ((localStorage.hometown).match(/saratoga|greenwich/ism)) {
-        console.log("I'm from " + localStorage.hometown + " too, small world");
+        console.log("I'm from " + localStorage.hometown + " too, small world!");
       }
       // else if ((localStorage.hometown).match(/ithaca/ism)) {
       //   console.log("Jump for joy, Cornell!");

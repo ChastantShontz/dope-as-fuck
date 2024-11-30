@@ -12033,11 +12033,11 @@ function accountStore(field) {
       else if ((localStorage.hometown).match(/tijuana/ism)) {
         console.log("Tijuana go to the...");
       }
-      else if ((localStorage.hometown).match(/atlantis/ism)) {
-        console.log("Hi, Aquaman!");
-      }
       else if ((localStorage.hometown).match(/star(ling)? city/ism)) {
         console.log("Let me guess, I've failed " + localStorage.hometown + "?");
+      }
+      else if ((localStorage.hometown).match(/atlantis/ism)) {
+        console.log("Hi, Aquaman!");
       }
     }
     else if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "instrument") {

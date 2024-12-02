@@ -13155,6 +13155,10 @@ function mobileGrow(event) {
   document.getElementById("mobileCharacterImgCaption").style.fontFamily = "\"Titillium Web\", \"Roboto\", \"Arial\", sans-serif";
   document.getElementById("mobileCharacterImgCaption").style.color = "var(--black)";
   document.getElementById("mobileCharacterImgCaption").style.transition = "color 0s ease 0s";
+  document.getElementById("mobileCharacterStatsCont").style.display = "none";
+  document.getElementById("mobileCharacterStatsCont").style.flexDirection = "unset";
+  document.getElementById("mobileCharacterStatsCont").style.justifyContent = "unset";
+  document.getElementById("mobileCharacterStatsCont").style.alignItems = "unset";
   document.getElementById("mobileCharacterBio").innerHTML = "";
   document.getElementById("mobileCharacterBio").style.display = "none";
   sessionStorage.removeItem("oldSlide");
@@ -13307,6 +13311,10 @@ function slideshow() {
     document.getElementById("mobileCharacterImg").style.filter = "none";
     document.getElementById("mobileCharacterImg").style.transition = "filter 0s ease 0s";
     document.getElementById("mobileCharacterImg").style.pointerEvents = "auto";
+    document.getElementById("mobileCharacterStatsCont").style.display = "flex";
+    document.getElementById("mobileCharacterStatsCont").style.flexDirection = "row";
+    document.getElementById("mobileCharacterStatsCont").style.justifyContent = "flex-start";
+    document.getElementById("mobileCharacterStatsCont").style.alignItems = "flex-start";
     document.getElementById("mobileCharacterBio").style.display = "block";
   }
   else {

@@ -4621,10 +4621,7 @@ footer {
 }
 
 #mobileCharacterStatsCont {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
+  display: none;
 }
 
 .mobileCharacterCell {
@@ -6216,14 +6213,16 @@ only screen and (max-width: 1200px) {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      grid-template-columns: unset;
+      grid-column-gap: unset;
+      grid-template-rows: unset;
       align-items: center;
     }
 
     #mobileCharacterStatsCont {
-      justify-content: center;
+      justify-content: center !important;
       width: 100%;
       margin-bottom: 1em;
-      align-items: center;
     }
 
     #mobileCharacterStats {

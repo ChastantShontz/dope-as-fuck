@@ -2483,12 +2483,12 @@ fetch("data.json")
           }
           document.getElementsByClassName("playerName")[i].innerHTML = ((globalThis.players).men.clarkson[stats].name).substring(0, ((globalThis.players).men.clarkson[stats].name).search(/\s/sm)) + "<br><b>" + ((globalThis.players).men.clarkson[stats].name).substring(((globalThis.players).men.clarkson[stats].name).search(/\s/sm) + 1) + "</b>";
           document.getElementsByClassName("playerNumber")[i].innerHTML = "#<b>" + (globalThis.players).men.clarkson[stats].number + "</b>";
-          document.getElementsByClassName("positionDataCell")[i].innerHTML = (((globalThis.players).men.clarkson[stats].position).charAt(0)).toUpperCase() + ((globalThis.players).men.clarkson[stats].position).substring(1);
-          document.getElementsByClassName("hometownDataCell")[i].innerHTML = (globalThis.players).men.clarkson[stats].hometown;
-          document.getElementsByClassName("yearDataCell")[i].innerHTML = (((globalThis.players).men.clarkson[stats].year).charAt(0)).toUpperCase() + ((globalThis.players).men.clarkson[stats].year).substring(1);
-          document.getElementsByClassName("majorDataCell")[i].innerHTML = (((globalThis.players).men.clarkson[stats].major).charAt(0)).toUpperCase() + ((globalThis.players).men.clarkson[stats].major).substring(1);
-          document.getElementsByClassName("heightDataCell")[i].innerHTML = (globalThis.players).men.clarkson[stats].height.feet + "&prime; " + (globalThis.players).men.clarkson[stats].height.inches + "&Prime;";
-          document.getElementsByClassName("weightDataCell")[((i == 0) ? (i) : (i - 1))].innerHTML = (globalThis.players).men.clarkson[stats].weight + " lbs";
+          document.getElementsByClassName("playerPositionDataCell")[i].innerHTML = (((globalThis.players).men.clarkson[stats].position).charAt(0)).toUpperCase() + ((globalThis.players).men.clarkson[stats].position).substring(1);
+          document.getElementsByClassName("playerHometownDataCell")[i].innerHTML = (globalThis.players).men.clarkson[stats].hometown;
+          document.getElementsByClassName("playerYearDataCell")[i].innerHTML = (((globalThis.players).men.clarkson[stats].year).charAt(0)).toUpperCase() + ((globalThis.players).men.clarkson[stats].year).substring(1);
+          document.getElementsByClassName("playerMajorDataCell")[i].innerHTML = (((globalThis.players).men.clarkson[stats].major).charAt(0)).toUpperCase() + ((globalThis.players).men.clarkson[stats].major).substring(1);
+          document.getElementsByClassName("playerHeightDataCell")[i].innerHTML = (globalThis.players).men.clarkson[stats].height.feet + "&prime; " + (globalThis.players).men.clarkson[stats].height.inches + "&Prime;";
+          document.getElementsByClassName("playerWeightDataCell")[((i == 0) ? (i) : (i - 1))].innerHTML = (globalThis.players).men.clarkson[stats].weight + " lbs";
         }
         else if (college == 2) {
           if ((i >= 12) && (i <= 16)) {
@@ -2499,12 +2499,12 @@ fetch("data.json")
           }
           document.getElementsByClassName("playerName")[i].innerHTML = ((globalThis.players).men.slu[stats].name).substring(0, ((globalThis.players).men.slu[stats].name).search(/\s/sm)) + "<br><b>" + ((globalThis.players).men.slu[stats].name).substring(((globalThis.players).men.slu[stats].name).search(/\s/sm) + 1) + "</b>";
           document.getElementsByClassName("playerNumber")[i].innerHTML = "#<b>" + (globalThis.players).men.slu[stats].number + "</b>";
-          document.getElementsByClassName("positionDataCell")[i].innerHTML = (((globalThis.players).men.slu[stats].position).charAt(0)).toUpperCase() + ((globalThis.players).men.slu[stats].position).substring(1);
-          document.getElementsByClassName("hometownDataCell")[i].innerHTML = (globalThis.players).men.slu[stats].hometown;
-          document.getElementsByClassName("yearDataCell")[i].innerHTML = (((globalThis.players).men.slu[stats].year).charAt(0)).toUpperCase() + ((globalThis.players).men.slu[stats].year).substring(1);
-          document.getElementsByClassName("majorDataCell")[i].innerHTML = (((globalThis.players).men.slu[stats].major).charAt(0)).toUpperCase() + ((globalThis.players).men.slu[stats].major).substring(1);
-          document.getElementsByClassName("heightDataCell")[i].innerHTML = (globalThis.players).men.slu[stats].height.feet + "&prime; " + (globalThis.players).men.slu[stats].height.inches + "&Prime;";
-          document.getElementsByClassName("weightDataCell")[((i == 22) ? (i - 11) : (i - 6))].innerHTML = (globalThis.players).men.slu[stats].weight + " lbs";
+          document.getElementsByClassName("playerPositionDataCell")[i].innerHTML = (((globalThis.players).men.slu[stats].position).charAt(0)).toUpperCase() + ((globalThis.players).men.slu[stats].position).substring(1);
+          document.getElementsByClassName("playerHometownDataCell")[i].innerHTML = (globalThis.players).men.slu[stats].hometown;
+          document.getElementsByClassName("playerYearDataCell")[i].innerHTML = (((globalThis.players).men.slu[stats].year).charAt(0)).toUpperCase() + ((globalThis.players).men.slu[stats].year).substring(1);
+          document.getElementsByClassName("playerMajorDataCell")[i].innerHTML = (((globalThis.players).men.slu[stats].major).charAt(0)).toUpperCase() + ((globalThis.players).men.slu[stats].major).substring(1);
+          document.getElementsByClassName("playerHeightDataCell")[i].innerHTML = (globalThis.players).men.slu[stats].height.feet + "&prime; " + (globalThis.players).men.slu[stats].height.inches + "&Prime;";
+          document.getElementsByClassName("playerWeightDataCell")[((i == 22) ? (i - 11) : (i - 6))].innerHTML = (globalThis.players).men.slu[stats].weight + " lbs";
         }
       }
       else if (gender == 2) {
@@ -2517,11 +2517,11 @@ fetch("data.json")
           }
           document.getElementsByClassName("playerName")[i].innerHTML = ((globalThis.players).women.clarkson[stats].name).substring(0, ((globalThis.players).women.clarkson[stats].name).search(/\s/sm)) + "<br><b>" + ((globalThis.players).women.clarkson[stats].name).substring(((globalThis.players).women.clarkson[stats].name).search(/\s/sm) + 1) + "</b>";
           document.getElementsByClassName("playerNumber")[i].innerHTML = "#<b>" + (globalThis.players).women.clarkson[stats].number + "</b>";
-          document.getElementsByClassName("positionDataCell")[i].innerHTML = (((globalThis.players).women.clarkson[stats].position).charAt(0)).toUpperCase() + ((globalThis.players).women.clarkson[stats].position).substring(1);
-          document.getElementsByClassName("hometownDataCell")[i].innerHTML = (globalThis.players).women.clarkson[stats].hometown;
-          document.getElementsByClassName("yearDataCell")[i].innerHTML = (((globalThis.players).women.clarkson[stats].year).charAt(0)).toUpperCase() + ((globalThis.players).women.clarkson[stats].year).substring(1);
-          document.getElementsByClassName("majorDataCell")[i].innerHTML = (((globalThis.players).women.clarkson[stats].major).charAt(0)).toUpperCase() + ((globalThis.players).women.clarkson[stats].major).substring(1);
-          document.getElementsByClassName("heightDataCell")[i].innerHTML = (globalThis.players).women.clarkson[stats].height.feet + "&prime; " + (globalThis.players).women.clarkson[stats].height.inches + "&Prime;";
+          document.getElementsByClassName("playerPositionDataCell")[i].innerHTML = (((globalThis.players).women.clarkson[stats].position).charAt(0)).toUpperCase() + ((globalThis.players).women.clarkson[stats].position).substring(1);
+          document.getElementsByClassName("playerHometownDataCell")[i].innerHTML = (globalThis.players).women.clarkson[stats].hometown;
+          document.getElementsByClassName("playerYearDataCell")[i].innerHTML = (((globalThis.players).women.clarkson[stats].year).charAt(0)).toUpperCase() + ((globalThis.players).women.clarkson[stats].year).substring(1);
+          document.getElementsByClassName("playerMajorDataCell")[i].innerHTML = (((globalThis.players).women.clarkson[stats].major).charAt(0)).toUpperCase() + ((globalThis.players).women.clarkson[stats].major).substring(1);
+          document.getElementsByClassName("playerHeightDataCell")[i].innerHTML = (globalThis.players).women.clarkson[stats].height.feet + "&prime; " + (globalThis.players).women.clarkson[stats].height.inches + "&Prime;";
         }
         else if (college == 2) {
           if ((i >= 17) && (i <= 21)) {
@@ -2532,11 +2532,11 @@ fetch("data.json")
           }
           document.getElementsByClassName("playerName")[i].innerHTML = ((globalThis.players).women.slu[stats].name).substring(0, ((globalThis.players).women.slu[stats].name).search(/\s/sm)) + "<br><b>" + ((globalThis.players).women.slu[stats].name).substring(((globalThis.players).women.slu[stats].name).search(/\s/sm) + 1) + "</b>";
           document.getElementsByClassName("playerNumber")[i].innerHTML = "#<b>" + (globalThis.players).women.slu[stats].number + "</b>";
-          document.getElementsByClassName("positionDataCell")[i].innerHTML = (((globalThis.players).women.slu[stats].position).charAt(0)).toUpperCase() + ((globalThis.players).women.slu[stats].position).substring(1);
-          document.getElementsByClassName("hometownDataCell")[i].innerHTML = (globalThis.players).women.slu[stats].hometown;
-          document.getElementsByClassName("yearDataCell")[i].innerHTML = (((globalThis.players).women.slu[stats].year).charAt(0)).toUpperCase() + ((globalThis.players).women.slu[stats].year).substring(1);
-          document.getElementsByClassName("majorDataCell")[i].innerHTML = (((globalThis.players).women.slu[stats].major).charAt(0)).toUpperCase() + ((globalThis.players).women.slu[stats].major).substring(1);
-          document.getElementsByClassName("heightDataCell")[i].innerHTML = (globalThis.players).women.slu[stats].height.feet + "&prime; " + (globalThis.players).women.slu[stats].height.inches + "&Prime;";
+          document.getElementsByClassName("playerPositionDataCell")[i].innerHTML = (((globalThis.players).women.slu[stats].position).charAt(0)).toUpperCase() + ((globalThis.players).women.slu[stats].position).substring(1);
+          document.getElementsByClassName("playerHometownDataCell")[i].innerHTML = (globalThis.players).women.slu[stats].hometown;
+          document.getElementsByClassName("playerYearDataCell")[i].innerHTML = (((globalThis.players).women.slu[stats].year).charAt(0)).toUpperCase() + ((globalThis.players).women.slu[stats].year).substring(1);
+          document.getElementsByClassName("playerMajorDataCell")[i].innerHTML = (((globalThis.players).women.slu[stats].major).charAt(0)).toUpperCase() + ((globalThis.players).women.slu[stats].major).substring(1);
+          document.getElementsByClassName("playerHeightDataCell")[i].innerHTML = (globalThis.players).women.slu[stats].height.feet + "&prime; " + (globalThis.players).women.slu[stats].height.inches + "&Prime;";
         }
       }
     }
@@ -2736,8 +2736,8 @@ function gameBegins(event) {
   if ((window.innerHeight <= 600) || (window.innerWidth <= 1200)) {
     document.querySelector("main").ariaHidden = true;
     document.getElementById("urlButton").tabIndex = "0";
-    document.getElementById("mobileButton").tabIndex = "0";
-    document.getElementById("mobileImgContCont").tabIndex = "0";
+    document.getElementById("mobileCharacterButton").tabIndex = "0";
+    document.getElementById("mobileCharacterImgContCont").tabIndex = "0";
     document.getElementById("mobile").tabIndex = "0";
     document.getElementById("mobile").ariaHidden = false;
     document.onclick = unselectUrl;
@@ -13109,8 +13109,8 @@ function mobile(event) {
 function mobileShrink() {
   document.querySelector("main").ariaHidden = true;
   document.getElementById("urlButton").tabIndex = "0";
-  document.getElementById("mobileButton").tabIndex = "0";
-  document.getElementById("mobileImgContCont").tabIndex = "0";
+  document.getElementById("mobileCharacterButton").tabIndex = "0";
+  document.getElementById("mobileCharacterImgContCont").tabIndex = "0";
   document.getElementById("mobile").tabIndex = "0";
   document.getElementById("mobile").ariaHidden = false;
   if (document.getElementById("mobile").scrollHeight > document.getElementById("mobile").offsetHeight) {
@@ -13141,22 +13141,22 @@ function mobileGrow(event) {
   document.getElementById("mobile").blur();
   document.getElementById("urlButton").tabIndex = "-1";
   document.getElementById("urlButton").blur();
-  document.getElementById("mobileButtonContCont").style.marginBottom = "0";
-  document.getElementById("mobileButtonContCont").style.transition = "margin-bottom 0s ease 0s";
-  document.getElementById("mobileButton").tabIndex = "-1";
-  document.getElementById("mobileButton").blur();
-  document.getElementById("mobileImgContCont").tabIndex = "-1";
-  document.getElementById("mobileImgContCont").blur();
-  document.getElementById("mobileImg").style.background = "rgba(0, 61, 124, 50%) url(\"img/mystery.png\") center / cover";
-  document.getElementById("mobileImg").style.filter = "blur(1em)";
-  document.getElementById("mobileImg").style.transition = "all 0s ease 0s";
-  document.getElementById("mobileImg").style.pointerEvents = "none";
-  document.getElementById("mobileImgCaption").innerHTML = "Go on, try me out...";
-  document.getElementById("mobileImgCaption").style.fontFamily = "\"Titillium Web\", \"Roboto\", \"Arial\", sans-serif";
-  document.getElementById("mobileImgCaption").style.color = "var(--black)";
-  document.getElementById("mobileImgCaption").style.transition = "color 0s ease 0s";
-  document.getElementById("mobileBio").innerHTML = "";
-  document.getElementById("mobileBio").style.display = "none";
+  document.getElementById("mobileCharacterButtonContCont").style.marginBottom = "0";
+  document.getElementById("mobileCharacterButtonContCont").style.transition = "margin-bottom 0s ease 0s";
+  document.getElementById("mobileCharacterButton").tabIndex = "-1";
+  document.getElementById("mobileCharacterButton").blur();
+  document.getElementById("mobileCharacterImgContCont").tabIndex = "-1";
+  document.getElementById("mobileCharacterImgContCont").blur();
+  document.getElementById("mobileCharacterImg").style.background = "rgba(0, 61, 124, 50%) url(\"img/mystery.png\") center / cover";
+  document.getElementById("mobileCharacterImg").style.filter = "blur(1em)";
+  document.getElementById("mobileCharacterImg").style.transition = "all 0s ease 0s";
+  document.getElementById("mobileCharacterImg").style.pointerEvents = "none";
+  document.getElementById("mobileCharacterImgCaption").innerHTML = "Go on, try me out...";
+  document.getElementById("mobileCharacterImgCaption").style.fontFamily = "\"Titillium Web\", \"Roboto\", \"Arial\", sans-serif";
+  document.getElementById("mobileCharacterImgCaption").style.color = "var(--black)";
+  document.getElementById("mobileCharacterImgCaption").style.transition = "color 0s ease 0s";
+  document.getElementById("mobileCharacterBio").innerHTML = "";
+  document.getElementById("mobileCharacterBio").style.display = "none";
   sessionStorage.removeItem("oldSlide");
   sessionStorage.removeItem("newSlide");
   if ((document.getElementById("conductor").style.left != "2em") && (document.body.style.cursor == "auto")) {
@@ -13302,12 +13302,12 @@ function urlMessageExit() {
 function slideshow() {
   sessionStorage.newSlide = Math.floor(Math.random() * characters.length);
   if (sessionStorage.oldSlide == undefined) {
-    document.getElementById("mobileButtonContCont").style.marginBottom = "1em";
-    document.getElementById("mobileButtonContCont").style.transition = "margin-bottom 0s ease 0s";
-    document.getElementById("mobileImg").style.filter = "none";
-    document.getElementById("mobileImg").style.transition = "filter 0s ease 0s";
-    document.getElementById("mobileImg").style.pointerEvents = "auto";
-    document.getElementById("mobileBio").style.display = "block";
+    document.getElementById("mobileCharacterButtonContCont").style.marginBottom = "1em";
+    document.getElementById("mobileCharacterButtonContCont").style.transition = "margin-bottom 0s ease 0s";
+    document.getElementById("mobileCharacterImg").style.filter = "none";
+    document.getElementById("mobileCharacterImg").style.transition = "filter 0s ease 0s";
+    document.getElementById("mobileCharacterImg").style.pointerEvents = "auto";
+    document.getElementById("mobileCharacterBio").style.display = "block";
   }
   else {
     while (sessionStorage.newSlide == sessionStorage.oldSlide) {
@@ -13317,23 +13317,23 @@ function slideshow() {
       }
     }
   }
-  document.getElementById("mobileImg").style.background = "url(\"" + characters[sessionStorage.newSlide].image.url + "\") " + characters[sessionStorage.newSlide].image.position + " / cover";
-  document.getElementById("mobileImgCaption").innerHTML = characters[sessionStorage.newSlide].name;
+  document.getElementById("mobileCharacterImg").style.background = "url(\"" + characters[sessionStorage.newSlide].image.url + "\") " + characters[sessionStorage.newSlide].image.position + " / cover";
+  document.getElementById("mobileCharacterImgCaption").innerHTML = characters[sessionStorage.newSlide].name;
   if (characters[sessionStorage.newSlide].affiliation == "Jedi") {
-    document.getElementById("mobileImgCaption").style.fontFamily = "\"Kalam\", \"Satisfy\", \"Brush Script MT\", cursive";
-    document.getElementById("mobileImgCaption").style.color = "var(--jediBlue)";
+    document.getElementById("mobileCharacterImgCaption").style.fontFamily = "\"Kalam\", \"Satisfy\", \"Brush Script MT\", cursive";
+    document.getElementById("mobileCharacterImgCaption").style.color = "var(--jediBlue)";
   }
   else if (characters[sessionStorage.newSlide].affiliation == "Sith") {
-    document.getElementById("mobileImgCaption").style.fontFamily = "\"Wallpoet\", fantasy";
-    document.getElementById("mobileImgCaption").style.color = "var(--sithRed)";
+    document.getElementById("mobileCharacterImgCaption").style.fontFamily = "\"Wallpoet\", fantasy";
+    document.getElementById("mobileCharacterImgCaption").style.color = "var(--sithRed)";
   }
   else if (characters[sessionStorage.newSlide].affiliation == null) {
-    document.getElementById("mobileImgCaption").style.fontFamily = "\"Titillium Web\", \"Roboto\", \"Arial\", sans-serif";
-    document.getElementById("mobileImgCaption").style.color = "var(--black)";
+    document.getElementById("mobileCharacterImgCaption").style.fontFamily = "\"Titillium Web\", \"Roboto\", \"Arial\", sans-serif";
+    document.getElementById("mobileCharacterImgCaption").style.color = "var(--black)";
     console.log("THRAWN!!! Sorry, just a big fan");
   }
-  document.getElementById("mobileImgCaption").style.transition = "color 0s ease 0s";
-  document.getElementById("mobileBio").innerHTML = characters[sessionStorage.newSlide].bio;
+  document.getElementById("mobileCharacterImgCaption").style.transition = "color 0s ease 0s";
+  document.getElementById("mobileCharacterBio").innerHTML = characters[sessionStorage.newSlide].bio;
   sessionStorage.oldSlide = sessionStorage.newSlide;
   compileSound("sawtooth", ["none", 340, null, 0], ["none", .5, null, 0], .1);
 }

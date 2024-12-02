@@ -1780,12 +1780,7 @@ main {
   background: rgba(219, 198, 152, 10%);
 }
 
-.clarksonCell {
-  font-family: "Roboto", "Arial", sans-serif;
-  font-size: .9em;
-}
-
-.sluCell {
+.playerCell {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: .9em;
 }
@@ -4547,7 +4542,15 @@ footer {
   pointer-events: none;
 }
 
-#mobileButtonContCont {
+#mobileCharacter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+}
+
+#mobileCharacterButtonContCont {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -4555,7 +4558,7 @@ footer {
   align-items: flex-start;
 }
 
-#mobileButtonCont {
+#mobileCharacterButtonCont {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -4563,7 +4566,7 @@ footer {
   align-items: center;
 }
 
-#mobileButton {
+#mobileCharacterButton {
   border-radius: .25em;
   background: var(--buttonGreen);
   padding-left: .25em;
@@ -4576,11 +4579,11 @@ footer {
   font-weight: bold;
 }
 
-#mobileImgContCont {
+#mobileCharacterImgContCont {
   width: 10em;
 }
 
-#mobileImgCont {
+#mobileCharacterImgCont {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -4592,7 +4595,7 @@ footer {
   align-items: center;
 }
 
-#mobileImg {
+#mobileCharacterImg {
   border-radius: .6em;
   background: linear-gradient(rgba(0, 61, 124, 10%), rgba(0, 61, 124, 10%)) center / cover,
               url("img/mystery.png") left / cover;
@@ -4602,14 +4605,35 @@ footer {
   pointer-events: none;
 }
 
-#mobileImgCaption {
+#mobileCharacterImgCaption {
   width: 100%;
   padding-left: .25em;
   padding-right: .25em;
   font-family: "Titillium Web", "Roboto", "Arial", sans-serif;
 }
 
-#mobileBio {
+#mobileCharacterBioCont {
+  display: grid;
+  grid-template-columns: 30% 60%;
+  grid-column-gap: 10%;
+  grid-template-rows: 1fr;
+  width: 90%;
+}
+
+.mobileCharacterCell {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: .9em;
+}
+
+.mobileJediCell {
+  color: var(--jediBlue);
+}
+
+.mobileSithCell {
+  color: var(--sithRed);
+}
+
+#mobileCharacterBio {
   display: none;
   width: 100%;
   font-family: "Merriweather", "Times New Roman", serif;
@@ -6168,21 +6192,42 @@ only screen and (max-width: 1200px) {
     align-items: center;
   }
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 600px) {
     #url {
       word-break: break-all;
     }
 
-    #mobileButtonContCont {
+    #mobileCharacterButtonContCont {
       flex-direction: column;
       align-items: center;
     }
 
-    #mobileButtonCont {
+    #mobileCharacterButtonCont {
       height: 4em;
     }
 
-    #mobileBio {
+    #mobileCharacterBioCont {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    #mobileCharacterStatsCont {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 1em;
+      align-items: center;
+    }
+
+    #mobileCharacterStats {
+      width: 67%;
+    }
+
+    #mobileCharacterBio {
+      width: 100%;
       text-align: center;
     }
   }

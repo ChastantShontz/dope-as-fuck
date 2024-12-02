@@ -11994,21 +11994,21 @@ function accountStore(field) {
       else if ((localStorage.hometown).match(/saratoga|greenwich/ism)) {
         console.log("I'm from " + localStorage.hometown + " too, small world!");
       }
-      // else if ((localStorage.hometown).match(/ithaca/ism)) {
-      //   console.log("Jump for joy, Cornell!");
-      // }
-      // else if ((localStorage.hometown).match(/new haven/ism)) {
-      //   console.log("Eww, so that's why you smell");
-      // }
-      // else if ((localStorage.hometown).match(/los angeles|\bla\b/ism)) {
-      //   console.log("Lucky...");
-      // }
-      // else if ((localStorage.hometown).match(/rochester|buffalo/ism)) {
-      //   console.log("Josh Allen is honestly overrated");
-      // }
-      // else if ((localStorage.hometown).match(/\bdover\b/ism)) {
-      //   console.log("Ben-" + localStorage.hometown + "!");
-      // }
+      else if ((localStorage.hometown).match(/ithaca/ism)) {
+        console.log("Jump for joy, Cornell!");
+      }
+      else if ((localStorage.hometown).match(/new haven/ism)) {
+        console.log("Eww, so that's why you smell");
+      }
+      else if ((localStorage.hometown).match(/los angeles|\bla\b/ism)) {
+        console.log("Lucky...");
+      }
+      else if ((localStorage.hometown).match(/rochester|irondequoit|buffalo/ism)) {
+        console.log("Josh Allen is overrated, there I said it");
+      }
+      else if ((localStorage.hometown).match(/\bdover\b/ism)) {
+        console.log("Ben-" + localStorage.hometown + "!");
+      }
       else if ((localStorage.hometown).match(/boston|springfield.+(\bmass|\bma\b)/ism)) {
         console.log("Mass-hole!");
       }

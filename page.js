@@ -305,6 +305,28 @@ let characters = [
       position: "center"
     },
     alignment: "Jedi",
+    stats: {
+      aliases: null,
+      born: "116 ABY",
+      died: null,
+      species: "Human",
+      gender: "male",
+      affiliation: [
+        "New Jedi Order",
+        "Galactic Federation of Free Alliances",
+        "Bounty Hunters' Guild"
+      ],
+      relatives: [
+        "Kol Skywalker",
+        "Morrigan Corde",
+        "Gunn Yage"
+      ],
+      masters: [
+        "Wolf Sazen"
+      ],
+      apprentices: null,
+      firstAppearance: "<i>Star Wars: Legacy: Broken</i>"
+    },
     bio: "The great-grandson of Luke Skywalker, <span class=\"character mainCharacter jediMainCharacter\" id=\"cadeSkywalker\">Cade Skywalker</span> survived Darth Krayt's Jedi Purge that killed his father Kol Skywalker, despite being presumed dead. He lived on the run as a bounty hunter for many years, before eventually accepting his role as a Jedi again and killing Krayt."
   },
   {
@@ -368,6 +390,32 @@ let characters = [
       position: "top"
     },
     alignment: "Jedi",
+    stats: {
+      aliases: null,
+      born: "9 ABY, Coruscant",
+      died: null,
+      species: "Human",
+      gender: "female",
+      affiliation: [
+        "New Jedi Order",
+        "New Republic",
+        "Galactic Federation of Free Alliances",
+        "Imperial Remnant"
+      ],
+      relatives: [
+        "Han Solo",
+        "Leia Organa Solo",
+        "Jacen Solo",
+        "Anakin Solo",
+        "Jagged Fel"
+      ],
+      masters: [
+        "Mara Jade Skywalker",
+        "Kyp Durron"
+      ],
+      apprentices: null,
+      firstAppearance: "<i>The Last Command</i>"
+    },
     bio: "The daughter of Han Solo and Leia Organa Solo, <span class=\"character mainCharacter jediMainCharacter\" id=\"jainaSoloFel\">Jaina Solo Fel</span> was trained as a Jedi by Mara Jade Skywalker and fought in many conflicts, such as the Yuuzhan Vong War where her younger brother Anakin Solo was killed. When her twin brother Jacen Solo fell to the dark side and became Darth Caedus, Jaina was forced to kill him. She later married Jagged Fel, becoming the empress, and founded the Imperial Knights."
   },
   {
@@ -386,6 +434,31 @@ let characters = [
       position: "top"
     },
     alignment: "Jedi",
+    stats: {
+      aliases: null,
+      born: "7 BBY, Deyer",
+      died: null,
+      species: "Human",
+      gender: "male",
+      affiliation: [
+        "New Jedi Order",
+        "New Republic",
+        "Galactic Federation of Free Alliances"
+      ],
+      relatives: [
+        "Zeth Durron"
+      ],
+      masters: [
+        "Vima-Da-Boda",
+        "Luke Skywalker",
+        "Exar Kun"
+      ],
+      apprentices: [
+        "Miko Reglia",
+        "Jaina Solo Fel"
+      ],
+      firstAppearance: "<i>Jedi Search</i>"
+    },
     bio: "<span class=\"character mainCharacter jediMainCharacter\" id=\"kypDurron\">Kyp Durron</span> was one of the first Padawans of the New Jedi Order. During this time, he was briefly corrupted by the spirit of Exar Kun, before freeing himself of Kun's influence."
   },
   {
@@ -395,6 +468,34 @@ let characters = [
       position: "center"
     },
     alignment: "Jedi",
+    stats: {
+      aliases: null,
+      born: "17 BBY",
+      died: "40 ABY, Kavan",
+      species: "Human",
+      gender: "female",
+      affiliation: [
+        "Galactic Empire",
+        "Smugglers' Alliance",
+        "New Jedi Order",
+        "New Republic",
+        "Galactic Federation of Free Alliances"
+      ],
+      relatives: [
+        "Luke Skywalker",
+        "Ben Skywalker"
+      ],
+      masters: [
+        "Palpatine",
+        "Luke Skywalker",
+        "Kyle Katarn"
+      ],
+      apprentices: [
+        "Kyle Katarn",
+        "Jaina Solo Fel"
+      ],
+      firstAppearance: "<i>Heir to the Empire</i>"
+    },
     bio: "<span class=\"character mainCharacter jediMainCharacter\" id=\"maraJadeSkywalker\">Mara Jade Skywalker</span> was one of the Emperor's Hands and was tasked with killing Luke Skywalker, although she ended up allying with him and helping him kill Joruus C'baoth. Jade joined the New Jedi Order and married Luke, having a son named Ben Skywalker with him. She was eventually killed by Jacen Solo when he fell to the dark side and became Darth Caedus."
   },
   {
@@ -413,6 +514,30 @@ let characters = [
       position: "top"
     },
     alignment: "Jedi",
+    stats: {
+      aliases: [
+        "Jedi Exile"
+      ],
+      born: "Dantooine",
+      died: "3950 BBY, Dromund Kaas",
+      species: "Human",
+      gender: "female",
+      affiliation: [
+        "Jedi Order",
+        "Old Republic"
+      ],
+      relatives: null,
+      masters: [
+        "Vima Sunrider",
+        "Revan",
+        "Kreia"
+      ],
+      apprentices: [
+        "Mical",
+        "Visas Marr"
+      ],
+      firstAppearance: "<i>Star Wars: Knights of the Old Republic II: The Sith Lords</i>"
+    },
     bio: "<span class=\"character mainCharacter jediMainCharacter\" id=\"meetraSurik\">Meetra Surik</span> fought in the Mandalorian Wars under Revan and Alek Squinquargesimus, which resulted in her being exiled from the Jedi Order. Surviving the Jedi Purge, she joined Kreia in her quest to destroy the Sith Triumvirate. Although Kreia was eventually revealed to be Darth Traya, Surik completed her mission by killing her, Darth Nihilus, and Darth Sion. She then ventured into the Unknown Regions in search of a missing Revan, freeing him from captivity by the Sith Empire on Dromund Kaas. Revan and Surik attempted to assassinate the Sith Emperor with help from Scourge, only for Scourge to betray and kill her in order to maintain his cover. Surik's spirit later returned to destroy the Emperor once and for all inside the mind of Satele Shan."
   },
   {
@@ -422,6 +547,33 @@ let characters = [
       position: "center"
     },
     alignment: "Jedi",
+    stats: {
+      aliases: [
+        "Nomi Da-Boda"
+      ],
+      born: null,
+      died: null,
+      species: "Human",
+      gender: "female",
+      affiliation: [
+        "Jedi Order",
+        "Old Republic"
+      ],
+      relatives: [
+        "Andur Sunrider",
+        "Vima Sunrider"
+      ],
+      masters: [
+        "Thon",
+        "Vodo-Siosk Baas",
+        "Arca Jeth",
+        "Odan-Urr"
+      ],
+      apprentices: [
+        "Vima Sunrider"
+      ],
+      firstAppearance: "<i>Star Wars: Tales of the Jedi: The Saga of Nomi Sunrider</i>"
+    },
     bio: "<span class=\"character mainCharacter jediMainCharacter\" id=\"nomiSunrider\">Nomi Sunrider</span> became the Padawan of Thon after her husband Andur Sunrider was killed by pirates. She helped win the Great Sith War by stripping Ulic Qel-Droma of his Force-sensitivity and trapping Exar Kun's spirit on Yavin IV, eventually becoming the Jedi Grand Master."
   },
   {
@@ -431,6 +583,37 @@ let characters = [
       position: "center"
     },
     alignment: "Jedi",
+    stats: {
+      aliases: [
+        "Revanchist",
+        "Darth Revan"
+      ],
+      born: "3994 BBY",
+      died: "3637 BBY, Yavin 4",
+      species: "Human",
+      gender: "male",
+      affiliation: [
+        "Jedi Order",
+        "Old Republic",
+        "Reconstituted Sith Empire",
+        "Star Forge Empire",
+        "Order of Revan"
+      ],
+      relatives: [
+        "Bastila Shan",
+        "Vaner Shan"
+      ],
+      masters: [
+        "Kreia",
+        "the Sith Emperor",
+        "Bastila Shan"
+      ],
+      apprentices: [
+        "Meetra Surik",
+        "Darth Malak"
+      ],
+      firstAppearance: "<i>Star Wars: Knights of the Old Republic</i>"
+    },
     bio: "<span class=\"character mainCharacter jediMainCharacter\" id=\"revan\">Revan</span> was trained as a Jedi by Kreia and went on to fight in the Mandalorian Wars along with his friend Alek Squinquargesimus, against the Jedi Council's orders. Despite being victorious, this led to them discovering the hidden Sith Empire on Dromund Kaas and being twisted to the dark side by the Sith Emperor, becoming <span class=\"character\" id=\"darthRevan\">Darth Revan</span> and Darth Malak. Although Malak betrayed and seemingly killed Revan, he was actually saved by Bastila Shan and brainwashed into becoming a Jedi again. Revan killed Malak and married Bastila, having a son named Vaner Shan with her. He then left to confront the Emperor again, which resulted in him being captured and imprisoned for three hundred years. After being freed he was seemingly killed again, but instead of dying, was split into light and dark side halves. The dark Revan embarked on a quest to resurrect the recently killed Emperor so he could destroy him permanently, forcing the Jedi and Sith to form an alliance to stop him. Despite merging both his halves and becoming one with the Force, Revan's spirit later returned to destroy the Emperor once and for all inside the mind of Satele Shan."
   },
   {
@@ -440,6 +623,31 @@ let characters = [
       position: "left"
     },
     alignment: "Jedi",
+    stats: {
+      aliases: null,
+      born: "3699 BBY, Brentaal IV",
+      died: null,
+      species: "Human",
+      gender: "female",
+      affiliation: [
+        "Jedi Order",
+        "Old Republic"
+      ],
+      relatives: [
+        "Tasiele Shan",
+        "Theron Shan"
+      ],
+      masters: [
+        "Ngani Zho",
+        "Kao Cen Darach",
+        "Dar'Nala"
+      ],
+      apprentices: [
+        "Shigar Konshi",
+        "Alliance Commander"
+      ],
+      firstAppearance: "<i>Star Wars: The Old Republic: Threat of Peace</i>"
+    },
     bio: "A descendant of Revan and Bastila Shan, <span class=\"character mainCharacter jediMainCharacter\" id=\"sateleShan\">Satele Shan</span> fought in the Great Galactic War and eventually became the Jedi Grand Master. She was instrumental in the final destruction of the Sith Emperor when he attempted to posses her, only to be vanquished by the spirits of all his enemies."
   },
   {
@@ -449,6 +657,31 @@ let characters = [
       position: "center"
     },
     alignment: "Jedi",
+    stats: {
+      aliases: [
+        "Starkiller"
+      ],
+      born: "19 BBY, Kashyyyk",
+      died: "2 BBY, Death Star",
+      species: "Human",
+      gender: "male",
+      affiliation: [
+        "Rule of Two",
+        "Galactic Empire",
+        "Jedi Order",
+        "Alliance to Restore the Republic"
+      ],
+      relatives: [
+        "Kento Marek",
+        "Mallie Marek"
+      ],
+      masters: [
+        "Darth Vader",
+        "Rahm Kota"
+      ],
+      apprentices: null,
+      firstAppearance: "<i>Star Wars: The Force Unleashed</i>"
+    },
     bio: "Born as <span class=\"character\" id=\"galenMarek\">Galen Marek</span>, the son of Kento Marek, he was taken in by Darth Vader as a toddler after Vader killed his father. Dubbed <span class=\"character mainCharacter jediMainCharacter\" id=\"starkiller\">Starkiller</span>, he spent years hunting down rogue Jedi. After faking Starkiller's death, Vader sent him to assemble a group of rebels that would eventually become the Rebel Alliance to help overthrow Emperor Palpatine. However, Vader ended up betraying Starkiller, who turned to the light side and set out to rescue the rebels. Despite succeeding, he was forced to sacrifice himself in battle against Palpatine in order to save them."
   },
   {
@@ -485,6 +718,30 @@ let characters = [
       position: "center"
     },
     alignment: "Jedi",
+    stats: {
+      aliases: null,
+      born: null,
+      died: "3986 BBY, Rhen Var",
+      species: "Human",
+      gender: "male",
+      affiliation: [
+        "Jedi Order",
+        "Old Republic",
+        "Krath",
+        "Brotherhood of the Sith"
+      ],
+      relatives: [
+        "Cay Qel-Droma"
+      ],
+      masters: [
+        "Arca Jeth",
+        "Exar Kun"
+      ],
+      apprentices: [
+        "Vima Sunrider"
+      ],
+      firstAppearance: "<i>Star Wars: Tales of the Jedi: Ulic Qel-Droma and the Beast Wars of Onderon</i>"
+    },
     bio: "<span class=\"character mainCharacter jediMainCharacter\" id=\"ulicQelDroma\">Ulic Qel-Droma</span> was trained as a Jedi by Arca Jeth and fought in the Freedon Nadd Uprising. While infiltrating the Krath, he was seduced to the dark side by Aleema Keto. Ulic later became the apprentice of Exar Kun, and together they waged war against the Galactic Republic. However, after killing his brother Cay Qel-Droma and being stripped of his Force-sensitivity by Nomi Sunrider, Ulic returned to the light side and helped defeat Kun. He later trained Nomi's daughter Vima Sunrider, before being killed by Hoggon."
   }
 ];

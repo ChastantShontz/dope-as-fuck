@@ -336,6 +336,34 @@ let characters = [
       position: "top"
     },
     alignment: "Sith",
+    stats: {
+      aliases: [
+        "Dessel",
+        "Bane"
+      ],
+      born: "1028 BBY, Apatros",
+      died: "980 BBY, Ambria",
+      species: "Human",
+      gender: "male",
+      affiliation: [
+        "Outer Rim Oreworks Company",
+        "Brotherhood of Darkness",
+        "Rule of Two"
+      ],
+      relatives: [
+        "Hurst"
+      ],
+      masters: [
+        "Qordis",
+        "Kas'im",
+        "Githany"
+      ],
+      apprentices: [
+        "Darth Zannah",
+        "Darth Cognus"
+      ],
+      firstAppearance: "<i>Bane of the Sith</i>"
+    },
     bio: "Born as <span class=\"character\" id=\"dessel\">Dessel</span>, he grew up mining cortosis before joining the Brotherhood of Darkness as a foot soldier. When his Force-sensitivity was discovered, he was enrolled in the Sith Academy and adopted the name <span class=\"character mainCharacter sithMainCharacter\" id=\"darthBane\">Darth Bane</span>. Realizing that infighting had made the Sith weak, he orchestrated their destruction via the thought bomb ritual and established the Rule of Two with his apprentice Darth Zannah. Bane was eventually killed by Zannah, who continued his lineage with Darth Cognus."
   },
   {
@@ -345,6 +373,40 @@ let characters = [
       position: "top"
     },
     alignment: "Sith",
+    stats: {
+      aliases: [
+        "Jacen Solo"
+      ],
+      born: "9 ABY, Coruscant",
+      died: "41 ABY, <i>Anakin Solo</i>",
+      species: "Human",
+      gender: "male",
+      affiliation: [
+        "New Jedi Order",
+        "New Republic",
+        "Galactic Federation of Free Alliances",
+        "Hapes Consortium",
+        "Rule of Two"
+      ],
+      relatives: [
+        "Han Solo",
+        "Leia Organa Solo",
+        "Jaina Solo Fel",
+        "Anakin Solo",
+        "Allana Solo"
+      ],
+      masters: [
+        "Luke Skywalker",
+        "Vergere",
+        "Lumiya"
+      ],
+      apprentices: [
+        "Nelani Dinn",
+        "Ben Skywalker",
+        "Tahiri Veila"
+      ],
+      firstAppearance: "<i>The Last Command</i>"
+    },
     bio: "Born as <span class=\"character\" id=\"jacenSolo\">Jacen Solo</span>, the son of Han Solo and Leia Organa, he was trained as a Jedi by Luke Skywalker and fought in many conflicts, such as the Yuuzhan Vong War where his younger brother Anakin Solo was killed. He also sired a secret daughter named Allana Solo with Tenel Ka Djo. However, Jacen was seduced to the dark side by Lumiya and declared himself <span class=\"character mainCharacter sithMainCharacter\" id=\"darthCaedus\">Darth Caedus</span> after murdering Mara Jade Skywalker. Despite usurping control of the Galactic Alliance, he was killed by his twin sister Jaina Solo."
   },
   {
@@ -354,6 +416,36 @@ let characters = [
       position: "center"
     },
     alignment: "Sith",
+    stats: {
+      aliases: [
+        "A'Sharad Hett"
+      ],
+      born: "47 BBY, Tatooine",
+      died: "138 ABY, Coruscant",
+      species: "Human",
+      gender: "male",
+      affiliation: [
+        "Tusken Raiders",
+        "Jedi Order",
+        "Galactic Republic",
+        "One Sith"
+      ],
+      relatives: [
+        "Sharad Hett",
+        "K'Sheek"
+      ],
+      masters: [
+        "Sharad Hett",
+        "Ki-Adi-Mundi",
+        "An'ya Kuro",
+        "XoXaan",
+        "Vergere"
+      ],
+      apprentices: [
+        "Bhat Jul"
+      ],
+      firstAppearance: "<i>Star Wars: Republic: Outlander</i>"
+    },
     bio: "Born as <span class=\"character\" id=\"asharadHett\">A'Sharad Hett</span>, the son of Sharad Hett, he was raised as a Tusken Raider until his father was killed by Aurra Sing. Hett was then trained as a Jedi by Ki-Adi-Mundi, fighting in the Clone Wars and surviving the Jedi Purge. After some time as a Tusken Raider that ended when he was driven off of Tatooine by Obi-Wan Kenobi, he was captured by the Yuuzhan Vong. There, Hett was seduced to the dark side by Vergere and declared himself <span class=\"character mainCharacter sithMainCharacter\" id=\"darthKrayt\">Darth Krayt</span>, founding the One Sith. After lying in wait for over one hundred years, the One Sith revealed themselves and brought about another Jedi Purge. Krayt was betrayed and murdered by Darth Wyyrlok III but managed to resurrect himself, only to be killed permanently by Cade Skywalker."
   },
   {
@@ -363,6 +455,33 @@ let characters = [
       position: "center"
     },
     alignment: "Sith",
+    stats: {
+      aliases: [
+        "Alek Squinquargesimus",
+        "Squint",
+        "Malak"
+      ],
+      born: "Quelii",
+      died: "3956 BBY, Star Forge",
+      species: "Human",
+      gender: "male",
+      affiliation: [
+        "Jedi Order",
+        "Old Republic",
+        "Reconstituted Sith Empire",
+        "Star Forge Empire"
+      ],
+      relatives: null,
+      masters: [
+        "the Sith Emperor",
+        "Darth Revan"
+      ],
+      apprentices: [
+        "Darth Bandon",
+        "Bastila Shan"
+      ],
+      firstAppearance: "<i>Star Wars: Knights of the Old Republic</i>"
+    },
     bio: "As the Jedi <span class=\"character\" id=\"alekSquinquargesimus\">Alek Squinquargesimus</span>, he fought in the Mandalorian Wars along with his friend Revan, against the Jedi Council's orders. Despite being victorious, this led to them discovering the hidden Sith Empire on Dromund Kaas and being twisted to the dark side by the Sith Emperor, becoming Darth Revan and <span class=\"character mainCharacter sithMainCharacter\" id=\"darthMalak\">Darth Malak</span>. Although Malak betrayed and seemingly killed Revan, he was instead brought back to the light side and killed Malak."
   },
   {
@@ -372,6 +491,24 @@ let characters = [
       position: "top"
     },
     alignment: "Sith",
+    stats: {
+      aliases: null,
+      born: null,
+      died: "3951 BBY, <i>Ravager</i>",
+      species: "Human",
+      gender: "male",
+      affiliation: [
+        "Sith Triumvirate"
+      ],
+      relatives: null,
+      masters: [
+        "Darth Traya"
+      ],
+      apprentices: [
+        "Visas Marr"
+      ],
+      firstAppearance: "<i>Star Wars: Knights of the Old Republic II: The Sith Lords</i>"
+    },
     bio: "<span class=\"character mainCharacter sithMainCharacter\" id=\"darthNihilus\">Darth Nihilus</span> was on Malachor V when the Mass Shadow Generator was activated, transforming him into a wound in the Force that had to drain the life essence of other to survive. As part of the Sith Triumvirate with Darth Traya and Darth Sion, he brought about a Jedi Purge, but was killed by a surviving Meetra Surik."
   },
   {
@@ -381,6 +518,29 @@ let characters = [
       position: "center"
     },
     alignment: "Sith",
+    stats: {
+      aliases: [
+        "Hego Damask II"
+      ],
+      born: "Mygeeto",
+      died: "32 BBY, Coruscant",
+      species: "Muun",
+      gender: "male",
+      affiliation: [
+        "InterGalactic Banking Clan",
+        "Rule of Two"
+      ],
+      relatives: [
+        "Caar Damask"
+      ],
+      masters: [
+        "Darth Tenebrous"
+      ],
+      apprentices: [
+        "Palpatine"
+      ],
+      firstAppearance: "<i>The Tenebrous Way</i>"
+    },
     bio: "Born as <span class=\"character\" id=\"hegoDamaskIi\">Hego Damask II</span>, his conception was engineered by Darth Tenebrous to create a powerful apprentice. As <span class=\"character mainCharacter sithMainCharacter\" id=\"darthPlagueis\">Darth Plagueis</span>, he eventually killed Tenebrous and took an apprentice of his own with Darth Sidious. However, despite his best attempts to achieve immortality, Sidious killed him in his sleep."
   },
   {
@@ -425,7 +585,24 @@ let characters = [
       position: "center"
     },
     alignment: "Sith",
-    bio: "<span class=\"character mainCharacter sithMainCharacter\" id=\"karnessMuur\">Karness Muur</span> was one of the original Jedi Exiles who fought in the Hundred-Year Darkness and later founded the Sith Empire. He was able to survive in the body of Celeste Mourne for over four thousand years via his Muur Talisman, until it was destroyed by Cade Skywalker."
+    stats: {
+      aliases: null,
+      born: null,
+      died: null,
+      species: null,
+      gender: "male",
+      affiliation: [
+        "Jedi Order",
+        "Old Republic",
+        "Jedi Exiles",
+        "Old Sith Empire"
+      ],
+      relatives: null,
+      masters: null,
+      apprentices: null,
+      firstAppearance: "<i>Star Wars: Knights of the Old Republic: Vector</i>"
+    },
+    bio: "<span class=\"character mainCharacter sithMainCharacter\" id=\"karnessMuur\">Karness Muur</span> was one of the original Jedi Exiles who fought in the Hundred-Year Darkness and later founded the Sith Empire. He was able to survive in the body of Celeste Morne for over four thousand years via his Muur Talisman, until it was destroyed by Cade Skywalker."
   },
   {
     name: "Kyp Durron",
@@ -505,6 +682,23 @@ let characters = [
       position: "top"
     },
     alignment: "Sith",
+    stats: {
+      aliases: null,
+      born: null,
+      died: "5000 BBY",
+      species: "Human-Sith hybrid",
+      gender: "male",
+      affiliation: [
+        "Old Sith Empire",
+        "Disciples of Ragnos"
+      ],
+      relatives: null,
+      masters: null,
+      apprentices: [
+        "Tavion Axmis"
+      ],
+      firstAppearance: "<i>Star Wars: Tales of the Jedi: Dark Lords of the Sith</i>"
+    },
     bio: "<span class=\"character mainCharacter sithMainCharacter\" id=\"markaRagnos\">Marka Ragnos</span> ruled over the Sith Empire for one hundred years during the Golden Age of the Sith, before dying of natural causes. He attempted to resurrect himself over five thousand years later with help from Tavion Axmis and her Disciples of Ragnos, but was thwarted by Jaden Korr."
   },
   {
@@ -643,8 +837,7 @@ let characters = [
         "Dar'Nala"
       ],
       apprentices: [
-        "Shigar Konshi",
-        "Alliance Commander"
+        "Shigar Konshi"
       ],
       firstAppearance: "<i>Star Wars: The Old Republic: Threat of Peace</i>"
     },
@@ -691,6 +884,39 @@ let characters = [
       position: "center"
     },
     alignment: "Sith",
+    stats: {
+      aliases: [
+        "Tenebrae",
+        "Vitiate",
+        "Valkorion"
+      ],
+      born: "5113 BBY, Medriaas",
+      died: "3626 BBY, Satele Shan's mind",
+      species: "Sith",
+      gender: "male",
+      affiliation: [
+        "Old Sith Empire",
+        "Reconstituted Sith Empire",
+        "Eternal Empire",
+        "Alliance Against Zakuul"
+      ],
+      relatives: [
+        "Dramath",
+        "Dramath the Second",
+        "Senya Tirall",
+        "Arcann",
+        "Thexan",
+        "Vaylin"
+      ],
+      masters: null,
+      apprentices: [
+        "Darth Revan",
+        "Darth Malak",
+        "Scourge",
+        "Exal Kressh"
+      ],
+      firstAppearance: "<i>Star Wars: The Old Republic: Blood of the Empire</i>"
+    },
     bio: "Born as <span class=\"character\" id=\"tenebrae\">Tenebrae</span>, he killed his father Dramath and conquered his homeworld of Medriaas by the age of thirteen, taking on the name <span class=\"character\" id=\"vitiate\">Vitiate</span>. Following the Great Hyperspace War, Vitiate drained the life essence of every living thing on Medriaas in a ritual that granted him immortality. Declaring himself <span class=\"character mainCharacter sithMainCharacter\" id=\"theSithEmperor\">the Sith Emperor</span>, he then led the remnants of the Sith Empire to Dromund Kaas, where they spend over one thousand years rebuilding. When they were discovered by Revan and Alek Squinquargesimus, the Emperor twisted them to the dark side and sent them back to invade the Galactic Republic as Darth Revan and Darth Malak. After another three hundred years, the Empire revealed itself and waged war against the Republic, before suing for peace with the Treaty of Coruscant. The Emperor attempted to perform a ritual that would eradicate all life in the universe, but was seemingly killed by the Hero of Tython with help from Scourge. However, the Emperor's spirit survived and continued to wreak havoc while being hunted by a redeemed Revan. The Emperor later adopted the persona of <span class=\"character\" id=\"valkorion\">Valkorion</span> and waged war against both the Republic and the Sith with his Eternal Empire. He was betrayed and murdered by his son Arcann but survived yet again by containing his spirit in the Outlander, guiding him on his quest to retake the Eternal Throne. Valkorion was finally destroyed once and for all when he attempted to possess Satele Shan and was vanquished by the spirits of all his enemies."
   },
   {
@@ -709,6 +935,24 @@ let characters = [
       position: "center"
     },
     alignment: "Sith",
+    stats: {
+      aliases: null,
+      born: null,
+      died: "5640 BBY",
+      species: null,
+      gender: "male",
+      affiliation: [
+        "Old Sith Empire"
+      ],
+      relatives: null,
+      masters: null,
+      apprentices: [
+        "Khem Val",
+        "Aloysius Kallig",
+        "Ortan Cela"
+      ],
+      firstAppearance: "<i>Star Wars: The Old Republic: Shadow of Revan</i>"
+    },
     bio: "<span class=\"character mainCharacter sithMainCharacter\" id=\"tulakHord\">Tulak Hord</span> was renowned as the greatest warrior of the Sith Empire, conquering over one hundred planets and killing over one thousand Jedi before being betrayed and murdered by Ortan Cela."
   },
   {

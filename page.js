@@ -304,7 +304,7 @@ let characters = [
       url: "img/cadeSkywalker.png",
       position: "center"
     },
-    affiliation: "Jedi",
+    alignment: "Jedi",
     bio: "The great-grandson of Luke Skywalker, <span class=\"character mainCharacter jediMainCharacter\" id=\"cadeSkywalker\">Cade Skywalker</span> survived Darth Krayt's Jedi Purge that killed his father Kol Skywalker, despite being presumed dead. He lived on the run as a bounty hunter for many years, before eventually accepting his role as a Jedi again and killing Krayt."
   },
   {
@@ -313,7 +313,7 @@ let characters = [
       url: "img/darthBane.png",
       position: "top"
     },
-    affiliation: "Sith",
+    alignment: "Sith",
     bio: "Born as <span class=\"character\" id=\"dessel\">Dessel</span>, he grew up mining cortosis before joining the Brotherhood of Darkness as a foot soldier. When his Force-sensitivity was discovered, he was enrolled in the Sith Academy and adopted the name <span class=\"character mainCharacter sithMainCharacter\" id=\"darthBane\">Darth Bane</span>. Realizing that infighting had made the Sith weak, he orchestrated their destruction via the thought bomb ritual and established the Rule of Two with his apprentice Darth Zannah. Bane was eventually killed by Zannah, who continued his lineage with Darth Cognus."
   },
   {
@@ -322,7 +322,7 @@ let characters = [
       url: "img/darthCaedus.png",
       position: "top"
     },
-    affiliation: "Sith",
+    alignment: "Sith",
     bio: "Born as <span class=\"character\" id=\"jacenSolo\">Jacen Solo</span>, the son of Han Solo and Leia Organa, he was trained as a Jedi by Luke Skywalker and fought in many conflicts, such as the Yuuzhan Vong War where his younger brother Anakin Solo was killed. He also sired a secret daughter named Allana Solo with Tenel Ka Djo. However, Jacen was seduced to the dark side by Lumiya and declared himself <span class=\"character mainCharacter sithMainCharacter\" id=\"darthCaedus\">Darth Caedus</span> after murdering Mara Jade Skywalker. Despite usurping control of the Galactic Alliance, he was killed by his twin sister Jaina Solo."
   },
   {
@@ -331,7 +331,7 @@ let characters = [
       url: "img/darthKrayt.png",
       position: "center"
     },
-    affiliation: "Sith",
+    alignment: "Sith",
     bio: "Born as <span class=\"character\" id=\"asharadHett\">A'Sharad Hett</span>, the son of Sharad Hett, he was raised as a Tusken Raider until his father was killed by Aurra Sing. Hett was then trained as a Jedi by Ki-Adi-Mundi, fighting in the Clone Wars and surviving the Jedi Purge. After some time as a Tusken Raider that ended when he was driven off of Tatooine by Obi-Wan Kenobi, he was captured by the Yuuzhan Vong. There, Hett was seduced to the dark side by Vergere and declared himself <span class=\"character mainCharacter sithMainCharacter\" id=\"darthKrayt\">Darth Krayt</span>, founding the One Sith. After lying in wait for over one hundred years, the One Sith revealed themselves and brought about another Jedi Purge. Krayt was betrayed and murdered by Darth Wyyrlok III but managed to resurrect himself, only to be killed permanently by Cade Skywalker."
   },
   {
@@ -340,7 +340,7 @@ let characters = [
       url: "img/darthMalak.png",
       position: "center"
     },
-    affiliation: "Sith",
+    alignment: "Sith",
     bio: "As the Jedi <span class=\"character\" id=\"alekSquinquargesimus\">Alek Squinquargesimus</span>, he fought in the Mandalorian Wars along with his friend Revan, against the Jedi Council's orders. Despite being victorious, this led to them discovering the hidden Sith Empire on Dromund Kaas and being twisted to the dark side by the Sith Emperor, becoming Darth Revan and <span class=\"character mainCharacter sithMainCharacter\" id=\"darthMalak\">Darth Malak</span>. Although Malak betrayed and seemingly killed Revan, he was instead brought back to the light side and killed Malak."
   },
   {
@@ -349,7 +349,7 @@ let characters = [
       url: "img/darthNihilus.png",
       position: "top"
     },
-    affiliation: "Sith",
+    alignment: "Sith",
     bio: "<span class=\"character mainCharacter sithMainCharacter\" id=\"darthNihilus\">Darth Nihilus</span> was on Malachor V when the Mass Shadow Generator was activated, transforming him into a wound in the Force that had to drain the life essence of other to survive. As part of the Sith Triumvirate with Darth Traya and Darth Sion, he brought about a Jedi Purge, but was killed by a surviving Meetra Surik."
   },
   {
@@ -358,7 +358,7 @@ let characters = [
       url: "img/darthPlagueis.png",
       position: "center"
     },
-    affiliation: "Sith",
+    alignment: "Sith",
     bio: "Born as <span class=\"character\" id=\"hegoDamaskIi\">Hego Damask II</span>, his conception was engineered by Darth Tenebrous to create a powerful apprentice. As <span class=\"character mainCharacter sithMainCharacter\" id=\"darthPlagueis\">Darth Plagueis</span>, he eventually killed Tenebrous and took an apprentice of his own with Darth Sidious. However, despite his best attempts to achieve immortality, Sidious killed him in his sleep."
   },
   {
@@ -367,7 +367,7 @@ let characters = [
       url: "img/jainaSoloFel.png",
       position: "top"
     },
-    affiliation: "Jedi",
+    alignment: "Jedi",
     bio: "The daughter of Han Solo and Leia Organa Solo, <span class=\"character mainCharacter jediMainCharacter\" id=\"jainaSoloFel\">Jaina Solo Fel</span> was trained as a Jedi by Mara Jade Skywalker and fought in many conflicts, such as the Yuuzhan Vong War where her younger brother Anakin Solo was killed. When her twin brother Jacen Solo fell to the dark side and became Darth Caedus, Jaina was forced to kill him. She later married Jagged Fel, becoming the empress, and founded the Imperial Knights."
   },
   {
@@ -376,7 +376,7 @@ let characters = [
       url: "img/karnessMuur.png",
       position: "center"
     },
-    affiliation: "Sith",
+    alignment: "Sith",
     bio: "<span class=\"character mainCharacter sithMainCharacter\" id=\"karnessMuur\">Karness Muur</span> was one of the original Jedi Exiles who fought in the Hundred-Year Darkness and later founded the Sith Empire. He was able to survive in the body of Celeste Mourne for over four thousand years via his Muur Talisman, until it was destroyed by Cade Skywalker."
   },
   {
@@ -385,7 +385,7 @@ let characters = [
       url: "img/kypDurron.png",
       position: "top"
     },
-    affiliation: "Jedi",
+    alignment: "Jedi",
     bio: "<span class=\"character mainCharacter jediMainCharacter\" id=\"kypDurron\">Kyp Durron</span> was one of the first Padawans of the New Jedi Order. During this time, he was briefly corrupted by the spirit of Exar Kun, before freeing himself of Kun's influence."
   },
   {
@@ -394,7 +394,7 @@ let characters = [
       url: "img/maraJadeSkywalker.png",
       position: "center"
     },
-    affiliation: "Jedi",
+    alignment: "Jedi",
     bio: "<span class=\"character mainCharacter jediMainCharacter\" id=\"maraJadeSkywalker\">Mara Jade Skywalker</span> was one of the Emperor's Hands and was tasked with killing Luke Skywalker, although she ended up allying with him and helping him kill Joruus C'baoth. Jade joined the New Jedi Order and married Luke, having a son named Ben Skywalker with him. She was eventually killed by Jacen Solo when he fell to the dark side and became Darth Caedus."
   },
   {
@@ -403,7 +403,7 @@ let characters = [
       url: "img/markaRagnos.png",
       position: "top"
     },
-    affiliation: "Sith",
+    alignment: "Sith",
     bio: "<span class=\"character mainCharacter sithMainCharacter\" id=\"markaRagnos\">Marka Ragnos</span> ruled over the Sith Empire for one hundred years during the Golden Age of the Sith, before dying of natural causes. He attempted to resurrect himself over five thousand years later with help from Tavion Axmis and her Disciples of Ragnos, but was thwarted by Jaden Korr."
   },
   {
@@ -412,7 +412,7 @@ let characters = [
       url: "img/meetraSurik.png",
       position: "top"
     },
-    affiliation: "Jedi",
+    alignment: "Jedi",
     bio: "<span class=\"character mainCharacter jediMainCharacter\" id=\"meetraSurik\">Meetra Surik</span> fought in the Mandalorian Wars under Revan and Alek Squinquargesimus, which resulted in her being exiled from the Jedi Order. Surviving the Jedi Purge, she joined Kreia in her quest to destroy the Sith Triumvirate. Although Kreia was eventually revealed to be Darth Traya, Surik completed her mission by killing her, Darth Nihilus, and Darth Sion. She then ventured into the Unknown Regions in search of a missing Revan, freeing him from captivity by the Sith Empire on Dromund Kaas. Revan and Surik attempted to assassinate the Sith Emperor with help from Scourge, only for Scourge to betray and kill her in order to maintain his cover. Surik's spirit later returned to destroy the Emperor once and for all inside the mind of Satele Shan."
   },
   {
@@ -421,7 +421,7 @@ let characters = [
       url: "img/nomiSunrider.png",
       position: "center"
     },
-    affiliation: "Jedi",
+    alignment: "Jedi",
     bio: "<span class=\"character mainCharacter jediMainCharacter\" id=\"nomiSunrider\">Nomi Sunrider</span> became the Padawan of Thon after her husband Andur Sunrider was killed by pirates. She helped win the Great Sith War by stripping Ulic Qel-Droma of his Force-sensitivity and trapping Exar Kun's spirit on Yavin IV, eventually becoming the Jedi Grand Master."
   },
   {
@@ -430,7 +430,7 @@ let characters = [
       url: "img/revan.png",
       position: "center"
     },
-    affiliation: "Jedi",
+    alignment: "Jedi",
     bio: "<span class=\"character mainCharacter jediMainCharacter\" id=\"revan\">Revan</span> was trained as a Jedi by Kreia and went on to fight in the Mandalorian Wars along with his friend Alek Squinquargesimus, against the Jedi Council's orders. Despite being victorious, this led to them discovering the hidden Sith Empire on Dromund Kaas and being twisted to the dark side by the Sith Emperor, becoming <span class=\"character\" id=\"darthRevan\">Darth Revan</span> and Darth Malak. Although Malak betrayed and seemingly killed Revan, he was actually saved by Bastila Shan and brainwashed into becoming a Jedi again. Revan killed Malak and married Bastila, having a son named Vaner Shan with her. He then left to confront the Emperor again, which resulted in him being captured and imprisoned for three hundred years. After being freed he was seemingly killed again, but instead of dying, was split into light and dark side halves. The dark Revan embarked on a quest to resurrect the recently killed Emperor so he could destroy him permanently, forcing the Jedi and Sith to form an alliance to stop him. Despite merging both his halves and becoming one with the Force, Revan's spirit later returned to destroy the Emperor once and for all inside the mind of Satele Shan."
   },
   {
@@ -439,7 +439,7 @@ let characters = [
       url: "img/sateleShan.png",
       position: "left"
     },
-    affiliation: "Jedi",
+    alignment: "Jedi",
     bio: "A descendant of Revan and Bastila Shan, <span class=\"character mainCharacter jediMainCharacter\" id=\"sateleShan\">Satele Shan</span> fought in the Great Galactic War and eventually became the Jedi Grand Master. She was instrumental in the final destruction of the Sith Emperor when he attempted to posses her, only to be vanquished by the spirits of all his enemies."
   },
   {
@@ -448,7 +448,7 @@ let characters = [
       url: "img/starkiller.png",
       position: "center"
     },
-    affiliation: "Jedi",
+    alignment: "Jedi",
     bio: "Born as <span class=\"character\" id=\"galenMarek\">Galen Marek</span>, the son of Kento Marek, he was taken in by Darth Vader as a toddler after Vader killed his father. Dubbed <span class=\"character mainCharacter jediMainCharacter\" id=\"starkiller\">Starkiller</span>, he spent years hunting down rogue Jedi. After faking Starkiller's death, Vader sent him to assemble a group of rebels that would eventually become the Rebel Alliance to help overthrow Emperor Palpatine. However, Vader ended up betraying Starkiller, who turned to the light side and set out to rescue the rebels. Despite succeeding, he was forced to sacrifice himself in battle against Palpatine in order to save them."
   },
   {
@@ -457,7 +457,7 @@ let characters = [
       url: "img/theSithEmperor.png",
       position: "center"
     },
-    affiliation: "Sith",
+    alignment: "Sith",
     bio: "Born as <span class=\"character\" id=\"tenebrae\">Tenebrae</span>, he killed his father Dramath and conquered his homeworld of Medriaas by the age of thirteen, taking on the name <span class=\"character\" id=\"vitiate\">Vitiate</span>. Following the Great Hyperspace War, Vitiate drained the life essence of every living thing on Medriaas in a ritual that granted him immortality. Declaring himself <span class=\"character mainCharacter sithMainCharacter\" id=\"theSithEmperor\">the Sith Emperor</span>, he then led the remnants of the Sith Empire to Dromund Kaas, where they spend over one thousand years rebuilding. When they were discovered by Revan and Alek Squinquargesimus, the Emperor twisted them to the dark side and sent them back to invade the Galactic Republic as Darth Revan and Darth Malak. After another three hundred years, the Empire revealed itself and waged war against the Republic, before suing for peace with the Treaty of Coruscant. The Emperor attempted to perform a ritual that would eradicate all life in the universe, but was seemingly killed by the Hero of Tython with help from Scourge. However, the Emperor's spirit survived and continued to wreak havoc while being hunted by a redeemed Revan. The Emperor later adopted the persona of <span class=\"character\" id=\"valkorion\">Valkorion</span> and waged war against both the Republic and the Sith with his Eternal Empire. He was betrayed and murdered by his son Arcann but survived yet again by containing his spirit in the Outlander, guiding him on his quest to retake the Eternal Throne. Valkorion was finally destroyed once and for all when he attempted to possess Satele Shan and was vanquished by the spirits of all his enemies."
   },
   {
@@ -466,7 +466,7 @@ let characters = [
       url: "img/thrawn.png",
       position: "top"
     },
-    affiliation: null,
+    alignment: null,
     bio: "Born as <span class=\"character\" id=\"mitthrawnuruodo\">Mitth'raw'nuruodo</span>, he was exiled by the Chiss Ascendancy due to his unorthodox military tactics. He was later recruited by the Galactic Empire and adopted the name <span class=\"character mainCharacter\" id=\"thrawn\">Thrawn</span>, becoming the first alien grand admiral. After Emperor Palpatine and Darth Vader both died, Thrawn assumed leadership of the Empire and waged war on the New Republic with the help of Joruus C'baoth. However, he ended up being killed by Ruhk when it was revealed that the Empire had been poisoning Honoghr to keep the Noghri subservient to them."
   },
   {
@@ -475,7 +475,7 @@ let characters = [
       url: "img/tulakHord.png",
       position: "center"
     },
-    affiliation: "Sith",
+    alignment: "Sith",
     bio: "<span class=\"character mainCharacter sithMainCharacter\" id=\"tulakHord\">Tulak Hord</span> was renowned as the greatest warrior of the Sith Empire, conquering over one hundred planets and killing over one thousand Jedi before being betrayed and murdered by Ortan Cela."
   },
   {
@@ -484,7 +484,7 @@ let characters = [
       url: "img/ulicQelDroma.png",
       position: "center"
     },
-    affiliation: "Jedi",
+    alignment: "Jedi",
     bio: "<span class=\"character mainCharacter jediMainCharacter\" id=\"ulicQelDroma\">Ulic Qel-Droma</span> was trained as a Jedi by Arca Jeth and fought in the Freedon Nadd Uprising. While infiltrating the Krath, he was seduced to the dark side by Aleema Keto. Ulic later became the apprentice of Exar Kun, and together they waged war against the Galactic Republic. However, after killing his brother Cay Qel-Droma and being stripped of his Force-sensitivity by Nomi Sunrider, Ulic returned to the light side and helped defeat Kun. He later trained Nomi's daughter Vima Sunrider, before being killed by Hoggon."
   }
 ];
@@ -13327,15 +13327,15 @@ function slideshow() {
   }
   document.getElementById("mobileCharacterImg").style.background = "url(\"" + characters[sessionStorage.newSlide].image.url + "\") " + characters[sessionStorage.newSlide].image.position + " / cover";
   document.getElementById("mobileCharacterImgCaption").innerHTML = characters[sessionStorage.newSlide].name;
-  if (characters[sessionStorage.newSlide].affiliation == "Jedi") {
+  if (characters[sessionStorage.newSlide].alignment == "Jedi") {
     document.getElementById("mobileCharacterImgCaption").style.fontFamily = "\"Kalam\", \"Satisfy\", \"Brush Script MT\", cursive";
     document.getElementById("mobileCharacterImgCaption").style.color = "var(--jediBlue)";
   }
-  else if (characters[sessionStorage.newSlide].affiliation == "Sith") {
+  else if (characters[sessionStorage.newSlide].alignment == "Sith") {
     document.getElementById("mobileCharacterImgCaption").style.fontFamily = "\"Wallpoet\", fantasy";
     document.getElementById("mobileCharacterImgCaption").style.color = "var(--sithRed)";
   }
-  else if (characters[sessionStorage.newSlide].affiliation == null) {
+  else if (characters[sessionStorage.newSlide].alignment == null) {
     document.getElementById("mobileCharacterImgCaption").style.fontFamily = "\"Titillium Web\", \"Roboto\", \"Arial\", sans-serif";
     document.getElementById("mobileCharacterImgCaption").style.color = "var(--black)";
     console.log("THRAWN!!! Sorry, just a big fan");

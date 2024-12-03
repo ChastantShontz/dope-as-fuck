@@ -1067,6 +1067,26 @@ let characters = [
       position: "top"
     },
     alignment: null,
+    stats: {
+      aliases: [
+        "Mitth'raw'nuruodo"
+      ],
+      born: null,
+      died: "9 ABY, <i>Chimera</i>",
+      species: "Chiss",
+      gender: "male",
+      affiliation: [
+        "Chiss Ascendancy",
+        "Galactic Empire",
+        "Empire of Hand"
+      ],
+      relatives: [
+        "Thrass"
+      ],
+      masters: null,
+      apprentices: null,
+      firstAppearance: "<i>Heir to the Empire</i>"
+    },
     bio: "Born as <span class=\"character\" id=\"mitthrawnuruodo\">Mitth'raw'nuruodo</span>, he was exiled by the Chiss Ascendancy due to his unorthodox military tactics. He was later recruited by the Galactic Empire and adopted the name <span class=\"character mainCharacter\" id=\"thrawn\">Thrawn</span>, becoming the first alien grand admiral. After Emperor Palpatine and Darth Vader both died, Thrawn assumed leadership of the Empire and waged war on the New Republic with the help of Joruus C'baoth. However, he ended up being killed by Ruhk when it was revealed that the Empire had been poisoning Honoghr to keep the Noghri subservient to them."
   },
   {

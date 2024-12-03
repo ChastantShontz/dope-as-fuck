@@ -544,6 +544,39 @@ let characters = [
     bio: "Born as <span class=\"character\" id=\"hegoDamaskIi\">Hego Damask II</span>, his conception was engineered by Darth Tenebrous to create a powerful apprentice. As <span class=\"character mainCharacter sithMainCharacter\" id=\"darthPlagueis\">Darth Plagueis</span>, he eventually killed Tenebrous and took an apprentice of his own with Darth Sidious. However, despite his best attempts to achieve immortality, Sidious killed him in his sleep."
   },
   {
+    name: "Exar Kun",
+    image: {
+      url: "img/exarKun.png",
+      position: "center"
+    },
+    alignment: "Sith",
+    stats: {
+      aliases: null,
+      born: null,
+      died: "3996 BBY, Yavin 4",
+      species: "Human",
+      gender: "male",
+      affiliation: [
+        "Jedi Order",
+        "Old Republic",
+        "Krath",
+        "Brotherhood of the Sith",
+        "Cult of Exar Kun"
+      ],
+      relatives: null,
+      masters: [
+        "Vodo-Siosk Baas",
+        "Freedon Nadd"
+      ],
+      apprentices: [
+        "Ulic Qel-Droma",
+        "Kyp Durron"
+      ],
+      firstAppearance: "<i>Dark Apprentice</i>"
+    },
+    bio: "Born as <span class=\"character\" id=\"hegoDamaskIi\">Hego Damask II</span>, his conception was engineered by Darth Tenebrous to create a powerful apprentice. As <span class=\"character mainCharacter sithMainCharacter\" id=\"darthPlagueis\">Darth Plagueis</span>, he eventually killed Tenebrous and took an apprentice of his own with Darth Sidious. However, despite his best attempts to achieve immortality, Sidious killed him in his sleep."
+  },
+  {
     name: "Jaina Solo Fel",
     image: {
       url: "img/jainaSoloFel.png",
@@ -605,6 +638,76 @@ let characters = [
     bio: "<span class=\"character mainCharacter sithMainCharacter\" id=\"karnessMuur\">Karness Muur</span> was one of the original Jedi Exiles who fought in the Hundred-Year Darkness and later founded the Sith Empire. He was able to survive in the body of Celeste Morne for over four thousand years via his Muur Talisman, until it was destroyed by Cade Skywalker."
   },
   {
+    name: "Kol Skywalker",
+    image: {
+      url: "img/kolSkywalker.png",
+      position: "center"
+    },
+    alignment: "Jedi",
+    stats: {
+      aliases: null,
+      born: null,
+      died: "130 ABY, Ossus",
+      species: "Human",
+      gender: "male",
+      affiliation: [
+        "New Jedi Order",
+        "Galactic Federation of Free Alliances"
+      ],
+      relatives: [
+        "Ben Skywalker",
+        "Nat Skywalker",
+        "Morrigan Corde",
+        "Cade Skywalker"
+      ],
+      masters: null,
+      apprentices: [
+        "Wolf Sazen",
+        "Shado Vao"
+      ],
+      firstAppearance: "<i>Star Wars: Legacy: Broken</i>"
+    },
+    bio: "<span class=\"character mainCharacter sithMainCharacter\" id=\"karnessMuur\">Karness Muur</span> was one of the original Jedi Exiles who fought in the Hundred-Year Darkness and later founded the Sith Empire. He was able to survive in the body of Celeste Morne for over four thousand years via his Muur Talisman, until it was destroyed by Cade Skywalker."
+  },
+  {
+    name: "Kyle Katarn",
+    image: {
+      url: "img/kyleKatarn.png",
+      position: "center"
+    },
+    alignment: "Jedi",
+    stats: {
+      aliases: null,
+      born: "23 BBY, Sulon",
+      died: null,
+      species: "Human",
+      gender: "male",
+      affiliation: [
+        "Galactic Empire",
+        "Alliance to Restore the Republic",
+        "New Jedi Order",
+        "New Republic",
+        "Galactic Federation of Free Alliances"
+      ],
+      relatives: [
+        "Morgan Katarn",
+        "Patricia Katarn"
+      ],
+      masters: [
+        "Qu Rahn",
+        "Luke Skywalker",
+        "Mara Jade Skywalker"
+      ],
+      apprentices: [
+        "Mara Jade Skywalker",
+        "Jaden Korr",
+        "Rosh Penin"
+      ],
+      firstAppearance: "<i>Star Wars: Dark Forces</i>"
+    },
+    bio: "<span class=\"character mainCharacter sithMainCharacter\" id=\"karnessMuur\">Karness Muur</span> was one of the original Jedi Exiles who fought in the Hundred-Year Darkness and later founded the Sith Empire. He was able to survive in the body of Celeste Morne for over four thousand years via his Muur Talisman, until it was destroyed by Cade Skywalker."
+  },
+  {
     name: "Kyp Durron",
     image: {
       url: "img/kypDurron.png",
@@ -635,6 +738,44 @@ let characters = [
         "Jaina Solo Fel"
       ],
       firstAppearance: "<i>Jedi Search</i>"
+    },
+    bio: "<span class=\"character mainCharacter jediMainCharacter\" id=\"kypDurron\">Kyp Durron</span> was one of the first Padawans of the New Jedi Order. During this time, he was briefly corrupted by the spirit of Exar Kun, before freeing himself of Kun's influence."
+  },
+  {
+    name: "Lumiya",
+    image: {
+      url: "img/lumiya.png",
+      position: "top"
+    },
+    alignment: "Sith",
+    stats: {
+      aliases: [
+        "Shira Elan Colla Brie"
+      ],
+      born: "Coruscant",
+      died: "40 ABY, Terephon",
+      species: "Human cyborg",
+      gender: "female",
+      affiliation: [
+        "Galactic Empire",
+        "Alliance to Restore the Republic",
+        "Rule of Two",
+        "Crimson Empire",
+        "Imperial Remnant",
+        "Galactic Federation of Free Alliances"
+      ],
+      relatives: null,
+      masters: [
+        "Darth Vader",
+        "Palpatine",
+        "Vergere"
+      ],
+      apprentices: [
+        "Flint",
+        "Carnor Jax",
+        "Darth Caedus"
+      ],
+      firstAppearance: "<i>Star Wars 56: Coffin in the Clouds</i>"
     },
     bio: "<span class=\"character mainCharacter jediMainCharacter\" id=\"kypDurron\">Kyp Durron</span> was one of the first Padawans of the New Jedi Order. During this time, he was briefly corrupted by the spirit of Exar Kun, before freeing himself of Kun's influence."
   },
@@ -979,6 +1120,7 @@ let characters = [
       ],
       masters: [
         "Arca Jeth",
+        "Aleema Keto",
         "Exar Kun"
       ],
       apprentices: [

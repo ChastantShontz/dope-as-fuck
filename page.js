@@ -547,7 +547,7 @@ let characters = [
     name: "Exar Kun",
     image: {
       url: "img/exarKun.png",
-      position: "center"
+      position: "top"
     },
     alignment: "Sith",
     stats: {
@@ -641,7 +641,7 @@ let characters = [
     name: "Kol Skywalker",
     image: {
       url: "img/kolSkywalker.png",
-      position: "center"
+      position: "top"
     },
     alignment: "Jedi",
     stats: {

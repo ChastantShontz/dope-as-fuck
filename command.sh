@@ -52,7 +52,7 @@ rm -r backup
 
 clear
 echo GitHub repository "dope-as-fuck" successfully compiled
-echo Initialized 508 objects {
+echo Initialized 512 objects {
 echo     folders: [
 echo         ".git",
 echo         ".vscode",

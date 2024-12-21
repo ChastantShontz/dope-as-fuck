@@ -14004,6 +14004,16 @@ function slideshow() {
     console.log("THRAWN!!! Sorry, just a big fan");
   }
   document.getElementById("mobileCharacterImgCaption").style.transition = "color 0s ease 0s";
+  for (var i = 0; i < document.getElementsByClassName("mobileCharacterRow").length; i++) {
+    if (eval("characters[sessionStorage.newSlide].stats." + document.getElementsByClassName("mobileCharacterOutput")[i].name) == null) {
+      if (document.getElementsByClassName("mobileCharacterRow")[i].classList.contains("shownMobileCharacterRow")) {
+      }
+    }
+    else {
+      if (document.getElementsByClassName("mobileCharacterRow")[i].classList.contains("hiddenMobileCharacterRow")) {
+      }
+    }
+  }
   document.getElementById("mobileCharacterBio").innerHTML = characters[sessionStorage.newSlide].bio;
   sessionStorage.oldSlide = sessionStorage.newSlide;
   compileSound("sawtooth", ["none", 340, null, 0], ["none", .5, null, 0], .1);

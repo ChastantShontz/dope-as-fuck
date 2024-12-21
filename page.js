@@ -3768,7 +3768,7 @@ function collapse(event) {
     if (sessionStorage.collapse == "stats") {
       if (((event.type == "click") && ((!(document.elementsFromPoint(event.clientX, event.clientY).some((element) => (element.classList.contains("player"))))) && (!(document.elementsFromPoint(event.clientX, event.clientY).some((element) => (element.classList.contains("playerProfile"))))))) || (event.type == "keydown")) {
         for (var i = 0; i < document.getElementsByClassName("playerProfile").length; i++) {
-          if (document.getElementsByClassName("playerProfile")[i].classList.contains("toggledProfile")) {
+          if (document.getElementsByClassName("playerProfile")[i].classList.contains("toggledPlayerProfile")) {
             hideStats((i + 1), "click");
           }
         }
@@ -4833,7 +4833,7 @@ function speedrun6() {
     document.getElementsByClassName("lifeCont")[i].style.pointerEvents = "none";
   }
   for (var i = 0; i < document.getElementsByClassName("playerProfile").length; i++) {
-    if (document.getElementsByClassName("playerProfile")[i].classList.contains("toggledProfile")) {
+    if (document.getElementsByClassName("playerProfile")[i].classList.contains("toggledPlayerProfile")) {
       hideStats((i + 1), "click");
     }
   }
@@ -6298,10 +6298,10 @@ function gotIt10() {
 
 function toggleStats(newStats, method) {
   sessionStorage.newStats = newStats;
-  if (document.getElementsByClassName("playerProfile")[sessionStorage.newStats - 1].classList.contains("toggledProfile")) {
+  if (document.getElementsByClassName("playerProfile")[sessionStorage.newStats - 1].classList.contains("toggledPlayerProfile")) {
     hideStats(sessionStorage.newStats, method);
   }
-  else if (document.getElementsByClassName("playerProfile")[sessionStorage.newStats - 1].classList.contains("unToggledProfile")) {
+  else if (document.getElementsByClassName("playerProfile")[sessionStorage.newStats - 1].classList.contains("unToggledPlayerProfile")) {
     if (sessionStorage.oldStats != undefined) {
       hideStats(sessionStorage.oldStats, method);
     }
@@ -6312,12 +6312,12 @@ function toggleStats(newStats, method) {
 
 function showStats(stats, method) {
   sessionStorage.stats = stats;
-  if ((method == "click") || ((method == "enter") && (document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].classList.contains("unToggledProfile")))) {
+  if ((method == "click") || ((method == "enter") && (document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].classList.contains("unToggledPlayerProfile")))) {
     if (method == "click") {
       document.getElementsByClassName("player")[sessionStorage.stats - 1].ariaLabel = "Minimize " + ((document.getElementsByClassName("player")[sessionStorage.stats - 1].classList.contains("goalie")) ? ((document.getElementsByClassName("player")[sessionStorage.stats - 1].alt).substring(0, (document.getElementsByClassName("player")[sessionStorage.stats - 1].alt).search(/ in the goal/sm))) : (document.getElementsByClassName("player")[sessionStorage.stats - 1].alt)) + "'s stats";
-      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].classList.replace("unToggledProfile", "toggledProfile");
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].classList.replace("unToggledPlayerProfile", "toggledPlayerProfile");
     }
-    document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].classList.replace("hiddenProfile", "shownProfile");
+    document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].classList.replace("hiddenPlayerProfile", "shownPlayerProfile");
     document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.zIndex = "4";
     if ((sessionStorage.stats == 1) || (sessionStorage.stats == 2)) {
       document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.left = "12%";
@@ -6359,12 +6359,12 @@ function showStats(stats, method) {
 
 function hideStats(stats, method) {
   sessionStorage.stats = stats;
-  if ((method == "click") || ((method == "leave") && (document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].classList.contains("unToggledProfile")))) {
+  if ((method == "click") || ((method == "leave") && (document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].classList.contains("unToggledPlayerProfile")))) {
     if (method == "click") {
       document.getElementsByClassName("player")[sessionStorage.stats - 1].ariaLabel = "Pull up " + ((document.getElementsByClassName("player")[sessionStorage.stats - 1].classList.contains("goalie")) ? ((document.getElementsByClassName("player")[sessionStorage.stats - 1].alt).substring(0, (document.getElementsByClassName("player")[sessionStorage.stats - 1].alt).search(/ in the goal/sm))) : (document.getElementsByClassName("player")[sessionStorage.stats - 1].alt)) + "'s stats";
-      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].classList.replace("toggledProfile", "unToggledProfile")
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].classList.replace("toggledPlayerProfile", "unToggledPlayerProfile")
     }
-    document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].classList.replace("shownProfile", "hiddenProfile")
+    document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].classList.replace("shownPlayerProfile", "hiddenPlayerProfile")
     setTimeout(() => {
       document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.zIndex = "3";
     }, 250);
@@ -8087,7 +8087,7 @@ function gotIt16() {
   sessionStorage.period++;
   document.getElementById("scoreboardPeriod").innerHTML = sessionStorage.period;
   for (var i = 0; i < document.getElementsByClassName("playerProfile").length; i++) {
-    if (document.getElementsByClassName("playerProfile")[i].classList.contains("toggledProfile")) {
+    if (document.getElementsByClassName("playerProfile")[i].classList.contains("toggledPlayerProfile")) {
       hideStats((i + 1), "click");
     }
   }
@@ -9145,7 +9145,7 @@ function gotIt20() {
   sessionStorage.period++;
   document.getElementById("scoreboardPeriod").innerHTML = sessionStorage.period;
   for (var i = 0; i < document.getElementsByClassName("playerProfile").length; i++) {
-    if (document.getElementsByClassName("playerProfile")[i].classList.contains("toggledProfile")) {
+    if (document.getElementsByClassName("playerProfile")[i].classList.contains("toggledPlayerProfile")) {
       hideStats((i + 1), "click");
     }
   }
@@ -9197,7 +9197,7 @@ function gotIt21() {
     sessionStorage.period = "OT";
     document.getElementById("scoreboardPeriod").innerHTML = sessionStorage.period;
     for (var i = 0; i < document.getElementsByClassName("playerProfile").length; i++) {
-      if (document.getElementsByClassName("playerProfile")[i].classList.contains("toggledProfile")) {
+      if (document.getElementsByClassName("playerProfile")[i].classList.contains("toggledPlayerProfile")) {
         hideStats((i + 1), "click");
       }
     }
@@ -9471,7 +9471,7 @@ function win() {
   document.getElementById("puck").style.transition = "all .25s ease 0s";
   if (sessionStorage.gender == 1) {
     for (var i = 0; i < document.getElementsByClassName("menProfile").length; i++) {
-      if (document.getElementsByClassName("menProfile")[i].classList.contains("toggledProfile")) {
+      if (document.getElementsByClassName("menProfile")[i].classList.contains("toggledPlayerProfile")) {
         hideStats((i + 1), "click");
       }
     }
@@ -9503,7 +9503,7 @@ function win() {
   }
   else if (sessionStorage.gender == 2) {
     for (var i = 0; i < document.getElementsByClassName("womenProfile").length; i++) {
-      if (document.getElementsByClassName("womenProfile")[i].classList.contains("toggledProfile")) {
+      if (document.getElementsByClassName("womenProfile")[i].classList.contains("toggledPlayerProfile")) {
         hideStats((i + 1), "click");
       }
     }
@@ -9655,7 +9655,7 @@ function lose() {
   document.getElementById("puck").style.transition = "all .25s ease 0s";
   if (sessionStorage.gender == 1) {
     for (var i = 0; i < document.getElementsByClassName("menProfile").length; i++) {
-      if (document.getElementsByClassName("menProfile")[i].classList.contains("toggledProfile")) {
+      if (document.getElementsByClassName("menProfile")[i].classList.contains("toggledPlayerProfile")) {
         hideStats((i + 1), "click");
       }
     }
@@ -9687,7 +9687,7 @@ function lose() {
   }
   else if (sessionStorage.gender == 2) {
     for (var i = 0; i < document.getElementsByClassName("womenProfile").length; i++) {
-      if (document.getElementsByClassName("womenProfile")[i].classList.contains("toggledProfile")) {
+      if (document.getElementsByClassName("womenProfile")[i].classList.contains("toggledPlayerProfile")) {
         hideStats((i + 1), "click");
       }
     }

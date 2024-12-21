@@ -12844,7 +12844,8 @@ function accountUpdate(field, method) {
           document.getElementsByClassName("infoInput")[i].classList.replace("definedInfoInput", "undefinedInfoInput");
           document.getElementsByClassName("dataOutput")[i].innerHTML = "";
           document.getElementsByClassName("dataOutput")[i].value = "";
-          document.getElementsByClassName("dataRow")[i + 1].style.display = "none";
+          document.getElementsByClassName("dataBodyRow")[i].classList.replace("shownDataRow", "hiddenDataRow");
+          document.getElementsByClassName("dataBodyRow")[i].style.display = "none";
           if (document.getElementsByClassName("infoInput")[i].name == "name") {
             for (var j = 0; j < document.getElementsByClassName("username").length; j++) {
               if (document.getElementsByClassName("username")[j].classList.contains("usernamePlayer")) {
@@ -12883,7 +12884,8 @@ function accountUpdate(field, method) {
           document.getElementsByClassName("infoInput")[i].classList.replace("undefinedInfoInput", "definedInfoInput");
           document.getElementsByClassName("dataOutput")[i].innerHTML = eval("localStorage." + document.getElementsByClassName("infoInput")[i].name);
           document.getElementsByClassName("dataOutput")[i].value = eval("localStorage." + document.getElementsByClassName("dataOutput")[i].name);
-          document.getElementsByClassName("dataRow")[i + 1].style.display = "table-row";
+          document.getElementsByClassName("dataBodyRow")[i].classList.replace("hiddenDataRow", "shownDataRow");
+          document.getElementsByClassName("dataBodyRow")[i].style.display = "table-row";
           if (document.getElementsByClassName("infoInput")[i].name == "name") {
             for (var j = 0; j < document.getElementsByClassName("username").length; j++) {
               document.getElementsByClassName("username")[j].innerHTML = localStorage.name;
@@ -12966,7 +12968,8 @@ function accountUpdate(field, method) {
         document.getElementsByClassName("infoInput")[sessionStorage.field - 1].classList.replace("undefinedInfoInput", "definedInfoInput");
         document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].innerHTML = eval("localStorage." + document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name);
         document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].value = eval("localStorage." + document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].name);
-        document.getElementsByClassName("dataRow")[sessionStorage.field].style.display = "table-row";
+        document.getElementsByClassName("dataBodyRow")[sessionStorage.field - 1].classList.replace("hiddenDataRow", "shownDataRow");
+        document.getElementsByClassName("dataBodyRow")[sessionStorage.field - 1].style.display = "table-row";
         if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "name") {
           for (var i = 0; i < document.getElementsByClassName("username").length; i++) {
             document.getElementsByClassName("username")[i].innerHTML = localStorage.name;
@@ -13036,7 +13039,8 @@ function accountUpdate(field, method) {
         document.getElementsByClassName("infoInput")[sessionStorage.field - 1].classList.replace("definedInfoInput", "undefinedInfoInput");
         document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].innerHTML = "";
         document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].value = "";
-        document.getElementsByClassName("dataRow")[sessionStorage.field].style.display = "none";
+        document.getElementsByClassName("dataBodyRow")[sessionStorage.field - 1].classList.replace("shownDataRow", "hiddenDataRow");
+        document.getElementsByClassName("dataBodyRow")[sessionStorage.field - 1].style.display = "none";
         if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "name") {
           for (var i = 0; i < document.getElementsByClassName("username").length; i++) {
             if (document.getElementsByClassName("username")[i].classList.contains("usernamePlayer")) {

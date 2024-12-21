@@ -4059,12 +4059,11 @@ main {
 }
 
 .dataRow {
-  display: none;
   border: .1em solid var(--darkGray);
 }
 
-.dataHeadRow {
-  display: table-row;
+.dataBodyRow {
+  display: none;
 }
 
 .dataCell {

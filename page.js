@@ -14007,10 +14007,12 @@ function slideshow() {
   for (var i = 0; i < document.getElementsByClassName("mobileCharacterRow").length; i++) {
     if (eval("characters[sessionStorage.newSlide].stats." + document.getElementsByClassName("mobileCharacterOutput")[i].name) == null) {
       if (document.getElementsByClassName("mobileCharacterRow")[i].classList.contains("shownMobileCharacterRow")) {
+        document.getElementsByClassName("mobileCharacterRow")[i].classList.replace("shownMobileCharacterRow", "hiddenMobileCharacterRow");
       }
     }
     else {
       if (document.getElementsByClassName("mobileCharacterRow")[i].classList.contains("hiddenMobileCharacterRow")) {
+        document.getElementsByClassName("mobileCharacterRow")[i].classList.replace("hiddenMobileCharacterRow", "shownMobileCharacterRow");
       }
     }
   }

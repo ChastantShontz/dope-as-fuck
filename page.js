@@ -2445,7 +2445,6 @@ let saved = {
     gender: null
   },
   second: {
-    gender: null,
     clarksonScore: null,
     sluScore: null,
     points: null,
@@ -3466,9 +3465,11 @@ function checkpoint(event) {
     (Object.keys(saved.first)).forEach((key) => {
       saved.first[key] = null;      
     });
-    (Object.keys(saved.second)).forEach((key) => {
-      saved.second[key] = null;
-    });
+    if (sessionStorage.checkpoint == 2) {
+      (Object.keys(saved.second)).forEach((key) => {
+        saved.second[key] = null;
+      });
+    }
     localStorage.saved = JSON.stringify(saved);
     localStorage.removeItem("checkpoint");
   }
@@ -3605,6 +3606,9 @@ function firstCheckpoint(event) {
 }
 
 function secondCheckpoint(event) {
+  (Object.keys(saved.first)).forEach((key) => {
+    eval("sessionStorage." + key + " = saved.first." + key);
+  });
   (Object.keys(saved.second)).forEach((key) => {
     eval("sessionStorage." + key + " = saved.second." + key);
   });
@@ -4184,7 +4188,6 @@ function gotIt2() {
 function selectGender(gender) {
   sessionStorage.gender = gender;
   saved.first.gender = sessionStorage.gender;
-  saved.second.gender = sessionStorage.gender;
   localStorage.saved = JSON.stringify(saved);
   for (var i = 0; i < document.getElementsByClassName("gender").length; i++) {
     if (i == (sessionStorage.gender - 1)) {

@@ -3543,10 +3543,12 @@ function firstCheckpoint(event) {
   document.getElementById("scoreboardPeriod").innerHTML = sessionStorage.period;
   sessionStorage.clarksonScore = 0;
   saved.second.clarksonScore = sessionStorage.clarksonScore;
-  document.getElementById("scoreboardClarksonScore").innerHTML = sessionStorage.clarksonScore;
+  document.getElementById("scoreboardClarksonScoreOutput").innerHTML = sessionStorage.clarksonScore;
+  document.getElementById("scoreboardClarksonScoreOutput").value = sessionStorage.clarksonScore;
   sessionStorage.sluScore = 0;
   saved.second.sluScore = sessionStorage.sluScore;
-  document.getElementById("scoreboardSluScore").innerHTML = sessionStorage.sluScore;
+  document.getElementById("scoreboardSluScoreOutput").innerHTML = sessionStorage.sluScore;
+  document.getElementById("scoreboardSluScoreOutput").value = sessionStorage.sluScore;
   sessionStorage.points = 0;
   saved.second.points = sessionStorage.points;
   sessionStorage.oldHighScore = localStorage.highScore;
@@ -4727,10 +4729,12 @@ function gotIt6() {
   document.getElementById("scoreboardPeriod").innerHTML = sessionStorage.period;
   sessionStorage.clarksonScore = 0;
   saved.second.clarksonScore = sessionStorage.clarksonScore;
-  document.getElementById("scoreboardClarksonScore").innerHTML = sessionStorage.clarksonScore;
+  document.getElementById("scoreboardClarksonScoreOutput").innerHTML = sessionStorage.clarksonScore;
+  document.getElementById("scoreboardClarksonScoreOutput").value = sessionStorage.clarksonScore;
   sessionStorage.sluScore = 0;
   saved.second.sluScore = sessionStorage.sluScore;
-  document.getElementById("scoreboardSluScore").innerHTML = sessionStorage.sluScore;
+  document.getElementById("scoreboardSluScoreOutput").innerHTML = sessionStorage.sluScore;
+  document.getElementById("scoreboardSluScoreOutput").value = sessionStorage.sluScore;
   sessionStorage.points = 0;
   saved.second.points = sessionStorage.points;
   sessionStorage.oldHighScore = localStorage.highScore;
@@ -7503,7 +7507,8 @@ function celebrate() {
     else if (sessionStorage.clarksonScore == 10) {
       tijuana();
     }
-    document.getElementById("scoreboardClarksonScore").innerHTML = sessionStorage.clarksonScore;
+    document.getElementById("scoreboardClarksonScoreOutput").innerHTML = sessionStorage.clarksonScore;
+    document.getElementById("scoreboardClarksonScoreOutput").value = sessionStorage.clarksonScore;
     document.getElementById("cheerMessage1").innerHTML = "<span id=\"goals\">" + sessionStorage.tijuana + "</span> more " + ((sessionStorage.tijuana == 1) ? ("goal!") : ("goals!"));
     var enableClassLists = [
       "j == 8",
@@ -7579,7 +7584,8 @@ function celebrate() {
     setTimeout(() => {
       document.getElementById("sluGoalMessage").style.animation = "none";
     }, 3000);
-    document.getElementById("scoreboardSluScore").innerHTML = sessionStorage.sluScore;
+    document.getElementById("scoreboardSluScoreOutput").innerHTML = sessionStorage.sluScore;
+    document.getElementById("scoreboardSluScoreOutput").value = sessionStorage.sluScore;
     var disableClassLists = [
       "(j == 22) && (sessionStorage.sluScore == 1)",
       "(j == 40) && ((sessionStorage.period == 3) && (sessionStorage.clarksonScore <= sessionStorage.sluScore))"

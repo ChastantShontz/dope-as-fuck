@@ -4084,11 +4084,6 @@ main {
   text-align: right;
 }
 
-.dataOutput {
-  user-select: auto;
-  cursor: text;
-}
-
 #memoryCont {
   width: 33%;
 }
@@ -4115,6 +4110,8 @@ main {
   padding-right: 1em;
   border: .1em solid var(--darkGray);
   font-family: "Lekton", "Courier New", monospace;
+  color: var(--darkGray);
+  font-size: .9em;
   font-weight: bold;
 }
 
@@ -4122,11 +4119,6 @@ main {
   background: var(--lightGray);
   color: var(--darkGray);
   font-size: .9em;
-}
-
-.memoryOutput {
-  user-select: auto;
-  cursor: text;
 }
 
 #accountExit {

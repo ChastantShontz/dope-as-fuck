@@ -4656,6 +4656,7 @@ footer {
 
 .mainCharacter:has(.characterLink:hover) {
   color: var(--white);
+  text-decoration: underline;
 }
 
 .jediMainCharacter {
@@ -4687,6 +4688,12 @@ footer {
 #thrawn {
   font-size: .85rem;
   line-height: 1lh;
+}
+
+#thrawn:has(#thrawnLink:hover),
+#thrawn:has(#thrawnLink:active) {
+  background: none;
+  color: var(--black);
 }
 
 .characterLink {

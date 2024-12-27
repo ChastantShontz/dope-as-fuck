@@ -3541,14 +3541,12 @@ function firstCheckpoint(event) {
   }, 1750);
   sessionStorage.period = 1;
   document.getElementById("scoreboardPeriod").innerHTML = sessionStorage.period;
-  sessionStorage.clarksonScore = 0;
-  saved.second.clarksonScore = sessionStorage.clarksonScore;
-  document.getElementById("scoreboardClarksonScoreOutput").innerHTML = sessionStorage.clarksonScore;
-  document.getElementById("scoreboardClarksonScoreOutput").value = sessionStorage.clarksonScore;
-  sessionStorage.sluScore = 0;
-  saved.second.sluScore = sessionStorage.sluScore;
-  document.getElementById("scoreboardSluScoreOutput").innerHTML = sessionStorage.sluScore;
-  document.getElementById("scoreboardSluScoreOutput").value = sessionStorage.sluScore;
+  for (var i = 0; i < document.getElementsByClassName("scoreboardScoreOutput").length; i++) {
+    eval("sessionStorage." + document.getElementsByClassName("scoreboardScoreOutput")[i].name + " = 0");
+    eval("saved.second." + document.getElementsByClassName("scoreboardScoreOutput")[i].name + " = sessionStorage." + document.getElementsByClassName("scoreboardScoreOutput")[i].name);
+    document.getElementsByClassName("scoreboardScoreOutput")[i].innerHTML = eval("sessionStorage." + document.getElementsByClassName("scoreboardScoreOutput")[i].name);
+    document.getElementsByClassName("scoreboardScoreOutput")[i].value = eval("sessionStorage." + document.getElementsByClassName("scoreboardScoreOutput")[i].name);
+  }
   sessionStorage.points = 0;
   saved.second.points = sessionStorage.points;
   sessionStorage.oldHighScore = localStorage.highScore;
@@ -4729,14 +4727,12 @@ function gotIt6() {
   }, 1000);
   sessionStorage.period = 1;
   document.getElementById("scoreboardPeriod").innerHTML = sessionStorage.period;
-  sessionStorage.clarksonScore = 0;
-  saved.second.clarksonScore = sessionStorage.clarksonScore;
-  document.getElementById("scoreboardClarksonScoreOutput").innerHTML = sessionStorage.clarksonScore;
-  document.getElementById("scoreboardClarksonScoreOutput").value = sessionStorage.clarksonScore;
-  sessionStorage.sluScore = 0;
-  saved.second.sluScore = sessionStorage.sluScore;
-  document.getElementById("scoreboardSluScoreOutput").innerHTML = sessionStorage.sluScore;
-  document.getElementById("scoreboardSluScoreOutput").value = sessionStorage.sluScore;
+  for (var i = 0; i < document.getElementsByClassName("scoreboardScoreOutput").length; i++) {
+    eval("sessionStorage." + document.getElementsByClassName("scoreboardScoreOutput")[i].name + " = 0");
+    eval("saved.second." + document.getElementsByClassName("scoreboardScoreOutput")[i].name + " = sessionStorage." + document.getElementsByClassName("scoreboardScoreOutput")[i].name);
+    document.getElementsByClassName("scoreboardScoreOutput")[i].innerHTML = eval("sessionStorage." + document.getElementsByClassName("scoreboardScoreOutput")[i].name);
+    document.getElementsByClassName("scoreboardScoreOutput")[i].value = eval("sessionStorage." + document.getElementsByClassName("scoreboardScoreOutput")[i].name);
+  }
   sessionStorage.points = 0;
   saved.second.points = sessionStorage.points;
   sessionStorage.oldHighScore = localStorage.highScore;

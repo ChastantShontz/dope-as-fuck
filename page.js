@@ -14019,6 +14019,7 @@ function slideshow() {
       }
     }
     else {
+      document.getElementsByClassName("mobileCharacterOutput")[i].innerHTML = ((typeof eval("characters[sessionStorage.newSlide].stats." + document.getElementsByClassName("mobileCharacterOutput")[i].name) == "object") ? (((eval("characters[sessionStorage.newSlide].stats." + document.getElementsByClassName("mobileCharacterOutput")[i].name)).length == 1) ? ((eval("characters[sessionStorage.newSlide].stats." + document.getElementsByClassName("mobileCharacterOutput")[i].name))[0]) : ((eval("characters[sessionStorage.newSlide].stats." + document.getElementsByClassName("mobileCharacterOutput")[i].name)).join("<br>"))) : (eval("characters[sessionStorage.newSlide].stats." + document.getElementsByClassName("mobileCharacterOutput")[i].name)));
       if (document.getElementsByClassName("mobileCharacterRow")[i].classList.contains("hiddenMobileCharacterRow")) {
         document.getElementsByClassName("mobileCharacterRow")[i].classList.replace("hiddenMobileCharacterRow", "shownMobileCharacterRow");
         document.getElementsByClassName("mobileCharacterRow")[i].style.display = "table-row";

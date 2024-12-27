@@ -1,4 +1,5 @@
 /* Default behavior for all elements */
+
 * {
   /* An "!important" tag is needed on the "background-repeat" property to overrule the "background" shorthand. It can only be overruled with another "!important" */
   background-repeat: no-repeat !important;
@@ -11,6 +12,7 @@
   opacity: 50% !important;
   pointer-events: none !important;
 }
+
 
 /* Removes the standard 8 pixels of margin around the <body> */
 body {
@@ -39,6 +41,7 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
+
 
 address {
   font-style: normal;
@@ -99,6 +102,7 @@ q > q > q > q::after {
   cursor: text;
 }
 
+
 cite {
   font-style: normal;
 }
@@ -131,8 +135,8 @@ abbr {
   text-decoration: none;
 }
 
-/* Standardizes the appearance of the <var> */
 
+/* Standardizes the appearance of the <var> */
 var {
   color: var(--darkGray);
   user-select: none;
@@ -170,6 +174,7 @@ samp {
   color: var(--darkGray);
 }
 
+
 pre {
   margin-top: 0;
   margin-bottom: 0;
@@ -206,6 +211,7 @@ span.fraction > span:last-child {
   border-top: .01em solid currentColor;
   margin-top: -.02em;
 }
+
 
 /* The class "normalWeight" can be applied to a <span> with bold text to set the "font-weight" back to "normal", like a reverse <b> or <strong> */
 span.normalWeight {
@@ -251,7 +257,9 @@ a.defaultLink:active {
   color: var(--violet);
 }
 
+
 /* Gives the <button> some default styles that can act as placeholders until overruled */
+
 button,
 /* These styles also apply to the <input> when it has a "type" of "button", "reset", or "submit" */
 input[type="button"],
@@ -283,6 +291,7 @@ input[type="reset"].defaultButton:active,
 input[type="submit"].defaultButton:active {
   transform: scale(.95);
 }
+
 
 /* Ensures that the <hr> always takes up the entire width of its container and has the same margins on the top and bottom */
 hr {
@@ -341,6 +350,7 @@ ol.outline > ol > ol > ol > ol {
   list-style: lower-roman;
 }
 
+
 ul,
 menu {
   padding-left: 48px;
@@ -348,7 +358,7 @@ menu {
   margin-bottom: 0;
 }
 
-/* Makes the <dl> appear and behave more like a standard list, like the <ol>, <ul>, and <menu> */
+/* Makes the <dl> appear and behave more like a standard list, such as the <ol>, <ul>, and <menu> */
 
 dl {
   padding-left: 48px;
@@ -371,6 +381,7 @@ dd {
 dd::marker {
   content: "-\00a0";
 }
+
 
 /* Assigns fixed dimensions to the <table> and eliminates excessive spacing */
 table {
@@ -547,6 +558,7 @@ object {
 iframe {
   display: inline-block;
 }
+
 
 /* Deals with styling the <ruby> annotations found in Asian text and the <rt> and <rp> that often accompany them. The <ruby> is placed above the body text, aligned with its starting position, and allowed to merge with overflowing characters */
 ruby {

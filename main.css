@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Symbols+Outlined");
 @import url("https://fonts.googleapis.com/css?family=Acme|Aldrich|Anton|Archivo+Black|Bangers|Belanosima|Boogaloo|Bungee|Candal|Creepster|Dosis|EB+Garamond|Kalam|Kanit|Lekton|Libre+Barcode+128|Luckiest+Guy|Merienda|Merriweather|Monoton|Montserrat|Oswald|Palette+Mosaic|Patrick+Hand|Press+Start+2P|Roboto|Rubik+Mono+One|Russo+One|Satisfy|Shadows+Into+Light|Slackey|Source+Code+Pro|Titillium+Web|Wallpoet|Zilla+Slab");
 
+
 /* Element Styles */
 
 * {
@@ -4692,6 +4693,7 @@ footer {
   color: unset;
 }
 
+
 /* Animation Effects */
 
 @keyframes bounce {
@@ -6163,6 +6165,7 @@ footer {
   }
 }
 
+
 /* Color Variables */
 
 :root {
@@ -6199,6 +6202,7 @@ footer {
   --youtubeLightGray: #C2C2C2;
   --shimmerWhite: #F5FFF5;
 }
+
 
 /* Media Queries */
 

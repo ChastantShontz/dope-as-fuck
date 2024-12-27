@@ -3229,6 +3229,7 @@ fetch("data.json")
     }
   });
 
+
 // Functions
 
 function newFunction() {

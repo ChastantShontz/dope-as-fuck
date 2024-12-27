@@ -7468,10 +7468,10 @@ function celebrate() {
       if ((sessionStorage.period != "OT") || (sessionStorage.clarksonScore == 1)) {
         if (sessionStorage.goalieGoal == 1) {
           if (sessionStorage.gender == 1) {
-            document.getElementById("conductorTalk").innerHTML = "Let's fucking go! It's a goalie goal scored by our very own <strong>number 47</strong>, <span class=\"playerInline clarksonPlayerInline menPlayerInline clarksonMenPlayerInline goalieInline clarksonScorer menScorer clarksonMenScorer goalieScorer\" id=\"scorer\"><strong>Ethan Haider</strong></span>!";
+            document.getElementById("conductorTalk").innerHTML = "Let's fucking go! It's a goalie goal scored by our very own <strong>number 47</strong>, <span class=\"playerInline clarksonPlayerInline menPlayerInline clarksonMenPlayerInline clarksonScorer menScorer clarksonMenScorer goalieScorer\" id=\"scorer\"><strong>Ethan Haider</strong></span>!";
           }
           else if (sessionStorage.gender == 2) {
-            document.getElementById("conductorTalk").innerHTML = "Let's fucking go! It's a goalie goal scored by our very own <strong>number 30</strong>, <span class=\"playerInline clarksonPlayerInline womenPlayerInline clarksonWomenPlayerInline goalieInline clarksonScorer womenScorer clarksonWomenScorer goalieScorer\" id=\"scorer\"><strong>Michelle Pasiechnyk!</strong></span>!";
+            document.getElementById("conductorTalk").innerHTML = "Let's fucking go! It's a goalie goal scored by our very own <strong>number 30</strong>, <span class=\"playerInline clarksonPlayerInline womenPlayerInline clarksonWomenPlayerInline clarksonScorer womenScorer clarksonWomenScorer goalieScorer\" id=\"scorer\"><strong>Michelle Pasiechnyk!</strong></span>!";
           }
         }
         else if (sessionStorage.goalieGoal > 1) {
@@ -7548,10 +7548,10 @@ function celebrate() {
     if ((sessionStorage.period != "OT") || (sessionStorage.sluScore == 1)) {
       if (sessionStorage.goalieGoal == 1) {
         if (sessionStorage.gender == 1) {
-          document.getElementById("conductorTalk").innerHTML = "Oh shit! It's a goalie goal scored by the ugly SLU sieve himself, <strong>number 1</strong>, <span class=\"playerInline sluPlayerInline menPlayerInline sluMenPlayerInline goalieInline sluScorer menScorer sluMenScorer goalieScorer\" id=\"scorer\"><strong>Daniel Allin</strong></span>!";
+          document.getElementById("conductorTalk").innerHTML = "Oh shit! It's a goalie goal scored by the ugly SLU sieve himself, <strong>number 1</strong>, <span class=\"playerInline sluPlayerInline menPlayerInline sluMenPlayerInline sluScorer menScorer sluMenScorer goalieScorer\" id=\"scorer\"><strong>Daniel Allin</strong></span>!";
         }
         else if (sessionStorage.gender == 2) {
-          document.getElementById("conductorTalk").innerHTML = "Oh shit! It's a goalie goal scored by the slut SLU sieve herself, <strong>number 30</strong>, <span class=\"playerInline sluPlayerInline womenPlayerInline sluWomenPlayerInline goalieInline sluScorer womenScorer sluWomenScorer goalieScorer\" id=\"scorer\"><strong>Hope Crisafi</strong></span>!";
+          document.getElementById("conductorTalk").innerHTML = "Oh shit! It's a goalie goal scored by the slut SLU sieve herself, <strong>number 30</strong>, <span class=\"playerInline sluPlayerInline womenPlayerInline sluWomenPlayerInline sluScorer womenScorer sluWomenScorer goalieScorer\" id=\"scorer\"><strong>Hope Crisafi</strong></span>!";
         }
       }
       else if (sessionStorage.goalieGoal > 1) {

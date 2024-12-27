@@ -5556,8 +5556,8 @@ function changeCheerBack(element) {
 function enableCheers(enableClassLists, enableStyles) {
   for (var i = 0; i < enableClassLists.length; i++) {
     for (var j = 0; j < document.getElementsByClassName("cheer").length; j++) {
-      if (document.getElementsByClassName("cheer")[j].classList.contains("unusedCheer")) {
-        if (eval(enableClassLists[i])) {
+      if (eval(enableClassLists[i])) {
+        if (document.getElementsByClassName("cheer")[j].classList.contains("unusedCheer")) {
           if (document.getElementsByClassName("cheerMessage")[j].innerHTML == "Bend over!") {
             document.getElementsByClassName("cheer")[j].classList.replace("incorrectCheer", "semiCorrectCheer");
             document.getElementsByClassName("cheerMessage")[j].classList.replace("incorrectCheerMessage", "semiCorrectCheerMessage");
@@ -5574,8 +5574,8 @@ function enableCheers(enableClassLists, enableStyles) {
   }
   for (var i = 0; i < enableStyles.length; i++) {
     for (var j = 0; j < document.getElementsByClassName("cheerCover").length; j++) {
-      if (document.getElementsByClassName("cheerCover")[j].classList.contains("unusedCheerCover")) {
-        if (eval(enableStyles[i])) {
+      if (eval(enableStyles[i])) {
+        if (document.getElementsByClassName("cheerCover")[j].classList.contains("unusedCheerCover")) {
           document.getElementsByClassName("cheerCover")[j].style.display = "block";
         }
       }
@@ -5586,8 +5586,8 @@ function enableCheers(enableClassLists, enableStyles) {
 function disableCheers(disableClassLists, disableStyles) {
   for (var i = 0; i < disableClassLists.length; i++) {
     for (var j = 0; j < document.getElementsByClassName("cheer").length; j++) {
-      if (document.getElementsByClassName("cheer")[j].classList.contains("unusedCheer")) {
-        if (eval(disableClassLists[i])) {
+      if (eval(disableClassLists[i])) {
+        if (document.getElementsByClassName("cheer")[j].classList.contains("unusedCheer")) {
           if (document.getElementsByClassName("cheerMessage")[j].innerHTML == "Bend over!") {
             document.getElementsByClassName("cheer")[j].classList.replace("semiCorrectCheer", "incorrectCheer");
             document.getElementsByClassName("cheerMessage")[j].classList.replace("semiCorrectCheerMessage", "incorrectCheerMessage");
@@ -5604,8 +5604,8 @@ function disableCheers(disableClassLists, disableStyles) {
   }
   for (var i = 0; i < disableStyles.length; i++) {
     for (var j = 0; j < document.getElementsByClassName("cheerCover").length; j++) {
-      if (document.getElementsByClassName("cheerCover")[j].classList.contains("unusedCheerCover")) {
-        if (eval(disableStyles[i])) {
+      if (eval(disableStyles[i])) {
+        if (document.getElementsByClassName("cheerCover")[j].classList.contains("unusedCheerCover")) {
           document.getElementsByClassName("cheerCover")[j].style.display = "none";
         }
       }

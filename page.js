@@ -12334,7 +12334,7 @@ function viewAccountToggleClose() {
   document.getElementById("viewAccountButton").blur();
 }
 
-function openAccount(event) {
+function openAccount() {
   if (document.getElementById("ok").disabled == true) {
     sessionStorage.button = "disabled";
   }

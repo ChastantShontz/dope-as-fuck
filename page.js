@@ -739,7 +739,7 @@ let characters = [
       ],
       firstAppearance: "<i>Jedi Search</i>"
     },
-    bio: "<span class=\"character mainCharacter jediMainCharacter\" id=\"kypDurron\">Kyp Durron</span> was by far the strongest student of Luke Skywalker's Jedi Praxeum, although he allowed himself to be corrupted by the spirit of Exar Kun and went on a rampage against the Empire. After being freed of Kun's influence, he was redeemed and went on to become a great Jedi."
+    bio: "<span class=\"character mainCharacter jediMainCharacter\" id=\"kypDurron\">Kyp Durron</span> was by far the strongest student at Luke Skywalker's Jedi Praxeum, although he allowed himself to be corrupted by the spirit of Exar Kun and went on a rampage against the Empire. After being freed of Kun's influence, he was redeemed and went on to become a great Jedi."
   },
   {
     name: "Lumiya",

@@ -13198,6 +13198,7 @@ function closeAccount() {
     setTimeout(() => {
       document.getElementById("memoryCont").open = false;
     }, 250);
+    setTimeout(hideMemory, 250);
   }
   document.getElementById("accountExit").tabIndex = "-1";
   document.getElementById("accountExit").blur();

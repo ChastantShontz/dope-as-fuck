@@ -4632,14 +4632,6 @@ footer {
   font-size: .9em;
 }
 
-.mobileJediCell {
-  color: var(--jediBlue);
-}
-
-.mobileSithCell {
-  color: var(--sithRed);
-}
-
 #mobileCharacterBio {
   display: none;
   font-family: "Merriweather", "Times New Roman", serif;

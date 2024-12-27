@@ -3675,6 +3675,7 @@ function secondCheckpoint(event) {
   }
   sessionStorage.dafCount = 0;
   document.getElementById("dafCounterNum").innerHTML = sessionStorage.dafCount;
+  document.getElementById("dafCounterNum").value = sessionStorage.dafCount;
   setTimeout(() => {
     document.getElementById("dafCounterButton").tabIndex = "0";
   }, 1750);
@@ -10491,6 +10492,7 @@ function gotIt27() {
   }
   sessionStorage.dafCount = 0;
   document.getElementById("dafCounterNum").innerHTML = sessionStorage.dafCount;
+  document.getElementById("dafCounterNum").value = sessionStorage.dafCount;
   setTimeout(() => {
     document.getElementById("dafCounterButton").tabIndex = "0";
   }, 1500);
@@ -11124,6 +11126,7 @@ function dafCounterCount(event) {
       console.log("DAF");
     }
     document.getElementById("dafCounterNum").innerHTML = sessionStorage.dafCount;
+    document.getElementById("dafCounterNum").value = sessionStorage.dafCount;
   }
   else if (sessionStorage.dafCount >= 212) {
     dafCounterError();
@@ -11150,6 +11153,7 @@ function dafCounterError() {
   document.getElementById("dafCounterButton").disabled = true;
   document.getElementById("dafCounterButton").blur();
   document.getElementById("dafCounterNum").innerHTML = "@#$%&";
+  document.getElementById("dafCounterNum").value = Number.POSITIVE_INFINITY;
   document.getElementById("dafCounterError").style.visibility = "visible";
   document.getElementById("dafCounterError").style.opacity = "100%";
   document.getElementById("dafCounterError").style.transition = "all 0s ease 0s";

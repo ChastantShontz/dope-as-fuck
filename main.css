@@ -4665,6 +4665,10 @@ footer {
 }
 
 .jediMainCharacter:has(.jediLink:hover) {
+  background: rgba(2, 137, 236, 75%);
+}
+
+.jediMainCharacter:has(.jediLink:active) {
   background: var(--jediBlue);
 }
 
@@ -4674,6 +4678,10 @@ footer {
 }
 
 .sithMainCharacter:has(.sithLink:hover) {
+  background: rgba(202, 0, 16, 75%);
+}
+
+.sithMainCharacter:has(.sithLink:active) {
   background: var(--sithRed);
 }
 

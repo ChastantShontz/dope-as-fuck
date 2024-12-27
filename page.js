@@ -3554,6 +3554,7 @@ function firstCheckpoint(event) {
   sessionStorage.oldHighScore = localStorage.highScore;
   saved.second.oldHighScore = sessionStorage.oldHighScore;
   document.getElementById("cheerScore").innerHTML = sessionStorage.points;
+  document.getElementById("cheerScore").value = sessionStorage.points;
   sessionStorage.tijuana = 10;
   document.getElementById("goals").innerHTML = sessionStorage.tijuana;
   let day = new Date();
@@ -4740,6 +4741,7 @@ function gotIt6() {
   sessionStorage.oldHighScore = localStorage.highScore;
   saved.second.oldHighScore = sessionStorage.oldHighScore;
   document.getElementById("cheerScore").innerHTML = sessionStorage.points;
+  document.getElementById("cheerScore").value = sessionStorage.points;
   sessionStorage.tijuana = 10;
   document.getElementById("goals").innerHTML = sessionStorage.tijuana;
   let day = new Date();
@@ -5486,6 +5488,7 @@ function acceptLife(event) {
   remember(event);
   saved.second.points = sessionStorage.points;
   document.getElementById("cheerScore").innerHTML = sessionStorage.points;
+  document.getElementById("cheerScore").value = sessionStorage.points;
   sessionStorage.lives++;
   saved.second.lives = sessionStorage.lives;
   document.getElementById("freshmanRepresentativeLife").style.opacity = "100%";
@@ -5719,6 +5722,7 @@ function correctCheer() {
   saved.second.points = sessionStorage.points;
   localStorage.saved = JSON.stringify(saved);
   document.getElementById("cheerScore").innerHTML = sessionStorage.points;
+  document.getElementById("cheerScore").value = sessionStorage.points;
   if (sessionStorage.points == 36) {
     document.getElementById("conductorTalk").innerHTML = "dIrTy SeX?!?!";
     if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
@@ -5765,6 +5769,7 @@ function semiCorrectCheer() {
       saved.second.points = sessionStorage.points;
       localStorage.saved = JSON.stringify(saved);
       document.getElementById("cheerScore").innerHTML = sessionStorage.points;
+      document.getElementById("cheerScore").value = sessionStorage.points;
       if (sessionStorage.points == 36) {
         document.getElementById("conductorTalk").innerHTML = "dIrTy SeX?!?!";
         if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
@@ -5860,6 +5865,7 @@ function raffleIncrement(event) {
   saved.second.points = sessionStorage.points;
   localStorage.saved = JSON.stringify(saved);
   document.getElementById("cheerScore").innerHTML = sessionStorage.points;
+  document.getElementById("cheerScore").value = sessionStorage.points;
   globalThis.i++;
   if (globalThis.i == 1000) {
     clearInterval(sessionStorage.raffleIncrementInterval);
@@ -5972,6 +5978,7 @@ function troyLassialExit(event) {
       localStorage.saved = JSON.stringify(saved);
       setTimeout(() => {
         document.getElementById("cheerScore").innerHTML = sessionStorage.points;
+        document.getElementById("cheerScore").value = sessionStorage.points;
       }, 750);
       if (sessionStorage.points == 36) {
         setTimeout(() => {

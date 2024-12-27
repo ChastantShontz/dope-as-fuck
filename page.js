@@ -13147,9 +13147,11 @@ function showMemory() {
   document.getElementById("memoryToggle").innerHTML = "Hide Stats"
   document.getElementById("memoryToggle").ariaLabel = "Hide the stats";
   document.getElementById("memoryToggle").onclick = hideMemory;
+  document.getElementById("memoryCont").tabIndex = "0";
 }
 
 function hideMemory() {
+  document.getElementById("memoryCont").tabIndex = "-1";
   document.getElementById("memoryToggle").innerHTML = "Show Hidden Stats";
   document.getElementById("memoryToggle").ariaLabel = "Show the hidden stats";
   document.getElementById("memoryToggle").onclick = showMemory;

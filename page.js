@@ -5570,6 +5570,7 @@ function enableCheers(enableClassLists, enableStyles) {
           }
         }
       }
+      break;
     }
   }
   for (var i = 0; i < enableStyles.length; i++) {
@@ -5579,6 +5580,7 @@ function enableCheers(enableClassLists, enableStyles) {
           document.getElementsByClassName("cheerCover")[j].style.display = "block";
         }
       }
+      break;
     }
   }
 }
@@ -5600,6 +5602,7 @@ function disableCheers(disableClassLists, disableStyles) {
           }
         }
       }
+      break;
     }
   }
   for (var i = 0; i < disableStyles.length; i++) {
@@ -5609,6 +5612,7 @@ function disableCheers(disableClassLists, disableStyles) {
           document.getElementsByClassName("cheerCover")[j].style.display = "none";
         }
       }
+      break;
     }
   }
 }

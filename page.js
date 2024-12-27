@@ -3233,33 +3233,21 @@ fetch("data.json")
 
 function newFunction() {
   if (sessionStorage.functionPrime == undefined) {
-    if ((sessionStorage.functionParameter != undefined) && (sessionStorage.functionParameter == "event")) {
-      document.getElementById("ok").onclick = function(event) {
-        eval("gotIt" + sessionStorage.function + "(event)");
-        compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
-      }
-      sessionStorage.removeItem("functionParameter");
+    if (sessionStorage.parameter == undefined) {
+      sessionStorage.parameter = "";
     }
-    else {
-      document.getElementById("ok").onclick = function() {
-        eval("gotIt" + sessionStorage.function + "()");
-        compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
-      }
+    document.getElementById("ok").onclick = function() {
+      eval("gotIt" + sessionStorage.function + "(" + sessionStorage.parameter + ")");
+      compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
     }
   }
   else {
-    if ((sessionStorage.functionPrimeParameter != undefined) && (sessionStorage.functionPrimeParameter == "event")) {
-      document.getElementById("ok").onclick = function(event) {
-        eval(sessionStorage.functionPrime + "(event)");
-        compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
-      }
-      sessionStorage.removeItem("functionPrimeParameter");
+    if (sessionStorage.parameterPrime == undefined) {
+      sessionStorage.parameterPrime = "";
     }
-    else {
-      document.getElementById("ok").onclick = function() {
-        eval(sessionStorage.functionPrime + "()");
-        compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
-      }
+    document.getElementById("ok").onclick = function() {
+      eval(sessionStorage.functionPrime + "(" + sessionStorage.parameterPrime + ")");
+      compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
     }
   }
 }

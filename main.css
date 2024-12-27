@@ -4650,8 +4650,13 @@ footer {
 }
 
 .mainCharacter {
+  border-radius: .5em;
   font-size: 1rem;
   line-height: .85lh;
+}
+
+.mainCharacter:has(.characterLink:hover) {
+  color: var(--white);
 }
 
 .jediMainCharacter {
@@ -4659,14 +4664,26 @@ footer {
   color: var(--jediBlue);
 }
 
+.jediMainCharacter:has(.jediLink:hover) {
+  background: var(--jediBlue);
+}
+
 .sithMainCharacter {
   font-family: "Wallpoet", fantasy;
   color: var(--sithRed);
 }
 
+.sithMainCharacter:has(.sithLink:hover) {
+  background: var(--sithRed);
+}
+
 #thrawn {
   font-size: .85rem;
   line-height: 1lh;
+}
+
+.characterLink {
+  color: unset;
 }
 
 /* Animation Effects */

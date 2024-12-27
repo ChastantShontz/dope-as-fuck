@@ -856,7 +856,7 @@ let characters = [
       ],
       firstAppearance: "<i>Star Wars: Tales of the Jedi: Dark Lords of the Sith</i>"
     },
-    bio: "<span class=\"character sithCharacter mainCharacter sithMainCharacter\" id=\"markaRagnos\"><a href=\"https://starwars.fandom.com/wiki/Marka_Ragnos\" hreflang=\"en-us\" charset=\"utf-8\" rel=\"external noopener noreferrer nofollow\" target=\"_blank\" referrerpolicy=\"strict-origin-when-cross-origin\" type=\"text/html\" title=\"Marka_Ragnos on Wookieepedia\" class=\"characterLink sithLink\" id=\"markaRagnosLink\" role=\"link\" aria-label=\"Read some more about Marka Ragnos\">Marka Ragnos</a></span> ruled over the Sith Empire for one hundred years during the Golden Age of the Sith, before dying of natural causes. He attempted to resurrect himself over five thousand years later with help from Tavion Axmis and her Disciples of Ragnos, but this was thwarted by Jaden Korr."
+    bio: "<span class=\"character sithCharacter mainCharacter sithMainCharacter\" id=\"markaRagnos\"><a href=\"https://starwars.fandom.com/wiki/Marka_Ragnos\" hreflang=\"en-us\" charset=\"utf-8\" rel=\"external noopener noreferrer nofollow\" target=\"_blank\" referrerpolicy=\"strict-origin-when-cross-origin\" type=\"text/html\" title=\"Marka Ragnos on Wookieepedia\" class=\"characterLink sithLink\" id=\"markaRagnosLink\" role=\"link\" aria-label=\"Read some more about Marka Ragnos\">Marka Ragnos</a></span> ruled over the Sith Empire for one hundred years during the Golden Age of the Sith, before dying of natural causes. He attempted to resurrect himself over five thousand years later with help from Tavion Axmis and her Disciples of Ragnos, but this was thwarted by Jaden Korr."
   },
   {
     name: "Meetra Surik",

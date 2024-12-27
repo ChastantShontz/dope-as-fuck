@@ -300,6 +300,7 @@ let calendar = {
 let characters = [
   {
     name: "Cade Skywalker",
+    link: "https://starwars.fandom.com/wiki/Cade_Skywalker",
     image: {
       url: "img/cadeSkywalker.png",
       position: "center"
@@ -331,6 +332,7 @@ let characters = [
   },
   {
     name: "Darth Bane",
+    link: "https://starwars.fandom.com/wiki/Darth_Bane/Legends",
     image: {
       url: "img/darthBane.png",
       position: "top"
@@ -368,6 +370,7 @@ let characters = [
   },
   {
     name: "Darth Caedus",
+    link: "https://starwars.fandom.com/wiki/Darth_Caedus",
     image: {
       url: "img/darthCaedus.png",
       position: "top"
@@ -411,6 +414,7 @@ let characters = [
   },
   {
     name: "Darth Krayt",
+    link: "https://starwars.fandom.com/wiki/Darth_Krayt",
     image: {
       url: "img/darthKrayt.png",
       position: "center"
@@ -450,6 +454,7 @@ let characters = [
   },
   {
     name: "Darth Malak",
+    link: "https://starwars.fandom.com/wiki/Darth_Malak",
     image: {
       url: "img/darthMalak.png",
       position: "center"
@@ -486,6 +491,7 @@ let characters = [
   },
   {
     name: "Darth Nihilus",
+    link: "https://starwars.fandom.com/wiki/Darth_Nihilus",
     image: {
       url: "img/darthNihilus.png",
       position: "top"
@@ -513,6 +519,7 @@ let characters = [
   },
   {
     name: "Darth Plagueis",
+    link: "https://starwars.fandom.com/wiki/Darth_Plagueis/Legends",
     image: {
       url: "img/darthPlagueis.png",
       position: "center"
@@ -545,6 +552,7 @@ let characters = [
   },
   {
     name: "Exar Kun",
+    link: "https://starwars.fandom.com/wiki/Exar_Kun/Legends",
     image: {
       url: "img/exarKun.png",
       position: "top"
@@ -578,6 +586,7 @@ let characters = [
   },
   {
     name: "Jaina Solo Fel",
+    link: "https://starwars.fandom.com/wiki/Jaina_Solo_Fel",
     image: {
       url: "img/jainaSoloFel.png",
       position: "top"
@@ -613,6 +622,7 @@ let characters = [
   },
   {
     name: "Karness Muur",
+    link: "https://starwars.fandom.com/wiki/Karness_Muur",
     image: {
       url: "img/karnessMuur.png",
       position: "center"
@@ -639,6 +649,7 @@ let characters = [
   },
   {
     name: "Kol Skywalker",
+    link: "https://starwars.fandom.com/wiki/Kol_Skywalker",
     image: {
       url: "img/kolSkywalker.png",
       position: "top"
@@ -671,6 +682,7 @@ let characters = [
   },
   {
     name: "Kyle Katarn",
+    link: "https://starwars.fandom.com/wiki/Kyle_Katarn",
     image: {
       url: "img/kyleKatarn.png",
       position: "center"
@@ -709,6 +721,7 @@ let characters = [
   },
   {
     name: "Kyp Durron",
+    link: "https://starwars.fandom.com/wiki/Kyp_Durron",
     image: {
       url: "img/kypDurron.png",
       position: "top"
@@ -743,6 +756,7 @@ let characters = [
   },
   {
     name: "Lumiya",
+    link: "https://starwars.fandom.com/wiki/Lumiya",
     image: {
       url: "img/lumiya.png",
       position: "top"
@@ -781,6 +795,7 @@ let characters = [
   },
   {
     name: "Mara Jade Skywalker",
+    link: "https://starwars.fandom.com/wiki/Mara_Jade_Skywalker",
     image: {
       url: "img/maraJadeSkywalker.png",
       position: "center"
@@ -818,6 +833,7 @@ let characters = [
   },
   {
     name: "Marka Ragnos",
+    link: "https://starwars.fandom.com/wiki/Marka_Ragnos",
     image: {
       url: "img/markaRagnos.png",
       position: "top"
@@ -844,6 +860,7 @@ let characters = [
   },
   {
     name: "Meetra Surik",
+    link: "https://starwars.fandom.com/wiki/Meetra_Surik",
     image: {
       url: "img/meetraSurik.png",
       position: "top"
@@ -877,6 +894,7 @@ let characters = [
   },
   {
     name: "Nomi Sunrider",
+    link: "https://starwars.fandom.com/wiki/Nomi_Sunrider",
     image: {
       url: "img/nomiSunrider.png",
       position: "center"
@@ -913,6 +931,7 @@ let characters = [
   },
   {
     name: "Revan",
+    link: "https://starwars.fandom.com/wiki/Revan/Legends",
     image: {
       url: "img/revan.png",
       position: "center"
@@ -953,6 +972,7 @@ let characters = [
   },
   {
     name: "Satele Shan",
+    link: "https://starwars.fandom.com/wiki/Satele_Shan",
     image: {
       url: "img/sateleShan.png",
       position: "left"
@@ -986,6 +1006,7 @@ let characters = [
   },
   {
     name: "Starkiller",
+    link: "https://starwars.fandom.com/wiki/Galen_Marek",
     image: {
       url: "img/starkiller.png",
       position: "center"
@@ -1020,6 +1041,7 @@ let characters = [
   },
   {
     name: "The Sith Emperor",
+    link: "https://starwars.fandom.com/wiki/Tenebrae",
     image: {
       url: "img/theSithEmperor.png",
       position: "center"
@@ -1062,6 +1084,7 @@ let characters = [
   },
   {
     name: "Thrawn",
+    link: "https://starwars.fandom.com/wiki/Mitth%27raw%27nuruodo/Legends",
     image: {
       url: "img/thrawn.png",
       position: "top"
@@ -1091,6 +1114,7 @@ let characters = [
   },
   {
     name: "Tulak Hord",
+    link: "https://starwars.fandom.com/wiki/Tulak_Hord",
     image: {
       url: "img/tulakHord.png",
       position: "center"
@@ -1118,6 +1142,7 @@ let characters = [
   },
   {
     name: "Ulic Qel-Droma",
+    link: "https://starwars.fandom.com/wiki/Ulic_Qel-Droma/Legends",
     image: {
       url: "img/ulicQelDroma.png",
       position: "center"
@@ -13820,10 +13845,16 @@ function mobileGrow(event) {
   document.getElementById("mobileCharacterButton").blur();
   document.getElementById("mobileCharacterImgContCont").tabIndex = "-1";
   document.getElementById("mobileCharacterImgContCont").blur();
+  document.getElementById("mobileCharacterImg").title = "";
   document.getElementById("mobileCharacterImg").style.background = "rgba(0, 61, 124, 50%) url(\"img/mystery.png\") center / cover";
   document.getElementById("mobileCharacterImg").style.filter = "blur(1em)";
   document.getElementById("mobileCharacterImg").style.transition = "all 0s ease 0s";
   document.getElementById("mobileCharacterImg").style.pointerEvents = "none";
+  document.getElementById("mobileCharacterImgLink").removeAttribute("href");
+  document.getElementById("mobileCharacterImgLink").style.pointerEvents = "none";
+  document.getElementById("mobileCharacterImgLink").ariaLabel = "";
+  document.getElementById("mobileCharacterImgLink").tabIndex = "-1";
+  document.getElementById("mobileCharacterImgLink").blur();
   document.getElementById("mobileCharacterImgCaption").innerHTML = "Go on, try me out...";
   document.getElementById("mobileCharacterImgCaption").style.fontFamily = "\"Titillium Web\", \"Roboto\", \"Arial\", sans-serif";
   document.getElementById("mobileCharacterImgCaption").style.color = "var(--black)";
@@ -13982,6 +14013,10 @@ function slideshow() {
   if (sessionStorage.oldSlide == undefined) {
     document.getElementById("mobileCharacterButtonContCont").style.marginBottom = "1em";
     document.getElementById("mobileCharacterButtonContCont").style.transition = "margin-bottom 0s ease 0s";
+    document.getElementById("mobileCharacterImgLink").href = characters[sessionStorage.newSlide].link;
+    document.getElementById("mobileCharacterImgLink").style.pointerEvents = "auto";
+    document.getElementById("mobileCharacterImgLink").ariaLabel = "Read some more about " + characters[sessionStorage.newSlide].name;
+    document.getElementById("mobileCharacterImgLink").tabIndex = "0";
     document.getElementById("mobileCharacterImg").style.filter = "none";
     document.getElementById("mobileCharacterImg").style.transition = "filter 0s ease 0s";
     document.getElementById("mobileCharacterImg").style.pointerEvents = "auto";
@@ -14000,6 +14035,7 @@ function slideshow() {
       }
     }
   }
+  document.getElementById("mobileCharacterImg").title = characters[sessionStorage.newSlide].name;
   document.getElementById("mobileCharacterImg").style.background = "url(\"" + characters[sessionStorage.newSlide].image.url + "\") " + characters[sessionStorage.newSlide].image.position + " / cover";
   document.getElementById("mobileCharacterImgCaption").innerHTML = characters[sessionStorage.newSlide].name;
   if (characters[sessionStorage.newSlide].alignment == "Jedi") {

@@ -4604,6 +4604,13 @@ footer {
   pointer-events: none;
 }
 
+#mobileCharacterImgLink {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
 #mobileCharacterImgCaption {
   width: 100%;
   padding-left: .25em;

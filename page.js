@@ -310,7 +310,7 @@ let characters = [
       born: "116 ABY",
       died: null,
       species: "Human",
-      gender: "male",
+      gender: "Male",
       affiliation: [
         "New Jedi Order",
         "Galactic Federation of Free Alliances",
@@ -344,7 +344,7 @@ let characters = [
       born: "1028 BBY, Apatros",
       died: "980 BBY, Ambria",
       species: "Human",
-      gender: "male",
+      gender: "Male",
       affiliation: [
         "Outer Rim Oreworks Company",
         "Brotherhood of Darkness",
@@ -380,7 +380,7 @@ let characters = [
       born: "9 ABY, Coruscant",
       died: "41 ABY, <i>Anakin Solo</i>",
       species: "Human",
-      gender: "male",
+      gender: "Male",
       affiliation: [
         "New Jedi Order",
         "New Republic",
@@ -423,7 +423,7 @@ let characters = [
       born: "47 BBY, Tatooine",
       died: "138 ABY, Coruscant",
       species: "Human",
-      gender: "male",
+      gender: "Male",
       affiliation: [
         "Tusken Raiders",
         "Jedi Order",
@@ -464,7 +464,7 @@ let characters = [
       born: "Quelii",
       died: "3956 BBY, Star Forge",
       species: "Human",
-      gender: "male",
+      gender: "Male",
       affiliation: [
         "Jedi Order",
         "Old Republic",
@@ -473,7 +473,7 @@ let characters = [
       ],
       relatives: null,
       masters: [
-        "the Sith Emperor",
+        "The Sith Emperor",
         "Darth Revan"
       ],
       apprentices: [
@@ -496,7 +496,7 @@ let characters = [
       born: null,
       died: "3951 BBY, <i>Ravager</i>",
       species: "Human",
-      gender: "male",
+      gender: "Male",
       affiliation: [
         "Sith Triumvirate"
       ],
@@ -525,7 +525,7 @@ let characters = [
       born: "Mygeeto",
       died: "32 BBY, Coruscant",
       species: "Muun",
-      gender: "male",
+      gender: "Male",
       affiliation: [
         "InterGalactic Banking Clan",
         "Rule of Two"
@@ -555,7 +555,7 @@ let characters = [
       born: null,
       died: "3996 BBY, Yavin 4",
       species: "Human",
-      gender: "male",
+      gender: "Male",
       affiliation: [
         "Jedi Order",
         "Old Republic",
@@ -588,7 +588,7 @@ let characters = [
       born: "9 ABY, Coruscant",
       died: null,
       species: "Human",
-      gender: "female",
+      gender: "Female",
       affiliation: [
         "New Jedi Order",
         "New Republic",
@@ -623,7 +623,7 @@ let characters = [
       born: null,
       died: null,
       species: "Sephi",
-      gender: "male",
+      gender: "Male",
       affiliation: [
         "Jedi Order",
         "Old Republic",
@@ -649,7 +649,7 @@ let characters = [
       born: null,
       died: "130 ABY, Ossus",
       species: "Human",
-      gender: "male",
+      gender: "Male",
       affiliation: [
         "New Jedi Order",
         "Galactic Federation of Free Alliances"
@@ -681,7 +681,7 @@ let characters = [
       born: "23 BBY, Sulon",
       died: null,
       species: "Human",
-      gender: "male",
+      gender: "Male",
       affiliation: [
         "Galactic Empire",
         "Alliance to Restore the Republic",
@@ -719,7 +719,7 @@ let characters = [
       born: "7 BBY, Deyer",
       died: null,
       species: "Human",
-      gender: "male",
+      gender: "Male",
       affiliation: [
         "New Jedi Order",
         "New Republic",
@@ -755,7 +755,7 @@ let characters = [
       born: "Coruscant",
       died: "40 ABY, Terephon",
       species: "Human cyborg",
-      gender: "female",
+      gender: "Female",
       affiliation: [
         "Galactic Empire",
         "Alliance to Restore the Republic",
@@ -791,7 +791,7 @@ let characters = [
       born: "17 BBY",
       died: "40 ABY, Kavan",
       species: "Human",
-      gender: "female",
+      gender: "Female",
       affiliation: [
         "Galactic Empire",
         "Smugglers' Alliance",
@@ -828,7 +828,7 @@ let characters = [
       born: null,
       died: "5000 BBY",
       species: "Human-Sith hybrid",
-      gender: "male",
+      gender: "Male",
       affiliation: [
         "Old Sith Empire",
         "Disciples of Ragnos"
@@ -856,7 +856,7 @@ let characters = [
       born: "Dantooine",
       died: "3950 BBY, Dromund Kaas",
       species: "Human",
-      gender: "female",
+      gender: "Female",
       affiliation: [
         "Jedi Order",
         "Old Republic"
@@ -889,7 +889,7 @@ let characters = [
       born: null,
       died: null,
       species: "Human",
-      gender: "female",
+      gender: "Female",
       affiliation: [
         "Jedi Order",
         "Old Republic"
@@ -926,7 +926,7 @@ let characters = [
       born: "3994 BBY",
       died: "3637 BBY, Yavin 4",
       species: "Human",
-      gender: "male",
+      gender: "Male",
       affiliation: [
         "Jedi Order",
         "Old Republic",
@@ -940,7 +940,7 @@ let characters = [
       ],
       masters: [
         "Kreia",
-        "the Sith Emperor",
+        "The Sith Emperor",
         "Bastila Shan"
       ],
       apprentices: [
@@ -963,7 +963,7 @@ let characters = [
       born: "3699 BBY, Brentaal IV",
       died: null,
       species: "Human",
-      gender: "female",
+      gender: "Female",
       affiliation: [
         "Jedi Order",
         "Old Republic"
@@ -998,7 +998,7 @@ let characters = [
       born: "19 BBY, Kashyyyk",
       died: "2 BBY, Death Star",
       species: "Human",
-      gender: "male",
+      gender: "Male",
       affiliation: [
         "Rule of Two",
         "Galactic Empire",
@@ -1034,7 +1034,7 @@ let characters = [
       born: "5113 BBY, Medriaas",
       died: "3626 BBY, Satele Shan's mind",
       species: "Sith",
-      gender: "male",
+      gender: "Male",
       affiliation: [
         "Old Sith Empire",
         "Reconstituted Sith Empire",
@@ -1074,7 +1074,7 @@ let characters = [
       born: null,
       died: "9 ABY, <i>Chimera</i>",
       species: "Chiss",
-      gender: "male",
+      gender: "Male",
       affiliation: [
         "Chiss Ascendancy",
         "Galactic Empire",
@@ -1101,7 +1101,7 @@ let characters = [
       born: null,
       died: "5640 BBY",
       species: null,
-      gender: "male",
+      gender: "Male",
       affiliation: [
         "Old Sith Empire"
       ],
@@ -1128,7 +1128,7 @@ let characters = [
       born: null,
       died: "3986 BBY, Rhen Var",
       species: "Human",
-      gender: "male",
+      gender: "Male",
       affiliation: [
         "Jedi Order",
         "Old Republic",

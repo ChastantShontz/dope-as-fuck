@@ -4666,13 +4666,13 @@ function gotIt5() {
     document.getElementById("crappleton").ariaHidden = false;
   }, 500);
   setTimeout(enableButton, 1500);
-  document.getElementById("ok").onclick = function(event) {
-    gotIt6(event);
+  document.getElementById("ok").onclick = function() {
+    gotIt6();
     compileSound("sine", ["exponential", 430, 450, .1], ["exponential", .75, 1, .1], .1);
   };
 }
 
-function gotIt6(event) {
+function gotIt6() {
   document.getElementById("conductorTalk").innerHTML = "Let the game begin! Just watch what's going on and select the right songs to do at each point. If you mess up six times, it's game over! And don't forget to click on the cheer list to the left to get points, they'll come in handy later on. Good luck!";
   if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
     if (document.getElementById("conductorTalkCont").scrollTop > 0) {

@@ -12844,7 +12844,7 @@ function accountUpdate(field, method) {
           document.getElementsByClassName("infoInput")[i].classList.replace("definedInfoInput", "undefinedInfoInput");
           document.getElementsByClassName("dataOutput")[i].innerHTML = "";
           document.getElementsByClassName("dataOutput")[i].value = "";
-          document.getElementsByClassName("dataBodyRow")[i].classList.replace("shownDataBodyRow", "hiddenDataBodyRow");
+          document.getElementsByClassName("dataBodyRow")[i].classList.replace("shownDataRow", "hiddenDataRow");
           document.getElementsByClassName("dataBodyRow")[i].style.display = "none";
           if (document.getElementsByClassName("infoInput")[i].name == "name") {
             for (var j = 0; j < document.getElementsByClassName("username").length; j++) {
@@ -12884,7 +12884,7 @@ function accountUpdate(field, method) {
           document.getElementsByClassName("infoInput")[i].classList.replace("undefinedInfoInput", "definedInfoInput");
           document.getElementsByClassName("dataOutput")[i].innerHTML = eval("localStorage." + document.getElementsByClassName("infoInput")[i].name);
           document.getElementsByClassName("dataOutput")[i].value = eval("localStorage." + document.getElementsByClassName("dataOutput")[i].name);
-          document.getElementsByClassName("dataBodyRow")[i].classList.replace("hiddenDataBodyRow", "shownDataBodyRow");
+          document.getElementsByClassName("dataBodyRow")[i].classList.replace("hiddenDataRow", "shownDataRow");
           document.getElementsByClassName("dataBodyRow")[i].style.display = "table-row";
           if (document.getElementsByClassName("infoInput")[i].name == "name") {
             for (var j = 0; j < document.getElementsByClassName("username").length; j++) {
@@ -12968,7 +12968,7 @@ function accountUpdate(field, method) {
         document.getElementsByClassName("infoInput")[sessionStorage.field - 1].classList.replace("undefinedInfoInput", "definedInfoInput");
         document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].innerHTML = eval("localStorage." + document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name);
         document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].value = eval("localStorage." + document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].name);
-        document.getElementsByClassName("dataBodyRow")[sessionStorage.field - 1].classList.replace("hiddenDataBodyRow", "shownDataBodyRow");
+        document.getElementsByClassName("dataBodyRow")[sessionStorage.field - 1].classList.replace("hiddenDataRow", "shownDataRow");
         document.getElementsByClassName("dataBodyRow")[sessionStorage.field - 1].style.display = "table-row";
         if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "name") {
           for (var i = 0; i < document.getElementsByClassName("username").length; i++) {
@@ -13039,7 +13039,7 @@ function accountUpdate(field, method) {
         document.getElementsByClassName("infoInput")[sessionStorage.field - 1].classList.replace("definedInfoInput", "undefinedInfoInput");
         document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].innerHTML = "";
         document.getElementsByClassName("dataOutput")[sessionStorage.field - 1].value = "";
-        document.getElementsByClassName("dataBodyRow")[sessionStorage.field - 1].classList.replace("shownDataBodyRow", "hiddenDataBodyRow");
+        document.getElementsByClassName("dataBodyRow")[sessionStorage.field - 1].classList.replace("shownDataRow", "hiddenDataRow");
         document.getElementsByClassName("dataBodyRow")[sessionStorage.field - 1].style.display = "none";
         if (document.getElementsByClassName("infoInput")[sessionStorage.field - 1].name == "name") {
           for (var i = 0; i < document.getElementsByClassName("username").length; i++) {

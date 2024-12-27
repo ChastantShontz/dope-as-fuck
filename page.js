@@ -13832,6 +13832,7 @@ function mobileGrow(event) {
   document.getElementById("mobileCharacterStatsCont").style.flexDirection = "unset";
   document.getElementById("mobileCharacterStatsCont").style.justifyContent = "unset";
   document.getElementById("mobileCharacterStatsCont").style.alignItems = "unset";
+  document.getElementById("mobileCharacterStats").tabIndex = "-1";
   document.getElementById("mobileCharacterBio").innerHTML = "";
   document.getElementById("mobileCharacterBio").style.display = "none";
   sessionStorage.removeItem("oldSlide");
@@ -13984,6 +13985,7 @@ function slideshow() {
     document.getElementById("mobileCharacterImg").style.filter = "none";
     document.getElementById("mobileCharacterImg").style.transition = "filter 0s ease 0s";
     document.getElementById("mobileCharacterImg").style.pointerEvents = "auto";
+    document.getElementById("mobileCharacterStats").tabIndex = "0";
     document.getElementById("mobileCharacterStatsCont").style.display = "flex";
     document.getElementById("mobileCharacterStatsCont").style.flexDirection = "row";
     document.getElementById("mobileCharacterStatsCont").style.justifyContent = "flex-start";

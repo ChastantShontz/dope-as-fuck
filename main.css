@@ -4601,7 +4601,13 @@ footer {
   height: 90%;
   width: 90%;
   filter: blur(1em);
+  transition: all .25s ease 0s;
   pointer-events: none;
+}
+
+#mobileCharacterImg:has(#mobileCharacterImgLink:hover) {
+  height: 95%;
+  width: 95%;
 }
 
 #mobileCharacterImgLink {

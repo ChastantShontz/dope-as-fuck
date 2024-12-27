@@ -13848,7 +13848,7 @@ function mobileGrow(event) {
   document.getElementById("mobileCharacterImg").title = "";
   document.getElementById("mobileCharacterImg").style.background = "rgba(0, 61, 124, 50%) url(\"img/mystery.png\") center / cover";
   document.getElementById("mobileCharacterImg").style.filter = "blur(1em)";
-  document.getElementById("mobileCharacterImg").style.transition = "all 0s ease 0s";
+  document.getElementById("mobileCharacterImg").style.transition = "background 0s ease 0s, height .25s ease 0s, width .25s ease 0s, filter 0s ease 0s";
   document.getElementById("mobileCharacterImg").style.pointerEvents = "none";
   document.getElementById("mobileCharacterImgLink").removeAttribute("href");
   document.getElementById("mobileCharacterImgLink").style.pointerEvents = "none";
@@ -14018,7 +14018,7 @@ function slideshow() {
     document.getElementById("mobileCharacterImgLink").ariaLabel = "Read some more about " + characters[sessionStorage.newSlide].name;
     document.getElementById("mobileCharacterImgLink").tabIndex = "0";
     document.getElementById("mobileCharacterImg").style.filter = "none";
-    document.getElementById("mobileCharacterImg").style.transition = "filter 0s ease 0s";
+    document.getElementById("mobileCharacterImg").style.transition = "height .25s ease 0s, width .25s ease 0s, filter 0s ease 0s";
     document.getElementById("mobileCharacterImg").style.pointerEvents = "auto";
     document.getElementById("mobileCharacterStats").tabIndex = "0";
     document.getElementById("mobileCharacterStatsCont").style.display = "flex";

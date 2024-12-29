@@ -6636,8 +6636,8 @@ function gamePlay() {
   disableCheers(disableClassLists, disableStyles);
   sessionStorage.turns = Math.ceil(Math.random() * 4);
   sessionStorage.action = 0;
-  action();
   sessionStorage.functionPrime = "action";
+  action();
 }
 
 function action() {

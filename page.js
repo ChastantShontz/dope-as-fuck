@@ -7407,12 +7407,12 @@ function block() {
     sessionStorage.sluTimeout--;
     if (sessionStorage.sluTimeout == 0) {
       if (sessionStorage.gender == 1) {
-        document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].style.pointerEvents = "auto";
-        document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].tabIndex = "0";
+        document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage - 5].style.pointerEvents = "auto";
+        document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage - 5].tabIndex = "0";
       }
       else if (sessionStorage.gender == 2) {
-        document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].style.pointerEvents = "auto";
-        document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].tabIndex = "0";
+        document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage - 5].style.pointerEvents = "auto";
+        document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage - 5].tabIndex = "0";
       }
       document.getElementById("cage" + sessionStorage.sluCage).style.visibility = "hidden";
       document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "0%";
@@ -7647,12 +7647,12 @@ function celebrate() {
     sessionStorage.sluTimeout--;
     if (sessionStorage.sluTimeout == 0) {
       if (sessionStorage.gender == 1) {
-        document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].style.pointerEvents = "auto";
-        document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].tabIndex = "0";
+        document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage - 5].style.pointerEvents = "auto";
+        document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage - 5].tabIndex = "0";
       }
       else if (sessionStorage.gender == 2) {
-        document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].style.pointerEvents = "auto";
-        document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].tabIndex = "0";
+        document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage - 5].style.pointerEvents = "auto";
+        document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage - 5].tabIndex = "0";
       }
       document.getElementById("cage" + sessionStorage.sluCage).style.visibility = "hidden";
       document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "0%";
@@ -7813,12 +7813,12 @@ function penalty() {
       sessionStorage.sluTimeout--;
       if (sessionStorage.sluTimeout == 0) {
         if (sessionStorage.gender == 1) {
-          document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].style.pointerEvents = "auto";
-          document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].tabIndex = "0";
+          document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage - 5].style.pointerEvents = "auto";
+          document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage - 5].tabIndex = "0";
         }
         else if (sessionStorage.gender == 2) {
-          document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].style.pointerEvents = "auto";
-          document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].tabIndex = "0";
+          document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage - 5].style.pointerEvents = "auto";
+          document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage - 5].tabIndex = "0";
         }
         document.getElementById("cage" + sessionStorage.sluCage).style.visibility = "hidden";
         document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "0%";
@@ -7864,14 +7864,14 @@ function penalty() {
     document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "100%";
     document.getElementById("cage" + sessionStorage.sluCage).style.transition = "all .25s ease 0s";
     if (sessionStorage.gender == 1) {
-      document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].style.pointerEvents = "none";
-      document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].tabIndex = "-1";
-      document.getElementsByClassName("clarksonMenPlayer")[sessionStorage.sluCage].blur();
+      document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage - 5].style.pointerEvents = "none";
+      document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage - 5].tabIndex = "-1";
+      document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage - 5].blur();
     }
     else if (sessionStorage.gender == 2) {
-      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].style.pointerEvents = "none";
-      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].tabIndex = "-1";
-      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].blur();
+      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage - 5].style.pointerEvents = "none";
+      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage - 5].tabIndex = "-1";
+      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage - 5].blur();
     }
     if ((sessionStorage.clarksonTimeout > 0) && (sessionStorage.clarksonTimeout != "ejection")) {
       sessionStorage.clarksonTimeout--;
@@ -9481,12 +9481,12 @@ function win() {
   }
   if ((sessionStorage.sluTimeout > 0) || (sessionStorage.sluTimeout == "ejection")) {
     if (sessionStorage.gender == 1) {
-      document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].style.pointerEvents = "auto";
-      document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].tabIndex = "0";
+      document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage - 5].style.pointerEvents = "auto";
+      document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage - 5].tabIndex = "0";
     }
     else if (sessionStorage.gender == 2) {
-      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].style.pointerEvents = "auto";
-      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].tabIndex = "0";
+      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage - 5].style.pointerEvents = "auto";
+      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage - 5].tabIndex = "0";
     }
     document.getElementById("cage" + sessionStorage.sluCage).style.visibility = "hidden";
     document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "0%";
@@ -9665,12 +9665,12 @@ function lose() {
   }
   if ((sessionStorage.sluTimeout > 0) || (sessionStorage.sluTimeout == "ejection")) {
     if (sessionStorage.gender == 1) {
-      document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].style.pointerEvents = "auto";
-      document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage].tabIndex = "0";
+      document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage - 5].style.pointerEvents = "auto";
+      document.getElementsByClassName("sluMenPlayer")[sessionStorage.sluCage - 5].tabIndex = "0";
     }
     else if (sessionStorage.gender == 2) {
-      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].style.pointerEvents = "auto";
-      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage].tabIndex = "0";
+      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage - 5].style.pointerEvents = "auto";
+      document.getElementsByClassName("sluWomenPlayer")[sessionStorage.sluCage - 5].tabIndex = "0";
     }
     document.getElementById("cage" + sessionStorage.sluCage).style.visibility = "hidden";
     document.getElementById("cage" + sessionStorage.sluCage).style.opacity = "0%";

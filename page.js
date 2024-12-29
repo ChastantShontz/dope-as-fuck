@@ -6733,7 +6733,7 @@ function action() {
       sessionStorage.block = Math.ceil(Math.random() * 5);
     }
     if (sessionStorage.goal == 1) {
-      if (((sessionStorage.clarksonScore == 0) || ((sessionStorage.clarksonScore == 4) && (sessionStorage.sluScore == 0)) || (sessionStorage.clarksonScore == 9)) && (sessionStorage.block != 1)) {
+      if (((sessionStorage.clarksonScore == 0) || ((sessionStorage.clarksonScore == 4) && (sessionStorage.sluScore == 0)) || (sessionStorage.clarksonScore == 9)) && (sessionStorage.block > 1)) {
         if ((sessionStorage.clarksonScore == 0) || (sessionStorage.clarksonScore == 9)) {
           sessionStorage.songPrime = 69;
         }
@@ -6750,7 +6750,7 @@ function action() {
       }
     }
     else if (sessionStorage.goal == 2) {
-      if ((sessionStorage.sluScore == 0) && (sessionStorage.block != 1)) {
+      if ((sessionStorage.sluScore == 0) && (sessionStorage.block > 1)) {
         sessionStorage.songPrime = 32;
         document.getElementById("ok").onclick = function() {
           openSelection();
@@ -9347,7 +9347,7 @@ function overtime() {
     if (sessionStorage.goalieGoal > 1) {
       sessionStorage.block = Math.ceil(Math.random() * 5);
     }
-    if (sessionStorage.block != 1) {
+    if (sessionStorage.block > 1) {
       if (sessionStorage.goal == 1) {
         if ((sessionStorage.clarksonScore == 0) || (sessionStorage.clarksonScore == 9)) {
           sessionStorage.songPrime = 69;

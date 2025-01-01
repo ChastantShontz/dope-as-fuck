@@ -4613,6 +4613,7 @@ footer {
   padding-left: .25em;
   padding-right: .25em;
   font-family: "Titillium Web", "Roboto", "Arial", sans-serif;
+  color: var(--black);
 }
 
 #mobileCharacterBioCont {

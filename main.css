@@ -4578,6 +4578,7 @@ footer {
 
 #mobileCharacterImgContCont {
   width: 10em;
+  pointer-events: auto;
 }
 
 #mobileCharacterImgCont {
@@ -4614,6 +4615,7 @@ footer {
   padding-right: .25em;
   font-family: "Titillium Web", "Roboto", "Arial", sans-serif;
   color: var(--black);
+  pointer-events: auto;
 }
 
 #mobileCharacterBioCont {

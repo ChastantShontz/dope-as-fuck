@@ -2643,6 +2643,7 @@ main {
   visibility: hidden;
   position: absolute;
   opacity: 0%;
+  accent-color: var(--errorRed);
   font-family: "Rubik Mono One", fantasy;
   color: var(--errorRed);
   font-size: 1.5em;

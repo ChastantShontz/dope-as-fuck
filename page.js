@@ -14015,9 +14015,7 @@ function slideshow() {
   if (sessionStorage.oldSlide == undefined) {
     document.getElementById("mobileCharacterButtonContCont").style.marginBottom = "1em";
     document.getElementById("mobileCharacterButtonContCont").style.transition = "margin-bottom 0s ease 0s";
-    document.getElementById("mobileCharacterImgLink").href = characters[sessionStorage.newSlide].link;
     document.getElementById("mobileCharacterImgLink").style.pointerEvents = "auto";
-    document.getElementById("mobileCharacterImgLink").ariaLabel = "Read some more about " + characters[sessionStorage.newSlide].name;
     document.getElementById("mobileCharacterImgLink").tabIndex = "0";
     document.getElementById("mobileCharacterImg").style.filter = "none";
     document.getElementById("mobileCharacterImg").style.transition = "height .25s ease 0s, width .25s ease 0s, filter 0s ease 0s";
@@ -14037,6 +14035,8 @@ function slideshow() {
       }
     }
   }
+  document.getElementById("mobileCharacterImgLink").href = characters[sessionStorage.newSlide].link;
+  document.getElementById("mobileCharacterImgLink").ariaLabel = "Read some more about " + characters[sessionStorage.newSlide].name;
   document.getElementById("mobileCharacterImg").title = characters[sessionStorage.newSlide].name;
   document.getElementById("mobileCharacterImg").style.background = "url(\"" + characters[sessionStorage.newSlide].image.url + "\") " + characters[sessionStorage.newSlide].image.position + " / cover";
   document.getElementById("mobileCharacterImgCaption").innerHTML = characters[sessionStorage.newSlide].name;

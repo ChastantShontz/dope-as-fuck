@@ -4571,6 +4571,11 @@ footer {
   font-weight: bold;
 }
 
+#mobileCharacterImgContContCont {
+  display: inline-block;
+  pointer-events: none;
+}
+
 #mobileCharacterImgContCont {
   width: 10em;
 }
@@ -4598,16 +4603,9 @@ footer {
   pointer-events: none;
 }
 
-#mobileCharacterImg:has(#mobileCharacterImgLink:hover) {
+#mobileCharacterImg:hover {
   height: 95%;
   width: 95%;
-}
-
-#mobileCharacterImgLink {
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  pointer-events: none;
 }
 
 #mobileCharacterImgCaption {

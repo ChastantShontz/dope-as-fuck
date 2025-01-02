@@ -11146,7 +11146,7 @@ function dafCounterError() {
   document.getElementById("dafCounterButton").disabled = true;
   document.getElementById("dafCounterButton").blur();
   document.getElementById("dafCounterNum").innerHTML = "@#$%&";
-  document.getElementById("dafCounterNum").value = Number.POSITIVE_INFINITY;
+  document.getElementById("dafCounterNum").value = "@#$%&";
   document.getElementById("dafCounterError").style.visibility = "visible";
   document.getElementById("dafCounterError").style.opacity = "100%";
   document.getElementById("dafCounterError").style.transition = "all 0s ease 0s";

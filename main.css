@@ -2653,6 +2653,10 @@ main {
   user-select: none;
 }
 
+#dafCounterError::selection {
+  background: var(--errorRed) !important;
+}
+
 #speaker {
   width: 100%;
 }

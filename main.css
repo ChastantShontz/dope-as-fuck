@@ -4229,19 +4229,19 @@ main {
   right: calc(50% - 12.5em);
   top: 40%;
   border-radius: .5em;
+  accent-color: var(--secretPurple);
   width: auto;
   padding: 1em;
   border: .2em solid var(--secretPurple);
 }
 
-#password,
-#password * {
-  accent-color: var(--secretPurple);
-}
-
 #password::selection,
 #password *::selection {
   background: var(--secretPurple) !important;
+}
+
+#password * {
+  accent-color: var(--secretPurple);
 }
 
 #passwordInputCont {
@@ -4297,14 +4297,16 @@ main {
   background: linear-gradient(rgba(221, 221, 221, 50%), rgba(221, 221, 221, 50%)) center / cover,
               url("img/bardCollegeAtSimonsRock.png") center / cover;
   opacity: 0%;
+  accent-color: var(--secretPurple);
+}
+
+#secret::selection,
+#secret *::selection {
+  background: var(--secretPurple) !important;
 }
 
 #secret * {
   accent-color: var(--secretPurple);
-}
-
-#secret *::selection {
-  background: var(--secretPurple) !important;
 }
 
 #secretModal {

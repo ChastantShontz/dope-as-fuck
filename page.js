@@ -13862,6 +13862,7 @@ function mobileGrow(event) {
   document.getElementById("mobileCharacterImg").style.transition = "background 0s ease 0s, height .25s ease 0s, width .25s ease 0s, filter 0s ease 0s";
   document.getElementById("mobileCharacterImg").style.pointerEvents = "none";
   document.getElementById("mobileCharacterImgCaption").innerHTML = "Go on, try me out...";
+  document.getElementById("mobileCharacterImgCaption").removeAttribute("class");
   document.getElementById("mobileCharacterImgCaption").style.fontFamily = "\"Titillium Web\", \"Roboto\", \"Arial\", sans-serif";
   document.getElementById("mobileCharacterImgCaption").style.color = "var(--black)";
   document.getElementById("mobileCharacterImgCaption").style.transition = "color 0s ease 0s";
@@ -14022,6 +14023,7 @@ function slideshow() {
     document.getElementById("mobileCharacterImg").style.filter = "none";
     document.getElementById("mobileCharacterImg").style.transition = "height .25s ease 0s, width .25s ease 0s, filter 0s ease 0s";
     document.getElementById("mobileCharacterImg").style.pointerEvents = "auto";
+    document.getElementById("mobileCharacterImgCaption").classList.add("characterCaption");
     document.getElementById("mobileCharacterImgContContCont").style.pointerEvents = "auto";
     document.getElementById("mobileCharacterImgContContCont").tabIndex = "0";
     document.getElementById("mobileCharacterStats").tabIndex = "0";
@@ -14041,18 +14043,42 @@ function slideshow() {
   }
   document.getElementById("mobileCharacterImg").style.background = "url(\"" + characters[sessionStorage.newSlide].image.url + "\") " + characters[sessionStorage.newSlide].image.position + " / cover";
   document.getElementById("mobileCharacterImgCaption").innerHTML = characters[sessionStorage.newSlide].name;
-  if (characters[sessionStorage.newSlide].alignment == "Jedi") {
-    document.getElementById("mobileCharacterImgCaption").style.fontFamily = "\"Kalam\", \"Satisfy\", \"Brush Script MT\", cursive";
-    document.getElementById("mobileCharacterImgCaption").style.color = "var(--jediBlue)";
-  }
-  else if (characters[sessionStorage.newSlide].alignment == "Sith") {
-    document.getElementById("mobileCharacterImgCaption").style.fontFamily = "\"Wallpoet\", fantasy";
-    document.getElementById("mobileCharacterImgCaption").style.color = "var(--sithRed)";
-  }
-  else if (characters[sessionStorage.newSlide].alignment == null) {
+  if (characters[sessionStorage.newSlide].alignment == null) {
+    if (document.getElementById("mobileCharacterImgCaption").classList.contains("jediCaption")) {
+      document.getElementById("mobileCharacterImgCaption").classList.remove("jediCaption");
+    }
+    else if (document.getElementById("mobileCharacterImgCaption").classList.contains("sithCaption")) {
+      document.getElementById("mobileCharacterImgCaption").classList.remove("sithCaption");
+    }
     document.getElementById("mobileCharacterImgCaption").style.fontFamily = "\"Titillium Web\", \"Roboto\", \"Arial\", sans-serif";
     document.getElementById("mobileCharacterImgCaption").style.color = "var(--black)";
     console.log("THRAWN!!! Sorry, just a big fan");
+  }
+  else {
+    if (characters[sessionStorage.newSlide].alignment == "Jedi") {
+      if ((document.getElementById("mobileCharacterImgCaption").classList.length == 1) || (document.getElementById("mobileCharacterImgCaption").classList.contains("sithCaption"))) {
+        if (document.getElementById("mobileCharacterImgCaption").classList.length == 1) {
+          document.getElementById("mobileCharacterImgCaption").classList.add("jediCaption");
+        }
+        else if (document.getElementById("mobileCharacterImgCaption").classList.contains("sithCaption")) {
+          document.getElementById("mobileCharacterImgCaption").classList.replace("sithCaption", "jediCaption");
+        }
+        document.getElementById("mobileCharacterImgCaption").style.fontFamily = "\"Kalam\", \"Satisfy\", \"Brush Script MT\", cursive";
+        document.getElementById("mobileCharacterImgCaption").style.color = "var(--jediBlue)";
+      }
+    }
+    else if (characters[sessionStorage.newSlide].alignment == "Sith") {
+      if ((document.getElementById("mobileCharacterImgCaption").classList.length == 1) || (document.getElementById("mobileCharacterImgCaption").classList.contains("jediCaption"))) {
+        if (document.getElementById("mobileCharacterImgCaption").classList.length == 1) {
+          document.getElementById("mobileCharacterImgCaption").classList.add("sithCaption");
+        }
+        else if (document.getElementById("mobileCharacterImgCaption").classList.contains("jediCaption")) {
+          document.getElementById("mobileCharacterImgCaption").classList.replace("jediCaption", "sithCaption");
+        }
+        document.getElementById("mobileCharacterImgCaption").style.fontFamily = "\"Wallpoet\", fantasy";
+        document.getElementById("mobileCharacterImgCaption").style.color = "var(--sithRed)";
+      }
+    }
   }
   document.getElementById("mobileCharacterImgCaption").style.transition = "color 0s ease 0s";
   document.getElementById("mobileCharacterImgContContCont").href = characters[sessionStorage.newSlide].link;

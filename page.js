@@ -14050,6 +14050,7 @@ function slideshow() {
     else if (document.getElementById("mobileCharacterImgCaption").classList.contains("sithCaption")) {
       document.getElementById("mobileCharacterImgCaption").classList.remove("sithCaption");
     }
+    document.getElementById("mobileCharacterImgCaption").style.borderRadius = "0";
     document.getElementById("mobileCharacterImgCaption").style.fontFamily = "\"Titillium Web\", \"Roboto\", \"Arial\", sans-serif";
     document.getElementById("mobileCharacterImgCaption").style.color = "var(--black)";
     console.log("THRAWN!!! Sorry, just a big fan");
@@ -14059,6 +14060,7 @@ function slideshow() {
       if ((document.getElementById("mobileCharacterImgCaption").classList.length == 1) || ((document.getElementById("mobileCharacterImgCaption").classList.length == 2) && (document.getElementById("mobileCharacterImgCaption").classList.contains("sithCaption")))) {
         if (document.getElementById("mobileCharacterImgCaption").classList.length == 1) {
           document.getElementById("mobileCharacterImgCaption").classList.add("jediCaption");
+          document.getElementById("mobileCharacterImgCaption").style.borderRadius = ".5em";
         }
         else if ((document.getElementById("mobileCharacterImgCaption").classList.length == 2) && (document.getElementById("mobileCharacterImgCaption").classList.contains("sithCaption"))) {
           document.getElementById("mobileCharacterImgCaption").classList.replace("sithCaption", "jediCaption");
@@ -14071,6 +14073,7 @@ function slideshow() {
       if ((document.getElementById("mobileCharacterImgCaption").classList.length == 1) || ((document.getElementById("mobileCharacterImgCaption").classList.length == 2) && (document.getElementById("mobileCharacterImgCaption").classList.contains("jediCaption")))) {
         if (document.getElementById("mobileCharacterImgCaption").classList.length == 1) {
           document.getElementById("mobileCharacterImgCaption").classList.add("sithCaption");
+          document.getElementById("mobileCharacterImgCaption").style.borderRadius = ".5em";
         }
         else if ((document.getElementById("mobileCharacterImgCaption").classList.length == 2) && (document.getElementById("mobileCharacterImgCaption").classList.contains("jediCaption"))) {
           document.getElementById("mobileCharacterImgCaption").classList.replace("jediCaption", "sithCaption");

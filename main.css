@@ -4590,6 +4590,27 @@ footer {
   width: 95%;
 }
 
+#mobileCharacterImgContContCont[href]:hover #mobileCharacterImgCaption {
+  color: var(--white) !important;
+  text-decoration: underline currentColor solid .05em;
+}
+
+#mobileCharacterImgContContCont[href]:hover #mobileCharacterImgCaption.jediCaption {
+  background: rgba(2, 137, 236, 75%);
+}
+
+#mobileCharacterImgContContCont[href]:hover #mobileCharacterImgCaption.sithCaption {
+  background: rgba(202, 0, 16, 75%);
+}
+
+#mobileCharacterImgContContCont[href]:active #mobileCharacterImgCaption.jediCaption {
+  background: var(--jediBlue);
+}
+
+#mobileCharacterImgContContCont[href]:active #mobileCharacterImgCaption.sithCaption {
+  background: var(--sithRed);
+}
+
 #mobileCharacterImgContCont {
   width: 10em;
   pointer-events: auto;
@@ -4619,7 +4640,7 @@ footer {
 }
 
 #mobileCharacterImgCaption {
-  width: 100%;
+  width: fit-content;
   padding-left: .25em;
   padding-right: .25em;
   font-family: "Titillium Web", "Roboto", "Arial", sans-serif;

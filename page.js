@@ -5736,68 +5736,66 @@ function correctCheer() {
 }
 
 function semiCorrectCheer() {
-  if (document.getElementById("cheerMessage" + sessionStorage.cheer).innerHTML == "Bend over!") {
-    if (sessionStorage.gender == 1) {
-      document.getElementById("cheer" + sessionStorage.cheer).classList.replace("semiCorrectCheer", "correctCheer");
-      document.getElementById("cheer" + sessionStorage.cheer).style.background = "var(--clarksonGreen)";
-      document.getElementById("cheer" + sessionStorage.cheer).style.borderBottom = ".05em solid var(--clarksonGreen)";
-      document.getElementById("cheerMessage" + sessionStorage.cheer).classList.replace("semiCorrectCheerMessage", "correctCheerMessage");
-      document.getElementById("cheerMessage" + sessionStorage.cheer).style.animation = "selectCheer .5s ease 0s 1 forwards";
-      setTimeout(() => {
-        document.getElementById("cheerMessage" + sessionStorage.cheer).style.animation = "none";
-      }, 500);
-      document.getElementById("cheerCover" + sessionStorage.cheer).classList.replace("semiCorrectCheerCover", "correctCheerCover");
-      document.getElementById("danielAllin").style.animation = "bendOver 1.25s ease 0s 1 forwards";
-      setTimeout(() => {
-        document.getElementById("danielAllin").style.animation = "none";
-      }, 1250);
-      if (localStorage.totalCorrectCheers == "N/A") {
-        localStorage.totalCorrectCheers = 1;
-      }
-      else {
-        localStorage.totalCorrectCheers++;
-      }
-      for (var i = 1; i <= sessionStorage.pointsIncrement; i++) {
-        sessionStorage.points++;
-        localStorage.totalPoints++;
-      }
-      if ((localStorage.highScore == "N/A") || (Number(sessionStorage.points) > Number(localStorage.highScore))) {
-        localStorage.highScore = sessionStorage.points;
-      }
-      saved.second.points = sessionStorage.points;
-      localStorage.saved = JSON.stringify(saved);
-      document.getElementById("cheerScore").innerHTML = sessionStorage.points;
-      document.getElementById("cheerScore").value = sessionStorage.points;
-      if (sessionStorage.points == 36) {
-        document.getElementById("conductorTalk").innerHTML = "dIrTy SeX?!?!";
-        if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
-          if (document.getElementById("conductorTalkCont").scrollTop > 0) {
-            document.getElementById("conductorTalkCont").scrollTop = 0;
-          }
-        }
-        if ((sessionStorage.backup != undefined) && (sessionStorage.backup != "")) {
-          sessionStorage.backup = "";
+  if (sessionStorage.gender == 1) {
+    document.getElementById("cheer4").classList.replace("semiCorrectCheer", "correctCheer");
+    document.getElementById("cheer4").style.background = "var(--clarksonGreen)";
+    document.getElementById("cheer4").style.borderBottom = ".05em solid var(--clarksonGreen)";
+    document.getElementById("cheerMessage4").classList.replace("semiCorrectCheerMessage", "correctCheerMessage");
+    document.getElementById("cheerMessage4").style.animation = "selectCheer .5s ease 0s 1 forwards";
+    setTimeout(() => {
+      document.getElementById("cheerMessage4").style.animation = "none";
+    }, 500);
+    document.getElementById("cheerCover4").classList.replace("semiCorrectCheerCover", "correctCheerCover");
+    document.getElementById("danielAllin").style.animation = "bendOver 1.25s ease 0s 1 forwards";
+    setTimeout(() => {
+      document.getElementById("danielAllin").style.animation = "none";
+    }, 1250);
+    if (localStorage.totalCorrectCheers == "N/A") {
+      localStorage.totalCorrectCheers = 1;
+    }
+    else {
+      localStorage.totalCorrectCheers++;
+    }
+    for (var i = 1; i <= sessionStorage.pointsIncrement; i++) {
+      sessionStorage.points++;
+      localStorage.totalPoints++;
+    }
+    if ((localStorage.highScore == "N/A") || (Number(sessionStorage.points) > Number(localStorage.highScore))) {
+      localStorage.highScore = sessionStorage.points;
+    }
+    saved.second.points = sessionStorage.points;
+    localStorage.saved = JSON.stringify(saved);
+    document.getElementById("cheerScore").innerHTML = sessionStorage.points;
+    document.getElementById("cheerScore").value = sessionStorage.points;
+    if (sessionStorage.points == 36) {
+      document.getElementById("conductorTalk").innerHTML = "dIrTy SeX?!?!";
+      if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
+        if (document.getElementById("conductorTalkCont").scrollTop > 0) {
+          document.getElementById("conductorTalkCont").scrollTop = 0;
         }
       }
-      compileSound("triangle", ["exponential", 540, 590, .25], ["exponential", .75, 1, .25], .25);
-    }
-    else if (sessionStorage.gender == 2) {
-      document.getElementById("cheer" + sessionStorage.cheer).classList.replace("semiCorrectCheer", "incorrectCheer");
-      document.getElementById("cheer" + sessionStorage.cheer).style.background = "var(--sluRed)";
-      document.getElementById("cheer" + sessionStorage.cheer).style.borderBottom = ".05em solid var(--sluRed)";
-      document.getElementById("cheerMessage" + sessionStorage.cheer).classList.replace("semiCorrectCheerMessage", "incorrectCheerMessage");
-      document.getElementById("cheerCover" + sessionStorage.cheer).classList.replace("semiCorrectCheerCover", "incorrectCheerCover");
-      if (localStorage.totalCorrectCheers == "N/A") {
-        localStorage.totalCorrectCheers = 0;
+      if ((sessionStorage.backup != undefined) && (sessionStorage.backup != "")) {
+        sessionStorage.backup = "";
       }
-      document.getElementById("hopeCrisafi").style.animation = "bendOver 1.25s ease 0s 1 forwards";
-      setTimeout(() => {
-        document.getElementById("hopeCrisafi").style.animation = "none";
-      }, 1250);
-      document.getElementById("troyLassialTalk").innerHTML = "Woah, you can't yell at a bunch of college girls to bend over! I'm afraid I'm going to have to write you up for a Title 69 sexual harassment violation, and take one of your lives away.";
-      setTimeout(troyLassialEntrance, 1250);
-      compileSound("sawtooth", ["exponential", 140, 90, .25], ["none", 1, null, 0], .25);
     }
+    compileSound("triangle", ["exponential", 540, 590, .25], ["exponential", .75, 1, .25], .25);
+  }
+  else if (sessionStorage.gender == 2) {
+    document.getElementById("cheer4").classList.replace("semiCorrectCheer", "incorrectCheer");
+    document.getElementById("cheer4").style.background = "var(--sluRed)";
+    document.getElementById("cheer4").style.borderBottom = ".05em solid var(--sluRed)";
+    document.getElementById("cheerMessage4").classList.replace("semiCorrectCheerMessage", "incorrectCheerMessage");
+    document.getElementById("cheerCover4").classList.replace("semiCorrectCheerCover", "incorrectCheerCover");
+    if (localStorage.totalCorrectCheers == "N/A") {
+      localStorage.totalCorrectCheers = 0;
+    }
+    document.getElementById("hopeCrisafi").style.animation = "bendOver 1.25s ease 0s 1 forwards";
+    setTimeout(() => {
+      document.getElementById("hopeCrisafi").style.animation = "none";
+    }, 1250);
+    document.getElementById("troyLassialTalk").innerHTML = "Woah, you can't yell at a bunch of college girls to bend over! I'm afraid I'm going to have to write you up for a Title 69 sexual harassment violation, and take one of your lives away.";
+    setTimeout(troyLassialEntrance, 1250);
+    compileSound("sawtooth", ["exponential", 140, 90, .25], ["none", 1, null, 0], .25);
   }
 }
 
@@ -5953,16 +5951,16 @@ function troyLassialExit(event) {
     document.getElementById("troyLassialCont").style.transform = "scale(0)";
     document.getElementById("troyLassialCont").style.transition = "transform .5s ease 0s";
     if ((document.getElementById("troyLassialTalk").innerHTML == "It's funny, that sounded an awful lot like the \"bullshit\" word. Maybe that was intentional of you? I suppose that technically, you've done nothing wrong. I'll be watching you like a hawk, though, so beware!") || (document.getElementById("troyLassialTalk").innerHTML == "Suck flu? What on Earth does that mean? Are you sure you weren't trying to say something else? Unfortunately, I can't eject you just for wanting to suck the flu. But please reconsider how you are representing Clarkson.")) {
-      document.getElementById("cheer" + sessionStorage.cheer).classList.replace("incorrectCheer", "correctCheer");
-      document.getElementById("cheer" + sessionStorage.cheer).style.background = "var(--clarksonGreen)";
-      document.getElementById("cheer" + sessionStorage.cheer).style.borderBottom = ".05em solid var(--clarksonGreen)";
-      document.getElementById("cheer" + sessionStorage.cheer).style.transition = "all 0s ease .75s";
-      document.getElementById("cheerMessage" + sessionStorage.cheer).classList.replace("incorrectCheerMessage", "correctCheerMessage");
-      document.getElementById("cheerMessage" + sessionStorage.cheer).style.animation = "selectCheer .5s ease .75s 1 forwards";
+      document.getElementById("cheer5").classList.replace("incorrectCheer", "correctCheer");
+      document.getElementById("cheer5").style.background = "var(--clarksonGreen)";
+      document.getElementById("cheer5").style.borderBottom = ".05em solid var(--clarksonGreen)";
+      document.getElementById("cheer5").style.transition = "all 0s ease .75s";
+      document.getElementById("cheerMessage5").classList.replace("incorrectCheerMessage", "correctCheerMessage");
+      document.getElementById("cheerMessage5").style.animation = "selectCheer .5s ease .75s 1 forwards";
       setTimeout(() => {
-        document.getElementById("cheerMessage" + sessionStorage.cheer).style.animation = "none";
+        document.getElementById("cheerMessage5").style.animation = "none";
       }, 1250);
-      document.getElementById("cheerCover" + sessionStorage.cheer).classList.replace("incorrectCheerCover", "correctCheerCover");
+      document.getElementById("cheerCover5").classList.replace("incorrectCheerCover", "correctCheerCover");
       localStorage.totalCorrectCheers++;
       for (var i = 1; i <= sessionStorage.pointsIncrement; i++) {
         sessionStorage.points++;

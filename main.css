@@ -4682,12 +4682,15 @@ footer {
 
 .characterLink {
   border-radius: .5em;
-  color: inherit;
 }
 
 .characterLink:hover {
   color: var(--white);
   text-decoration: underline currentColor solid .05em;
+}
+
+.jediLink {
+  color: var(--jediBlue);
 }
 
 .jediLink:hover {
@@ -4696,6 +4699,10 @@ footer {
 
 .jediLink:active {
   background: var(--jediBlue);
+}
+
+.sithLink {
+  color: var(--sithRed);
 }
 
 .sithLink:hover {
@@ -4708,6 +4715,7 @@ footer {
 
 #thrawnLink {
   border-radius: 0;
+  color: var(--black);
 }
 
 #thrawnLink:hover,

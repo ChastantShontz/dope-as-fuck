@@ -4585,6 +4585,11 @@ footer {
   pointer-events: none;
 }
 
+#mobileCharacterImgContContCont[href]:hover #mobileCharacterImg {
+  height: 95%;
+  width: 95%;
+}
+
 #mobileCharacterImgContCont {
   width: 10em;
   pointer-events: auto;
@@ -4611,11 +4616,6 @@ footer {
   filter: blur(1em);
   transition: all .25s ease 0s;
   pointer-events: none;
-}
-
-#mobileCharacterImg:hover {
-  height: 95%;
-  width: 95%;
 }
 
 #mobileCharacterImgCaption {

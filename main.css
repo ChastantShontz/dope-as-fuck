@@ -4595,6 +4595,10 @@ footer {
   text-decoration: underline currentColor solid .05em;
 }
 
+#mobileCharacterImgContContCont[href]:hover #mobileCharacterImgCaption[class="characterCaption"] {
+  color: var(--black) !important;
+}
+
 #mobileCharacterImgContContCont[href]:hover #mobileCharacterImgCaption.jediCaption {
   background: rgba(2, 137, 236, 75%);
 }

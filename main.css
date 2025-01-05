@@ -4664,22 +4664,9 @@ footer {
   line-height: .85lh;
 }
 
-.mainCharacter:has(.characterLink:hover) {
-  color: var(--white);
-  text-decoration: underline;
-}
-
 .jediMainCharacter {
   font-family: "Kalam", "Satisfy", "Brush Script MT", cursive;
   color: var(--jediBlue);
-}
-
-.jediMainCharacter:has(.jediLink:hover) {
-  background: rgba(2, 137, 236, 75%);
-}
-
-.jediMainCharacter:has(.jediLink:active) {
-  background: var(--jediBlue);
 }
 
 .sithMainCharacter {
@@ -4687,27 +4674,46 @@ footer {
   color: var(--sithRed);
 }
 
-.sithMainCharacter:has(.sithLink:hover) {
-  background: rgba(202, 0, 16, 75%);
-}
-
-.sithMainCharacter:has(.sithLink:active) {
-  background: var(--sithRed);
-}
-
 #thrawn {
+  border-radius: 0;
   font-size: .85rem;
   line-height: 1lh;
 }
 
-#thrawn:has(#thrawnLink:hover),
-#thrawn:has(#thrawnLink:active) {
-  background: none;
-  color: var(--black);
+.characterLink {
+  border-radius: .5em;
+  color: inherit;
 }
 
-.characterLink {
-  color: unset;
+.characterLink:hover {
+  color: var(--white);
+  text-decoration: underline currentColor solid .05em;
+}
+
+.jediLink:hover {
+  background: rgba(2, 137, 236, 75%);
+}
+
+.jediLink:active {
+  background: var(--jediBlue);
+}
+
+.sithLink:hover {
+  background: rgba(202, 0, 16, 75%);
+}
+
+.sithLink:active {
+  background: var(--sithRed);
+}
+
+#thrawnLink {
+  border-radius: 0;
+}
+
+#thrawnLink:hover,
+#thrawnLink:active {
+  background: none;
+  color: var(--black);
 }
 
 

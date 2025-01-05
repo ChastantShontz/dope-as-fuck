@@ -5783,9 +5783,12 @@ function semiCorrectCheer() {
   else if (sessionStorage.gender == 2) {
     document.getElementById("cheer4").classList.replace("semiCorrectCheer", "incorrectCheer");
     document.getElementById("cheer4").style.background = "var(--sluRed)";
+    document.getElementById("cheer4").style.accentColor = "var(--sluRed)";
     document.getElementById("cheer4").style.borderBottom = ".05em solid var(--sluRed)";
     document.getElementById("cheerMessage4").classList.replace("semiCorrectCheerMessage", "incorrectCheerMessage");
+    document.getElementById("cheerMessage4").style.accentColor = "var(--sluRed)";
     document.getElementById("cheerCover4").classList.replace("semiCorrectCheerCover", "incorrectCheerCover");
+    document.getElementById("cheerCover4").style.accentColor = "var(--sluRed)";
     if (localStorage.totalCorrectCheers == "N/A") {
       localStorage.totalCorrectCheers = 0;
     }
@@ -5801,7 +5804,10 @@ function semiCorrectCheer() {
 
 function incorrectCheer() {
   document.getElementById("cheer" + sessionStorage.cheer).style.background = "var(--sluRed)";
+  document.getElementById("cheer" + sessionStorage.cheer).style.accentColor = "var(--sluRed)";
   document.getElementById("cheer" + sessionStorage.cheer).style.borderBottom = ".05em solid var(--sluRed)";
+  document.getElementById("cheerMessage" + sessionStorage.cheer).style.accentColor = "var(--sluRed)";
+  document.getElementById("cheerCover" + sessionStorage.cheer).style.accentColor = "var(--sluRed)";
   if (localStorage.totalCorrectCheers == "N/A") {
     localStorage.totalCorrectCheers = 0;
   }

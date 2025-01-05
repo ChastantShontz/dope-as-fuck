@@ -943,6 +943,12 @@ main {
   color: var(--white);
 }
 
+.incorrectCheer.usedCheer::selection,
+.incorrectCheerMessage.usedCheerMessage::selection,
+.incorrectCheerCover.usedCheerCover::selection {
+  background: var(--sluRed) !important;
+}
+
 .incorrectCheer:active {
   background: var(--sluRed);
   border-bottom: .05em solid var(--sluRed);

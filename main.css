@@ -75,8 +75,8 @@ main {
   display: inline-block;
   margin-left: .1em;
   margin-right: .1em;
-  transform: scaleX(1.5)
-             scaleY(.75);
+  transform: scaleX(150%)
+             scaleY(75%);
   transform-origin: bottom;
 }
 
@@ -579,7 +579,7 @@ main {
 
 #menImg {
   background: url("img/danielAllinBG.png") top / cover;
-  transform: scaleX(-1);
+  transform: scaleX(-100%);
 }
 
 #womenImg {
@@ -598,7 +598,7 @@ main {
 
 #menLabel {
   color: var(--allinBlue);
-  transform: scaleX(1);
+  transform: scaleX(100%);
 }
 
 #womenLabel {
@@ -676,7 +676,7 @@ main {
   left: -25em;
   bottom: calc(12em + 5%);
   width: 5em;
-  transform: scale(5);
+  transform: scale(500%);
   transform-origin: bottom left;
 }
 
@@ -1824,7 +1824,7 @@ main {
 
 #zebra2 {
   right: 40%;
-  transform: scaleX(-1);
+  transform: scaleX(-100%);
 }
 
 #tonyCollins {
@@ -2483,14 +2483,14 @@ main {
 .firstWord::before {
   content: "\01d160\00a0";
   display: inline-block;
-  transform: scale(2);
+  transform: scale(200%);
   transform-origin: bottom right;
 }
 
 .lastWord::after {
   content: "\00a0\01d161\01d161";
   display: inline-block;
-  transform: scale(1.5);
+  transform: scale(150%);
   transform-origin: top left;
 }
 
@@ -2716,7 +2716,7 @@ main {
 }
 
 .beer:active {
-  transform: scale(1.1) !important;
+  transform: scale(110%) !important;
 }
 
 #socialMedias {
@@ -4715,16 +4715,16 @@ footer {
 
 @keyframes bounce {
   0% {
-    transform: scaleX(1.5)
-               scaleY(.75);
+    transform: scaleX(150%)
+               scaleY(75%);
   }
   50% {
-    transform: scaleX(.75)
-               scaleY(1.5);
+    transform: scaleX(75%)
+               scaleY(150%);
   }
   100% {
-    transform: scaleX(1.5)
-               scaleY(.75);
+    transform: scaleX(150%)
+               scaleY(75%);
   }
 }
 
@@ -4749,7 +4749,7 @@ footer {
 @keyframes emphasizeCont {
   0% {
     box-shadow: none;
-    transform: scale(1);
+    transform: scale(100%);
   }
   17% {
     box-shadow: 0 0 .5em .5em var(--clarksonGold);
@@ -4757,14 +4757,14 @@ footer {
   33%,
   67% {
     box-shadow: 0 0 .5em .5em var(--clarksonGold);
-    transform: scale(1.1);
+    transform: scale(110%);
   }
   83% {
     box-shadow: 0 0 .5em .5em var(--clarksonGold);
   }
   100% {
     box-shadow: none;
-    transform: scale(1);
+    transform: scale(100%);
   }
 }
 
@@ -4822,20 +4822,20 @@ footer {
   25% {
     left: 15%;
     right: 15%;
-    transform: scaleX(1)
-               scaleY(.01);
+    transform: scaleX(100%)
+               scaleY(1%);
   }
   50% {
     left: 15%;
     right: 15%;
-    transform: scaleX(1)
-               scaleY(1);
+    transform: scaleX(100%)
+               scaleY(100%);
   }
   100% {
     left: 25%;
     right: 5%;
-    transform: scaleX(1)
-               scaleY(1);
+    transform: scaleX(100%)
+               scaleY(100%);
   }
 }
 
@@ -4857,13 +4857,13 @@ footer {
 
 @keyframes selectCheer {
   0% {
-    transform: scale(1);
+    transform: scale(100%);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(110%);
   }
   100% {
-    transform: scale(1);
+    transform: scale(100%);
   }
 }
 
@@ -4887,52 +4887,52 @@ footer {
   0% {
     left: 40%;
     bottom: 0;
-    transform: scaleX(1);
+    transform: scaleX(100%);
   }
   15% {
     left: 2%;
     bottom: 2%;
-    transform: scaleX(1);
+    transform: scaleX(100%);
   }
   19% {
     left: 2%;
     bottom: 2%;
-    transform: scaleX(1);
+    transform: scaleX(100%);
   }
   31% {
     left: 2%;
     bottom: 75%;
-    transform: scaleX(1);
+    transform: scaleX(100%);
   }
   35% {
     left: 2%;
     bottom: 75%;
-    transform: scaleX(-1);
+    transform: scaleX(-100%);
   }
   65% {
     left: 90%;
     bottom: 75%;
-    transform: scaleX(-1);
+    transform: scaleX(-100%);
   }
   69% {
     left: 90%;
     bottom: 75%;
-    transform: scaleX(-1);
+    transform: scaleX(-100%);
   }
   81% {
     left: 90%;
     bottom: 2%;
-    transform: scaleX(-1);
+    transform: scaleX(-100%);
   }
   85% {
     left: 90%;
     bottom: 2%;
-    transform: scaleX(1);
+    transform: scaleX(100%);
   }
   100% {
     left: 52%;
     bottom: 0;
-    transform: scaleX(1);
+    transform: scaleX(100%);
   }
 }
 
@@ -4941,61 +4941,61 @@ footer {
     left: 40%;
     bottom: 0;
     transform: rotate(0)
-               scaleX(1);
+               scaleX(100%);
   }
   15% {
     left: 2%;
     bottom: 2%;
     transform: rotate(0)
-               scaleX(1);
+               scaleX(100%);
   }
   19% {
     left: 2%;
     bottom: 2%;
     transform: rotate(90deg)
-               scaleX(1);
+               scaleX(100%);
   }
   31% {
     left: 2%;
     bottom: 80%;
     transform: rotate(90deg)
-               scaleX(1);
+               scaleX(100%);
   }
   35% {
     left: 2%;
     bottom: 80%;
     transform: rotate(0)
-               scaleX(-1);
+               scaleX(-100%);
   }
   65% {
     left: 90%;
     bottom: 80%;
     transform: rotate(0)
-               scaleX(-1);
+               scaleX(-100%);
   }
   69% {
     left: 90%;
     bottom: 80%;
     transform: rotate(90deg)
-               scaleX(-1);
+               scaleX(-100%);
   }
   81% {
     left: 90%;
     bottom: 2%;
     transform: rotate(90deg)
-               scaleX(-1);
+               scaleX(-100%);
   }
   85% {
     left: 90%;
     bottom: 2%;
     transform: rotate(0)
-               scaleX(1);
+               scaleX(100%);
   }
   100% {
     left: 52%;
     bottom: 0;
     transform: rotate(0)
-               scaleX(1);
+               scaleX(100%);
   }
 }
 
@@ -5004,61 +5004,61 @@ footer {
     right: 40%;
     bottom: 0;
     transform: rotate(0)
-               scaleX(-1);
+               scaleX(-100%);
   }
   15% {
     right: 2%;
     bottom: 2%;
     transform: rotate(0)
-               scaleX(-1);
+               scaleX(-100%);
   }
   19% {
     right: 2%;
     bottom: 2%;
     transform: rotate(-90deg)
-               scaleX(-1);
+               scaleX(-100%);
   }
   31% {
     right: 2%;
     bottom: 80%;
     transform: rotate(-90deg)
-               scaleX(-1);
+               scaleX(-100%);
   }
   35% {
     right: 2%;
     bottom: 80%;
     transform: rotate(0)
-               scaleX(1);
+               scaleX(100%);
   }
   65% {
     right: 90%;
     bottom: 80%;
     transform: rotate(0)
-               scaleX(1);
+               scaleX(100%);
   }
   69% {
     right: 90%;
     bottom: 80%;
     transform: rotate(-90deg)
-               scaleX(1);
+               scaleX(100%);
   }
   81% {
     right: 90%;
     bottom: 2%;
     transform: rotate(-90deg)
-               scaleX(1);
+               scaleX(100%);
   }
   85% {
     right: 90%;
     bottom: 2%;
     transform: rotate(0)
-               scaleX(-1);
+               scaleX(-100%);
   }
   100% {
     right: 52%;
     bottom: 0;
     transform: rotate(0)
-               scaleX(-1);
+               scaleX(-100%);
   }
 }
 
@@ -5079,27 +5079,27 @@ footer {
   0% {
     visibility: hidden;
     opacity: 0;
-    transform: scale(1);
+    transform: scale(100%);
   }
   10% {
     visibility: visible;
     opacity: 100%;
-    transform: scale(1);
+    transform: scale(100%);
   }
   50% {
     visibility: visible;
     opacity: 100%;
-    transform: scale(1.5);
+    transform: scale(150%);
   }
   90% {
     visibility: visible;
     opacity: 100%;
-    transform: scale(1);
+    transform: scale(100%);
   }
   100% {
     visibility: hidden;
     opacity: 0;
-    transform: scale(1);
+    transform: scale(100%);
   }
 }
 
@@ -5112,7 +5112,7 @@ footer {
     bottom: auto;
     opacity: 0;
     transform: rotate(0)
-               scale(1);
+               scale(100%);
   }
   8%,
   17% {
@@ -5123,7 +5123,7 @@ footer {
     bottom: auto;
     opacity: 100%;
     transform: rotate(0)
-               scale(1);
+               scale(100%);
   }
   33% {
     visibility: visible;
@@ -5133,7 +5133,7 @@ footer {
     bottom: auto;
     opacity: 100%;
     transform: rotate(69deg)
-               scale(1);
+               scale(100%);
   }
   50% {
     visibility: visible;
@@ -5143,7 +5143,7 @@ footer {
     bottom: 10%;
     opacity: 100%;
     transform: rotate(69deg)
-               scale(-1);
+               scale(-100%);
   }
   67% {
     visibility: visible;
@@ -5153,7 +5153,7 @@ footer {
     bottom: auto;
     opacity: 100%;
     transform: rotate(420deg)
-               scale(-1);
+               scale(-100%);
   }
   83%,
   92% {
@@ -5164,7 +5164,7 @@ footer {
     bottom: 20%;
     opacity: 100%;
     transform: rotate(420deg)
-               scale(1);
+               scale(100%);
   }
   100% {
     visibility: hidden;
@@ -5174,7 +5174,7 @@ footer {
     bottom: 20%;
     opacity: 0;
     transform: rotate(420deg)
-               scale(1);
+               scale(100%);
   }
 }
 
@@ -5212,27 +5212,27 @@ footer {
   0% {
     visibility: hidden;
     opacity: 0;
-    transform: scale(1);
+    transform: scale(100%);
   }
   1% {
     visibility: visible;
     opacity: 100%;
-    transform: scale(1);
+    transform: scale(100%);
   }
   50% {
     visibility: visible;
     opacity: 100%;
-    transform: scale(1.5);
+    transform: scale(150%);
   }
   99% {
     visibility: visible;
     opacity: 100%;
-    transform: scale(1);
+    transform: scale(100%);
   }
   100% {
     visibility: hidden;
     opacity: 0;
-    transform: scale(1);
+    transform: scale(100%);
   }
 }
 
@@ -6071,7 +6071,7 @@ footer {
   92%,
   94%,
   100% {
-    transform: scale(1);
+    transform: scale(100%);
   }
   9%,
   12%,
@@ -6080,32 +6080,32 @@ footer {
   63%,
   82%,
   93% {
-    transform: scale(1.05);
+    transform: scale(105%);
   }
 }
 
 @keyframes emphasizeBeer {
   0% {
-    transform: scale(1);
+    transform: scale(100%);
   }
   33%,
   67% {
-    transform: scale(1.1);
+    transform: scale(110%);
   }
   100% {
-    transform: scale(1);
+    transform: scale(100%);
   }
 }
 
 @keyframes bitch {
   0% {
-    transform: scale(1);
+    transform: scale(100%);
   }
   50% {
-    transform: scale(2);
+    transform: scale(200%);
   }
   100% {
-    transform: scale(1);
+    transform: scale(100%);
   }
 }
 
@@ -6143,25 +6143,25 @@ footer {
 
 @keyframes emphasizeMessage {
   0% {
-    transform: scaleX(1);
+    transform: scaleX(100%);
   }
   50% {
-    transform: scaleX(1.1);
+    transform: scaleX(110%);
   }
   100% {
-    transform: scaleX(1);
+    transform: scaleX(100%);
   }
 }
 
 @keyframes pulse {
   0% {
-    transform: scale(1);
+    transform: scale(100%);
   }
   50% {
-    transform: scale(1.05);
+    transform: scale(105%);
   }
   100% {
-    transform: scale(1);
+    transform: scale(100%);
   }
 }
 

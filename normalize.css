@@ -289,7 +289,7 @@ button.defaultButton:active,
 input[type="button"].defaultButton:active,
 input[type="reset"].defaultButton:active,
 input[type="submit"].defaultButton:active {
-  transform: scale(.95);
+  transform: scale(95%);
 }
 
 

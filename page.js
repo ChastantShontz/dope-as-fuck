@@ -3531,7 +3531,7 @@ function firstCheckpoint(event) {
   document.getElementById("rink").style.left = "25%";
   document.getElementById("rink").style.right = "5%";
   document.getElementById("rink").style.opacity = "0";
-  document.getElementById("rink").style.transform = "scale(1)";
+  document.getElementById("rink").style.transform = "scale(100%)";
   document.getElementById("rink").style.transition = "all 0s ease 0s";
   setTimeout(() => {
     document.getElementById("rink").style.visibility = "visible";
@@ -3570,7 +3570,7 @@ function firstCheckpoint(event) {
   for (var i = 0; i < document.getElementsByClassName("gameActivity").length; i++) {
     document.getElementsByClassName("gameActivity")[i].style.visibility = "hidden";
     document.getElementsByClassName("gameActivity")[i].style.opacity = "0";
-    document.getElementsByClassName("gameActivity")[i].style.transform = "scale(1)";
+    document.getElementsByClassName("gameActivity")[i].style.transform = "scale(100%)";
     document.getElementsByClassName("gameActivity")[i].style.transition = "all 0s ease 0s";
     const activate = (x) => {
       setTimeout(() => {
@@ -4110,7 +4110,7 @@ function openDiscord() {
   document.getElementById("discordLogo").ariaLabel = "Close the Discord server";
   document.getElementById("discordLogo").onclick = closeDiscord;
   document.getElementById("discord").style.bottom = "40%";
-  document.getElementById("discord").style.transform = "scale(1)";
+  document.getElementById("discord").style.transform = "scale(100%)";
   document.getElementById("discord").style.transition = "all .5s ease 0s";
   document.getElementById("discord").tabIndex = "0";
   document.getElementById("discord").ariaHidden = false;
@@ -4207,14 +4207,14 @@ function selectGender(gender) {
   localStorage.saved = JSON.stringify(saved);
   for (var i = 0; i < document.getElementsByClassName("gender").length; i++) {
     if (i == (sessionStorage.gender - 1)) {
-      document.getElementsByClassName("gender")[i].style.transform = "scale(1.1)";
+      document.getElementsByClassName("gender")[i].style.transform = "scale(110%)";
       document.getElementsByClassName("genderImg")[i].style.boxShadow = "0 0 .5em .5em var(--clarksonGold)";
       document.getElementsByClassName("genderImg")[i].style.transition = "box-shadow .25s ease 0s";
       document.getElementsByClassName("genderLabel")[i].style.boxShadow = "0 0 .5em .5em var(--clarksonGold)";
       document.getElementsByClassName("genderLabel")[i].style.transition = "box-shadow .25s ease 0s";
     }
     else {
-      document.getElementsByClassName("gender")[i].style.transform = "scale(1)";
+      document.getElementsByClassName("gender")[i].style.transform = "scale(100%)";
       document.getElementsByClassName("genderImg")[i].style.boxShadow = "none";
       document.getElementsByClassName("genderImg")[i].style.transition = "box-shadow .25s ease 0s";
       document.getElementsByClassName("genderLabel")[i].style.boxShadow = "none";
@@ -4492,7 +4492,7 @@ function gotIt4() {
   document.getElementById("map").tabIndex = "0";
   document.getElementById("map").ariaHidden = false;
   document.getElementById("knightmobile").style.bottom = "35%";
-  document.getElementById("knightmobile").style.transform = "scale(1)";
+  document.getElementById("knightmobile").style.transform = "scale(100%)";
   document.getElementById("knightmobile").style.transition = "all .5s ease .5s";
   sessionStorage.arrowBlinkInterval = setInterval(arrowBlink, 60000);
   setTimeout(() => {
@@ -4650,7 +4650,7 @@ function gotIt5() {
   document.getElementById("map").tabIndex = "-1";
   document.getElementById("map").ariaHidden = true;
   document.getElementById("map").blur();
-  document.getElementById("crappleton").style.transform = "scale(1)";
+  document.getElementById("crappleton").style.transform = "scale(100%)";
   document.getElementById("crappleton").style.transition = "transform 1s ease .5s";
   setTimeout(() => {
     document.getElementById("crappleton").tabIndex = "0";
@@ -4716,7 +4716,7 @@ function gotIt6() {
   sessionStorage.sluTimeout = 0;
   document.getElementById("rink").style.left = "25%";
   document.getElementById("rink").style.right = "5%";
-  document.getElementById("rink").style.transform = "scale(1)";
+  document.getElementById("rink").style.transform = "scale(100%)";
   document.getElementById("rink").style.transition = "all 0s ease 3s";
   document.getElementById("rink").style.animation = "expand 2s ease 1s 1 forwards";
   setTimeout(() => {
@@ -4754,7 +4754,7 @@ function gotIt6() {
     }, 2000);
   }
   for (var i = 0; i < document.getElementsByClassName("gameActivity").length; i++) {
-    document.getElementsByClassName("gameActivity")[i].style.transform = "scale(1)";
+    document.getElementsByClassName("gameActivity")[i].style.transform = "scale(100%)";
     document.getElementsByClassName("gameActivity")[i].style.transition = "transform 0s ease 2s";
     const activate = (x) => {
       setTimeout(() => {
@@ -4942,7 +4942,7 @@ function openSelection() {
       document.getElementsByClassName("choice")[i].style.pointerEvents = "auto";
       if ((i + 1) == sessionStorage.answer) {
         document.getElementsByClassName("choice")[i].style.boxShadow = ".25em .25em 1em 0 var(--gray)";
-        document.getElementsByClassName("choice")[i].style.transform = "scale(1)";
+        document.getElementsByClassName("choice")[i].style.transform = "scale(100%)";
         document.getElementsByClassName("choice")[i].style.animation = "none";
       }
     }
@@ -4980,12 +4980,12 @@ function selectAnswer(answer, event) {
     }
     if ((i + 1) == sessionStorage.answer) {
       document.getElementsByClassName("choice")[i].style.boxShadow = "0 0 .5em .25em var(--clarksonGold)";
-      document.getElementsByClassName("choice")[i].style.transform = "scale(1.1)";
+      document.getElementsByClassName("choice")[i].style.transform = "scale(110%)";
       document.getElementsByClassName("choice")[i].style.transition = "all .25s ease 0s";
     }
     else {
       document.getElementsByClassName("choice")[i].style.boxShadow = ".25em .25em 1em 0 var(--gray)";
-      document.getElementsByClassName("choice")[i].style.transform = "scale(1)";
+      document.getElementsByClassName("choice")[i].style.transform = "scale(100%)";
       document.getElementsByClassName("choice")[i].style.transition = "all .25s ease 0s";
     }
   }
@@ -5894,7 +5894,7 @@ function troyLassialEntrance() {
     viewAccountToggleClose();
   }
   document.getElementById("troyLassialButton").tabIndex = "0";
-  document.getElementById("troyLassialCont").style.transform = "scale(1)";
+  document.getElementById("troyLassialCont").style.transform = "scale(100%)";
   document.getElementById("troyLassialCont").style.transition = "transform .5s ease 0s";
   document.getElementById("troyLassialCont").tabIndex = "0";
   document.getElementById("troyLassialCont").ariaHidden = false;
@@ -6377,10 +6377,10 @@ function showStats(stats, method) {
       document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.right = "12%";
     }
     if ((sessionStorage.period == 1) || (sessionStorage.period == 3)) {
-      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.transform = "scale(1)";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.transform = "scale(100%)";
     }
     else if ((sessionStorage.period == 2) || (sessionStorage.period == "OT")) {
-      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.transform = "scaleX(-1) scaleY(1)";
+      document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.transform = "scaleX(-100%) scaleY(100%)";
     }
     document.getElementsByClassName("playerProfile")[sessionStorage.stats - 1].style.transition = "all .25s ease 0s";
     setTimeout(() => {
@@ -8125,7 +8125,7 @@ function gotIt16() {
   for (var i = 0; i < document.getElementsByClassName("flip").length; i++) {
     document.getElementById("sluVictoryMessageCont").style.gridColumnStart = "2";
     document.getElementById("clarksonVictoryMessageCont").style.gridColumnStart = "1";
-    document.getElementsByClassName("flip")[i].style.transform = "scaleX(-1)";
+    document.getElementsByClassName("flip")[i].style.transform = "scaleX(-100%)";
     if (document.getElementsByClassName("flip")[i] == document.getElementById("rink")) {
       document.getElementById("rink").style.transition = "transform 1s ease .25s";
     }
@@ -8380,7 +8380,7 @@ function openYoutubeSong() {
       document.getElementById("fuckSluButtonCont").style.transition = "all 0s ease 0s";
       sessionStorage.fuckSlu = 0;
     }
-    document.getElementById("youtubeSongsContCont").style.transform = "scale(1)";
+    document.getElementById("youtubeSongsContCont").style.transform = "scale(100%)";
     document.getElementById("youtubeSongsContCont").style.transition = "transform .5s ease 0s";
     document.getElementById("youtubeSongsContCont").tabIndex = "0";
     document.getElementById("youtubeSongsContCont").ariaHidden = false;
@@ -8530,7 +8530,7 @@ function youtubePlay(method, event) {
       document.getElementById("youtubePlayPauseIconShape").style.transition = "all 0s ease 0s";
       document.getElementById("youtubePlayPauseIcon").style.visibility = "hidden";
       document.getElementById("youtubePlayPauseIcon").style.opacity = "0";
-      document.getElementById("youtubePlayPauseIcon").style.transform = "scale(1.25)";
+      document.getElementById("youtubePlayPauseIcon").style.transform = "scale(125%)";
       document.getElementById("youtubePlayPauseIcon").style.transition = "all .5s ease 0s";
       document.getElementById("youtubeSongs").ariaLabel = "Pause the YouTube song";
       document.getElementById("youtubePlayPauseButtonShape").style.clipPath = "none";
@@ -8594,7 +8594,7 @@ function youtubePause(method, event) {
         else if (sessionStorage.scope == "document") {
           document.getElementById("youtubePlayPauseIcon").style.opacity = "100%";
         }
-        document.getElementById("youtubePlayPauseIcon").style.transform = "scale(1)";
+        document.getElementById("youtubePlayPauseIcon").style.transform = "scale(100%)";
         document.getElementById("youtubePlayPauseIcon").style.transition = "all .5s ease 0s";
       }
       else if ((method == "restart") || (method == "exit")) {
@@ -8610,7 +8610,7 @@ function youtubePause(method, event) {
         if (document.getElementById("youtubePlayPauseIcon").style.visibility == "hidden") {
           document.getElementById("youtubePlayPauseIcon").style.visibility = "visible";
           document.getElementById("youtubePlayPauseIcon").style.opacity = "100%";
-          document.getElementById("youtubePlayPauseIcon").style.transform = "scale(1)";
+          document.getElementById("youtubePlayPauseIcon").style.transform = "scale(100%)";
           if (method == "restart") {
             document.getElementById("youtubePlayPauseIcon").style.transition = "all .5s ease 0s";
           }
@@ -9183,7 +9183,7 @@ function gotIt20() {
   for (var i = 0; i < document.getElementsByClassName("flip").length; i++) {
     document.getElementById("sluVictoryMessageCont").style.gridColumnStart = "1";
     document.getElementById("clarksonVictoryMessageCont").style.gridColumnStart = "2";
-    document.getElementsByClassName("flip")[i].style.transform = "scaleX(1)";
+    document.getElementsByClassName("flip")[i].style.transform = "scaleX(100%)";
     if (document.getElementsByClassName("flip")[i] == document.getElementById("rink")) {
       document.getElementById("rink").style.transition = "transform 1s ease 0s";
     }
@@ -9235,7 +9235,7 @@ function gotIt21() {
     for (var i = 0; i < document.getElementsByClassName("flip").length; i++) {
       document.getElementById("sluVictoryMessageCont").style.gridColumnStart = "2";
       document.getElementById("clarksonVictoryMessageCont").style.gridColumnStart = "1";
-      document.getElementsByClassName("flip")[i].style.transform = "scaleX(-1)";
+      document.getElementsByClassName("flip")[i].style.transform = "scaleX(-100%)";
       if (document.getElementsByClassName("flip")[i] == document.getElementById("rink")) {
         document.getElementById("rink").style.transition = "transform 1s ease 0s";
       }
@@ -9515,7 +9515,7 @@ function win() {
       document.getElementsByClassName("sluMenPlayer")[i].blur();
     }
     for (var i = 0; i < document.getElementsByClassName("clarksonMenPlayer").length; i++) {
-      document.getElementsByClassName("clarksonMenPlayer")[i].style.transform = "scale(1.5)";
+      document.getElementsByClassName("clarksonMenPlayer")[i].style.transform = "scale(150%)";
       if (i == 0) {
         document.getElementById("ethanHaider").style.borderBottomRightRadius = ".8em";
         document.getElementById("ethanHaider").style.transition = "all 1s ease 0s";
@@ -9547,7 +9547,7 @@ function win() {
       document.getElementsByClassName("sluWomenPlayer")[i].blur();
     }
     for (var i = 0; i < document.getElementsByClassName("clarksonWomenPlayer").length; i++) {
-      document.getElementsByClassName("clarksonWomenPlayer")[i].style.transform = "scale(1.5)";
+      document.getElementsByClassName("clarksonWomenPlayer")[i].style.transform = "scale(150%)";
       if (i == 0) {
         document.getElementById("michellePasiechnyk").style.borderBottomRightRadius = ".8em";
         document.getElementById("michellePasiechnyk").style.transition = "all 1s ease 0s";
@@ -9699,7 +9699,7 @@ function lose() {
       document.getElementsByClassName("clarksonMenPlayer")[i].blur();
     }
     for (var i = 0; i < document.getElementsByClassName("sluMenPlayer").length; i++) {
-      document.getElementsByClassName("sluMenPlayer")[i].style.transform = "scale(1.5)";
+      document.getElementsByClassName("sluMenPlayer")[i].style.transform = "scale(150%)";
       if (i == 5) {
         document.getElementById("danielAllin").style.borderBottomLeftRadius = ".8em";
         document.getElementById("danielAllin").style.transition = "all 1s ease 0s";
@@ -9731,7 +9731,7 @@ function lose() {
       document.getElementsByClassName("clarksonWomenPlayer")[i].blur();
     }
     for (var i = 0; i < document.getElementsByClassName("sluWomenPlayer").length; i++) {
-      document.getElementsByClassName("sluWomenPlayer")[i].style.transform = "scale(1.5)";
+      document.getElementsByClassName("sluWomenPlayer")[i].style.transform = "scale(150%)";
       if (i == 5) {
         document.getElementById("hopeCrisafi").style.borderBottomLeftRadius = ".8em";
         document.getElementById("hopeCrisafi").style.transition = "all 1s ease 0s";
@@ -10251,7 +10251,7 @@ function closePoem(event) {
 
 function showDedication() {
   document.getElementById("dedicationCont").style.left = "25em";
-  document.getElementById("dedicationCont").style.transform = "scale(1)";
+  document.getElementById("dedicationCont").style.transform = "scale(100%)";
   document.getElementById("dedicationCont").style.transition = "all .25s ease 0s";
   setTimeout(() => {
     document.getElementById("dedicationCont").style.pointerEvents = "auto";
@@ -10269,7 +10269,7 @@ function hideDedication() {
 
 function showKnightguardBusinessCard() {
   document.getElementById("knightguardBusinessCard").style.bottom = "8em";
-  document.getElementById("knightguardBusinessCard").style.transform = "scale(1)";
+  document.getElementById("knightguardBusinessCard").style.transform = "scale(100%)";
   document.getElementById("knightguardBusinessCard").style.transition = "all .25s ease 0s";
 }
 
@@ -11276,13 +11276,13 @@ function drinkBeer(event) {
     sessionStorage.ice = Math.ceil(Math.random() * 20);
     if (sessionStorage.ice == 1) {
       if (sessionStorage.beer == 1) {
-        document.getElementById("busch").style.transform = "scale(1.1)";
+        document.getElementById("busch").style.transform = "scale(110%)";
         document.getElementById("busch").style.pointerEvents = "none";
         document.getElementById("busch").tabIndex = "-1";
         document.getElementById("busch").blur();
       }
       else if (sessionStorage.beer == 2) {
-        document.getElementById("bapple").style.transform = "scale(1.1)";
+        document.getElementById("bapple").style.transform = "scale(110%)";
         document.getElementById("bapple").style.pointerEvents = "none";
         document.getElementById("bapple").tabIndex = "-1";
         document.getElementById("bapple").blur();
@@ -11364,7 +11364,7 @@ function singIce(event) {
   document.getElementById("iceContContCont").style.background = "var(--white)";
   document.getElementById("iceContContCont").style.opacity = "100%";
   document.getElementById("iceContContCont").style.border = ".05em solid var(--clarksonGreen)";
-  document.getElementById("iceContContCont").style.transform = "skew(" + (Math.ceil(Math.random() * transformValue) * ((Math.round(Math.random())) ? (1) : (-1))) + "deg) scale(1)";
+  document.getElementById("iceContContCont").style.transform = "skew(" + (Math.ceil(Math.random() * transformValue) * ((Math.round(Math.random())) ? (1) : (-1))) + "deg) scale(100%)";
   document.getElementById("iceContContCont").style.transition = "visibility 0s ease 0s, left 1s ease 0s, right 1s ease 0s, top 1s ease 0s, bottom 1s ease 0s, background .25s ease .75s, opacity 0s ease 0s, border .25s ease .75s, transform 1s ease 0s";
   document.getElementById("iceContContCont").tabIndex = "0";
   document.getElementById("iceContContCont").ariaHidden = false;
@@ -11655,10 +11655,10 @@ function failIce(event) {
   document.getElementById("iceButton").tabIndex = "-1";
   document.getElementById("iceButton").blur();
   if (sessionStorage.beer == 1) {
-    document.getElementById("busch").style.transform = "scale(1)";
+    document.getElementById("busch").style.transform = "scale(100%)";
   }
   else if (sessionStorage.beer == 2) {
-    document.getElementById("bapple").style.transform = "scale(1)";
+    document.getElementById("bapple").style.transform = "scale(100%)";
   }
   document.getElementById("triangleFaceCont").style.zIndex = "91";
   document.getElementById("gameOverHeading").style.color = "var(--sluRed)";
@@ -11754,12 +11754,12 @@ function finishIce(event) {
   document.getElementById("iceCounter").style.transition = "all 0s ease .25s";
   document.getElementById("iceCounter").style.animation = "none";
   if (sessionStorage.beer == 1) {
-    document.getElementById("busch").style.transform = "scale(1)";
+    document.getElementById("busch").style.transform = "scale(100%)";
     document.getElementById("busch").style.pointerEvents = "auto";
     document.getElementById("busch").tabIndex = "0";
   }
   else if (sessionStorage.beer == 2) {
-    document.getElementById("bapple").style.transform = "scale(1)";
+    document.getElementById("bapple").style.transform = "scale(100%)";
     document.getElementById("bapple").style.pointerEvents = "auto";
     document.getElementById("bapple").tabIndex = "0";
   }
@@ -12043,7 +12043,7 @@ function openPromo() {
   document.getElementById("promoTitleLink").tabIndex = "0";
   document.getElementById("promoExit").tabIndex = "0";
   var transformValue = ((sessionStorage.level - 1) * 9);
-  document.getElementById("promoCont").style.transform = "skew(" + (Math.ceil(Math.random() * transformValue) * ((Math.round(Math.random())) ? (1) : (-1))) + "deg) scale(1)";
+  document.getElementById("promoCont").style.transform = "skew(" + (Math.ceil(Math.random() * transformValue) * ((Math.round(Math.random())) ? (1) : (-1))) + "deg) scale(100%)";
   document.getElementById("promoCont").style.transition = "transform .5s ease 0s";
   document.getElementById("promoCont").tabIndex = "0";
   document.getElementById("promoCont").ariaHidden = false;
@@ -13929,7 +13929,7 @@ function mobileGrow(event) {
     }
   }
   document.querySelector("main").ariaHidden = false;
-  if (document.getElementById("youtubeSongsContCont").style.transform == "scale(1)") {
+  if (document.getElementById("youtubeSongsContCont").style.transform == "scale(100%)") {
     document.onclick = youtubeControls;
   }
   else {

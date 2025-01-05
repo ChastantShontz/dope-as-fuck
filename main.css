@@ -4718,12 +4718,6 @@ footer {
   color: var(--black);
 }
 
-#thrawnLink:hover,
-#thrawnLink:active {
-  background: none;
-  color: var(--black);
-}
-
 
 /* Animation Effects */
 

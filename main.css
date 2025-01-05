@@ -350,7 +350,7 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: 0%;
+  opacity: 0;
 }
 
 .screensaver {
@@ -614,7 +614,7 @@ main {
   bottom: calc(12em + 5%);
   border-radius: 1em;
   background: url("img/map.png") center / cover;
-  opacity: 0%;
+  opacity: 0;
 }
 
 .college {
@@ -640,7 +640,7 @@ main {
   position: absolute;
   border-radius: .5em;
   background: var(--white);
-  opacity: 0%;
+  opacity: 0;
   height: 5em;
   width: 5em;
   border: .2em solid var(--clarksonGreen);
@@ -701,7 +701,7 @@ main {
   left: 32em;
   right: 0;
   bottom: -8em;
-  opacity: 0%;
+  opacity: 0;
   height: 19em;
   pointer-events: none;
 }
@@ -787,7 +787,7 @@ main {
 .die {
   visibility: hidden;
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   color: var(--sluRed);
   font-size: 20em;
   font-weight: bold;
@@ -815,7 +815,7 @@ main {
   right: 42.5%;
   top: 5%;
   bottom: calc(12em + 5%);
-  opacity: 0%;
+  opacity: 0;
   align-items: center;
   pointer-events: none;
 }
@@ -1017,7 +1017,7 @@ main {
   bottom: .75em;
   border-radius: .1em;
   background: var(--blue);
-  opacity: 0%;
+  opacity: 0;
   height: 2em;
   width: 1.5em;
   padding-left: .1em;
@@ -1043,7 +1043,7 @@ main {
   top: 0;
   bottom: 0;
   background: var(--gray);
-  opacity: 0%;
+  opacity: 0;
 }
 
 #rink {
@@ -1142,7 +1142,7 @@ main {
   bottom: 0;
   border-bottom-left-radius: .8em;
   border-bottom-right-radius: .8em;
-  opacity: 0%;
+  opacity: 0;
   width: 2.8em;
   pointer-events: none;
   cursor: pointer;
@@ -1352,7 +1352,7 @@ main {
   z-index: 2;
   visibility: hidden;
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 5.6em;
 }
 
@@ -1805,7 +1805,7 @@ main {
   position: absolute;
   left: 40%;
   bottom: 0;
-  opacity: 0%;
+  opacity: 0;
   width: 5em;
 }
 
@@ -1814,7 +1814,7 @@ main {
   visibility: hidden;
   position: absolute;
   bottom: 0;
-  opacity: 0%;
+  opacity: 0;
   width: 5em;
 }
 
@@ -1835,7 +1835,7 @@ main {
   top: 5%;
   border-bottom-left-radius: .8em;
   border-bottom-right-radius: .8em;
-  opacity: 0%;
+  opacity: 0;
   width: 2.8em;
 }
 
@@ -1847,7 +1847,7 @@ main {
   top: 0;
   border-radius: 50%;
   background: var(--black);
-  opacity: 0%;
+  opacity: 0;
   height: 1em;
   width: 1em;
 }
@@ -1865,7 +1865,7 @@ main {
   bottom: -.2em;
   border-radius: 5em;
   background: rgba(255, 255, 255, 75%);
-  opacity: 0%;
+  opacity: 0;
   align-items: center;
 }
 
@@ -1885,7 +1885,7 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: 0%;
+  opacity: 0;
   align-items: center;
   pointer-events: none;
 }
@@ -1906,7 +1906,7 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: 0%;
+  opacity: 0;
   align-items: center;
   pointer-events: none;
 }
@@ -1914,7 +1914,7 @@ main {
 .goalMessage {
   visibility: hidden;
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   font-weight: bold;
   text-align: center;
   user-select: none;
@@ -1948,7 +1948,7 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: 0%;
+  opacity: 0;
   pointer-events: none;
 }
 
@@ -1958,7 +1958,7 @@ main {
   flex-direction: row;
   justify-content: center;
   visibility: hidden;
-  opacity: 0%;
+  opacity: 0;
   align-items: center;
 }
 
@@ -1988,7 +1988,7 @@ main {
 
 .clarksonWord {
   visibility: hidden;
-  opacity: 0%;
+  opacity: 0;
 }
 
 #bandiesCont {
@@ -2002,7 +2002,7 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: 0%;
+  opacity: 0;
   align-items: center;
 }
 
@@ -2032,7 +2032,7 @@ main {
 .bandie {
   visibility: hidden;
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   height: 100%;
 }
 
@@ -2230,7 +2230,7 @@ main {
 
 .bandieCont {
   visibility: hidden;
-  opacity: 0%;
+  opacity: 0;
 }
 
 #dedicationCont {
@@ -2268,7 +2268,7 @@ main {
 #congrats {
   visibility: hidden;
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   font-family: "Luckiest Guy", fantasy;
   color: var(--clarksonGreen);
   font-size: 5em;
@@ -2426,7 +2426,7 @@ main {
   padding: .5em;
   border-bottom-left-radius: .8em;
   border-bottom-right-radius: .8em;
-  opacity: 0%;
+  opacity: 0;
   align-items: center;
 }
 
@@ -2469,7 +2469,7 @@ main {
   right: 10%;
   border-radius: .5em;
   background: rgba(255, 255, 255, 50%);
-  opacity: 0%;
+  opacity: 0;
   padding: 1em;
   font-family: "Merienda", "Satisfy", "Brush Script MT", cursive;
   font-style: italic;
@@ -2504,7 +2504,7 @@ main {
   right: 0;
   top: 25%;
   bottom: 25%;
-  opacity: 0%;
+  opacity: 0;
   align-items: center;
 }
 
@@ -2548,7 +2548,7 @@ main {
 .drinkingSongLines {
   visibility: hidden;
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 100%;
   border: .1em solid var(--clarksonGreen);
   font-family: "Roboto", "Arial", sans-serif;
@@ -2574,14 +2574,14 @@ main {
   left: 5%;
   right: 65%;
   bottom: 30%;
-  opacity: 0%;
+  opacity: 0;
   align-items: center;
   pointer-events: none;
 }
 
 .partyActivity {
   visibility: hidden;
-  opacity: 0%;
+  opacity: 0;
   pointer-events: auto;
 }
 
@@ -2649,7 +2649,7 @@ main {
 #dafCounterError {
   visibility: hidden;
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   font-family: "Rubik Mono One", fantasy;
   color: var(--errorRed);
   font-size: 1.5em;
@@ -2729,7 +2729,7 @@ main {
   right: 5%;
   top: 91%;
   bottom: 1%;
-  opacity: 0%;
+  opacity: 0;
   align-items: center;
   pointer-events: none;
 }
@@ -2738,7 +2738,7 @@ main {
   visibility: hidden;
   position: relative;
   border-radius: .5em;
-  opacity: 0%;
+  opacity: 0;
   height: 2em;
   width: 2em;
   pointer-events: auto;
@@ -2954,7 +2954,7 @@ main {
   top: 0;
   bottom: 0;
   background: rgba(153, 153, 153, 75%);
-  opacity: 0%;
+  opacity: 0;
   align-items: center;
 }
 
@@ -2970,7 +2970,7 @@ main {
   bottom: 10%;
   border-radius: .1em;
   background: var(--white);
-  opacity: 0%;
+  opacity: 0;
   border: .2em solid var(--clarksonGreen);
 }
 
@@ -3008,7 +3008,7 @@ main {
   top: 30%;
   bottom: 10%;
   border-radius: 1em;
-  opacity: 0%;
+  opacity: 0;
   padding: 1em;
   border: .05em solid transparent;
   transform: skew(0)
@@ -3038,7 +3038,7 @@ main {
   bottom: 25%;
   border-radius: 1em;
   background: var(--white);
-  opacity: 0%;
+  opacity: 0;
   padding: 2em;
   border: .05em solid var(--clarksonGreen);
 }
@@ -3054,7 +3054,7 @@ main {
   bottom: 25%;
   border-radius: 1em;
   background: var(--white);
-  opacity: 0%;
+  opacity: 0;
   padding: 1em;
   border: .05em solid var(--clarksonGreen);
   align-items: center;
@@ -3192,7 +3192,7 @@ main {
 #danceInstructions {
   visibility: hidden;
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   font-family: "Acme", fantasy;
   color: var(--white);
   font-size: 3em;
@@ -3223,7 +3223,7 @@ main {
 #fuckSluMessage {
   visibility: hidden;
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   font-family: "Rubik Mono One", fantasy;
   color: var(--sluRed);
   font-size: 3.5em;
@@ -3417,7 +3417,7 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: 0%;
+  opacity: 0;
   align-items: center;
   pointer-events: none;
 }
@@ -3500,7 +3500,7 @@ main {
   position: absolute;
   bottom: .5em;
   border-radius: .25em;
-  opacity: 0%;
+  opacity: 0;
   font-size: 1.5em;
 }
 
@@ -3529,7 +3529,7 @@ main {
   position: absolute;
   left: 0;
   right: 0;
-  opacity: 0%;
+  opacity: 0;
   font-family: "Merienda", "Satisfy", "Brush Script MT", cursive;
   font-style: italic;
   text-align: center;
@@ -3538,7 +3538,7 @@ main {
 #iceCounter {
   visibility: hidden;
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   font-family: "Acme", fantasy;
   color: var(--clarksonGreen);
   font-size: 5em;
@@ -3622,7 +3622,7 @@ main {
   right: 2em;
   top: 2em;
   bottom: 2em;
-  opacity: 0%;
+  opacity: 0;
 }
 
 #choices {
@@ -3679,14 +3679,14 @@ main {
   right: 2em;
   top: 2em;
   bottom: 2em;
-  opacity: 0%;
+  opacity: 0;
   align-items: center;
 }
 
 #answer {
   visibility: hidden;
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   font-family: "Bungee", fantasy;
   font-size: 6em;
   font-weight: bold;
@@ -3697,12 +3697,12 @@ main {
   position: absolute;
   left: 5%;
   right: 5%;
-  opacity: 0%;
+  opacity: 0;
 }
 
 #correctAnswerPrompt {
   visibility: hidden;
-  opacity: 0%;
+  opacity: 0;
   font-family: "Belanosima", fantasy;
   color: var(--blue);
   font-size: 2em;
@@ -3712,7 +3712,7 @@ main {
 
 #correctAnswer {
   visibility: hidden;
-  opacity: 0%;
+  opacity: 0;
   font-family: "Anton", fantasy;
   color: var(--clarksonGreen);
   font-size: 3em;
@@ -3827,7 +3827,7 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: 0%;
+  opacity: 0;
 }
 
 #infoDataMemoryCont {
@@ -4154,7 +4154,7 @@ main {
   bottom: 2em;
   border-radius: .1em;
   background: var(--darkGray);
-  opacity: 0%;
+  opacity: 0;
   padding-left: .25em;
   padding-right: .25em;
   padding-top: .1em;
@@ -4279,7 +4279,7 @@ main {
 
 #passwordMessage {
   visibility: hidden;
-  opacity: 0%;
+  opacity: 0;
   height: 0;
   width: 100%;
   font-family: "Belanosima", fantasy;
@@ -4301,7 +4301,7 @@ main {
   bottom: 0;
   background: linear-gradient(rgba(221, 221, 221, 50%), rgba(221, 221, 221, 50%)) center / cover,
               url("img/bardCollegeAtSimonsRock.png") center / cover;
-  opacity: 0%;
+  opacity: 0;
   accent-color: var(--secretPurple);
 }
 
@@ -4323,7 +4323,7 @@ main {
   bottom: 12.5%;
   border-radius: 1em;
   background: var(--white);
-  opacity: 0%;
+  opacity: 0;
   border: .5em solid var(--secretPurple);
 }
 
@@ -4799,7 +4799,7 @@ footer {
 @keyframes arrowBlink {
   0% {
     visibility: hidden;
-    opacity: 0%;
+    opacity: 0;
   }
   25%,
   75% {
@@ -4808,7 +4808,7 @@ footer {
   }
   100% {
     visibility: hidden;
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
@@ -4851,7 +4851,7 @@ footer {
   }
   100% {
     visibility: hidden;
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
@@ -5078,7 +5078,7 @@ footer {
 @keyframes clarksonGoalMessage {
   0% {
     visibility: hidden;
-    opacity: 0%;
+    opacity: 0;
     transform: scale(1);
   }
   10% {
@@ -5098,7 +5098,7 @@ footer {
   }
   100% {
     visibility: hidden;
-    opacity: 0%;
+    opacity: 0;
     transform: scale(1);
   }
 }
@@ -5110,7 +5110,7 @@ footer {
     right: auto;
     top: auto;
     bottom: auto;
-    opacity: 0%;
+    opacity: 0;
     transform: rotate(0)
                scale(1);
   }
@@ -5172,7 +5172,7 @@ footer {
     right: auto;
     top: auto;
     bottom: 20%;
-    opacity: 0%;
+    opacity: 0;
     transform: rotate(420deg)
                scale(1);
   }
@@ -5211,7 +5211,7 @@ footer {
 @keyframes fuckSlu {
   0% {
     visibility: hidden;
-    opacity: 0%;
+    opacity: 0;
     transform: scale(1);
   }
   1% {
@@ -5231,7 +5231,7 @@ footer {
   }
   100% {
     visibility: hidden;
-    opacity: 0%;
+    opacity: 0;
     transform: scale(1);
   }
 }
@@ -5316,7 +5316,7 @@ footer {
   63%,
   82%,
   93% {
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
@@ -5386,7 +5386,7 @@ footer {
     visibility: hidden;
     right: 2em;
     bottom: 0;
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
@@ -5442,7 +5442,7 @@ footer {
     visibility: hidden;
     left: -18em;
     bottom: 12em;
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
@@ -5498,7 +5498,7 @@ footer {
     visibility: hidden;
     left: -18em;
     bottom: 12em;
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
@@ -5554,7 +5554,7 @@ footer {
     visibility: hidden;
     left: -18em;
     bottom: 12em;
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
@@ -5610,7 +5610,7 @@ footer {
     visibility: hidden;
     left: -18em;
     bottom: 12em;
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
@@ -5666,7 +5666,7 @@ footer {
     visibility: hidden;
     left: -18em;
     bottom: 12em;
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
@@ -5722,7 +5722,7 @@ footer {
     visibility: hidden;
     left: 2em;
     bottom: 0;
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
@@ -5778,7 +5778,7 @@ footer {
     visibility: hidden;
     right: -18em;
     bottom: 12em;
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
@@ -5834,7 +5834,7 @@ footer {
     visibility: hidden;
     right: -18em;
     bottom: 12em;
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
@@ -5890,7 +5890,7 @@ footer {
     visibility: hidden;
     right: -18em;
     bottom: 12em;
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
@@ -5946,7 +5946,7 @@ footer {
     visibility: hidden;
     right: -18em;
     bottom: 12em;
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
@@ -6002,7 +6002,7 @@ footer {
     visibility: hidden;
     right: -18em;
     bottom: 12em;
-    opacity: 0%;
+    opacity: 0;
   }
 }
 

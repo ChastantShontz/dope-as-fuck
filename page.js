@@ -13850,13 +13850,13 @@ function mobileGrow(event) {
   document.getElementById("mobileCharacterButton").tabIndex = "-1";
   document.getElementById("mobileCharacterButton").blur();
   document.getElementById("mobileCharacterImgContContCont").removeAttribute("href");
+  document.getElementById("mobileCharacterImgContContCont").title = "";
   document.getElementById("mobileCharacterImgContContCont").style.pointerEvents = "none";
   document.getElementById("mobileCharacterImgContContCont").ariaLabel = "";
   document.getElementById("mobileCharacterImgContContCont").tabIndex = "-1";
   document.getElementById("mobileCharacterImgContContCont").blur();
   document.getElementById("mobileCharacterImgContCont").tabIndex = "-1";
   document.getElementById("mobileCharacterImgContCont").blur();
-  document.getElementById("mobileCharacterImg").title = "";
   document.getElementById("mobileCharacterImg").style.background = "rgba(0, 61, 124, 50%) url(\"img/mystery.png\") center / cover";
   document.getElementById("mobileCharacterImg").style.filter = "blur(1em)";
   document.getElementById("mobileCharacterImg").style.transition = "background 0s ease 0s, height .25s ease 0s, width .25s ease 0s, filter 0s ease 0s";
@@ -14039,7 +14039,6 @@ function slideshow() {
       }
     }
   }
-  document.getElementById("mobileCharacterImg").title = characters[sessionStorage.newSlide].name;
   document.getElementById("mobileCharacterImg").style.background = "url(\"" + characters[sessionStorage.newSlide].image.url + "\") " + characters[sessionStorage.newSlide].image.position + " / cover";
   document.getElementById("mobileCharacterImgCaption").innerHTML = characters[sessionStorage.newSlide].name;
   if (characters[sessionStorage.newSlide].alignment == "Jedi") {
@@ -14057,6 +14056,7 @@ function slideshow() {
   }
   document.getElementById("mobileCharacterImgCaption").style.transition = "color 0s ease 0s";
   document.getElementById("mobileCharacterImgContContCont").href = characters[sessionStorage.newSlide].link;
+  document.getElementById("mobileCharacterImgContContCont").title = characters[sessionStorage.newSlide].name;
   document.getElementById("mobileCharacterImgContContCont").ariaLabel = "Read some more about " + characters[sessionStorage.newSlide].name;
   for (var i = 0; i < document.getElementsByClassName("mobileCharacterRow").length; i++) {
     if (eval("characters[sessionStorage.newSlide].stats." + document.getElementsByClassName("mobileCharacterOutput")[i].name) == null) {

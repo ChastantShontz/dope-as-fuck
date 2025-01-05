@@ -2644,17 +2644,12 @@ main {
   visibility: hidden;
   position: absolute;
   opacity: 0%;
-  accent-color: var(--errorRed);
   font-family: "Rubik Mono One", fantasy;
   color: var(--errorRed);
   font-size: 1.5em;
   font-weight: bold;
   transform: rotate(315deg);
   user-select: none;
-}
-
-#dafCounterError::selection {
-  background: var(--errorRed) !important;
 }
 
 #speaker {

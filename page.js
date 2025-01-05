@@ -14056,11 +14056,11 @@ function slideshow() {
   }
   else {
     if (characters[sessionStorage.newSlide].alignment == "Jedi") {
-      if ((document.getElementById("mobileCharacterImgCaption").classList.length == 1) || (document.getElementById("mobileCharacterImgCaption").classList.contains("sithCaption"))) {
+      if ((document.getElementById("mobileCharacterImgCaption").classList.length == 1) || ((document.getElementById("mobileCharacterImgCaption").classList.length == 2) && (document.getElementById("mobileCharacterImgCaption").classList.contains("sithCaption")))) {
         if (document.getElementById("mobileCharacterImgCaption").classList.length == 1) {
           document.getElementById("mobileCharacterImgCaption").classList.add("jediCaption");
         }
-        else if (document.getElementById("mobileCharacterImgCaption").classList.contains("sithCaption")) {
+        else if ((document.getElementById("mobileCharacterImgCaption").classList.length == 2) && (document.getElementById("mobileCharacterImgCaption").classList.contains("sithCaption"))) {
           document.getElementById("mobileCharacterImgCaption").classList.replace("sithCaption", "jediCaption");
         }
         document.getElementById("mobileCharacterImgCaption").style.fontFamily = "\"Kalam\", \"Satisfy\", \"Brush Script MT\", cursive";
@@ -14068,11 +14068,11 @@ function slideshow() {
       }
     }
     else if (characters[sessionStorage.newSlide].alignment == "Sith") {
-      if ((document.getElementById("mobileCharacterImgCaption").classList.length == 1) || (document.getElementById("mobileCharacterImgCaption").classList.contains("jediCaption"))) {
+      if ((document.getElementById("mobileCharacterImgCaption").classList.length == 1) || ((document.getElementById("mobileCharacterImgCaption").classList.length == 2) && (document.getElementById("mobileCharacterImgCaption").classList.contains("jediCaption")))) {
         if (document.getElementById("mobileCharacterImgCaption").classList.length == 1) {
           document.getElementById("mobileCharacterImgCaption").classList.add("sithCaption");
         }
-        else if (document.getElementById("mobileCharacterImgCaption").classList.contains("jediCaption")) {
+        else if ((document.getElementById("mobileCharacterImgCaption").classList.length == 2) && (document.getElementById("mobileCharacterImgCaption").classList.contains("jediCaption"))) {
           document.getElementById("mobileCharacterImgCaption").classList.replace("jediCaption", "sithCaption");
         }
         document.getElementById("mobileCharacterImgCaption").style.fontFamily = "\"Wallpoet\", fantasy";

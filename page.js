@@ -3494,6 +3494,11 @@ function firstCheckpoint(event) {
     eval("sessionStorage." + key + " = saved.first." + key);
   });
   document.getElementById("conductorTalk").innerHTML = "Let the game begin! Just watch what's going on and select the right songs to do at each point. If you mess up six times, it's game over! And don't forget to click on the cheer list to the left to get points, they'll come in handy later on. Good luck!";
+  if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
+    if (document.getElementById("conductorTalkCont").scrollTop > 0) {
+      document.getElementById("conductorTalkCont").scrollTop = 0;
+    }
+  }
   clearInterval(sessionStorage.emphasizeConductorInterval);
   sessionStorage.removeItem("emphasizeConductorInterval");
   pronoun();
@@ -3630,6 +3635,11 @@ function secondCheckpoint(event) {
     eval("sessionStorage." + key + " = saved.second." + key);
   });
   document.getElementById("conductorTalk").innerHTML = "Oh, you're here? I'll drink to that! What, were you expecting some other kind of \"milk and cookies\"? That's pep band for you! Now let's get drunk!";
+  if (document.getElementById("conductorTalkCont").scrollHeight > document.getElementById("conductorTalkCont").offsetHeight) {
+    if (document.getElementById("conductorTalkCont").scrollTop > 0) {
+      document.getElementById("conductorTalkCont").scrollTop = 0;
+    }
+  }
   clearInterval(sessionStorage.emphasizeConductorInterval);
   sessionStorage.removeItem("emphasizeConductorInterval");
   if (sessionStorage.gender == 1) {

@@ -6057,6 +6057,8 @@ function gotIt7() {
     sessionStorage.backup = "";
   }
   disableButton();
+  clearInterval(sessionStorage.emphasizeConductorInterval);
+  sessionStorage.removeItem("emphasizeConductorInterval");
   document.getElementById("goldenKnight").style.visibility = "visible";
   document.getElementById("goldenKnight").style.left = "52%";
   document.getElementById("goldenKnight").style.opacity = "100%";

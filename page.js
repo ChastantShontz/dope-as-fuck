@@ -3428,7 +3428,7 @@ function gameBegins(event) {
     document.getElementById("conductor").style.left = "2em";
     document.getElementById("conductor").style.transition = "left 2s ease .5s";
     document.getElementById("conductor").tabIndex = "0";
-    if ((sessionStorage.checkpoint == undefined) || (sessionStorage.checkpoint < 2)) {
+    if ((localStorage.checkpoint == undefined) || (localStorage.checkpoint < 2)) {
       sessionStorage.emphasizeConductorInterval = setInterval(emphasizeConductor, 30000);
     }
     setTimeout(enableButton, 500);
@@ -3481,7 +3481,7 @@ function checkpoint(event) {
     (Object.keys(saved.first)).forEach((key) => {
       saved.first[key] = null;      
     });
-    if (sessionStorage.checkpoint == 2) {
+    if (localStorage.checkpoint == 2) {
       (Object.keys(saved.second)).forEach((key) => {
         saved.second[key] = null;
       });
@@ -13891,7 +13891,7 @@ function mobileGrow(event) {
     document.getElementById("conductor").style.left = "2em";
     document.getElementById("conductor").style.transition = "left 2s ease .5s";
     document.getElementById("conductor").tabIndex = "0";
-    if ((sessionStorage.checkpoint == undefined) || (sessionStorage.checkpoint < 2)) {
+    if ((localStorage.checkpoint == undefined) || (localStorage.checkpoint < 2)) {
       sessionStorage.emphasizeConductorInterval = setInterval(emphasizeConductor, 30000);
     }
     setTimeout(enableButton, 500);

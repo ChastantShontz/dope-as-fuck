@@ -4107,9 +4107,9 @@ function gotIt1() {
     sessionStorage.backup = "";
   }
   disableButton();
+  localStorage.checkpoint = 0;
   clearInterval(sessionStorage.emphasizeConductorInterval);
   sessionStorage.removeItem("emphasizeConductorInterval");
-  localStorage.checkpoint = 0;
   let time = new Date();
   document.getElementById("discordDate").datetime = time.getFullYear() + "-" + String(time.getMonth() + 1).padStart(2, "0") + "-" + String(time.getDate()).padStart(2, "0") + "T11:38:52.616" + ((time.getTimezoneOffset() == 0) ? ("Z") : (((time.getTimezoneOffset() > 0) ? ("-" + String(time.getTimezoneOffset() / 60).padStart(2, "0")) : ("+" + String(time.getTimezoneOffset() / -60).padStart(2, "0"))) + ":00"));
   document.getElementById("discordLogo").style.bottom = "2em";

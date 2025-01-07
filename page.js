@@ -3428,7 +3428,9 @@ function gameBegins(event) {
     document.getElementById("conductor").style.left = "2em";
     document.getElementById("conductor").style.transition = "left 2s ease .5s";
     document.getElementById("conductor").tabIndex = "0";
-    sessionStorage.emphasizeConductorInterval = setInterval(emphasizeConductor, 30000);
+    if ((sessionStorage.checkpoint == undefined) || (sessionStorage.checkpoint < 2)) {
+      sessionStorage.emphasizeConductorInterval = setInterval(emphasizeConductor, 30000);
+    }
     setTimeout(enableButton, 500);
     document.onclick = collapse;
     document.onkeydown = collapse;
@@ -13889,7 +13891,9 @@ function mobileGrow(event) {
     document.getElementById("conductor").style.left = "2em";
     document.getElementById("conductor").style.transition = "left 2s ease .5s";
     document.getElementById("conductor").tabIndex = "0";
-    sessionStorage.emphasizeConductorInterval = setInterval(emphasizeConductor, 30000);
+    if ((sessionStorage.checkpoint == undefined) || (sessionStorage.checkpoint < 2)) {
+      sessionStorage.emphasizeConductorInterval = setInterval(emphasizeConductor, 30000);
+    }
     setTimeout(enableButton, 500);
   }
   if (document.getElementById("account").style.visibility == "visible") {

@@ -4693,10 +4693,6 @@ function gotIt6() {
   document.getElementById("crappleton").tabIndex = "-1";
   document.getElementById("crappleton").ariaHidden = true;
   document.getElementById("crappleton").blur();
-  if (localStorage.checkpoint == 1) {
-    clearInterval(sessionStorage.emphasizeConductorInterval);
-    sessionStorage.removeItem("emphasizeConductorInterval");
-  }
   localStorage.checkpoint = 1;
   if (sessionStorage.gender == 1) {
     for (var i = 0; i < document.getElementsByClassName("menGoalie").length; i++) {
@@ -10471,10 +10467,6 @@ function gotIt27() {
   document.getElementById("rink").tabIndex = "-1";
   document.getElementById("rink").ariaHidden = true;
   document.getElementById("rink").blur();
-  if (localStorage.checkpoint == 2) {
-    clearInterval(sessionStorage.emphasizeConductorInterval);
-    sessionStorage.removeItem("emphasizeConductorInterval");
-  }
   localStorage.checkpoint = 2;
   sessionStorage.level = 1;
   document.getElementById("house").style.filter = "brightness(10%)";

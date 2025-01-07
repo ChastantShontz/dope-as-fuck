@@ -3499,8 +3499,6 @@ function firstCheckpoint(event) {
       document.getElementById("conductorTalkCont").scrollTop = 0;
     }
   }
-  clearInterval(sessionStorage.emphasizeConductorInterval);
-  sessionStorage.removeItem("emphasizeConductorInterval");
   pronoun();
   if (sessionStorage.gender == 1) {
     chooseMen(event);
@@ -3640,8 +3638,6 @@ function secondCheckpoint(event) {
       document.getElementById("conductorTalkCont").scrollTop = 0;
     }
   }
-  clearInterval(sessionStorage.emphasizeConductorInterval);
-  sessionStorage.removeItem("emphasizeConductorInterval");
   if (sessionStorage.gender == 1) {
     chooseMen(event);
   }

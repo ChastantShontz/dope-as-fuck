@@ -8463,7 +8463,7 @@ function youtubeControls(event) {
   else if (event.type == "keydown") {
     if (sessionStorage.scope == "editor") {
       if ((event.key == "Tab") || (event.key == "Enter")) {
-        if ((event.key == "Enter") || ((event.key == "Tab") && ((event.target == document.getElementById("youtubeCountingTimeSeconds")) || (keyboard.shift == false)))) {
+        if (((event.key == "Tab") && ((event.target == document.getElementById("youtubeCountingTimeSeconds")) || (keyboard.shift == false))) || (event.key == "Enter")) {
           event.preventDefault();
         }
         if (event.target == document.getElementById("youtubeCountingTimeMinutes")) {

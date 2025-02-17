@@ -1676,6 +1676,10 @@ let quotes = [
     author: "<b>Liam</b>"
   },
   {
+    line: "I can't smell the smoke.",
+    author: "<b>Brian Manning</b> referring to the smoke detector"
+  },
+  {
     line: "I could be a good egg to you.",
     author: "a MILF hitting on Chestnut"
   },
@@ -1802,6 +1806,10 @@ let quotes = [
   {
     line: "I'm an honorary white girl for the day.",
     author: "<b>Cynthia</b>"
+  },
+  {
+    line: "I'm glad you guys are normal, some of the ones I've gotten are really weird...oh, Eric...",
+    author: "<b>Gabe Burch</b>"
   },
   {
     line: "I'm going to go down to the women's locker room and give them a speech.",
@@ -2148,6 +2156,10 @@ let quotes = [
     author: "<b>Quinton</b>"
   },
   {
+    line: "Nothing gets a man up like a goal opportunity.",
+    author: "<b>Declan</b>"
+  },
+  {
     line: "Oh, implied banging. I thought you said implied begging.",
     author: "<b>Jonas</b>"
   },
@@ -2274,6 +2286,10 @@ let quotes = [
   {
     line: "<span class=\"quoteLine\" id=\"quoteLine1\">That's so cool, so you're gonna like mechanically engineering things?</span><br><span class=\"quoteLine\" id=\"quoteLine2\">Yeah, like vibrators. You gotta follow your dreams sometimes.</span>",
     author: "<b>Chestnut</b> and <b>Schalago</b>"
+  },
+  {
+    line: "That thing just keeps getting lighter and lighter.",
+    author: "the bus driver as Jonas brings the bag of milk and cookies back onto the bus"
   },
   {
     line: "The food here is pretty spicy, I could use some sweet food to follow it up.",
@@ -2406,6 +2422,10 @@ let quotes = [
   {
     line: "You edged me right to the brink, and then you took your hand away.",
     author: "<b>Chestnut</b>"
+  },
+  {
+    line: "You got that thanggg on you...",
+    author: "<b>Ryan O'Rourke</b> to a waitress"
   },
   {
     line: "You guys are like my pets.",

@@ -2457,7 +2457,7 @@ let quotes = [
   },
   {
     line: "You're a virgin, you're a virgin, you're fat, and you're fat! Hit the gym!",
-    author: "<b>Emmett Croteau</b> after losing a game"
+    author: "<b>Emmett Croteau</b> to Tom Uhl and Declan after losing a game"
   },
   {
     line: "You're like a goat, all I know is that they sneeze.",

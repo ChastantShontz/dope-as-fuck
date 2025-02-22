@@ -2531,7 +2531,7 @@ let songs = [
   },
   {
     title: "<i>Apache</i>",
-    artist: "the Sugarhill Gang",
+    artist: "Jerry Lordan and the Sugarhill Gang",
     image: "img/apache.png",
     audio: "audio/apache.mp3",
     duration: 249,
@@ -2650,10 +2650,10 @@ let songs = [
     lyrics: ""
   },
   {
-    title: "<i>Give Up the Funk</i>",
+    title: "<i>Give Up the Funk (Tear the Roof off the Sucker)</i>",
     artist: "Parliament",
-    image: "img/giveUpTheFunk.png",
-    audio: "audio/giveUpTheFunk.mp3",
+    image: "img/giveUpTheFunkTearTheRoofOffTheSucker.png",
+    audio: "audio/giveUpTheFunkTearTheRoofOffTheSucker.mp3",
     duration: 345,
     lyrics: "tearTheRoofOffWereGonnaTearTheRoofOffTheMotherSuckerTearTheRoofOffTheSuckerTearTheRoofOffWereGonnaTearTheRoofOffTheMotherSuckerTearTheRoofOffTheSuckerTearTheRoofOffWereGonnaTearTheRoofOffTheMotherSuckerTearTheRoofOffTheSuckerTearTheRoofOffWereGonnaTearTheRoofOffTheMotherSuckerTearTheRoofOffTheSuckerYouveGotARealTypeOfThingGoinDownGettinDownTheresAWholeLotOfRhythmGoinRoundYouveGotARealTypeOfThingGoinDownGettinDownTheresAWholeLotOfRhythmGoinRoundOwwWeWantTheFunkGiveUpTheFunkOwwWeNeedTheFunkWeGottaHaveTheFunkOwwWeWantTheFunkGiveUpTheFunkOwwWeNeedTheFunkWeGottaHaveTheFunkLaLaLaLaLaDooDooDooDooDooDooDooOwwLaLaLaLaLaDooDooDooDooDooDooDooOwwYouveGotARealTypeOfThingGoinDownGettinDownTheresAWholeLotOfRhythmGoinRoundYouveGotARealTypeOfThingGoinDownGettinDownTheresAWholeLotOfRhythmGoinRoundOwwWeWantTheFunkGiveUpTheFunkOwwWeNeedTheFunkWeGottaHaveThatFunkOwwWeWantTheFunkGiveUpTheFunkOwwWeNeedTheFunkWeGottaHaveThatFunkLaLaLaLaLaDooDooDooDooDooDooDooOwwLaLaLaLaLaDooDooDooDooDooDooDooOwwWereGonnaTurnThisMotherOutWereGonnaTurnThisMotherOutYouveGotARealTypeOfThingGoinDownGettinDownTheresAWholeLotOfRhythmGoinRoundYouveGotARealTypeOfThingGoinDownGettinDownTheresAWholeLotOfRhythmGoinRoundYouveGotARealTypeOfThingGoinDownGettinDownTheresAWholeLotOfRhythmGoinRoundYouveGotARealTypeOfThingGoinDownGettinDownTheresAWholeLotOfRhythmGoinRoundOwwWeWantTheFunkGiveUpTheFunkOwwWeNeedTheFunkWeGottaHaveThatFunkOwwWeWantTheFunkGiveUpTheFunkOwwWeNeedTheFunkWeGottaHaveThatFunkOwwWeWantTheFunkGiveUpTheFunkOwwWeNeedTheFunkWeGottaHaveThatFunkLetUsInWellTearThisMotherOutOwwWeWantTheFunkGiveUpTheFunkOwwWeNeedTheFunkWeGottaHaveThatFunkLetUsInWellTearThisMotherOutOwwWeWantTheFunkGiveUpTheFunkOwwWeNeedTheFunkWeGottaHaveThatFunkOwwWeWantTheFunkGiveUpTheFunkOwwWeNeedTheFunkWeGottaHaveThatFunkOwwWeWantTheFunkGiveUpTheFunkOwwWeNeedTheFunkWeGottaHaveThatFunkWeWantTheFunkGiveUpTheFunkWereGonnaTurnThisMotherOutWeNeedTheFunkWeGottaHaveThatFunkWereGonnaTurnThisMotherOutWeWantTheFunkGiveUpTheFunkWereGonnaTurnThisMotherOutWeNeedTheFunkWeGottaHaveThatFunkOwwWeWantTheFunkGiveUpTheFunkOwwWeNeedTheFunkWeGottaHaveThatFunkLetUsInWellTearThisMotherOutOwwWeWantTheFunkGiveUpTheFunkOwwWeNeedTheFunkWeGottaHaveThatFunkLetUsInWellTearThisMotherOutOwwWeWantTheFunkGiveUpTheFunkWeNeedTheFunkWeGottaHaveThatFunkWeWantTheFunkGiveUpTheFunkWeNeedTheFunkWeGottaHaveThatFunkWeWantTheFunkGiveUpTheFunkWeNeedTheFunkWeGottaHaveThatFunkLaLaLaLaLaDooDooDooDooDooDooDooOwwLaLaLaLaLaDooDooDooDooDooDooDooOwwYouveGotARealTypeOfThingGoinDownGettinDownTheresAWholeLotOfRhythmGoinRoundYouveGotARealTypeOfThingGoinDownGettinDownTheresAWholeLotOfRhythmGoinRoundOwwWeWantTheFunkGiveUpTheFunkOwwWeNeedTheFunkWeGottaHaveThatFunkLetUsInWellTearThisMotherOut"
   },
@@ -2690,8 +2690,8 @@ let songs = [
     lyrics: "sayHeyChaHearTheSoundOfTheFallingRainComingDownLikeAnArmageddonFlameHeyTheShameTheOnesWhoDiedWithoutANameHearTheDogsHowlingOutOfKeyToAHymnCalledFaithAndMiseryHeyAndBleedTheCompanyLostTheWarTodayAndOhIBegToDreamAndDifferFromTheHollowLiesThisIsTheDawningOfTheRestOfOurLivesWhoaOhWhoaOhOnHolidayHearTheDrumPoundingOutOfTimeAnotherProtesterHasCrossedTheLineHeyToFindTheMoneysOnTheOtherSideCanIGetAnotherAmenAmenTheresAFlagWrappedAroundAScoreOfMenHeyAGagAPlasticBagOnMonumentOhIBegToDreamAndDifferFromTheHollowLiesThisIsTheDawningOfTheRestOfOurLivesWhoaOhWhoaOhOnHolidayHeyThreeFourTheRepresentativeFromCaliforniaHasTheFloorSiegHeilToThePresidentGasmanBombsAwayIsYourPunishmentPulverizeTheEiffelTowersWhoCriticizeYourGovernmentBangBangGoesTheBrokenGlassAndKillAllTheFagsThatDontAgreeTryToFightFireSettingFireIsNotAWayThatsMeantForMeJustCauseHeyHeyHeyHeyJustCauseBecauseWereOutlawsYeahHeyHeyHeyHeyOhIBegToDreamAndDifferFromTheHollowLiesThisIsTheDawningOfTheRestOfOurLivesWhoaOhWhoaOhIBegToDreamAndDifferFromTheHollowLiesThisIsTheDawningOfTheRestOfOurLivesWhoaOhWhoaOhThisIsOurLivesOnHoliday"
   },
   {
-    title: "<i>Hooked On a Feeling</i>",
-    artist: "Blue Swede",
+    title: "<i>Hooked on a Feeling</i>",
+    artist: "Mark James",
     image: "img/hookedOnAFeeling.png",
     audio: "audio/hookedOnAFeeling.mp3",
     duration: 167,
@@ -2699,7 +2699,7 @@ let songs = [
   },
   {
     title: "<i>I'll Make a Man Out of You</i>",
-    artist: "Donny Osmond",
+    artist: "David Zippel and Matthew Wilder",
     image: "img/illMakeAManOutOfYou.png",
     audio: "audio/illMakeAManOutOfYou.mp3",
     duration: 202,
@@ -2707,7 +2707,7 @@ let songs = [
   },
   {
     title: "<i>I'm Shipping Up to Boston</i>",
-    artist: "Dropkick Murphys",
+    artist: "Woody Guthrie and Dropkick Murphys",
     image: "img/imShippingUpToBoston.png",
     audio: "audio/imShippingUpToBoston.mp3",
     duration: 164,
@@ -2739,7 +2739,7 @@ let songs = [
   },
   {
     title: "<i>Joy to the World</i>",
-    artist: "Three Dog Night",
+    artist: "Hoyt Axton",
     image: "img/joyToTheWorld.png",
     audio: "audio/joyToTheWorld.mp3",
     duration: 220,
@@ -2770,8 +2770,8 @@ let songs = [
     lyrics: ""
   },
   {
-    title: "<i>Louie, Louie</i>",
-    artist: "the Kingsmen",
+    title: "<i>Louie Louie</i>",
+    artist: "Richard Berry",
     image: "img/louieLouie.png",
     audio: "audio/louieLouie.mp3",
     duration: 165,
@@ -2867,7 +2867,7 @@ let songs = [
   },
   {
     title: "<i>Proud Mary</i>",
-    artist: "John Fogerty",
+    artist: "Creedence Clearwater Revival",
     image: "img/proudMary.png",
     audio: "audio/proudMary.mp3",
     duration: 189,
@@ -2939,7 +2939,7 @@ let songs = [
   },
   {
     title: "<i>Take On Me</i>",
-    artist: "A-ha",
+    artist: "a-ha",
     image: "img/takeOnMe.png",
     audio: "audio/takeOnMe.mp3",
     duration: 243,
@@ -2947,7 +2947,7 @@ let songs = [
   },
   {
     title: "<i>Tequila</i>",
-    artist: "the Champs",
+    artist: "Chuck Rio",
     image: "img/tequila.png",
     audio: "audio/tequila.mp3",
     duration: 133,

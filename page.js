@@ -2508,6 +2508,7 @@ let songs = [
   {
     title: "<i>7 Nation Army</i>",
     artist: "the White Stripes",
+    released: 2003,
     image: "img/7NationArmy.png",
     audio: "audio/7NationArmy.mp3",
     duration: 238,
@@ -2516,6 +2517,7 @@ let songs = [
   {
     title: "<i>25 or 6 to 4</i>",
     artist: "Chicago",
+    released: 1970,
     image: "img/25Or6To4.png",
     audio: "audio/25Or6To4.mp3",
     duration: 299,
@@ -2524,6 +2526,7 @@ let songs = [
   {
     title: "<i>Any Way You Want It</i>",
     artist: "Journey",
+    released: 1980,
     image: "img/anyWayYouWantIt.png",
     audio: "audio/anyWayYouWantIt.mp3",
     duration: 202,
@@ -2532,6 +2535,7 @@ let songs = [
   {
     title: "<i>Apache</i>",
     artist: "Jerry Lordan and the Sugarhill Gang",
+    released: 1960,
     image: "img/apache.png",
     audio: "audio/apache.mp3",
     duration: 249,
@@ -2540,6 +2544,7 @@ let songs = [
   {
     title: "<i>Caravan</i>",
     artist: "Duke Ellington, Irving Mills, and Juan Tizol",
+    released: 1936,
     image: "img/caravan.png",
     audio: "audio/caravan.mp3",
     duration: 554,
@@ -2548,6 +2553,7 @@ let songs = [
   {
     title: "<i>Carry On Wayward Son</i>",
     artist: "Kansas",
+    released: 1976,
     image: "img/carryOnWaywardSon.png",
     audio: "audio/carryOnWaywardSon.mp3",
     duration: 323,
@@ -2556,6 +2562,7 @@ let songs = [
   {
     title: "<i>Centerfold</i>",
     artist: "the J. Geils Band",
+    released: 1981,
     image: "img/centerfold.png",
     audio: "audio/centerfold.mp3",
     duration: 218,
@@ -2564,6 +2571,7 @@ let songs = [
   {
     title: "<i>Centuries</i>",
     artist: "Fall Out Boy",
+    released: 2014,
     image: "img/centuries.png",
     audio: "audio/centuries.mp3",
     duration: 266,
@@ -2572,6 +2580,7 @@ let songs = [
   {
     title: "Clarkson University Alma Mater",
     artist: "Guy Lamson and Robert Smith",
+    released: 1979,
     image: "img/clarksonUniversityAlmaMater.png",
     audio: "audio/clarksonUniversityAlmaMater.mp3",
     duration: 42,
@@ -2580,6 +2589,7 @@ let songs = [
   {
     title: "<i>Come With Me Now</i>",
     artist: "Kongos",
+    released: 2012,
     image: "img/comeWithMeNow.png",
     audio: "audio/comeWithMeNow.mp3",
     duration: 212,
@@ -2588,6 +2598,7 @@ let songs = [
   {
     title: "<i>Conga</i>",
     artist: "the Miami Sound Machine",
+    released: 1985,
     image: "img/conga.png",
     audio: "audio/conga.mp3",
     duration: 255,
@@ -2596,6 +2607,7 @@ let songs = [
   {
     title: "<i>Crazy Train</i>",
     artist: "Ozzy Osbourne",
+    released: 1980,
     image: "img/crazyTrain.png",
     audio: "audio/crazyTrain.mp3",
     duration: 226,
@@ -2604,6 +2616,7 @@ let songs = [
   {
     title: "<i>Cupid Shuffle</i>",
     artist: "Cupid",
+    released: 2007,
     image: "img/cupidShuffle.png",
     audio: "audio/cupidShuffle.mp3",
     duration: 279,
@@ -2612,6 +2625,7 @@ let songs = [
   {
     title: "<i>Everybody Needs Somebody To Love</i>",
     artist: "Bert Berns, Jerry Wexler, and Solomon Burke",
+    released: 1964,
     image: "img/everybodyNeedsSomebodyToLove.png",
     audio: "audio/everybodyNeedsSomebodyToLove.mp3",
     duration: 200,
@@ -2620,6 +2634,7 @@ let songs = [
   {
     title: "<i>Everytime We Touch</i>",
     artist: "Cascada",
+    released: 2005,
     image: "img/everytimeWeTouch.png",
     audio: "audio/everytimeWeTouch.mp3",
     duration: 197,
@@ -2628,6 +2643,7 @@ let songs = [
   {
     title: "<i>Eye of the Tiger</i>",
     artist: "Survivor",
+    released: 1982,
     image: "img/eyeOfTheTiger.png",
     audio: "audio/eyeOfTheTiger.mp3",
     duration: 244,
@@ -2636,6 +2652,7 @@ let songs = [
   {
     title: "<i>Footloose</i> Theme",
     artist: "Dean Pitchford and Kenny Loggins",
+    released: 1984,
     image: "img/footlooseTheme.png",
     audio: "audio/footlooseTheme.mp3",
     duration: 175,
@@ -2644,6 +2661,7 @@ let songs = [
   {
     title: "<i>Game of Thrones</i> Theme",
     artist: "Ramin Djawadi",
+    released: 2011,
     image: "img/gameOfThronesTheme.png",
     audio: "audio/gameOfThronesTheme.mp3",
     duration: 255,
@@ -2652,6 +2670,7 @@ let songs = [
   {
     title: "<i>Give Up the Funk (Tear the Roof off the Sucker)</i>",
     artist: "Parliament",
+    released: 1975,
     image: "img/giveUpTheFunkTearTheRoofOffTheSucker.png",
     audio: "audio/giveUpTheFunkTearTheRoofOffTheSucker.mp3",
     duration: 345,
@@ -2660,6 +2679,7 @@ let songs = [
   {
     title: "<i>Gospel John</i>",
     artist: "Maynard Ferguson",
+    released: 1974,
     image: "img/gospelJohn.png",
     audio: "audio/gospelJohn.mp3",
     duration: 365,
@@ -2668,6 +2688,7 @@ let songs = [
   {
     title: "<i>Hawaii 5-O</i> Theme",
     artist: "Morton Stevens",
+    released: 1968,
     image: "img/hawaii5OTheme.png",
     audio: "audio/hawaii5OTheme.mp3",
     duration: 202,
@@ -2676,6 +2697,7 @@ let songs = [
   {
     title: "<i>Hey Pachuco!</i>",
     artist: "Royal Crown Revue",
+    released: 1996,
     image: "img/heyPachuco.png",
     audio: "audio/heyPachuco.mp3",
     duration: 195,
@@ -2684,6 +2706,7 @@ let songs = [
   {
     title: "<i>Holiday</i>",
     artist: "Green Day",
+    released: 2005,
     image: "img/holiday.png",
     audio: "audio/holiday.mp3",
     duration: 234,
@@ -2692,6 +2715,7 @@ let songs = [
   {
     title: "<i>Hooked on a Feeling</i>",
     artist: "Mark James",
+    released: 1968,
     image: "img/hookedOnAFeeling.png",
     audio: "audio/hookedOnAFeeling.mp3",
     duration: 167,
@@ -2700,6 +2724,7 @@ let songs = [
   {
     title: "<i>I'll Make a Man Out of You</i>",
     artist: "David Zippel and Matthew Wilder",
+    released: 1998,
     image: "img/illMakeAManOutOfYou.png",
     audio: "audio/illMakeAManOutOfYou.mp3",
     duration: 202,
@@ -2708,6 +2733,7 @@ let songs = [
   {
     title: "<i>I'm Shipping Up to Boston</i>",
     artist: "Woody Guthrie and Dropkick Murphys",
+    released: 2004,
     image: "img/imShippingUpToBoston.png",
     audio: "audio/imShippingUpToBoston.mp3",
     duration: 164,
@@ -2716,6 +2742,7 @@ let songs = [
   {
     title: "<i>Indiana Jones</i> Theme",
     artist: "John Williams",
+    released: 1981,
     image: "img/indianaJonesTheme.png",
     audio: "audio/indianaJonesTheme.mp3",
     duration: 325,
@@ -2724,6 +2751,7 @@ let songs = [
   {
     title: "<i>Jailhouse Rock</i>",
     artist: "Jerry Leiber and Mike Stoller",
+    released: 1957,
     image: "img/jailhouseRock.png",
     audio: "audio/jailhouseRock.mp3",
     duration: 200,
@@ -2732,6 +2760,7 @@ let songs = [
   {
     title: "<i>James Bond</i> Theme",
     artist: "Monty Norman",
+    released: 1962,
     image: "img/jamesBondTheme.png",
     audio: "audio/jamesBondTheme.mp3",
     duration: 173,
@@ -2740,6 +2769,7 @@ let songs = [
   {
     title: "<i>Joy to the World</i>",
     artist: "Hoyt Axton",
+    released: 1970,
     image: "img/joyToTheWorld.png",
     audio: "audio/joyToTheWorld.mp3",
     duration: 220,
@@ -2748,6 +2778,7 @@ let songs = [
   {
     title: "<i>Killing in the Name</i>",
     artist: "Rage Against the Machine",
+    released: 1992,
     image: "img/killingInTheName.png",
     audio: "audio/killingInTheName.mp3",
     duration: 313,
@@ -2756,6 +2787,7 @@ let songs = [
   {
     title: "<i>Kiss Him Goodbye</i>",
     artist: "Steam",
+    released: 1969,
     image: "img/kissHimGoodbye.png",
     audio: "audio/kissHimGoodbye.mp3",
     duration: 241,
@@ -2763,7 +2795,8 @@ let songs = [
   },
   {
     title: "<i>Let's Go Band</i>",
-    artist: "Albert Ahronheim and Joe Carl",
+    artist: "Albert Ahronheim, George Cavender, and Joe Carl",
+    released: 1974,
     image: "img/letsGoBand.png",
     audio: "audio/letsGoBand.mp3",
     duration: 124,
@@ -2772,6 +2805,7 @@ let songs = [
   {
     title: "<i>Louie Louie</i>",
     artist: "Richard Berry",
+    released: 1957,
     image: "img/louieLouie.png",
     audio: "audio/louieLouie.mp3",
     duration: 165,
@@ -2780,6 +2814,7 @@ let songs = [
   {
     title: "<i>Mortal Kombat</i> Theme",
     artist: "the Immortals",
+    released: 1993,
     image: "img/mortalKombatTheme.png",
     audio: "audio/mortalKombatTheme.mp3",
     duration: 285,
@@ -2788,6 +2823,7 @@ let songs = [
   {
     title: "Mos Eisley Cantina Song",
     artist: "John Williams",
+    released: 177,
     image: "img/mosEisleyCantinaSong.png",
     audio: "audio/mosEisleyCantinaSong.mp3",
     duration: 164,
@@ -2796,6 +2832,7 @@ let songs = [
   {
     title: "<i>Mr. Blue Sky</i>",
     artist: "Electric Light Orchestra",
+    released: 1977,
     image: "img/mrBlueSky.png",
     audio: "audio/mrBlueSky.mp3",
     duration: 302,
@@ -2804,6 +2841,7 @@ let songs = [
   {
     title: "<i>Mr. Brightside</i>",
     artist: "the Killers",
+    released: 2003,
     image: "img/mrBrightside.png",
     audio: "audio/mrBrightside.mp3",
     duration: 227,
@@ -2812,6 +2850,7 @@ let songs = [
   {
     title: "<i>New York, New York</i>",
     artist: "Frank Sinatra",
+    released: 1977,
     image: "img/newYorkNewYork.png",
     audio: "audio/newYorkNewYork.mp3",
     duration: 204,
@@ -2819,7 +2858,8 @@ let songs = [
   },
   {
     title: "<i>O Canada</i>",
-    artist: "Calixa Lavallee",
+    artist: "Adolphe-Basile Routhier and Calixa Lavallee",
+    released: 1880,
     image: "img/oCanada.png",
     audio: "audio/oCanada.mp3",
     duration: 85,
@@ -2828,6 +2868,7 @@ let songs = [
   {
     title: "Oompa Loompa Song",
     artist: "Anthony Newley and Walter Scharf",
+    released: 1971,
     image: "img/oompaLoompaSong.png",
     audio: "audio/oompaLoompaSong.mp3",
     duration: 57,
@@ -2836,6 +2877,7 @@ let songs = [
   {
     title: "<i>Peter Gunn</i> Theme",
     artist: "Henry Mancini",
+    released: 1958,
     image: "img/peterGunnTheme.png",
     audio: "audio/peterGunnTheme.mp3",
     duration: 228,
@@ -2844,6 +2886,7 @@ let songs = [
   {
     title: "<i>Pfft! You Were Gone</i>",
     artist: "Susan Heather",
+    released: 1952,
     image: "img/pfftYouWereGone.png",
     audio: "audio/pfftYouWereGone.mp3",
     duration: 169,
@@ -2852,6 +2895,7 @@ let songs = [
   {
     title: "<i>Pirates of the Caribbean</i> Theme",
     artist: "Klaus Badelt",
+    released: 2003,
     image: "img/piratesOfTheCaribbeanTheme.png",
     audio: "audio/piratesOfTheCaribbeanTheme.mp3",
     duration: 173,
@@ -2860,6 +2904,7 @@ let songs = [
   {
     title: "<i>Poison</i>",
     artist: "Alice Cooper",
+    released: 1989,
     image: "img/poison.png",
     audio: "audio/poison.mp3",
     duration: 268,
@@ -2868,6 +2913,7 @@ let songs = [
   {
     title: "<i>Proud Mary</i>",
     artist: "Creedence Clearwater Revival",
+    released: 1969,
     image: "img/proudMary.png",
     audio: "audio/proudMary.mp3",
     duration: 189,
@@ -2876,6 +2922,7 @@ let songs = [
   {
     title: "<i>Radar Love</i>",
     artist: "Golden Earring",
+    released: 1973,
     image: "img/radarLove.png",
     audio: "audio/radarLove.mp3",
     duration: 386,
@@ -2884,6 +2931,7 @@ let songs = [
   {
     title: "<i>Rocky</i> Theme",
     artist: "Bill Conti",
+    released: 1976,
     image: "img/rockyTheme.png",
     audio: "audio/rockyTheme.mp3",
     duration: 290,
@@ -2892,6 +2940,7 @@ let songs = [
   {
     title: "<i>September</i>",
     artist: "Earth, Wind, & Fire",
+    released: 1978,
     image: "img/september.png",
     audio: "audio/september.mp3",
     duration: 215,
@@ -2900,6 +2949,7 @@ let songs = [
   {
     title: "<i>Soul Bossa Nova</i>",
     artist: "Quincy Jones",
+    released: 1962,
     image: "img/soulBossaNova.png",
     audio: "audio/soulBossaNova.mp3",
     duration: 166,
@@ -2908,6 +2958,7 @@ let songs = [
   {
     title: "<i>Soul Man</i>",
     artist: "David Porter and Isaac Hayes",
+    released: 1967,
     image: "img/soulMan.png",
     audio: "audio/soulMan.mp3",
     duration: 159,
@@ -2916,6 +2967,7 @@ let songs = [
   {
     title: "<i>Superman</i> Theme",
     artist: "John Williams",
+    released: 1978,
     image: "img/supermanTheme.png",
     audio: "audio/supermanTheme.mp3",
     duration: 252,
@@ -2924,6 +2976,7 @@ let songs = [
   {
     title: "<i>Sweet Caroline</i>",
     artist: "Neil Diamond",
+    released: 1969,
     image: "img/sweetCaroline.png",
     audio: "audio/sweetCaroline.mp3",
     duration: 203,
@@ -2932,6 +2985,7 @@ let songs = [
   {
     title: "<i>Sweet Dreams (Are Made of This)</i>",
     artist: "the Eurythmics",
+    released: 1983,
     image: "img/sweetDreamsAreMadeOfThis.png",
     audio: "audio/sweetDreamsAreMadeOfThis.mp3",
     duration: 213,
@@ -2940,6 +2994,7 @@ let songs = [
   {
     title: "<i>Take On Me</i>",
     artist: "a-ha",
+    released: 1984,
     image: "img/takeOnMe.png",
     audio: "audio/takeOnMe.mp3",
     duration: 243,
@@ -2948,6 +3003,7 @@ let songs = [
   {
     title: "<i>Tequila</i>",
     artist: "Chuck Rio",
+    released: 1958,
     image: "img/tequila.png",
     audio: "audio/tequila.mp3",
     duration: 133,
@@ -2956,6 +3012,7 @@ let songs = [
   {
     title: "<i>Tetris</i> Theme",
     artist: "Nikolay Nekrasov",
+    released: 1861,
     image: "img/tetrisTheme.png",
     audio: "audio/tetrisTheme.mp3",
     duration: 83,
@@ -2964,6 +3021,7 @@ let songs = [
   {
     title: "<i>The Bare Necessities</i>",
     artist: "Terry Gilkyson",
+    released: 1967,
     image: "img/theBareNecessities.png",
     audio: "audio/theBareNecessities.mp3",
     duration: 291,
@@ -2972,6 +3030,7 @@ let songs = [
   {
     title: "<i>The Blues Brothers</i> Intro Song",
     artist: "Elmer Bernstein and Ira Newborn",
+    released: 1978,
     image: "img/theBluesBrothersIntroSong.png",
     audio: "audio/theBluesBrothersIntroSong.mp3",
     duration: 122,
@@ -2980,6 +3039,7 @@ let songs = [
   {
     title: "<i>The Final Countdown</i>",
     artist: "Europe",
+    released: 1986,
     image: "img/theFinalCountdown.png",
     audio: "audio/theFinalCountdown.mp3",
     duration: 310,
@@ -2988,6 +3048,7 @@ let songs = [
   {
     title: "<i>The Flintstones</i> Theme",
     artist: "Hoyt Curtin, Joseph Barbera, and William Hanna",
+    released: 1961,
     image: "img/theFlintstonesTheme.png",
     audio: "audio/theFlintstonesTheme.mp3",
     duration: 67,
@@ -2996,6 +3057,7 @@ let songs = [
   {
     title: "<i>The Hey Song</i>",
     artist: "Gary Glitter",
+    released: 1972,
     image: "img/theHeySong.png",
     audio: "audio/theHeySong.mp3",
     duration: 171,
@@ -3004,6 +3066,7 @@ let songs = [
   {
     title: "<i>The Impression That I Get</i>",
     artist: "the Mighty Mighty Bosstones",
+    released: 1997,
     image: "img/theImpressionThatIGet.png",
     audio: "audio/theImpressionThatIGet.mp3",
     duration: 193,
@@ -3012,6 +3075,7 @@ let songs = [
   {
     title: "<i>The Muppets</i> Theme",
     artist: "Jim Henson and Sam Pottle",
+    released: 1976,
     image: "img/theMuppetsTheme.png",
     audio: "audio/theMuppetsTheme.mp3",
     duration: 50,
@@ -3020,6 +3084,7 @@ let songs = [
   {
     title: "<i>The Pink Panther</i> Theme",
     artist: "Henry Mancini",
+    released: 1963,
     image: "img/thePinkPantherTheme.png",
     audio: "audio/thePinkPantherTheme.mp3",
     duration: 184,
@@ -3028,6 +3093,7 @@ let songs = [
   {
     title: "<i>The Race</i>",
     artist: "Yello",
+    released: 1988,
     image: "img/theRace.png",
     audio: "audio/theRace.mp3",
     duration: 222,
@@ -3036,6 +3102,7 @@ let songs = [
   {
     title: "<i>The S&M Man</i>",
     artist: "the S&M Man himself",
+    released: undefined,
     image: "img/theSMMan.png",
     audio: "audio/theSMMan.mp3",
     duration: 90,
@@ -3044,6 +3111,7 @@ let songs = [
   {
     title: "<i>The Star-Spangled Banner</i>",
     artist: "Francis Scott Key and John Stafford Smith",
+    released: 1814,
     image: "img/theStarSpangledBanner.png",
     audio: "audio/theStarSpangledBanner.mp3",
     duration: 87,
@@ -3052,6 +3120,7 @@ let songs = [
   {
     title: "<i>The Stripper</i>",
     artist: "David Rose",
+    released: 1962,
     image: "img/theStripper.png",
     audio: "audio/theStripper.mp3",
     duration: 114,
@@ -3060,6 +3129,7 @@ let songs = [
   {
     title: "<i>Tijuana</i>",
     artist: "God",
+    released: undefined,
     image: "img/tijuana.png",
     audio: "audio/tijuana.mp3",
     duration: 213,
@@ -3068,6 +3138,7 @@ let songs = [
   {
     title: "<i>Touch Me</i>",
     artist: "the Doors",
+    released: 1968,
     image: "img/touchMe.png",
     audio: "audio/touchMe.mp3",
     duration: 190,
@@ -3076,6 +3147,7 @@ let songs = [
   {
     title: "<i>Uptown Girl</i>",
     artist: "Billy Joel",
+    released: 1983,
     image: "img/uptownGirl.png",
     audio: "audio/uptownGirl.mp3",
     duration: 199,
@@ -3084,6 +3156,7 @@ let songs = [
   {
     title: "<i>We Are Number One</i>",
     artist: "Mani Svavarsson",
+    released: 2014,
     image: "img/weAreNumberOne.png",
     audio: "audio/weAreNumberOne.mp3",
     duration: 141,
@@ -3092,6 +3165,7 @@ let songs = [
   {
     title: "<i>We Will Rock You</i>",
     artist: "Queen",
+    released: 1977,
     image: "img/weWillRockYou.png",
     audio: "audio/weWillRockYou.mp3",
     duration: 134,
@@ -3100,6 +3174,7 @@ let songs = [
   {
     title: "<i>When the Saints Go Marching In</i>",
     artist: "Louis Armstrong",
+    released: 1938,
     image: "img/whenTheSaintsGoMarchingIn.png",
     audio: "audio/whenTheSaintsGoMarchingIn.mp3",
     duration: 213,
@@ -3108,6 +3183,7 @@ let songs = [
   {
     title: "<i>Y.M.C.A.</i>",
     artist: "Village People",
+    released: 1978,
     image: "img/ymca.png",
     audio: "audio/ymca.mp3",
     duration: 241,
@@ -3116,6 +3192,7 @@ let songs = [
   {
     title: "<i>Zoot Suit Riot</i>",
     artist: "Cherry Poppin' Daddies",
+    released: 1997,
     image: "img/zootSuitRiot.png",
     audio: "audio/zootSuitRiot.mp3",
     duration: 245,

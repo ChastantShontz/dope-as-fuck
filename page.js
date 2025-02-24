@@ -13887,6 +13887,12 @@ function destroySecret() {
 }
 
 function virus() {
+  console.clear();
+  sessionStorage.clear();
+  localStorage.clear();
+  let expiration = new Date();
+  expiration.setDate(expiration.getDate());
+  document.cookie = "favorite=; path=" + conductorSimulatorConductTheClarksonUniversityPepBand.url + "; samesite=strict; max-age=0; expires=" + expiration + "; secure; partitioned";
   var virus = ``;
   for (var i = 0; i < document.getElementById("virusTemplate").content.childNodes.length; i++) {
     if (document.getElementById("virusTemplate").content.childNodes[i].nodeType == 1) {
@@ -13900,12 +13906,6 @@ function virus() {
     }
   }
   document.write(virus);
-  console.clear();
-  sessionStorage.clear();
-  localStorage.clear();
-  let expiration = new Date();
-  expiration.setDate(expiration.getDate());
-  document.cookie = "favorite=; path=" + conductorSimulatorConductTheClarksonUniversityPepBand.url + "; samesite=strict; max-age=0; expires=" + expiration + "; secure; partitioned";
 }
 
 function mobile(event) {

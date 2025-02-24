@@ -5016,13 +5016,13 @@
       document.write(conductorSimulatorConductTheClarksonUniversityPepBand.message());
 
       var loadFailedTimeout = setTimeout(loadFailed, 60000);
+      function loadSucceeded() {
+        clearTimeout(loadFailedTimeout);
+      }
+
       function loadFailed() {
         window.stop();
         window.alert("This game is unresponsive. Try reloading it or check your internet connection.");
-      }
-
-      function loadSucceeded() {
-        clearTimeout(loadFailedTimeout);
       }
     </script>
     <noscript>

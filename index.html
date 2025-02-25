@@ -4843,6 +4843,31 @@
               user-select: none;
             }
 
+            .introWord {
+              display: inline-block;
+            }
+
+            #hello {
+              position: relative;
+              right: 1.5em;
+              top: .25em;
+              color: var(--virusBlue);
+              transform: rotate(-5deg);
+            }
+
+            #weAre {
+              position: relative;
+              left: .5em;
+              bottom: .25em;
+              color: var(--virusBlue);
+              transform: rotate(-5deg);
+            }
+
+            #neonNothing {
+              color: var(--virusGray);
+              transform: rotate(10deg);
+            }
+
             .virusWindowControls {
               display: grid;
               grid-template-columns: repeat(3, 1fr);
@@ -4937,6 +4962,7 @@
               --virusLightYellow: #A0A170;
               --buttonGreen: #5CB245;
               --virusBlue: #456886;
+              --virusGray: #394542;
               --white: #FFFFFF;
             }
           </style>
@@ -4946,7 +4972,7 @@
             <section id="virusBackground">
               <div class="virusWindowCont" id="virusIntroCont">
                 <div class="virusWindow" id="virusIntro">
-                  <p id="virusIntroMessage">HELLO! WE ARE NEON NOTHING</p>
+                  <p id="virusIntroMessage"><span class="introWord" id="hello">HELLO!</span><br><span class="introWord" id="weAre">WE ARE</span><br><span class="introWord" id="neonNothing">NEON NOTHING</span></p>
                 </div>
                 <div class="virusWindowControls" id="virusIntroControls">
                   <button type="button" title="Minimize" class="virusWindowControl virusIntroControl virusWindowMinimize" id="virusIntroMinimize" role="button" aria-label="Minimize this window">&mdash;</button>

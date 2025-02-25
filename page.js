@@ -14174,7 +14174,7 @@ function slideshow() {
         else if ((document.getElementById("mobileCharacterImgCaption").classList.length == 2) && (document.getElementById("mobileCharacterImgCaption").classList.contains("sithCaption"))) {
           document.getElementById("mobileCharacterImgCaption").classList.replace("sithCaption", "jediCaption");
         }
-        document.getElementById("mobileCharacterImgCaption").style.fontFamily = "\"Kalam\", \"Satisfy\", \"Brush Script MT\", cursive";
+        document.getElementById("mobileCharacterImgCaption").style.fontFamily = "\"Kalam\", \"Satisfy\", \"Lobster\", cursive";
         document.getElementById("mobileCharacterImgCaption").style.color = "var(--jediBlue)";
       }
     }

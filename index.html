@@ -4843,11 +4843,12 @@
             .virusWindowControl {
               display: inline-block;
               border-radius: 0;
-              background: var(--gray);
               width: 1.5rem;
               padding: 0;
               border: none;
-              font-size: 1em;
+              color: var(--white);
+              font-size: 1.1em;
+              font-weight: bold;
               text-align: center;
               user-select: none;
               cursor: pointer;
@@ -4927,9 +4928,9 @@
                 <div class="virusWindow" id="virusIntro">
                 </div>
                 <div class="virusWindowControls" id="virusIntroControls">
-                  <button type="button" title="Minimize" class="virusWindowControl virusIntroControl virusWindowMinimize" id="virusIntroMinimize" role="button" aria-label="Minimize this window"></button>
-                  <button type="button" title="Resize" class="virusWindowControl virusIntroControl virusWindowResize" id="virusIntroResize" role="button" aria-label="Resize this window"></button>
-                  <button type="button" title="Close" class="virusWindowControl virusIntroControl virusWindowClose" id="virusIntroClose" role="button" aria-label="Close this window"></button>
+                  <button type="button" title="Minimize" class="virusWindowControl virusIntroControl virusWindowMinimize" id="virusIntroMinimize" role="button" aria-label="Minimize this window">&mdash;</button>
+                  <button type="button" title="Resize" class="virusWindowControl virusIntroControl virusWindowResize" id="virusIntroResize" role="button" aria-label="Resize this window">&square;</button>
+                  <button type="button" title="Close" class="virusWindowControl virusIntroControl virusWindowClose" id="virusIntroClose" role="button" aria-label="Close this window">&times;</button>
                 </div>
               </div>
             </section>

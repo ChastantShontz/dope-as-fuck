@@ -5006,7 +5006,7 @@
             <section id="virusBackground">
               <div class="virusWindowCont" id="virusIntroCont">
                 <div class="virusWindow" id="virusIntro">
-                  <p id="virusIntroMessage"><span class="introWord" id="hello">HELLO!</span><br><span class="introWord" id="weAre">WE ARE</span><br><span class="introWord" id="neonNothing">NEON NOTHING</span></p>
+                  <p id="virusIntroMessage"></p>
                 </div>
                 <div class="virusWindowControls" id="virusIntroControls">
                   <button type="button" title="Minimize" class="virusWindowControl virusIntroControl virusWindowMinimize" id="virusIntroMinimize" role="button" aria-label="Minimize this window">&mdash;</button>
@@ -5098,21 +5098,22 @@
             function intro() {
               document.getElementById("virusIntroCont").style.transform = "scale(100%)";
               document.getElementById("virusIntroCont").style.transition = "transform .5s ease 0s";
-              setTimeout(introFirstMessage, 500);
+              introFirstMessage();
               setTimeout(introSecondMessage, 2250);
             }
 
             function introFirstMessage() {
+              document.getElementById("virusIntroMessage").innerHTML = "<span class=\"introWord\" id=\"hello\">HELLO!</span><br><span class=\"introWord\" id=\"weAre\">WE ARE</span><br><span class=\"introWord\" id=\"neonNothing\">NEON NOTHING</span>";
               document.getElementById("neonNothing").style.visibility = "visible";
               document.getElementById("neonNothing").style.opacity = "100%";
-              document.getElementById("neonNothing").style.transition = "all .25s ease .25s";
-              document.getElementById("neonNothing").style.animation = "wobble .1s ease .5s 10 forwards";
+              document.getElementById("neonNothing").style.transition = "all .25s ease .75s";
+              document.getElementById("neonNothing").style.animation = "wobble .1s ease 1s 10 forwards";
               setTimeout(() => {
                 document.getElementById("neonNothing").style.animation = "none";
-              }, 1500);
+              }, 2000);
               document.getElementById("virusIntroMessage").style.visibility = "hidden";
               document.getElementById("virusIntroMessage").style.opacity = "0";
-              document.getElementById("virusIntroMessage").style.transition = "all .25s ease 1.5s";
+              document.getElementById("virusIntroMessage").style.transition = "all .25s ease 2s";
             }
 
             function introSecondMessage() {

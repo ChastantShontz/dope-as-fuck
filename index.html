@@ -4793,7 +4793,7 @@
             }
 
             #virusToolBarCont {
-              position: absolute;
+              position: fixed;
               left: 0;
               right: 0;
               bottom: 0;
@@ -4836,6 +4836,27 @@
               cursor: pointer;
             }
 
+            #virusBackground {
+              position: fixed;
+              left: 0;
+              right: 0;
+              top: 0;
+              bottom: 2em;
+            }
+
+            .virusWindow {
+              position: absolute;
+              border-radius: .5em;
+              background: var(--virusDarkYellow);
+            }
+
+            #virusIntro {
+              left: 33%;
+              right: 2.5%;
+              top: 5%;
+              bottom: 5%;
+            }
+
             :root {
               --virusDarkYellow: #7E7C4B;
               --virusLightYellow: #A0A170;
@@ -4845,6 +4866,10 @@
         </head>
         <body>
           <article id="virus" tabindex="0" role="article" aria-description="The virus that is taking over your computer...">
+            <section id="virusBackground">
+              <div class="virusWindow" id="virusIntro">
+              </div>
+            </section>
             <div id="virusToolbarCont">
               <div id="virusToolbar">
               </div>

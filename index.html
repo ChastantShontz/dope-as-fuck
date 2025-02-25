@@ -4834,6 +4834,7 @@
             }
 
             #virusIntroMessage {
+              position: relative;
               margin-top: 0;
               margin-bottom: 0;
               font-family: "Delicious Handrawn", "Satisfy", "Brush Script MT", cursive;
@@ -4973,6 +4974,20 @@
             }
 
             @keyframes shake {
+              0%,
+              5% {
+                left: auto;
+                right: .1em;
+              }
+              50%,
+              55% {
+                left: .1em;
+                right: auto;
+              }
+              100% {
+                left: auto;
+                right: .1em;
+              }
             }
 
             :root {
@@ -5103,9 +5118,10 @@
             function introSecondMessage() {
               document.getElementById("virusIntroMessage").innerHTML = "AND YOUR<br>COMPUTER<br>IS OURS!!!";
               document.getElementById("virusIntroMessage").style.visibility = "visible";
+              document.getElementById("virusIntroMessage").style.right = ".1em";
               document.getElementById("virusIntroMessage").style.opacity = "100%";
-              document.getElementById("virusIntroMessage").style.transition = "all .25s ease 0s";
-              document.getElementById("virusIntroMessage").style.animation = "shake .5s ease .25s infinite forwards";
+              document.getElementById("virusIntroMessage").style.transition = "visibility .25s ease 0s, right .125s ease .25s, opacity .25s ease 0s";
+              document.getElementById("virusIntroMessage").style.animation = "shake .5s ease .375s infinite forwards";
             }
 
             function execution() {

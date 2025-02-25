@@ -4865,6 +4865,8 @@
             }
 
             #neonNothing {
+              visibility: hidden;
+              opacity: 0;
               color: var(--virusGray);
               transform: rotate(10deg);
             }
@@ -5063,6 +5065,9 @@
             }
 
             function intro() {
+              document.getElementById("neonNothing").style.visibility = "visible";
+              document.getElementById("neonNothing").style.opacity = "100%";
+              document.getElementById("neonNothing").style.transition = "all .25s ease .75s";
               document.getElementById("virusIntroCont").style.transform = "scale(100%)";
               document.getElementById("virusIntroCont").style.transition = "transform .25s ease 0s";
             }

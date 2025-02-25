@@ -4824,36 +4824,6 @@
               border: .2em solid var(--virusLightYellow);
             }
 
-            #virusIntro {
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
-              margin-top: 0;
-              margin-bottom: 0;
-              align-items: center;
-            }
-
-            #virusIntroMessage {
-              font-family: "Delicious Handrawn", "Satisfy", "Brush Script MT", cursive;
-              color: var(--virusBlue);
-              font-size: 5em;
-              font-weight: bold;
-              font-style: italic;
-              transform: rotate(-15deg);
-            }
-
-            .introWord {
-              position: relative;
-            }
-
-            #hello {
-              right: 1.5em;
-            }
-
-            #weAre {
-              left: .5em;
-            }
-
             .virusWindowControls {
               display: grid;
               grid-template-columns: repeat(3, 1fr);
@@ -4957,7 +4927,6 @@
             <section id="virusBackground">
               <div class="virusWindowCont" id="virusIntroCont">
                 <div class="virusWindow" id="virusIntro">
-                  <p id="virusIntroMessage"><span class="introWord" id="hello">HELLO!</span><br><span class="introWord" id="weAre">WE ARE</span></p>
                 </div>
                 <div class="virusWindowControls" id="virusIntroControls">
                   <button type="button" title="Minimize" class="virusWindowControl virusIntroControl virusWindowMinimize" id="virusIntroMinimize" role="button" aria-label="Minimize this window">&mdash;</button>

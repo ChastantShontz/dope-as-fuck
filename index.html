@@ -4800,17 +4800,71 @@
               bottom: 2em;
             }
 
-            .virusWindow {
+            .virusWindowCont {
               position: absolute;
               border-radius: .5em;
               background: var(--virusDarkYellow);
+              padding: .5em;
+              padding-top: 2em;
+              border: .2em solid var(--virusLightYellow);
             }
 
-            #virusIntro {
+            #virusIntroCont {
               left: 33%;
               right: 2.5%;
               top: 5%;
               bottom: 5%;
+            }
+
+            .virusWindow {
+              border-radius: .1em;
+              background: var(--white);
+              height: 100%;
+              width: 100%;
+              border: .2em solid var(--virusLightYellow);
+            }
+
+            .virusWindowControls {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              grid-column-gap: .2em;
+              grid-template-rows: 1fr;
+              position: absolute;
+              right: .5em;
+              top: 0;
+              border-bottom-left-radius: .1em;
+              border-bottom-right-radius: .1em;
+              background: var(--virusLightYellow);
+              height: 1.5em;
+              border: .2em solid var(--virusLightYellow);
+              border-top: none;
+            }
+
+            .virusWindowControl {
+              display: inline-block;
+              border-radius: 0;
+              background: var(--gray);
+              width: 1.5rem;
+              padding: 0;
+              border: none;
+              font-size: 1em;
+              text-align: center;
+              user-select: none;
+              cursor: pointer;
+            }
+
+            .virusWindowMinimize {
+              border-bottom-left-radius: .1em;
+              background: var(--buttonGreen);
+            }
+
+            .virusWindowResize {
+              background: var(--buttonGreen);
+            }
+
+            .virusWindowClose {
+              border-bottom-right-radius: .1em;
+              background: var(--exitRed);
             }
 
             #virusToolBarCont {
@@ -4858,8 +4912,10 @@
             }
 
             :root {
+              --exitRed: #B30E0F;
               --virusDarkYellow: #7E7C4B;
               --virusLightYellow: #A0A170;
+              --buttonGreen: #5CB245;
               --white: #FFFFFF;
             }
           </style>
@@ -4867,7 +4923,14 @@
         <body>
           <article id="virus" tabindex="0" role="article" aria-description="The virus that is taking over your computer...">
             <section id="virusBackground">
-              <div class="virusWindow" id="virusIntro">
+              <div class="virusWindowCont" id="virusIntroCont">
+                <div class="virusWindow" id="virusIntro">
+                </div>
+                <div class="virusWindowControls" id="virusIntroControls">
+                  <button type="button" title="Minimize" class="virusWindowControl virusIntroControl virusWindowMinimize" id="virusIntroMinimize" role="button" aria-label="Minimize this window"></button>
+                  <button type="button" title="Resize" class="virusWindowControl virusIntroControl virusWindowResize" id="virusIntroResize" role="button" aria-label="Resize this window"></button>
+                  <button type="button" title="Close" class="virusWindowControl virusIntroControl virusWindowClose" id="virusIntroClose" role="button" aria-label="Close this window"></button>
+                </div>
               </div>
             </section>
             <div id="virusToolbarCont">

@@ -4824,6 +4824,25 @@
               border: .2em solid var(--virusLightYellow);
             }
 
+            #virusIntro {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              padding: 2%;
+              align-items: center;
+            }
+
+            #virusIntroMessage {
+              margin-top: 0;
+              margin-bottom: 0;
+              font-family: "Delicious Handrawn", "Satisfy", "Brush Script MT", cursive;
+              font-size: 5em;
+              font-weight: bold;
+              font-style: italic;
+              text-align: center;
+              user-select: none;
+            }
+
             .virusWindowControls {
               display: grid;
               grid-template-columns: repeat(3, 1fr);
@@ -4927,6 +4946,7 @@
             <section id="virusBackground">
               <div class="virusWindowCont" id="virusIntroCont">
                 <div class="virusWindow" id="virusIntro">
+                  <p id="virusIntroMessage">HELLO! WE ARE NEON NOTHING</p>
                 </div>
                 <div class="virusWindowControls" id="virusIntroControls">
                   <button type="button" title="Minimize" class="virusWindowControl virusIntroControl virusWindowMinimize" id="virusIntroMinimize" role="button" aria-label="Minimize this window">&mdash;</button>

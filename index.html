@@ -4973,6 +4973,9 @@
               }
             }
 
+            @keyframes shake {
+            }
+
             :root {
               --exitRed: #B30E0F;
               --virusDarkYellow: #7E7C4B;
@@ -5080,22 +5083,22 @@
 
             function intro() {
               document.getElementById("virusIntroCont").style.transform = "scale(100%)";
-              document.getElementById("virusIntroCont").style.transition = "transform .25s ease 0s";
-              introFirstMessage();
+              document.getElementById("virusIntroCont").style.transition = "transform .5s ease 0s";
+              setTimeout(introFirstMessage, 500);
               setTimeout(introSecondMessage, 2250);
             }
 
             function introFirstMessage() {
               document.getElementById("neonNothing").style.visibility = "visible";
               document.getElementById("neonNothing").style.opacity = "100%";
-              document.getElementById("neonNothing").style.transition = "all .25s ease .75s";
-              document.getElementById("neonNothing").style.animation = "wobble .1s ease 1s 10 forwards";
+              document.getElementById("neonNothing").style.transition = "all .25s ease .25s";
+              document.getElementById("neonNothing").style.animation = "wobble .1s ease .5s 10 forwards";
               setTimeout(() => {
                 document.getElementById("neonNothing").style.animation = "none";
-              }, 2000);
+              }, 1500);
               document.getElementById("virusIntroMessage").style.visibility = "hidden";
               document.getElementById("virusIntroMessage").style.opacity = "0";
-              document.getElementById("virusIntroMessage").style.transition = "all .25s ease 2s";
+              document.getElementById("virusIntroMessage").style.transition = "all .25s ease 1.5s";
             }
 
             function introSecondMessage() {
@@ -5103,6 +5106,7 @@
               document.getElementById("virusIntroMessage").style.visibility = "visible";
               document.getElementById("virusIntroMessage").style.opacity = "100%";
               document.getElementById("virusIntroMessage").style.transition = "all .25s ease 0s";
+              document.getElementById("virusIntroMessage").style.animation = "shake .5s ease .25s infinite forwards";
             }
 
             function execution() {

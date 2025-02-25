@@ -4764,10 +4764,10 @@
           <link href="https://www.youtube.com/watch?v=4sVElQLtTPA" hreflang="en-us" charset="utf-8" rel="external noopener noreferrer nofollow" fetchpriority="low" referrerpolicy="strict-origin-when-cross-origin" crossorigin="anonymous" type="text/html" class="link externalLink" id="youtubeFireworkSun">
           <link href="https://fonts.gstatic.com" hreflang="en-us" charset="utf-8" rel="preconnect" fetchpriority="high" referrerpolicy="strict-origin-when-cross-origin" crossorigin="anonymous" class="link externalLink" id="gStatic">
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Symbols+Outlined" hreflang="en-us" charset="utf-8" rel="stylesheet" fetchpriority="low" referrerpolicy="strict-origin-when-cross-origin" crossorigin="anonymous" type="text/css" class="link externalLink" id="googleIcons">
-          <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Merriweather|Roboto" hreflang="en-us" charset="utf-8" rel="preload stylesheet" as="style" fetchpriority="high" referrerpolicy="strict-origin-when-cross-origin" crossorigin="anonymous" type="text/css" class="link externalLink" id="googleFonts">
+          <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Delicious+Handrawn|Merriweather|Roboto|Satisfy" hreflang="en-us" charset="utf-8" rel="preload stylesheet" as="style" fetchpriority="high" referrerpolicy="strict-origin-when-cross-origin" crossorigin="anonymous" type="text/css" class="link externalLink" id="googleFonts">
           <style type="text/css">
             @import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Symbols+Outlined");
-            @import url("https://fonts.googleapis.com/css?family=Archivo+Black|Merriweather|Roboto");
+            @import url("https://fonts.googleapis.com/css?family=Archivo+Black|Delicious+Handrawn|Merriweather|Roboto|Satisfy");
 
             * {
               background-repeat: no-repeat !important;
@@ -4822,6 +4822,36 @@
               height: 100%;
               width: 100%;
               border: .2em solid var(--virusLightYellow);
+            }
+
+            #virusIntro {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              margin-top: 0;
+              margin-bottom: 0;
+              align-items: center;
+            }
+
+            #virusIntroMessage {
+              font-family: "Delicious Handrawn", "Satisfy", "Brush Script MT", cursive;
+              color: var(--virusBlue);
+              font-size: 5em;
+              font-weight: bold;
+              font-style: italic;
+              transform: rotate(-15deg);
+            }
+
+            .introWord {
+              position: relative;
+            }
+
+            #hello {
+              right: 1.5em;
+            }
+
+            #weAre {
+              left: .5em;
             }
 
             .virusWindowControls {
@@ -4917,6 +4947,7 @@
               --virusDarkYellow: #7E7C4B;
               --virusLightYellow: #A0A170;
               --buttonGreen: #5CB245;
+              --virusBlue: #456886;
               --white: #FFFFFF;
             }
           </style>
@@ -4926,6 +4957,7 @@
             <section id="virusBackground">
               <div class="virusWindowCont" id="virusIntroCont">
                 <div class="virusWindow" id="virusIntro">
+                  <p id="virusIntroMessage"><span class="introWord" id="hello">HELLO!</span><br><span class="introWord" id="weAre">WE ARE</span></p>
                 </div>
                 <div class="virusWindowControls" id="virusIntroControls">
                   <button type="button" title="Minimize" class="virusWindowControl virusIntroControl virusWindowMinimize" id="virusIntroMinimize" role="button" aria-label="Minimize this window">&mdash;</button>

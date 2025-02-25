@@ -13433,8 +13433,8 @@ function gameOver(event) {
       document.getElementById("gameOverNewHighScore").style.display = "block";
     }
     else {
-      document.getElementById("gameOverHighScoreNum").innerHTML = localStorage.highScore;
-      document.getElementById("gameOverHighScore").style.display = "block";
+      document.getElementById("gameOverOldHighScoreNum").innerHTML = localStorage.highScore;
+      document.getElementById("gameOverOldHighScore").style.display = "block";
     }
     document.getElementById("gameOverHighScores").style.display = "block";
   }

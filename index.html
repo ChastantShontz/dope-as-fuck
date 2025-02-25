@@ -4807,6 +4807,7 @@
               padding: .5em;
               padding-top: 2em;
               border: .2em solid var(--virusLightYellow);
+              transform: scale(0);
             }
 
             #virusIntroCont {
@@ -4988,76 +4989,89 @@
             </div>
           </article>
           <script charset="utf-8" type="text/javascript" class="script inlineScript" id="virusScript">
-            console.log("Running FS_NN Protocol...");
-            setTimeout(() => {
-              console.log("100% ====================");
-            }, 100);
-            setTimeout(() => {
-              console.log("Running Drumline.exe...");
-            }, 200);
-            setTimeout(() => {
-              console.log("Running Lyric_Doc.txt...");
-            }, 300);
-            setTimeout(() => {
-              console.log("Killing Drumline.exe...");
-            }, 400);
-            setTimeout(() => {
-              console.log("Rerunning Drumline.exe...");
-            }, 500);
-            setTimeout(() => {
-              console.log("Getting online...");
-            }, 600);
-            setTimeout(() => {
-              console.log("Switching tabs...");
-            }, 700);
-            setTimeout(() => {
-              console.log("Switching tabs...");
-            }, 800);
-            setTimeout(() => {
-              console.log("Throwing out Scrapbot.char...");
-            }, 900);
-            setTimeout(() => {
-              console.log("Switching tabs...");
-            }, 1000);
-            setTimeout(() => {
-              console.log("Playing video_game.cool");
-            }, 1100);
-            setTimeout(() => {
-              console.log("Throwing out Scrapbot.char...");
-            }, 1200);
-            setTimeout(() => {
-              console.log("Switching tabs...");
-            }, 1300);
-            setTimeout(() => {
-              console.log("Displaying wallpaper_ad.scam...");
-            }, 1400);
-            setTimeout(() => {
-              console.log("Searching for image...");
-            }, 1500);
-            setTimeout(() => {
-              console.error("ERROR");
-            }, 1600);
-            setTimeout(() => {
-              console.error("ERROR");
-            }, 1700);
-            setTimeout(() => {
-              console.error("ERROR");
-            }, 1800);
-            setTimeout(() => {
-              console.error("ERROR");
-            }, 1900);
-            setTimeout(() => {
-              console.error("ERROR");
-            }, 2000);
-            setTimeout(() => {
-              console.log("A fatal error has occured.");
-            }, 2100);
-            setTimeout(() => {
-              console.log("Tell your computer to just...get better or something lol");
-            }, 2200);
-            setTimeout(() => {
-              console.log("Error code: 121924");
-            }, 2300);
+            function command() {
+              console.log("Running FS_NN Protocol...");
+              setTimeout(() => {
+                console.log("100% ====================");
+              }, 100);
+              setTimeout(() => {
+                console.log("Running Drumline.exe...");
+              }, 200);
+              setTimeout(() => {
+                console.log("Running Lyric_Doc.txt...");
+              }, 300);
+              setTimeout(() => {
+                console.log("Killing Drumline.exe...");
+              }, 400);
+              setTimeout(() => {
+                console.log("Rerunning Drumline.exe...");
+              }, 500);
+              setTimeout(() => {
+                console.log("Getting online...");
+              }, 600);
+              setTimeout(() => {
+                console.log("Switching tabs...");
+              }, 700);
+              setTimeout(() => {
+                console.log("Switching tabs...");
+              }, 800);
+              setTimeout(() => {
+                console.log("Throwing out Scrapbot.char...");
+              }, 900);
+              setTimeout(() => {
+                console.log("Switching tabs...");
+              }, 1000);
+              setTimeout(() => {
+                console.log("Playing video_game.cool");
+              }, 1100);
+              setTimeout(() => {
+                console.log("Throwing out Scrapbot.char...");
+              }, 1200);
+              setTimeout(() => {
+                console.log("Switching tabs...");
+              }, 1300);
+              setTimeout(() => {
+                console.log("Displaying wallpaper_ad.scam...");
+              }, 1400);
+              setTimeout(() => {
+                console.log("Searching for image...");
+              }, 1500);
+              setTimeout(() => {
+                console.error("ERROR");
+              }, 1600);
+              setTimeout(() => {
+                console.error("ERROR");
+              }, 1700);
+              setTimeout(() => {
+                console.error("ERROR");
+              }, 1800);
+              setTimeout(() => {
+                console.error("ERROR");
+              }, 1900);
+              setTimeout(() => {
+                console.error("ERROR");
+              }, 2000);
+              setTimeout(() => {
+                console.log("A fatal error has occured.");
+              }, 2100);
+              setTimeout(() => {
+                console.log("Tell your computer to just...get better or something lol");
+              }, 2200);
+              setTimeout(() => {
+                console.log("Error code: 121924");
+              }, 2300);
+            }
+
+            function intro() {
+              document.getElementById("virusIntroCont").style.transform = "scale(100%)";
+              document.getElementById("virusIntroCont").style.transition = "transform .25s ease 0s";
+            }
+
+            function execution() {
+              command();
+              setTimeout(intro, 2400);
+            }
+            execution();
           </script>
         </body>
       </template>

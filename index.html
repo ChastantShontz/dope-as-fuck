@@ -5082,7 +5082,7 @@
               document.getElementById("virusIntroCont").style.transform = "scale(100%)";
               document.getElementById("virusIntroCont").style.transition = "transform .25s ease 0s";
               introFirstMessage();
-              setTimeout(introSecondMessage, 2000);
+              setTimeout(introSecondMessage, 2250);
             }
 
             function introFirstMessage() {
@@ -5093,10 +5093,16 @@
               setTimeout(() => {
                 document.getElementById("neonNothing").style.animation = "none";
               }, 2000);
+              document.getElementById("virusIntroMessage").style.visibility = "hidden";
+              document.getElementById("virusIntroMessage").style.opacity = "0";
+              document.getElementById("virusIntroMessage").style.transition = "all .25s ease 2s";
             }
 
             function introSecondMessage() {
               document.getElementById("virusIntroMessage").innerHTML = "AND YOUR COMPUTER IS OURS!!!";
+              document.getElementById("virusIntroMessage").style.visibility = "visible";
+              document.getElementById("virusIntroMessage").style.opacity = "100%";
+              document.getElementById("virusIntroMessage").style.transition = "all .25s ease 0s";
             }
 
             function execution() {

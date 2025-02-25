@@ -4821,7 +4821,6 @@
               left: 25%;
               right: 42%;
               bottom: 10%;
-              transform: scale(100%);
             }
 
             .virusWindow {
@@ -5162,13 +5161,19 @@
               document.getElementById("virusIntroMessage").style.visibility = "visible";
               document.getElementById("virusIntroMessage").style.right = ".05em";
               document.getElementById("virusIntroMessage").style.opacity = "100%";
-              document.getElementById("virusIntroMessage").style.transition = "visibility .25s ease 0s, right .125s ease .25s, opacity .25s ease 0s";
-              document.getElementById("virusIntroMessage").style.animation = "shake .5s ease .375s infinite forwards";
+              document.getElementById("virusIntroMessage").style.transition = "visibility .25s ease 0s, right .1125s ease .25s, opacity .25s ease 0s";
+              document.getElementById("virusIntroMessage").style.animation = "shake .5s ease .3625s infinite forwards";
+            }
+
+            function advertisement() {
+              document.getElementById("virusAdvertisementCont").style.transform = "scale(100%)";
+              document.getElementById("virusAdvertisementCont").style.transition = "transform .5s ease 0s";
             }
 
             function execution() {
               command();
               setTimeout(intro, 2400);
+              setTimeout(advertisement, 7100);
             }
             execution();
           </script>

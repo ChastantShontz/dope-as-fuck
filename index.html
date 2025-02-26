@@ -5408,18 +5408,22 @@
             function doc() {
               document.getElementById("virusDocCont").style.transform = "scale(100%)";
               document.getElementById("virusDocCont").style.transition = "transform .5s ease 0s";
+              setTimeout(docWriting, 1000);
+            }
+
+            function docWriting() {
               for (var i = 0; i < document.getElementsByClassName("virusDocWord").length; i++) {
                 if (i < (document.getElementsByClassName("virusDocWord").length - 2)) {
-                  var transitionDelay = ((i / 4) + 1);
+                  var transitionDelay = (i / 4);
                 }
                 else if (i >= (document.getElementsByClassName("virusDocWord").length - 2)) {
-                  var transitionDelay = (((document.getElementsByClassName("virusDocWord").length - 2) / 4) + 1);
+                  var transitionDelay = ((document.getElementsByClassName("virusDocWord").length - 2) / 4);
                 }
                 document.getElementsByClassName("virusDocWord")[i].style.visibility = "visible";
                 document.getElementsByClassName("virusDocWord")[i].style.transition = "visibility 0s ease " + transitionDelay + "s";
               }
               for (var i = 0; i < document.getElementsByClassName("virusDocLetter").length; i++) {
-                var transitionDelay = ((i / 10) + (((document.getElementsByClassName("virusDocWord").length - 2) / 4) + 1));
+                var transitionDelay = ((i / 10) + ((document.getElementsByClassName("virusDocWord").length - 2) / 4));
                 document.getElementsByClassName("virusDocLetter")[i].style.visibility = "visible";
                 document.getElementsByClassName("virusDocLetter")[i].style.transition = "visibility 0s ease " + transitionDelay + "s";
               }

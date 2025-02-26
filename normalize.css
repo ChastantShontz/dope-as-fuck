@@ -534,6 +534,10 @@ svg {
   display: inline-block;
 }
 
+svg * {
+  user-select: none;
+}
+
 canvas {
   display: inline-block;
 }

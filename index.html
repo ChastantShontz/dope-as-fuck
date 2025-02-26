@@ -4828,7 +4828,6 @@
               right: 16.5%;
               top: 5%;
               bottom: 5%;
-              transform: scale(100%);
             }
 
             .virusWindow {
@@ -5053,6 +5052,10 @@
               margin-bottom: 0;
               font-family: "Roboto", "Arial", sans-serif;
               user-select: none;
+            }
+
+            .virusDocWord {
+              visibility: hidden;
             }
 
             #fireworkSun {
@@ -5401,10 +5404,21 @@
               document.getElementById("virusAdvertisementCont").style.transition = "transform .5s ease 0s";
             }
 
+            function doc() {
+              document.getElementById("virusDocCont").style.transform = "scale(100%)";
+              document.getElementById("virusDocCont").style.transition = "transform .5s ease 0s";
+              for (var i = 0; i < document.getElementsByClassName("virusDocWord").length; i++) {
+                var transitionDelay = ((i / 4) + 1);
+                document.getElementsByClassName("virusDocWord")[i].style.visibility = "visible";
+                document.getElementsByClassName("virusDocWord")[i].style.transition = "visibility 0s ease " + transitionDelay + "s";
+              }
+            }
+
             function execution() {
               command();
               setTimeout(intro, 2400);
               setTimeout(advertisement, 7100);
+              setTimeout(doc, 1000);
             }
             execution();
           </script>

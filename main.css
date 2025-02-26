@@ -2248,7 +2248,7 @@ main {
 }
 
 #dedication {
-  font-family: "Patrick Hand", "Satisfy", "Lobster", cursive;
+  font-family: "Patrick Hand", "Satisfy", "Courgette", cursive;
 }
 
 .bandieLink {
@@ -2471,7 +2471,7 @@ main {
   background: rgba(255, 255, 255, 50%);
   opacity: 0;
   padding: 1em;
-  font-family: "Merienda", "Satisfy", "Lobster", cursive;
+  font-family: "Merienda", "Satisfy", "Courgette", cursive;
   font-style: italic;
   text-align: center;
 }
@@ -3072,7 +3072,7 @@ main {
 }
 
 .poemLine {
-  font-family: "Shadows Into Light", "Satisfy", "Lobster", cursive;
+  font-family: "Shadows Into Light", "Satisfy", "Courgette", cursive;
   font-weight: bold;
   font-style: italic;
 }
@@ -3080,7 +3080,7 @@ main {
 #poemAuthors {
   display: block;
   margin-left: 24px;
-  font-family: "Shadows Into Light", "Satisfy", "Lobster", cursive;
+  font-family: "Shadows Into Light", "Satisfy", "Courgette", cursive;
   font-weight: bold;
   font-size: 1.1em;
 }
@@ -3530,7 +3530,7 @@ main {
   left: 0;
   right: 0;
   opacity: 0;
-  font-family: "Merienda", "Satisfy", "Lobster", cursive;
+  font-family: "Merienda", "Satisfy", "Courgette", cursive;
   font-style: italic;
   text-align: center;
 }
@@ -3759,7 +3759,7 @@ main {
 
 #quoteLine {
   display: block;
-  font-family: "Patrick Hand", "Satisfy", "Lobster", cursive;
+  font-family: "Patrick Hand", "Satisfy", "Courgette", cursive;
   color: var(--red);
 }
 
@@ -3797,7 +3797,7 @@ main {
 #quoteAuthor {
   display: block;
   margin-left: 24px;
-  font-family: "Patrick Hand", "Satisfy", "Lobster", cursive;
+  font-family: "Patrick Hand", "Satisfy", "Courgette", cursive;
   color: var(--red);
 }
 
@@ -3852,7 +3852,7 @@ main {
 
 #accountHeading {
   width: 100%;
-  font-family: "Lekton", "Courier Prime", monospace;
+  font-family: "Lekton", "Fira Mono", monospace;
   color: var(--darkGray);
   font-size: 1.5em;
   font-weight: bold;
@@ -3862,7 +3862,7 @@ main {
 #accountSubheading {
   width: 100%;
   margin-bottom: -.25em;
-  font-family: "Lekton", "Courier Prime", monospace;
+  font-family: "Lekton", "Fira Mono", monospace;
   color: var(--darkGray);
   font-size: 1.1em;
   font-weight: bold;
@@ -3875,7 +3875,7 @@ main {
 
 .accountInstruction {
   width: 100%;
-  font-family: "Lekton", "Courier Prime", monospace;
+  font-family: "Lekton", "Fira Mono", monospace;
   color: var(--darkGray);
   font-size: .9em;
   font-weight: bold;
@@ -3887,7 +3887,7 @@ main {
 }
 
 .key {
-  font-family: "Source Code Pro", "Lekton", "Courier Prime", monospace;
+  font-family: "Source Code Pro", "Lekton", "Fira Mono", monospace;
   font-weight: normal;
 }
 
@@ -3907,7 +3907,7 @@ main {
   background: var(--darkGray);
   margin-right: .1em;
   margin-bottom: .25em;
-  font-family: "Aldrich", "Lekton", "Courier Prime", monospace;
+  font-family: "Aldrich", "Lekton", "Fira Mono", monospace;
   color: var(--lightGray);
 }
 
@@ -3963,7 +3963,7 @@ main {
 }
 
 #infoLegend {
-  font-family: "Lekton", "Courier Prime", monospace;
+  font-family: "Lekton", "Fira Mono", monospace;
   color: var(--darkGray);
 }
 
@@ -4019,7 +4019,7 @@ main {
 .infoLabel {
   margin-left: .1em;
   margin-bottom: .1em;
-  font-family: "Lekton", "Courier Prime", monospace;
+  font-family: "Lekton", "Fira Mono", monospace;
   color: var(--darkGray);
   font-weight: bold;
 }
@@ -4077,7 +4077,7 @@ main {
 .dataCell {
   padding-left: 1em;
   padding-right: 1em;
-  font-family: "Lekton", "Courier Prime", monospace;
+  font-family: "Lekton", "Fira Mono", monospace;
   color: var(--darkGray);
   font-size: .9em;
   font-weight: bold;
@@ -4107,7 +4107,7 @@ main {
   padding-left: 1em;
   padding-right: 1em;
   border: .1em solid var(--darkGray);
-  font-family: "Lekton", "Courier Prime", monospace;
+  font-family: "Lekton", "Fira Mono", monospace;
   color: var(--lightGray);
   font-size: 1.25em;
   text-align: center;
@@ -4117,7 +4117,7 @@ main {
   padding-left: 1em;
   padding-right: 1em;
   border: .1em solid var(--darkGray);
-  font-family: "Lekton", "Courier Prime", monospace;
+  font-family: "Lekton", "Fira Mono", monospace;
   color: var(--darkGray);
   font-size: .9em;
   font-weight: bold;
@@ -4159,7 +4159,7 @@ main {
   padding-right: .25em;
   padding-top: .1em;
   padding-bottom: .1em;
-  font-family: "Lekton", "Courier Prime", monospace;
+  font-family: "Lekton", "Fira Mono", monospace;
   color: var(--lightGray);
   font-weight: bold;
   box-shadow: .25em .25em .5em 0 var(--darkGray);
@@ -4337,7 +4337,7 @@ main {
 #secretHeading {
   margin-left: 1em;
   margin-bottom: .5em;
-  font-family: "Satisfy", "Lobster", cursive;
+  font-family: "Satisfy", "Courgette", cursive;
   color: var(--secretPurple);
   font-size: 2em;
   font-weight: bold;
@@ -4395,7 +4395,7 @@ main {
 }
 
 .secretMessageParagraph {
-  font-family: "Satisfy", "Lobster", cursive;
+  font-family: "Satisfy", "Courgette", cursive;
   font-size: 1.1em;
   font-style: italic;
 }
@@ -4403,7 +4403,7 @@ main {
 #secretAuthor {
   display: block;
   margin-left: 48px;
-  font-family: "Satisfy", "Lobster", cursive;
+  font-family: "Satisfy", "Courgette", cursive;
   font-size: 1.1em;
   font-weight: bold;
   font-style: italic;
@@ -4489,7 +4489,7 @@ footer {
 #url {
   padding-left: 0;
   padding-right: 0;
-  font-family: "Source Code Pro", "Lekton", "Courier Prime", monospace;
+  font-family: "Source Code Pro", "Lekton", "Fira Mono", monospace;
 }
 
 #urlText {
@@ -4690,7 +4690,7 @@ footer {
 }
 
 .jediMainCharacter {
-  font-family: "Kalam", "Satisfy", "Lobster", cursive;
+  font-family: "Kalam", "Satisfy", "Courgette", cursive;
   color: var(--jediBlue);
 }
 

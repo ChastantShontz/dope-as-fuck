@@ -136,7 +136,6 @@ abbr {
 }
 
 
-/* Standardizes the appearance of the <var> */
 var {
   color: var(--darkGray);
   user-select: none;
@@ -534,6 +533,7 @@ svg {
   display: inline-block;
 }
 
+/* Prevents any elements inside an <svg>, such as a <text>, from being selected by the user */
 svg * {
   user-select: none;
 }

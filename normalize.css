@@ -140,7 +140,6 @@ abbr {
 var {
   color: var(--darkGray);
   user-select: none;
-  cursor: default;
 }
 
 /* All the same styles are given to the <kbd>, <code>, and <samp> to standardize their appearances */
@@ -153,7 +152,6 @@ kbd {
   border: .05em solid var(--darkGray);
   color: var(--darkGray);
   user-select: none;
-  cursor: default;
 }
 
 code {

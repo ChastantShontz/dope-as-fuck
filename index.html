@@ -4830,6 +4830,12 @@
               bottom: 5%;
             }
 
+            #virusAntivirusCont {
+              left: 75%;
+              right: 0;
+              bottom: 0;
+            }
+
             .virusWindow {
               border-radius: .1em;
               height: 100%;
@@ -4855,6 +4861,11 @@
               display: grid;
               grid-template-columns: 1fr;
               grid-template-rows: 20% 80%;
+            }
+
+            #virusAntivirus {
+              background: var(--virusWhite);
+              padding: .5em;
             }
 
             #virusIntroMessage {
@@ -5067,6 +5078,30 @@
               font-size: 3em;
               font-weight: bold;
               vertical-align: top;
+            }
+
+            #virusAntivirusMessage {
+              margin-top: 0;
+              margin-bottom: 0;
+              font-family: "Aldrich", "Lekton", "Fira Mono", monospace;
+              color: var(--virusDarkGray);
+              font-size: 1.1em;
+            }
+
+            #virusAntivirusButton {
+              display: inline-block;
+              border-radius: 0;
+              background: none;
+              padding: 0;
+              border: none;
+              font-family: "Aldrich", "Lekton", "Fira Mono", monospace;
+              color: var(--buttonGreen);
+              font-size: 1.25em;
+              font-weight: bold;
+              text-decoration: underline currentColor solid .05em;
+              text-align: center;
+              user-select: none;
+              cursor: pointer;
             }
 
             .virusWindowControls {
@@ -5289,11 +5324,23 @@
                   <button type="button" title="Close" class="virusWindowControl virusDocControl virusWindowClose" id="virusDocClose" role="button" aria-label="Close the doc window">&times;</button>
                 </div>
               </div>
+              <div class="virusWindowCont" id="virusAntivirusCont">
+                <div class="virusWindow" id="virusAntivirus">
+                  <p id="virusAntivirusMessage">Neon Antivirus has detected no viruses outside of the required ones on this computer!</p>
+                  <br>
+                  <button type="button" id="virusAntivirusButton" role="button" aria-label="Accept the viruses on your computer">OKAY</button>
+                </div>
+                <div class="virusWindowControls" id="virusAntivirusControls">
+                  <button type="button" title="Minimize" class="virusWindowControl virusAntivirusControl virusWindowMinimize" id="virusAntivirusMinimize" role="button" aria-label="Minimize the antivirus window">&mdash;</button>
+                  <button type="button" title="Resize" class="virusWindowControl virusAntivirusControl virusWindowResize" id="virusAntivirusResize" role="button" aria-label="Resize the antivirus window">&square;</button>
+                  <button type="button" title="Close" class="virusWindowControl virusAntivirusControl virusWindowClose" id="virusAntivirusClose" role="button" aria-label="Close the antivirus window">&times;</button>
+                </div>
+              </div>
             </section>
             <div id="virusToolbarCont">
               <div id="virusToolbar">
               </div>
-              <button type="button" id="virusButton" role="button" aria-label="Try to get rid of the virus (it won't work)">Go!</button>
+              <button type="button" id="virusButton" role="button" aria-label="Try to get rid of the viruses (it won't work)">Go!</button>
             </div>
           </article>
           <script charset="utf-8" type="text/javascript" class="script inlineScript" id="virusScript">
@@ -5429,11 +5476,17 @@
               }
             }
 
+            function antivirus() {
+              document.getElementById("virusAntivirusCont").style.transform = "scale(100%)";
+              document.getElementById("virusAntivirusCont").style.transition = "transform .5s ease 0s";
+            }
+
             function execution() {
               command();
               setTimeout(intro, 2400);
               setTimeout(advertisement, 7100);
               setTimeout(doc, 8600);
+              setTimeout(antivirus, 23700);
             }
             execution();
           </script>

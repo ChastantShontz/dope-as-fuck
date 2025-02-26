@@ -4914,7 +4914,85 @@
             }
 
             #virusDocHeader {
+              display: grid;
+              grid-template-columns: 60% 40%;
+              grid-template-rows: 1fr;
               background: var(--virusLightBlue);
+              padding: .5em;
+            }
+
+            #virusDocToolbars {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-evenly;
+              align-items: flex-start;
+            }
+
+            .virusDocToolbar {
+              display: flex;
+              flex-direction: row;
+              width: 100%;
+              padding-left: 1em;
+              padding-right: 1em;
+              align-items: center;
+            }
+
+            #virusDocUpperToolbar {
+              justify-content: space-between;
+            }
+
+            #virusDocLowerToolbar {
+              justify-content: space-evenly;
+            }
+
+            .virusDocUpperToolbarOption {
+              margin-top: 0;
+              margin-bottom: 0;
+              color: var(--white);
+              font-size: 1.1em;
+              user-select: none;
+            }
+
+            .virusDocLowerToolbarOption {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              grid-template-rows: 1fr;
+              border-radius: .1em;
+              background: var(--virusLightGray);
+              border: .05em solid var(--virusLightGray);
+            }
+
+            .virusDocOptionSelection {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              height: 1.5em;
+              width: 1.5em;
+              align-items: center;
+            }
+
+            .virusDocOptionSelector {
+              border-top-left-radius: .1em;
+              border-bottom-left-radius: .1em;
+            }
+
+            .virusDocOptionSelected {
+              border-top-right-radius: .1em;
+              border-bottom-right-radius: .1em;
+            }
+
+            #virusDocFontSizeSelected {
+              background: var(--white);
+            }
+
+            #virusDocColorSelected {
+              background: var(--black);
+            }
+
+            #virusDocFontSizeSelectedNum {
+              margin-top: 0;
+              margin-bottom: 0;
+              user-select: none;
             }
 
             #virusDocPageCont {
@@ -4942,7 +5020,6 @@
               border-bottom-left-radius: .1em;
               border-bottom-right-radius: .1em;
               background: var(--virusLightYellow);
-              height: 1.5em;
               border: .2em solid var(--virusLightYellow);
               border-top: none;
             }
@@ -4950,6 +5027,7 @@
             .virusWindowControl {
               display: inline-block;
               border-radius: 0;
+              height: 1.5rem;
               width: 1.5rem;
               padding: 0;
               border: none;
@@ -5057,6 +5135,7 @@
               --buttonGreen: #5CB245;
               --virusLightBlue: #91B1FE;
               --virusDarkBlue: #456886;
+              --black: #000000;
               --virusDarkGray: #394542;
               --virusLightGray: #E9ECEB;
               --virusWhite: #FDFFE8;
@@ -5092,6 +5171,35 @@
               <div class="virusWindowCont" id="virusDocCont">
                 <div class="virusWindow" id="virusDoc">
                   <div id="virusDocHeader">
+                    <div id="virusDocToolbars">
+                      <div class="virusDocToolbar" id="virusDocUpperToolbar">
+                        <p class="virusDocToolbarOption virusDocUpperToolbarOption" id="virusDocFile">File</p>
+                        <p class="virusDocToolbarOption virusDocUpperToolbarOption" id="virusDocEdit">Edit</p>
+                        <p class="virusDocToolbarOption virusDocUpperToolbarOption" id="virusDocFormat">Format</p>
+                        <p class="virusDocToolbarOption virusDocUpperToolbarOption" id="virusDocDraw">Draw</p>
+                        <p class="virusDocToolbarOption virusDocUpperToolbarOption" id="virusDocSelfDestruct">Self-Destruct</p>
+                      </div>
+                      <div class="virusDocToolbar" id="virusDocLowerToolbar">
+                        <div class="virusDocToolbarOption virusDocLowerToolbarOption" id="virusDocFontSize">
+                          <div class="virusDocOptionSelection virusDocFontSizeSelection virusDocOptionSelector" id="virusDocFontSizeSelector">
+                            <div class="virusDocOptionSelectorShape" id="virusDocFontSizeSelectorShape">
+                            </div>
+                          </div>
+                          <div class="virusDocOptionSelection virusDocFontSizeSelection virusDocOptionSelected" id="virusDocFontSizeSelected">
+                            <p id="virusDocFontSizeSelectedNum">22</p>
+                          </div>
+                        </div>
+                        <div class="virusDocToolbarOption virusDocLowerToolbarOption" id="virusDocColor">
+                          <div class="virusDocOptionSelection virusDocColorSelection virusDocOptionSelector" id="virusDocColorSelector">
+                            <div class="virusDocOptionSelectorShape" id="virusDocColorSelectorShape">
+                            </div>
+                          </div>
+                          <div class="virusDocOptionSelection virusDocColorSelection virusDocOptionSelected" id="virusDocColorSelected">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p id="virusDocTitle">NeonWord</p>
                   </div>
                   <div id="virusDocPageCont">
                     <div id="virusDocPage">

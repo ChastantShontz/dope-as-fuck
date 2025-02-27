@@ -4208,7 +4208,7 @@ main {
   font-weight: bold;
 }
 
-#accept {
+#acceptTerms {
   background: var(--clarksonGreen);
   padding-left: .25em;
   padding-right: .25em;
@@ -4216,7 +4216,7 @@ main {
   padding-bottom: .1em;
 }
 
-#decline {
+#declineTerms {
   background: rgba(180, 30, 47, 50%);
   padding-left: .15em;
   padding-right: .15em;

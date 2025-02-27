@@ -4836,6 +4836,14 @@
               bottom: 0;
             }
 
+            #virusWallpaperCont {
+              left: 37.5%;
+              right: 37.5%;
+              top: 10%;
+              bottom: 10%;
+              transform: scale(100%);
+            }
+
             .virusWindow {
               border-radius: .1em;
               height: 100%;
@@ -4866,6 +4874,15 @@
             #virusAntivirus {
               background: var(--virusWhite);
               padding: .5em;
+            }
+
+            #virusWallpaper {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-evenly;
+              background: var(--virusWhite);
+              padding: 1em;
+              align-items: center;
             }
 
             #virusIntroMessage {
@@ -5104,6 +5121,51 @@
               cursor: pointer;
             }
 
+            #virusWallpaperMessage {
+              width: 100%;
+              margin-top: 0;
+              margin-bottom: 0;
+              font-family: "Oswald", fantasy;
+              color: var(--virusDarkGray);
+              font-size: 1.5em;
+              font-weight: bold;
+              text-align: center;
+            }
+
+            #virusWallpaperButtons {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              width: 100%;
+              align-items: center;
+            }
+
+            .virusWallpaperButton {
+              display: inline-block;
+              border-radius: .5em;
+              width: 80%;
+              padding-left: .25em;
+              padding-right: .25em;
+              padding-top: .1em;
+              padding-bottom: .1em;
+              font-family: "Oswald", fantasy;
+              color: var(--white);
+              font-size: 1.5em;
+              font-weight: bold;
+              text-align: center;
+              cursor: pointer;
+            }
+
+            #acceptWallpaper {
+              border: .2em solid var(--buttonGreen);
+              margin-bottom: .2em;
+            }
+
+            #declineWallpaper {
+              border: .2em solid var(--exitRed);
+              margin-top: .2em;
+            }
+
             .virusWindowControls {
               display: grid;
               grid-template-columns: repeat(3, 1fr);
@@ -5334,6 +5396,20 @@
                   <button type="button" title="Close" class="virusWindowControl virusAntivirusControl virusWindowClose" id="virusAntivirusClose" role="button" aria-label="Close the antivirus window">&times;</button>
                 </div>
               </div>
+              <div class="virusWindowCont" id="virusWallpaperCont">
+                <div class="virusWindow" id="virusWallpaper">
+                  <p id="virusWallpaperMessage">TRY OUT ONE OF MY WALLPAPERS FOR YOUR DESKTOP!</p>
+                  <div id="virusWallpaperButtons">
+                    <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="acceptWallpaper" role="button" aria-label="Download the Neon wallpaper">HELL YEAH!!</button>
+                    <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="declineWallpaper" role="button" aria-label="Don't (not) download the Neon wallpaper">NO THANKS...</button>
+                  </div>
+                </div>
+                <div class="virusWindowControls" id="virusWallpaperControls">
+                  <button type="button" title="Minimize" class="virusWindowControl virusWallpaperControl virusWindowMinimize" id="virusWallpaperMinimize" role="button" aria-label="Minimize the wallpaper window">&mdash;</button>
+                  <button type="button" title="Resize" class="virusWindowControl virusWallpaperControl virusWindowResize" id="virusWallpaperResize" role="button" aria-label="Resize the wallpaper window">&square;</button>
+                  <button type="button" title="Close" class="virusWindowControl virusWallpaperControl virusWindowClose" id="virusWallpaperClose" role="button" aria-label="Close the wallpaper window">&times;</button>
+                </div>
+              </div>
             </section>
             <div id="virusToolbarCont">
               <div id="virusToolbar">
@@ -5479,12 +5555,16 @@
               document.getElementById("virusAntivirusCont").style.transition = "transform .5s ease 0s";
             }
 
+            function wallpaper() {
+            }
+
             function execution() {
               command();
               setTimeout(intro, 2400);
               setTimeout(advertisement, 7100);
               setTimeout(doc, 8600);
               setTimeout(antivirus, 23700);
+              setTimeout(wallpaper, 1000);
             }
             execution();
           </script>

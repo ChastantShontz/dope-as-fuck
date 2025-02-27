@@ -4820,7 +4820,7 @@
             #virusAdvertisementCont {
               left: 25%;
               right: 42%;
-              bottom: 10%;
+              bottom: 15%;
             }
 
             #virusDocCont {
@@ -5132,6 +5132,25 @@
               text-align: center;
             }
 
+            #virusWallpaperButtonsCont {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              width: 100%;
+              align-items: center;
+            }
+
+            #virusWallpaperButtonsMessage {
+              width: 90%;
+              margin-top: 0;
+              margin-bottom: .25em;
+              font-family: "Aldrich", "Lekton", "Fira Mono", monospace;
+              color: var(--virusDarkGray);
+              font-size: .9em;
+              font-weight: bold;
+              text-align: center;
+            }
+
             #virusWallpaperButtons {
               display: flex;
               flex-direction: column;
@@ -5407,12 +5426,15 @@
               <div class="virusWindowCont" id="virusWallpaperCont">
                 <div class="virusWindow" id="virusWallpaper">
                   <p id="virusWallpaperMessage">TRY OUT ONE OF MY WALLPAPERS FOR YOUR DESKTOP!</p>
-                  <div id="virusWallpaperButtons">
-                    <div class="virusWallpaperButtonCont" id="acceptWallpaperCont">
-                      <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="acceptWallpaper" role="button" aria-label="Download the Neon wallpaper">HELL YEAH!!</button>
-                    </div>
-                    <div class="virusWallpaperButtonCont" id="declineWallpaperCont">
-                      <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="declineWallpaper" role="button" aria-label="Don't (not) download the Neon wallpaper">NO THANKS...</button>
+                  <div id="virusWallpaperButtonsCont">
+                    <p id="virusWallpaperButtonsMessage">(YOU DON'T ACTUALLY HAVE A CHOICE, BTW, JUST SAY YES)</p>
+                    <div id="virusWallpaperButtons">
+                      <div class="virusWallpaperButtonCont" id="acceptWallpaperCont">
+                        <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="acceptWallpaper" role="button" aria-label="Download the Neon wallpaper">HELL YEAH!!</button>
+                      </div>
+                      <div class="virusWallpaperButtonCont" id="declineWallpaperCont">
+                        <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="declineWallpaper" role="button" aria-label="Don't (not) download the Neon wallpaper">NO THANKS...</button>
+                      </div>
                     </div>
                   </div>
                 </div>

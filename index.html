@@ -5140,10 +5140,16 @@
               align-items: center;
             }
 
+            .virusWallpaperButtonCont {
+              border-radius: .5em;
+              background: var(--white);
+              width: 80%;
+            }
+
             .virusWallpaperButton {
               display: inline-block;
               border-radius: .5em;
-              width: 80%;
+              width: 100%;
               padding-left: .25em;
               padding-right: .25em;
               padding-top: .1em;
@@ -5157,11 +5163,13 @@
             }
 
             #acceptWallpaper {
+              background: rgba(92, 178, 69, .75);
               border: .2em solid var(--buttonGreen);
               margin-bottom: .2em;
             }
 
             #declineWallpaper {
+              background: rgba(179, 14, 15, .75);
               border: .2em solid var(--exitRed);
               margin-top: .2em;
             }
@@ -5400,8 +5408,12 @@
                 <div class="virusWindow" id="virusWallpaper">
                   <p id="virusWallpaperMessage">TRY OUT ONE OF MY WALLPAPERS FOR YOUR DESKTOP!</p>
                   <div id="virusWallpaperButtons">
-                    <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="acceptWallpaper" role="button" aria-label="Download the Neon wallpaper">HELL YEAH!!</button>
-                    <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="declineWallpaper" role="button" aria-label="Don't (not) download the Neon wallpaper">NO THANKS...</button>
+                    <div class="virusWallpaperButtonCont" id="acceptWallpaperCont">
+                      <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="acceptWallpaper" role="button" aria-label="Download the Neon wallpaper">HELL YEAH!!</button>
+                    </div>
+                    <div class="virusWallpaperButtonCont" id="declineWallpaperCont">
+                      <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="declineWallpaper" role="button" aria-label="Don't (not) download the Neon wallpaper">NO THANKS...</button>
+                    </div>
                   </div>
                 </div>
                 <div class="virusWindowControls" id="virusWallpaperControls">

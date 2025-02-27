@@ -4202,6 +4202,10 @@ main {
 
 .confirmButton {
   border-radius: .25em;
+  padding-left: .25em;
+  padding-right: .25em;
+  padding-top: .1em;
+  padding-bottom: .1em;
   font-family: "Archivo Black", "Roboto", "Arial", sans-serif;
   color: var(--white);
   font-size: 1.1em;
@@ -4210,17 +4214,10 @@ main {
 
 #acceptTerms {
   background: var(--clarksonGreen);
-  padding-left: .25em;
-  padding-right: .25em;
-  padding-top: .1em;
-  padding-bottom: .1em;
 }
 
 #declineTerms {
-  background: rgba(180, 30, 47, 50%);
-  padding-left: .15em;
-  padding-right: .15em;
-  border: .1em solid var(--sluRed);
+  background: var(--sluRed);
 }
 
 #assets {

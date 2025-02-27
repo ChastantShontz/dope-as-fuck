@@ -4830,6 +4830,11 @@
               bottom: 5%;
             }
 
+            #virusDistractionCont {
+              left: 1em;
+              bottom: 1em;
+            }
+
             #virusAntivirusCont {
               left: 75%;
               right: 0;
@@ -4870,6 +4875,10 @@
               grid-template-rows: 20% 80%;
             }
 
+            #virusDistraction {
+              background: var(--virusDistractionLightBlue);
+            }
+
             #virusAntivirus {
               background: var(--virusWhite);
               padding: .5em;
@@ -4889,7 +4898,7 @@
               margin-top: 0;
               margin-bottom: 0;
               font-family: "Delicious Handrawn", "Satisfy", "Courgette", cursive;
-              color: var(--virusDarkBlue);
+              color: var(--virusIntroBlue);
               font-size: 5em;
               font-weight: bold;
               font-style: italic;
@@ -4943,7 +4952,7 @@
               display: grid;
               grid-template-columns: 60% 40%;
               grid-template-rows: 1fr;
-              background: var(--virusLightBlue);
+              background: var(--virusDocBlue);
               padding: .5em;
             }
 
@@ -5314,8 +5323,10 @@
               --virusDarkYellow: #7E7C4B;
               --virusLightYellow: #A0A170;
               --buttonGreen: #5CB245;
-              --virusLightBlue: #91B1FE;
-              --virusDarkBlue: #456886;
+              --virusDistractionLightBlue: #30FFFF;
+              --virusDocBlue: #91B1FE;
+              --virusDistractionDarkBlue: #3A4270;
+              --virusIntroBlue: #456886;
               --black: #000000;
               --virusDarkGray: #394542;
               --virusLightGray: #E9ECEB;
@@ -5408,6 +5419,16 @@
                   <button type="button" title="Minimize" class="virusWindowControl virusDocControl virusWindowMinimize" id="virusDocMinimize" role="button" aria-label="Minimize the doc window">&mdash;</button>
                   <button type="button" title="Resize" class="virusWindowControl virusDocControl virusWindowResize" id="virusDocResize" role="button" aria-label="Resize the doc window">&square;</button>
                   <button type="button" title="Close" class="virusWindowControl virusDocControl virusWindowClose" id="virusDocClose" role="button" aria-label="Close the doc window">&times;</button>
+                </div>
+              </div>
+              <div class="virusWindowCont" id="virusDistractionCont">
+                <div class="virusWindow" id="virusDistraction">
+                  <p id="virusDistractionMessage">LOOK OVER HERE!!</p>
+                </div>
+                <div class="virusWindowControls" id="virusDistractionControls">
+                  <button type="button" title="Minimize" class="virusWindowControl virusDistractionControl virusWindowMinimize" id="virusDistractionMinimize" role="button" aria-label="Minimize the distraction window">&mdash;</button>
+                  <button type="button" title="Resize" class="virusWindowControl virusDistractionControl virusWindowResize" id="virusDistractionResize" role="button" aria-label="Resize the distraction window">&square;</button>
+                  <button type="button" title="Close" class="virusWindowControl virusDistractionControl virusWindowClose" id="virusDistractionClose" role="button" aria-label="Close the distraction window">&times;</button>
                 </div>
               </div>
               <div class="virusWindowCont" id="virusAntivirusCont">

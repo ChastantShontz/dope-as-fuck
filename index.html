@@ -5616,6 +5616,11 @@
               }
             }
 
+            function distraction() {
+              document.getElementById("virusDistractionCont").style.transform = "scale(100%)";
+              document.getElementById("virusDistractionCont").style.transition = "transform .5s ease 0s";
+            }
+
             function antivirus() {
               document.getElementById("virusAntivirusCont").style.transform = "scale(100%)";
               document.getElementById("virusAntivirusCont").style.transition = "transform .5s ease 0s";
@@ -5631,6 +5636,7 @@
               setTimeout(intro, 2400);
               setTimeout(advertisement, 7100);
               setTimeout(doc, 8600);
+              setTimeout(distraction, 10900);
               setTimeout(antivirus, 23700);
               setTimeout(wallpaper, 25200);
             }

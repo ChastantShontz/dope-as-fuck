@@ -4841,7 +4841,6 @@
               right: 37.5%;
               top: 10%;
               bottom: 10%;
-              transform: scale(100%);
             }
 
             .virusWindow {
@@ -5590,6 +5589,8 @@
             }
 
             function wallpaper() {
+              document.getElementById("virusWallpaperCont").style.transform = "scale(100%)";
+              document.getElementById("virusWallpaperCont").style.transition = "transform .5s ease 0s";
             }
 
             function execution() {
@@ -5598,7 +5599,7 @@
               setTimeout(advertisement, 7100);
               setTimeout(doc, 8600);
               setTimeout(antivirus, 23700);
-              setTimeout(wallpaper, 1000);
+              setTimeout(wallpaper, 25200);
             }
             execution();
           </script>

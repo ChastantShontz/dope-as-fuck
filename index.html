@@ -5566,7 +5566,7 @@
             }
 
             function introFirstMessage() {
-              document.getElementById("virusIntroMessage").innerHTML = "<span class=\"introWord\" id=\"hello\">HELLO!</span><br><span class=\"introWord\" id=\"weAre\">WE ARE</span><br><span class=\"introWord\" id=\"neonNothing\">NEON NOTHING</span>";
+              document.getElementById("virusIntroMessage").innerHTML = "<span id=\"introUpperWords\"><span class=\"introWord\" id=\"hello\">HELLO!</span><br><span class=\"introWord\" id=\"weAre\">WE ARE</span></span><br><span id=\"introLowerWords\"><span class=\"introWord\" id=\"neonNothing\">NEON NOTHING</span></span>";
               document.getElementById("neonNothing").style.visibility = "visible";
               document.getElementById("neonNothing").style.opacity = "100%";
               document.getElementById("neonNothing").style.transition = "all .25s ease .75s";

@@ -5682,6 +5682,12 @@
             function virusMinimize(element) {
               document.getElementById(element).style.transform = "scale(0)";
               document.getElementById(element).style.transition = "transform .5s ease 0s";
+              document.getElementById(element).tabIndex = "-1";
+              for (var i = 0; i < document.getElementsByClassName(element.replace(/Cont/sm, "Control")).length; i++) {
+                document.getElementsByClassName(element.replace(/Cont/sm, "Control"))[i].style.pointerEvents = "none";
+                document.getElementsByClassName(element.replace(/Cont/sm, "Control"))[i].tabIndex = "-1";
+                document.getElementsByClassName(element.replace(/Cont/sm, "Control"))[i].blur();
+              }
             }
 
             function virusResize(element) {
@@ -5691,6 +5697,12 @@
               document.getElementById(element).style.visibility = "hidden";
               document.getElementById(element).style.opacity = "0";
               document.getElementById(element).style.transition = "all .25s ease 0s";
+              document.getElementById(element).tabIndex = "-1";
+              for (var i = 0; i < document.getElementsByClassName(element.replace(/Cont/sm, "Control")).length; i++) {
+                document.getElementsByClassName(element.replace(/Cont/sm, "Control"))[i].style.pointerEvents = "none";
+                document.getElementsByClassName(element.replace(/Cont/sm, "Control"))[i].tabIndex = "-1";
+                document.getElementsByClassName(element.replace(/Cont/sm, "Control"))[i].blur();
+              }
             }
 
             function execution() {

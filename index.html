@@ -5730,6 +5730,7 @@
               document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.bottom = "0";
               document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.borderRadius = "0";
               document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.transition = "all .5s ease 0s";
+              eval("sessionStorage." + element + "Size = \"fullscreen\"");
             }
 
             function windowClose(element) {

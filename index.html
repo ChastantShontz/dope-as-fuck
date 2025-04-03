@@ -5732,7 +5732,6 @@
             }
 
             function windowResizeShrink(element) {
-              document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex = "auto";
               eval("document.getElementById(\"virus\" + (element.charAt(0)).toUpperCase() + element.substring(1) + \"Cont\").style.left = JSON.parse(sessionStorage." + element + "Position)[0]");
               eval("document.getElementById(\"virus\" + (element.charAt(0)).toUpperCase() + element.substring(1) + \"Cont\").style.right = JSON.parse(sessionStorage." + element + "Position)[1]");
               eval("document.getElementById(\"virus\" + (element.charAt(0)).toUpperCase() + element.substring(1) + \"Cont\").style.top = JSON.parse(sessionStorage." + element + "Position)[2]");

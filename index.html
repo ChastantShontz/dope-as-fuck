@@ -5248,6 +5248,16 @@
               background: var(--buttonGreen);
             }
 
+            .virusWindowMinimize:hover,
+            .virusWindowResize:hover {
+              background: rgba(92, 178, 69, 75%);
+            }
+
+            .virusWindowMinimize:active,
+            .virusWindowResize:active {
+              background: rgba(92, 178, 69, 50%);
+            }
+
             .virusWindowResize {
               background: var(--buttonGreen);
             }
@@ -5255,6 +5265,14 @@
             .virusWindowClose {
               border-bottom-right-radius: .1em;
               background: var(--exitRed);
+            }
+
+            .virusWindowClose:hover {
+              background: rgba(179, 14, 15, 75%);
+            }
+
+            .virusWindowClose:active {
+              background: rgba(179, 14, 15, 50%);
             }
 
             #virusToolBarCont {

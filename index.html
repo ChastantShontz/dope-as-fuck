@@ -5587,6 +5587,7 @@
               introFirstMessage();
               setTimeout(introSecondMessage, 2250);
               sessionStorage.introSize = "smallScreen";
+              sessionStorage.introPosition = JSON.stringify([33, 2.5, 5, 5]);
             }
 
             function introFirstMessage() {
@@ -5620,6 +5621,7 @@
               document.getElementById("virusAdvertisementCont").style.transition = "transform .5s ease 0s";
               document.getElementById("virusAdvertisementCont").tabIndex = "0";
               sessionStorage.advertisementSize = "smallScreen";
+              sessionStorage.advertisementPosition = JSON.stringify([25, 42, null, 15]);
             }
 
             function doc() {
@@ -5631,6 +5633,7 @@
               document.getElementById("virusDocCont").tabIndex = "0";
               setTimeout(docWriting, 1000);
               sessionStorage.docSize = "smallScreen";
+              sessionStorage.docPosition = JSON.stringify([16.5, 16.5, 5, 5]);
             }
 
             function docWriting() {
@@ -5659,6 +5662,7 @@
               document.getElementById("virusDistractionCont").style.transition = "transform .5s ease 0s";
               document.getElementById("virusDistractionCont").tabIndex = "0";
               sessionStorage.distractionSize = "smallScreen";
+              sessionStorage.distractionPosition = JSON.stringify([1, "calc(80% - 1em)", null, 1]);
             }
 
             function antivirus() {
@@ -5670,6 +5674,7 @@
               document.getElementById("virusAntivirusCont").style.transition = "transform .5s ease 0s";
               document.getElementById("virusAntivirusCont").tabIndex = "0";
               sessionStorage.antivirusSize = "smallScreen";
+              sessionStorage.distractionPosition = JSON.stringify([75, 0, null, 0]);
             }
 
             function wallpaper() {
@@ -5683,6 +5688,7 @@
               document.getElementById("virusWallpaperCont").style.transition = "transform .5s ease 0s";
               document.getElementById("virusWallpaperCont").tabIndex = "0";
               sessionStorage.wallpaperSize = "smallScreen";
+              sessionStorage.distractionPosition = JSON.stringify([37.5, 37.5, 10, 10]);
             }
 
             function windowMinimize(element) {
@@ -5720,6 +5726,14 @@
             }
 
             function windowResizeShrink(element) {
+              document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex = "auto";
+              document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.left = ((JSON.parse(eval("sessionStorage." + element + "Position"))[0] == null) ? ("auto") : (JSON.parse(eval("sessionStorage." + element + "Position"))[0] + "%"));
+              document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.right = ((JSON.parse(eval("sessionStorage." + element + "Position"))[1] == null) ? ("auto") : (JSON.parse(eval("sessionStorage." + element + "Position"))[1] + "%"));
+              document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.top = ((JSON.parse(eval("sessionStorage." + element + "Position"))[2] == null) ? ("auto") : (JSON.parse(eval("sessionStorage." + element + "Position"))[2] + "%"));
+              document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.bottom = ((JSON.parse(eval("sessionStorage." + element + "Position"))[3] == null) ? ("auto") : (JSON.parse(eval("sessionStorage." + element + "Position"))[3] + "%"));
+              document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.borderRadius = ".5em";
+              document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.transition = "all .5s ease 0s";
+              eval("sessionStorage." + element + "Size = \"smallScreen\"");
             }
 
             function windowResizeGrow(element) {

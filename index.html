@@ -4811,6 +4811,7 @@
             }
 
             #virusIntroCont {
+              z-index: 1;
               left: 33%;
               right: 2.5%;
               top: 5%;
@@ -4818,12 +4819,14 @@
             }
 
             #virusAdvertisementCont {
+              z-index: 2;
               left: 25%;
               right: 42%;
               bottom: 15%;
             }
 
             #virusDocCont {
+              z-index: 3;
               left: 16.5%;
               right: 16.5%;
               top: 5%;
@@ -4831,18 +4834,21 @@
             }
 
             #virusDistractionCont {
+              z-index: 4;
               left: 1em;
               right: calc(80% - 1em);
               bottom: 1em;
             }
 
             #virusAntivirusCont {
+              z-index: 5;
               left: 75%;
               right: 0;
               bottom: 0;
             }
 
             #virusWallpaperCont {
+              z-index: 6;
               left: 37.5%;
               right: 37.5%;
               top: 10%;
@@ -5740,7 +5746,16 @@
             }
 
             function windowResizeGrow(element) {
-              document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex = "1";
+              if (document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex < 6) {
+                for (var i = 0; i < document.getElementsByClassName("virusWindowCont").length; i++) {
+                  if (document.getElementsByClassName("virusWindowCont")[i] == document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont")) {
+                    document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex = "6";
+                  }
+                  else {
+                    document.getElementsByClassName("virusWindowCont")[i].style.zIndex = (document.getElementsByClassName("virusWindowCont")[i].style.zIndex - 1);
+                  }
+                }
+              }
               document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.left = "0";
               document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.right = "0";
               document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.top = "0";

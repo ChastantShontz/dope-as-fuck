@@ -5723,6 +5723,7 @@
             }
 
             function windowResizeGrow(element) {
+              document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex = "1";
               document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.left = "0";
               document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.right = "0";
               document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.top = "0";

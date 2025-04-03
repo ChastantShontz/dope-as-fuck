@@ -5586,6 +5586,7 @@
               document.getElementById("virusIntroCont").tabIndex = "0";
               introFirstMessage();
               setTimeout(introSecondMessage, 2250);
+              sessionStorage.introSize = "smallScreen";
             }
 
             function introFirstMessage() {
@@ -5618,6 +5619,7 @@
               document.getElementById("virusAdvertisementCont").style.transform = "scale(100%)";
               document.getElementById("virusAdvertisementCont").style.transition = "transform .5s ease 0s";
               document.getElementById("virusAdvertisementCont").tabIndex = "0";
+              sessionStorage.advertisementSize = "smallScreen";
             }
 
             function doc() {
@@ -5628,6 +5630,7 @@
               document.getElementById("virusDocCont").style.transition = "transform .5s ease 0s";
               document.getElementById("virusDocCont").tabIndex = "0";
               setTimeout(docWriting, 1000);
+              sessionStorage.docSize = "smallScreen";
             }
 
             function docWriting() {
@@ -5655,6 +5658,7 @@
               document.getElementById("virusDistractionCont").style.transform = "scale(100%)";
               document.getElementById("virusDistractionCont").style.transition = "transform .5s ease 0s";
               document.getElementById("virusDistractionCont").tabIndex = "0";
+              sessionStorage.distractionSize = "smallScreen";
             }
 
             function antivirus() {
@@ -5665,6 +5669,7 @@
               document.getElementById("virusAntivirusCont").style.transform = "scale(100%)";
               document.getElementById("virusAntivirusCont").style.transition = "transform .5s ease 0s";
               document.getElementById("virusAntivirusCont").tabIndex = "0";
+              sessionStorage.antivirusSize = "smallScreen";
             }
 
             function wallpaper() {
@@ -5677,6 +5682,7 @@
               document.getElementById("virusWallpaperCont").style.transform = "scale(100%)";
               document.getElementById("virusWallpaperCont").style.transition = "transform .5s ease 0s";
               document.getElementById("virusWallpaperCont").tabIndex = "0";
+              sessionStorage.wallpaperSize = "smallScreen";
             }
 
             function virusMinimize(element) {
@@ -5705,6 +5711,18 @@
             }
 
             function virusResize(element) {
+              if (eval("sessionStorage." + element + "Size") == "smallScreen") {
+                virusResizeGrow(element);
+              }
+              else if (eval("sessionStorage." + element + "Size") == "fullscreen") {
+                virusResizeShrink(element);
+              }
+            }
+
+            function virusResizeShrink(element) {
+            }
+
+            function virusResizeGrow(element) {
             }
 
             function virusClose(element) {

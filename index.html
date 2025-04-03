@@ -5683,6 +5683,20 @@
               document.getElementById("virus" + element + "Cont").style.transform = "scale(0)";
               document.getElementById("virus" + element + "Cont").style.transition = "transform .5s ease 0s";
               document.getElementById("virus" + element + "Cont").tabIndex = "-1";
+              if ((element == "Antivirus") || (element == "Wallpaper")) {
+                if (element == "Antivirus") {
+                  document.getElementById("virusAntivirusButton").style.pointerEvents = "none";
+                  document.getElementById("virusAntivirusButton").tabIndex = "-1";
+                  document.getElementById("virusAntivirusButton").blur();
+                }
+                else if (element == "Wallpaper") {
+                  for (var i = 0; i < document.getElementsByClassName("virusWallpaperButton").length; i++) {
+                    document.getElementsByClassName("virusWallpaperButton")[i].style.pointerEvents = "none";
+                    document.getElementsByClassName("virusWallpaperButton")[i].tabIndex = "-1";
+                    document.getElementsByClassName("virusWallpaperButton")[i].blur();
+                  }
+                }
+              }
               for (var i = 0; i < document.getElementsByClassName("virus" + element + "Control").length; i++) {
                 document.getElementsByClassName("virus" + element + "Control")[i].style.pointerEvents = "none";
                 document.getElementsByClassName("virus" + element + "Control")[i].tabIndex = "-1";
@@ -5698,6 +5712,20 @@
               document.getElementById("virus" + element + "Cont").style.opacity = "0";
               document.getElementById("virus" + element + "Cont").style.transition = "all .25s ease 0s";
               document.getElementById("virus" + element + "Cont").tabIndex = "-1";
+              if ((element == "Antivirus") || (element == "Wallpaper")) {
+                if (element == "Antivirus") {
+                  document.getElementById("virusAntivirusButton").style.pointerEvents = "none";
+                  document.getElementById("virusAntivirusButton").tabIndex = "-1";
+                  document.getElementById("virusAntivirusButton").blur();
+                }
+                else if (element == "Wallpaper") {
+                  for (var i = 0; i < document.getElementsByClassName("virusWallpaperButton").length; i++) {
+                    document.getElementsByClassName("virusWallpaperButton")[i].style.pointerEvents = "none";
+                    document.getElementsByClassName("virusWallpaperButton")[i].tabIndex = "-1";
+                    document.getElementsByClassName("virusWallpaperButton")[i].blur();
+                  }
+                }
+              }
               for (var i = 0; i < document.getElementsByClassName("virus" + element + "Control").length; i++) {
                 document.getElementsByClassName("virus" + element + "Control")[i].style.pointerEvents = "none";
                 document.getElementsByClassName("virus" + element + "Control")[i].tabIndex = "-1";

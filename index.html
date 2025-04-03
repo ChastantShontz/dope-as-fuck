@@ -5448,7 +5448,7 @@
                 <div class="virusWindow" id="virusAntivirus">
                   <p id="virusAntivirusMessage">Neon Antivirus has detected no viruses outside of the required ones on this computer!</p>
                   <br>
-                  <button type="button" id="virusAntivirusButton" role="button" aria-label="Accept the viruses on your computer">OKAY</button>
+                  <button type="button" id="virusAntivirusButton" tabindex="-1" role="button" aria-label="Accept the viruses on your computer">OKAY</button>
                 </div>
                 <div class="virusWindowControls" id="virusAntivirusControls">
                   <button type="button" title="Minimize" class="virusWindowControl virusAntivirusControl virusWindowMinimize" id="virusAntivirusMinimize" role="button" aria-label="Minimize the antivirus window">&mdash;</button>
@@ -5463,10 +5463,10 @@
                     <p id="virusWallpaperButtonsMessage">(YOU DON'T ACTUALLY HAVE A CHOICE, BTW, JUST SAY YES)</p>
                     <div id="virusWallpaperButtons">
                       <div class="virusWallpaperButtonCont" id="acceptWallpaperCont">
-                        <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="acceptWallpaper" role="button" aria-label="Download the Neon wallpaper">HELL YEAH!!</button>
+                        <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="acceptWallpaper" tabindex="-1" role="button" aria-label="Download the Neon wallpaper">HELL YEAH!!</button>
                       </div>
                       <div class="virusWallpaperButtonCont" id="declineWallpaperCont">
-                        <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="declineWallpaper" role="button" aria-label="Don't (not) download the Neon wallpaper">NO THANKS...</button>
+                        <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="declineWallpaper" tabindex="-1" role="button" aria-label="Don't (not) download the Neon wallpaper">NO THANKS...</button>
                       </div>
                     </div>
                   </div>
@@ -5627,12 +5627,16 @@
             }
 
             function antivirus() {
+              document.getElementById("virusAntivirusButton").tabIndex = "0";
               document.getElementById("virusAntivirusCont").style.transform = "scale(100%)";
               document.getElementById("virusAntivirusCont").style.transition = "transform .5s ease 0s";
               document.getElementById("virusAntivirusCont").tabIndex = "0";
             }
 
             function wallpaper() {
+              for (var i = 0; i < document.getElementsByClassName("virusWallpaperButton").length; i++) {
+                document.getElementsByClassName("virusWallpaperButton")[i].tabIndex = "0";
+              }
               document.getElementById("virusWallpaperCont").style.transform = "scale(100%)";
               document.getElementById("virusWallpaperCont").style.transition = "transform .5s ease 0s";
               document.getElementById("virusWallpaperCont").tabIndex = "0";

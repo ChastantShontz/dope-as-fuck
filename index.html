@@ -4901,9 +4901,8 @@
               align-items: center;
             }
 
-            #virusIntroMessage {
-              position: relative;
-              bottom: 5%;
+            .virusIntroMessage {
+              position: absolute;
               margin-top: 0;
               margin-bottom: 0;
               font-family: "Delicious Handrawn", "Satisfy", "Courgette", cursive;
@@ -4913,6 +4912,11 @@
               font-style: italic;
               text-align: center;
               user-select: none;
+            }
+
+            #virusIntroMessage2 {
+              visibility: hidden;
+              opacity: 0;
             }
 
             .virusIntroWord {
@@ -4935,6 +4939,8 @@
 
             #neonNothing {
               visibility: hidden;
+              position: relative;
+              bottom: .5em;
               opacity: 0;
               color: var(--virusDarkGray);
               transform: rotate(10deg);
@@ -5342,17 +5348,17 @@
             @keyframes shake {
               0%,
               5% {
-                left: auto;
-                right: .05em;
+                left: 30%;
+                right: auto;
               }
               50%,
               55% {
-                left: .05em;
-                right: auto;
+                left: auto;
+                right: 30%;
               }
               100% {
-                left: auto;
-                right: .05em;
+                left: 30%;
+                right: auto;
               }
             }
 
@@ -5378,7 +5384,8 @@
             <section id="virusBackground">
               <div class="virusWindowCont" id="virusIntroCont" role="region" aria-description="An introductory message from Neon Nothing">
                 <div class="virusWindow" id="virusIntro">
-                  <p id="virusIntroMessage"></p>
+                  <p class="virusIntroMessage" id="virusIntroMessage1"><span id="virusIntroUpperWords"><span class="virusIntroWord" id="hello">HELLO!</span><br><span class="virusIntroWord" id="weAre">WE ARE</span></span><br><span id="virusIntroLowerWords"><span class="virusIntroWord" id="neonNothing">NEON NOTHING</span></span></p>
+                  <p class="virusIntroMessage" id="virusIntroMessage2">AND YOUR<br>COMPUTER<br>IS OURS!!!</p>
                 </div>
                 <div class="virusWindowControls" id="virusIntroControls">
                   <button type="button" title="Minimize" class="virusWindowControl virusIntroControl virusWindowMinimize" id="virusIntroMinimize" tabindex="-1" role="button" aria-label="Minimize the intro window" onclick="windowMinimize('intro')">&mdash;</button>
@@ -5597,7 +5604,6 @@
             }
 
             function introFirstMessage() {
-              document.getElementById("virusIntroMessage").innerHTML = "<span id=\"virusIntroUpperWords\"><span class=\"virusIntroWord\" id=\"hello\">HELLO!</span><br><span class=\"virusIntroWord\" id=\"weAre\">WE ARE</span></span><br><span id=\"virusIntroLowerWords\"><span class=\"virusIntroWord\" id=\"neonNothing\">NEON NOTHING</span></span>";
               document.getElementById("neonNothing").style.visibility = "visible";
               document.getElementById("neonNothing").style.opacity = "100%";
               document.getElementById("neonNothing").style.transition = "all .25s ease .75s";
@@ -5605,18 +5611,17 @@
               setTimeout(() => {
                 document.getElementById("neonNothing").style.animation = "none";
               }, 2000);
-              document.getElementById("virusIntroMessage").style.visibility = "hidden";
-              document.getElementById("virusIntroMessage").style.opacity = "0";
-              document.getElementById("virusIntroMessage").style.transition = "all .25s ease 2s";
+              document.getElementById("virusIntroMessage1").style.visibility = "hidden";
+              document.getElementById("virusIntroMessage1").style.opacity = "0";
+              document.getElementById("virusIntroMessage1").style.transition = "all .25s ease 2s";
             }
 
             function introSecondMessage() {
-              document.getElementById("virusIntroMessage").innerHTML = "AND YOUR<br>COMPUTER<br>IS OURS!!!";
-              document.getElementById("virusIntroMessage").style.visibility = "visible";
-              document.getElementById("virusIntroMessage").style.right = ".05em";
-              document.getElementById("virusIntroMessage").style.opacity = "100%";
-              document.getElementById("virusIntroMessage").style.transition = "visibility .25s ease 0s, right .1125s ease .25s, opacity .25s ease 0s";
-              document.getElementById("virusIntroMessage").style.animation = "shake .5s ease .3625s infinite forwards";
+              document.getElementById("virusIntroMessage2").style.visibility = "visible";
+              document.getElementById("virusIntroMessage2").style.left = "30%";
+              document.getElementById("virusIntroMessage2").style.opacity = "100%";
+              document.getElementById("virusIntroMessage2").style.transition = "visibility .25s ease 0s, right .1125s ease .25s, opacity .25s ease 0s";
+              document.getElementById("virusIntroMessage2").style.animation = "shake .5s ease .3625s infinite forwards";
             }
 
             function advertisement() {

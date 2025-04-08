@@ -5659,6 +5659,29 @@
               }
             }
 
+              function advertisement3(method) {
+                if (method == "minimize") {
+                  windowMinimize("advertisement");
+                  setTimeout(() => {
+                    document.getElementById("virusAdvertisementMessage").innerHTML = "Please.";
+                    document.getElementById("virusAdvertisementPrice").innerHTML = "WE WILL NOT LOWER THE PRICE";
+                    document.getElementById("virusAdvertisementMinimize").onclick = windowMinimize.bind(null, "advertisement");
+                    document.getElementById("virusAdvertisementClose").onclick = windowClose.bind(null, "advertisement");
+                  }, 500);
+                  setTimeout(advertisement, 750);
+                }
+                else if (method == "close") {
+                  windowClose("advertisement");
+                  setTimeout(() => {
+                    document.getElementById("virusAdvertisementMessage").innerHTML = "Please.";
+                    document.getElementById("virusAdvertisementPrice").innerHTML = "WE WILL NOT LOWER THE PRICE";
+                    document.getElementById("virusAdvertisementMinimize").onclick = windowMinimize.bind(null, "advertisement");
+                    document.getElementById("virusAdvertisementClose").onclick = windowClose.bind(null, "advertisement");
+                  }, 250);
+                  setTimeout(advertisement, 500);
+                }
+              }
+            
             function doc() {
               for (var i = 0; i < document.getElementsByClassName("virusDocControl").length; i++) {
                 document.getElementsByClassName("virusDocControl")[i].tabIndex = "0";

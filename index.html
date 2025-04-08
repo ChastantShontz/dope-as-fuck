@@ -5400,9 +5400,9 @@
                   <p id="virusAdvertisementPrice">ON SALE FOR ONLY $9,999.99!</p>
                 </div>
                 <div class="virusWindowControls" id="virusAdvertisementControls">
-                  <button type="button" title="Minimize" class="virusWindowControl virusAdvertisementControl virusWindowMinimize" id="virusAdvertisementMinimize" tabindex="-1" role="button" aria-label="Minimize the advertisement window" onclick="windowMinimize('advertisement')">&mdash;</button>
+                  <button type="button" title="Minimize" class="virusWindowControl virusAdvertisementControl virusWindowMinimize" id="virusAdvertisementMinimize" tabindex="-1" role="button" aria-label="Minimize the advertisement window" onclick="advertisement2('minimize')">&mdash;</button>
                   <button type="button" title="Resize (fullscreen)" class="virusWindowControl virusAdvertisementControl virusWindowResize" id="virusAdvertisementResize" tabindex="-1" role="button" aria-label="Resize the advertisement window to fullscreen" onclick="windowResize('advertisement')">&#9723;</button>
-                  <button type="button" title="Close" class="virusWindowControl virusAdvertisementControl virusWindowClose" id="virusAdvertisementClose" tabindex="-1" role="button" aria-label="Close the advertisement window" onclick="windowClose('advertisement')">&times;</button>
+                  <button type="button" title="Close" class="virusWindowControl virusAdvertisementControl virusWindowClose" id="virusAdvertisementClose" tabindex="-1" role="button" aria-label="Close the advertisement window" onclick="advertisement2('close')">&times;</button>
                 </div>
               </div>
               <div class="virusWindowCont" id="virusDocCont" role="region" aria-description="A document where the song lyrics are being written out">
@@ -5626,6 +5626,9 @@
 
             function advertisement() {
               for (var i = 0; i < document.getElementsByClassName("virusAdvertisementControl").length; i++) {
+                if (document.getElementsByClassName("virusAdvertisementControl")[i].style.pointerEvents == "none") {
+                  document.getElementsByClassName("virusAdvertisementControl")[i].style.pointerEvents = "auto";
+                }
                 document.getElementsByClassName("virusAdvertisementControl")[i].tabIndex = "0";
               }
               document.getElementById("virusAdvertisementCont").style.transform = "scale(100%)";
@@ -5633,6 +5636,27 @@
               document.getElementById("virusAdvertisementCont").tabIndex = "0";
               sessionStorage.advertisementSize = "smallScreen";
               sessionStorage.advertisementPosition = JSON.stringify(["25%", "42%", "auto", "15%"]);
+            }
+
+            function advertisement2(method) {
+              if (method == "minimize") {
+                windowMinimize("advertisement");
+                setTimeout(() => {
+                  document.getElementById("virusAdvertisementMessage").innerHTML = "Are you sure???";
+                  document.getElementById("virusAdvertisementMinimize").onclick = advertisement3.bind(null, "minimize");
+                  document.getElementById("virusAdvertisementClose").onclick = advertisement3.bind(null, "close");
+                }, 500);
+                setTimeout(advertisement, 750);
+              }
+              else if (method == "close") {
+                windowClose("advertisement");
+                setTimeout(() => {
+                  document.getElementById("virusAdvertisementMessage").innerHTML = "Are you sure???";
+                  document.getElementById("virusAdvertisementMinimize").onclick = advertisement3.bind(null, "minimize");
+                  document.getElementById("virusAdvertisementClose").onclick = advertisement3.bind(null, "close");
+                }, 250);
+                setTimeout(advertisement, 500);
+              }
             }
 
             function doc() {

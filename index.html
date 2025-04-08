@@ -5777,6 +5777,12 @@
               document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.opacity = "0";
               document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.transition = "all .25s ease 0s";
               document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").tabIndex = "-1";
+              setTimeout(() => {
+                document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.visibility = "visible";
+                document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.opacity = "100%";
+                document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.transform = "scale(0)";
+                document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.transition = "all 0s ease 0s";
+              }, 250);
               if ((element == "antivirus") || (element == "wallpaper")) {
                 if (element == "antivirus") {
                   document.getElementById("virusAntivirusButton").style.pointerEvents = "none";

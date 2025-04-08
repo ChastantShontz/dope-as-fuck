@@ -5168,6 +5168,8 @@
             }
 
             #virusWallpaperButtonsMessage {
+              visibility: hidden;
+              opacity: 0;
               width: 90%;
               margin-top: 0;
               margin-bottom: .25em;
@@ -5489,10 +5491,10 @@
                     <p id="virusWallpaperButtonsMessage">(YOU DON'T ACTUALLY HAVE A CHOICE, BTW, JUST SAY YES)</p>
                     <div id="virusWallpaperButtons">
                       <div class="virusWallpaperButtonCont" id="acceptWallpaperCont">
-                        <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="acceptWallpaper" tabindex="-1" role="button" aria-label="Download the Neon wallpaper">HELL YEAH!!</button>
+                        <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="acceptWallpaper" tabindex="-1" role="button" aria-label="Download the Neon wallpaper" onclick="acceptWallpaper()">HELL YEAH!!</button>
                       </div>
                       <div class="virusWallpaperButtonCont" id="declineWallpaperCont">
-                        <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="declineWallpaper" tabindex="-1" role="button" aria-label="Don't (not) download the Neon wallpaper">NO THANKS...</button>
+                        <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="declineWallpaper" tabindex="-1" role="button" aria-label="Don't (not) download the Neon wallpaper" onclick="declineWallpaper()">NO THANKS...</button>
                       </div>
                     </div>
                   </div>
@@ -5808,6 +5810,18 @@
               document.getElementById("virusWallpaperCont").tabIndex = "0";
               sessionStorage.wallpaperSize = "smallScreen";
               sessionStorage.wallpaperPosition = JSON.stringify(["37.5%", "37.5%", "10%", "10%"]);
+            }
+
+            function acceptWallpaper() {
+            }
+
+            function declineWallpaper() {
+              document.getElementById("virusWallpaperButtonsMessage").style.visibility = "visible";
+              document.getElementById("virusWallpaperButtonsMessage").style.opacity = "100%";
+              document.getElementById("virusWallpaperButtonsMessage").style.transition = "all .25s ease 0s";
+              document.getElementById("declineWallpaper").tabIndex = "-1";
+              document.getElementById("declineWallpaper").disabled = true;
+              document.getElementById("declineWallpaper").blur();
             }
 
             function windowMinimize(element) {

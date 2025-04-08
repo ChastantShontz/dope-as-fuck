@@ -14039,7 +14039,7 @@ function mobileGrow(event) {
     }
   }
   document.querySelector("main").ariaHidden = false;
-  if (document.getElementById("youtubeSongsContCont").style.transform == "scale(100%)") {
+  if ((document.getElementById("youtubeSongsContCont").style.transform != "") && (document.getElementById("youtubeSongsContCont").style.transform != "scale(0)")) {
     document.onclick = youtubeControls;
   }
   else {

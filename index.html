@@ -5394,9 +5394,22 @@
             }
 
             #virusMessages {
-              position: absolute;
               visibility: hidden;
+              position: absolute;
+              left: 25%;
+              right: 25%;
               opacity: 0;
+            }
+
+            .virusMessage {
+              margin-top: 0;
+              margin-bottom: 0;
+              font-family: "Press Start 2P", fantasy;
+              color: var(--white);
+              font-size: 2em;
+              font-weight: bold;
+              text-align: center;
+              user-select: none;
             }
 
             @keyframes wobble {

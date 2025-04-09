@@ -5381,7 +5381,9 @@
             }
 
             #loading {
+              visibility: hidden;
               border-radius: 50%;
+              opacity: 0;
               height: 5em;
               width: 5em;
               border-left: .5em solid transparent;
@@ -5418,6 +5420,15 @@
               100% {
                 left: 30%;
                 right: auto;
+              }
+            }
+
+            @keyframes load {
+              0% {
+                transform: rotate(0);
+              }
+              100% {
+                transform: rotate(360deg);
               }
             }
 
@@ -5917,6 +5928,10 @@
             }
 
             function buffer() {
+              document.getElementById("loading").style.visibility = "visible";
+              document.getElementById("loading").style.opacity = "100%";
+              document.getElementById("loading").style.transition = "all .25s ease 1s";
+              document.getElementById("loading").style.animation = "load 1s linear 1s infinite forwards";
               document.getElementById("cover").style.visibility = "visible";
               document.getElementById("cover").style.opacity = "100%";
               document.getElementById("cover").style.transition = "all .25s ease 0s";

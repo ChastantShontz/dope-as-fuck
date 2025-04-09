@@ -1779,6 +1779,10 @@ let quotes = [
     author: "a random frat bro at Stewart's"
   },
   {
+    line: "I'll go lower, David...",
+    author: "<b>John</b>"
+  },
+  {
     line: "I'll laser-eye every goddamn motherfucker who tries to deny me the pleasures of gangbang!",
     author: "<b>Chestnut</b>"
   },
@@ -1885,6 +1889,10 @@ let quotes = [
   {
     line: "I mean, if you take your kids to Cheel Arena, that's on you.",
     author: "<b>Lyle</b>"
+  },
+  {
+    line: "I no longer want to be Mexican after that one.",
+    author: "<b>Cynthia</b>"
   },
   {
     line: "I only drink with my left hand because I take shots with my right.",
@@ -2031,16 +2039,28 @@ let quotes = [
     author: "<b>Declan</b>"
   },
   {
+    line: "It could be worse, at least I'm not a black girl.",
+    author: "<b>Chestnut</b>"
+  },
+  {
     line: "It has too many holes, you can't blow it, Ryan.",
     author: "<b>David Vanill</b>"
+  },
+  {
+    line: "<span class=\"quoteLine\" id=\"quoteLine1\">It is way too early for this.</span><br><span class=\"quoteLine\" id=\"quoteLine2\">How do you think I feel?</span>",
+    author: "<b>Chestnut</b> and <b>Ryan O'Rourke</b> and the Golden Knight"
   },
   {
     line: "It'll buff right out.",
     author: "<b>Carlo</b>"
   },
   {
-    line: "<span class=\"quoteLine\" id=\"quoteLine1\">It's a get to know break.</span><br><span class=\"quoteLine\" id=\"quoteLine2\">Who's break?</span>",
+    line: "<span class=\"quoteLine\" id=\"quoteLine1\">It's a <q class=\"quoteLineNested\">get to know</q> break.</span><br><span class=\"quoteLine\" id=\"quoteLine2\">Who's break?</span>",
     author: "<b>Joe Mama</b> and <b>Savannah</b>"
+  },
+  {
+    line: "It's a lot harder to bang and blow at the same time than I thought.",
+    author: "<b>Kyle</b>"
   },
   {
     line: "It's always exciting when he takes it off.",
@@ -2049,6 +2069,10 @@ let quotes = [
   {
     line: "<span class=\"quoteLine\" id=\"quoteLine1\">It's big, I promise.</span><br><span class=\"quoteLine\" id=\"quoteLine2\">It's the only thing that's big about Tom.</span>",
     author: "<b>Tom Uhl</b> and <b>Ethan Laferriere</b>"
+  },
+  {
+    line: "It's called the Three-Dicks Compromise.",
+    author: "<b>Chestnut</b>"
   },
   {
     line: "It's not day drinking if you start in the afternoon.",
@@ -2147,12 +2171,16 @@ let quotes = [
     author: "<b>Colin Patricelli</b>"
   },
   {
+    line: "No edging at the dinner table.",
+    author: "<b>B</b>"
+  },
+  {
     line: "No! I don't want a shaft down my throat!",
     author: "<b>Ben Solo</b>"
   },
   {
-    line: "No edging at the dinner table.",
-    author: "<b>B</b>"
+    line: "No! I got piped! Woah...",
+    author: "<b>David Vanill</b>"
   },
   {
     line: "No one needs to be quivering in this day and age.",
@@ -2181,6 +2209,10 @@ let quotes = [
   {
     line: "Oh, you think you can cheat on my mans like that and still be like <q class=\"quoteLineNested\">Oh, you wanna eat my ass?</q>",
     author: "<b>Savannah</b>"
+  },
+  {
+    line: "Old people are cumming.",
+    author: "<b>Eric Laferriere</b>"
   },
   {
     line: "One is hammered beyond belief, and the other one is Savannah.",
@@ -2303,6 +2335,10 @@ let quotes = [
     author: "<b>Brandon</b>"
   },
   {
+    line: "The T in <q class=\"quoteLineNested\">Toyota</q> stands for <q class=\"quoteLineNested\">Toochie</q>",
+    author: "<b>John</b>"
+  },
+  {
     line: "There's only two things I come for: justice and free beer.",
     author: "<b>Kronk</b>"
   },
@@ -2325,6 +2361,14 @@ let quotes = [
   {
     line: "This is too short to beat effectively.",
     author: "<b>Chestnut</b>"
+  },
+  {
+    line: "This is what they refer to as <q class=\"quoteLineNested\">girl math.</q>",
+    author: "<b>Ryan O'Rourke</b> after the women's team failed to score during a double power play"
+  },
+  {
+    line: "<span class=\"quoteLine\" id=\"quoteLine1\">This movie seems easy to critique.</span><br><span class=\"quoteLine\" id=\"quoteLine2\">This is my favorite Disney movie, so watch yourself.</span>",
+    author: "<b>Declan</b> and <b>Brian Manning</b>"
   },
   {
     line: "This test isn't accurate, it doesn't have anything about pickles on it.",
@@ -2485,6 +2529,10 @@ let quotes = [
   {
     line: "Your big ass keeps breaking the cowbells, that's why.",
     author: "a security guard to Brom"
+  },
+  {
+    line: "Your mom's a problem.",
+    author: "<b>Eric Laferriere</b>"
   },
   {
     line: "Zamboni the McChicken.",

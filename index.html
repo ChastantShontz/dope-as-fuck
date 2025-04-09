@@ -5698,7 +5698,12 @@
               }
               for (var i = 0; i < document.getElementsByClassName("virusWindowCont").length; i++) {
                 if (document.getElementsByClassName("virusWindowCont")[i] == document.getElementById("virusIntroCont")) {
-                  document.getElementById("virusIntroCont").style.zIndex = "7";
+                  if (sessionStorage.mousePressed == String(true)) {
+                    document.getElementById("virusIntroCont").style.zIndex = "6";
+                  }
+                  else if ((sessionStorage.mousePressed == undefined) || (sessionStorage.mousePressed == String(false))) {
+                    document.getElementById("virusIntroCont").style.zIndex = "7";
+                  }
                 }
                 else {
                   if ((document.getElementsByClassName("virusWindowCont")[i].style.transform != "") && (document.getElementsByClassName("virusWindowCont")[i].style.transform != "scale(0)")) {
@@ -5745,7 +5750,12 @@
               }
               for (var i = 0; i < document.getElementsByClassName("virusWindowCont").length; i++) {
                 if (document.getElementsByClassName("virusWindowCont")[i] == document.getElementById("virusAdvertisementCont")) {
-                  document.getElementById("virusAdvertisementCont").style.zIndex = "7";
+                  if (sessionStorage.mousePressed == String(true)) {
+                    document.getElementById("virusAdvertisementCont").style.zIndex = "6";
+                  }
+                  else if ((sessionStorage.mousePressed == undefined) || (sessionStorage.mousePressed == String(false))) {
+                    document.getElementById("virusAdvertisementCont").style.zIndex = "7";
+                  }
                 }
                 else {
                   if ((document.getElementsByClassName("virusWindowCont")[i].style.transform != "") && (document.getElementsByClassName("virusWindowCont")[i].style.transform != "scale(0)")) {
@@ -5810,7 +5820,12 @@
               }
               for (var i = 0; i < document.getElementsByClassName("virusWindowCont").length; i++) {
                 if (document.getElementsByClassName("virusWindowCont")[i] == document.getElementById("virusDocCont")) {
-                  document.getElementById("virusDocCont").style.zIndex = "7";
+                  if (sessionStorage.mousePressed == String(true)) {
+                    document.getElementById("virusDocCont").style.zIndex = "6";
+                  }
+                  else if ((sessionStorage.mousePressed == undefined) || (sessionStorage.mousePressed == String(false))) {
+                    document.getElementById("virusDocCont").style.zIndex = "7";
+                  }
                 }
                 else {
                   if ((document.getElementsByClassName("virusWindowCont")[i].style.transform != "") && (document.getElementsByClassName("virusWindowCont")[i].style.transform != "scale(0)")) {
@@ -5850,7 +5865,12 @@
               }
               for (var i = 0; i < document.getElementsByClassName("virusWindowCont").length; i++) {
                 if (document.getElementsByClassName("virusWindowCont")[i] == document.getElementById("virusDistractionCont")) {
-                  document.getElementById("virusDistractionCont").style.zIndex = "7";
+                  if (sessionStorage.mousePressed == String(true)) {
+                    document.getElementById("virusDistractionCont").style.zIndex = "6";
+                  }
+                  else if ((sessionStorage.mousePressed == undefined) || (sessionStorage.mousePressed == String(false))) {
+                    document.getElementById("virusDistractionCont").style.zIndex = "7";
+                  }
                 }
                 else {
                   if ((document.getElementsByClassName("virusWindowCont")[i].style.transform != "") && (document.getElementsByClassName("virusWindowCont")[i].style.transform != "scale(0)")) {
@@ -5871,7 +5891,12 @@
               }
               for (var i = 0; i < document.getElementsByClassName("virusWindowCont").length; i++) {
                 if (document.getElementsByClassName("virusWindowCont")[i] == document.getElementById("virusAntivirusCont")) {
-                  document.getElementById("virusAntivirusCont").style.zIndex = "7";
+                  if (sessionStorage.mousePressed == String(true)) {
+                    document.getElementById("virusAntivirusCont").style.zIndex = "6";
+                  }
+                  else if ((sessionStorage.mousePressed == undefined) || (sessionStorage.mousePressed == String(false))) {
+                    document.getElementById("virusAntivirusCont").style.zIndex = "7";
+                  }
                 }
                 else {
                   if ((document.getElementsByClassName("virusWindowCont")[i].style.transform != "") && (document.getElementsByClassName("virusWindowCont")[i].style.transform != "scale(0)")) {
@@ -5896,7 +5921,12 @@
               }
               for (var i = 0; i < document.getElementsByClassName("virusWindowCont").length; i++) {
                 if (document.getElementsByClassName("virusWindowCont")[i] == document.getElementById("virusWallpaperCont")) {
-                  document.getElementById("virusWallpaperCont").style.zIndex = "7";
+                  if (sessionStorage.mousePressed == String(true)) {
+                    document.getElementById("virusWallpaperCont").style.zIndex = "6";
+                  }
+                  else if ((sessionStorage.mousePressed == undefined) || (sessionStorage.mousePressed == String(false))) {
+                    document.getElementById("virusWallpaperCont").style.zIndex = "7";
+                  }
                 }
                 else {
                   if ((document.getElementsByClassName("virusWindowCont")[i].style.transform != "") && (document.getElementsByClassName("virusWindowCont")[i].style.transform != "scale(0)")) {
@@ -5929,7 +5959,12 @@
             function error() {
               for (var i = 0; i < document.getElementsByClassName("virusWindowCont").length; i++) {
                 if (document.getElementsByClassName("virusWindowCont")[i] == document.getElementById("virusErrorCont")) {
-                  document.getElementById("virusErrorCont").style.zIndex = "7";
+                  if (sessionStorage.mousePressed == String(true)) {
+                    document.getElementById("virusErrorCont").style.zIndex = "6";
+                  }
+                  else if ((sessionStorage.mousePressed == undefined) || (sessionStorage.mousePressed == String(false))) {
+                    document.getElementById("virusErrorCont").style.zIndex = "7";
+                  }
                 }
                 else {
                   if ((document.getElementsByClassName("virusWindowCont")[i].style.transform != "") && (document.getElementsByClassName("virusWindowCont")[i].style.transform != "scale(0)")) {

@@ -13816,9 +13816,6 @@ function showSecret() {
   document.getElementById("secret").style.visibility = "visible";
   document.getElementById("secret").style.opacity = "100%";
   document.getElementById("secret").style.transition = "all .25s ease .25s";
-  if (document.getElementById("theOneThatGotAway").currentTime > 0) {
-    document.getElementById("theOneThatGotAway").currentTime = 0;
-  }
   document.getElementById("theOneThatGotAway").play();
   document.onkeydown = shortcut;
   document.onkeyup = shortcutUndo;

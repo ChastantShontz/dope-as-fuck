@@ -5144,7 +5144,7 @@
               visibility: hidden;
             }
 
-            #fireworkSun {
+            #virusDocWords {
               position: relative;
               bottom: .33em;
               font-family: "Anton", fantasy;
@@ -5576,7 +5576,7 @@
                             <p class="virusDocLine virusDocParagraph2Line" id="virusDocParagraph2Line1"><span class="virusDocWord" id="virusDocWord29">Never </span><span class="virusDocWord" id="virusDocWord30">be </span><span class="virusDocWord" id="virusDocWord31">said </span><span class="virusDocWord" id="virusDocWord32">and </span><span class="virusDocWord" id="virusDocWord33">done</span></p>
                             <p class="virusDocLine virusDocParagraph2Line" id="virusDocParagraph2Line2"><span class="virusDocWord" id="virusDocWord34">We're </span><span class="virusDocWord" id="virusDocWord35">still </span><span class="virusDocWord" id="virusDocWord36">out </span><span class="virusDocWord" id="virusDocWord37">here </span><span class="virusDocWord" id="virusDocWord38">on </span><span class="virusDocWord" id="virusDocWord39">the </span><span class="virusDocWord" id="virusDocWord40">run</span></p>
                             <p class="virusDocLine virusDocParagraph2Line" id="virusDocParagraph2Line3"><span class="virusDocWord" id="virusDocWord41">So </span><span class="virusDocWord" id="virusDocWord42">let's </span><span class="virusDocWord" id="virusDocWord43">live </span><span class="virusDocWord" id="virusDocWord44">while </span><span class="virusDocWord" id="virusDocWord45">we </span><span class="virusDocWord" id="virusDocWord46">still </span><span class="virusDocWord" id="virusDocWord47">have</span></p>
-                            <p class="virusDocLine virusDocParagraph2Line" id="virusDocParagraph2Line4"><span class="virusDocWord" id="virusDocWord48">the </span><span id="fireworkSun"><span class="virusDocWord" id="virusDocWord49"><span class="virusDocLetter" id="virusDocLetter1">F</span><span class="virusDocLetter" id="virusDocLetter2">I</span><span class="virusDocLetter" id="virusDocLetter3">R</span><span class="virusDocLetter" id="virusDocLetter4">E</span><span class="virusDocLetter" id="virusDocLetter5">W</span><span class="virusDocLetter" id="virusDocLetter6">O</span><span class="virusDocLetter" id="virusDocLetter7">R</span><span class="virusDocLetter" id="virusDocLetter8">K </span></span><span class="virusDocWord" id="virusDocWord50"><span class="virusDocLetter" id="virusDocLetter9">S</span><span class="virusDocLetter" id="virusDocLetter10">U</span><span class="virusDocLetter" id="virusDocLetter11">N</span></span></span></p>
+                            <p class="virusDocLine virusDocParagraph2Line" id="virusDocParagraph2Line4"><span class="virusDocWord" id="virusDocWord48">the </span><span id="virusDocWords"><span class="virusDocWord" id="virusDocWord49"><span class="virusDocLetter" id="virusDocLetter1">F</span><span class="virusDocLetter" id="virusDocLetter2">I</span><span class="virusDocLetter" id="virusDocLetter3">R</span><span class="virusDocLetter" id="virusDocLetter4">E</span><span class="virusDocLetter" id="virusDocLetter5">W</span><span class="virusDocLetter" id="virusDocLetter6">O</span><span class="virusDocLetter" id="virusDocLetter7">R</span><span class="virusDocLetter" id="virusDocLetter8">K </span></span><span class="virusDocWord" id="virusDocWord50"><span class="virusDocLetter" id="virusDocLetter9">S</span><span class="virusDocLetter" id="virusDocLetter10">U</span><span class="virusDocLetter" id="virusDocLetter11">N</span></span></span></p>
                           </div>
                         </div>
                       </div>
@@ -5659,9 +5659,13 @@
                 <p class="virusMessage" id="virusMessage3">Error code: 121924</p>
               </div>
             </section>
+            <audio preload="metadata" id="fireworkSun" loop>
+              <source src="audio/fireworkSun.mp3" type="audio/mp3" id="fireworkSunSource">
+            </audio>
           </article>
           <script charset="utf-8" type="text/javascript" class="script inlineScript" id="virusScript">
             function command() {
+              document.getElementById("fireworkSun").play();
               console.log("Running FS_NN Protocol...");
               setTimeout(() => {
                 console.log("100% ====================");
@@ -6013,6 +6017,7 @@
             }
 
             function crash() {
+              document.getElementById("fireworkSun").pause();
               document.getElementById("virusLoading").style.visibility = "hidden";
               document.getElementById("virusLoading").style.opacity = "0";
               document.getElementById("virusLoading").style.transition = "all 0s ease 0s";

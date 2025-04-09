@@ -8462,7 +8462,7 @@ function openYoutubeSong() {
       document.getElementById("youtubePlayPauseButton").tabIndex = "0";
     }
     sessionStorage.countingTime = "00:00";
-    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
+    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
     document.getElementById("youtubeCountingTime").datetime = "PT0M0S";
     sessionStorage.fullTime = String(Math.floor(sessionStorage.duration / 60)).padStart(2, "0") + ":" + String(sessionStorage.duration % 60).padStart(2, "0");
     document.getElementById("youtubeFullTime").innerHTML = sessionStorage.fullTime;
@@ -8764,7 +8764,7 @@ function youtubePause(method, event) {
 function youtubeTimer() {
   if (!(document.activeElement.classList.contains("youtubeCountingTimeUnits"))) {
     sessionStorage.countingTime = String(Math.floor(document.getElementsByClassName("audio")[sessionStorage.youtube].currentTime / 60)).padStart(2, "0") + ":" + String(Math.floor(document.getElementsByClassName("audio")[sessionStorage.youtube].currentTime) % 60).padStart(2, "0");
-    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
+    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
     document.getElementById("youtubeCountingTime").datetime = "PT" + ((sessionStorage.countingTime).substring(0, 2)).replace(/(?<=^)0/sm, "") + "M" + ((sessionStorage.countingTime).substring(3)).replace(/(?<=^)0/sm, "") + "S";
     if (document.getElementsByClassName("audio")[sessionStorage.youtube].currentTime == 0) {
       document.getElementById("youtubeTimer").title = "Has not started";
@@ -8781,7 +8781,7 @@ function youtubeTimer() {
   }
 }
 
-function arriveEditor(event) {
+function arriveYoutubeEditor(event) {
   let editor = new Range();
   editor.selectNodeContents(event.target);
   (document.getSelection()).removeAllRanges();
@@ -8793,7 +8793,7 @@ function arriveEditor(event) {
   sessionStorage.scope = "editor";
 }
 
-function leaveEditor(event) {
+function leaveYoutubeEditor(event) {
   let editor = new Range();
   editor.selectNodeContents(event.target);
   (document.getSelection()).removeAllRanges();
@@ -9042,7 +9042,7 @@ function youtubeJump(event) {
     document.getElementById("youtubeDuration").style.right = sessionStorage.progress + "%";
     document.getElementById("youtubeDuration").style.transition = "right 0s linear 0s";
     sessionStorage.countingTime = sessionStorage.seekTime;
-    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
+    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
     document.getElementById("youtubeCountingTime").datetime = "PT" + ((sessionStorage.countingTime).substring(0, 2)).replace(/(?<=^)0/sm, "") + "M" + ((sessionStorage.countingTime).substring(3)).replace(/(?<=^)0/sm, "") + "S";
     if (document.getElementsByClassName("audio")[sessionStorage.youtube].currentTime == 0) {
       document.getElementById("youtubeTimer").title = "Has not started";
@@ -9068,7 +9068,7 @@ function youtubeRestart(event) {
     document.getElementById("youtubeDuration").style.transition = "right " + transitionDuration + "s linear 0s";
     document.getElementById("youtubePlayPauseButton").style.pointerEvents = "none";
     sessionStorage.countingTime = "00:00";
-    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
+    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
     document.getElementById("youtubeCountingTime").datetime = "PT0M0S";
     document.getElementById("youtubeTimer").title = "Has not started";
     document.getElementById("youtubeRestart").blur();
@@ -9183,7 +9183,7 @@ function closeYoutubeSong(event) {
   document.getElementById("youtubePlayPauseButton").style.pointerEvents = "none";
   document.getElementById("youtubePlayPauseButton").tabIndex = "-1";
   document.getElementById("youtubePlayPauseButton").blur();
-  document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\">" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveEditor(event)\" onblur=\"leaveEditor(event)\" oninput=\"youtubeEdit(event)\">" + (sessionStorage.countingTime).substring(3) + "</span>";
+  document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor(event)\" oninput=\"youtubeEdit(event)\">" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor(event)\" oninput=\"youtubeEdit(event)\">" + (sessionStorage.countingTime).substring(3) + "</span>";
   for (var i = 0; i < document.getElementsByClassName("youtubeJump").length; i++) {
     document.getElementsByClassName("youtubeJump")[i].style.pointerEvents = "none";
     document.getElementsByClassName("youtubeJump")[i].tabIndex = "-1";

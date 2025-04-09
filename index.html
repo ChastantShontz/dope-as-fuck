@@ -5366,12 +5366,14 @@
             }
 
             #cover {
+              visibility: hidden;
               position: fixed;
               left: 0;
               right: 0;
               top: 0;
               bottom: 0;
               background: rgba(153, 153, 153, 75%);
+              opacity: 0;
             }
 
             @keyframes wobble {
@@ -5898,6 +5900,9 @@
             }
 
             function buffer() {
+              document.getElementById("cover").style.visibility = "visible";
+              document.getElementById("cover").style.opacity = "100%";
+              document.getElementById("cover").style.transition = "all .25s ease 0s";
             }
 
             function windowMinimize(element) {

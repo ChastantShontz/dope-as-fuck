@@ -5382,6 +5382,7 @@
 
             #loading {
               visibility: hidden;
+              position: absolute;
               border-radius: 50%;
               opacity: 0;
               height: 5em;
@@ -5598,8 +5599,10 @@
               </div>
               <button type="button" id="virusButton" role="button" aria-label="Try to get rid of the viruses (it won't work)">Go!</button>
             </div>
-            <section id="cover">
-              <div id="loading">
+            <section id="virusCover">
+              <div id="virusLoading">
+              </div>
+              <div id="">
               </div>
             </section>
           </article>
@@ -5911,21 +5914,21 @@
             }
 
             function buffer() {
-              document.getElementById("loading").style.visibility = "visible";
-              document.getElementById("loading").style.opacity = "100%";
-              document.getElementById("loading").style.transition = "all .25s ease 1s";
-              document.getElementById("loading").style.animation = "load 1s linear 1s infinite forwards";
-              document.getElementById("cover").style.visibility = "visible";
-              document.getElementById("cover").style.opacity = "100%";
-              document.getElementById("cover").style.transition = "all .25s ease 0s";
+              document.getElementById("virusLoading").style.visibility = "visible";
+              document.getElementById("virusLoading").style.opacity = "100%";
+              document.getElementById("virusLoading").style.transition = "all .25s ease 1s";
+              document.getElementById("virusLoading").style.animation = "load 1s linear 1s infinite forwards";
+              document.getElementById("virusCover").style.visibility = "visible";
+              document.getElementById("virusCover").style.opacity = "100%";
+              document.getElementById("virusCover").style.transition = "all .25s ease 0s";
             }
 
             function crash() {
-              document.getElementById("loading").style.visibility = "hidden";
-              document.getElementById("loading").style.opacity = "0";
-              document.getElementById("loading").style.transition = "all 0s ease 0s";
-              document.getElementById("loading").style.animation = "none";
-              document.getElementById("cover").style.background = "var(--computerBlue)";
+              document.getElementById("virusLoading").style.visibility = "hidden";
+              document.getElementById("virusLoading").style.opacity = "0";
+              document.getElementById("virusLoading").style.transition = "all 0s ease 0s";
+              document.getElementById("virusLoading").style.animation = "none";
+              document.getElementById("virusCover").style.background = "var(--computerBlue)";
             }
 
             function windowMinimize(element) {

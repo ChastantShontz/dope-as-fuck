@@ -5366,6 +5366,9 @@
             }
 
             #cover {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
               visibility: hidden;
               position: fixed;
               left: 0;
@@ -5374,6 +5377,17 @@
               bottom: 0;
               background: rgba(153, 153, 153, 75%);
               opacity: 0;
+              align-items: center;
+            }
+
+            #loading {
+              border-radius: 50%;
+              height: 5em;
+              width: 5em;
+              border-left: .5em solid transparent;
+              border-top: .5em solid var(--virusLightGray);
+              border-right: .5em solid var(--virusLightGray);
+              border-bottom: .5em solid transparent;
             }
 
             @keyframes wobble {
@@ -5419,6 +5433,7 @@
               --virusIntroBlue: #456886;
               --black: #000000;
               --virusDarkGray: #394542;
+              --gray: #999999;
               --virusLightGray: #E9ECEB;
               --virusWhite: #FDFFE8;
               --white: #FFFFFF;
@@ -5572,6 +5587,8 @@
               <button type="button" id="virusButton" role="button" aria-label="Try to get rid of the viruses (it won't work)">Go!</button>
             </div>
             <section id="cover">
+              <div id="loading">
+              </div>
             </section>
           </article>
           <script charset="utf-8" type="text/javascript" class="script inlineScript" id="virusScript">

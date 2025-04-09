@@ -5652,29 +5652,10 @@
                 console.log("Searching for image...");
               }, 1500);
               setTimeout(() => {
-                console.error("ERROR");
-              }, 1600);
-              setTimeout(() => {
-                console.error("ERROR");
-              }, 1700);
-              setTimeout(() => {
-                console.error("ERROR");
-              }, 1800);
-              setTimeout(() => {
-                console.error("ERROR");
-              }, 1900);
-              setTimeout(() => {
-                console.error("ERROR");
-              }, 2000);
-              setTimeout(() => {
-                console.log("A fatal error has occured.");
-              }, 2100);
-              setTimeout(() => {
-                console.log("Tell your computer to just...get better or something lol");
-              }, 2200);
-              setTimeout(() => {
-                console.log("Error code: 121924");
-              }, 2300);
+                setInterval(() => {
+                  console.error("ERROR");
+                }, 1000);
+              }, 600);
             }
 
             function intro() {
@@ -6084,12 +6065,12 @@
 
             function execution() {
               command();
-              setTimeout(intro, 2400);
-              setTimeout(advertisement, 7100);
-              setTimeout(doc, 8600);
-              setTimeout(distraction, 12900);
-              setTimeout(antivirus, 23700);
-              setTimeout(wallpaper, 25200);
+              setTimeout(intro, 1700);
+              setTimeout(advertisement, 6400);
+              setTimeout(doc, 7900);
+              setTimeout(distraction, 12200);
+              setTimeout(antivirus, 23000);
+              setTimeout(wallpaper, 24500);
             }
             execution();
           </script>

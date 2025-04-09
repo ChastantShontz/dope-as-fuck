@@ -4794,14 +4794,24 @@
               bottom: 0;
             }
 
-            #virusBackground {
+            #virusBackgroundCont {
               position: fixed;
               left: 0;
               right: 0;
               top: 0;
               bottom: 2em;
+              background: var(--virusDarkGray);
+            }
+
+            #virusBackground {
+              position: absolute;
+              left: .5em;
+              right: .5em;
+              top: .5em;
+              bottom: 0;
+              border-radius: 1em;
               background: var(--backgroundBlue);
-              border: 1em solid var(--virusDarkGray);
+              border: .5em solid var(--virusDarkGray);
               border-bottom: none;
             }
 
@@ -5491,141 +5501,143 @@
         </head>
         <body>
           <article id="virus" tabindex="0" role="article" aria-description="The virus that is taking over your computer">
-            <section id="virusBackground">
-              <div class="virusWindowCont" id="virusIntroCont" role="region" aria-description="An introductory message from Neon Nothing" onmousedown="pressMouse('intro', event)" onmouseup="liftMouse()" onmouseleave="liftMouse()" onmousemove="windowDrag('intro', event)">
-                <div class="virusWindow" id="virusIntro">
-                  <p class="virusIntroMessage" id="virusIntroMessage1"><span id="virusIntroUpperWords"><span class="virusIntroWord" id="hello">HELLO!</span><br><span class="virusIntroWord" id="weAre">WE ARE</span></span><br><span id="virusIntroLowerWords"><span class="virusIntroWord" id="neonNothing">NEON NOTHING</span></span></p>
-                  <p class="virusIntroMessage" id="virusIntroMessage2">AND YOUR<br>COMPUTER<br>IS OURS!!!</p>
-                </div>
-                <div class="virusWindowControls" id="virusIntroControls">
-                  <button type="button" title="Minimize" class="virusWindowControl virusIntroControl virusWindowMinimize" id="virusIntroMinimize" tabindex="-1" role="button" aria-label="Minimize the intro window" onclick="windowMinimize('intro')">&mdash;</button>
-                  <button type="button" title="Resize (fullscreen)" class="virusWindowControl virusIntroControl virusWindowResize" id="virusIntroResize" tabindex="-1" role="button" aria-label="Resize the intro window to fullscreen" onclick="windowResize('intro')">&#9723;</button>
-                  <button type="button" title="Close" class="virusWindowControl virusIntroControl virusWindowClose" id="virusIntroClose" tabindex="-1" role="button" aria-label="Close the intro window" onclick="windowClose('intro')">&times;</button>
-                </div>
-              </div>
-              <div class="virusWindowCont" id="virusAdvertisementCont" role="region" aria-description="An advertisement for NeoNoth OS ULTRA" onmousedown="pressMouse('advertisement', event)" onmouseup="liftMouse()" onmouseleave="liftMouse()" onmousemove="windowDrag('advertisement', event)">
-                <div class="virusWindow" id="virusAdvertisement">
-                  <p id="virusAdvertisementMessage">Would you like to upgrade to NeoNoth OS ULTRA?</p>
-                  <br>
-                  <p id="virusAdvertisementPrice">ON SALE FOR ONLY $9,999.99!</p>
-                </div>
-                <div class="virusWindowControls" id="virusAdvertisementControls">
-                  <button type="button" title="Minimize" class="virusWindowControl virusAdvertisementControl virusWindowMinimize" id="virusAdvertisementMinimize" tabindex="-1" role="button" aria-label="Minimize the advertisement window" onclick="advertisement2('minimize')">&mdash;</button>
-                  <button type="button" title="Resize (fullscreen)" class="virusWindowControl virusAdvertisementControl virusWindowResize" id="virusAdvertisementResize" tabindex="-1" role="button" aria-label="Resize the advertisement window to fullscreen" onclick="windowResize('advertisement')">&#9723;</button>
-                  <button type="button" title="Close" class="virusWindowControl virusAdvertisementControl virusWindowClose" id="virusAdvertisementClose" tabindex="-1" role="button" aria-label="Close the advertisement window" onclick="advertisement2('close')">&times;</button>
-                </div>
-              </div>
-              <div class="virusWindowCont" id="virusDocCont" role="region" aria-description="A document where the song lyrics are being written out" onmousedown="pressMouse('doc', event)" onmouseup="liftMouse()" onmouseleave="liftMouse()" onmousemove="windowDrag('doc', event)">
-                <div class="virusWindow" id="virusDoc">
-                  <div id="virusDocHeader">
-                    <div id="virusDocToolbars">
-                      <div class="virusDocToolbar" id="virusDocUpperToolbar">
-                        <p class="virusDocToolbarOption virusDocUpperToolbarOption" id="virusDocFile">File</p>
-                        <p class="virusDocToolbarOption virusDocUpperToolbarOption" id="virusDocEdit">Edit</p>
-                        <p class="virusDocToolbarOption virusDocUpperToolbarOption" id="virusDocFormat">Format</p>
-                        <p class="virusDocToolbarOption virusDocUpperToolbarOption" id="virusDocDraw">Draw</p>
-                        <p class="virusDocToolbarOption virusDocUpperToolbarOption" id="virusDocSelfDestruct">Self-Destruct</p>
-                      </div>
-                      <div class="virusDocToolbar" id="virusDocLowerToolbar">
-                        <div class="virusDocToolbarOption virusDocLowerToolbarOption" id="virusDocFontSize">
-                          <div class="virusDocOptionSelection virusDocFontSizeSelection virusDocOptionSelector" id="virusDocFontSizeSelector">
-                            <div class="virusDocOptionSelectorShape" id="virusDocFontSizeSelectorShape">
-                            </div>
-                          </div>
-                          <div class="virusDocOptionSelection virusDocFontSizeSelection virusDocOptionSelected" id="virusDocFontSizeSelected">
-                            <p id="virusDocFontSizeSelectedNum">22</p>
-                          </div>
-                        </div>
-                        <div class="virusDocToolbarOption virusDocLowerToolbarOption" id="virusDocColor">
-                          <div class="virusDocOptionSelection virusDocColorSelection virusDocOptionSelector" id="virusDocColorSelector">
-                            <div class="virusDocOptionSelectorShape" id="virusDocColorSelectorShape">
-                            </div>
-                          </div>
-                          <div class="virusDocOptionSelection virusDocColorSelection virusDocOptionSelected" id="virusDocColorSelected">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="virusDocTitleCont">
-                      <p id="virusDocTitle">NeonWord</p>
-                    </div>
+            <section id="virusBackgroundCont">
+              <div id="virusBackground">
+                <div class="virusWindowCont" id="virusIntroCont" role="region" aria-description="An introductory message from Neon Nothing" onmousedown="pressMouse('intro', event)" onmouseup="liftMouse()" onmouseleave="liftMouse()" onmousemove="windowDrag('intro', event)">
+                  <div class="virusWindow" id="virusIntro">
+                    <p class="virusIntroMessage" id="virusIntroMessage1"><span id="virusIntroUpperWords"><span class="virusIntroWord" id="hello">HELLO!</span><br><span class="virusIntroWord" id="weAre">WE ARE</span></span><br><span id="virusIntroLowerWords"><span class="virusIntroWord" id="neonNothing">NEON NOTHING</span></span></p>
+                    <p class="virusIntroMessage" id="virusIntroMessage2">AND YOUR<br>COMPUTER<br>IS OURS!!!</p>
                   </div>
-                  <div id="virusDocPageCont">
-                    <div id="virusDocPage">
-                      <div id="virusDocText">
-                        <div class="virusDocParagraph" id="virusDocParagraph1">
-                          <p class="virusDocLine virusDocParagraph1Line" id="virusDocParagraph1Line1"><span class="virusDocWord" id="virusDocWord1">Are </span><span class="virusDocWord" id="virusDocWord2">our </span><span class="virusDocWord" id="virusDocWord3">ducks </span><span class="virusDocWord" id="virusDocWord4">in </span><span class="virusDocWord" id="virusDocWord5">a </span><span class="virusDocWord" id="virusDocWord6">row?</span></p>
-                          <p class="virusDocLine virusDocParagraph1Line" id="virusDocParagraph1Line2"><span class="virusDocWord" id="virusDocWord7">Are </span><span class="virusDocWord" id="virusDocWord8">we </span><span class="virusDocWord" id="virusDocWord9">sure </span><span class="virusDocWord" id="virusDocWord10">that </span><span class="virusDocWord" id="virusDocWord11">this </span><span class="virusDocWord" id="virusDocWord12">won't </span><span class="virusDocWord" id="virusDocWord13">blow?</span></p>
-                          <p class="virusDocLine virusDocParagraph1Line" id="virusDocParagraph1Line3"><span class="virusDocWord" id="virusDocWord14">You </span><span class="virusDocWord" id="virusDocWord15">can </span><span class="virusDocWord" id="virusDocWord16">feel </span><span class="virusDocWord" id="virusDocWord17">it </span><span class="virusDocWord" id="virusDocWord18">in </span><span class="virusDocWord" id="virusDocWord19">your </span><span class="virusDocWord" id="virusDocWord20">bones</span></p>
-                          <p class="virusDocLine virusDocParagraph1Line" id="virusDocParagraph1Line4"><span class="virusDocWord" id="virusDocWord21">When </span><span class="virusDocWord" id="virusDocWord22">you </span><span class="virusDocWord" id="virusDocWord23">can't </span><span class="virusDocWord" id="virusDocWord24">read </span><span class="virusDocWord" id="virusDocWord25">it </span><span class="virusDocWord" id="virusDocWord26">in </span><span class="virusDocWord" id="virusDocWord27">my </span><span class="virusDocWord" id="virusDocWord28">prose</span></p>
-                        </div>
-                        <br>
-                        <div class="virusDocParagraph" id="virusDocParagraph2">
-                          <p class="virusDocLine virusDocParagraph2Line" id="virusDocParagraph2Line1"><span class="virusDocWord" id="virusDocWord29">Never </span><span class="virusDocWord" id="virusDocWord30">be </span><span class="virusDocWord" id="virusDocWord31">said </span><span class="virusDocWord" id="virusDocWord32">and </span><span class="virusDocWord" id="virusDocWord33">done</span></p>
-                          <p class="virusDocLine virusDocParagraph2Line" id="virusDocParagraph2Line2"><span class="virusDocWord" id="virusDocWord34">We're </span><span class="virusDocWord" id="virusDocWord35">still </span><span class="virusDocWord" id="virusDocWord36">out </span><span class="virusDocWord" id="virusDocWord37">here </span><span class="virusDocWord" id="virusDocWord38">on </span><span class="virusDocWord" id="virusDocWord39">the </span><span class="virusDocWord" id="virusDocWord40">run</span></p>
-                          <p class="virusDocLine virusDocParagraph2Line" id="virusDocParagraph2Line3"><span class="virusDocWord" id="virusDocWord41">So </span><span class="virusDocWord" id="virusDocWord42">let's </span><span class="virusDocWord" id="virusDocWord43">live </span><span class="virusDocWord" id="virusDocWord44">while </span><span class="virusDocWord" id="virusDocWord45">we </span><span class="virusDocWord" id="virusDocWord46">still </span><span class="virusDocWord" id="virusDocWord47">have</span></p>
-                          <p class="virusDocLine virusDocParagraph2Line" id="virusDocParagraph2Line4"><span class="virusDocWord" id="virusDocWord48">the </span><span id="fireworkSun"><span class="virusDocWord" id="virusDocWord49"><span class="virusDocLetter" id="virusDocLetter1">F</span><span class="virusDocLetter" id="virusDocLetter2">I</span><span class="virusDocLetter" id="virusDocLetter3">R</span><span class="virusDocLetter" id="virusDocLetter4">E</span><span class="virusDocLetter" id="virusDocLetter5">W</span><span class="virusDocLetter" id="virusDocLetter6">O</span><span class="virusDocLetter" id="virusDocLetter7">R</span><span class="virusDocLetter" id="virusDocLetter8">K </span></span><span class="virusDocWord" id="virusDocWord50"><span class="virusDocLetter" id="virusDocLetter9">S</span><span class="virusDocLetter" id="virusDocLetter10">U</span><span class="virusDocLetter" id="virusDocLetter11">N</span></span></span></p>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="virusWindowControls" id="virusIntroControls">
+                    <button type="button" title="Minimize" class="virusWindowControl virusIntroControl virusWindowMinimize" id="virusIntroMinimize" tabindex="-1" role="button" aria-label="Minimize the intro window" onclick="windowMinimize('intro')">&mdash;</button>
+                    <button type="button" title="Resize (fullscreen)" class="virusWindowControl virusIntroControl virusWindowResize" id="virusIntroResize" tabindex="-1" role="button" aria-label="Resize the intro window to fullscreen" onclick="windowResize('intro')">&#9723;</button>
+                    <button type="button" title="Close" class="virusWindowControl virusIntroControl virusWindowClose" id="virusIntroClose" tabindex="-1" role="button" aria-label="Close the intro window" onclick="windowClose('intro')">&times;</button>
                   </div>
                 </div>
-                <div class="virusWindowControls" id="virusDocControls">
-                  <button type="button" title="Minimize" class="virusWindowControl virusDocControl virusWindowMinimize" id="virusDocMinimize" tabindex="-1" role="button" aria-label="Minimize the doc window" onclick="windowMinimize('doc')">&mdash;</button>
-                  <button type="button" title="Resize (fullscreen)" class="virusWindowControl virusDocControl virusWindowResize" id="virusDocResize" tabindex="-1" role="button" aria-label="Resize the doc window to fullscreen" onclick="windowResize('doc')">&#9723;</button>
-                  <button type="button" title="Close" class="virusWindowControl virusDocControl virusWindowClose" id="virusDocClose" tabindex="-1" role="button" aria-label="Close the doc window" onclick="windowClose('doc')">&times;</button>
-                </div>
-              </div>
-              <div class="virusWindowCont" id="virusDistractionCont" role="region" aria-description="A pointless distraction" onmousedown="pressMouse('distraction', event)" onmouseup="liftMouse()" onmouseleave="liftMouse()" onmousemove="windowDrag('distraction', event)">
-                <div class="virusWindow" id="virusDistraction">
-                  <p id="virusDistractionMessage">LOOK OVER HERE!!</p>
-                </div>
-                <div class="virusWindowControls" id="virusDistractionControls">
-                  <button type="button" title="Minimize" class="virusWindowControl virusDistractionControl virusWindowMinimize" id="virusDistractionMinimize" tabindex="-1" role="button" aria-label="Minimize the distraction window" onclick="windowMinimize('distraction')">&mdash;</button>
-                  <button type="button" title="Resize (fullscreen)" class="virusWindowControl virusDistractionControl virusWindowResize" id="virusDistractionResize" tabindex="-1" role="button" aria-label="Resize the distraction window to fullscreen" onclick="windowResize('distraction')">&#9723;</button>
-                  <button type="button" title="Close" class="virusWindowControl virusDistractionControl virusWindowClose" id="virusDistractionClose" tabindex="-1" role="button" aria-label="Close the distraction window" onclick="windowClose('distraction')">&times;</button>
-                </div>
-              </div>
-              <div class="virusWindowCont" id="virusAntivirusCont" role="region" aria-description="A totally safe antivirus program" onmousedown="pressMouse('antivirus', event)" onmouseup="liftMouse()" onmouseleave="liftMouse()" onmousemove="windowDrag('antivirus', event)">
-                <div class="virusWindow" id="virusAntivirus">
-                  <p id="virusAntivirusMessage">Neon Antivirus has detected no viruses outside of the required ones on this computer!</p>
-                  <br>
-                  <button type="button" id="virusAntivirusButton" tabindex="-1" role="button" aria-label="Accept the viruses on your computer" onclick="windowClose('antivirus')">OKAY</button>
-                </div>
-                <div class="virusWindowControls" id="virusAntivirusControls">
-                  <button type="button" title="Minimize" class="virusWindowControl virusAntivirusControl virusWindowMinimize" id="virusAntivirusMinimize" tabindex="-1" role="button" aria-label="Minimize the antivirus window" onclick="windowMinimize('antivirus')">&mdash;</button>
-                  <button type="button" title="Resize (fullscreen)" class="virusWindowControl virusAntivirusControl virusWindowResize" id="virusAntivirusResize" tabindex="-1" role="button" aria-label="Resize the antivirus window to fullscreen" onclick="windowResize('antivirus')">&#9723;</button>
-                  <button type="button" title="Close" class="virusWindowControl virusAntivirusControl virusWindowClose" id="virusAntivirusClose" tabindex="-1" role="button" aria-label="Close the antivirus window" onclick="windowClose('antivirus')">&times;</button>
-                </div>
-              </div>
-              <div class="virusWindowCont" id="virusWallpaperCont" role="region" aria-description="A place to download the Neon wallpaper" onmousedown="pressMouse('wallpaper', event)" onmouseup="liftMouse()" onmouseleave="liftMouse()" onmousemove="windowDrag('wallpaper', event)">
-                <div class="virusWindow" id="virusWallpaper">
-                  <p id="virusWallpaperMessage">TRY OUT ONE OF MY WALLPAPERS FOR YOUR DESKTOP!</p>
-                  <div id="virusWallpaperButtonsCont">
-                    <p id="virusWallpaperButtonsMessage">(YOU DON'T ACTUALLY HAVE A CHOICE, BTW, JUST SAY YES)</p>
-                    <div id="virusWallpaperButtons">
-                      <div class="virusWallpaperButtonCont" id="acceptWallpaperCont">
-                        <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="acceptWallpaper" tabindex="-1" role="button" aria-label="Download the Neon wallpaper" onclick="acceptWallpaper()">HELL YEAH!!</button>
-                      </div>
-                      <div class="virusWallpaperButtonCont" id="declineWallpaperCont">
-                        <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="declineWallpaper" tabindex="-1" role="button" aria-label="Don't (not) download the Neon wallpaper" onclick="declineWallpaper()">NO THANKS...</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="virusWindowControls" id="virusWallpaperControls">
-                  <button type="button" title="Minimize" class="virusWindowControl virusWallpaperControl virusWindowMinimize" id="virusWallpaperMinimize" tabindex="-1" role="button" aria-label="Minimize the wallpaper window" onclick="windowMinimize('wallpaper')">&mdash;</button>
-                  <button type="button" title="Resize (fullscreen)" class="virusWindowControl virusWallpaperControl virusWindowResize" id="virusWallpaperResize" tabindex="-1" role="button" aria-label="Resize the wallpaper window to fullscreen" onclick="windowResize('wallpaper')">&#9723;</button>
-                  <button type="button" title="Close" class="virusWindowControl virusWallpaperControl virusWindowClose" id="virusWallpaperClose" tabindex="-1" role="button" aria-label="Close the wallpaper window" onclick="windowClose('wallpaper')">&times;</button>
-                </div>
-              </div>
-              <div class="virusWindowCont" id="virusErrorCont" role="region" aria-description="A fatal error that is causing your computer to implode" onmousedown="pressMouse('error', event)" onmouseup="liftMouse()" onmouseleave="liftMouse()" onmousemove="windowDrag('error', event)">
-                <div class="virusWindow" id="virusError">
-                  <p id="virusErrorHeading">FATAL ERROR:</p>
-                  <div id="virusErrorMessages">
-                    <p class="virusErrorMessage" id="virusErrorMessage1">THE DESIRED WALLPAPER IMAGE IS SO STUPIDLY CORRUPTED, IT'S CRAZY</p>
+                <div class="virusWindowCont" id="virusAdvertisementCont" role="region" aria-description="An advertisement for NeoNoth OS ULTRA" onmousedown="pressMouse('advertisement', event)" onmouseup="liftMouse()" onmouseleave="liftMouse()" onmousemove="windowDrag('advertisement', event)">
+                  <div class="virusWindow" id="virusAdvertisement">
+                    <p id="virusAdvertisementMessage">Would you like to upgrade to NeoNoth OS ULTRA?</p>
                     <br>
-                    <p class="virusErrorMessage" id="virusErrorMessage2">COMPUTER SYSTEM WILL NOW <b>IMPLODE</b></p>
+                    <p id="virusAdvertisementPrice">ON SALE FOR ONLY $9,999.99!</p>
+                  </div>
+                  <div class="virusWindowControls" id="virusAdvertisementControls">
+                    <button type="button" title="Minimize" class="virusWindowControl virusAdvertisementControl virusWindowMinimize" id="virusAdvertisementMinimize" tabindex="-1" role="button" aria-label="Minimize the advertisement window" onclick="advertisement2('minimize')">&mdash;</button>
+                    <button type="button" title="Resize (fullscreen)" class="virusWindowControl virusAdvertisementControl virusWindowResize" id="virusAdvertisementResize" tabindex="-1" role="button" aria-label="Resize the advertisement window to fullscreen" onclick="windowResize('advertisement')">&#9723;</button>
+                    <button type="button" title="Close" class="virusWindowControl virusAdvertisementControl virusWindowClose" id="virusAdvertisementClose" tabindex="-1" role="button" aria-label="Close the advertisement window" onclick="advertisement2('close')">&times;</button>
+                  </div>
+                </div>
+                <div class="virusWindowCont" id="virusDocCont" role="region" aria-description="A document where the song lyrics are being written out" onmousedown="pressMouse('doc', event)" onmouseup="liftMouse()" onmouseleave="liftMouse()" onmousemove="windowDrag('doc', event)">
+                  <div class="virusWindow" id="virusDoc">
+                    <div id="virusDocHeader">
+                      <div id="virusDocToolbars">
+                        <div class="virusDocToolbar" id="virusDocUpperToolbar">
+                          <p class="virusDocToolbarOption virusDocUpperToolbarOption" id="virusDocFile">File</p>
+                          <p class="virusDocToolbarOption virusDocUpperToolbarOption" id="virusDocEdit">Edit</p>
+                          <p class="virusDocToolbarOption virusDocUpperToolbarOption" id="virusDocFormat">Format</p>
+                          <p class="virusDocToolbarOption virusDocUpperToolbarOption" id="virusDocDraw">Draw</p>
+                          <p class="virusDocToolbarOption virusDocUpperToolbarOption" id="virusDocSelfDestruct">Self-Destruct</p>
+                        </div>
+                        <div class="virusDocToolbar" id="virusDocLowerToolbar">
+                          <div class="virusDocToolbarOption virusDocLowerToolbarOption" id="virusDocFontSize">
+                            <div class="virusDocOptionSelection virusDocFontSizeSelection virusDocOptionSelector" id="virusDocFontSizeSelector">
+                              <div class="virusDocOptionSelectorShape" id="virusDocFontSizeSelectorShape">
+                              </div>
+                            </div>
+                            <div class="virusDocOptionSelection virusDocFontSizeSelection virusDocOptionSelected" id="virusDocFontSizeSelected">
+                              <p id="virusDocFontSizeSelectedNum">22</p>
+                            </div>
+                          </div>
+                          <div class="virusDocToolbarOption virusDocLowerToolbarOption" id="virusDocColor">
+                            <div class="virusDocOptionSelection virusDocColorSelection virusDocOptionSelector" id="virusDocColorSelector">
+                              <div class="virusDocOptionSelectorShape" id="virusDocColorSelectorShape">
+                              </div>
+                            </div>
+                            <div class="virusDocOptionSelection virusDocColorSelection virusDocOptionSelected" id="virusDocColorSelected">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="virusDocTitleCont">
+                        <p id="virusDocTitle">NeonWord</p>
+                      </div>
+                    </div>
+                    <div id="virusDocPageCont">
+                      <div id="virusDocPage">
+                        <div id="virusDocText">
+                          <div class="virusDocParagraph" id="virusDocParagraph1">
+                            <p class="virusDocLine virusDocParagraph1Line" id="virusDocParagraph1Line1"><span class="virusDocWord" id="virusDocWord1">Are </span><span class="virusDocWord" id="virusDocWord2">our </span><span class="virusDocWord" id="virusDocWord3">ducks </span><span class="virusDocWord" id="virusDocWord4">in </span><span class="virusDocWord" id="virusDocWord5">a </span><span class="virusDocWord" id="virusDocWord6">row?</span></p>
+                            <p class="virusDocLine virusDocParagraph1Line" id="virusDocParagraph1Line2"><span class="virusDocWord" id="virusDocWord7">Are </span><span class="virusDocWord" id="virusDocWord8">we </span><span class="virusDocWord" id="virusDocWord9">sure </span><span class="virusDocWord" id="virusDocWord10">that </span><span class="virusDocWord" id="virusDocWord11">this </span><span class="virusDocWord" id="virusDocWord12">won't </span><span class="virusDocWord" id="virusDocWord13">blow?</span></p>
+                            <p class="virusDocLine virusDocParagraph1Line" id="virusDocParagraph1Line3"><span class="virusDocWord" id="virusDocWord14">You </span><span class="virusDocWord" id="virusDocWord15">can </span><span class="virusDocWord" id="virusDocWord16">feel </span><span class="virusDocWord" id="virusDocWord17">it </span><span class="virusDocWord" id="virusDocWord18">in </span><span class="virusDocWord" id="virusDocWord19">your </span><span class="virusDocWord" id="virusDocWord20">bones</span></p>
+                            <p class="virusDocLine virusDocParagraph1Line" id="virusDocParagraph1Line4"><span class="virusDocWord" id="virusDocWord21">When </span><span class="virusDocWord" id="virusDocWord22">you </span><span class="virusDocWord" id="virusDocWord23">can't </span><span class="virusDocWord" id="virusDocWord24">read </span><span class="virusDocWord" id="virusDocWord25">it </span><span class="virusDocWord" id="virusDocWord26">in </span><span class="virusDocWord" id="virusDocWord27">my </span><span class="virusDocWord" id="virusDocWord28">prose</span></p>
+                          </div>
+                          <br>
+                          <div class="virusDocParagraph" id="virusDocParagraph2">
+                            <p class="virusDocLine virusDocParagraph2Line" id="virusDocParagraph2Line1"><span class="virusDocWord" id="virusDocWord29">Never </span><span class="virusDocWord" id="virusDocWord30">be </span><span class="virusDocWord" id="virusDocWord31">said </span><span class="virusDocWord" id="virusDocWord32">and </span><span class="virusDocWord" id="virusDocWord33">done</span></p>
+                            <p class="virusDocLine virusDocParagraph2Line" id="virusDocParagraph2Line2"><span class="virusDocWord" id="virusDocWord34">We're </span><span class="virusDocWord" id="virusDocWord35">still </span><span class="virusDocWord" id="virusDocWord36">out </span><span class="virusDocWord" id="virusDocWord37">here </span><span class="virusDocWord" id="virusDocWord38">on </span><span class="virusDocWord" id="virusDocWord39">the </span><span class="virusDocWord" id="virusDocWord40">run</span></p>
+                            <p class="virusDocLine virusDocParagraph2Line" id="virusDocParagraph2Line3"><span class="virusDocWord" id="virusDocWord41">So </span><span class="virusDocWord" id="virusDocWord42">let's </span><span class="virusDocWord" id="virusDocWord43">live </span><span class="virusDocWord" id="virusDocWord44">while </span><span class="virusDocWord" id="virusDocWord45">we </span><span class="virusDocWord" id="virusDocWord46">still </span><span class="virusDocWord" id="virusDocWord47">have</span></p>
+                            <p class="virusDocLine virusDocParagraph2Line" id="virusDocParagraph2Line4"><span class="virusDocWord" id="virusDocWord48">the </span><span id="fireworkSun"><span class="virusDocWord" id="virusDocWord49"><span class="virusDocLetter" id="virusDocLetter1">F</span><span class="virusDocLetter" id="virusDocLetter2">I</span><span class="virusDocLetter" id="virusDocLetter3">R</span><span class="virusDocLetter" id="virusDocLetter4">E</span><span class="virusDocLetter" id="virusDocLetter5">W</span><span class="virusDocLetter" id="virusDocLetter6">O</span><span class="virusDocLetter" id="virusDocLetter7">R</span><span class="virusDocLetter" id="virusDocLetter8">K </span></span><span class="virusDocWord" id="virusDocWord50"><span class="virusDocLetter" id="virusDocLetter9">S</span><span class="virusDocLetter" id="virusDocLetter10">U</span><span class="virusDocLetter" id="virusDocLetter11">N</span></span></span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="virusWindowControls" id="virusDocControls">
+                    <button type="button" title="Minimize" class="virusWindowControl virusDocControl virusWindowMinimize" id="virusDocMinimize" tabindex="-1" role="button" aria-label="Minimize the doc window" onclick="windowMinimize('doc')">&mdash;</button>
+                    <button type="button" title="Resize (fullscreen)" class="virusWindowControl virusDocControl virusWindowResize" id="virusDocResize" tabindex="-1" role="button" aria-label="Resize the doc window to fullscreen" onclick="windowResize('doc')">&#9723;</button>
+                    <button type="button" title="Close" class="virusWindowControl virusDocControl virusWindowClose" id="virusDocClose" tabindex="-1" role="button" aria-label="Close the doc window" onclick="windowClose('doc')">&times;</button>
+                  </div>
+                </div>
+                <div class="virusWindowCont" id="virusDistractionCont" role="region" aria-description="A pointless distraction" onmousedown="pressMouse('distraction', event)" onmouseup="liftMouse()" onmouseleave="liftMouse()" onmousemove="windowDrag('distraction', event)">
+                  <div class="virusWindow" id="virusDistraction">
+                    <p id="virusDistractionMessage">LOOK OVER HERE!!</p>
+                  </div>
+                  <div class="virusWindowControls" id="virusDistractionControls">
+                    <button type="button" title="Minimize" class="virusWindowControl virusDistractionControl virusWindowMinimize" id="virusDistractionMinimize" tabindex="-1" role="button" aria-label="Minimize the distraction window" onclick="windowMinimize('distraction')">&mdash;</button>
+                    <button type="button" title="Resize (fullscreen)" class="virusWindowControl virusDistractionControl virusWindowResize" id="virusDistractionResize" tabindex="-1" role="button" aria-label="Resize the distraction window to fullscreen" onclick="windowResize('distraction')">&#9723;</button>
+                    <button type="button" title="Close" class="virusWindowControl virusDistractionControl virusWindowClose" id="virusDistractionClose" tabindex="-1" role="button" aria-label="Close the distraction window" onclick="windowClose('distraction')">&times;</button>
+                  </div>
+                </div>
+                <div class="virusWindowCont" id="virusAntivirusCont" role="region" aria-description="A totally safe antivirus program" onmousedown="pressMouse('antivirus', event)" onmouseup="liftMouse()" onmouseleave="liftMouse()" onmousemove="windowDrag('antivirus', event)">
+                  <div class="virusWindow" id="virusAntivirus">
+                    <p id="virusAntivirusMessage">Neon Antivirus has detected no viruses outside of the required ones on this computer!</p>
+                    <br>
+                    <button type="button" id="virusAntivirusButton" tabindex="-1" role="button" aria-label="Accept the viruses on your computer" onclick="windowClose('antivirus')">OKAY</button>
+                  </div>
+                  <div class="virusWindowControls" id="virusAntivirusControls">
+                    <button type="button" title="Minimize" class="virusWindowControl virusAntivirusControl virusWindowMinimize" id="virusAntivirusMinimize" tabindex="-1" role="button" aria-label="Minimize the antivirus window" onclick="windowMinimize('antivirus')">&mdash;</button>
+                    <button type="button" title="Resize (fullscreen)" class="virusWindowControl virusAntivirusControl virusWindowResize" id="virusAntivirusResize" tabindex="-1" role="button" aria-label="Resize the antivirus window to fullscreen" onclick="windowResize('antivirus')">&#9723;</button>
+                    <button type="button" title="Close" class="virusWindowControl virusAntivirusControl virusWindowClose" id="virusAntivirusClose" tabindex="-1" role="button" aria-label="Close the antivirus window" onclick="windowClose('antivirus')">&times;</button>
+                  </div>
+                </div>
+                <div class="virusWindowCont" id="virusWallpaperCont" role="region" aria-description="A place to download the Neon wallpaper" onmousedown="pressMouse('wallpaper', event)" onmouseup="liftMouse()" onmouseleave="liftMouse()" onmousemove="windowDrag('wallpaper', event)">
+                  <div class="virusWindow" id="virusWallpaper">
+                    <p id="virusWallpaperMessage">TRY OUT ONE OF MY WALLPAPERS FOR YOUR DESKTOP!</p>
+                    <div id="virusWallpaperButtonsCont">
+                      <p id="virusWallpaperButtonsMessage">(YOU DON'T ACTUALLY HAVE A CHOICE, BTW, JUST SAY YES)</p>
+                      <div id="virusWallpaperButtons">
+                        <div class="virusWallpaperButtonCont" id="acceptWallpaperCont">
+                          <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="acceptWallpaper" tabindex="-1" role="button" aria-label="Download the Neon wallpaper" onclick="acceptWallpaper()">HELL YEAH!!</button>
+                        </div>
+                        <div class="virusWallpaperButtonCont" id="declineWallpaperCont">
+                          <button type="submit" name="wallpaper" value="accept" class="virusWallpaperButton" id="declineWallpaper" tabindex="-1" role="button" aria-label="Don't (not) download the Neon wallpaper" onclick="declineWallpaper()">NO THANKS...</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="virusWindowControls" id="virusWallpaperControls">
+                    <button type="button" title="Minimize" class="virusWindowControl virusWallpaperControl virusWindowMinimize" id="virusWallpaperMinimize" tabindex="-1" role="button" aria-label="Minimize the wallpaper window" onclick="windowMinimize('wallpaper')">&mdash;</button>
+                    <button type="button" title="Resize (fullscreen)" class="virusWindowControl virusWallpaperControl virusWindowResize" id="virusWallpaperResize" tabindex="-1" role="button" aria-label="Resize the wallpaper window to fullscreen" onclick="windowResize('wallpaper')">&#9723;</button>
+                    <button type="button" title="Close" class="virusWindowControl virusWallpaperControl virusWindowClose" id="virusWallpaperClose" tabindex="-1" role="button" aria-label="Close the wallpaper window" onclick="windowClose('wallpaper')">&times;</button>
+                  </div>
+                </div>
+                <div class="virusWindowCont" id="virusErrorCont" role="region" aria-description="A fatal error that is causing your computer to implode" onmousedown="pressMouse('error', event)" onmouseup="liftMouse()" onmouseleave="liftMouse()" onmousemove="windowDrag('error', event)">
+                  <div class="virusWindow" id="virusError">
+                    <p id="virusErrorHeading">FATAL ERROR:</p>
+                    <div id="virusErrorMessages">
+                      <p class="virusErrorMessage" id="virusErrorMessage1">THE DESIRED WALLPAPER IMAGE IS SO STUPIDLY CORRUPTED, IT'S CRAZY</p>
+                      <br>
+                      <p class="virusErrorMessage" id="virusErrorMessage2">COMPUTER SYSTEM WILL NOW <b>IMPLODE</b></p>
+                    </div>
                   </div>
                 </div>
               </div>

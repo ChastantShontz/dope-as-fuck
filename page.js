@@ -8924,7 +8924,7 @@ function youtubeJump(event) {
   if (sessionStorage.mousePressed == undefined) {
     sessionStorage.mousePressed = false;
   }
-  sessionStorage.progressSeek = (100 - (((event.clientX - (event.target).getBoundingClientRect().left) / ((event.target).getBoundingClientRect().right - (event.target).getBoundingClientRect().left)) * 100));
+  sessionStorage.progressSeek = (100 - (((event.clientX - (event.target).getBoundingClientRect().left) / (getComputedStyle(event.target).getPropertyValue("width")).replace(/px/sm, "")) * 100));
   document.getElementById("youtubeSeek").style.right = sessionStorage.progressSeek + "%";
   if (Number(sessionStorage.progress) < Number(sessionStorage.progressSeek)) {
     if (sessionStorage.mousePressed == String(false)) {
@@ -8940,9 +8940,9 @@ function youtubeJump(event) {
   }
   document.getElementById("youtubeSeek").style.transition = "all 0s ease 0s";
   if ((event.type == "mousedown") || (event.type == "mousemove")) {
-    sessionStorage.seekTime = String(Math.floor((((event.clientX - (event.target).getBoundingClientRect().left) / ((event.target).getBoundingClientRect().right - (event.target).getBoundingClientRect().left)) * sessionStorage.duration) / 60)).padStart(2, "0") + ":" + String(Math.floor((((event.clientX - (event.target).getBoundingClientRect().left) / ((event.target).getBoundingClientRect().right - (event.target).getBoundingClientRect().left)) * sessionStorage.duration) % 60)).padStart(2, "0");
+    sessionStorage.seekTime = String(Math.floor((((event.clientX - (event.target).getBoundingClientRect().left) / (getComputedStyle(event.target).getPropertyValue("width")).replace(/px/sm, "")) * sessionStorage.duration) / 60)).padStart(2, "0") + ":" + String(Math.floor((((event.clientX - (event.target).getBoundingClientRect().left) / (getComputedStyle(event.target).getPropertyValue("width")).replace(/px/sm, "")) * sessionStorage.duration) % 60)).padStart(2, "0");
     if (sessionStorage.mousePressed == String(true)) {
-      sessionStorage.progress = (100 - (((event.clientX - (event.target).getBoundingClientRect().left) / ((event.target).getBoundingClientRect().right - (event.target).getBoundingClientRect().left)) * 100));
+      sessionStorage.progress = (100 - (((event.clientX - (event.target).getBoundingClientRect().left) / (getComputedStyle(event.target).getPropertyValue("width")).replace(/px/sm, "")) * 100));
     }
   }
   else if (event.type == "keydown") {

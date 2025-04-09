@@ -5682,7 +5682,7 @@
             function advertisement() {
               for (var i = 0; i < document.getElementsByClassName("virusAdvertisementControl").length; i++) {
                 if (document.getElementsByClassName("virusAdvertisementControl")[i].style.pointerEvents == "none") {
-                  document.getElementsByClassName("virusAdvertisementControl")[i].style.pointerEvents = "auto";
+                  document.getElementsByClassName("virusAdvertisementControl")[i].style.pointerEvents = null;
                 }
                 document.getElementsByClassName("virusAdvertisementControl")[i].tabIndex = "0";
               }
@@ -5700,7 +5700,7 @@
               document.getElementById("virusAdvertisementCont").style.transition = "transform .5s ease 0s";
               document.getElementById("virusAdvertisementCont").tabIndex = "0";
               sessionStorage.advertisementSize = "smallScreen";
-              sessionStorage.advertisementPosition = JSON.stringify(["25%", "42%", "auto", "15%"]);
+              sessionStorage.advertisementPosition = JSON.stringify(["25%", "42%", null, "15%"]);
             }
 
             function advertisement2(method) {
@@ -5805,7 +5805,7 @@
               document.getElementById("virusDistractionCont").style.transition = "transform .5s ease 0s";
               document.getElementById("virusDistractionCont").tabIndex = "0";
               sessionStorage.distractionSize = "smallScreen";
-              sessionStorage.distractionPosition = JSON.stringify(["1em", "calc(80% - 1em)", "auto", "1em"]);
+              sessionStorage.distractionPosition = JSON.stringify(["1em", "calc(80% - 1em)", null, "1em"]);
             }
 
             function antivirus() {
@@ -5827,7 +5827,7 @@
               document.getElementById("virusAntivirusCont").style.transition = "transform .5s ease 0s";
               document.getElementById("virusAntivirusCont").tabIndex = "0";
               sessionStorage.antivirusSize = "smallScreen";
-              sessionStorage.antivirusPosition = JSON.stringify(["75%", "0", "auto", "0"]);
+              sessionStorage.antivirusPosition = JSON.stringify(["75%", "0", null, "0"]);
             }
 
             function wallpaper() {
@@ -5882,7 +5882,7 @@
               document.getElementById("virusErrorCont").style.transition = "transform .5s ease 0s";
               document.getElementById("virusErrorCont").tabIndex = "0";
               sessionStorage.wallpaperSize = "smallScreen";
-              sessionStorage.wallpaperPosition = JSON.stringify(["25%", "25%", "33%", "auto"]);
+              sessionStorage.wallpaperPosition = JSON.stringify(["25%", "25%", "33%", null]);
             }
 
             function windowMinimize(element) {
@@ -5890,7 +5890,7 @@
                 sessionStorage.hierarchy = document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex;
                 for (var i = 0; i < document.getElementsByClassName("virusWindowCont").length; i++) {
                   if (document.getElementsByClassName("virusWindowCont")[i] == document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont")) {
-                    document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex = "auto";
+                    document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex = null;
                   }
                   else {
                     if ((document.getElementsByClassName("virusWindowCont")[i].style.transform != "") && (document.getElementsByClassName("virusWindowCont")[i].style.transform != "scale(0)")) {
@@ -5935,10 +5935,10 @@
             }
 
             function windowResizeShrink(element) {
-              eval("document.getElementById(\"virus\" + (element.charAt(0)).toUpperCase() + element.substring(1) + \"Cont\").style.left = JSON.parse(sessionStorage." + element + "Position)[0]");
-              eval("document.getElementById(\"virus\" + (element.charAt(0)).toUpperCase() + element.substring(1) + \"Cont\").style.right = JSON.parse(sessionStorage." + element + "Position)[1]");
-              eval("document.getElementById(\"virus\" + (element.charAt(0)).toUpperCase() + element.substring(1) + \"Cont\").style.top = JSON.parse(sessionStorage." + element + "Position)[2]");
-              eval("document.getElementById(\"virus\" + (element.charAt(0)).toUpperCase() + element.substring(1) + \"Cont\").style.bottom = JSON.parse(sessionStorage." + element + "Position)[3]");
+              eval("document.getElementById(\"virus\" + (element.charAt(0)).toUpperCase() + element.substring(1) + \"Cont\").style.left = ((JSON.parse(sessionStorage." + element + "Position)[0] == null) ? (\"auto\") : (JSON.parse(sessionStorage." + element + "Position)[0]))");
+              eval("document.getElementById(\"virus\" + (element.charAt(0)).toUpperCase() + element.substring(1) + \"Cont\").style.right = ((JSON.parse(sessionStorage." + element + "Position)[1] == null) ? (\"auto\") : (JSON.parse(sessionStorage." + element + "Position)[1]))");
+              eval("document.getElementById(\"virus\" + (element.charAt(0)).toUpperCase() + element.substring(1) + \"Cont\").style.top = ((JSON.parse(sessionStorage." + element + "Position)[2] == null) ? (\"auto\") : (JSON.parse(sessionStorage." + element + "Position)[2]))");
+              eval("document.getElementById(\"virus\" + (element.charAt(0)).toUpperCase() + element.substring(1) + \"Cont\").style.bottom = ((JSON.parse(sessionStorage." + element + "Position)[3] == null) ? (\"auto\") : (JSON.parse(sessionStorage." + element + "Position)[3]))");
               document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.borderRadius = ".5em";
               document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.transition = "all .5s ease 0s";
               document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Resize").innerHTML = "&#9723;";
@@ -5984,7 +5984,7 @@
                 sessionStorage.hierarchy = document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex;
                 for (var i = 0; i < document.getElementsByClassName("virusWindowCont").length; i++) {
                   if (document.getElementsByClassName("virusWindowCont")[i] == document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont")) {
-                    document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex = "auto";
+                    document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex = null;
                   }
                   else {
                     if ((document.getElementsByClassName("virusWindowCont")[i].style.transform != "") && (document.getElementsByClassName("virusWindowCont")[i].style.transform != "scale(0)")) {

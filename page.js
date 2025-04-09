@@ -8509,11 +8509,11 @@ function openYoutubeSong() {
     document.getElementsByClassName("audio")[sessionStorage.youtube].onended = closeYoutubeSong;
   }
   else if (songs[sessionStorage.youtube].duration >= 3600) {
-    error();
+    youtubeError();
   }
 }
 
-function error() {
+function youtubeError() {
   let duration = new RangeError("YouTube song " + (songs[sessionStorage.youtube].title).replace(/<\/*(b|strong|i|em|u|s|br)>/gism, "") + " duration of " + Math.floor(songs[sessionStorage.youtube].duration / 3600) + ((Math.floor(songs[sessionStorage.youtube].duration / 3600) == 1) ? (" hour, ") : (" hours, ")) + Math.floor((songs[sessionStorage.youtube].duration % 3600) / 60) + ((Math.floor((songs[sessionStorage.youtube].duration % 3600) / 60) == 1) ? (" minute, ") : (" minutes, ")) + Math.floor((songs[sessionStorage.youtube].duration % 3600) % 60) + ((Math.floor((songs[sessionStorage.youtube].duration % 3600) % 60) == 1) ? (" second") : (" seconds")) + " is greater than the 1 hour max limit.");
   duration.fileName = "https://chastantshontz.github.io/dope-as-fuck/page.js";
   duration.lineNumber = ((duration.lineNumber == undefined) ? (null) : (duration.lineNumber - 5));
@@ -8523,7 +8523,7 @@ function error() {
       function: openYoutubeSong,
       code: `
 \telse if (songs[sessionStorage.youtube].duration >= 3600) {\n
-\t\terror();\n
+\t\tyoutubeError();\n
 \t}
       `,
       value: songs[sessionStorage.youtube].duration,

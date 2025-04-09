@@ -4812,8 +4812,8 @@
             }
 
             #virusIntroCont {
-              left: 33%;
-              right: 2.5%;
+              left: calc(33% - 2em);
+              right: 2em;
               top: 5%;
               bottom: 5%;
               padding-top: 2em;
@@ -5707,7 +5707,7 @@
               introFirstMessage();
               setTimeout(introSecondMessage, 2250);
               sessionStorage.introSize = "smallScreen";
-              sessionStorage.introPosition = JSON.stringify(["33%", "2.5%", "5%", "5%"]);
+              sessionStorage.introPosition = JSON.stringify(["calc(33% - 2em)", "2em", "5%", "5%"]);
             }
 
             function introFirstMessage() {

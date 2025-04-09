@@ -3491,7 +3491,7 @@ function gameBegins(event) {
   }
   accountUpdate(0, "check");
   remember(event);
-  setInterval(rememberGameTime, 1000);
+  sessionStorage.rememberGameTimeInterval = setInterval(rememberGameTime, 1000);
   cookie();
   document.body.style.cursor = "auto";
   if (sessionStorage.loadIncrementInterval != undefined) {
@@ -13888,6 +13888,7 @@ function destroySecret() {
 
 function virus() {
   console.clear();
+  clearInterval(sessionStorage.rememberGameTimeInterval);
   sessionStorage.clear();
   localStorage.clear();
   let expiration = new Date();

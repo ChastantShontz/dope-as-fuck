@@ -6136,7 +6136,7 @@
             }
 
             function pressMouse(element, event) {
-              if (!(document.elementsFromPoint(event.clientX, event.clientY).includes(document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Controls")))) {
+              if ((document.elementsFromPoint(event.clientX, event.clientY)[0].classList.contains("virusWindowCont")) && (!(document.elementsFromPoint(event.clientX, event.clientY).includes(document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Controls"))))) {
                 sessionStorage.mousePressed = true;
                 if (document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex < 7) {
                   sessionStorage.hierarchy = document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex;

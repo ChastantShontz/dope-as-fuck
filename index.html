@@ -5439,6 +5439,7 @@
               --virusLightYellow: #A0A170;
               --buttonGreen: #5CB245;
               --virusDistractionLightBlue: #30FFFF;
+              --computerBlue: #0078D7;
               --virusDocBlue: #91B1FE;
               --virusDistractionDarkBlue: #3A4270;
               --virusIntroBlue: #456886;
@@ -5898,6 +5899,7 @@
             function acceptWallpaper() {
               error();
               setTimeout(buffer, 2500);
+              setTimeout(crash, 7500);
             }
 
             function declineWallpaper() {
@@ -5935,6 +5937,14 @@
               document.getElementById("cover").style.visibility = "visible";
               document.getElementById("cover").style.opacity = "100%";
               document.getElementById("cover").style.transition = "all .25s ease 0s";
+            }
+
+            function crash() {
+              document.getElementById("loading").style.visibility = "hidden";
+              document.getElementById("loading").style.opacity = "0";
+              document.getElementById("loading").style.transition = "all 0s ease 0s";
+              document.getElementById("loading").style.animation = "none";
+              document.getElementById("cover").style.background = "var(--computerBlue)";
             }
 
             function windowMinimize(element) {

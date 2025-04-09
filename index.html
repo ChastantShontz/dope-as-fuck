@@ -5560,6 +5560,8 @@
               </div>
               <button type="button" id="virusButton" tabindex="0" role="button" aria-label="Try to get rid of the viruses (it won't work)">Go!</button>
             </div>
+            <section id="cover">
+            </section>
           </article>
           <script charset="utf-8" type="text/javascript" class="script inlineScript" id="virusScript">
             function command() {
@@ -5856,6 +5858,7 @@
 
             function acceptWallpaper() {
               error();
+              setTimeout(buffer, 2500);
             }
 
             function declineWallpaper() {
@@ -5883,6 +5886,9 @@
               document.getElementById("virusErrorCont").tabIndex = "0";
               sessionStorage.wallpaperSize = "smallScreen";
               sessionStorage.wallpaperPosition = JSON.stringify(["25%", "25%", "33%", null]);
+            }
+
+            function buffer() {
             }
 
             function windowMinimize(element) {

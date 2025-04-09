@@ -1427,6 +1427,10 @@ let quotes = [
     author: "<b>Chestnut</b>"
   },
   {
+    line: "All these people are as weird as I am, wow...",
+    author: "<b>Logan</b>"
+  },
+  {
     line: "Always go hard at Eben's.",
     author: "<b>Joe Mama</b>"
   },
@@ -1679,6 +1683,10 @@ let quotes = [
     author: "<b>Liam</b>"
   },
   {
+    line: "I can put it in without you ever knowing.",
+    author: "an anonymous alum at COGO"
+  },
+  {
     line: "I can't smell the smoke.",
     author: "<b>Brian Manning</b> referring to the smoke detector"
   },
@@ -1799,6 +1807,10 @@ let quotes = [
     author: "<b>Chestnut</b>"
   },
   {
+    line: "I love watching a baritone get manhandled.",
+    author: "<b>Logan</b>"
+  },
+  {
     line: "I'm a fucking furry!",
     author: "<b>Chestnut</b>"
   },
@@ -1901,6 +1913,10 @@ let quotes = [
   {
     line: "I swear, the only time I'll ever get quoted by Brandon is if it's my obituary.",
     author: "<b>Audrey</b>"
+  },
+  {
+    line: "I think he's getting jiggy with it.",
+    author: "<b>Nathan Gaylord</b>"
   },
   {
     line: "I thought women were the ones who talked about their feelings.",
@@ -2025,6 +2041,10 @@ let quotes = [
   {
     line: "Is she having an orgasm right now?",
     author: "<b>Jonas</b>"
+  },
+  {
+    line: "Is that a deer?",
+    author: "<b>CAMPO</b> pointing at (a well-lit) Logan"
   },
   {
     line: "Is this Charmin? 'Cause this is good shit.",
@@ -2283,6 +2303,10 @@ let quotes = [
     author: "<b>Colin Patricelli</b>"
   },
   {
+    line: "Somebody told me he wrote the intro to <i>Bluey</i>.",
+    author: "<b>Brian Manning</b> thinking Nathan Gaylord wrote its theme song"
+  },
+  {
     line: "Spank me!",
     author: "<b>Chestnut</b>"
   },
@@ -2291,8 +2315,8 @@ let quotes = [
     author: "<b>Brandon</b>"
   },
   {
-    line: "Stop edging the AC duct.",
-    author: "<b>Declan</b>"
+    line: "<span class=\"quoteLine\" id=\"quoteLine1\">Stop edging the AC duct.</span><br><span class=\"quoteLine\" id=\"quoteLine2\">It's called fingerblasting!</span>",
+    author: "<b>Declan</b> and <b>Nathan Gaylord</b>"
   },
   {
     line: "Stop gurgling, just swallow, please.",
@@ -2531,8 +2555,8 @@ let quotes = [
     author: "a security guard to Brom"
   },
   {
-    line: "Your mom's a problem.",
-    author: "<b>Eric Laferriere</b>"
+    line: "<span class=\"quoteLine\" id=\"quoteLine1\">Your mom's a problem.</span><br><span class=\"quoteLine\" id=\"quoteLine2\">My mom's dead!</span>",
+    author: "<b>Eric Laferriere</b> and <b>Nathan Gaylord</b>"
   },
   {
     line: "Zamboni the McChicken.",

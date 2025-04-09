@@ -4805,7 +4805,6 @@
               border-radius: .5em;
               background: var(--virusDarkYellow);
               padding: .5em;
-              padding-top: 2em;
               border: .2em solid var(--virusLightYellow);
               transform: scale(0);
             }
@@ -4815,12 +4814,14 @@
               right: 2.5%;
               top: 5%;
               bottom: 5%;
+              padding-top: 2em;
             }
 
             #virusAdvertisementCont {
               left: 25%;
               right: 42%;
               bottom: 15%;
+              padding-top: 2em;
             }
 
             #virusDocCont {
@@ -4828,18 +4829,21 @@
               right: 16.5%;
               top: 5%;
               bottom: 5%;
+              padding-top: 2em;
             }
 
             #virusDistractionCont {
               left: 1em;
               right: calc(80% - 1em);
               bottom: 1em;
+              padding-top: 2em;
             }
 
             #virusAntivirusCont {
               left: 75%;
               right: 0;
               bottom: 0;
+              padding-top: 2em;
             }
 
             #virusWallpaperCont {
@@ -4847,6 +4851,13 @@
               right: 37.5%;
               top: 10%;
               bottom: 10%;
+              padding-top: 2em;
+            }
+
+            #virusErrorCont {
+              left: 25%;
+              right: 25%;
+              top: 33%;
             }
 
             .virusWindow {
@@ -4893,6 +4904,11 @@
               background: var(--virusWhite);
               padding: 1em;
               align-items: center;
+            }
+
+            #virusError {
+              background: var(--virusWhite);
+              padding: 1em;
             }
 
             .virusIntroMessage {
@@ -5227,6 +5243,23 @@
               margin-top: .2em;
             }
 
+            #virusErrorHeading {
+              margin-top: 0;
+              margin-bottom: .25em;
+              font-family: "Aldrich", "Lekton", "Fira Mono", monospace;
+              color: var(--errorRed);
+              font-size: 1.5em;
+              font-weight: bold;
+            }
+
+            .virusErrorMessage {
+              margin-top: 0;
+              margin-bottom: 0;
+              font-family: "Aldrich", "Lekton", "Fira Mono", monospace;
+              color: var(--virusDarkGray);
+              font-size: 1.25em;
+            }
+
             .virusWindowControls {
               display: grid;
               grid-template-columns: repeat(3, 1fr);
@@ -5365,6 +5398,7 @@
 
             :root {
               --exitRed: #B30E0F;
+              --errorRed: #F21515;
               --virusDarkYellow: #7E7C4B;
               --virusLightYellow: #A0A170;
               --buttonGreen: #5CB245;
@@ -5381,7 +5415,7 @@
           </style>
         </head>
         <body>
-          <article id="virus" tabindex="0" role="article" aria-description="The virus that is taking over your computer...">
+          <article id="virus" tabindex="0" role="article" aria-description="The virus that is taking over your computer">
             <section id="virusBackground">
               <div class="virusWindowCont" id="virusIntroCont" role="region" aria-description="An introductory message from Neon Nothing">
                 <div class="virusWindow" id="virusIntro">
@@ -5510,6 +5544,16 @@
                   <button type="button" title="Close" class="virusWindowControl virusWallpaperControl virusWindowClose" id="virusWallpaperClose" tabindex="-1" role="button" aria-label="Close the wallpaper window" onclick="windowClose('wallpaper')">&times;</button>
                 </div>
               </div>
+              <div class="virusWindowCont" id="virusErrorCont" role="region" aria-description="A fatal error that is causing your computer to implode">
+                <div class="virusWindow" id="virusError">
+                  <p id="virusErrorHeading">FATAL ERROR:</p>
+                  <div id="virusErrorMessages">
+                    <p class="virusErrorMessage" id="virusErrorMessage1">THE DESIRED WALLPAPER IMAGE IS SO STUPIDLY CORRUPTED, IT'S CRAZY</p>
+                    <br>
+                    <p class="virusErrorMessage" id="virusErrorMessage2">COMPUTER SYSTEM WILL NOW <b>IMPLODE</b></p>
+                  </div>
+                </div>
+              </div>
             </section>
             <div id="virusToolbarCont">
               <div id="virusToolbar">
@@ -5597,7 +5641,7 @@
               }
               for (var i = 0; i < document.getElementsByClassName("virusWindowCont").length; i++) {
                 if (document.getElementsByClassName("virusWindowCont")[i] == document.getElementById("virusIntroCont")) {
-                  document.getElementById("virusIntroCont").style.zIndex = "6";
+                  document.getElementById("virusIntroCont").style.zIndex = "7";
                 }
                 else {
                   if ((document.getElementsByClassName("virusWindowCont")[i].style.transform != "") && (document.getElementsByClassName("virusWindowCont")[i].style.transform != "scale(0)")) {
@@ -5644,7 +5688,7 @@
               }
               for (var i = 0; i < document.getElementsByClassName("virusWindowCont").length; i++) {
                 if (document.getElementsByClassName("virusWindowCont")[i] == document.getElementById("virusAdvertisementCont")) {
-                  document.getElementById("virusAdvertisementCont").style.zIndex = "6";
+                  document.getElementById("virusAdvertisementCont").style.zIndex = "7";
                 }
                 else {
                   if ((document.getElementsByClassName("virusWindowCont")[i].style.transform != "") && (document.getElementsByClassName("virusWindowCont")[i].style.transform != "scale(0)")) {
@@ -5709,7 +5753,7 @@
               }
               for (var i = 0; i < document.getElementsByClassName("virusWindowCont").length; i++) {
                 if (document.getElementsByClassName("virusWindowCont")[i] == document.getElementById("virusDocCont")) {
-                  document.getElementById("virusDocCont").style.zIndex = "6";
+                  document.getElementById("virusDocCont").style.zIndex = "7";
                 }
                 else {
                   if ((document.getElementsByClassName("virusWindowCont")[i].style.transform != "") && (document.getElementsByClassName("virusWindowCont")[i].style.transform != "scale(0)")) {
@@ -5749,7 +5793,7 @@
               }
               for (var i = 0; i < document.getElementsByClassName("virusWindowCont").length; i++) {
                 if (document.getElementsByClassName("virusWindowCont")[i] == document.getElementById("virusDistractionCont")) {
-                  document.getElementById("virusDistractionCont").style.zIndex = "6";
+                  document.getElementById("virusDistractionCont").style.zIndex = "7";
                 }
                 else {
                   if ((document.getElementsByClassName("virusWindowCont")[i].style.transform != "") && (document.getElementsByClassName("virusWindowCont")[i].style.transform != "scale(0)")) {
@@ -5770,7 +5814,7 @@
               }
               for (var i = 0; i < document.getElementsByClassName("virusWindowCont").length; i++) {
                 if (document.getElementsByClassName("virusWindowCont")[i] == document.getElementById("virusAntivirusCont")) {
-                  document.getElementById("virusAntivirusCont").style.zIndex = "6";
+                  document.getElementById("virusAntivirusCont").style.zIndex = "7";
                 }
                 else {
                   if ((document.getElementsByClassName("virusWindowCont")[i].style.transform != "") && (document.getElementsByClassName("virusWindowCont")[i].style.transform != "scale(0)")) {
@@ -5795,7 +5839,7 @@
               }
               for (var i = 0; i < document.getElementsByClassName("virusWindowCont").length; i++) {
                 if (document.getElementsByClassName("virusWindowCont")[i] == document.getElementById("virusWallpaperCont")) {
-                  document.getElementById("virusWallpaperCont").style.zIndex = "6";
+                  document.getElementById("virusWallpaperCont").style.zIndex = "7";
                 }
                 else {
                   if ((document.getElementsByClassName("virusWindowCont")[i].style.transform != "") && (document.getElementsByClassName("virusWindowCont")[i].style.transform != "scale(0)")) {
@@ -5811,6 +5855,7 @@
             }
 
             function acceptWallpaper() {
+              error();
             }
 
             function declineWallpaper() {
@@ -5820,6 +5865,24 @@
               document.getElementById("declineWallpaper").tabIndex = "-1";
               document.getElementById("declineWallpaper").disabled = true;
               document.getElementById("declineWallpaper").blur();
+            }
+
+            function error() {
+              for (var i = 0; i < document.getElementsByClassName("virusWindowCont").length; i++) {
+                if (document.getElementsByClassName("virusWindowCont")[i] == document.getElementById("virusErrorCont")) {
+                  document.getElementById("virusErrorCont").style.zIndex = "7";
+                }
+                else {
+                  if ((document.getElementsByClassName("virusWindowCont")[i].style.transform != "") && (document.getElementsByClassName("virusWindowCont")[i].style.transform != "scale(0)")) {
+                    document.getElementsByClassName("virusWindowCont")[i].style.zIndex = (document.getElementsByClassName("virusWindowCont")[i].style.zIndex - 1);
+                  }
+                }
+              }
+              document.getElementById("virusErrorCont").style.transform = "scale(100%)";
+              document.getElementById("virusErrorCont").style.transition = "transform .5s ease 0s";
+              document.getElementById("virusErrorCont").tabIndex = "0";
+              sessionStorage.wallpaperSize = "smallScreen";
+              sessionStorage.wallpaperPosition = JSON.stringify(["25%", "25%", "25%", "25%"]);
             }
 
             function windowMinimize(element) {
@@ -5885,11 +5948,11 @@
             }
 
             function windowResizeGrow(element) {
-              if (document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex < 6) {
+              if (document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex < 7) {
                 sessionStorage.hierarchy = document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex;
                 for (var i = 0; i < document.getElementsByClassName("virusWindowCont").length; i++) {
                   if (document.getElementsByClassName("virusWindowCont")[i] == document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont")) {
-                    document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex = "6";
+                    document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex = "7";
                   }
                   else {
                     if ((document.getElementsByClassName("virusWindowCont")[i].style.transform != "") && (document.getElementsByClassName("virusWindowCont")[i].style.transform != "scale(0)")) {

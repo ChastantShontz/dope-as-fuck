@@ -5365,7 +5365,7 @@
               cursor: pointer;
             }
 
-            #cover {
+            #virusCover {
               display: flex;
               flex-direction: row;
               justify-content: center;
@@ -5380,7 +5380,7 @@
               align-items: center;
             }
 
-            #loading {
+            #virusLoading {
               visibility: hidden;
               position: absolute;
               border-radius: 50%;
@@ -5391,6 +5391,12 @@
               border-top: .5em solid var(--virusLightGray);
               border-right: .5em solid var(--virusLightGray);
               border-bottom: .5em solid transparent;
+            }
+
+            #virusMessages {
+              position: absolute;
+              visibility: hidden;
+              opacity: 0;
             }
 
             @keyframes wobble {
@@ -5602,7 +5608,12 @@
             <section id="virusCover">
               <div id="virusLoading">
               </div>
-              <div id="">
+              <div id="virusMessages">
+                <p class="virusMessage" id="virusMessage1">A fatal error has occured.</p>
+                <br>
+                <p class="virusMessage" id="virusMessage2">Tell your computer to just...get better or something lol</p>
+                <br>
+                <p class="virusMessage" id="virusMessage3">Error code: 121924</p>
               </div>
             </section>
           </article>
@@ -5928,6 +5939,9 @@
               document.getElementById("virusLoading").style.opacity = "0";
               document.getElementById("virusLoading").style.transition = "all 0s ease 0s";
               document.getElementById("virusLoading").style.animation = "none";
+              document.getElementById("virusMessages").style.visibility = "visible";
+              document.getElementById("virusMessages").style.opacity = "100%";
+              document.getElementById("virusMessages").style.transition = "all 0s ease 0s";
               document.getElementById("virusCover").style.background = "var(--computerBlue)";
             }
 

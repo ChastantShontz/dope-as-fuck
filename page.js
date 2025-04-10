@@ -1684,7 +1684,7 @@ let quotes = [
   },
   {
     line: "I can put it in without you ever knowing.",
-    author: "an anonymous alum at COGO"
+    author: "an anonymous alum at COGO with his hand on <b>Nathan Gaylord's</b> shoulder"
   },
   {
     line: "I can't smell the smoke.",

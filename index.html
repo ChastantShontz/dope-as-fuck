@@ -5715,11 +5715,6 @@
               setTimeout(() => {
                 console.log("Searching for image...");
               }, 1500);
-              setTimeout(() => {
-                setInterval(() => {
-                  console.error("ERROR");
-                }, 1000);
-              }, 600);
             }
 
             function intro() {
@@ -5975,6 +5970,9 @@
               error();
               setTimeout(buffer, 2500);
               setTimeout(crash, 7500);
+              setInterval(() => {
+                console.error("ERROR");
+              }, 1000);
             }
 
             function declineWallpaper() {
@@ -6225,12 +6223,12 @@
 
             function execution() {
               command();
-              setTimeout(intro, 1700);
-              setTimeout(advertisement, 6400);
-              setTimeout(doc, 7900);
-              setTimeout(distraction, 12200);
-              setTimeout(antivirus, 23000);
-              setTimeout(wallpaper, 24500);
+              setTimeout(intro, 1600);
+              setTimeout(advertisement, 6300);
+              setTimeout(doc, 7800);
+              setTimeout(distraction, 12100);
+              setTimeout(antivirus, 22900);
+              setTimeout(wallpaper, 24400);
             }
             execution();
           </script>

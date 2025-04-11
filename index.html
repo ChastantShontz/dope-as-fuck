@@ -6167,25 +6167,25 @@
             function pressMouse(element, event) {
               if ((document.elementsFromPoint(event.clientX, event.clientY)[0].classList.contains("virusWindowCont")) && (!(document.elementsFromPoint(event.clientX, event.clientY).includes(document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Controls"))))) {
                 sessionStorage.mousePressed = true;
-                if (document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex < 7) {
-                  sessionStorage.hierarchy = document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex;
-                  for (var i = 0; i < document.getElementsByClassName("virusWindowCont").length; i++) {
-                    if (document.getElementsByClassName("virusWindowCont")[i] == document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont")) {
-                      document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex = "7";
-                    }
-                    else {
-                      if ((document.getElementsByClassName("virusWindowCont")[i].style.transform != "") && (document.getElementsByClassName("virusWindowCont")[i].style.transform != "scale(0)")) {
-                        if (document.getElementsByClassName("virusWindowCont")[i].style.zIndex > sessionStorage.hierarchy) {
-                          document.getElementsByClassName("virusWindowCont")[i].style.zIndex = (document.getElementsByClassName("virusWindowCont")[i].style.zIndex - 1);
-                        }
-                      }
-                    }
-                  }
-                }
                 sessionStorage.dragLeft = (event.clientX - (event.target).getBoundingClientRect().left);
                 sessionStorage.dragRight = ((event.target).getBoundingClientRect().right - event.clientX);
                 sessionStorage.dragTop = (event.clientY - (event.target).getBoundingClientRect().top);
                 sessionStorage.dragBottom = ((event.target).getBoundingClientRect().bottom - event.clientY);
+              }
+              if (document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex < 7) {
+                sessionStorage.hierarchy = document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex;
+                for (var i = 0; i < document.getElementsByClassName("virusWindowCont").length; i++) {
+                  if (document.getElementsByClassName("virusWindowCont")[i] == document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont")) {
+                    document.getElementById("virus" + (element.charAt(0)).toUpperCase() + element.substring(1) + "Cont").style.zIndex = "7";
+                  }
+                  else {
+                    if ((document.getElementsByClassName("virusWindowCont")[i].style.transform != "") && (document.getElementsByClassName("virusWindowCont")[i].style.transform != "scale(0)")) {
+                      if (document.getElementsByClassName("virusWindowCont")[i].style.zIndex > sessionStorage.hierarchy) {
+                        document.getElementsByClassName("virusWindowCont")[i].style.zIndex = (document.getElementsByClassName("virusWindowCont")[i].style.zIndex - 1);
+                      }
+                    }
+                  }
+                }
               }
             }
 

@@ -3592,7 +3592,7 @@ function gameBegins(event) {
     document.getElementById("mobileCharacterImgContCont").tabIndex = "0";
     document.getElementById("mobile").tabIndex = "0";
     document.getElementById("mobile").ariaHidden = false;
-    document.onclick = unselectUrl;
+    document.onclick = deselectUrl;
   }
   else if ((window.innerHeight > 600) && (window.innerWidth > 1200)) {
     if ((localStorage.checkpoint != undefined) && (localStorage.checkpoint > 0)) {
@@ -14002,7 +14002,7 @@ function mobileShrink() {
       document.getElementById("mobile").scrollTop = 0;
     }
   }
-  document.onclick = unselectUrl;
+  document.onclick = deselectUrl;
   if (document.ondblclick != null) {
     document.ondblclick = null;
   }
@@ -14150,7 +14150,7 @@ function selectUrl() {
   sessionStorage.urlSelected = true;
 }
 
-function unselectUrl(event) {
+function deselectUrl(event) {
   if (!(document.elementsFromPoint(event.clientX, event.clientY).includes(document.getElementById("url")))) {
     sessionStorage.urlSelected = false;
   }

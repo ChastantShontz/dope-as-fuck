@@ -1479,6 +1479,10 @@ let quotes = [
     author: "<b>Chestnut</b>"
   },
   {
+    line: "Big booty, big booty, big booty, big booty, big booty.",
+    author: "<b>Eric Laferriere</b>"
+  },
+  {
     line: "Bowser just fisted me.",
     author: "<b>Ethan Laferriere</b>"
   },
@@ -1707,6 +1711,10 @@ let quotes = [
     author: "<b>Chestnut</b>"
   },
   {
+    line: "I didn't wipe my ass until a month ago.",
+    author: "<b>Ryan O'Rourke</b>"
+  },
+  {
     line: "I do love me some woolly mammoth sex.",
     author: "<b>Chestnut</b>"
   },
@@ -1821,6 +1829,10 @@ let quotes = [
   {
     line: "I'm a slut for mango.",
     author: "<b>Brandon</b>"
+  },
+  {
+    line: "I'm a sock cutter, and I suck cocks.",
+    author: "<b>Tom Uhl</b>"
   },
   {
     line: "I'm an honorary white girl for the day.",

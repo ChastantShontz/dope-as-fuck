@@ -4037,6 +4037,9 @@ function changeName(event) {
   if (((event.target).innerHTML).match(/Kyle/gsm)) {
     (event.target).innerHTML = ((event.target).innerHTML).replace(/Kyle/gsm, "Sexy Leader");
   }
+  if (((event.target).innerHTML).match(/Laferriere/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Laferriere/gsm, "Lafafafa");
+  }
   if (((event.target).innerHTML).match(/\bLeo\b/gsm)) {
     (event.target).innerHTML = ((event.target).innerHTML).replace(/\bLeo\b/gsm, "Mr. Hands");
   }
@@ -4099,6 +4102,9 @@ function changeNameBack(event) {
   }
   if (((event.target).innerHTML).match(/Sexy Leader/gsm)) {
     (event.target).innerHTML = ((event.target).innerHTML).replace(/Sexy Leader/gsm, "Kyle");
+  }
+  if (((event.target).innerHTML).match(/Lafafafa/gsm)) {
+    (event.target).innerHTML = ((event.target).innerHTML).replace(/Lafafafa/gsm, "Laferriere");
   }
   if (((event.target).innerHTML).match(/Mr\. Hands/gsm)) {
     (event.target).innerHTML = ((event.target).innerHTML).replace(/Mr\. Hands/gsm, "Leo");

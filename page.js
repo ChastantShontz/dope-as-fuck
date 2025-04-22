@@ -3592,7 +3592,7 @@ function gameBegins(event) {
     document.getElementById("mobileCharacterImgContCont").tabIndex = "0";
     document.getElementById("mobile").tabIndex = "0";
     document.getElementById("mobile").ariaHidden = false;
-    document.onclick = deselectUrl;
+    document.onclick = null;
   }
   else if ((window.innerHeight > 600) && (window.innerWidth > 1200)) {
     if ((localStorage.checkpoint != undefined) && (localStorage.checkpoint > 0)) {
@@ -8537,7 +8537,7 @@ function openYoutubeSong() {
       document.getElementById("youtubePlayPauseButton").tabIndex = "0";
     }
     sessionStorage.countingTime = "00:00";
-    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
+    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor()\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor()\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
     document.getElementById("youtubeCountingTime").datetime = "PT0M0S";
     sessionStorage.fullTime = String(Math.floor(sessionStorage.duration / 60)).padStart(2, "0") + ":" + String(sessionStorage.duration % 60).padStart(2, "0");
     document.getElementById("youtubeFullTime").innerHTML = sessionStorage.fullTime;
@@ -8839,7 +8839,7 @@ function youtubePause(method, event) {
 function youtubeTimer() {
   if (!(document.activeElement.classList.contains("youtubeCountingTimeUnits"))) {
     sessionStorage.countingTime = String(Math.floor(document.getElementsByClassName("audio")[sessionStorage.youtube].currentTime / 60)).padStart(2, "0") + ":" + String(Math.floor(document.getElementsByClassName("audio")[sessionStorage.youtube].currentTime) % 60).padStart(2, "0");
-    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
+    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor()\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor()\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
     document.getElementById("youtubeCountingTime").datetime = "PT" + ((sessionStorage.countingTime).substring(0, 2)).replace(/(?<=^)0/sm, "") + "M" + ((sessionStorage.countingTime).substring(3)).replace(/(?<=^)0/sm, "") + "S";
     if (document.getElementsByClassName("audio")[sessionStorage.youtube].currentTime == 0) {
       document.getElementById("youtubeTimer").title = "Has not started";
@@ -8868,10 +8868,7 @@ function arriveYoutubeEditor(event) {
   sessionStorage.scope = "editor";
 }
 
-function leaveYoutubeEditor(event) {
-  let editor = new Range();
-  editor.selectNodeContents(event.target);
-  (document.getSelection()).removeAllRanges();
+function leaveYoutubeEditor() {
   sessionStorage.scopeTimeout = setTimeout(() => {
     sessionStorage.scope = "document";
   }, 250);
@@ -8967,7 +8964,7 @@ function youtubeDuration() {
   document.getElementById("youtubeDuration").style.transition = "right 1s linear 0s";
 }
 
-function pressMouse(event) {
+function pressMouseYoutube(event) {
   sessionStorage.mousePressed = true;
   youtubeJump(event);
   document.getElementById("youtubeSeek").style.zIndex = "0";
@@ -8976,7 +8973,7 @@ function pressMouse(event) {
   document.getElementById("youtubeDuration").style.zIndex = "1";
 }
 
-function liftMouse(event) {
+function liftMouseYoutube(event) {
   sessionStorage.mousePressed = false;
   if (sessionStorage.youtubePlayTimeout != undefined) {
     clearTimeout(sessionStorage.youtubePlayTimeout);
@@ -9117,7 +9114,7 @@ function youtubeJump(event) {
     document.getElementById("youtubeDuration").style.right = sessionStorage.progress + "%";
     document.getElementById("youtubeDuration").style.transition = "right 0s linear 0s";
     sessionStorage.countingTime = sessionStorage.seekTime;
-    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
+    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor()\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor()\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
     document.getElementById("youtubeCountingTime").datetime = "PT" + ((sessionStorage.countingTime).substring(0, 2)).replace(/(?<=^)0/sm, "") + "M" + ((sessionStorage.countingTime).substring(3)).replace(/(?<=^)0/sm, "") + "S";
     if (document.getElementsByClassName("audio")[sessionStorage.youtube].currentTime == 0) {
       document.getElementById("youtubeTimer").title = "Has not started";
@@ -9143,7 +9140,7 @@ function youtubeRestart(event) {
     document.getElementById("youtubeDuration").style.transition = "right " + transitionDuration + "s linear 0s";
     document.getElementById("youtubePlayPauseButton").style.pointerEvents = "none";
     sessionStorage.countingTime = "00:00";
-    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor(event)\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
+    document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor()\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor()\" oninput=\"youtubeEdit(event)\" contenteditable>" + (sessionStorage.countingTime).substring(3) + "</span>";
     document.getElementById("youtubeCountingTime").datetime = "PT0M0S";
     document.getElementById("youtubeTimer").title = "Has not started";
     document.getElementById("youtubeRestart").blur();
@@ -9258,7 +9255,7 @@ function closeYoutubeSong(event) {
   document.getElementById("youtubePlayPauseButton").style.pointerEvents = "none";
   document.getElementById("youtubePlayPauseButton").tabIndex = "-1";
   document.getElementById("youtubePlayPauseButton").blur();
-  document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor(event)\" oninput=\"youtubeEdit(event)\">" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor(event)\" oninput=\"youtubeEdit(event)\">" + (sessionStorage.countingTime).substring(3) + "</span>";
+  document.getElementById("youtubeCountingTime").innerHTML = "<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeMinutes\" role=\"timer\" aria-label=\"Enter the minutes of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor()\" oninput=\"youtubeEdit(event)\">" + (sessionStorage.countingTime).substring(0, 2) + "</span>:<span class=\"youtubeCountingTimeUnits\" id=\"youtubeCountingTimeSeconds\" role=\"timer\" aria-label=\"Enter the seconds of the timestamp that you want to jump to\" aria-keyshortcuts=\"Enter Tab\" onkeydown=\"youtubeControls(event)\" onfocus=\"arriveYoutubeEditor(event)\" onblur=\"leaveYoutubeEditor()\" oninput=\"youtubeEdit(event)\">" + (sessionStorage.countingTime).substring(3) + "</span>";
   for (var i = 0; i < document.getElementsByClassName("youtubeJump").length; i++) {
     document.getElementsByClassName("youtubeJump")[i].style.pointerEvents = "none";
     document.getElementsByClassName("youtubeJump")[i].tabIndex = "-1";
@@ -14002,7 +13999,9 @@ function mobileShrink() {
       document.getElementById("mobile").scrollTop = 0;
     }
   }
-  document.onclick = deselectUrl;
+  if (document.onclick != null) {
+    document.onclick = null;
+  }
   if (document.ondblclick != null) {
     document.ondblclick = null;
   }
@@ -14142,24 +14141,21 @@ function mobileGrow(event) {
   }
 }
 
-function selectUrl() {
-  let url = new Range();
-  url.selectNodeContents(document.getElementById("urlText"));
-  (document.getSelection()).removeAllRanges();
-  (document.getSelection()).addRange(url);
-  sessionStorage.urlSelected = true;
+function pressMouseUrl(event) {
+  sessionStorage.startCaret = JSON.stringify([event.clientX, event.clientY]);
 }
 
-function deselectUrl(event) {
-  if (!(document.elementsFromPoint(event.clientX, event.clientY).includes(document.getElementById("url")))) {
-    sessionStorage.urlSelected = false;
+function liftMouseUrl(event) {
+  sessionStorage.endCaret = JSON.stringify([event.clientX, event.clientY]);
+  if ((((JSON.parse(sessionStorage.startCaret))[0] - (JSON.parse(sessionStorage.endCaret))[0]) <= 5) && (((JSON.parse(sessionStorage.startCaret))[0] - (JSON.parse(sessionStorage.endCaret))[0]) >= -5)) {
+    let url = new Range();
+    url.selectNodeContents(document.getElementById("urlText"));
+    (document.getSelection()).removeAllRanges();
+    (document.getSelection()).addRange(url);
   }
 }
 
 function copyUrl(event) {
-  if (sessionStorage.urlSelected == String(true)) {
-    selectUrl();
-  }
   navigator.clipboard.writeText((document.getElementById("urlText").innerHTML).replace(/<wbr>/gism, ""));
   if (sessionStorage.urlMessageExitTimeout != undefined) {
     clearTimeout(sessionStorage.urlMessageExitTimeout);

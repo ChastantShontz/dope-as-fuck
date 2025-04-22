@@ -3038,7 +3038,7 @@
               </div>
             </div>
             <div id="youtubeToolbar" role="toolbar" onmouseenter="emphasizeYoutubeDuration()" onmouseleave="unemphasizeYoutubeDuration()">
-              <div id="youtubeDurationCont" role="progressbar" aria-label="Skip forward or back through the YouTube song" aria-keyshortcuts="ArrowRight ArrowLeft PageUp PageDown Home End" onmousedown="pressMouse(event)" onmouseup="liftMouse(event)" onmouseenter="youtubeSeek()" onmouseleave="youtubeUnseek()" onmousemove="youtubeJump(event)">
+              <div id="youtubeDurationCont" role="progressbar" aria-label="Skip forward or back through the YouTube song" aria-keyshortcuts="ArrowRight ArrowLeft PageUp PageDown Home End" onmousedown="pressMouseYoutube(event)" onmouseup="liftMouseYoutube(event)" onmouseenter="youtubeSeek()" onmouseleave="youtubeUnseek()" onmousemove="youtubeJump(event)">
                 <div id="youtubeSeek">
                 </div>
                 <div id="youtubeDuration">
@@ -3047,7 +3047,7 @@
               <div id="youtubeControls">
                 <div class="youtubeControl" id="youtubeControl1">
                   <button type="button" title="Play (space)" id="youtubePlayPauseButton" tabindex="-1" role="switch" aria-label="Play the YouTube song" aria-keyshortcuts="Space" onclick="youtubeToggle('click', event)"><span id="youtubePlayPauseButtonShape"></span></button>
-                  <p title="Has not started" id="youtubeTimer"><time class="youtubeTime" id="youtubeCountingTime"><span class="youtubeCountingTimeUnits" id="youtubeCountingTimeMinutes" tabindex="-1" role="timer" aria-label="Enter the minutes of the timestamp that you want to jump to" aria-keyshortcuts="Enter Tab" onkeydown="youtubeControls(event)" onfocus="arriveYoutubeEditor(event)" onblur="leaveYoutubeEditor(event)" oninput="youtubeEdit(event)"></span>:<span class="youtubeCountingTimeUnits" id="youtubeCountingTimeSeconds" tabindex="-1" role="timer" aria-label="Enter the seconds of the timestamp that you want to jump to" aria-keyshortcuts="Enter Tab" onkeydown="youtubeControls(event)" onfocus="arriveYoutubeEditor(event)" onblur="leaveYoutubeEditor(event)" oninput="youtubeEdit(event)"></span></time> / <time class="youtubeTime" id="youtubeFullTime">:</time></p>
+                  <p title="Has not started" id="youtubeTimer"><time class="youtubeTime" id="youtubeCountingTime"><span class="youtubeCountingTimeUnits" id="youtubeCountingTimeMinutes" tabindex="-1" role="timer" aria-label="Enter the minutes of the timestamp that you want to jump to" aria-keyshortcuts="Enter Tab" onkeydown="youtubeControls(event)" onfocus="arriveYoutubeEditor(event)" onblur="leaveYoutubeEditor()" oninput="youtubeEdit(event)"></span>:<span class="youtubeCountingTimeUnits" id="youtubeCountingTimeSeconds" tabindex="-1" role="timer" aria-label="Enter the seconds of the timestamp that you want to jump to" aria-keyshortcuts="Enter Tab" onkeydown="youtubeControls(event)" onfocus="arriveYoutubeEditor(event)" onblur="leaveYoutubeEditor()" oninput="youtubeEdit(event)"></span></time> / <time class="youtubeTime" id="youtubeFullTime">:</time></p>
                 </div>
                 <div class="youtubeControl" id="youtubeControl2">
                   <button type="button" title="Restart (backspace)" class="youtubeJump defaultButton" id="youtubeRestart" tabindex="-1" role="button" aria-label="Restart the YouTube song" aria-keyshortcuts="Backspace" onclick="youtubeRestart(event)">&laquo; Restart</button>
@@ -6242,7 +6242,7 @@
         <p id="mobileHeading">Whoops, too small!</p>
         <div id="mobileMessagesCont">
           <div id="mobileMessages">
-            <p class="mobileMessage" id="mobileMessage1">Well, it looks like you've done what Chestnut specifically told you <u>NOT</u> to do, and opened this game on a phone or tablet that is too small to display it (or maybe you just resized your browser window). Shame on you! If you want the full experience, copy the URL <samp id="url"><span id="urlText" onclick="selectUrl()">https://<wbr>chastantshontz.<wbr>github.<wbr>io/<wbr>dope-<wbr>as-<wbr>fuck</span><wbr><span id="urlButton" role="button" aria-label="Copy the URL to your clipboard" onclick="copyUrl(event)">&#128279;</span></samp> into a laptop browser and play to your heart's content.</p>
+            <p class="mobileMessage" id="mobileMessage1">Well, it looks like you've done what Chestnut specifically told you <u>NOT</u> to do, and opened this game on a phone or tablet that is too small to display it (or maybe you just resized your browser window). Shame on you! If you want the full experience, copy the URL <samp id="url"><span id="urlText" onmousedown="pressMouseUrl(event)" onmouseup="liftMouseUrl(event)">https://<wbr>chastantshontz.<wbr>github.<wbr>io/<wbr>dope-<wbr>as-<wbr>fuck</span><wbr><span id="urlButton" role="button" aria-label="Copy the URL to your clipboard" onclick="copyUrl(event)">&#128279;</span></samp> into a laptop browser and play to your heart's content.</p>
             <br>
             <p class="mobileMessage" id="mobileMessage2">In the meantime, here's a handy little button that shows you some cool <i>Star Wars</i> characters, just for shits 'n giggles:</p>
           </div>

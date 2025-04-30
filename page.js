@@ -2107,6 +2107,10 @@ let quotes = [
     author: "<b>Chestnut</b>"
   },
   {
+    line: "It's late enough in the morning that I could feasibly pregame it.",
+    author: "<b>Ryan O'Rourke</b>"
+  },
+  {
     line: "It's not day drinking if you start in the afternoon.",
     author: "<b>Eric Laferriere</b>"
   },
@@ -2129,6 +2133,10 @@ let quotes = [
   {
     line: "It's too dark and I don't want to flash them.",
     author: "<b>Garrett</b>"
+  },
+  {
+    line: "Je toi drunk.",
+    author: "<b>Nathan Gaylord</b>"
   },
   {
     line: "Jeff, where did your clothes go?",
@@ -2221,6 +2229,10 @@ let quotes = [
   {
     line: "Nothing gets a man up like a goal opportunity.",
     author: "<b>Declan</b>"
+  },
+  {
+    line: "Now we just need a possum and we'll have the holy trilogy.",
+    author: "<b>Kyle</b>"
   },
   {
     line: "Oh, implied banging. I thought you said implied begging.",
@@ -2429,6 +2441,10 @@ let quotes = [
   {
     line: "Two...four...six...eight...yeah, that's at least twenty disappointed dads.",
     author: "<b>Chawgo</b>"
+  },
+  {
+    line: "Wait, you two are lesbians? You know I hate your kind!",
+    author: "<b>Abbey</b>"
   },
   {
     line: "Watch me sexually assault Walmart over LinkedIn.",

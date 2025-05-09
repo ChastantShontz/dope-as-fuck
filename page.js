@@ -1547,6 +1547,10 @@ let quotes = [
     author: "<b>Chestnut</b>"
   },
   {
+    line: "David, your lack of diverse heritage is showing.",
+    author: "<b>Eric Laferriere</b>"
+  },
+  {
     line: "Declan and I are going to be lactating.",
     author: "<b>Chawgo</b>"
   },
@@ -1855,6 +1859,10 @@ let quotes = [
     author: "<b>Declan</b> to John"
   },
   {
+    line: "I'm in a panda costume, anything can happen tonight.",
+    author: "<b>Alex Brenton</b>"
+  },
+  {
     line: "I'm just in the pictures for diversity, honestly.",
     author: "<b>Cynthia</b>"
   },
@@ -2143,6 +2151,10 @@ let quotes = [
     author: "<b>Kami</b>"
   },
   {
+    line: "Jonas, your mac and cheese smells like car exhaust.",
+    author: "<b>David Vanill</b>"
+  },
+  {
     line: "Just let me slurp.",
     author: "<b>John</b>"
   },
@@ -2229,6 +2241,10 @@ let quotes = [
   {
     line: "Nothing gets a man up like a goal opportunity.",
     author: "<b>Declan</b>"
+  },
+  {
+    line: "Now that Corsner's gone, I think I'm the closest thing we have to a ginger.",
+    author: "<b>Ryan O'Rourke</b>"
   },
   {
     line: "Now we just need a possum and we'll have the holy trilogy.",
@@ -2347,6 +2363,10 @@ let quotes = [
     author: "<b>Alex Brenton</b>"
   },
   {
+    line: "Technically, it's <q class=\"quoteLineNested\">ROI,</q> but it's French, so it's pronounces <q class=\"quoteLineNested\">Rawr.</q>",
+    author: "<b>Tom Uhl</b>"
+  },
+  {
     line: "That's Brom? That man is like a gorilla mixed with a tank that had an affair with an aircraft carrier.",
     author: "<b>Eric Laferriere</b>"
   },
@@ -2383,7 +2403,7 @@ let quotes = [
     author: "<b>Brandon</b>"
   },
   {
-    line: "The T in <q class=\"quoteLineNested\">Toyota</q> stands for <q class=\"quoteLineNested\">Toochie</q>",
+    line: "The T in <q class=\"quoteLineNested\">Toyota</q> stands for <q class=\"quoteLineNested\">Toochie.</q>",
     author: "<b>John</b>"
   },
   {

@@ -5241,7 +5241,7 @@ function selectAnswer(answer, event) {
             this.value = (this.value).replace(/<br>(with lyrics!)/sm, "");
           }
         }
-        var camelCase = ((((((((this.value).replace(/<\/*(b|strong|i|em|u|s|br)>/gism, "")).replace(/[^a-zA-Z0-9]/gsm, " ")).toLowerCase()).split(" ")).map((word) => ((word.charAt(0)).toUpperCase() + word.substring(1)))).join("")).charAt(0)).toLowerCase() + (((((((this.value).replace(/<\/*(b|strong|i|em|u|s|br)>/gism, "")).replace(/[^a-zA-Z0-9]/gsm, " ")).toLowerCase()).split(" ")).map((word) => ((word.charAt(0)).toUpperCase() + word.substring(1)))).join("")).substring(1);
+        var camelCase = (((((((((this.value).replace(/<\/*(b|strong|i|em|u|s|br)>/gism, "")).replace(/'/gsm, "")).replace(/[^a-zA-Z0-9]/gsm, " ")).toLowerCase()).split(" ")).map((word) => ((word.charAt(0)).toUpperCase() + word.substring(1)))).join("")).charAt(0)).toLowerCase() + ((((((((this.value).replace(/<\/*(b|strong|i|em|u|s|br)>/gism, "")).replace(/'/gsm, "")).replace(/[^a-zA-Z0-9]/gsm, " ")).toLowerCase()).split(" ")).map((word) => ((word.charAt(0)).toUpperCase() + word.substring(1)))).join("")).substring(1);
         return camelCase;
       }
     }

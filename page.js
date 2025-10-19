@@ -9050,22 +9050,22 @@ function youtubeJump(event) {
   if (sessionStorage.mousePressed == undefined) {
     sessionStorage.mousePressed = false;
   }
-  sessionStorage.progressSeek = (100 - (((event.clientX - (event.target).getBoundingClientRect().left) / (getComputedStyle(event.target).getPropertyValue("width")).replace(/px/sm, "")) * 100));
-  document.getElementById("youtubeSeek").style.right = sessionStorage.progressSeek + "%";
-  if (Number(sessionStorage.progress) < Number(sessionStorage.progressSeek)) {
-    if (sessionStorage.mousePressed == String(false)) {
-      document.getElementById("youtubeSeek").style.zIndex = "1";
-      document.getElementById("youtubeSeek").style.background = "var(--youtubeDarkRed)";
-      document.getElementById("youtubeDuration").style.zIndex = "0";
-    }
-  }
-  else if (Number(sessionStorage.progress) >= Number(sessionStorage.progressSeek)) {
-    document.getElementById("youtubeSeek").style.zIndex = "0";
-    document.getElementById("youtubeSeek").style.background = "var(--youtubeLightGray)";
-    document.getElementById("youtubeDuration").style.zIndex = "1";
-  }
-  document.getElementById("youtubeSeek").style.transition = "all 0s ease 0s";
   if ((event.type == "mousedown") || (event.type == "mousemove")) {
+    sessionStorage.progressSeek = (100 - (((event.clientX - (event.target).getBoundingClientRect().left) / (getComputedStyle(event.target).getPropertyValue("width")).replace(/px/sm, "")) * 100));
+    document.getElementById("youtubeSeek").style.right = sessionStorage.progressSeek + "%";
+    if (Number(sessionStorage.progress) < Number(sessionStorage.progressSeek)) {
+      if (sessionStorage.mousePressed == String(false)) {
+        document.getElementById("youtubeSeek").style.zIndex = "1";
+        document.getElementById("youtubeSeek").style.background = "var(--youtubeDarkRed)";
+        document.getElementById("youtubeDuration").style.zIndex = "0";
+      }
+    }
+    else if (Number(sessionStorage.progress) >= Number(sessionStorage.progressSeek)) {
+      document.getElementById("youtubeSeek").style.zIndex = "0";
+      document.getElementById("youtubeSeek").style.background = "var(--youtubeLightGray)";
+      document.getElementById("youtubeDuration").style.zIndex = "1";
+    }
+    document.getElementById("youtubeSeek").style.transition = "all 0s ease 0s";
     sessionStorage.seekTime = String(Math.floor((((event.clientX - (event.target).getBoundingClientRect().left) / (getComputedStyle(event.target).getPropertyValue("width")).replace(/px/sm, "")) * sessionStorage.duration) / 60)).padStart(2, "0") + ":" + String(Math.floor((((event.clientX - (event.target).getBoundingClientRect().left) / (getComputedStyle(event.target).getPropertyValue("width")).replace(/px/sm, "")) * sessionStorage.duration) % 60)).padStart(2, "0");
     if (sessionStorage.mousePressed == String(true)) {
       sessionStorage.progress = (100 - (((event.clientX - (event.target).getBoundingClientRect().left) / (getComputedStyle(event.target).getPropertyValue("width")).replace(/px/sm, "")) * 100));
